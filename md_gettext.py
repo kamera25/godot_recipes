@@ -1,0 +1,160 @@
+import os
+import glob
+import re
+import argparse
+import datetime
+
+def escape_po_string(s):
+    return s.replace('\\', '\\\\').replace('"', '\\"').replace('\n', '\\n')
+
+def unescape_po_string(s):
+    return s.replace('\\n', '\n').replace('\\"', '"').replace('\\\\', '\\')
+
+def extract_md_blocks(content):
+    """Markdownからブロック要素を抽出し、翻訳可能なリストを返す"""
+    # 先頭のYAML Frontmatterを削除して抽出対象から外す
+    text_content = re.sub(r'^---\n.*?\n---\n', '', content, flags=re.DOTALL)
+    
+    # コードブロックを抽出対象から外す
+    text_content = re.sub(r'```.*?```', '', text_content, flags=re.DOTALL)
+    
+    # インラインHTMLのscriptやstyleも削除しておく
+    text_content = re.sub(r'<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>', '', text_content, flags=re.IGNORECASE)
+    text_content = re.sub(r'<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>', '', text_content, flags=re.IGNORECASE)
+    text_content = re.sub(r'<!--.*?-->', '', text_content, flags=re.DOTALL)
+    
+    # 段落ごとに分割 (改行2つ以上)
+    blocks = re.split(r'\n\n+', text_content)
+    
+    texts = set()
+    for block in blocks:
+        block = block.strip()
+        
+        # 空要素や短すぎるもの、数字だけの場合は無視
+        if not block or len(block) <= 1 or block.isnumeric():
+            continue
+            
+        # Hugoのショートコード単体 (例: {{% notice %}}) なら抽出をスキップ
+        if re.match(r'^\{\{[%<].*?[%>]\}\}$', block):
+            continue
+            
+        texts.add(block)
+            
+    return texts
+
+def create_po(docs_dir, output_po_file):
+    md_files = glob.glob(os.path.join(docs_dir, '**', '*.md'), recursive=True)
+    po_entries = {}
+    
+    print(f"Extraction: Found {len(md_files)} Markdown files in {docs_dir}")
+    for file_path in md_files:
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            extracted = extract_md_blocks(content)
+            rel_path = os.path.relpath(file_path, docs_dir)
+            
+            for text in extracted:
+                if text not in po_entries:
+                    po_entries[text] = set()
+                po_entries[text].add(rel_path)
+        except Exception as e:
+            print(f"Error processing {file_path}: {e}")
+
+    print(f"Writing {len(po_entries)} translation strings...（Markdownブロック）")
+    with open(output_po_file, 'w', encoding='utf-8') as f:
+        f.write('msgid ""\n')
+        f.write('msgstr ""\n')
+        f.write('"Project-Id-Version: Godot Recipes Content\\n"\n')
+        f.write(f'"POT-Creation-Date: {datetime.datetime.now().strftime("%Y-%m-%d %H:%M%z")}\\n"\n')
+        f.write('"MIME-Version: 1.0\\n"\n')
+        f.write('"Content-Type: text/plain; charset=UTF-8\\n"\n')
+        f.write('"Content-Transfer-Encoding: 8bit\\n"\n')
+        f.write('\n')
+        
+        for msgid, locations in po_entries.items():
+            for loc in sorted(list(locations))[:5]:
+                f.write(f'#: {loc}\n')
+            f.write(f'msgid "{escape_po_string(msgid)}"\n')
+            f.write(f'msgstr ""\n\n')
+
+    print(f"Created: {output_po_file}")
+
+def load_po(file_path):
+    entries = {}
+    if not os.path.exists(file_path):
+        return entries
+        
+    with open(file_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+        
+    blocks = content.split('\n\n')
+    for block in blocks:
+        # 複数行対応
+        msgid_match = re.search(r'msgid\s+"(.*)"(?:\nmsgstr|$)', block, flags=re.DOTALL)
+        msgstr_match = re.search(r'msgstr\s+"(.*)"', block, flags=re.DOTALL)
+        
+        if msgid_match and msgstr_match:
+            msgid = "".join(re.findall(r'"([^"]*)"', msgid_match.group(0)))
+            msgstr = "".join(re.findall(r'"([^"]*)"', msgstr_match.group(0)))
+            msgid = msgid.replace('msgid', '', 1).strip()
+            msgstr = msgstr.replace('msgstr', '', 1).strip()
+            
+            if msgid and msgstr:
+                entries[unescape_po_string(msgid)] = unescape_po_string(msgstr)
+    return entries
+
+def apply_translations(docs_dir, po_file):
+    translations = load_po(po_file)
+    if not translations:
+        print("PO file is empty or missing.")
+        return
+
+    print(f"Loaded {len(translations)} translations from {po_file}")
+    
+    valid_translations = {k: v for k, v in translations.items() if v.strip()}
+    if not valid_translations:
+        print("No translated strings found in PO file.")
+        return
+
+    md_files = glob.glob(os.path.join(docs_dir, '**', '*.md'), recursive=True)
+    files_modified = 0
+
+    for file_path in md_files:
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+
+            original_content = content
+            
+            # 各翻訳についてソースのテキストを置換
+            # 長い文字列から先に置換する（部分一致による誤置換を防ぐため）
+            sorted_keys = sorted(valid_translations.keys(), key=len, reverse=True)
+            for msgid in sorted_keys:
+                msgstr = valid_translations[msgid]
+                if msgid in content:
+                    content = content.replace(msgid, msgstr)
+            
+            if content != original_content:
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                files_modified += 1
+                
+        except Exception as e:
+            print(f"Error processing {file_path}: {e}")
+
+    print(f"Translated {files_modified} Markdown files.")
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="Markdown Gettext Tool")
+    parser.add_argument('mode', choices=['extract', 'apply'], help="'extract' to create PO, 'apply' to translate Markdown")
+    parser.add_argument('--dir', default='/Users/kamera25/godot_recipes/src-4/content', help='Markdown directory')
+    parser.add_argument('--po', default='/Users/kamera25/godot_recipes/content_extracted.po', help='PO file path')
+    
+    args = parser.parse_args()
+    
+    if args.mode == 'extract':
+        create_po(args.dir, args.po)
+    elif args.mode == 'apply':
+        apply_translations(args.dir, args.po)

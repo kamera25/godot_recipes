@@ -33,7 +33,7 @@ def escape_po_string(s):
     return s
 
 def main():
-    docs_dir = '/Users/kamera25/godot_recipes/docs'
+    docs_dir = '/Users/kamera25/godot_recipes/content'
     output_po_file = '/Users/kamera25/godot_recipes/docs_extracted.po'
     
     html_files = glob.glob(os.path.join(docs_dir, '**', '*.html'), recursive=True)
