@@ -28,17 +28,18 @@ AbilityButton: {{< gd-icon TextureButton >}} TextureButton
 
 選択したアイコンを `AbilityButton` の **Textures/Normal** プロパティにドロップしてください。
 
-On the `Sweep` node, choose "Full Rect" from the **Presets** menu. Set the **Fill Mode** to "Counter Clockwise".
+「掃引」ノードでは、**プリセット**メニューから「完全矩形」を選択します。**塗りつぶしモード**を「反時計回り」に設定してください。
 
-We also want our cooldown "radial wipe" to darken the button, so set the **Modulate** property to a dark gray with some transparency:
+また、クールダウン時の「放射状スワイプ」でボタンを暗く表示させたいため、**[変調]** プロパティに透明度のある濃いグレーを設定してください：
 
 ![alt](/godot_recipes/4.x/img/cooldown_02.png)
 
-The {{< gd-icon Timer >}}`Timer` node should be set to "One Shot".
+`タイマー`ノードの設定は「ワンショット」に設定する必要があります。
 
-`Counter` is a container to hold and align the text. Set its layout to "Bottom Wide", and in its **Theme Overrides/Constants**, both **Margin Right** and **Margin Left** to `5`.
+```
+`カウンター`はテキストを保持・配置するためのコンテナです。レイアウトを「ボトムワイド」に設定し、［テーマのオーバーライド／定数］セクションでは両方の **マージン右** と **マージン左** を `5` に指定してください。
 
-Finally, on the `Value` label, set **Horizontal Alignment** to "Right" and **Clip Text** to "On". Add a font to the **Theme Overrides/Font**. Put a value like `0.0` in the **Text** field to check how it works. Since our icon is black and white, it also helps to add a **Theme Overrides/Constants/Outline Size**_ of `1`.
+最後に、［値］ラベルで［水平整列］を「右揃え」に設定し、［テキストクリッピング］を「有効」にしてください。**テーマオーバーライド／フォント**にフォントを追加します。動作確認のため、**テキスト**欄には `0.0` のような値を入力しましょう。アイコンが白黒の場合は、**テーマオーバーライド／定数／アウトラインサイズ**として `1` を設定すると効果的です。
 
 ### スクリプト
 
@@ -97,9 +98,9 @@ func _on_Timer_timeout():
 
 タイマーが切れるとすべての設定は初期化されます。複数のボタンを `{{< gd-icon HBoxContainer >}}HBoxContainer` に配置するだけで、アクションバーが完成します：
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/cooldown_03.gif" alt="クールダウンアニメーション">
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらからダウンロードできます: [https://github.com/godotrecipes/ui_cooldown_button](https://github.com/godotrecipes/ui_cooldown_button)
 

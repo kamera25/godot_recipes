@@ -35,7 +35,10 @@ func start():
 
 これにより、プレイヤーは画面の中央下部に配置され、最適なスタート位置となります。また、クールダウンタイマーが適切な待機時間を設定することを保証します。
 
-The `shoot()` function will be called whenever we press the "shoot" input.
+public function shoot(): void
+{
+    // 発射処理をここに記述
+}
 
 ```gdscript
 func shoot():
@@ -72,13 +75,13 @@ func _on_gun_cooldown_timeout():
 
 ![alt](/godot_recipes/4.x/img/2d_101_17.gif)
 
-{{% notice style="note" title="Adding instances to the tree" %}}
-Notice that we've added the new bullets as children of the SceneTree root (`get_tree().root`), and not to the player ship. This is important because if we made the bullets children of the ship, then they would be "attached" to it when it moves.
+{{% notice style="note" title="ツリーへのインスタンス追加について" %}}
+注意：新規に生成した弾丸はシーンツリーのルートノード（`get_tree().root`）の下に子要素として追加されたことに留意してください。プレイヤー船の子要素としては追加していません。これは重要な点です。もし弾丸を船の子要素にしていた場合、船が移動するたびにそれらが「固定」されてしまうからです。
 {{% /notice %}}
 
 ## 次のステップ
 
 シューティングゲームは撃つ対象がなければ面白くありません。敵キャラの作成に取り掛かりますが、その前にプレイヤーや敵、その他のゲーム内オブジェクトを配置するシーンを作成する必要があります。
 
-| {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_04/" icon="fas fa-arrow-left" %}}Prev{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_06/" icon="fas fa-arrow-right" icon-position="right" %}}Next{{% /button %}} |
+| {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_04/" icon="fas fa-arrow-left" %}}前のステップ{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_06/" icon="fas fa-arrow-right" icon-position="right" %}}次のステップ{{% /button %}} |
 |------|------:|

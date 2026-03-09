@@ -4,13 +4,13 @@ weight: 5
 draft: false
 ---
 
-This is an evolving list of the main changes and "gotchas" to look out for if you're transitioning to 4.0.
+これは、4.0への移行時に注意すべき主要な変更点と「落とし穴」をまとめた随時更新リストです。
 
 ## 新しい名称
 
 Godot 4での最も大きな変化の一つは、ノード名、関数名、プロパティ名などの大量のリネームです。これらの多くは仕様の一貫性や可読性を向上させるために行われています。特に注意すべき主要な変更点をいくつかご紹介します：
 
-* 2D/3D nodes - In Godot 3.x, 2D nodes had the "2D" suffix, but 3D nodes had none. This has been made consistent - they all now have "2D" or "3D" suffixes. For example: {{< gd-icon RigidBody2D >}}`RigidBody2D` vs. {{< gd-icon RigidBody3D >}}`RigidBody3D`.
+* 2D/3Dノードの命名規則 - Godot 3.x では2Dノードに「2D」サフィックスが付いていた一方、3Dノードには何も付加されていませんでした。この不整合が解消され、現在ではすべてのノードが「2D」または「3D」を明示するようになりました。具体例：{{< gd-icon RigidBody2D >}}`RigidBody2D` と {{< gd-icon RigidBody3D >}}`RigidBody3D`。
 
 * 3Dカテゴリにおいて、`空間`ノードは名称を{{< gd-icon Node3D >}}`Node3D`に統一されています
 
@@ -63,13 +63,13 @@ Godot 3.5 で `SceneTreeTween` を使い始めた場合、Godot 4.0 の {{< gd-i
 
 4.0版では `TileMap` ノードが全面的にリニューアルされました。タイルセットの作成方法からタイルの描画・操作方法まで、ほぼすべてが完全に刷新されています。
 
-Our "Using TileMaps" guide is coming soon.
+私たちの「TileMap の使い方」ガイドが間もなく公開されます。
 
 ## RNG (乱数生成器)
 
 以下はGDScriptの組み込み乱数生成関数に対する変更点です：
 
-* You no longer need to call `randomize()` - this is automatic. If you do want repeatable "randomness", use `seed()` to set it to a preselected value.
+* もう `randomize()` を呼び出す必要はありません - これは自動処理されます。再現性のある「乱数」が必要な場合は、事前に設定した値を設定するために `seed()` を使用してください。
 
 * `rand_range()` 関数は、浮動小数点数の場合は `randf_range()`、整数の場合は `randi_range()` にそれぞれ置き換えられました。
 

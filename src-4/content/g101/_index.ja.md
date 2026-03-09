@@ -1,14 +1,12 @@
-+++
-title = "Godot 101"
-date = 2019-04-09T19:48:00-07:00
-weight = 1
-chapter = true
-pre = "<i class='fas fa-graduation-cap fa-fw'></i>&nbsp"
-+++
+タイトル：『Godot入門』
+公開日：2019年4月9日19:48 JST -7時間
+重み付け：1
+章節フラグ：true
+プレテキスト：<i class="fas fa-graduation-cap fa-fw"></i>&nbsp
 
 # <i class='fas fa-graduation-cap'></i>&nbsp;Godot 101
 
-<img src=\ alt=\ width=\>
+<img src="/godot_recipes/4.x/img/godot3_logo.png" alt="Godotロゴ" width="250">
 
 Godotゲームエンジンの入門ガイドです。これまでゲームエンジンを使ったことがない方、あるいはGodotを初めて使う方にとって、最適なスタート地点となるでしょう。
 

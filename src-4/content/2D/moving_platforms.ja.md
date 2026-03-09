@@ -24,12 +24,14 @@ draft: false
 
 プラットフォームシーンには以下のノードが含まれています：
 
-- {{< gd-icon Node2D >}}`Node2D` ("MovingPlatform"): The `Node2D` parent is there to act as the "anchor" or start point for the platform. We'll animate the platform's `position` relative to this parent node.
-  - {{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`: This represents the platform itself. This is the node that will move.
-    - {{< gd-icon Sprite2D >}}`Sprite2D`: You can use a sprite sheet here, individual images, or even a {{< gd-icon TileMap >}}`TileMap`.
-    - {{< gd-icon CollisionShape2D >}}`CollisionShape2D`: Don't make the hitbox too big, or the player will appear to be "hovering" off the edge of the platform.
+```yaml
+- {{< gd-icon Node2D >}} ノード `Node2D` ("MovingPlatform")：この親ノードは「アンカー」またはプラットフォームの起点として機能します。アニメーションでは、この親ノードを基準としたプラットフォームの位置変化を制御します。
+  - {{< gd-icon AnimatableBody2D >}} ノード `AnimatableBody2D`：これは実際に移動するプラットフォーム本体を表します。このノードが移動対象となります。
+    - {{< gd-icon Sprite2D >}} ノード `Sprite2D`：ここではスプライトシート、個別の画像、あるいは {{< gd-icon TileMap >}} ノードとしてタイルマップを使用することもできます。
+    - {{< gd-icon CollisionShape2D >}} ノード `CollisionShape2D`：ヒットボックスの大きさが大きすぎると、プレイヤーがプラットフォームの端から「浮いて」見える原因になるので注意してください。
 
-Set up the {{< gd-icon Sprite2D >}}`Sprite2D`'s **Texture** and the collision shape appropriately. In the {{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`, set the **Sync to Physics** property "On". Since we're moving the body in code, this ensures that it's moved during the physics step, keeping it in sync with the player and other physics bodies.
+```markdown
+{{< gd-icon Sprite2D >}}`Sprite2D`の**テクスチャ**と衝突形状を適切に設定してください。{{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`では、**物理演算同期** プロパティを「オン」に設定します。コードでボディを動かしているため、これにより物理演算ステップ時に正しく移動され、プレイヤーや他の物理オブジェクトと連動した動きを維持できます。
 
 次にルートノードにスクリプトを追加します：{{< gd-icon Node2D >}}`Node2D`:
 
@@ -61,7 +63,7 @@ func start_tween():
 
 <video controls src="/godot_recipes/4.x/img/moving_platform4.webm" autoplay="true"></video>
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードできます: [https://github.com/godotrecipes/2d_moving_platforms](https://github.com/godotrecipes/2d_moving_platforms)
 

@@ -17,7 +17,7 @@ draft: false
 これはまさに「内積」が活躍する場面です。その符号からターゲットの位置が左側か右側かを判断でき、絶対値からは我々が向いている方向とターゲット方向との距離を把握できます。
 
 {{% notice style="tip" title="" %}}
-See [Vectors: Using Dot and Cross Product](/godot_recipes/4.x/math/dot_cross_product/) for a brief review of the dot product.
+ドット積について簡単に復習するには、[ベクトル: 内積と外積の使い方](/godot_recipes/4.x/math/dot_cross_product/)をご覧ください。
 {{% /notice %}}
 
 ```gdscript
@@ -36,16 +36,16 @@ func _physics_process(delta):
 import numpy as np
 
 def calculate_torque_optimized(transform, target):
-    \
+    """
+    最適化されたトルク計算関数
 
+    Args:
+        transform: Transformオブジェクト
+        target: TargetVectorオブジェクト
 
-
-
-
-
-
-
-\
+    Returns:
+        float: 算出されたトルク値
+    """
     # ボディの前方ベクトルを計算
     body_vector = transform.forward()
 
@@ -65,7 +65,6 @@ def calculate_torque_optimized(transform, target):
 
 ### 剛体を完全にスキップする
 
-```python
 # 親スプライトの回転角度をターゲット方向に設定する例
 child_sprite.rotation = target_vector.angle()
 
@@ -77,7 +76,6 @@ tweener = tween.Tween()
 tweener.target = target_vector.angle()
 tweener.duration = 0.5  # 遷移時間を0.5秒に設定
 child_sprite.run_action(tweener)
-```
 
 多くの場合、これは有効な解決策となります。覚えておいてください：基底体の向きは、付属するスプライトと必ずしも揃える必要はないのです！
 

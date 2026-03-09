@@ -17,7 +17,7 @@ ghcommentid: 22
 - 自動車は動いている時にのみ方向転換が可能で、その場で回転することはできない。
 - 自動車は列車ではない。レールに縛られていない。高速で曲がる際にはある程度の横滑り（ドリフト）が伴うべきである。
 
-There are many approaches to 2D car physics, mainly depending on how "realistic" you want to be. For this solution, we're going for an "arcade" level of realism, meaning we'll prioritize action over realism.
+2Dカー物理の実装には様々なアプローチ方法があり、主に「リアル志向」か「アーケードスタイル」かによって選択が分かれます。このソリューションでは、リアリティよりもアクション性を優先する「アーケードレベル」の現実感を追求していきます。
 
 {{% notice note %}}
 以下の方法は、こちらのアルゴリズムに基づいています：http://engineeringdotnet.blogspot.com/2010/04/simple-2d-car-physics-in-games.html
@@ -38,7 +38,7 @@ There are many approaches to 2D car physics, mainly depending on how "realistic"
 
 このデモでは、[Kenneyのレーシングパック](https://kenney.nl/assets/racing-pack)のアートワークを使用します。{{< gd-icon CapsuleShape2D >}}`CapsuleShape2D`は衝突判定に最適な形状です。これにより、車が障害物に引っかかるような鋭い角を防ぐことができます。
 
-We'll also use four input actions: "steer_right", "steer_left", "accelerate", and "brake" - set them to whatever key inputs you prefer.
+以下の4つの入力操作も使用します：「右旋回」「左旋回」「加速」「ブレーキ」。お好みのキー割り当てを設定してください。
 
 ### 第1部：動き
 
@@ -202,7 +202,7 @@ add input to `get_input()`:
         acceleration = transform.x * braking
 ```
 
-This is fine for coming to a stop, but we also want to be able to put the car in reverse. Currently, that won't work, because the acceleration is always being applied in the "heading" direction, which is forward. When we're reversing, we need to accelerate backward.
+これは停止時には問題ありませんが、リバースギアに入れたときに正常に動作しない問題があります。現在、加速は常に「進行方向」（前進）に対して適用されているため、バック走行時に逆方向に加速することができません。リバース時は後方への加速度を加える必要があります。
 
 ```gdscript
 func calculate_steering(delta):
@@ -225,7 +225,7 @@ func calculate_steering(delta):
 
 ### パート5：ドリフト/スライド操作
 
-We could stop here and you'd have a satisfactory driving experience. However, the car still feels like it's "on rails". Even at top speed, the turns are perfect, as if the tires have perfect "grip".
+ここで止めても十分満足のいく運転体験が得られるでしょう。ただ、車がまだ「レールに乗っている」ような感覚です。最高速で走行していても、カーブは完璧にクリアされ、まるでタイヤが完全に路面を掴んでいるかのようです。
 
 高速時（あるいは低速でもお好みで）には、駆動力によってタイヤが滑り、車体が「魚の尾のように」左右に滑る動きが生じるはずです。
 
@@ -235,7 +235,7 @@ var traction_fast = 2.5 # High-speed traction
 var traction_slow = 10  # Low-speed traction
 ```
 
-We'll apply these values when calculating the steering. Currently, the velocity is instantly set to the new heading. Instead, we'll use interpolation - `lerp()` - to cause it to only "turn" partway towards the new direction. The "traction" values will determine how "sticky" the tires are.
+これらの値は、ステアリング計算時に適用します。現在の設定では、速度が瞬時に新しい進行方向に切り替わるようになっています。代わりに、補間処理（`lerp()`）を使用して、車両が新しい方向に完全に向きを変えることなく、部分的にしか旋回しないようにします。その際、「トラクション」値がタイヤの「粘着性」を決定します。
 
 ```gdscript
 func calculate_steering(delta):
@@ -274,6 +274,6 @@ Download the project file here: [car_steering.zip](/godot_recipes/4.x/files/car_
 
 - [ゲーム開発数学：補間法](/godot_recipes/4.x/math/interpolation/)
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードできます：[https://github.com/godotrecipes/2d_car_estrada](https://github.com/godotrecipes/2d_car_estrada)

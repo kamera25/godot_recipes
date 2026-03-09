@@ -16,9 +16,9 @@ draft: false
 
 はじめに、剛体オブジェクトを作成します。まず{{< gd-icon Sprite2D >}}`Sprite2D`と{{< gd-icon CollisionShape2D >}}`CollisionShape2D`を追加してください。さらに物理特性を設定したい場合は`PhysicsMaterial`も追加できます。このマテリアルでは_Bounce_（反発係数）と_Friction_（摩擦係数）のプロパティを調整可能です。
 
-We're going to use the rigid body's `freeze` property to remove it from the control of the physics engine while we're dragging it. Since we still want it to be movable, we need to set the **Freeze Mode** to "Kinematic", rather than the default value of "Static".
+物理演算エンジンの制御から一時的に解放するために、剛体の「フリーズ」プロパティを使用します。ドラッグ操作中も移動可能にしておく必要があるため、デフォルト値である「静的モード」ではなく、**凍結モード**を「運動学的」に設定します。
 
-Place the body in a group called "pickable". We'll use this to allow for multiple instances of the pickable object in the main scene. Attach a script to the body and connect the its `_input_event` signal.
+体を「pickable」というグループに配置します。この設定により、メインシーンで複数のpick可能オブジェクトインスタンスを使用可能になります。体にスクリプトを添付し、その`_input_event`シグナルに接続してください。
 
 ```gdscript
 extends RigidBody2D
@@ -60,7 +60,14 @@ func drop(impulse=Vector2.ZERO):
         held = false
 ```
 
-In the `drop` function, after we change `freeze` back to `false, the body will return to the physics engine's control. By passing in an optional impulse value, we can add the ability to "throw" the object on release.
+def drop(obj):
+    # オブジェクトの凍結状態を解除
+    obj.freeze = False
+
+    # リリース時に適用するインパルス値を指定可能
+    impulse_value = get_optional_impulse()
+    if impulse_value is not None:
+        obj.apply_force_instantaneously(impulse_value)  # 即時強制力を適用
 
 ### メインシーン
 
@@ -78,9 +85,7 @@ func _ready():
         node.clicked.connect(_on_pickable_clicked)
 ```
 
-```plaintext
 次に、シグナルを接続する関数について説明します。接続された関数では`held_object`変数を設定して現在ドラッグ中のものを記録し、ボディの`pickup()`メソッドを呼び出してオブジェクトのピックアップ操作を開始します。
-```
 
 ```gdscript
 func _on_pickable_clicked(object):
@@ -104,7 +109,7 @@ func _unhandled_input(event):
 
 <video controls src="/godot_recipes/4.x/img/rbody_drag.webm"></video>
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードできます: [https://github.com/godotrecipes/rigidbody_drag_drop](https://github.com/godotrecipes/rigidbody_drag_drop)
 

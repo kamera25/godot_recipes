@@ -12,7 +12,7 @@ draft: false
 
 スプライトシートは2Dアニメーションの一般的な配布形式です。単一の画像ファイルに全てのアニメーションフレームを集約した形式で、効率的なデータ管理が可能です。
 
-For this demo, we'll be using the excellent "Adventurer" sprite by Elthen. You can get this and lots of other great art at[https://elthen.itch.io/](https://elthen.itch.io/).
+このデモでは、Elthen氏制作の優れた「冒険者」スプライトを使用します。このアセットをはじめ、多くの高品質なアート素材は以下から入手できます：[https://elthen.itch.io/](https://elthen.itch.io/)。
 
 ![alt](/godot_recipes/4.x/img/adventurer_sprite_sheet_v1.1.png)
 
@@ -33,32 +33,36 @@ For this demo, we'll be using the excellent "Adventurer" sprite by Elthen. You c
   {{< gd-icon AnimationPlayer >}} AnimationPlayer
 ```
 
-Drag the spritesheet texture into the _Texture_ property of the {{< gd-icon Sprite2D >}}`Sprite2D`. You'll see the entire spritesheet displayed in the viewport. To slice it up into individual frames, expand the "Animation" section in the Inspector and set the _Hframes_ to `13` and _Vframes_ to `8`. _Hframes_ and _Vframes_ are the number of horizontal and vertical frames in your spritesheet.
+{{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの _Texture_プロパティにスプライトシートテクスチャをドラッグ＆ドロップしてください。ビューポート内に完全なスプライトシートが表示されます。個別のフレームに分割するには、インスペクターの「Animation」セクションを拡大し、_Hframes_を `13`、_Vframes_を `8`に設定します。_Hframes_と_Vframes_は、それぞれ水平方向および垂直方向のフレーム数を指定するパラメータです。
 
-<img src=\ alt=\
->
+<img src="/godot_recipes/4.x/img/sprite_animation_01.png" alt="Sprite Animation 01">
 
 以下の手順を試してみてください：
 1. 画像フレームプロパティを変更すると、画像がどのように変化するかを確認できます。これは後でアニメーション化するプロパティです。
 
 ### アニメーションの追加方法
 
-Select the {{< gd-icon AnimationPlayer >}}`AnimationPlayer` and click the “Animation” button followed by “New"
-. Name the new animation “idle”. Set the animation length to `2` and click the “Loop” button so that our animation will repeat (see below).
+以下の手順に従ってアニメーションを設定します：
+
+1. 「AnimationPlayer」コンポーネントを選択します。
+2. 「アニメーション」ボタンをクリックし、続いて「新規作成」を選択します。
+3. 新しいアニメーションに「idle」という名前を付けます。
+4. アニメーションの長さを `2` に設定します。
+5. 「ループ」ボタンをクリックして、アニメーションが繰り返し再生されるようにします（詳細は以下を参照）。
 
 スクラバーが「0」時点で、{{< gd-icon Sprite2D >}}`Sprite2D`ノードを選択します。アニメーションのフレーム番号を「0」に設定し、値の隣にあるキーアイコンをクリックします。
 
 ![alt](/godot_recipes/4.x/img/sprite_animation_02.png)
 
-If you try playing the animation, you'll see it doesn't appear to do anything. That's because the last frame (12) looks the same as the first (0), but we're not seeing any of the frames in-between (1-11). To fix this, change the "Update Mode" of the track from its default value of "Discrete" to "Continuous". You can find this button at the end of the track on the right side.
+アニメーションを再生してみると、何も変化がないように見えます。これは最後のフレーム（12）が最初のフレーム（0）と全く同じ表示になっているためで、その間のフレーム（1～11）が全く反映されていないからです。これを修正するには、トラックの「更新モード」をデフォルト値の「離散」から「連続」に変更してください。このボタンはトラック右側の端に配置されています。
 
 ![alt](/godot_recipes/4.x/img/sprite_animation_03.png)
 
 ※この方法が有効なのは、フレームがすでに順序通りに並んでいることが前提です。そうでない場合は、タイムライン上で各_Frameを個別にキーフレーム化する必要があります。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/sprite_animation_04.gif" alt="スプライトアニメーション">
 
-Feel free to add the other animations yourself. For example, the "jump" animation is on frames `65` through `70`.
+自由に他のアニメーションを追加してください。例えば「ジャンプ」アニメーションはフレーム 65～70 に設定されています。
 
 ## 関連レシピ
 

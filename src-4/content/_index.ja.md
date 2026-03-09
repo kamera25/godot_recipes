@@ -10,11 +10,10 @@ draft: false
 
 このサイトでは、必要なゲームシステムを構築するための解決策と実例をまとめたコレクションを提供しています。
 
-{{% notice style="tip" title="Godot 4.0"%}}
-**Godot 4.0 has been released!**<br>
-Godot 4.0 is the latest stable release version of the engine.<br>
-This site also has lots of learning material for Godot 3 - much of it is still useful! You can click the ribbon in the top-right to toggle the Godot Recipes version, or click the button below:<br>
-{{% button href="/godot_recipes/3.x/" style="primary" icon="utensils" %}}Godot 3 Recipes{{% /button %}}
+**Godot 4.0が正式リリースされました！**<br>
+Godot 4.0はエンジンの最新安定版バージョンです。<br>
+このサイトにはGodot 3向けの学習教材も充実しており、その多くは今でも十分に活用可能です。右上のリボンをクリックするとGodot Recipesバージョンを切り替えられますし、以下のボタンからもアクセスできます：<br>
+{{% button href="/godot_recipes/3.x/" style="primary" icon="utensils" %}}Godot 3レシピ集{{% /button %}}
 {{% /notice %}}
 
 ゲーム開発を学ぶ準備はできていますか？趣味として、あるいは夢のキャリアへの第一歩として、今ほど良いタイミングはありません。現代のプログラミング言語とツールを駆使すれば、高品質なゲームを簡単に作成し、世界中に向けて配信することが可能です。その中の一つがGodotゲームエンジンです。初心者にとっては、ゲーム開発技術を楽しく学べる親しみやすい環境を提供します。一方、経験豊富な開発者にとっては、自らのビジョンを形にするための強力でカスタマイズ可能、かつオープンソースの強力なツールとして機能します。
@@ -29,7 +28,7 @@ Godotを初めて使う方はまずここから始めましょう：[Godotとは
 
 #### 初心者用
 
-If you're new to game development, start with the ["Godot 101: Basics"](/godot_recipes/4.x/basics/) section. There you'll find an introduction to the Godot application, and a step-by-step guide to creating your first project. There is a lot of material to absorb here. Don't feel discouraged if you feel you don't get it at first. Repetition is the key to learning complex topics; the more you work with Godot's features, the more familiar and _easy_ they will start to feel.
+ゲーム開発が初めての場合は、まず［『Godot 101：基本編』］(/godot_recipes/4.x/basics/)のセクションから始めてください。ここではGodotアプリケーションの概要と、初めてのプロジェクト作成を段階的にガイドする内容が提供されています。ここで学ぶべきことは多岐にわたりますが、最初はすべてを理解する必要はありません。複雑な概念を習得するには反復練習が不可欠です。Godotの各種機能を実際に操作すればするほど、その使い方に慣れ、次第に「簡単」だと感じられるようになるでしょう。
 
 {{% notice info %}}
 プログラミングに関する基本的な経験があることを前提としています。もし完全に未経験で始める場合は、[こちら](https://docs.godotengine.org/en/stable/getting_started/step_by_step/index.html)をクリックして、初心者向けの学習ガイドをご覧ください。
@@ -37,4 +36,4 @@ If you're new to game development, start with the ["Godot 101: Basics"](/godot_r
 
 #### 経験豊富な開発者向け
 
-If you're an experienced developer and/or you're familiar with other modern game engine(s), feel free to explore the menu on the left. You'll find a number of useful guides and tutorials to show you how to do things the "Godot Way". Code samples and example projects are available for all articles.
+経験豊富な開発者の方や、他の最新ゲームエンジンに精通されている方は、左側のメニューを自由にご覧ください。「Godot流」の手法で各種タスクを実行する方法を詳細に解説した、有用なガイドやチュートリアルが多数用意されています。すべての記事について、コードサンプルと実践的なプロジェクト例も提供しています。

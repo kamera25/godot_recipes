@@ -16,9 +16,9 @@ Godotに標準搭載されている`InterpolatedCamera`ノードは非推奨と�
 
 以下のスクリプトをシーン内の`<gd-icon Camera3D>` `Camera3D`ノードに添付してください。3つの`export`プロパティにより、以下のように選択できます：
 
-* `lerp_speed` - the camera's movement speed. Lower values result in a "lazier" camera.
-* `target` - choose the camera's target node.
-* `offset` - position of the camera relative to the target.
+* `lerp_speed` - カメラの移動速度。値を小さくすると「動きが鈍い」印象になります
+* `target` - カメラのターゲットノードを選択します
+* `offset` - ターゲットに対するカメラの相対位置設定です
 
 以下に、実際にカメラを使用した例をいくつかご紹介します。
 

@@ -13,13 +13,11 @@ ghcommentid: 20
 
 このソリューションでは、以下の入力アクションが定義されていると仮定します：
 
-   Action Name | Key(s)
---------|------
-`"up"` | W,↑
-`"down"` | S,↓
-`"right"` | D,→
-`"left"` | A,←
-`"click"` | Mouse button 1
+   `"上"` | W, ↑
+`"下"` | S, ↓
+`"右"` | D, →
+`"左"` | A, ←
+`"クリック"` | マウスボタン1
 
 また、以下のノードを使用していると想定します：{{< gd-icon CharacterBody2D >}} `CharacterBody2D` ノード。
 
@@ -43,7 +41,7 @@ func _physics_process(delta):
 
 ### オプション2: 回転と移動を組み合わせる場合
 
-In this scenario, the left/right actions rotate the character and up/down move the character forward and back in whatever direction it's facing. This is sometimes referred to as "Asteroids-style" movement.
+この操作方法では、左右でキャラクターを回転させ、上下で向いている方向に前進・後退します。これは「アステロイド風」と呼ばれる伝統的な操作方式です。
 
 ```gdscript
 extends CharacterBody2D
@@ -102,8 +100,9 @@ func _physics_process(delta):
     move_and_slide()
 ```
 
-Note that we stop moving if we get close to the target position. If you don't do this, the character will "jiggle" back and forth as it moves a little bit past the target, moves back, goes a little past it, and so on. Optionally, you can use `look_at()` to face in the direction of movement.
+```cpp
+// ターゲット位置に近づくと移動を停止します。これを行わないと、キャラクターは「ぐらぐら」動きながら、少しずつ目標を越えては戻り、再び越えて…という動作を繰り返します。オプションとして、`look_at()` を使って移動中の方向を向くようにすることもできます。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードをダウンロードするにはこちら：[https://github.com/godotrecipes/topdown_movement](https://github.com/godotrecipes/topdown_movement)

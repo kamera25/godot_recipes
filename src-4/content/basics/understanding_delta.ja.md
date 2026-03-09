@@ -7,7 +7,8 @@ ghcommentid: 12
 
 ## 問題文
 
-The `delta` or "delta time" parameter is a frequently-misunderstood concept in game development. In this tutorial, we'll explain how it's used, the importance of frame-rate independent movement, and practical examples of its use in Godot.
+```diff
+この「デルタ」パラメータ（別名：時間差分）は、ゲーム開発においてしばしば誤解されがちな概念です。本チュートリアルでは、これがどのように使用されるのか、フレームレートに依存しない移動の重要性、そしてGodotにおける実践的な使用例について解説します。
 
 ## 解決策
 
@@ -107,7 +108,7 @@ func _process(delta):
 動きがより複雑になったらどうしましょう？基本的な考え方は同じです。単位は常に秒を使用し、フレームは使用しないようにし、各フレームごとに `delta` で乗算してください。
 
 {{% notice tip %}}
-Working in pixels and seconds is much easier to conceptualize too, since it relates to how we measure these quantities in the real world. "Gravity is `100 pixels/second/second`, so after the ball falls for 2 seconds, it's traveling at 200 pixels/second." If you're working with frames, then you have to think about acceleration in units of `pixels/frame/frame`. Go ahead and try - it's not very natural.
+ピクセル単位や秒単位で考えると、現実世界での測定方法に直結するため直感的にも理解しやすいですよね。「重力加速度は毎秒100ピクセル/秒なので、ボールが2秒後には毎秒200ピクセルの速さになっている」といった具合です。フレーム単位で扱う場合は「加速をピクセル/フレーム/フレームという単位で計算しなければ」と考えなければなりません。実際に試してみてください - あまり自然ではありませんよ。
 {{% /notice %}}
 
 たとえば、重力を適用している場合、これは加速度です。各フレームごとに速度に一定の値が加算されます。上記の例と同様に、これによりノードの位置が変化します。
@@ -140,10 +141,8 @@ func _process(delta):
         $Sprite.position += velocity
 ```
 
-```python
 # フレームごとに時間ステップで速度と位置を更新している点に注意してください
 # 各フレームで更新される量については、フレームレートに依存せず適切に変化させるため、必ず「delta」で乗算する必要があります
-```
 
 #### 運動関数の活用について
 

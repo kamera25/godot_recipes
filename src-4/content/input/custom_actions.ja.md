@@ -12,7 +12,7 @@ draft: false
 
 通常、入力アクションは[プロジェクト設定]から追加します（詳細は[レシピ：入力アクション]参照）。ただし、スクリプト内で直接アクションを追加する必要がある場合もあります。このような場合には、［InputMapシングルトン］(https://docs.godotengine.org/en/latest/classes/class_inputmap.html)が提供するメソッドが便利です。
 
-Here's an example that would add a new action called "attack" using the space key:
+以下に、スペースキーを使用して「攻撃」という新しいアクションを追加する例を示します：
 
 ```gdscript
 func _ready():

@@ -12,7 +12,7 @@ draft: false
 
 ## 解決策
 
-We start by adding a {{< gd-icon Marker2D >}}`Marker2D` to the character. This will represent the place where the pet wants to "hang out" near the character.
+まず、キャラクターに `Marker2D` `マーカー2D`を追加します。このマーカーは、ペットがプレイヤーの近くに「滞在したい」場所を示すものです。
 
 ![alt](/godot_recipes/4.x/img/pet_follow_01.png)
 
@@ -33,7 +33,7 @@ var speed = 25
 ```
 
 ```lua
-local FollowPoint = GetNode(\) -- フォローポイントノードを取得
+local FollowPoint = GetNode("follow_point") -- フォローポイントノードを取得
 if FollowPoint and not FollowPoint.isLocked then -- ロック状態でないことを確認
     _speed = _speed * 0.9  -- 移動速度を徐々に減速
 
@@ -66,6 +66,6 @@ func _physics_process(delta):
 
 ※ワールドによっては、ペットが障害物に引っかかってしまう場合があります。より堅牢な追従機能が必要な場合は、ナビゲーションシステムをご利用ください。具体的な実装例については[タイルマップナビゲーション](/godot_recipes/4.x/ai/tilemap_navigation/)を参照してください。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/ai_behavior_demos](https://github.com/godotrecipes/ai_behavior_demos)

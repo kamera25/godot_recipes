@@ -1,5 +1,5 @@
 +++
-title = "Know Your Nodes"
+title = 「ノードを理解する」
 weight = 2
 chapter = true
 pre = "<i class='far fa-circle fa-fw'></i>&nbsp"
@@ -7,7 +7,7 @@ pre = "<i class='far fa-circle fa-fw'></i>&nbsp"
 
 # {{< gd-icon ノード >}}　ノードを知る
 
-In the "Know Your Nodes" series, we go in-depth with a single one of Godot's nodes. Learn what makes it tick and see some examples of how it's used.
+「ノードを知る」シリーズでは、Godotの単一ノードを詳細に解説します。その仕組みを理解するとともに、実際の使用例も紹介します。
 
 #### このセクションでは：
 

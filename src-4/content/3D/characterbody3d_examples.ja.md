@@ -28,8 +28,7 @@ draft: false
 
 また、個別の {{< gd-icon MeshInstance3D >}}`MeshInstance` ノードを **Y** 軸を中心に `180` 度回転させました。これは元々 **+Z** 方向を向いてモデル化されていたためですが、Godot では **-Z** が前方方向となるため、戦車が逆向きに見えるようにはしたくないからです。
 
-Before we add a script, open the "Project Settings" and add the following inputs
-on the "Input Map" tab:
+スクリプトを追加する前に、「プロジェクト設定」を開き、「入力マップ」タブで以下の入力を追加してください：
 
 入力操作 | キー
 :------------|:---
@@ -117,7 +116,7 @@ class MainNodePath(Spatial):
     def update_transforms(self):
         for node in self.get_children():
             if isinstance(node, StaticBody3D):
-                p3d.TransformNode(\)
+                p3d.TransformNode("transform_node")
                     .set_translation(p3d.Vector3())
                     .set_rotation_axisangle(p3d.Vector3(), p3d.Vector3(), 0)
                     .set_scale(p3d.Vector3(0.5, 0.5, 0.5))
@@ -133,7 +132,7 @@ class MainNodePath(Spatial):
 
 これはあらゆる種類の運動学的キャラクターの動作基盤です。ここからジャンプ、射撃、AI挙動などを追加できます。このレシピを拡張した具体例については、関連するレシピを参照してください。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードをダウンロードする：[https://github.com/godotrecipes/characterbody3d_examples](https://github.jp/godotrecipes/characterbody3d_examples)
 

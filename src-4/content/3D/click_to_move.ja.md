@@ -41,15 +41,14 @@ func _physics_process(delta):
     move_and_slide()
 ```
 
-We've also added a {{< gd-icon MeshInstance3D >}}`MeshInstance3D` called "Marker" to the scene. This will be moved to indicate the clicked position.
+また、シーンに「マーカー」という名前の `{{< icon MeshInstance3D >}}MeshInstance3D` を追加しました。このオブジェクトは、クリックされた位置を示すために移動します。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/3d_click_03.png" alt="3Dクリック操作 (ステップ 3)">
 
 ### マウス→3D
 
 現在、マウスの位置を3D空間にマッピングする手段が必要です。スクリーンを3D世界の窓と見立てると、マウスは画面ガラス上に固定されています。3D空間で何かを選択するには、カメラ（視点）から出発し、マウスの位置を通って現実世界へと伸びる光線を投影しなければなりません。
 
-```python
 # Example function to simulate raycasting from static bodies
 def get_raycast_results():
     results = []
@@ -60,7 +59,6 @@ def get_raycast_results():
                 # Process the raycast results as needed
                 pass
     return results
-```
 
 ```gdscript
 func _on_StaticBody_input_event(camera, event, click_position, click_normal, shape_idx):

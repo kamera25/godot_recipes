@@ -10,10 +10,10 @@ draft: false
 
 ## 解決策
 
-In this recipe, we're going to make a *simplified* airplane controller. By "simplified" we mean stripping things down to the basics. We're looking for the "feel" of flying a plane - one that you can just jump in and start flying effortlessly, with a minimal control scheme.
+このレシピでは、「簡素化された」航空機コントローラーを作成します。ここで言う「簡素化」とは、基本機能だけに絞り込むことを意味します。私たちが目指しているのは、飛行機の操縦感覚――特別な訓練なしですぐに飛び立て、最小限の操作体系で簡単に飛行を楽しめるような体験です。
 
 {{% notice note %}}
-This recipe is *not* an accurate flight simulator. We are not simulating aerodynamics, so this doesn't fly like a *real* airplane. We're going for simplicity and "fun" here, not accuracy.
+このレシピは厳密な飛行シミュレーターではありません。航空力学を再現しているわけではないので、本物の飛行機のように飛ぶわけではありません。ここでは正確性よりもシンプルさと「楽しさ」を追求しています。
 {{% /notice %}}
 
 ### ノード設定
@@ -97,9 +97,8 @@ func _physics_process(delta):
     move_and_slide()
 ```
 
-To test, add the plane to a test scene (don't forget a {{< gd-icon Camera3D >}} `Camera`). Press the `"throttle_up"` input and you should see the plane accelerate forward.
+テスト方法：テストシーンにこの平面を追加してください（`{{< gd-icon Camera3D >}}` カメラの設定を忘れずに）。`"throttle_up"`入力を押すと、平面が前方へ加速する様子が確認できるはずです。
 
-{{% notice tip %}}
 [補間カメラ機能](/godot_recipes/4.x/3d/interpolated_camera/) をこのデモで実装しています。
 {{% /notice %}}
 
@@ -134,13 +133,13 @@ mesh.rotation.z = lerpf(mesh.rotation.z, -turn_input, level_speed * delta)
 ```
 mesh は、平面シーン内の {{< gd-icon MeshInstance3D >}}`MeshInstance3D` オブジェクトへの参照です（例では `$cartoon_plane`）。
 
-The amount of roll is related to the `turn_input` so a shallow turn banks less. Going straight will "auto" level the plane.
+ロール量は「turn_input」値に関連しているため、緩やかなターンでは傾きが少なくなります。直進すると自動的に機体が水平になります。
 
 これで完了です！基本的な飛行制御が正常に動作するようになり、快適に操縦できるはずです。各種プロパティを調整して、それらが動きにどう影響するか試してみてください。
 
 ### 着陸/離陸時
 
-While the above is fine for flying, it doesn't handle the ground very well. Here, we'll simulate landing using a simplistic approach (by "simplistic", we mean doing so in a very basic way - you'll probably want to expand on it depending on what your game may need).
+上記の方法は空中移動には適していますが、地上での挙動を考えると不十分です。ここでは、非常に簡易的なアプローチ（「簡易」という表現は非常に基本的な方法を意味します - 実際のゲーム要件によっては、さらに拡張が必要になるでしょう）を用いて着陸シミュレーションを実装します。
 
 まず、地上走行時と空中飛行時を明確に区別する必要があります。地上では速度を0に減速できますが、空中では最低限の対気速度を維持しなければなりません。また、地上走行中は旋回時にバンク（傾斜）しないようにする必要があります（翼が地面に接触して損傷する危険があるため）。
 
@@ -294,6 +293,6 @@ func _physics_process(delta):
 
 このテクニックは、様々なアーケードスタイルの飛行ゲームに応用可能です。例えば、マウス操作の場合、`InputEventMouseMotion` の `relative`プロパティを使用してピッチとヨー入力を設定する方法が有効です。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/3d_airplane_demo](https://github.com/godotrecipes/3d_airplane_demo)

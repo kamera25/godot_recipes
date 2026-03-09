@@ -15,7 +15,7 @@ ghcommentid: 59
 
 以下に目指すべき例を示します：
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/debug_stats_01.png" alt="デバッグ統計画面">
 
 まず最初に、名前を `DebugStats` とする `MarginContainer` を追加し、その中に `VBoxContainer` の子要素を配置します。マージンは適切な値に設定してください（私は通常 `20` を使用しています）。
 
@@ -65,19 +65,19 @@ func _process(_delta):
 
 まず、追跡対象オブジェクトとプロパティのデータをカプセル化するカスタムクラスから始めましょう。このクラスのプロパティを分解します：
 
-* `object` - This is a reference to the object we're tracking.
-* `property` - This is in the form of a `NodePath`, meaning we can track something like `"position"`, but also `"position:x"`.
-* `label_ref` - Each property is linked to a {{< gd-icon Label >}}`Label` node, this is a reference to the label so that we can set its `text`.
-* `mode` - This is an optional setting to configure how the value should be displayed (see below).
+・ `object` - 追跡対象オブジェクトへの参照です。
+　・ `property` - `NodePath`形式で指定し、例えば `"position"` だけでなく `"position:x"` のようなプロパティも追跡可能です。
+　・ `label_ref` - 各プロパティは対応する {{< gd-icon Label >}}`Label`ノードと紐付けられており、この参照によりラベルの `text`属性を設定できます。
+　・ `mode` - 表示方法を指定するオプション設定です（詳細は後述）。
 
 ```python
 def update_label(self):
     # ラベルの text プロパティに表示する文字列を構築
-    label_content = f\
+    label_content = f"{self.object}: {self.property_name} ({self.value})"
     if self.mode == 'edit':
-        label_content += \
+        label_content += " (編集モード)"
     elif self.mode == 'view':
-        label_content += \
+        label_content += " (閲覧モード)"
 
     # 構築したコンテンツをラベルの text プロパティに設定
     self.widget.text = label_content
@@ -85,8 +85,8 @@ def update_label(self):
 
 本例では、`mode` オプションの設定例として以下の2つのケースを示します：
 
-* `"length"` - if the `property` is a vector, we'll display its length.
-* `"round"` - if the property is a numeric type, we'll round its values.
+* `"length"` - プロパティがベクトルの場合、その長さを表示します。
+* `"round"` - プロパティが数値型の場合、値を四捨五入します。
 
 Loading plamo-2-translate ⠙
 Loading plamo-2-translate ⠹
@@ -119,11 +119,11 @@ func remove_property(object, property):
 
 `add_property()` は任意のノードから呼び出すことができます（デバッグ表示機能はシングルトンとしてロードする必要があります - 後述参照）。
 
-Note we're loading and instantiating a "debug_label" scene. This allows you to customize how you want the individual labels to appear - font, size, color, etc. Make a separate scene with a {{< gd-icon Label >}}`Label` node and configure it to your liking.
+注意：現在「debug_label」シーンのロードとインスタンス化を行っています。これにより、個別のラベルの表示方法（フォント、サイズ、色など）を自由にカスタマイズできます。別途、{{< gd-icon Label >}}`Label`ノードを含むシーンを作成し、お好みの設定に調整してください。
 
 ### ゲームへの追加について
 
-To use it in game, you'll want the debug display to be rendered on top of your game, whether in 2D or 3D. Create one more scene called "DebugOverlay" and make its root node a {{< gd-icon CanvasLayer >}}`CanvasLayer`. Add the `DebugStats` scene as a child.
+ゲーム内でこの機能を使用するには、2D/3Dを問わず、デバッグ表示がゲーム画面の上に重ねて表示されるようにする必要があります。「DebugOverlay」というシーンをさらに1つ作成し、そのルートノードに{{< gd-icon CanvasLayer >}}`CanvasLayer`を設定してください。次に、このScene内に`DebugStats`シーンを子要素として追加します。
 
 簡単に参照できるように、私はこれを `DebugOverlay` スクリプトに追加しています：
 

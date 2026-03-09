@@ -6,14 +6,14 @@ ghcommentid: 87
 
 ## {{< gd-icon RayCast2D >}}RayCast2D
 
-*Raycasting* is a common technique in game development. "Casting a ray" means extending a line from a point until it collides with something or reaches its limit.
+＊レイキャスティング＊はゲーム開発で広く用いられる手法です。「レイをキャストする」とは、ある点から直線を伸ばし、それが何かに衝突するか限界に達するまで移動させる操作を指します。
 
 ### ノードのプロパティ
 
 ```markdown
 {{< gd-icon RayCast2D >}}`RayCast2D`ノードを追加し、インスペクターを確認してみましょう：
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/kyn_raycast2d_01_4.png" alt="alt">
 
 以下に主要な特性をご説明します：
 
@@ -57,7 +57,7 @@ ghcommentid: 87
 
 #### 1. 撮影プロセス
 
-Fast-moving projectiles often have the problem of "tunneling" through obstacles - they are moving too fast for the collision to be detected in a single frame. As an alternative, you can use a {{< gd-icon RayCast2D >}}`Raycast2D` to represent the path (or a laser, etc.).
+高速で移動する発射物には、障害物を「すり抜けてしまう」という問題がよく発生します。これは、衝突判定が1フレーム内で検出できないほど物体の移動速度が速いためです。代替案として、経路（あるいはレーザーなど）を表現するには {{< gd-icon RayCast2D >}}`Raycast2D` を使用する方法があります。
 
 ```
 ここに、銃の先端にレイキャストが取り付けられたプレイヤースプライトがあります。`target_position`は`(250, 0)`に設定されています。
@@ -95,8 +95,7 @@ func _physics_process(delta):
 
 動作中の様子をご覧ください：
 
-<img src=\ alt=\
->
+<img src="/godot_recipes/4.x/img/kyn_raycast2d_04.gif" alt="Kyn's Raycast 2D Example">
 
 <!-- ## 関連レシピ
 

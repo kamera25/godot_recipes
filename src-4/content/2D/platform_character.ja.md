@@ -19,7 +19,7 @@ ghcommentid: 16
 
 まず `CharacterBody2D` ノードを作成し、その上に `Sprite2D` と `CollisionShape2D` を追加してください。
 
-Attach the following script to the root node of the character. Note that we're using input actions we've defined in the InputMap: `"walk_right"`, `"walk_left"`, and `"jump"`. See [InputActions](/godot_recipes/4.x/input/input_actions/).
+以下のスクリプトをキャラクターノードのルートに追加してください。なお、ここでは[入力マップ]で定義した入力アクション（`"walk_right"`、`"walk_left"`、および `"jump"`）を使用しています。詳細は [InputActions](/godot_recipes/4.x/input/input_actions/) をご覧ください。
 
 ```gdscript
 extends CharacterBody2D
@@ -52,7 +52,7 @@ func _physics_process(delta):
 
 上記のコードは優れた出発点であり、これを基盤として多種多様なプラットフォームコントローラーを実装できます。ただし一つ欠点として、移動が瞬間的に行われる点が挙げられます。より自然な操作感を得るには、キャラクターが最大速度まで徐々に加速し、入力がなくなると自然に減速して停止する仕組みの方が適切です。
 
-One way to add this behavior is to use linear interpolation ("lerp"). When moving, we will lerp between the current speed and the max speed and while stopping we'll lerp between the current speed and `0`. Adjusting the lerp amount will give us a variety of movement styles.
+この動作を実現する効果的な方法の一つが線形補間（"lerp"）を使用することです。移動中は現在速度と最大速度の間で補間し、停止時は現在速度から0まで補間します。補間量を調整することで、さまざまな移動スタイルを実現できます。
 
 {{% notice tip %}}
 線形補間の概要については、[ゲーム開発数学：補間](/godot_recipes/4.x/math/interpolation/)をご覧ください。
@@ -82,7 +82,7 @@ func _physics_process(delta):
 ```
 
 ```
-\ と \ の値を変更して、ゲームの操作性にどのような影響があるか試してみましょう。例えば氷ステージの場合、これらの値を非常に低く設定することで、キャラクターの動きがより鈍くなるように調整できます。
+"摩擦係数" と "加速度" の値を変更して、ゲームの操作性にどのような影響があるか試してみましょう。例えば氷ステージの場合、これらの値を非常に低く設定することで、キャラクターの動きがより鈍くなるように調整できます。
 
 ![alt](/godot_recipes/4.x/img/plataformero1.gif)
 
@@ -101,6 +101,6 @@ Download the project file here: [platform_character.zip](/godot_recipes/4.x/file
 <!-- - [Input Intro](/godot_recipes/3.x/input/input_intro/)
 - [Kinematic Friction](/godot_recipes/3.x/physics/kinematic_friction/) -->
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードしてください：[https://github.com/godotrecipes/2d_platform_basic](https://github.jp/godotrecipes/2d_platform_basic)

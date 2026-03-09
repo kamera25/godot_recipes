@@ -11,7 +11,7 @@ ghcommentid: 9
 
 ## 解決策
 
-"Tree order" is mentioned often in the Godot docs and in tutorials. However, it is not always obvious to a beginner what is meant by this. Generally speaking, the order in which nodes are handled in the tree is in *top-down* fashion, starting at the root and going down each branch in turn.
+「ツリー順序」はGodotの公式ドキュメントやチュートリアルで頻繁に言及される概念ですが、初心者にはその意味が必ずしも直感的に理解しやすいものではありません。基本的に、ノードがツリー内で処理される順番は**トップダウン方式**で、ルートノードを起点として、各ブランチごとに順番に下層へと降りていくのが原則です。
 
 シーンツリーの順序管理は、Godot初心者にとって非常に混乱しやすい要素です。この例では、各処理がどのような順番で実行されるかを具体的に解説します。
 
@@ -89,7 +89,7 @@ TestChild2 process
 
 以下は[ノードリファレンス](https://docs.godotengine.org/en/3.2/classes/class_node.html#class-node-method-ready)からの引用です：
 
-> Called when the node is "ready", i.e. when both the node and its children have entered the scene tree. If the node has children, their `_ready` callbacks get triggered first, and the parent node will receive the ready notification afterwards.
+> ノードが「準備完了」状態になった際に呼び出されます。具体的には、当該ノードおよびそのすべての子ノードがシーンツリーに完全に組み込まれた時点でトリガーされます。もしノードに子要素がある場合、まずその子ノードの `_ready` コールバック関数が先に実行され、その後親ノードに対して「準備完了」通知が行われます。
 
 このことから、ノード構造を設定する際に重要な経験則が導き出せます：
 

@@ -36,7 +36,7 @@ tags: []
 
 ※ 重力スケール設定（`gravity_scale`）
 
-This value multiplies the gravity applied to the body. Total gravity is the sum of the "Default Gravity" value from **Project Settings** and any additional gravity that may applied by {{< gd-icon Area2D >}}`Area2D` nodes.
+この値はボディに適用される重力を乗算します。総重力は **プロジェクト設定** の「デフォルト重力」値と、{{< gd-icon Area2D >}} `Area2D` ノードによって追加で適用された任意の重力の合計です。
 
 * 定常力
      * 作用力（`applied_force`）
@@ -78,7 +78,9 @@ This value multiplies the gravity applied to the body. Total gravity is the sum 
 
 硬い物体をより直接的に制御する必要があるケースもあります。例えば、クラシックゲーム『Asteroids』のリメイクを作ろうとしている場合を考えてみましょう。プレイヤーの宇宙船は左右矢印キーで回転させ、上矢印が押されたときに前進するようにしなければなりません。
 
-By default, there is some *damping* (set in **Project Settings**), which reduces a body's velocity and spin. In space there's no friction, so there shouldn't be and damping at all. However, for the "Asteroids" feel, we want the ship to coast to a stop and to stop rotating when we let go of the keys. To do that, we set the ship's *Angular/Damp* to `5` and *Linear/Damp* to `1` in the Inspector.
+デフォルトでは、プロジェクト設定で設定した**減衰効果**がボディの速度と回転を抑制します。宇宙空間には摩擦がないため、本来はこのような減衰は存在しないはずです。ただし、「スペースインベーダー」風のゲーム体験を実現するためには、キーを離すと機体が徐々に停止し、回転も自然に止まるようにしたいところです。これを実現するため、インスペクター画面で以下の値を設定します：
+- 角加速度減衰係数：`5`
+- 直線加速度減衰係数：`1`
 
 以下がコードです：
 
@@ -114,7 +116,6 @@ func _physics_process(delta):
     applied_torque = rotation_dir * spin_thrust
 ```
 
-```python
 def update_game_state():
     global engine_thrust, spin_thrust, thrust, rotation_dir
 
@@ -130,7 +131,6 @@ def update_game_state():
 
     # スクリーンサイズの取得（後で使用するため）
     screensize = get_current_screen_size()
-```
 
 次に、`input()` 関数はキー状態を取得し、宇宙船の推進モードを有効/無効に設定するとともに、回転方向（`rotation_dir`）を正または負方向に決定します。この関数は `_process()` 内で毎フレーム呼び出されます。
 
@@ -138,9 +138,8 @@ def update_game_state():
 
 シーンを再生 - 自由に飛行できるはずです：
 
-<img src=\ alt=\
->
-   <img src=\ alt=\>
+<img src="/godot_recipes/3.x/img/rigidbody_ship1.gif" alt="RigidBody ship animation">
+   <img src="/godot_recipes/3.x/img/rigidbody_ship1.gif" alt="RigidBody船のアニメーション">
 
 #### ポジション問題
 
@@ -168,10 +167,8 @@ func _physics_process(delta):
 
 * リジッドボディの位置や線形速度をフレームごとに、あるいは頻繁に変更するのは避けるべきです。状態を直接操作する必要がある場合は、物理演算の状態を直接取得できる `_integrate_forces` メソッドを使用してください。
 
-```csharp
 // _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [Physics2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。
 // 関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。私たちの場合、最も重要なのはボディの [Transform2D](http://docs.godotengine.org/en/stable/classes/class_transform2d.html) に関する情報です。
-```
 
 したがって、`_integrate_forces()` に移動して以下のようにコードを記述します：
 
@@ -192,9 +189,7 @@ func _integrate_forces(state):
 ```python
 # 物理状態に基づいてボディの 'transform' を調整することで、エンジンは正常に動作し続け、期待通りの結果が得られます：
 
-<figure><img src=\
- alt=\
-></figure>
+<figure><img src="https://github.com/GodotRecipes/Game-Development-with-Godot/blob/master/assets/images/rigidbody_ship2.gif" alt="Rigid Body Ship Animation"></figure>
 
 <!-- #### この動画が気に入ったら？
 

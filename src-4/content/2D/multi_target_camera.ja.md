@@ -47,7 +47,7 @@ var targets = []  # Array of targets to be tracked.
 @onready var screen_size = get_viewport_rect().size
 ```
 
-These settings will let you adjust the camera's behavior. We'll `lerp()` all camera changes, so setting the move/zoom speeds to lower values will introduce some delay in the camera "catching up" to sudden changes.
+これらの設定によりカメラ動作を調整できるようになります。すべてのカメラ変更を補間処理するため、移動速度やズーム速度を低く設定した場合、突然の変化に対してカメラが「追いつく」まで若干の遅延が生じます。
 
 最大・最小ズーム値は、ゲーム中のオブジェクトの大きさや、どこまで接近または遠ざけたいかによっても変わります。適宜調整してください。
 
@@ -65,7 +65,7 @@ func remove_target(t):
         targets.erase(t)
 ```
 
-For adding and removing targets, we have two helper functions. You can use these during gameplay to change what targets are being tracked ("Player 3 has entered the game!"). Note that we don't want to have the same target tracked twice, so we reject it if it's already there.
+ターゲットの追加/削除については、2つの補助関数を用意しています。ゲームプレイ中にこれらを使用することで、追跡対象を変更できます（「プレイヤー3がゲームに参加しました！」）。また、同じターゲットを複数同時に追跡することは避けたいため、既に存在する場合は追加を拒否する仕組みになっています。
 
 機能の大部分は `_process()` メソッドで実装されています。まず、カメラの移動処理から見ていきましょう：
 
@@ -146,11 +146,11 @@ def main():
     expanded_targets = expand(target_image, ellipse_coords)
     final_rect = cv2.rectangle(image, (x1, y1), (x2, y2), color=(0, 0, 255))  # Example rectangle coordinates
 
-if __name__ == \:
+if __name__ == "__main__":
     main()
 ```
 
-Here you can see the rectangle being drawn (press "Tab" in the demo project to enable this drawing):
+以下の画面では、長方形が描画されている様子を確認できます（デモプロジェクトで「Tab」キーを押すとこの描画機能を有効にできます）：
 
 ![alt](/godot_recipes/4.x/img/multi_cam_02.gif)
 
@@ -206,6 +206,6 @@ func remove_target(t):
         targets.remove(t)
 ```
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/multitarget_camera](https://github.com/godotrecipes/multitarget_camera)

@@ -14,17 +14,17 @@ draft: false
 
 プロジェクトにファイルをコピーする前に、以下の点に注意してください：資産にはOBJ、FBX、GLTFといった複数の異なるファイル形式が存在します。また、変更を希望する場合に備えてサンプルや個別テクスチャなどの追加ファイルも用意されています。これらすべては不要であり、GodotではGLTF形式が最も推奨されるインポートフォーマットです。したがって、必ず`gltf`フォルダまたは`.gltf`ファイル（もしくは同等のバイナリ形式である`.glb`）のみをプロジェクトディレクトリにドラッグ＆ドロップしてください。
 
-Here, I've taken the `gltf` folder from the "Dungeon" pack and the `characters` folder from the "Adventurers" pack and dragged them into my project.
+ここで、「ダンジョン」パックから「gltf」フォルダーと、「冒険者」パックから「characters」フォルダーを取り出して、プロジェクトにドラッグしました。
 
 {{% notice style="note" title="" %}}
-There are a lot of files in the Dungeon pack - Godot may take a little time to read them all!
+ダンジョンパックには多くのファイルが含まれています。Godotがすべてを読み込むまで少し時間がかかるかもしれません！
 {{% /notice %}}
 
 ## キャラクターのインポート方法
 
 ファイルシステムタブで`knight.glb`ファイルを選択し、左上の**インポート**タブをクリックしてください。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/3d_import_tab.png" alt="3Dインポートタブ">
 
 こちらには基本的なインポート設定が表示されますが、より詳細なオプションも利用可能です。**詳細設定**ボタンをクリックすると、新しいウィンドウが開きます：
 
@@ -39,12 +39,12 @@ There are a lot of files in the Dungeon pack - Godot may take a little time to r
 
 ### アニメーション機能
 
-Scroll down to the list of animations. You'll see that there are many, but while some we'll only want to play once, such as attacks, others like "Idle" and "Running", we'd like to be looping. For any animation like this, select the animation name and set the **Loop Mode** to "Linear". Do this for all of the "Walking", "Running", and "Idle" variations. When you're done, click the **Reimport** button at the bottom.
+アニメーション一覧までスクロールしてください。様々な種類がありますが、攻撃モーションのように一度再生すれば足りるものと、「待機中」や「走行中」などループさせたいものがあります。このようなアニメーションについては、名称を選択し、**ループモード**を「リニア」に設定します。これはすべての「歩行」「走行」「待機」バリエーションについて行います。作業が完了したら、画面下部の**再インポート**ボタンをクリックしてください。
 
 ![alt](/godot_recipes/4.x/img/3d_import_loop.png)
 
-{{% notice style="info" title="Setting Loop Automatically" %}}
-If you are making your own characters, you can skip this step by ensuring that your animations' names end with `"-loop"`. For details on this and other *import hints*, see [Import Hints](https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_scenes.html#import-hints) in the Godot documentation.
+{{% notice style="info" title="アニメーションループの自動設定について" %}}
+自作キャラクターを作成する場合、このステップは省略可能です。ただし、アニメーション名がすべて`"-loop"`で終わるように命名してください。その他のインポート関連のヒントについては、[Godotドキュメント](https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_scenes.html#import-hints)の「インポートヒント」セクションを参照してください。
 {{% /notice %}}
 
 ファイルシステム内の「knight.glb」を右クリックし、［新規継承シーン］を選択してください。
@@ -53,20 +53,21 @@ If you are making your own characters, you can skip this step by ensuring that y
 
 ## ワールドアイテムのインポート
 
-Importing objects for the environment will be a similar process. As an example, let's use one of the dungeon walls. There are a lot of files in the dungeon pack, so type "wall" in the file filter to help find it:
+環境用オブジェクトのインポートも同様の手順で行います。具体例として、ダンジョンの壁ファイルを使用しましょう。ダンジョンパックには多数のファイルが含まれているため、ファイル名フィルターに「wall」と入力して目的のファイルを簡単に見つけられるようにします：
 
 ![alt](/godot_recipes/4.x/img/3d_import_wall.png)
 
 幸いなことに、Godotではインポート時に自動的にこれらの処理を行ってくれます。
 
-In the import window, select the mesh object. On the right side, check the **Physics** box, and set the **Shape Type** to "Simple Convex" (feel free to check out the other options too).
+インポートウィンドウで、メッシュオブジェクトを選択します。右側の設定で「**物理演算**」ボックスをチェックし、「**形状タイプ**」を「単純な凸形」に設定してください（他のオプションも自由に確認してみてください）。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/3d_import_physics.png" alt="3Dインポート物理設定">
 
 をクリックします。ゲームでこのアセットを使用する際、Godotは自動的に対応する衝突形状を持った{{< gd-icon StaticBody3D >}}`StaticBody3D`を作成します。
 
-{{% notice style="info" title="Automating Collision Shapes" %}}
-As above, there is an import hint for collision shapes as well. In your Blender project, appending `-col` (or some other variations) will let the importer know to do this step automatically. See the *import hints* link for details.
+```
+{{% notice style="info" title="衝突形状の自動化設定" %}}
+上記と同様に、衝突形状についてもインポート時の補助機能が用意されています。Blenderプロジェクトファイルに`-col`（またはその他のバリエーション）を追加することで、自動的にこの処理を実行するようインポートツールに指示できます。詳細は*インポート補助機能*のリンクを参照してください。
 {{% /notice %}}
 
 ## インポート処理の自動化

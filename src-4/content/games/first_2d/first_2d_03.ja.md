@@ -28,8 +28,8 @@ extends Area2D
 
 您的 `extends` 行应始终与脚本附加到的节点类型匹配。
 
-{{% notice style="info" title="Accessing scripts" %}}
-A script on its own doesn't do much of anything. Scripts *define* additional functionality for whatever object they're attached to. You will never be accessing a variable in some script, you'll be accessing a property of an *object*, which is *defined* by that script. This is a very important distinction.
+{{% notice style="info" title="スクリプトの操作について" %}}
+単独で存在するスクリプト自体には、ほとんど意味がありません。スクリプトは**付加的な機能を定義する**ものであり、特定のオブジェクトに紐づいて初めて効果を発揮します。単に「あるスクリプト内の変数」ではなく、そのスクリプトによって**定義されたオブジェクトのプロパティ**を参照することになる点が重要です。これは極めて重要な概念です。
 {{% /notice %}}
 
 ## 移動
@@ -58,9 +58,9 @@ func _process(delta):
 ※ `Input.get_vector()` は、指定された4つの入力状態をチェックし、それらの方向に向くベクトルを生成します。
 ※ 最後に、与えられた入力ベクトルを移動量として船の `position` に加算します。この時、速度値に合わせてベクトルの大きさを調整し、さらに `delta` でスケール処理を行います。
 
-{{% expand "Links to more information" %}}
-* Understanding vectors: [Vector Math](https://docs.godotengine.org/en/latest/tutorials/math/vector_math.html)
-* What is `delta`? [Understanding delta](/godot_recipes/4.x/basics/understanding_delta/)
+{{% expand "詳細情報へのリンク" %}}
+* ベクトルの基本理解：[ベクトル数学](https://docs.godotengine.org/en/latest/tutorials/math/vector_math.html)
+* `delta`とは？ [デルタについての解説](/godot_recipes/4.x/basics/understanding_delta/)
 {{% /expand %}}
 
 シーンを実行するには**［現在のシーンを実行］**ボタンをクリックしてください。その後、自由に移動してみてください。
@@ -75,7 +75,7 @@ func _process(delta):
 @onready var screensize = get_viewport_rect().size
 ```
 
-The `@onready` here tells Godot not to set the value of the `screensize` variable until the `Player` node has entered the scene tree. Effectively, it means "wait until the game starts", because there's no window to get the size of until the game is running.
+ここでの `@onready` は、Godotが `Player`ノードがシーンツリーに加わるまで `screensize`変数の値を設定しないように指示しています。本質的には「ゲーム開始を待つ」ということです。なぜなら、ゲームが実行されていない状態ではウィンドウの大きさを取得する方法がないからです。
 
 次のステップは、位置をその `screensize` 矩形の範囲内で固定することです。`position` が使用する `Vector2` には、`clamp()` メソッドがあります。`position` 設定直後に、この行を追加してください：
 
@@ -94,7 +94,7 @@ position = position.clamp(Vector2(8, 8), screensize - Vector2(8, 8))
 
 ### 方向に合わせたアニメーションの適用方法
 
-Now that the ship is moving, we can choose the "tilted" ship images when moving left or right, as well as the matching "Booster" animation.
+船が動いている状態では、左または右に移動する際に「傾斜した」船の画像を選択できるほか、対応する『ブースター』アニメーションも表示されます。
 
 移動方向を判断するには、`input`ベクトルの`x`値を確認します。値が正であれば右方向へ、負なら左方向へ、0であれば停止中と判定し、それぞれ対応する`frame`値を持つ`Sprite2D`と、適切な`animation`を選択します。
 
@@ -118,5 +118,4 @@ func _process(delta):
 
 次のステップでは、「弾丸」シーンを作成し、プレイヤーが射撃できるようにします。
 
-| {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_02/" icon="fas fa-arrow-left" %}}Prev{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_04/" icon="fas fa-arrow-right" icon-position="right" %}}Next{{% /button %}} |
-|------|------:|
+│ {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_02/" icon="fas fa-arrow-left" %}}前の手順{{% /button %}} │ {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_04/" icon="fas fa-arrow-right" icon-position="right" %}}次の手順{{% /button %}}│

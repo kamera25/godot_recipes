@@ -21,14 +21,14 @@ ghcommentid: 49
 
 - **MOUSE_MODE_CONFINED** ：マウスは表示されていますが、ゲームウィンドウの外には移動できません。
 
-"Captured" is the most commonly used option. You can set the mouse mode at runtime using:
+「キャプチャ」は最も一般的に使用されるオプションです。実行時にマウスモードを設定するには、以下のコマンドを使用できます：
 
 ```gdscript
 func _ready():
     Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 ```
 
-When the mouse is captured, mouse input events will still be passed as normal. However, you will find there is a problem. If you want to close the game or switch to another window, you can't. For this reason, you will want to also include a way to "release" the mouse. For example, to release when the player pressed the Escape key:
+マウスが捕捉されている状態でも、通常どおりマウス入力イベントは伝達されます。ただし、問題が生じることに注意してください。ゲームを終了したり他のウィンドウに切り替えたい場合、それが不可能になります。このため、「マウス解放」機能も実装しておくと便利です。例えば、プレイヤーがEscキーを押したときにマウスを解放するには：
 
 ```gdscript
 func _input(event):

@@ -15,9 +15,8 @@ FPSゲームで射撃機能を実装する必要があるが、個別の発射�
 
 Godotにおけるレイキャスティングには、主に2つの方法があります：{{< gd-icon RayCast3D >}}`RayCast3D`ノードを使用する方法と、物理エンジンを直接操作して空間内に直線状の光線（レイ）を投射する方法です。どちらも同じ目的を達成できますが、それぞれに異なる利点があります。ノードベースのアプローチは、継続的な衝突検出が必要な場合に特に有効です - 例えば、床に触れているかどうかを確認するための下向きのレイを継続的にチェックする場合などに最適です。
 
-We'll use the second method, querying the physics state, because we want to know, at the moment we press the "shoot" key, whether we've hit anything.
+第二の方法、つまり物理状態を問い合わせる方法を採用しましょう。これは、「発射」キーを押した瞬間に、何かに当たったかどうかを知りたいからです。
 
-{{% notice note %}}
 このレシピでは、すでに動作するFPSキャラクターコントローラーと移動可能なワールドが用意されていることを前提としています。もし用意されていない場合は、先に[基本FPSキャラクター](/godot_recipes/4.x/3d/basic_fps)のチュートリアルを参照してください。
 {{% /notice %}}
 
@@ -29,7 +28,7 @@ def _input():
     # ... (既存のマウス入力処理)
 
     if keyboard.is_pressed('k'):
-        print(\)
+        print("Keyboard 'K' pressed!")
 ```
 
 ```gdscript
@@ -60,6 +59,6 @@ func shoot():
 
 - [基本FPSキャラクター](/godot_recipes/4.x/3d/basic_fps)
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらよりダウンロード可能です: [https://github.com/godotrecipes/3d_shoot_castrays](https://github.com/godotrecipes/3d_shoot_castrays)

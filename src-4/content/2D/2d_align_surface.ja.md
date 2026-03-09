@@ -38,7 +38,7 @@ velocity = move_and_slide_with_snap(velocity, snap, Vector2.UP, true)
 
 <video controls src="/godot_recipes/4.x/img/2d_align_02.webm"></video>
 
-Now we have an upward "hop" when we stop on the way up the slope. This is because our `x` velocity is set to `0` by the lack of input, but the `y` is not.
+現在では、斜面を登る途中で停止した際に「上昇ジャンプ」が発生します。これは入力が途絶えたことで`x`方向の速度が`0`に設定される一方、`y`方向の速度は影響を受けないためです。
 
 ## 速度ベクトルの方向決定
 

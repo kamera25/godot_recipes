@@ -7,7 +7,7 @@ ghcommentid: 17
 
 ## 問題文
 
-You want to allow the player to "wrap around" the screen, teleporting from one side of the screen to the other. This is a common feature, especially in old-school 2D games (think Pac-man).
+プレイヤーキャラクターが画面を「巻き戻して」反対側に移動できるようにする機能ですね。これは特にクラシックな2Dゲーム（『パックマン』タイプの作品など）でよく使われる定番機能です。
 
 ## 解決策
 
@@ -36,7 +36,7 @@ You want to allow the player to "wrap around" the screen, teleporting from one s
 
 1. `wrapf()` を使用した簡略化処理
 
-    The above code can be simplified using GDScript's `wrapf()` function, which "loops" a value between the given limits.
+    上記のコードは、GDScriptの`wrapf()`関数を使用することで簡略化できます。この関数は指定された範囲内で値を「ループ」させます。
 
     ```gdscript
     position.x = wrapf(position.x, 0, screen_size.x)

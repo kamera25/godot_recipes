@@ -7,13 +7,13 @@ ghcommentid: 35
 
 ## 問題文
 
-You want a floating "healthbar" for your 3D game objects (mobs, characters, etc.).
+3Dゲームオブジェクト（敵キャラクター、プレイヤーキャラなど）用に、フローティング表示の「ヘルスバー」が必要ですね。
 
 ## 解決策
 
-For this solution, we're going to re-use a 2D healthbar based on a {{< gd-icon TextureProgressBar >}}`TextureProgressBar` node. It's already set up with textures and code for updating the value and color. If you already have something similar, feel free to use it here. In the example, we'll name this scene "Healthbar2D".
+このソリューションでは、既存の {{< gd-icon TextureProgressBar >}}`TextureProgressBar` ノードをベースにした 2D ヘルスバーを再利用します。すでにテクスチャが設定されており、値と色を更新するためのコードも実装済みです。既に同様のシステムをお持ちの場合は、それをそのまま使用していただいて構いません。サンプルではこのシーンを「Healthbar2D」と名付けます。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/healthbar_example.gif" alt="ヘルスバーの例">
 
 必要なアセットがある場合、バーで使用している以下の3つの画像を紹介します：
 
@@ -29,7 +29,7 @@ For this solution, we're going to re-use a 2D healthbar based on a {{< gd-icon T
 
 ### プロジェクト設定
 
-For our example "mob", we'll start with a {{< gd-icon CharacterBody3D >}}`CharacterBody3D` node. It's programmed to spawn and travel in a straight line. It also has the following code to handle damage:
+例として使用する「モブ」の開始点として、{{< gd-icon CharacterBody3D >}}`CharacterBody3D`ノードを設定します。このノードは自動で出現し、直線的に移動するプログラムが組まれています。また、以下のコードでダメージ処理を実装します：
 
 ```gdscript
 func _on_input_event(_camera, event, _position, _normal, _shape_idx):
@@ -45,11 +45,12 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 ### 2Dを3Dに変換
 
+```
 We can display a 2D image in 3D using a {{< gd-icon Sprite3D >}}`Sprite3D`. Add one to a new scene and name it "Healthbar3D". First, we'll get it configured and sized, so set the _Texture_ property to the green bar image.
 
-The {{< gd-icon Sprite3D >}}`Sprite3D` acts like any other 3D object - as we pan the camera around, our perspective on it changes. However, we want the healthbar to always "face" toward the camera so that we can see it.
+{{<  gd-icon Sprite3D >}}`Sprite3D`は通常の3Dオブジェクトと同様に動作します。カメラを移動させると、視点が変わるためです。ただし、ヘルスバーは常にカメラの方を向くようにして、いつでも確認できるようにしたいと考えています。
 
-In the Inspector, under _Flags_, set _Billboard_ to "Enabled".
+インスペクターで、［フラグ］セクションの［ビルボード］を「有効」に設定してください。
 
 続いてカメラを動かして、テクスチャが常にプレイヤー側を向いているか確認してください。
 
@@ -64,11 +65,9 @@ In the Inspector, under _Flags_, set _Billboard_ to "Enabled".
 ```
 私たちは `Sprite3D` ノードが静的なテクスチャを表示するのではなく、2D `TextureProgressBar` を表示したいと考えています。これは、テクスチャをエクスポートできる `SubViewport` ノードを使用することで実現可能です。
 
-```plaintext
 以下の手順で操作してください：
 1. {{< gd-icon SubViewport >}} `SubViewport` を {{< gd-icon Sprite3D >}} `Sprite3D` の子要素として追加します。
 2. インスペクターウィンドウで、_Transparent BG_ 設定を **オン** に設定してください。
-```
 
 さらに、ヘルスバーテクスチャのサイズに合わせてビューポートのサイズを設定する必要があり、そのサイズは`(200, 26)`です。
 
@@ -121,12 +120,12 @@ func update_health(_value, _max_value):
 
 ### まとめ
 
-You can use this technique to display any other {{< gd-icon Node2D >}}`Node2D` or {{< gd-icon Control >}}`Control` nodes, such as {{< gd-icon Label >}}`Label`, {{< gd-icon VideoStreamPlayer >}}`VideoStreamPlayer`, etc. You can even use the {{< gd-icon SubViewport >}}`SubViewport` to "project" an entire 2D game in 3D space.
+このテクニックを使えば、{{< gd-icon Node2D >}}`Node2D`ノードはもちろん、{{< gd-icon Control >}}`Control`ノード全般（例：{{< gd-icon Label >}}`Label`や{{< gd-icon VideoStreamPlayer >}}`VideoStreamPlayer`など）を3D空間に表示することが可能です。さらに、{{< gd-icon SubViewport >}}`SubViewport`を使えば、2Dゲーム全体を3次元空間に「投影」することもできます。
 
 <!-- ## 関連するレシピ
 
 - [Object Healthbars (2D)](/godot_recipes/4.x/ui/unit_healthbar/) -->
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードできます：[https://github.com/godotrecipes/3d_object_healthbars](https://github.com/godotrecipes/3d_object_healthbars)

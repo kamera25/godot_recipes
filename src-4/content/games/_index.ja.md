@@ -1,5 +1,5 @@
 +++
-title = "Game Tutorials"
+title = "ゲームチュートリアル"
 weight = 20
 chapter = true
 pre = "<i class='fas fa-chess-pawn fa-fw'></i>&nbsp"

@@ -22,8 +22,9 @@ ghcommentid: 47
 ```python
 '@GlobalScope.ButtonList' には、各ボタンタイプに対応する定数 'BUTTON_*' のリストが含まれており、これらはイベントの 'button_index' プロパティで報告されます。なお、スクロールホイールも1つのボタンとしてカウントされますのでご注意ください。正確には、`BUTTON_WHEEL_UP` と `BUTTON_WHEEL_DOWN` はそれぞれ別個のイベントとして扱われます。
 
+```
 {{% notice tip %}}
-Unlike regular buttons, mouse wheel clicks only produce `pressed` events. There is no concept of a mouse wheel click being "released".
+通常のボタンとは異なり、マウスホイールクリックでは「押された」イベントのみが発生します。マウスホイールクリックが「離された」という概念は存在しません。
 {{% /notice %}}
 
 ```gdscript

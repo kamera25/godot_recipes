@@ -35,11 +35,11 @@ pre: "09. "
 
 ## スコアカウンター
 
-Start a new scene and add an {{< gd-icon HBoxContainer >}}`HBoxContainer`. Name it `ScoreCounter` then set it to **Top Wide** and set the **Alignment** to "End". Also, set the **Theme Overrides/Constants/Separation** to `0` (you need to check the box next to the property).
+新しいシーンを開始し、{{< gd-icon HBoxContainer >}}`HBoxContainer`を追加します。「スコアカウンター」と名前を付け、**レイアウト設定**を**ワイド・トップ配置**に設定し、**整列方法**を「末尾」に設定してください。さらに、**テーマのオーバーライド/定数/分離幅**を `0` に設定します（プロパティ名の横にあるチェックボックスを必ず有効化してください）。
 
 このコンテナでは、各数字を表示する `TextureRect`ノードの文字列を配置します。まずは1つ追加し、それを複製する方法から始めましょう。
 
-Name the {{< gd-icon TextureRect >}}`TextureRect` `Digit0`. Under **Texture**, select "New AtlasTexture", then click the box to open it. Drag `Number_font (8 x 8).png` into the **Atlas** property, then set the **Region** to `(32, 8, 8, 8)`. Set **Stretch Mode** to "Keep Aspect Centered".
+{{< gd-icon TextureRect >}}`TextureRect` `Digit0`という名前を付けます。**テクスチャ**セクションで「新規AtlasTexture」を選択し、ボックスをクリックして開きます。`Number_font (8 x 8).png`ファイルを**アトラス**プロパティにドラッグし、**領域**を `(32, 8, 8, 8)` に設定します。**伸縮モード**は「アスペクト比を維持（中心固定）」に設定してください。
 
 「Digit0」ノードを選択し、「Ctrl + D」を7回押してノードの複製を作成します。この手順完了後に表示されるべき画面例を以下に示します：
 
@@ -50,9 +50,9 @@ Name the {{< gd-icon TextureRect >}}`TextureRect` `Digit0`. Under **Texture**, s
 ```python
 # これはなぜかというと、`Resource`オブジェクト（例えば`Texture`）はメモリにロードされてから共有されるからです。実際には単一のテクスチャしか存在しないため、このアプローチは非常に効率的です - 同じ画像を何度も読み込んでメモリを浪費する必要がないためです。しかし、特定のものをユニークにしたい場合には、明示的に指定する必要があることを意味します。
 
-On each of the nodes, click the down arrow next to the `AtlasTexture` and select "Make Unique".
+各ノードについて、`AtlasTexture` の隣にある下向き矢印をクリックし、「ユニーク化」を選択します。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/make_unique.png" alt="作成をユニークに">
 
 これから、`ScoreCounter` にスクリプトを追加します。このスクリプトは、表示する必要のある数字に応じて適切な **リージョン** 値を選択します。
 
@@ -79,7 +79,7 @@ func display_digits(n):
                 Vector2(8, 8))
 ```
 
-We start by making a list of the coordinates in the image where each digit is found. Then, `display_digits()` will format the number to an 8 digit number (for example, `258` would become `"00000258"`). Then, for each digit, we can apply the correct coordinates from the array.
+まず、画像内で各数字が検出された座標をリスト化します。次に、`display_digits()`関数で数値を8桁形式に整形します（例：`258` は `"00000258"` に変換）。その後、配列から対応する座標を取得し、各数字の表示位置に適用します。
 
 ## ユーザーインターフェースのスクリプト化
 
@@ -146,8 +146,8 @@ func set_shield(value):
 from pydub import AudioSegment
 
 # 音声ファイルを読み込む
-song1 = AudioSegment.from_file(\)  # 1番目の曲
-song2 = AudioSegment.from_file(\)  # 2番目の曲
+song1 = AudioSegment.from_file("song1.mp3")  # 1番目の曲
+song2 = AudioSegment.from_file("song2.mpx")  # 2番目の曲
 
 ```gdscript
 func _on_area_entered(area):
@@ -165,7 +165,7 @@ func _on_area_entered(area):
         area.shield -= 1
 ```
 
-Finally, we need to connect the player's `shield_changed` signal to the function in the UI that updates the shield bar. You can do this in the Inspector by selecting the `Player` node in the Main scene. Under the Node tab, double-click the `shield_changed` signal to open the "Connect a Signal" window. In this window, select the `UI` node and type `update_shield` in the **Receiver Method** box.
+最後に、プレイヤーノードの `shield_changed` シグナルをシールドバー表示用UI関数に接続する必要があります。メインシーン内の `Player` ノードを選択してインスペクターから実行できます。［ノード］タブで `shield_change`dシグナルをダブルクリックすると、「シグナル接続」ウィンドウが開きます。この画面で、対象となる `UI` ノードを選択し、**受信メソッド** 欄に `update_shield` と入力してください。
 
 ![alt](/godot_recipes/4.x/img/2d_101_24.png)
 
@@ -175,5 +175,9 @@ Finally, we need to connect the player's `shield_changed` signal to the function
 
 基本機能はほぼ完成しました。あとはゲームの開始と終了方法を追加するだけです。
 
-| {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_08/" icon="fas fa-arrow-left" %}}Prev{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_10/" icon="fas fa-arrow-right" icon-position="right" %}}Next{{% /button %}} |
-|------|------:|
+<nav>
+        <ul>
+            <li><a href="/godot_recipes/4.x/games/first_2d/first_2d_08/" class="btn prev">← Prev</a></li>
+            <li><a href="/godot_rules/4.x/games/first_2d/first_2d_10/" class="btn next fas fa-arrow-right" data-icon-position="right">Next→</a></li>
+        </ul>
+    </nav>

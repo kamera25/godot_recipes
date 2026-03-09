@@ -19,7 +19,7 @@ ghcommentid: 101
 
 その代わり、立方体はその底面のエッジを中心に回転させる必要があります。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/cube_002.gif" alt="キューブ">
 
 ここが重要なポイントです：どの底面の縁でしょうか？ それは、立方体がどの方向に転がっているかによって異なります。
 
@@ -55,16 +55,16 @@ def rotate_cube():
     global cube, pivot_position
 
     if not rotation_mode:
-        print(\)
+        print("現在のモードではキューブを回転させることはできません。")
         return
 
     current_position = get_current_position()
 
     while True:
-        movement_input = input(\)
+        movement_input = input("移動方向を入力してください（X軸：+/-、Y軸：+/-、Z軸：+/-）： ")
 
-        if movement_input == \:
-            print(\)
+        if movement_input == "quit":
+            print("回転モードを終了します。")
             break
 
         try:
@@ -75,7 +75,7 @@ def rotate_cube():
 
             pivot_position += move_amount * get_vector_from_direction(axis)
         except ValueError:
-            print(\)
+            print("無効な入力形式です。X軸方向は'+/-'、Y軸・Z軸方向は'+/-'で指定してください。")
             continue
 
         # キューブの位置を更新し、表示を更新
@@ -191,7 +191,9 @@ if collision:
 
 ### トランジションで遊んでみよう
 
-You can add a lot of "personality" to the cube's rolling behavior by changing which `TransitionType` you use. The default is `Tween.TRANS_LINEAR`, which results in a constant speed throughout the movement.
+public void setMoveSpeedFactor(double factor) {
+    this.moveSpeedFactor = factor;
+}
 
 移行タイプを変更するだけで、全く異なる印象を得られます。例えば：
 
@@ -201,7 +203,7 @@ var tween = create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN)
 
 <!-- gif -->
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードできます：[https://github.com/godotrecipes/rolling_cube](https://github.com/godotrecipes/rolling_cube)
 

@@ -1,5 +1,5 @@
 ---
-title: "Direction Indicators"
-weight: 12
-draft: true
+タイトル: "方向指示器"
+ウエイト: 12
+ドラフト状態: 有効
 ---

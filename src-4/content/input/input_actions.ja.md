@@ -7,29 +7,32 @@ ghcommentid: 46
 
 ## 問題文
 
-You want to understand Godot's "input action" system.
+Godotの「入力アクション」システムについて理解を深めたいようですね。
 
 ## 解決策
 
-Let's say you're making a top-down character and you write code using `InputActionKey` that uses the arrow keys for movement. You'll quickly find that many players prefer to use "WASD" style controls. You can go back into your code and add the additional key checks, but this would result in duplicated/redundant code.
+例えば、トップダウン型キャラクターのゲームを開発していて、`InputActionKey`を使って矢印キーで移動操作を行うコードを書いたとします。するとすぐに、多くのプレイヤーが「WASD」スタイルの操作方法を好むことに気づくでしょう。後からコードに戻って追加のキーチェックを実装することも可能ですが、これでは重複した冗長なコードが生じてしまいます。
 
 入力アクションを活用することで、コードの設定可能性を高めることができます。特定のキーをハードコーディングする代わりに、コードを変更することなく動的に調整・カスタマイズできるようになります。
 
 ### 入力の作成方法
 
-You define input actions in the "Project Settings" under the "Input Map" tab. Here, you can create new actions and/or assign inputs to them.
+入力操作は「プロジェクト設定」の「入力マップ」タブで定義します。ここでは新しいアクションを作成するか、既存のアクションに入力を割り当てることができます。
 
-You'll see when you click on the tab there are already some default actions configured. They are all named "ui_*" to indicate that they are the default interface actions. "Tab" for next UI element, for example.
+タブをクリックすると、すでにいくつかのデフォルトアクションが設定されていることがわかります。これらはすべて「ui_*」という名前になっており、これがデフォルトのインターフェース操作であることを示しています。例えば、次のUI要素に移動する「Tab」キーなどがあります。
 
 一般的に、既存のアクションを使用するよりも、自分のゲーム用に独自のアクションを作成する方がよいでしょう。
 
 この例では、プレイヤーがキーボードまたはマウスでゲームを操作できるようにしたいとしましょう。プレイヤーは左クリックボタンを押すか、スペースバーを押すことで、射撃ができるようにしなければなりません。
 
-Create the new action "shoot" by typing the name in the "Action" field at the top and clicking "Add" (or pressing enter). Scroll to the bottom and you'll see the new action has been added to the list.
+以下の手順で新しいアクション「シュート」を作成してください：
+1. 最上部の「アクション」欄に名称を入力します
+2. 「追加」（またはEnterキー）をクリックします
+3. 画面を一番下までスクロールすると、新しく作成したアクションがリストに追加されているのが確認できるはずです
 
-Now you can assign inputs to this action by clicking the "+" sign to the right. Inputs can be keys, mouse buttons, or joy/gamepad inputs. Choose "Key" and you can press the key on the keyboard you want to assign - let's press the spacebar - and click "OK".
+以下の手順でこのアクションに入力を割り当てることができます。右側にある「+」記号をクリックしてください。使用可能な入力には、キーボードキー、マウスボタン、またはジョイスティック/ゲームパッド入力があります。「キー」を選択したら、割り当てたいキーボード上のキーを押します - ここではスペースバーを押してみましょう - そして「OK」をクリックして確定します。
 
-Click "+" to add another input, and this time choose "Mouse Button". The default of "Device 0" and "Left Button" is fine, but you can select others if you like.
+「+」をクリックして別の入力を追加してください。今回は「マウスボタン」を選択します。デフォルト設定の「デバイス 0」と「左ボタン」で問題ありませんが、お好みで他のオプションも選択可能です。
 
 ### 入力アクションの使用について
 
@@ -46,7 +49,7 @@ func _process(delta):
 
 ```python
 def on_event(event):
-    print(\, event)
+    print("イベントが発生しました:", event)
 
 def handle_keyboard_event(key):
     if key == 'KEY_LEFT':

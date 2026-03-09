@@ -16,7 +16,7 @@ pre: "01. "
 
 **GDScript は Python ですか？**
 
-You'll often read comments to the effect that "GDScript is based on Python". That's somewhat misleading; GDScript uses a _syntax_ that's modeled on Python's, but it's a distinct language that's optimized for and integrated into the Godot engine. That said, if you already know some Python, you'll find GDScript looks very familiar.
+「GDScriptはPythonをベースにしている」と説明されているのをよく目にするでしょう。これは一見誤解を招きやすい表現ですが、実際にはGDScriptはPythonに似た_構文_を採用してはいるものの、Godotエンジン向けに最適化された完全に独立した言語です。とはいえ、すでにPythonをある程度知っている方なら、GDScriptは非常に親しみやすいものに感じられるはずです。
 
 {{% notice warning %}}
 多くのチュートリアル（およびGodot自体）では、ある程度のプログラミング経験があることを前提としています。これまで一度もコードを書いたことがない場合、Godotを学ぶのは困難に感じるかもしれません。ゲームエンジンを習得するだけでも大きな挑戦ですが、同時にコーディングも学ぶとなると、負担はさらに大きくなります。もしこのセクションのコードで苦戦しているなら、初心者向けプログラミング講座（Pythonがおすすめです）を履修することで、基本的な概念をしっかりと理解できるはずです。
@@ -26,17 +26,18 @@ You'll often read comments to the effect that "GDScript is based on Python". Tha
 
 GDScriptファイルの最初の行は`extends <クラス名>`で始めなければなりません。ここで`<クラス名>`は、既存の組み込みクラスまたはユーザーが定義したカスタムクラスのいずれかを指定します。たとえば、{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ノードにスクリプトをアタッチする場合、スクリプトの冒頭は`extends CharacterBody2D`となります。これは、お使いのスクリプトが組み込みの`CharacterBody2D`オブジェクトの持つ機能をすべて引き継ぎ、さらにユーザー定義の追加機能で拡張していることを意味します。
 
-In the rest of the script, you can define any number of variables (aka "class properties") and functions (aka "class methods").
+スクリプトの残り部分では、任意数の変数（通称「クラスプロパティ」）と関数（通称「クラスメソッド」）を定義できます。
 
 ## スクリプトの作成方法
 
 最初のスクリプトを作成しましょう。覚えておくべきは、どのノードにもスクリプトをアタッチできるということです。
 
-Open the editor and add a {{< gd-icon Sprite2D >}}`Sprite2D` node to empty scene. Right-click on the new node, and choose "Attach Script". You can also click the button next to the search box.
+```
+エディタを開き、空のシーンに `{{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加します。新規追加したノードを右クリックし、「スクリプトを添付」を選択します。または、検索ボックス横のボタンをクリックすることも可能です。
 
 ![alt](/godot_recipes/4.x/img/gds_01_attach.png?width=250)
 
-Next you need to decide where you want the script saved and what to call it. If you've named the node, the script will automatically be named to match it (so unless you've changed anything this script will likely be called "sprite2d.gd").
+次に、スクリプトを保存する場所とファイル名を決定する必要があります。ノードに名前を付けている場合、スクリプトは自動的にそれに一致する名前が割り当てられます（変更を加えない限り、このスクリプトはおそらく「sprite2d.gd」という名前になります）。
 
 スクリプトエディタウィンドウが開きます。ここに、新しく作成した空のスプライト用スクリプトが表示されます。Godotは自動的にいくつかのコード行と、各コードの機能を説明するコメントを自動生成しています。
 
@@ -55,23 +56,24 @@ func _process(delta):
 ```gd
 スクリプトが {{< gd-icon Sprite2D >}}`Sprite2D` に追加されたため、最初の行は `extends Sprite2D` に自動的に設定されます。このスクリプトは {{< gd-icon Sprite2D >}}`Sprite2D` クラスを継承しているため、{{< gd-icon Sprite2D >}}`Sprite2D`ノードが提供するすべてのプロパティとメソッドにアクセスして操作することが可能になります。
 
-{{% notice title="Properties and methods" style="note" %}}
-*Properties* and *methods* are two terms which specifically mean *variables* and *functions* that are defined in an object. Programmers tend to use the terms interchangeably.
+{{% notice title="プロパティとメソッド" style="note" %}}
+*プロパティ* と *メソッド* は、オブジェクト内で定義された *変数* および *関数* を指す専門用語です。プログラマー間では、これらの用語がしばしば混同されて使用されています。
 {{% /notice %}}
 
-After that is where you're going to define all the variables you will use in the script, the "member variables". You define variables with the 'var' keyword - as you can see by the comment examples.
+その後、スクリプトで使用するすべての変数（いわゆる「メンバ変数」）を定義します。変数は 'var' キーワードで宣言します - コメント例からもわかるように。
 
 どうぞコメントを削除して、次の部分について話しましょう。
 
-Now we see a function called `_ready()`. In GDScript you define a function with the keyword "func". The `_ready()` function is a special one that Godot looks for and runs whenever a node is added to the tree, for example when we hit "Play".
+ここで「_ready()」という関数が定義されています。GDScriptでは関数を「func」キーワードで宣言します。この`_ready()`関数はGodotが特にチェックする特別な関数で、ノードがツリーに追加されるたびに実行されます - 例えば「再生」ボタンを押した時などに呼び出されます。
 
-Let's say that when the game starts, we want to make sure the sprite goes to a particular location. In the Inspector, we want to set the **Position** property. Notice that it's in the section called "Node2D" - that means this is a property that *any* {{< gd-icon Node2D >}}`Node2D` type node will have, not just {{< gd-icon Sprite2D >}}`Sprite2D`s.
+```plaintext
+ゲーム開始時にスプライトを特定の位置に配置したいとしましょう。インスペクターでは「**位置**」プロパティを設定する必要があります。「ノード2D」とラベル付けされたセクションにある点に注目してください。これは、これは任意の {{< gd-icon Node2D >}}`Node2D`タイプのノードが持つプロパティであり、{{< gd-icon Sprite2D >}}`Sprite2D`に限定されないことを示しています。
 
 コード内でプロパティを設定するにはどうすればよいでしょうか？1つの方法として、インスペクターでそのプロパティの上にマウスカーソルを合わせると、その名前を確認できます。
 
-[画像: alt=\ /godot_recipes/4.x/img/gds_01_01.png]
+[画像: alt="Alt text" /godot_recipes/4.x/img/gds_01_01.png]
 
-Godot has a great built-in help/reference tool. Click on "Classes" at the top of the Script window and search for Node2D and you'll see a help page showing you all the properties and methods the class has available. Looking down a bit you can see `position` in the "Member Variables" section - that's the one we want. It also tells us the property is of the type "Vector2".
+Godotには非常に便利な組み込みヘルプ/リファレンスツールが用意されています。スクリプトウィンドウ上部の「クラス」をクリックし、Node2Dを検索すると、該当クラスで利用できるすべてのプロパティとメソッドが記載されたヘルプページが表示されます。少し下にスクロールすると、「メンバ変数」セクションに「position」が表示されているはずです。これが私たちが探しているものです。また、このプロパティが「Vector2」型であることも明記されています。
 
 ![alt](/godot_recipes/4.x/img/gds_01_02.png)
 
@@ -84,12 +86,31 @@ func _ready():
 
 エディターが入力に応じて即座に提案を表示しているのに注目してください。Godotは多くの場面でベクトルを使用しており、この点については後ほど詳しく説明します。まずは「Vector2」と入力してみましょう。ヒントが表示されるので、`x` と `y` には2つの浮動小数点数を指定する必要があることがわかります。
 
-Now we have a script that says "When this sprite starts, set its position to `(100, 150)`". We can try this out by pressing the "Play Scene" button.
+```python
+from pyglet import graphics as gl
+from pyglet.graphics import vertex_array_object as vao
+
+# ... (既存のコードは変更せずそのまま)
+
+def update_position():
+    gl.set_pos(100, 150)  # スプライトの位置を座標 (100, 150) に移動
+
+@window.event
+def on_draw():
+    gl.clear()
+    graphics['sprite'].render()
+
+@window.event
+def on_key_press(symbol, modifiers):
+    if symbol == gl.key.SPACE:
+        update_position()
+        print("位置が正常に更新されました！")
+```
 
 ![alt](/godot_recipes/4.x/img/gds_01_03.png)
 
-{{% notice style="tip" title="Learning tip" %}}
-When first learning to code, beginners often ask "How do you memorize all these commands?" Just like any other skill, it's not a matter of memorization, it's about practice. As you use things more, the things you do frequently will "stick" and become automatic. Until then, it's a great idea to keep the reference docs handy. Use the search function whenever you see something you don't recognize. If you have multiple monitors, keep a copy of the [web docs](https://docs.godotengine.org/en/latest/) open on the side for quick reference.
+{{% notice style="tip" title="学習のコツ" %}}
+プログラミングを始めたばかりの人が「これらすべてのコマンドをどうやって覚えればいいですか？」とよく質問します。他のどんなスキルとも同様に、これは暗記ではなく練習次第なのです。使えば使うほど、頻繁に使う機能は自然と身につき、無意識に扱えるようになります。それまでは、リファレンスドキュメントをすぐに参照できるようにしておくことをおすすめします。わからないものに出会ったら、いつでも検索機能を使いましょう。複数モニターを使用している場合は、[Webドキュメント](https://docs.godotengine.org/en/latest/)を横に開いておき、素早く確認できる状態にしておくと便利です。
 {{% /notice %}}
 
 

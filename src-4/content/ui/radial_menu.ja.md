@@ -22,7 +22,8 @@ draft: false
 
 ルートノードとして `{{< gd-icon TextureButton >}}TextureButton` を使用しています。これがメニューの開閉に使用するボタンです。
 
-The `Buttons` {{< gd-icon Control >}}`Control` node is the container where you'll place any number of items that you want. Make sure to set this control's **Mouse/Filter** property to "Ignore" so that it won't intercept mouse clicks.
+```html
+The `Buttons` {{< gd-icon Control >}}`Control` node serves as the container where you can place any number of items as needed. Ensure you set this control's **Mouse/Filter** property to "Ignore" to prevent it from intercepting mouse clicks.
 
 本例では、[クールダウンボタンレシピ](/godot_recipes/4.x/ui/cooldown_button/) から9つのボタンを使用しています。
 
@@ -39,7 +40,7 @@ var num
 var active = false
 ```
 
-Here are our variables. `radius` represents the "size" of the menu: the radius of the circle. `speed` is for the animation - smaller numbers are faster.
+以下が変数の定義です：`半径`はメニューの「大きさ」を表します - 円の直径です。`速度`はアニメーション用で、数値が小さいほど動作が速くなります。
 
 `num` はボタンの総数を追跡し、`active` はメニューが開いているか閉じているかを示すフラグとして機能します。
 
@@ -110,7 +111,7 @@ func hide_menu():
 
 !
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらでダウンロードできます：[https://github.com/godotrecipes/ui_radial_menu](https://github.com/godotrecipes/ui_radial_menu)
 

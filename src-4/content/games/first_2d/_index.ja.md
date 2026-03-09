@@ -6,7 +6,7 @@ draft: false
 pre: "<i class='fa fa-rocket fa-fw'></i>&nbsp"
 ---
 
-# <i class="fa fa-rocket"></i>&nbsp;Your First 2D Game
+<i class="fa fa-rocket"></i>&nbsp;あなたの初めての2Dゲーム
 
 ### 2Dシューティングゲーム開発でGodotの基本を学ぼう。
 
@@ -18,13 +18,10 @@ pre: "<i class='fa fa-rocket fa-fw'></i>&nbsp"
 
 このシリーズでは、各エピソードごとにゲームの一部を構築しながら、機能を追加し、その過程を詳しく解説していきます。
 
-{{% notice style="tip" title="Background" %}}
-If you find that you're struggling with the programming side of things, see these resources:
-* [Godot 101: Introduction to GDScript](/godot_recipes/4.x/g101/gdscript/)  - tutorial on this website.
-* [Godot Official Documentation](https://docs.godotengine.org/en/latest/getting_started/step_by_step/index.html) - official tutorial resources
-{{% /notice %}}
+＊［GoDot入門：GDScriptの基礎］（/godot_recipes/4.x/g101/gdscript/） - 当サイトのチュートリアル
+　＊［公式Godotドキュメント］（https://docs.godotengine.org/en/latest/getting_started/step_by_step/index.html） - 正式な学習リソース
 
-## <i class="fas fa-code-branch"></i> Download This Project on <i class='fab fa-github'></i> GitHub
+## <i class="fas fa-code-branch"></i> このプロジェクトを<i class='fab fa-github'></i> GitHubからダウンロード
 
 プロジェクトコードはこちらからダウンロードしてください：
 

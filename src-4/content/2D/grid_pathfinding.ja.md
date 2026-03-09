@@ -12,8 +12,8 @@ draft: false
 
 Godot は経路探索のための複数の手法を提供しています。今回のレシピでは「A*」アルゴリズムを取り上げます。
 
-{{% notice style="info" title="About A*" %}}
-A* is a widely-used algorithm for finding the shortest path between two points. It can be used in any graph-based data structure, not just a grid.
+{{% notice style="info" title="A*について" %}}
+A*アルゴリズムは、2点間の最短経路を求めるために広く利用されている手法です。グリッドに限らず、あらゆるグラフ構造データに適用可能です。
 {{% /notice %}}
 
 `AStarGrid2D` はGodotの汎用クラス `AStar2D` をグリッド環境用に最適化した専用バージョンです。グリッドベースで設計されているため、個々のセルや接続関係を手動で追加する必要がなく、より高速かつ簡単にセットアップできます。
@@ -73,7 +73,7 @@ points = [(0, 0), (3, 4), (6, 8)]
 cells = 1.0  # セルのサイズを1単位と仮定
 
 path_length = calculate_path_length(points, cells)
-print(\, path_length)
+print("経路の長さ:", path_length)
 ```
 
 出力結果：
@@ -126,11 +126,9 @@ var end = Vector2i(5, 5)
     draw_rect(Rect2(end * cell_size, cell_size), Color.ORANGE_RED)
 ```
 
-```python
 # 可視化用のラインオブジェクトを追加
 line = Line2D()
 scene.add(line)
-```
 
 以下の方法でパスを取得し、得られた点を `{{< gd-icon Line2D >}}`Line2D` に追加する方法をご紹介します：
 
@@ -141,14 +139,14 @@ func update_path():
 
 以下が結果です：
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/astar_grid_02.png" alt="A*グリッドマップ例">
 
 注：2点間に斜線が引かれています。これはデフォルト設定では経路に斜め移動が含まれるためです。この設定は`diagonal_mode`を変更することで変更可能です：
 
-* `DIAGONAL_MODE_ALWAYS` - The default value, uses diagonals.
-* `DIAGONAL_MODE_NEVER` - All movement is orthogonal.
-* `DIAGONAL_MODE_AT_LEAST_ONE_WALKABLE` - This allows diagonals, but prevents the path going "between" diagonally placed obstacles.
-* `DIAGONAL_MODE_ONLY_IF_NO_OBSTACLES` - This allows diagonals only in "open" areas, not near obstacles.
+* `DIAGONAL_MODE_ALWAYS` - デフォルト値。対角移動を使用可能。
+* `DIAGOAL_MODE_NEVER` - すべての移動は直行移動のみ。
+* `DIAGONAL_MODE_AT_LEAST_ONE_WALKABLE` - この設定では対角移動が可能ですが、斜め配置された障害物の「間」を経路が通過するのを防ぎます。
+* `DIAGONAL_MODE_ONLY_IF_NO_OBSTACLES` - この場合、障害物のないオープンエリアでのみ対角移動が可能です。障害物付近ではこのモードは適用されません。
 
 プロパティを変更すると結果が大きく変わる可能性があるため、環境に合わせた調整が重要です。`initialize_grid()` 関数にこれを追加しましょう：
 
@@ -162,7 +160,7 @@ astar_grid.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER
 
 ### 障害物の追加
 
-We can also add obstacles to the grid. By marking a cell as "solid", the path will not include that cell. A cell can be toggled solid/not solid by using the `set_point_solid()` function.
+グリッドに障害物を追加することも可能です。セルを「固体」としてマークすると、そのセルを通過する経路は除外されます。`set_point_solid()` 関数を使用すると、セルの状態（固体／非固体）を切り替えることができます。
 
 壁を描画するコードを追加しましょう（存在する場合）。固体セルを探し出して色付けします：
 
@@ -198,7 +196,7 @@ func _input(event):
 
 ### ヒューリスティック選択について
 
-A big factor that affects the resulting path is what _heuristic_ you choose to use. The term "heuristic" refers to a "best guess", and in the context of pathfinding just means: what direction should we try first when moving toward the goal?
+結果となる経路に大きく影響する重要な要素は、使用する「ヒューリスティック手法」です。「ヒューリスティック」という用語は「最適な推測」を意味し、経路探索の文脈においては具体的に：目標地点へ向かう際に、まずどの方向を試すべきかを決定する方法を指します。
 
 例えば、ユークリッド距離はピタゴラスの定理を用いて経路を推定します：
 
@@ -210,8 +208,7 @@ A big factor that affects the resulting path is what _heuristic_ you choose to u
 
 オクトイルヒューリスティックを適用すると、以下のような経路が得られます：
 
-<img src=\ alt=\
->
+<img src="/godot_recipes/4.x/img/astar_grid_octile.png" alt="A* グリッド (オクターブ距離計算)">
 
 このプロパティを使用してヒューリスティックを選択できます：
 
@@ -223,6 +220,6 @@ astar_grid.default_estimate_heuristic = AStarGrid2D.HEURISTIC_OCTILE
 
 以下のサンプルプロジェクトをダウンロードして、この設定を実際に試してみましょう。壁を配置するだけでなく、右クリック／中クリックでエンドポイントとスタート地点を移動させることができます。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/grid_pathfinding](https://github.com/godotrecipes/grid_pathfinding)

@@ -15,19 +15,16 @@ Godot環境でリグ設定済みのアニメーション3Dキャラクターを�
 
 ### 衝突の追加
 
-```
+We've chosen {{< gd-icon CharacterBody3D >}}`CharacterBody3D` as the root node of the imported scene, and it's complaining about a missing collision shape, so let's fix that first. Add a {{< gd-icon CollisionShape3D >}}`CollisionShape3D` child and choose {{< gd-icon CapsuleShape3D >}}`CapsuleShape3D` as its **Shape** property.
 
 カプセルのサイズと位置を調整し、キャラクターの全身を覆うようにします。参考までに、私が使用した数値は以下の通りです：
 
 ![alt](/godot_recipes/4.x/img/3dchar_capsule.png)
 
-Note that the imported rig is positioned so that its feet are on the "ground", ie at the body's position. This will be helpful later, as the player's position will represent its position on the ground, rather than floating in mid-air if it were at the center of its body.
+インポートしたリグは、足部分が「地面」に位置するように配置されています（つまり身体の中心位置に合わせた設定です）。この方法は後で便利になります。プレイヤーが中央に立つ場合、空中に浮いた状態ではなく、実際に地面に立っている状態で表示されるようになるからです。
 
 ```json
-\
-
-
-,
+"If you're familiar with Godot's 3D orientation, you'll also notice that the character is facing the **+Z** direction, which is backwards. Select the {{< gd-icon Skeleton3D >}}`Skeleton3D` node and set its **Y** Rotation to `180` to correct this.",
 
 ### 入力操作
 
@@ -35,7 +32,7 @@ Note that the imported rig is positioned so that its feet are on the "ground", i
 
 ### カメラ機能
 
-There are many ways to handle a 3D camera that follows the player. For this example, we'll use a {{< gd-icon SpringArm3D >}}`SpringArm3D` as the camera "mount".
+プレイヤーを追従する3Dカメラの実装方法には様々なものがあります。この例では、カメラ用マウントとして `{{< gd-icon SpringArm3D >}}`SpringArm3D` を採用します。
 
 《{{< gd-icon SpringArm3D >}}》`SpringArm3D`ノードはレイキャストを実行した後、その子オブジェクトを衝突点に移動させることで動作します。これをカメラに応用すると、プレイヤーとカメラの間に障害物が一切入らない状態を実現でき、この長さを調整することでズーム機能を実装することも可能です。
 
@@ -46,8 +43,9 @@ There are many ways to handle a 3D camera that follows the player. For this exam
 ```yaml
 # スプリングアームがプレイヤーのカプセル形状と衝突しないようにするため、ルートコンポーネント{{< gd-icon CharacterBody3D >}}`CharacterBody3D`の衝突レイヤーを`2`に設定します。これにより、スプリングアームはレイヤー`1`をチェック対象から除外できるため、カメラがプレイヤーの頭部に当たる現象を防止できます。
 
-{{% notice style="info" title="Collision Layers" %}}
-Eventually, we'll want to organize our collision layers for various game objects: player, environment, enemies, etc.
+````
+{{% notice style="info" title="衝突レイヤーの整理" %}}
+最終的には、プレイヤーオブジェクト、環境要素、敵キャラクターなど、さまざまなゲームオブジェクトに対する衝突レイヤーを適切に管理する必要があります：
 {{% /notice %}}
 
 ### 移動
@@ -128,7 +126,7 @@ func _unhandled_input(event):
         spring_arm.rotation.y -= event.relative.x * mouse_sensitivity
 ```
 
-Try it out and you should see when pressing "forward", the character moves in the direction the camera faces.
+実際に操作してみると、「前進」を押すとキャラクターがカメラの向き方向に移動することを確認できるはずです。
 
 現在は、キャラクターを回転させて、移動方向を向くようにさせる必要があります。
 
@@ -149,7 +147,7 @@ Try it out and you should see when pressing "forward", the character moves in th
 import math
 
 def lerp_angle(a, b, t):
-    \\
+    """線形補間により角度 a を角度 b に滑らかに変化させる関数。範囲 [0, 360] 内で動作する。"""
     normalized_a = a % 360
     normalized_b = b % 36ang
 
@@ -157,12 +155,10 @@ def lerp_angle(a, b, t):
 
 移動と回転が実装できたところで、次はアニメーションの選択に進みましょう。基本的な考え方は、キャラクターの水平速度（*x/z軸方向の動き*）を取得し、それを使って作成した`IWR`ブレンドスペース内のブレンド位置を設定することです。
 
-```python
 # get_move_input() 関数内で、プレイヤーの速度を設定しています。その後、ブレンド位置を設定することができます：
 blend_position = calculate_blend_position()
 if blend_position > 0.5:  # 何らかの閾値チェック
     player.set_velocity(speed * 2)  # スピードを倍増させる例
-```
 
 ```gdscript
     velocity = lerp(velocity, dir * speed, acceleration * delta)
@@ -176,7 +172,7 @@ if blend_position > 0.5:  # 何らかの閾値チェック
 
 ### 攻撃方法
 
-We can handle attacks by first adding an input action called `"attack"`, which I've assigned to the left mouse button.
+攻撃動作については、まず「攻撃」という入力アクションを追加します。このコマンドは左マウスボタンに割り当てています。
 
 {{< gd-icon AnimationTree >}} の `AnimationTree` には3つの異なる攻撃が存在するため、それらをリスト化します：
 
@@ -201,7 +197,7 @@ var attacks = [
 
 ![alt](/godot_recipes/4.x/img/anim_tree_jumping.png)
 
-First, we want to transition to the "Jump_Start" animation by setting `jumping = true`. This triggers the transition in the state machine.
+まず、「ジャンプ開始」アニメーションに移行するために `jumping = true` を設定します。これにより状態機械での遷移がトリガーされます。
 
 ```gdscript
     if is_on_floor() and Input.is_action_just_pressed("jump"):
@@ -211,7 +207,7 @@ First, we want to transition to the "Jump_Start" animation by setting `jumping =
     anim_tree.set("parameters/conditions/jumping", jumping)
 ```
 
-Next, we need to know when we touch the ground, so we can transition out of the "Jump_Idle" animation. To do this, we need to keep track of our grounded status by comparing it with the previous frame. Add a new variable at the top:
+次に、地面に接地したタイミングを把握する必要があります。これにより、「Jump_Idle」アニメーションから移行可能になります。これを実現するためには、前フレームと比較することで接地状態を追跡する必要があります。上部に新しい変数を追加しましょう：
 
 ```gdscript
 var last_floor = true
@@ -227,7 +223,7 @@ var last_floor = true
     last_floor = is_on_floor()
 ```
 
-Finally, there's the direct transition to "Jump_Idle" that happens if we step off a ledge:
+最終的に、段差から飛び降りた際に「Jump_Idle」に直接移行する仕組みがあります：
 
 ```gdscript
     # We're in the air, but we didn't jump

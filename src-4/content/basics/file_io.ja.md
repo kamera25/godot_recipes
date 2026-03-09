@@ -21,7 +21,7 @@ var file = FileAccess.open("user://myfile.name", File.READ)
 ユーザーデータは `user://` パスにのみ保存する必要があります。エディタから直接実行している場合には `res://` も使用可能ですが、プロジェクトをエクスポートすると、`res://` パスは読み取り専用になります。
 {{% /notice %}}
 
-The second argument after the file path is the "Mode Flag", which can be one of the following:
+ファイルパスに続く2番目の引数は「モードフラグ」であり、以下のいずれかを指定できます：
 
 * FileAccess.READ - 読み取り専用でファイルを開く
 * FileAccess.WRITE - 書き込み専用でファイルを開く（存在しない場合は新規作成、存在する場合も先頭から再書き込み）
@@ -96,7 +96,7 @@ func save_character_data(data):
 
 ### JSONについてはどうでしょうか？
 
-I see it very often (and some readers may be asking it already): "What if I want to use JSON to save my data?" This is my response:
+非常によくある質問です（すでに読者の方からも尋ねられているかもしれません）：「JSONを使ってデータを保存したい場合はどうすればいいですか？」というご質問にお答えします。
 
 > SaveファイルにJSONを使用するのは止めてください！
 

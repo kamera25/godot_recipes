@@ -27,7 +27,7 @@ position += Vector2(10, 0)
 
 しかし、船が回転した場合はどうなるのでしょうか？
 
-<img src=\ width=\>
+<img src="/godot_recipes/4.x/img/0_2d_rocket2.png" width="250px">
 
 ```cpp
 while (true) {
@@ -41,9 +41,9 @@ while (true) {
 
 もう一度回転した船を見てみましょう。今回は、その船が独自の **X** 軸と **Y** 軸を持っており、それらは世界的な座標系とは独立して移動していることを想定します：
 
-<img src=\ width=\>
+<img src="/godot_recipes/4.x/img/0_2d_rocket3.png" width="250px">
 
-These "local" axes are contained in the object's `transform`.
+これらの「ローカル」座標軸は、オブジェクトの `transform` プロパティに含まれています。
 
 この特性を利用すれば、船を**X軸**に沿って移動させることで容易に前進させられます。角度計算や三角関数を気にする必要もありません。Godotでこれを実現するには、すべての[{{< gd-icon Node2D >}}`Node2D`]([https://link](https://docs.godotengine.org/en/latest/classes/class_node2d.html))派生ノードで利用できる`transform`プロパティを使用します。
 
@@ -51,7 +51,10 @@ These "local" axes are contained in the object's `transform`.
     position += transform.x * 10
 ```
 
-This code says "Add the transform's x vector multiplied by 10." Let's break down what that means. The `transform` contains `x` and `y` properties that represent those local axes. They are _unit vectors_, which means their length is `1`. Another term for unit vector is _direction vector_. They tell us the direction the ship's **x** axis is pointing. We then multiply by `10` to scale it to a longer distance.
+```javascript
+このコードは「変換の x ベクトルに 10 を乗算した結果を追加する」という意味です。これを分解して説明しましょう：
+
+'transform' オブジェクトには 'x' と 'y' プロパティがあり、これらはローカル座標軸を表しています。これらは「単位ベクトル」であり、その長さは `1` です。単位ベクトルは別の言い方で「方向ベクトル」とも呼ばれます。これは船の **x** 軸が指し示す方向を示しています。この値に `10` を掛けることで、より長い距離に対応するようにスケール変換しています。
 
 {{% notice tip %}}
 ノードの `transform` プロパティは親ノードに対する相対値です。グローバル座標が必要な場合は、`global_transform` を参照してください。
@@ -96,10 +99,10 @@ func _unhandled_input(event):
 
 ![alt](/godot_recipes/4.x/img/3d_intro_gizmo.png)
 
-{{% notice style="note" title="Local Space Mode" %}}
-In the editor, you can see and manipulate the body's local orientation by clicking the "Local Space Mode" button.
+{{% notice style="note" title="ローカル空間モード" %}}
+エディタ内で「ローカル空間モード」ボタンをクリックすると、オブジェクトの局所的な向きを表示・操作できます。
 ![alt](/godot_recipes/4.x/img/3d_intro_local_space.png)
-When in this mode, the 3 colored axis lines represent the body's local basis axes.
+このモードでは、「Local Space Mode」が有効になっている間、3本の色分けされた軸線がオブジェクトの局所座標系の基底軸として表示されます。
 {{% /notice %}}
 
 2Dと同様に、ローカル軸を使ってオブジェクトを前方に移動させることができます。Godotの3D座標系（**Y軸正方向**）では、デフォルトでボディの**-Z軸**が前進方向になります。前に進むには：

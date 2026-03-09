@@ -6,11 +6,11 @@ draft: false
 
 ## 問題文
 
-Many 2D games use a "3/4 view" perspective, giving the impression that the camera is looking at the world at an angle. To make this work, objects that are "farther" away need to be rendered behind "nearer" objects. In practice, that means we want to "y-sort" - making the drawing order tied to the object's `y` coordinate. The higher on the screen, the farther away and therefore lower the render order.
+多くの2Dゲームでは「3/4視点」と呼ばれるアングルが採用されており、カメラが少し斜め上から見下ろしているような構図になっています。これを実現するためには、より「奥」にあるオブジェクトを先に描画し、手前のオブジェクトの後ろに配置する必要があります。実際には、これは「y軸ソート」（描画順序をオブジェクトの`y座標`に紐付けること）を意味します。画面上の高い位置にあるものほど遠くに位置するため、レンダリング順序もそれに応じて低く設定されることになります。
 
 以下に問題の具体例を示します：
 
-<img alt=\ src=\>
+<img alt="YSort の設定例" src="/godot_recipes/4.x/img/ysort_01.png">
 
 以下のオブジェクトはデフォルトのレンダリング順序（ツリー順）で描画されています。シーンツリー上での配置は以下の通りです：
 
@@ -22,20 +22,21 @@ Godotにはレンダリング順序を変更する組み込みオプションが
 
 上記の例では、{{< gd-icon TileMap >}}`TileMap`ノード上でプロパティを有効にできます。ただし、まだ解決すべき問題が残っています：
 
-<img alt=\ src=\>
+<img alt="YSort の設定例" src="/godot_recipes/4.x/img/ysort_01.png">
 
 ドロー順序は各オブジェクトの y 座標に基づいています。デフォルトではこれはオブジェクトの中心位置となります：
 
 ![alt](/godot_recipes/4.x/img/ysort_04.png)
 
-Since we want to give the impression that the objects are on the "ground", we can solve this by offsetting each object's sprite so that the object's `position` is aligned with the *bottom* of the sprite:
+```markdown
+オブジェクトが「地面」の上に配置されているように見せたい場合、各オブジェクトのスプライトをオフセットすることで解決できます。具体的には、オブジェクトの `position` プロパティがスプライトの最下部位置と一致するようにします。：
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/ysort_05.png" alt="">
 
 これで状況はずいぶん改善されました：
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/ysort_02.gif" alt="YSortの操作例">
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/using_ysort](https://github.com/godotrecipes/using_ysort)

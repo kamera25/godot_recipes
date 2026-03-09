@@ -21,9 +21,11 @@ draft: false
      {{< gd-icon CollisionShape2D >}} CollisionShape2D
 ```
 
-{{% notice style="tip" title="Sprite orientation" %}}
-Don't forget to orient your sprite correctly. An object that is not rotated should be pointing along the **+X** axis, i.e. to the right. If your sprite's art is drawn facing in another direction, rotate the {{< gd-icon Sprite2D >}}`Sprite2D` (not the parent body) to align it correctly.
+```
+{{% notice style="tip" title="スプライトの向き" %}}
+必ずスプライトを正しく配置してください。回転していないオブジェクトは**+X軸**方向に向くようにしてください（つまり右方向を向いている状態）。スプライトのアートワークが別の方向を向いて描かれている場合は、`Sprite2D`（親ボディではなく）を適切に整列させるために回転させてください。
 {{% /notice %}}
+```
 
 以下の入力を「入力マップ」で使用します：
 
@@ -45,7 +47,7 @@ var thrust = Vector2.ZERO
 var rotation_dir = 0
 ```
 
-The first two variables are how we'll control the ship's "handling". `engine_power` is going to affect acceleration and top speed. `spin_power` controls how fast the ship rotates.
+最初の2つの変数は、船の「操縦性」を制御する方法を決定します。`engine_power`は加速と最高速度に影響を与えます。`spin_power`は船が回転する速さを調整します。
 
 `thrust` と `rotation_dir` は入力操作によって設定されます。次にその方法を確認しましょう：
 
@@ -57,7 +59,8 @@ func get_input():
     rotation_dir = Input.get_axis("rotate_left", "rotate_right")
 ```
 
-If we're pressing the `"thrust"` input, we'll set the `thrust` vector to the ship's forward direction, while `rotation_dir` will be `+/-1` based on the rotate inputs.
+```bash
+[#3] [#4] もし「推力」入力が有効になっている場合、「thrust」ベクトルを船の進行方向に設定します。一方、`rotation_dir`は回転入力に応じて `+/-1` に設定されます。
 
 これらの値を `_physics_process()` で適用することで飛行を開始できます：
 
@@ -68,7 +71,8 @@ func _physics_process(_delta):
     constant_torque = rotation_dir * spin_power
 ```
 
-It works, but you'll notice that it's very hard to control. The rotation is too fast, and it accelerates to a high speed before going offscreen. This is where we want to break from "real" space physics. In space, there's no friction, but our Asteroids-style ship will be a lot easier to control if it coasted to a stop when we're not thrusting. We can control this with *damping*.
+```
+動作はしますが、コントロールが非常に難しいのがお分かりでしょう。回転速度が速すぎて、画面外へ出る前に急激に加速してしまいます。ここで「実際の」宇宙物理の法則から脱却したい点があります。宇宙空間には摩擦がありませんが、弊社開発の『アステロイド』風宇宙船の場合、推力をかけていない時には自然に減速するようになれば、より簡単に操縦できるようになります。この制御には「減衰効果」が有効です。
 
 {{< gd-icon RigidBody2D >}}`RigidBody2D`プロパティ内では、**直線／減衰**と**角速度／減衰**の設定があります。これらをそれぞれ**1**と**2**に設定すると、移動/回転の動きが遅くなり、さらに停止させる効果も生じます。
 
@@ -106,7 +110,21 @@ func _integrate_forces(state):
 
 ### 歪み補正機能
 
-Let's look at one more example of using `_integrate_forces()` to alter the body's state without issues. Let's add a "warp" mechanic - when the player presses the `"warp"` input, the ship will teleport to a random spot on the screen.
+```python
+def warp_mechanic():
+    # ランダムな位置にワープするロジックを実装
+    pass
+
+def update():
+    global body
+
+    if inputs["warp"]:
+        warp_mechanic()
+
+    body.update()
+
+    _integrate_forces(body)
+```
 
 まず、このために新規変数を追加します：
 
@@ -114,12 +132,10 @@ Let's look at one more example of using `_integrate_forces()` to alter the body'
 var teleport_pos = null
 ```
 
-```python
 def get_input():
     # ランダムな位置を設定
     position = random.randint(0, 2)  # 0, 1, または 2のいずれかの位置に移動
     return position
-```
 
 ```gdscript
     if Input.is_action_just_pressed("warp"):
@@ -136,6 +152,6 @@ def get_input():
 
 ![alt](/godot_recipes/4.x/img/asteroids_warp.gif)
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/asteroids_support](https://github.com/godotrecipes/asteroids_support)

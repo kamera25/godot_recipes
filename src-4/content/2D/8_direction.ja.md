@@ -23,7 +23,6 @@ ghcommentid: 100
 
 マウスを使って移動します。キャラクターは常にマウスの方向を向き、マウスボタンをクリックするとその方向に走り出します。
 
-```python
 # Mouse position relative to character
 mouse_rel = get_local_mouse_position()
 
@@ -32,7 +31,6 @@ angle = snappeff(mouse_rel, PI / 4)
 
 # Map angle to 0-7 range for animation selection
 anim_index = int((angle + 3 * PI / 2) / (2 * PI / 7)) % 8
-```
 
 ![alt](/godot_recipes/4.x/img/8_direction_04w.png)
 
@@ -40,7 +38,7 @@ anim_index = int((angle + 3 * PI / 2) / (2 * PI / 7)) % 8
 
 ![alt](/godot_recipes/4.x/img/8_direction_02w.png)
 
-Finally, we need to map the resulting range to `0-7` using the `wrapi()` function, and we'll have our correct values. Adding that value to the end of the animation name ("idle", "run", etc) gives us the correct animation:
+最終的には、`wrapi()`関数を使用して結果の範囲を`0-7`にマッピングする必要があります。これにより、正しい値が得られます。この値をアニメーション名の末尾に追加します（"idle"、"run"など）。こうすることで、正しく動作するアニメーションが完成します：
 
 ```gdscript
 func _physics_process(delta):
@@ -79,6 +77,6 @@ func _process(delta):
 ```
 
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードできます：[https://github.com/godotrecipes/8_direction_animation](https://github.com/godotrecipes/8_direction_animation)

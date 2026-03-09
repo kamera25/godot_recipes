@@ -14,9 +14,19 @@ draft: false
 
 この問題に取り組む方法はいくつかあります。例えば、ビットマップフォントを使用し、各数字をその構成桁から画像として生成した上で、`{{< gd-icon Sprite2D >}}` `Sprite2D`ノードを使って表示・移動させるといった手法が考えられます。
 
-However, for this recipe, we'll use a {{< gd-icon Label >}}`Label` node (named "FCT"). This will give us the flexibility to change the font, as well as making it easy to display the number as a string - or even other messages such as "miss".
+ただし、このレシピでは `{{< gd-icon Label >}}`Label` ノード（名前は「FCT」）を使用します。この方法であれば、フォントの変更が柔軟に行えるだけでなく、数字を文字列として表示するのも容易になります - さらには状況に応じて「miss」などの他のメッセージを表示することも可能です。
 
-Add a `LabelSettings` resource and use your favorite font. In this example, we're using "Xolonium.ttf" with a font size of `28` and a black outline of `4` pixels.
+```yaml
+resources:
+  - name: LabelSettings
+    properties:
+      font: Xolonium.ttf
+      size: 28
+      outline:
+        color: black
+        width: 4
+```
+この例では、"Xolonium.ttf" フォントを使用し、文字サイズを `28` ポイントに、アウトラインの色を黒、幅を `4` ピクセルに設定しています。
 
 ラベルにスクリプトを追加します。
 
@@ -28,11 +38,11 @@ func show_value(value, travel, duration, spread, crit=false):
 
 浮動テキストを出現させる際に、この関数を呼び出してパラメータを設定します：
 
-- `value` - the number (or string) to display
-- `travel` - a `Vector2` representing the direction of travel
-- `duration` - how long the text will last
-- `spread` - movement will be randomly spread across this arc
-- `crit` - if `true`, indicates the damage was a "critical" hit
+- `value` - 表示する数値（または文字列）
+- `travel` - 移動方向を表す `Vector2` オブジェクト
+- `duration` - テキストが表示される時間の長さ
+- `spread` - この角度範囲内でランダムに動きが拡散される
+- `crit` - `true` の場合、ダメージが「クリティカルヒット」であることを意味するフラグ
 
 以下にこの関数の機能を説明します：
 
@@ -77,7 +87,7 @@ func show_value(value, travel, duration, spread, crit=false):
 
 次に、浮遊テキストの表示位置を管理し生成するための小さなノードを作成します。このノードは、浮動テキストエフェクトを表示させたいゲームエンティティにアタッチされます。
 
-This is a {{< gd-icon Node2D >}}`Node2D` named "FCTManager". It contains the following script:
+これは `Node2D` クラスのノードで「FCTManager」という名前です。このノードには以下のスクリプトが含まれています：
 
 ```gdscript
 extends Node2D
@@ -111,7 +121,7 @@ $FCTManager.show_value(dmg, crit)
 本デモで使用しているアートワークは[ルイス・ズノ氏](https://www.patreon.com/ansimuz)による作品です。
 {{% /notice %}}
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 以下からプロジェクトのサンプルコードをダウンロードできます：[https://github.com/godotrecipes/floating_combat_text](https://github.com/godotrecipes/floating_combat_text)
 

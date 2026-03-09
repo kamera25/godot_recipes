@@ -1,5 +1,6 @@
+```
 +++
-title = "Intro to 3D"
+title = "3D入門"
 weight = 5
 chapter = true
 draft = false

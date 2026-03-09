@@ -7,11 +7,11 @@ pre: "01. "
 
 この最初のゲームプロジェクトでは、初めてGodot Engineでゲームを作成する手順をご案内します。事前の経験は必要ありませんが、少なくとも[『Godot 101：入門ガイド』](/godot_recipes/4.x/g1intr/start/)セクションに目を通していることが望ましいです。ここでは、エディタインターフェースやGodot UIの操作方法について学ぶことができます。
 
-{{% notice style="note" title="Why start with 2D?"%}}
-In a nutshell, 3D games are much more complex than 2D ones. However, many of the underlying game engine features you'll need to know are the same. You should stick to 2D until you have a good understanding of Godot's workflow. At that point, the jump to 3D will feel much easier.
+{{% notice style="note" title="なぜ2Dから始めるべきか？"%}}
+一言で言えば、3Dゲームは2Dゲームと比べて格段に複雑です。しかし、理解すべき基本エンジン機能の多くは同じものです。Godotの開発ワークフローをしっかり習得するまでは、2Dプロジェクトに専念することをおすすめします。その段階までくれば、3Dへの移行はずっとスムーズに感じられるはずです。
 {{% /notice %}}
 
-Open Godot and start a new project. You can name it anything you'd like - we're going with "Classic Shmup", since this is a traditional shoot-em-up style game.
+Godotを起動して新規プロジェクトを開始しましょう。名前は自由に決めて構いません - ここでは「クラシック・シューティング」と名付けます。これは伝統的なシューティングゲームスタイルの作品となるからです。
 
 ## アートワークのダウンロード方法
 
@@ -24,7 +24,7 @@ Open Godot and start a new project. You can name it anything you'd like - we're 
 
 ## プロジェクト設定
 
-Next, we need to set up some project-wide settings. Open **Project Settings** and check the "Advanced Settings" toggle in the upper-right.
+次に必要なのは、プロジェクト全体の設定をセットアップすることです。**プロジェクト設定**を開き、右上にある「詳細設定」トグルを有効にしてください。
 
 * **表示/ウィンドウ** セクションにおいて：
 
@@ -37,9 +37,9 @@ Next, we need to set up some project-wide settings. Open **Project Settings** an
 
 ![alt](/godot_recipes/4.x/img/2d_101_02.png)
 
-* Click the **Input Map** tab at the top of the **Project Settings** window. This is where we can set up the inputs we want to use in the game. In the "Add New Action" box, type the following, hitting `<enter>` after each to add it to the list of actions: `right`, `left`, `up`, `down`, `shoot`. To assign key(s) to each named input, click the **+** button to its right and press the key on your keyboard. When you're done, you should have something like this:
+* プロジェクト設定画面の上部にある「入力マップ」タブをクリックしてください。ここではゲーム内で使用する入力設定を行います。「新規アクション追加」欄に以下を入力し、各入力項目を追加したら`<Enter>`キーを押してください：`右`、`左`、`上`、`下`、`射撃`。それぞれの入力にキーボードショートカットを割り当てるには、対応する**+**ボタンをクリックした後、キーボードでそのキーを押してください。作業が完了したら、以下のような設定になっているはずです：
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/2d_101_03.png?width=500" alt="">
 
 他のキー設定を使いたい場合は、自由に変更してください。
 
@@ -47,5 +47,5 @@ Next, we need to set up some project-wide settings. Open **Project Settings** an
 
 設定は完了しました。いよいよ開始できます！次のセクションでは、プレイヤーが操作する宇宙船を作成します。
 
-| {{% button href="/godot_recipes/4.x/games/first_2d/" icon="fas fa-arrow-left" %}}Prev{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_02/" icon="fas fa-arrow-right" icon-position="right" %}}Next{{% /button %}} |
-|------|------:|
+前の手順に戻る：<button href="/godot_recipes/4.x/games/first_2d/">《戻る》</button> |
+   次の手順へ進む：<button href="/godot_recipes/4.x/games/first_2d/first_2d_02/">《次へ》</button> |

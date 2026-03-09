@@ -6,14 +6,14 @@ draft: false
 
 ## 問題文
 
-Your game needs a "level select" menu, where the user can choose from a grid of options.
+ゲームには「レベル選択」メニューが必要です。ユーザーがグリッド形式のオプションから選べるようにする必要があります。
 
-[画像: alt=\ /path/to/image/level_select_03.gif]
+[画像: alt="レベル選択画面" /path/to/image/level_select_03.gif]
 
 
 ## 解決策
 
-As shown in the example above, we'll make a scrolling grid of level "boxes" that the player can choose from. Let's start with the individual level boxes:
+上記の例で示したように、プレイヤーが自由に選択できるレベル「ボックス」で構成されたスクロールグリッドを作成します。まず個々のレベルボックスから始めましょう：
 
 ### 1: レベルボックス
 
@@ -183,11 +183,11 @@ func _on_NextButton_pressed():
         gridbox.rect_position.x -= grid_width
 ```
 
-When you run the scene, try clicking the "Next" and "Back" buttons and verify that it's scrolling as expected. Clicking the individual level boxes should print to the console.
+シーンを実行する際は、「次へ」ボタンと「戻る」ボタンをクリックし、期待通りにスクロールされるか確認してください。個々のレベルボックスをクリックするとコンソールに出力が表示されるはずです。
 
 ダウンロード可能なサンプルプロジェクトでは、スクロールアニメーション用のトゥイーン機能を含む完全な実装例を確認できます（トゥイーンを使えば、あらゆる動作がより洗練されたものになります）。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードできます：[https://github.com/godotrecipes/ui_level_select](https://github.com/godotrecipes/ui_level_select)
 

@@ -25,7 +25,7 @@ get_tree().get_root().get_node("SomeNode/SomeOtherNode")
 
 ## 解決策
 
-As a general rule, nodes should manage their children, not the other way around. If you're using `get_parent()` or `get_node("..")`, then you're probably headed for trouble. Node paths like this are *brittle*, meaning they can break easily. The three main problems with this arrangement:
+一般的な原則として、ノードはその子要素を管理するべきです。逆の関係は避ける必要があります。`get_parent()`や`get_node("..")`を使用している場合、すでに問題が発生し始めています。このようなノードパスは「脆弱」（brittle）であり、容易に壊れてしまう性質があります。この構成には主に3つの重大な問題点があります：
 
 1. シーンを単独でテストすることはできません。そのシーン単体、あるいは厳密に同一のノード構成を持たないテストシーンで実行した場合、`get_node()` メソッドがクラッシュを引き起こします。
 
@@ -39,13 +39,13 @@ As a general rule, nodes should manage their children, not the other way around.
 
 一般的に、ノードやシーンはゲーム内の任意の場所でインスタンス化可能であるべきであり、その親オブジェクトがどのようなものになるかについて一切仮定すべきではありません。
 
-We'll go into detailed examples later in this tutorial, but for now, here's the "golden rule" of node communication:
+このチュートリアルでは後ほど詳細な例を紹介しますが、現時点でのノード間通信における「基本原則」は以下の通りです：
 
 > **「降下合図」「上方信号」**
 
-If a node is calling a child (i.e. going "down" the tree), then `get_node()` is appropriate.
+ノードが子要素を呼び出している場合（つまりツリー構造を「下方向に」移動している場合）には、`get_node()` メソッドを使用するのが適切です。
 
-If a node needs to communicate "up" the tree, it should probably use a signal.
+ノードが「ツリー構造の上位」との間で通信する必要がある場合、シグナルを使用する方が適切でしょう。
 
 シーン設定を設計する際にこのルールを念頭に置いておけば、メンテナンス性に優れ、整理されたプロジェクト構築への道筋が自然と見えてきます。また、問題を引き起こす煩雑なノードパスの使用も避けられるでしょう。
 
@@ -101,13 +101,13 @@ func _process(delta):
 
 ## 2. シグナルの活用方法
 
-Signals should be used to call functions on nodes that are higher in the tree or at the same level (i.e. "siblings").
+シグナルは、ツリーで上位に位置するノードや同じ階層にあるノード（すなわち「兄弟」）に対して関数を呼び出すために使用してください。
 
 シグナルの接続はエディタ内で行うことができます（通常はゲーム開始前に存在するノードに対して）、またはコード内で行うことも可能です（実行時にインスタンス化するノードの場合）。シグナル接続の構文は以下の通りです：
 
 > `信号名.接続(ターゲットノードのターゲット関数)`
 
-Looking at this, you may be thinking "Wait, if I'm connecting to a sibling, won't I need a node paths like `../Sibling`?". While you *could* do this, it breaks our rule above. The answer to this puzzle is to make sure that connections are made by the *common parent*.
+この問題を見ると、「兄弟ノードに接続する場合、`../Sibling`のようなノードパスが必要にならないか？」と思うかもしれません。確かにその方法でも可能ですが、先ほどのルールに反します。このパズルの正解は、接続を*共通親ノード*を介して行うようにすることです。
 
 ツリー構造を「ダウン」方向に辿るルールに従うと、信号発信ノードと受信ノードの共通親ノードは、定義上それらの位置を認識しており、両ノードが準備完了した時点で待機状態になります。
 
@@ -119,7 +119,7 @@ Looking at this, you may be thinking "Wait, if I'm connecting to a sibling, won'
 
 <image> /godot_recipes/4.x/img/node_access_05.png </image>
 
-Note that the UI is an instanced scene, we're just showing the contained nodes. This is where you often see things like `get_node("../UI/VBoxContainer/HBoxContainer/Label).text = str(health)`, which is what we want to avoid.
+注：UIはインスタンス化されたシーンであり、実際には含まれるノードを表示しているに過ぎません。ここでよく見かけるのが`get_node("../UI/VBoxContainer/HBoxContainer/Label).text = str(health)`のようなコードで、これは避けるべき実装方法です。
 
 代わりに、プレイヤーがヘルス値を増減させるたびに、`health_changed`シグナルが発火します。これをUIの`update_health()`関数に送信する必要があり、この関数では`Label`の表示値を設定する処理を行います。`Player`スクリプトでは、プレイヤーのヘルス値が変更されるたびに以下のコードを使用しています：
 
@@ -158,13 +158,13 @@ func _ready():
 
 グループ化はモジュール分離のもう一つの有効な手段であり、特に類似した複数のオブジェクトで同じ処理が必要な場合に有効です。ノードはどのグループにも自由に追加でき、メンバーシップは「`add_to_group()`」および「`remove_from_group()`」で動的に変更可能です。
 
-A common misconception about groups is that they are some kind of object or array that "contains" node references. Groups are a *tagging system*. A node is "in" a group if it has that tag assigned from it. The SceneTree keeps track of the tags and has functions like `get_nodes_in_group()` to help you find all nodes with a particular tag.
+グループに関するよくある誤解として、「ノード参照を『含む』ような何らかのオブジェクトや配列のようなもの」という認識があります。しかし実際にはグループは*タグ管理システム*です。特定のタグが割り当てられている場合、そのノードは「そのグループに属している」とみなされます。SceneTreeはこのタグ情報を管理しており、`get_nodes_in_group()`などの関数を使って、指定したタグを持つすべてのノードを効率的に検索することができます。
 
 ### グループ使用例
 
-Let's consider a Galaga-style space shooter where you have a lots of enemies flying around. These enemies may have different types and behaviors. You'd like to add a "smart bomb" upgrade that, when activated, destroys all enemies on the screen. Using groups, you can implement this with a minimal amount of code.
+ギャラガ風のスペースシューティングゲームを考えてみましょう。このゲームでは、画面に多数の敵機がランダムに出現します。これらの敵には種類や挙動が異なる場合があります。「スマートボム」機能を追加したいと考えており、これを発動すると画面内のすべての敵を一度に破壊できるようにしたいとします。この場合、グループ機能を活用することで、最小限のコードで実装が可能です。
 
-First, add all enemies to an "enemies" group. You can do this in the editor using the "Node" tab:
+{"response": "まず、すべての敵キャラを「敵」グループに追加してください。これはエディターで「ノード」タブを使用して行えます："}
 
 ![alt](/godot_recipes/4.x/img/node_access_03.png)
 

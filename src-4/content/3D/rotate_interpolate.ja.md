@@ -11,7 +11,7 @@ ghcommentid: 39
 
 ## 解決策
 
-When you first encounter this problem, you may find yourself thinking in terms of *Euler angles* - the three values representing the angles to the **x/y/z** axes. While Godot will allow you to see the object's Euler angles in the `rotation` property, it is not recommended to use them to work in 3D. There are a number of reasons why this the case, such as a problem called "gimbal lock", where you lose one degree of freedom when one of your rotations reaches 90 degrees.
+この問題に初めて直面した時、おそらく**x軸/y軸/z軸**に対する角度を表す3つの値である「オイラー角」の概念が頭に浮かぶでしょう。Godotではオブジェクトのオイラー角を`rotation`プロパティで確認できますが、3D環境で作業する際にこれを直接使用するのは推奨されません。これにはいくつかの理由があります。例えば「ジンバルロック」という問題があり、これは回転のうち1つが90度に達すると、自由度が1つ失われてしまう現象です。
 
 {{% notice info %}}
 オイラー角の背景や、ジンバルロックといった関連する問題についてさらに詳しく知りたい方には、[こちらの解説動画](https://www.youtube.com/watch?v=zc8b2Jo7mno)がおすすめです
@@ -38,11 +38,11 @@ func _process(delta):
 
 ![alt](/godot_recipes/4.x/img/3d_rotate_01.gif)
 
-Note that `look_at()` requires 2 parameters: the target position, and an "up vector". Imagine an airplane pointing its nose towards a target - there are an infinite number of ways it could be oriented, because the plane could roll about its axis. This second parameter is how you define what you want the final orientation to be.
+注：`look_at()` 関数は2つのパラメータを必要とします：ターゲット位置と「上方向ベクトル」です。飛行機が目標地点に向かって機首を向ける様子を想像してみてください。機体の向きには無数の方法が考えられます。これは、航空機がその軸を中心に回転できるためです。この第二パラメータによって、最終的な機体の向きをどのように定義するかを指定します。
 
 ### スムーズな回転制御
 
-The above code works, but it snaps the rotation instantly to the target. This might be fine if you have a very slow-moving target, but looks unnatural. It would look better if we move smoothly, or "interpolated", the rotation smoothly between the starting orientation and the ending.
+上記のコードは動作しますが、回転を瞬時にターゲット位置にスナップさせます。対象物が非常にゆっくりと動いている場合なら許容できるかもしれませんが、見た目に不自然です。開始姿勢から終了姿勢まで、滑らかに「補間」しながら徐々に回転させる方がより自然に見えるでしょう。
 
 Godotはこの問題も適切に解決しています。`look_at()`の代わりに、`Transform`オブジェクトの`looking_at()`メソッドを使用できます。このメソッドはノード自体を回転させることなく、ターゲットを見るための変換行列を返すだけです。さらに、`interpolate_with()`メソッドと組み合わせることで、現在の向きから目標の向きへと滑らかに遷移させることができます。
 

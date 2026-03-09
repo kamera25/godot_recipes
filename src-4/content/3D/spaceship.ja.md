@@ -8,7 +8,7 @@ tags: []
 
 ## 問題文
 
-You want to make a 3D spaceship that flies in an arcade/cinematic way. You're not looking for realistic physics, but more of a dog-fighting, "Star Wars"-style of spaceflight.
+アーケード／映画のようなスタイルで飛行する3D宇宙船を作りたいとお考えですね。リアルな物理演算は求めず、ドッグファイト主体の『スター・ウォーズ』風の宇宙戦闘スタイルを重視されているということですね。
 
 ## 解決策
 
@@ -24,7 +24,7 @@ You want to make a 3D spaceship that flies in an arcade/cinematic way. You're no
 
 [Quaternius製「究極の宇宙船パック」](https://quaternius.com/packs/ultimatespaceships.html)
 
-I've chosen the "Executioner" ship model:
+私は「処刑人」級の艦船モデルを選択しました：
 
 ![alt](/godot_recipes/4.x/img/3d_ship_01.png)
 
@@ -32,7 +32,7 @@ I've chosen the "Executioner" ship model:
 
 ### 設定手順
 
-Select the `gltf` file of the ship you want, and click the *Import* tab. Change the *Root Type* to {{< gd-icon CharacterBody3D >}} `CharacterBody3D` and click "Reimport". Then double-click the `gltf` and you'll have a new inherited scene with a {{< gd-icon KinematicBody3D >}} `CharacterBody3D` root and a {{< gd-icon MeshInstance3D >}} `MeshInstance` child. Add a {{< gd-icon CollisionShape3D >}} `CollisionShape3D` to the body.
+インポートする船舶の `gltf` ファイルを選択し、［インポート］タブをクリックします。［ルートタイプ］を {{< gd-icon CharacterBody3D >}} ｢CharacterBody3D｣ に変更し、「再インポート」を実行してください。その後、`gltf`ファイルをダブルクリックすると、新たに継承されたシーンが作成され、ルートとして `CharacterBody3D`、子要素として `MeshInstance`が含まれるようになります。このボディに {{< gd-icon CollisionShape3D >}} ｢CollisionShape3D｣を追加します。
 
 *プロジェクト設定 > 入力マップ* にて、以下の入力を設定してください：
 
@@ -69,7 +69,7 @@ func _physics_process(delta):
 
 テスト用シーンを作成し、`Camera3D` コンポーネントを試してみましょう。固定カメラを使用するか、［フォローカメラ］(/godot_recipes/4.x/3d/interpolated_camera/) を採用することも可能です。宇宙船が加速と減速を適切に行うことを確認した上で、次のステップに進んでください。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/3d_ship_02.gif" alt="3D船モデル02">
 
 ### 回転角度設定
 
@@ -85,7 +85,7 @@ var roll_input = 0.0
 var yaw_input = 0.0
 ```
 
-The three axis speeds will affect the "handling" of the ship. Experiment to find values the work for you and your desired flight style.
+三軸速度は艦船の「操作性」に直接影響を及ぼします。ご自身と目指す飛行スタイルに最適な設定値を見つけるため、ぜひ試行錯誤してみてください。
 
 次に、`get_input()` 関数に以下の行を追加して3軸入力を取得します：
 
@@ -115,9 +115,9 @@ def rotate_ship(angles):
 def print_rotations():
     for i, rotations in enumerate(transformed_points):
         angle1, angle2 = angles[i]
-        print(\.format(i+1))
-        print(\, rotations[0])
-        print(\, rotations[1])
+        print("第{}回回転後の座標:".format(i+1))
+        print("軸1:", rotations[0])
+        print("軸2:", rotations[1])
 
 # 使用例
 rotated_coords = rotate_ship(angles)
@@ -138,7 +138,7 @@ transform.basis = transform.basis.orthonormalized()
 
 ### 改善点
 
-Currently the rotations are a little to "sharp". The ship starts and stops rotating instantly, which feels a bit too unnatural. We can solve this with `lerp()`, and by adding one more configuration variable to set how "floaty" we'd like the controls to be:
+現在の回転モーションは少し「ぎこちない」感じがします。船が瞬時に回転を開始したり停止したりするため、やや不自然な動きになっています。これは `lerp()` 関数を使うことで改善できます。さらに、コントロールの「浮遊感」を調整する追加設定変数を設けることでより自然な挙動を実現できるでしょう：
 
 ```gdscript
 @export var input_response = 8.0
@@ -168,14 +168,13 @@ def get_orientation(self):
     # 方位角入力を取得する処理を以下に変更
     while True:
         try:
-            yaw = float(input(\))
+            yaw = float(input("Enter the yaw angle (degrees, 0-360): "))
             if not 0 <= yaw < 360:
-                print(\
-)
+                print("Invalid input. Please enter a value between 0 and 360 degrees.")
                 continue
             break
         except ValueError:
-            print(\)
+            print("Please enter a valid numerical value.")
     return yaw
 ```
 
@@ -252,6 +251,6 @@ Download the project file here: [https://github.com/kidscancode/3d_spaceship_dem
 
 {{< youtube 8oywBn_bLeU >}} -->
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらでダウンロードできます：[https://github.com/godotrecipes/3d_spaceship](https://github.com/godotrecipes/3d_spaceship)

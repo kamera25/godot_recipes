@@ -23,7 +23,7 @@ ghcommentid: 67
 
 !
 
-```
+Where `θ` is the angle between the two vectors and `||A||` is the magnitude of `A`.
 
 これは両方のベクトルが正規化されている場合（つまり、その大きさがすべて`1`である場合）に特に有用です。その場合、公式は以下のように簡略化されます：
 
@@ -40,7 +40,7 @@ angle = acos(0.5)
 
 この結果から、内積が二つのベクトル間の角度と直接関係していることがわかります。`cos(0) == 1` かつ `cos(180) == -1` であることから、内積の値は二つのベクトルがどれだけ平行しているかを示します：
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/dot_cross_05.png" alt="">
 
 以下に、この事実を実際の事例でどのように活用できるかご説明します。
 

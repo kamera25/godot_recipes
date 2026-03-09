@@ -14,7 +14,7 @@ draft: false
 
 まず、シーンに地形を追加しました。こちらのリンクからダウンロード可能です：[https://fertile-soil-productions.itch.io/modular-terrain-pack](https://fertile-soil-productions.itch.io/modular-terrain-pack)。ローポリモデルですが、お好みの地形を自由に使用・作成していただいて構いません。
 
-As you can see, the movement still works with the terrain, but the tank seems to "float" above the slopes because it doesn't change its orientation.
+ご覧の通り、移動自体は地形に沿って機能していますが、戦車が斜面に対して向きを変えないため、まるで「浮いて」いるかのように見えます。
 
 <video controls src="/godot_recipes/4.x/img/3d_kinematic_04.webm"></video>
 
@@ -22,11 +22,11 @@ As you can see, the movement still works with the terrain, but the tank seems to
 
 ### 表面法線ベクトル
 
-A *surface normal* is a unit vector ("normal vector" and "unit vector" mean the same thing) perpendicular to a surface. It shows which way the surface is facing. In the case of a mesh, every surface has a normal pointing outward.
+【用語解説】「法線ベクトル」（英語では「ノーマルベクトル」または単に「単位ベクトル」）とは、面に垂直な方向を示す単位ベクトルのことです。これは表面がどの向きを向いているのかを定義します。メッシュの場合、各面には必ず外側を指す法線ベクトルが割り当てられます。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/3d_kinematic_05.png" alt="3Dキネマティックオブジェクト">
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/3d_kinematic_06.gif" alt="alt">
 
 Godot では、衝突が発生した際、接触時の法線ベクトルを取得できます。これは衝突する物体の **接触点における** 法線方向になります。
 
@@ -107,7 +107,7 @@ var n = ($FrontRay.get_collision_normal() + $RearRay.get_collision_normal()) / 2
 
 補間量は自由に調整してみてください。私たちはこの環境で「12」が最適でしたが、環境によってはさらに高い値や低い値が適している場合もあります。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードをダウンロードする：[https://github.com/godotrecipes/characterbody3d_examples](https://github.jp/godotrecipes/characterbody3d_examples)
 

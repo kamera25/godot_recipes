@@ -13,7 +13,7 @@ ghcommentid: 11
 
 ## 解決策
 
-It's that last part, the "null instance", that's the source of this problem, and the main source of confusion for Godot beginners.
+問題の核心は「ヌルインスタンス」部分にあり、これがGodot初心者にとって最も混乱を招く要因となっています。
 
 この問題を回避するには、「ノードパス」の概念を理解することが重要です。
 
@@ -21,7 +21,7 @@ It's that last part, the "null instance", that's the source of this problem, and
 
 シーンツリーはノードで構成されており、これらは親子関係によって接続されています。ノードパスとは、このツリー構造を辿りながらあるノードから別のノードへ移動する際に通る経路のことです。
 
-As an example, let's take a simple "Player" scene:
+例として、シンプルな「プレイヤー」シーンを考えてみましょう：
 
 ![alt](/godot_recipes/4.x/img/node_paths_01.png)
 
@@ -31,7 +31,7 @@ As an example, let's take a simple "Player" scene:
 get_node("AnimatedSprite").play()
 ```
 
-The argument of the `get_node()` function is a string representing the *path* to the desired node. In this case, it's a child of the node the script is on. If the path you give it is invalid, you'll get the dreaded `null instance` error (as well as "Node not found").
+`get_node()` 関数の引数は、対象ノードへのパスを表す文字列です。ここではスクリプト実行中のノードの子要素を指定します。指定したパスが無効な場合、厄介な `null instance` エラーが発生するほか（さらに「ノードが見つかりませんでした」というメッセージも表示されます）。
 
 ノード参照を `get_node()` で取得する状況は非常に頻繁にあるため、GDScript にはそのためのショートカットが用意されています：
 
@@ -45,8 +45,7 @@ $AnimatedSprite.play()
 
 より複雑なシーンツリーを見てみましょう：
 
-<img src=\ alt=\
->
+<img src="/godot_recipes/4.x/img/node_paths_02.png" alt="Node Paths Example">
 
 もしメインスクリプトがスコアラベルにアクセスする必要がある場合、以下のパスを使用してアクセス可能です：
 
@@ -57,19 +56,21 @@ $HUD/ScoreLabel.text = "0"
 ```
 
 {{% notice tip %}}
-When using `$` notation, the Godot editor will autocomplete paths for you. You can also right-click on a node in the Scene tab and choose "Copy Node Path".
+ドル記号(`$`)を使用した場合、Godotエディタがパスを自動補完します。またシーンタブでノードを右クリックし、「ノードパスをコピー」を選択する方法もあります。
 {{% /notice %}}
 
-What if the node you want to access is higher in the tree? You can use `get_parent()` or `".."` to reference the parent node. In the above example tree, to get the `Player` node from the `ScoreLabel`:
+ノードへのアクセス先がツリー階層の上位にある場合はどうすればよいでしょうか？その場合は `get_parent()` 関数を使うか、パス指定に `"../"` を使用することで親ノードを参照できます。上記の例で、`ScoreLabel` から `Player` ノードを取得するには：
 
 ```gdscript
 get_node("../../Player")
 ```
 
-Let's break that down. The path `"../../Player"` means "get the node that's up one level (`HUD`), then one more level (`Main`), then its child `Player`".
+分解して説明しましょう。パス「`"../../Player"`」は、次のように解釈されます：
+1. まず一つ上の階層にあるノード（`HUD`）を取得します
+2. さらにもう一段階上の階層に移動し（`Main`）、その中から子ノードである`Player`を特定します
 
 {{% notice tip %}}
-Does this seem familiar? Node paths work exactly like directory paths in your operating system. The `/` character indicates the parent-child relationship, and `..` means "up one level".
+これは見覚えがありますか？ ノードパスの仕組みは、お使いのOS上のディレクトリパスとまったく同じです。スラッシュ「/」は親-子関係を示し、「..」は「1つ上の階層に移動」を意味します。
 {{% /notice %}}
 
 ### 相対パスと絶対パスの違い
@@ -99,7 +100,7 @@ func take_damage(amount):
 1. プレイヤーシーン単体でのテストは不可能です。プレイヤーシーンを単独で実行した場合や、UIを持たないテストシーンで使用した場合、`get_node()` 行が原因でクラッシュが発生します。
 2. UIの変更はできません。UIのレイアウトを変更するか設計を見直すことにした場合は、パスが無効になるため、必ず修正する必要があります。
 
-この理由から、シーンツリーの\方向へノードパスを指定する操作は可能な限り避けるべきです。前述の状況では、プレイヤーの体力が変化した時にシグナルを発行するように変更すれば、UIコンポーネントはその信号を受け取って自身の状態を更新できます。この方法なら、ゲームコードに影響を与えることなくノードを自由に再配置・分離することが可能になります。
+この理由から、シーンツリーの"上位"方向へノードパスを指定する操作は可能な限り避けるべきです。前述の状況では、プレイヤーの体力が変化した時にシグナルを発行するように変更すれば、UIコンポーネントはその信号を受け取って自身の状態を更新できます。この方法なら、ゲームコードに影響を与えることなくノードを自由に再配置・分離することが可能になります。
 
 ## まとめ
 

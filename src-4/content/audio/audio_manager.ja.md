@@ -52,7 +52,7 @@ func _process(delta):
         available.pop_front()
 ```
 
-Set this script as an autoload in Project Settings. Give it an easily recognizable name, such as "AudioManager".
+このスクリプトをプロジェクト設定でオートロードに設定してください。「AudioManager」のように、わかりやすく認識しやすい名前を付けてください。
 
 ![alt](/godot_recipes/4.x/img/audio_mgr_01.png)
 
@@ -85,6 +85,6 @@ AudioManager.play("res://path/to/sound")
 
 {{< youtube 7axJJYont6Y >}} -->
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/audio_manager](https://github.com/godotrecipes/audio_manager)

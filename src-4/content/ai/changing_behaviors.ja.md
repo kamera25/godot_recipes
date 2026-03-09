@@ -13,12 +13,12 @@ AI制御のエンティティに対して、異なる動作モードを切り替
 
 - **パトロール**
 
-    The "Patrol" state moves along a pre-defined path (or stands still if there's no path assigned).
+    「パトロール」状態では、事前に定義された経路に沿って移動します（経路が割り当てられていない場合は停止したままになります）。
     <!-- See [Path following](/godot_recipes/4.x/ai/path_follow/) for details. -->
 
 - **追跡中**
 
-    The "Chase" state moves the enemy towards the player. See [Chasing the player](/godot_recipes/4.x/ai/chasing/) for how to make this behavior.
+    「追跡」状態では敵キャラクターがプレイヤーに向かって移動します。この動作を実装する方法については[プレイヤーを追跡する](/godot_recipes/4.x/ai/chasing/)を参照してください。
 
 - **攻撃**
 
@@ -27,7 +27,7 @@ AI制御のエンティティに対して、異なる動作モードを切り替
 
 これらの行動はそれぞれ状態を表しており、敵は同時に複数の状態を保有することはできません。プレイヤーが近づくなどの特定のイベントが発生すると、別の状態に遷移します。
 
-To determine the state transitions, we have two {{< gd-icon Area2D >}}`Area2D` nodes on the enemy: an outer one called "DetectRadius" and an inner called "AttackRadius". The player entering or exiting these areas will trigger the related behavior.
+状態遷移を決定するために、敵キャラには2つの{{< gd-icon Area2D >}}`Area2D`ノードが配置されています。1つは「DetectRadius」と名付けた外側のエリア、もう1つは「AttackRadius」という内側のエリアです。プレイヤーがこれらの領域に入ったり出たりすることで、対応する動作がトリガーされます。
 
 ![alt](/godot_recipes/4.x/img/behaviors_01.png)
 

@@ -24,7 +24,7 @@ Godotの`Vector2`オブジェクトには、この処理を補助する組み込
 velocity = position.direction_to(player.position) * speed
 ```
 
-However, this would allow the enemy to chase the player from any distance, even if it's far away. To fix this, we can add an {{< gd-icon Area2D >}}`Area2D` to the enemy, and only chase the player when it's inside this "detect radius".
+しかし、これでは敵がプレイヤーから遠距離にいても追跡できてしまいます。これを修正するには、敵に `Area2D` を追加し、この「検出範囲」内にプレイヤーが入った場合にのみ追跡を行うようにすればよいでしょう。
 
 ![alt](/godot_recipes/4.x/img/chase_01.png)
 

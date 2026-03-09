@@ -26,7 +26,7 @@ draft: false
 
 利用可能なアニメーションが多数ある場合、それらをすべてコードで管理するのは急速に複雑化します。プレイヤーが行っている動作に応じて、どのタイミングでどのアニメーションを再生するかを判断するには、どれほど多くの`if`文が必要になるか考えてみてください。アニメーションがわずかであれば問題ありませんが、数が増えるとすぐに手に負えなくなり、実用的ではなくなってしまいます。
 
-Also, consider when the character is standing still: it should be playing the "Idle" animation. When the player presses "forward", the character should move and switch to playing the "Walking" animation. This sudden transition is going to look jarring, so we'd prefer if the two animations can be "blended" into a smoother transition.
+また、キャラクターが静止している場合も考慮しましょう。この時は"Idle"アニメーションを再生する必要があります。プレイヤーが「前進」ボタンを押すと、キャラクターは移動を開始し、同時に"Walking"アニメーションに切り替わるべきです。しかしこの急激な切り替えは不自然に見えるため、できれば2つのアニメーションをよりスムーズに移行させる「ブレンド処理」が望まれます。
 
 これらの複雑なアニメーション問題を解決するには、`AnimationTree`ノードを使用する必要があります。このノードは{{< gd-icon AnimationPlayer >}}`AnimationPlayer`を制御するために設計されており、アニメーションの遷移やブレンド方法を管理する機能を備えています。
 
@@ -34,29 +34,30 @@ Also, consider when the character is standing still: it should be playing the "I
 
 ![alt](/godot_recipes/4.x/img/animtree_settings.png)
 
+```
 {{% notice style="note" title="" %}}
-You may notice that when the {{< gd-icon AnimationTree >}}`AnimationTree` is active, you can't choose animations in the {{< gd-icon AnimationPlayer >}}`AnimationPlayer`. If you need to make any changes or test the animations, uncheck the tree's **Active** property while doing so.
+{{< gd-icon AnimationTree >}} 「AnimationTree」がアクティブになっていると、 {{< gd-icon AnimationPlayer >}} 「AnimationPlayer」でアニメーションを選択できなくなることにご注意ください。変更を加えたりアニメーションをテストする必要がある場合は、作業を行う際にツリーの **有効** プロパティを必ずオフにしてください。
 {{% /notice %}}
 
 ### 待機/歩行/走行サイクルについて
 
 このモデルには数多くのアニメーションが付随しています。ここでは特に待機→歩行/走行の遷移、ジャンプ、攻撃モーションに焦点を当てます。他のアニメーションも必要に応じて同様の方法で扱えます。
 
-In the {{< gd-icon AnimationPlayer >}}`AnimationPlayer`, find the "Idle", "Running_A", "Walking_Backwards", and "Running_Strafe_Left"/"Running_Strafe_Right" animations. Make sure they're all set to loop - you can test them by pressing the "Play" button: (▶). If any of them are not, reimport the character after setting them (see [Importing Assets](/4.x/3d/assets/importing_assets/)).
+{{< gd-icon AnimationPlayer >}}`AnimationPlayer`コンポーネントで、"Idle"（待機）、"Running_A"（前進ランニング）、"Walking_Backwards"（後方歩行）、および"Running_Strafe_Left"/"Running_Strafe_Right"（横移動左右ランニング）のアニメーションを設定してください。すべてループ再生に設定することを確認してください。「Play」ボタンを押してテストできます：(▶)。いずれかがループになっていない場合は、設定した後でキャラクターを再インポートしてください（[アセットのインポート方法](/4.x/3d/assets/importing_assets/)参照）。
 
 「AnimationTree」ノードを選択すると、ウィンドウ下部にパネルが開きます：
 
 ![alt](/godot_recipes/4.x/img/animtree_empty.png)
 
-As an example, right-click in the empty space and choose **Add Animation → Idle**, then add the "1H_Melee_Attack_Chop" animation as well.
+例として、空きスペースを右クリックし、「アニメーション追加 → 待機」を選択してから、同様に「1H_Melee_Attack_Chop」アニメーションも追加してください。
 
-Select the **Connect Nodes** button and draw a connection from `Start` to `Idle`. You should immediately see the "Idle" animation playing.
+「ノードを接続」ボタンを選択し、「開始」から「アイドル」までの接続線を引いてください。即座に「アイドル」アニメーションが再生されるはずです。
 
 しかし、このままではうまくいきません。2つのアニメーション間で急速に点滅を繰り返すだけで、両方が「即時遷移」に設定されているため、スムーズな移行ができないからです。
 
-To change the transition conditions, change to **Select** mode using the icon and then click on one of the connections. In the Inspector, you'll see the connection properties. For the connection from idle to attack, we want **Advance/Mode** to be "Enabled" (not "Auto"). This means it happens only when told to. Notice that the icon on the connection line changes color.
+遷移条件を変更するには、アイコンを使用して**選択モード**に切り替えた後、いずれかの接続をクリックしてください。インスペクターウィンドウで接続プロパティを確認できます。アイドル状態からアタック状態への遷移では、**進行/モード** を「有効」（"自動" ではなく）に設定したいと考えています。つまり、指示があった場合にのみ実行されるということです。接続ライン上のアイコンの色が変化することに注意してください。
 
-For the connection from attack to idle, set **Switch Mode** to "At End" and **Advance Mode** to "Auto".
+接続状態が攻撃モードからアイドルモードに切り替わる際は、**切替方式**を「終了時」に設定し、**進行モード**を「自動」にしてください。
 
 これで、攻撃ノードの ▶ ボタンをクリックすると再生が始まり、完了するとすぐにアイドル状態に戻ります。
 
@@ -75,36 +76,35 @@ For the connection from attack to idle, set **Switch Mode** to "At End" and **Ad
 
 この2次元空間はキャラクターの水平方向移動ベクトルを表します。静止状態の場合は座標が`(0, 0)`となるため、まず**ポイントを作成**ボタンをクリックしてから、グリッド中央をクリックして**アニメーション追加 → 待機姿勢**を設定してください。
 
-At the center-top, add the "Running_A" animation, and center-bottom, "Walking_Backwards". At the two horizontal ends, add the strafe animations.
+上部中央に「ランニングA」アニメーションを追加し、下部中央に「ウォーキング・バックワーズ」アニメを、左右両端にストレーフィングアニメーションを配置してください。
 
-<img src=\ alt=\
->
+<img src="/godot_recipes/4.x/img/blendspace_complete.png" alt="BlendSpace 完了画面">
 
 次に、十字ボタンをクリックしてブレンド位置を設定し、グリッド上でドラッグして移動させてください。アニメーションが極値間でスムーズに遷移するのが確認できるはずです。
 
 <video width="500" controls src="/godot_recipes/4.x/img/blendtree_testing.webm"></video>
 
-When you're done experimenting with the blendspace, click "Root" in the **Path** at the top of the panel to return to the root of the tree.
+ブレンドスペースの実験が終わったら、パネル上部の**パス**項目にある「ルート」をクリックしてツリーの根に戻ります。
 
 ### 状態機械の設定
 
-The `IWR` looping animations can be thought of as the "heart" of the animation tree. The character will spend most of its time playing these animations. Any other animations will branch off from it (like we did earlier with the attack).
+アニメーションツリーの中核となるのが「IWR」ループアニメーションです。このアニメーションはキャラクターが最も多くの時間を過ごす場面で再生されます。他のあらゆるアニメーションは、この基本アニメーションから分岐する形で実装されます（先ほど攻撃動作で行ったように）。
 
 以下の画像では、他の複数のアニメーションで同じ手法を採用しています。遷移プロパティは、前述の例と同様に設定されている点にご注目ください。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/anim_tree_tree.png" alt="アニメーションツリー">
 
 また、アニメーションの名前をクリックすることで変更することも可能です。中には非常に長い名前のものもありますので。
 
-The one animation that's different is jumping. The jump animation is split into three parts: "start"and "land", which are played when the character starts jumping, and when the jump ends. The "idle" portion of the jump is a looping animation that plays as long as the character is in the air - if they fall a long way, for example.
+※アニメーションが異なるのは「ジャンプ」動作のみです。ジャンプアニメーションは以下の3段階で構成されています：「開始」「着地」で、キャラクターがジャンプを始める時と終了する時にそれぞれ再生されます。また、空中にいる間はループする待機アニメーションが再生されます - 例えば長距離落下した場合などに。
 
 以下の手順で3つのジャンプアニメーションを追加し、適切にリンクしてください：
 
 ![alt](/godot_recipes/4.x/img/anim_tree_jumping.png)
 
-We need to be able to go straight from `IWR` to `Jump_Idle` in the event of falling off a ledge, but if pressing "jump", we'll go through `Jump_Start` first.
+段差から転落した場合、即座に「IWR」から「Jump_Idle」に直接遷移できるようにする必要がありますが、「ジャンプ」ボタンを押した場合はまず「Jump_Start」を経由する必要があります。
 
-In addition, we've left the transition from `IWR` to `Jump_Start` as "Auto". Instead of changing it to "Enabled", we've added a **Condition** of `jumping` to the transition:
+さらに、`IWR`から`Jump_Start`への遷移設定は「自動」のまま変更していません。「有効化」に差し替えるのではなく、この遷移に**条件**として`jumping`を追加しました：
 
 ![alt](/godot_recipes/4.x/img/animtree_condition.png)
 

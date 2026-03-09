@@ -42,7 +42,7 @@ function lerpScaleAndFade(node, startSize, endSize) {
 }
 
 // 2秒間かけてスプライトを5倍に拡大しながら徐々に透明化
-lerpScaleAndFade(\, 1.0, 5.0);
+lerpScaleAndFade("MySprite", 1.0, 5.0);
 ```
 
 ```gdscript
@@ -70,7 +70,7 @@ var left = transform.basis.x
 var forward_left = forward.linear_interpolate(left, 0.5)
 ```
 
-The following example moves a Sprite node towards the mouse click position. Each frame the node moves 10% of the way to the target. This results in an "approach" effect, where the object's speed becomes slower the closer it gets to the target.
+以下の例では、スプライトノードをマウスクリック位置に移動させています。各フレームごとにノードは目標位置まで10%ずつ近づきます。これにより、オブジェクトが近づくにつれて速度が徐々に減速する「接近」効果が得られます。
 
 ```gdscript
 extends Sprite2D

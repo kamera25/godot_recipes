@@ -38,7 +38,7 @@ func _on_VisibleOnScreenNotifier2D_screen_exited():
 
 #### 使用例2
 
-```
+We have an enemy that performs some actions, such as moving along a path or playing an animation. On a large map with many enemies, only a few of them will be onscreen at the same time. We can disable the enemy's actions while it's offscreen using {{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`.
 
 コードの一部：
 

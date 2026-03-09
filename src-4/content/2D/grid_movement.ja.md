@@ -17,13 +17,13 @@ ghcommentid: 21
 
 以下がプレイヤーで使用するノードです：
 
-- {{< gd-icon Area2D >}}`Area2D` ("Player"): Using an {{< gd-icon Area2D >}}`Area2D` means we can detect overlap (for picking up objects or colliding with enemies).
-  - {{< gd-icon Sprite2D >}}`Sprite2D`: You can use a sprite sheet here (we'll set up the animation below).
-  - {{< gd-icon CollisionShape2D >}}`CollisionShape2D`: Don't make the hitbox too big. Since the player will be standing on the center of a tile, overlaps will be from the center.
-  - {{< gd-icon RayCast2D >}}`RayCast2D`: For checking if movement is possible in the given direction.
-  - {{< gd-icon AnimationPlayer >}}`AnimationPlayer`: For playing the character's walk animation(s).
+- `Area2D` ("プレイヤー"): `Area2D` を使用することで、オブジェクトのピックアップや敵との衝突判定が可能になります。
+  - `Sprite2D`: ここではスプライトシートを使用できます（アニメーション設定は後述します）。
+  - `CollisionShape2D`: ヒットボックスが大きすぎないように注意してください。プレイヤーがタイルの中心に立つため、オーバーラップ判定も中央から行われます。
+  - `RayCast2D`: 指定された方向への移動が可能かどうかを確認する際に使われます。
+  - `AnimationPlayer`: キャラクターの歩行アニメーションを再生するために使用します。
 
-Add some input actions to the Input Map. We'll use "up", "down", "left", and "right" for this example.
+入力マップにいくつかの操作を追加しましょう。この例では「上」「下」「左」「右」を使用します。
 
 ### 基本的な動き
 
@@ -49,7 +49,8 @@ func _ready():
     position += Vector2.ONE * tile_size/2
 ```
 
-`snapped()` allows us to "round" the position to the nearest tile increment, and adding a half-tile amount makes sure the player is centered on the tile.
+```bash
+`snapped()` 関数は位置をタイルの増分に最も近い値に「丸め」ます。さらに、半タイル量を追加することで、プレイヤーが必ずタイル中心に配置されるようになります。
 
 ```gdscript
 func _unhandled_input(event):
@@ -111,12 +112,10 @@ func _unhandled_input(event):
             move(dir)
 ```
 
-```python
 while tween_running:
     # トゥイーン実行中は入力を無視し、直接的な位置変更を削除して
     # トゥイーンが適切に処理できるようにする。
     pass
-```
 
 ```gdscript
 func move(dir):
@@ -139,7 +138,7 @@ func move(dir):
 
 異なるトランジション効果を試してみましょう：
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらよりダウンロード可能です：[https://github.com/godotrecipes/2d_grid_movement/](https://github.com/godotrecipes/2d_grid_movement/)
 

@@ -18,7 +18,7 @@ Godot では、ゲーム開発で使用できる衝突判定関連の各種オ�
 
     ・「フローティング」
 
-    Floating mode is intended for top-down games. In this mode, all collisions are considered to be "walls".
+    浮遊モードはトップダウン方式のゲーム向けに設計されています。このモードでは、すべての衝突判定が「壁」として扱われます。
 
     * 「接地」（デフォルト）
 
@@ -41,16 +41,13 @@ move_and_collide()` を使用して移動する場合、ボディは他のオブ
 
 この方法は、プラットフォーマーやトップダウンゲームのように、片方の物体がもう一方に沿って滑る一般的な衝突応答を提供します。
 
-````
 `move_and_slide()` はパラメータを受け取りません。組み込みの `velocity` プロパティを設定するだけで、自動的に `delta` を適用して移動量を計算します。
-````
 
 ### 衝突検出について
 
 この挙動は使用する手法によって異なります。`move_and_collide()` を使用する場合、衝突に関するデータを含む `KinematicCollision2D` オブジェクトが返ります。
 
-```c
-```
+When using `move_and_slide()`, it's a little trickier, as it's possible to have multiple collisions occur in a single frame (for example when moving into a corner). For this situation, there is `get_slide_collision_count()` and `get_slide_collision()`.
 
 以下に、衝突した対象を示すコードスニペットを2つ紹介します。どちらの場合も、事前に`velocity`変数が適切に設定されているものとします。
 

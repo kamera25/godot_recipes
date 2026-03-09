@@ -7,8 +7,8 @@ pre: "11. "
 
 ここまでついてきてくださった皆さんは、Godotでゲームを構築する基本原理の多くを学べたことでしょう。基本的なゲームが完成しましたので、ここでチュートリアルは終了とします。
 
-{{% notice style="tip" title="The secret to learning effectively" %}}
-Here's my big secret for getting the most out of tutorials like this and others you may find online. At the end, once you've finished building the project, immediately delete it and start over. This time, try and re-create it without looking at the tutorial. If you get stuck, look at *just* that part, then close it again.
+{{% notice style="tip" title="効果的な学習の秘訣" %}}
+このようなチュートリアルや、オンラインで見つけられる他の教材を最大限に活用するための私のとっておきの方法をご紹介します。作業が終わったらすぐにプロジェクトを削除し、最初からやり直してください。今度は、解説を見ずに自分で再現してみることに挑戦してみましょう。行き詰まった部分だけは解説を参照しても構いませんが、その後は再度閉じて進めてください。
 
 繰り返しのように聞こえるかもしれませんが、これがまさに私たちが学ぶ方法です：何度も実践を重ねることで。ぜひこのアドバイスに従ってみてください。ゲーム開発スキルが驚くほど速く上達するのを実感できるでしょう。
 {{% /notice %}}
@@ -37,7 +37,7 @@ Here's my big secret for getting the most out of tutorials like this and others 
 *  このウェブサイトの他のコンテンツもご覧ください。夢のゲームを作るための様々な事例、チュートリアル、コードスニペットを豊富にご用意しています。
 
 
-## <i class="fas fa-code-branch"></i> Download This Project on <i class='fab fa-github'></i> GitHub
+## <i class="fas fa-code-branch"></i> このプロジェクトを<i class='fab fa-github'></i> GitHubからダウンロード
 
 プロジェクトコードはこちらからダウンロードしてください：
 

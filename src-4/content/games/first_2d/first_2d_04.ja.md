@@ -9,19 +9,19 @@ pre: "04. "
 
 ## 再利用可能なオブジェクト
 
-The player will fire many "bullets" during the game, but all of them will be identical. A bullet needs to do the following:
+プレイヤーは試合中に多数の「弾丸」を発射しますが、すべて同一仕様となります。各弾丸は以下の要件を満たす必要があります：
 
 ・プレイヤーのすぐ前方に出現
 ・画面外に到達するまで前進移動
 ・敵キャラとの衝突を検知
 
-Since all bullets will do these same things, we can save ourselves a great deal of work by designing one "prototype" bullet, and using that as the blueprint for creating as many duplicates as we need. Godot's scene system is ideal for this.
+すべての弾丸が同じ動作をするように設計されているため、「プロトタイプ」となる基本型を1つ作成すれば、そこから必要な数だけコピーを生成できます。Godotのシーンシステムはこの用途に最適です。
 
 ## 弾丸シーン
 
 メニューから**シーン→新規シーン**を選択するか、ビューポート上部のタブにある**＋**アイコンをクリックすることで、新しいシーンを作成できます。
 
-```
+Just like we did with the `Player` scene, we need to consider what nodes we'll need to make the bullet work. We can again use an {{< gd-icon Area2D >}}`Area2D`, since that will allow us to detect the bullet hitting things. This means we'll need a collision shape, and a sprite to display the bullet image. Finally, we need a way to detect when the bullet goes offscreen so we can automatically remove it.
 
 以下にノードの設定を示します：
 
@@ -67,7 +67,9 @@ func _process(delta):
 
 以下の手順に従って操作してください：
 
-You'll notice that you're back in the script editor, looking at `bullet.gd`, and a new function as been added. It has a green "connected" icon next to its name to show that a signal is connected to it. This function will be called whenever the area touches something, so let's add some code here:
+```gd
+// 新しい関数が追加され、名前の横に緑の「接続中」アイコンが表示されます。これはシグナルがこの関数に接続されていることを示すものです。この関数はエリアが何かに接触するたびに呼び出されるため、ここにコードを追加しましょう：
+```gd
 
 ```gdscript
 func _on_area_entered(area):
@@ -89,5 +91,5 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 
 これで弾丸シーンは完了です。それでは、プレイヤーに射撃機能を追加していきましょう。
 
-| {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_03/" icon="fas fa-arrow-left" %}}Prev{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_05/" icon="fas fa-arrow-right" icon-position="right" %}}Next{{% /button %}} |
+| {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_03/" icon="fas fa-arrow-left" %}}前の手順{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_05/" icon="fas fa-arrow-right" icon-position="right" %}}次の手順{{% /button %}} |
 |------|------:|

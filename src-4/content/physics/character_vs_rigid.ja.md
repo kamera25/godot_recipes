@@ -14,7 +14,7 @@ draft: false
 
 デフォルトでは、 `move_and_slide()` または `move_and_collide()` で移動させた `CharacterBody2D` は、衝突する任意の `RigidBody2D` を押しません。リジッドボディは全く反応せず、単なる `StaticBody2D` と同じように振る舞います。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/char_push_default.gif" alt="デフォルトアニメーション">
 
 場合によってはこれで十分なこともあります。ただし、ボディーを押し出したい場合は、いくつかの変更が必要です。
 
@@ -23,8 +23,9 @@ draft: false
 
 リジッドボディとのインタラクション方法を決定する際には、以下の2つの選択肢があります：
 
-1. You can just push them, ignoring physics. If you're familiar with Godot 3.x, this is equivalent to the "infinite inertia" option.
-1. You can give them a push based on the character's imagined "mass" and velocity. This will give you a "realistic" result - pushing heavy bodies a little, and lighter bodies a lot.
+```
+1. 物理学を無視して直接押すことも可能です。Godot 3.x に慣れている方なら、これは「無限慣性」オプションと同等の機能です。
+1. キャラクターの想定する「質量」と「速度」に基づいて押力を発揮させることもできます。これにより「リアルな」結果が得られます - 重い物体は少し、軽い物体は大きく押し出されるようになります。
 
 以下の両方のオプションを試してみましょう。
 
@@ -34,11 +35,11 @@ draft: false
 
 ![alt](/godot_recipes/4.x/img/2d_physics_layers_01.png)
 
-For the rigid body, we've placed it on the "items" layer (layer 3), and left the mask at the default (masking all layers):
+硬体オブジェクトについては、「アイテム」レイヤー（レイヤー3）に配置し、マスクはデフォルト設定のまま全レイヤーを覆う状態にしています：
 
 ![alt](/godot_recipes/4.x/img/physics_layers_box.png)
 
-Then, we've placed the player on the "player" layer (layer 2), and configured the mask to ignore the "items":
+次に、プレイヤーを「プレイヤー」レイヤー（レイヤー2）に配置し、マスクを設定して「アイテム」を無視するように構成しました：
 
 ![alt](/godot_recipes/4.x/img/physics_layers_player.png)
 
@@ -52,7 +53,7 @@ Then, we've placed the player on the "player" layer (layer 2), and configured th
 
 ### 衝撃波の適用方法
 
-To give the colliding body a "push" we'll need to apply an impulse. An impulse is an instantaneous "kick" - think of a bat hitting a ball. This is as opposed to a force, which is a continuous "push" on an object.
+衝突する物体に「押し」を与えるには、インパルスを適用する必要があります。インパルスとは瞬間的な「衝撃」のことで、野球でバットがボールを打つようなイメージです。これは、物体に対して連続的に力を加えるフォースとは異なります。
 
 ```gdscript
 # This represents the player's inertia.
@@ -74,7 +75,7 @@ func _physics_process(delta):
 
 実験を通じて、特定のゲームに最適な設定を見つけましょう。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/character_vs_rigid](https://github.org/godotrecipes/character_vs_rigid)
 
@@ -82,5 +83,5 @@ func _physics_process(delta):
 
 * [プラットフォームキャラクタ](/godot_recipes/4.x/2d/platform_character/)
 
-## <i class="fas fa-video"></i> Watch Video
+## <i class="fas fa-video"></i> 動画を観る
 {{< youtube SJuScDavstM >}}

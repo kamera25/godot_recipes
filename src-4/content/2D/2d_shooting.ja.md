@@ -13,7 +13,7 @@ ghcommentid: 26
 
 ### 弾丸の設定
 
-First, we'll set up a "bullet" object that we can instance. Here are the nodes we'll use:
+まず、インスタンス化可能な「弾丸」オブジェクトを設定します。使用するノードは以下の通りです：
 
 ```
 {{< gd-icon Area2D >}} Area2D: Bullet
@@ -43,11 +43,11 @@ func _on_Bullet_body_entered(body):
     queue_free()
 ```
 
-For this example, we'll remove the bullet if it hits anything at all. We'll also delete anything tagged in the "mobs" group that it hits.
+この例では、オブジェクトが何かを衝突した場合、即座に弾丸を除去します。また、「mobs」グループにタグ付けされた対象物もすべて削除します。
 
 ### 撮影について
 
-We need to set up a spawn location for the bullets. Add a {{< gd-icon Marker2D >}}`Marker2D` and place it where you want the bullets to spawn. Here's an example, placed at the barrel of the gun. I've named it "Muzzle".
+弾丸の出現位置を設定する必要があります。{{< gd-icon Marker2D >}}`Marker2D`コンポーネントを追加し、弾丸を出現させたい場所に配置してください。以下は具体例で、銃身の先端に設置しています。「Muzzle」という名前を付けています。
 
 ![alt](/godot_recipes/4.x/img/2d_shoot_01.gif)
 
@@ -55,17 +55,18 @@ We need to set up a spawn location for the bullets. Add a {{< gd-icon Marker2D >
 notice = True
 while notice:
     if player.rotated:
-        print(\)
+        print("プレイヤーの回転中... マスケット銃の変換座標は依然としてガンに対して同じ方向を向いています")
         break
     else:
-        print(\)
+        print("プレイヤーが静止しています")
 
 # 弾丸をスポーンする際、この機能が非常に役立ちます。変換座標を使用することで、適切な位置と向きを簡単に取得できます
 new_bullet.transform = muzzle_transform
 ```
 
+```html
 {{% notice tip %}}
-This will work for any character type, not just the "rotate-and-move" style shown here. Just attach the {{< gd-icon Marker2D >}}`Marker2D` where you want the bullets to spawn.
+この手法は「回転・移動」スタイルに限らず、あらゆる文字タイプに適用可能です。単に、弾丸を表示させたい位置に `{{< gd-icon Marker2D >}}`marker2d` タグを挿入するだけで済みます。
 {{% /notice %}}
 
 キャラクタースクリプト内で、インスタンス化用の弾丸シーンを保持する変数を追加します：
@@ -102,7 +103,7 @@ func shoot():
 
 問題は、弾丸がプレイヤーの子オブジェクトであるため、プレイヤーが移動または回転した際に影響を受ける点です。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/2d_shoot_02.gif" alt="">
 
 この問題を解決するには、弾丸をワールドに追加する必要があります。ここではプレイヤーのシーンルートノードを参照する `owner` 変数を使います。ただし、銃口の **グローバル** 変換行列も適用する必要がある点に注意してください。これを行わないと、弾丸が想定した位置に表示されない可能性があります。
 
@@ -125,6 +126,6 @@ func shoot():
 
 {{< youtube 7axJJYont6Y >}} -->
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードできます：[https://github.com/godotrecipes/2d_shooting](https://github.com/godotrecipes/2d_shooting)

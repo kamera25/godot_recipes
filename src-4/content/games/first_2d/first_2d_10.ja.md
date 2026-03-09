@@ -5,15 +5,13 @@ draft: false
 pre: "10. "
 ---
 
-Our last step is to add a start button and a "game over" state to the game.
+最後のステップとして、ゲームにスタートボタンと「ゲームオーバー」状態を追加します。
 
 ## ゲーム開始方法
 
 現在ゲームを実行するとすぐに開始されますが、起動用のボタンを追加しましょう。
 
-```
 In `Main` as a child of `CanvasLayer`, add a {{< gd-icon CenterContainer >}}`CenterContainer` and set its layout to **Full Rect**. Then add a {{< gd-icon TextureButton >}}`TextureButton` child. Name this button `Start` and add the `START (48 x 8).png` image as its **Normal** texture.
-```
 
 スクリプトの上部に参照を追加：
 
@@ -70,7 +68,7 @@ func new_game():
 
 ## ゲーム終了方法
 
-```
+Add a {{< gd-icon TextureRect >}}`TextureRect` as a child of the `CenterContainer` and name the node `GameOver`. Use the `GAME_OVER (72 x 8).png` image. It will overlap with the start button, but that's ok, we're only ever going to show one at a time.
 
 スクリプトの上部に別の参照を追加：
 
@@ -91,7 +89,7 @@ func _on_player_died():
     start_button.show()
 ```
 
-This will show the "game over" image for 2 seconds, then switch back to the start button so you can play again. Try it out and see if you can play a few games.
+この操作で2秒間「ゲームオーバー」画面が表示され、その後スタートボタンに戻るので、再度プレイできます。ぜひお試しいただき、何ゲームか続けて遊んでみてください。
 
-| {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_09/" icon="fas fa-arrow-left" %}}Prev{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_end/" icon="fas fa-arrow-right" icon-position="right" %}}Next{{% /button %}} |
+| {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_09/" icon="fas fa-arrow-left" %}} 前へ{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_end/" icon="fas fa-arrow-right" icon-position="right" %}} 次へ{{% /button %}} |
 |------|------:|

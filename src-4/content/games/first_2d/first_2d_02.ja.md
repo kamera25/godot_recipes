@@ -29,9 +29,7 @@ Godot ワークフローにおいて共通的な作業の一つにシーンの�
 
 ## シーンの構築方法
 
-```markdown
 **シーン** タブで、**＋** ボタンまたは**その他のノードを追加** ボタンをクリックして最初のノードを作成します。{{< gd-icon Area2D >}}`Area2D` と入力し、リストから選択してください。ノードが **シーン** タブに追加されたら、その名前をクリックして `Player` に改名し、`<Ctrl+S>` キーを押してシーンを保存します。
-```
 
 ### 船舶情報の表示
 
@@ -39,11 +37,11 @@ Godot ワークフローにおいて共通的な作業の一つにシーンの�
 
 「ファイルシステム」タブから、アートパック内の `Player_ship (16x16).png` ファイルをドラッグし、インスペクターの「テクスチャ」プロパティにドロップしてください。
 
-<img src=\ width=\>
+<img src="/godot_recipes/4.x/img/2d_player_ship.png" width="100">
 
 最初に気づくのは、どうやら船が3隻あるように見える点です！アートパックに含まれている画像には、左右へ移動するバージョンも含まれています。これを利用してみましょう - ［インスペクター］の［アニメーション］セクションで、**Hフレーム数**を`3`に設定します。これで**フレーム**プロパティを変更すると、これら3つの異なるバージョン間を切り替えられるようになります。今のところは`1`のままにしておいてください。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/2d_101_04.png" alt="">
 
 ### 衝突形状の追加方法
 
@@ -57,16 +55,16 @@ Godot ワークフローにおいて共通的な作業の一つにシーンの�
 
 ### 排気システム
 
-The ship will look much more dynamic with a little animation. Included in the art pack are some animations of exhaust flames named "Boosters". There are three: one for each version of the ship (left, forward, and right).
+アニメーションを追加すると、船の見た目がよりダイナミックになります。アートパックには「ブースター」と名付けた排気炎のアニメーションが3種類含まれています。それぞれ左舷用、前進時用、右舷用に対応しています。
 
-To display these, select the `Ship` node and add a child {{< gd-icon AnimatedSprite2D >}}`AnimatedSprite2D` node and name it "Boosters".
+これらを表示するには、`Ship`ノードを選択し、子要素として{{< gd-icon AnimatedSprite2D >}}`AnimatedSprite2D`ノードを追加し、「ブースター」という名前を付けてください。
 
 ```plain
 インスペクターの[アニメーション]セクションにある[スプライトフレーム]プロパティは現在空になっています。これをクリックすると新しい[スプライトフレーム]が作成されますので、その後でエディタウィンドウ下部のアニメーションパネルを開くために[スプライトフレーム]項目をクリックしてください。
 
 ![alt](/godot_recipes/4.x/img/2d_101_06.png?width=800)
 
-Double-click the "default" animation to rename it to "forward". Then, to add the animation images, click the **Add frames from sprite sheet** button:
+「デフォルト」アニメーションをダブルクリックして名前を「前進」に変更します。次に、アニメーション画像を追加するには、**スプライトシートからフレームを追加** ボタンをクリックします：
 
 ![alt](/godot_recipes/4.x/img/2d_101_07.png?width=800)
 
@@ -77,11 +75,11 @@ Double-click the "default" animation to rename it to "forward". Then, to add the
 
 このアニメーションにはフレームが2つしかありませんが、グリッドが正しくありません。画像サイズに合わせて **サイズ** の値を変更してください：`16 x 16`。その後、両方のフレームをクリックして選択し、**フレームを追加(2個)** ボタンをクリックしてください。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/2d_101_09.png?width=800" alt="">
 
 2つのフレームを追加したら、**再生**ボタンを押してアニメーションを実行してください。また、**ロード時に自動再生**ボタンを切り替えれば、自動的にアニメーションが開始されるようになります。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/2d_101_10.png?width=800" alt="Godotレシピ">
 
 処理が少し遅いので、フレームレートを「10 FPS」に変更してください。
 
@@ -89,15 +87,15 @@ Double-click the "default" animation to rename it to "forward". Then, to add the
 
 ![alt](/godot_recipes/4.x/img/2d_101_11.png)
 
-Repeat the process, adding the left and right "Booster" sprite sheets.
+プロセスを繰り返し、左右の「ブースター」スプライトシートを追加してください。
 
 ### 銃のクールダウン時間
 
-The last node we'll need to complete the player setup is a {{< gd-icon Timer >}}`Timer` to control how fast the player can shoot. Add the `Timer` as a child of `Player` and name it `GunCooldown`. Set its **One Shot** property to "On". This means that when the timer ends, it won't automatically restart. In the player's code, we'll start the timer when the player shoots, and they won't be able to shoot again until the timer runs out.
+最後に設定する必要があるのは、プレイヤーの射撃速度を制御する`Timer`です。`Player`ノードの下に`Timer`を追加し、名前を`GunCooldown`とします。**One Shot** プロパティは「オン」に設定してください。これは、タイマーが終了しても自動的にリセットされないことを意味します。実際の実装では、プレイヤーが銃を撃つタイミングでタイマーを起動させ、タイマーが切れるまでは再射撃できないようにします。
 
 ### 次のステップ
 
 プレイヤーシーンの設定はこれで完了です。ゲーム内でプレイヤーが操作する艦船に必要な機能を実装するため、ノードを追加しました。次のセクションでは、プレイヤーが艦船を制御し、射撃を行い、物体と衝突したことを検知するためのコードを追加してゆきます。
 
-| {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_01/" icon="fas fa-arrow-left" %}}Prev{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_03/" icon="fas fa-arrow-right" icon-position="right" %}}Next{{% /button %}} |
-|------|------:|
+<hr>
+    次のステップへ: {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_01/" icon="fas fa-arrow-left" %}}前に戻る{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_03/" icon="fas fa-arrow-right" icon-position="right" %}}次へ進む{{% /button %}} |

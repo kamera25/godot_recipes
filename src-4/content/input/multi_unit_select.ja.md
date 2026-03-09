@@ -22,7 +22,7 @@ draft: false
 
 ### 世界設定
 
-Processing the unit selection will happen in the world. We'll start with a {{< gd-icon Node2D >}}`Node2D` called "World" and add a few `Unit` instances in it. Attach a script to the World node and add the following variables:
+ユニット選択の処理はワールド内で行います。まず「World」という名前の{{< gd-icon Node2D >}}`Node2D`オブジェクトを作成し、その中にいくつかの`Unit`インスタンスを追加します。ワールドノードにスクリプトをアタッチし、以下の変数を設定してください：
 
 ```gdscript
 extends Node2D
@@ -62,10 +62,8 @@ func _draw():
 
 ### 単位の選択方法
 
-```python
 # 選択ボックス内に包含されるユニットを特定します
 selection_box.get_units()
-```
 
 ```cpp
 // Define the rectangle shape and location transform
@@ -101,7 +99,6 @@ elif dragging:
     selected = space.intersect_shape(query)
 ```
 
-```python
 # Create physics state and set it up using PhysicsShapeQueryParameters2D
 physics_state = Box2DWorld.create_physics_state()
 shape_query_params = PhysicsShapeQueryParameters2D()
@@ -114,7 +111,6 @@ shape_query_params.set_filter(query_transform)
 
 # Perform intersection test and get results
 intersection_results = physics_state.intersect_shapes2D(shape_query_params)
-```
 
 ```
 [{ "rid": RID(4093103833089), "collider_id": 32145147326, "collider": Unit2:<CharacterBody2D#32145147326>, "shape": 0 },
@@ -128,7 +124,7 @@ intersection_results = physics_state.intersect_shapes2D(shape_query_params)
         item.collider.selected = true
 ```
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/multi_unit_03.gif" alt="Multi Unit 03">
 
 ### 部隊指揮について
 
@@ -157,7 +153,7 @@ func _unhandled_input(event):
 
 この技術は様々なリアルタイムストラテジーゲーム（RTS）やその他のジャンルのゲームに応用可能です。以下から完全版プロジェクトをダウンロードして、自分の作品を作る際のベースとして活用してください。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードできます: [https://github.com/godotrecipes/multi_unit_support](https://github.com/godotrecipes/multi_unit_support)
 

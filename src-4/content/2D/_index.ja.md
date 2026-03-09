@@ -5,7 +5,7 @@ chapter = true
 pre = "<i class='fas fa-shapes fa-fw'></i>&nbsp"
 +++
 
-<i class=\></i>　2D
+<i class="fas fa-shapes"></i>　2D
 
 ゲーム開発における2D領域のヒント、テクニック、チュートリアル情報を提供します。
 

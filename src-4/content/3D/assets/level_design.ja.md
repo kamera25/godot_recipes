@@ -37,7 +37,7 @@ Godotの組み込み[Blenderサポート](https://docs.godotengine.org/en/stable
 
 #### ドア
 
-Find the `wall_doorway_scaffold.glb` file in the **FileSystem** and double-click to check the import settings and see that you've created a static collision for both meshes (the door frame and the door). Right-click to create a "New Inherited Scene".
+「壁とドアの足場」（wall_doorway_scaffold.glb）ファイルを**ファイルシステム**内で見つけ、ダブルクリックしてインポート設定を確認し、両方のメッシュ（ドアフレームとドア）に対して静止衝突オブジェクトが適切に作成されていることを確認してください。右クリックして「新規継承シーン」を作成します。
 
 以下の手順で進めます：
 
@@ -45,10 +45,10 @@ Find the `wall_doorway_scaffold.glb` file in the **FileSystem** and double-click
 
 **SS**
 
-The "wall_doorway_scaffold_door" is the mesh that we want to rotate.
-We want to be able to open the door in either direction, so we're going to create two animations. Both of them rotate the door's **Y** rotation by `90°`, but "open+" opens in the **+Z** direction and "open-" does the opposite. This way, when the player interacts with the door, we can open it away from them, no matter which side they're on.
+「wall_doorway_scaffold_door」は、回転させたいメッシュです。
+ドアを両方向に開閉できるようにするため、2つのアニメーションを作成します。どちらのアニメーションもドアの**Y軸**周りの回転を`90°`変更しますが、「open+」は**+Z方向**に、「open-」はその逆方向に開きます。これにより、プレイヤーがドアに触れたとき、どの側に立っていても外側に開くようになります。
 
-Add the {{< gd-icon StaticBody3D >}}`StaticBody3D` child of the door to a group called "interactable". This is the object the player is going to detect. If it's in that group, the player will call `interact()` on it.
+ドアの子要素である {{< gd-icon StaticBody3D >}}`StaticBody3D` を「インタラクタブル」というグループに追加します。これはプレイヤーが検出する対象となるオブジェクトです。このグループに属することで、プレイヤーは `interact()` メソッドを呼び出すことが可能になります。
 
 ドアシーンにスクリプトを追加：
 
@@ -69,11 +69,11 @@ func interact(dir):
 
 #### 胸
 
-Find the `chest.glb` file in the **FileSystem** and double-click to check the import settings and see that you've created a static collision for both meshes (the chest body and lid). Right-click to create a "New Inherited Scene".
+「ファイルシステム」内で `chest.glb` ファイルを見つけ、ダブルクリックしてインポート設定を確認し、両方のメッシュ（チェスト本体と蓋）に対して静的衝突判定が正しく設定されていることを確認してください。右クリックで「新規継承シーン」を作成します。
 
 追加する {{< gd-icon AnimationPlayer >}} `AnimationPlayer` と胸蓋が開くアニメーションを作成します。
 
-Similar to the door, add the static body to the "interactable" group and an `interact()` function in its script:
+ドアと同様に、静的ボディを「インタラクション可能」グループに追加し、スクリプト内に `interact()` 関数を実装します：
 
 ```gdscript
 extends Node3D

@@ -10,7 +10,7 @@ draft: false
 
 ## 解決策
 
-Here's an example of what we are going for:
+以下に、私たちが目指している実装例をご紹介します：
 <video controls src="/godot_recipes/4.x/img/minimap_01.webm"></video>
 
 ### プロジェクト設定
@@ -32,13 +32,13 @@ Here's an example of what we are going for:
 
 まず最初に、ミニマップのレイアウトを作成する必要があります。ゲーム内に存在する他のUI要素と連携させるためには、スムーズなリサイズが可能で、コンテナベースのレイアウトに適切に統合できるものでなければなりません。
 
-Add a {{< gd-icon MarginContainer >}}`MarginContainer` first. Set its **Theme Overrides/Constants** all to `5`. This control will hold the rest of the nodes and ensure it doesn't bleed over into any other elements. Name it "Minimap" and save the scene.
+まず`{{< gd-icon MarginContainer >}}MarginContainer`を追加します。次に、その［テーマ設定/定数］をすべて`5`に設定します。このコントロールは残りのノードを保持し、他の要素に影響を与えないようにする役割を果たします。名前は「ミニマップ」とし、シーンを保存してください。
 
 次に、このプロジェクトに {{< gd-icon NinePatchRect >}}`NinePatchRect`ノードを追加します。このノードは `TextureRect`と似ていますが、角や端を引き伸ばさずにリサイズする点が異なります。アセットフォルダから **[テクスチャ]** プロパティに `panel_woodDetail_blank.png` 画像をドラッグ＆ドロップしてください。この画像は `128x128`ピクセルのもので、ルート {{< gd-icon MarginContainer >}}`MarginContainer`ノードを拡大すると、画像が伸びすぎて見栄えが悪くなります：
 
 ![alt](/godot_recipes/4.x/img/minimap_02.gif)
 
-Using the {{< gd-icon NinePatchRect >}}`NinePatchRects`'s properties, we can ensure that the frame remains the same size when stretched. You can define these properties graphically in the "TextureRegion" panel, but it's sometimes easier to enter the values directly. Set all four properties in the **Patch Margin** section to `64` and change the node's name to "Frame".
+```{{< gd-icon NinePatchRect >}}NinePatchRects``` のプロパティを使用することで、引き伸ばした場合もフレームサイズが一定に保たれます。これらのプロパティは「テクスチャ領域」パネルでグラフィカルに定義できますが、直接数値を入力する方が簡単な場合もあります。**パッチ余白** セクションにある4つのプロパティをすべて `64` に設定し、ノード名を "Frame" に変更してください。
 
 サイズを変更するとどうなるか、次に見てみましょう：
 
@@ -46,12 +46,12 @@ Using the {{< gd-icon NinePatchRect >}}`NinePatchRects`'s properties, we can ens
 
 次に、フレームの内側部分をグリッドパターン「pattern_blueprintPaper.png」で埋めたいと思います：
 
-<img src=\ alt=\
->
+<img src="/godot_recipes/4.x/img/pattern_blueprintPaper.png" alt="Pattern Blueprint Paper">
 
 ただし、フレームのサイズがどうあれ自動でタイル表示されるようにする必要があります。また、グリッドエリアはミニマップマーカーが表示される場所なので、枠線を超えて拡張しないようにしなければなりません。
 
-As a child of the `MiniMap` (and a sibling of the `Frame`), add another {{< gd-icon MarginContainer >}}`MarginContainer`. Set all four margin properties in **Theme Overrides/Constants** to `20`. As a child of this node, add a {{< gd-icon TextureRect >}}`TextureRect` and assign its **Texture** to the above image. Set its **Stretch Mode** to "Tile". Name this node "Grid".
+```markdown
+「MiniMap」の子要素（かつ「Frame」の兄弟要素）として、新たに {{< gd-icon MarginContainer >}}`MarginContainer` を追加します。**テーマオーバーライド/定数** で4つのマージンプロパティをすべて `20` に設定します。このノードの子要素として {{< gd-icon TextureRect >}}`TextureRect` を追加し、**テクスチャ** を上記の画像に割り当てます。**伸縮モード** は「タイル」に設定してください。このノードには「Grid」という名前を付けます。
 
 ルートノードのサイズを変更して効果を確認してください：
 
@@ -66,7 +66,8 @@ As a child of the `MiniMap` (and a sibling of the `Frame`), add another {{< gd-i
 
 ### マップマーカー
 
-As a child of `Grid`, add a {{< gd-icon Sprite2D >}}`Sprite2D` node named "PlayerMarker" and give it the `minimapIcon_arrowA.png` texture. Note the sprite's **Transform/Position** property: `(0, 0)`, which places it exactly in the top-left corner of the `Grid`:
+```{{< gd-code-block >}}
+child "PlayerMarker" {{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加し、テクスチャとして`minimapIcon_arrowA.png`を設定します。スプライトの**Transform/Position**プロパティに注目してください: `(0, 0)`で、これはこのオブジェクトが`Grid`の左上隅に正確に配置されることを意味します:
 
 ![alt](/godot_recipes/4.x/img/minimap_05.png)
 
@@ -77,11 +78,11 @@ As a child of `Grid`, add a {{< gd-icon Sprite2D >}}`Sprite2D` node named "Playe
 
 心配しないでください。後で自動化します。
 
-Add two more {{< gd-icon Sprite2D >}}`Sprite2D` nodes: "MobMarker" and "AlertMarker", using the `minimapIcon_jewelRed.png` and `minimapIcon_exclamationYellow.png` textures.
+以下の 2 つの {{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加してください: "MobMarker" と "AlertMarker"。テクスチャには `minimapIcon_jewelRed.png` および `minimapIcon_exclamationYellow.png` を使用してください。
 
 ![alt](/godot_recipes/4.x/img/minimap_08.png)
 
-These will represent two different types of objects in the game world. Click the "Toggle Visibility" button next to each so that they won't appear by default.
+これらのオブジェクトはゲーム内世界の異なる2種類のアイテムを表します。デフォルトでは表示されないよう、各アイテムの横にある「表示/非表示切り替え」ボタンをクリックしてください。
 
 ### マップマーカーのスクリプト設定
 
@@ -89,7 +90,7 @@ These will represent two different types of objects in the game world. Click the
 
 本デモで使用するゲームオブジェクトは2種類です：ランダムにマップを徘徊する「モブ」と、プレイヤーが持ち上げ可能な「木箱」です。これらのオブジェクトの多くがメインシーン内に散らばっています。それぞれを適切に表示するために、先ほど作成したマップマーカーのいずれかを使用する必要があります。
 
-Add each item that you want to appear on the minimap to a group named "minimap_objects". In each object's script, assign it a `minimap_icon` property:
+ミニマップ上に表示させたい各アイテムを「minimap_objects」というグループに追加してください。各オブジェクトのスクリプトにおいて、`minimap_icon`プロパティを適切に設定します：
 
 ```gdscript
 # In the mob's script:
@@ -99,7 +100,21 @@ var minimap_icon = "mob"
 var minimap_icon = "alert"
 ```
 
-Now we can begin adding a script to the `Minimap`. First, a `player` reference that can be assigned in the Inspector when the minimap is added to the main scene and a `zoom` property to calibrate the scale - how far the minimap can "see". We also have some `@onready` variables to make it more convenient to access the nodes we need.
+```python
+from unity3d import *
+
+class MinimapScript:
+    def Start(self):
+        # メインシーンにミニマップが追加される際にインスペクターで割り当て可能なプレイヤー参照変数を作成
+        self.player_ref = None
+        
+        # スケール調整用のズームプロパティを定義 - ミニマップが「見える」範囲を指定可能にする
+        self.zoom_factor = 1.0  # デフォルト値
+
+        # @onready属性を持つ変数を作成し、必要なノードへのアクセスをより便利に実装
+        @onready var player_node: Transform = FindObjectOfType<Transform>("Player")
+        @onready var map_canvas_node: CanvasGroup = GetComponentInParent<CanvasGroup>()
+```
 
 ```gdscript
 extends MarginContainer
@@ -130,11 +145,9 @@ var grid_scale
 var markers = {}
 ```
 
-```python
 def _ready():
     # グリッドの中央にプレイヤーマーカーを中央配置し、スケール係数を計算する
     pass  # (注：動的サイズUIの場合は、'resized'シグナルに接続し、この処理をすべてコールバック内で実装する必要があります)
-```
 
 ```gdscript
 func _ready():
@@ -143,11 +156,33 @@ func _ready():
     grid_scale = grid.size / (get_viewport_rect().size * zoom)
 ```
 
-{{% notice style="warning" title="Nodes in Containers" %}}
-Due to the way that {{< gd-icon Container >}}`Container` nodes handle their children, at `_ready()` time you won't get the correct value for the child's size. For this reason, we need to wait until the next frame to get the Grid's size.
+```
+{{% notice style="warning" title="コンテナ内ノードについて" %}}
+{{< gd-icon Container >}}`Container` ノードが子要素をどのように処理するかの特性上、`_ready()` の時点では子要素の正確なサイズ値が取得できません。このため、グリッドのサイズを正しく取得するには次のフレームまで待つ必要があります。
 {{% /notice %}}
 
-We'll also create markers for every game object (using the "minimap_objects" group) by duplicating the matching marker node and tying the marker to the object via the `markers` dictionary:
+```python
+from bpy import context, data, ops
+import copy
+
+def create_game_object_markers():
+    # Get the current active scene
+    scene = context.scene
+
+    # Iterate over each game object in the scene
+    for obj in scene.objects:
+        if obj.type == 'GAMEOBJECT':
+            # Create a marker node with the same name as the game object
+            marker_node = bpy.data.nodes.new('ShaderNodeGroup')
+            marker_node.name = obj.name
+
+            # Ensure the marker is properly linked to the game object
+            obj.node_tree.nodes[-1].use_shader_node_group = True
+            obj.node_tree.nodes[-1].group_path = "#" + obj.name
+
+            # Store the marker in the dictionary for quick access
+            markers[obj] = marker_node
+```
 
 ```gdscript
     var map_objects = get_tree().get_nodes_in_group("minimap_objects")
@@ -182,7 +217,7 @@ for item in markers:
 
 この問題は、マーカーがグリッドの外側にも配置できてしまう点にあります：
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/minimap_09.png" alt="">
 
 この問題を解決するには、`obj_pos` を計算した後、マーカーの位置を設定する前に、その値をグリッドの矩形範囲にクリップしてください：
 
@@ -192,7 +227,7 @@ obj_pos = obj_pos.clamp(Vector2.ZERO, grid.size)
 
 ![alt](/godot_recipes/4.x/img/minimap_11.png)
 
-We can also decide what to do about markers that are "off-screen" - when they would be outside the grid's rectangle. Choose one of the following options (do this also before using `clamp()`). The first option is to hide them:
+以下のオプションから1つ選択できます（`clamp()`を使用する前に設定してください）。最初の選択肢はマーカーを非表示にする方法です：
 
 ```gdscript
 if grid.get_rect().has_point(obj_pos + grid.position):
@@ -210,13 +245,13 @@ else:
     markers[item].scale = Vector2(0.75, 0.75)
 ```
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/minimap_12.png" alt="Minimapスクリーンショット">
 
 ### オブジェクトの削除方法
 
 モブが倒されたり、木箱が拾われたりすると、マーカー参照が有効でなくなるためゲームがクラッシュしてしまいます。オブジェクトと一緒にマーカーも確実に削除されるようにする必要があります。以下に、簡易的なデモ環境でこれを実装する簡単な方法を紹介します：
 
-Add `signal removed` to any object that you've put in the "minimap_objects" group. Emit this signal when the object is destroyed (or collected), along with a reference to itself so the map can identify it:
+「minimap_objects」グループに追加したすべてのオブジェクトに `signal removed` を追加してください。このシグナルは、オブジェクトが破棄（または回収）される際に、マップがそのオブジェクトを識別できるように自身への参照と共に発火させます：
 
 ```gdscript
 removed.emit(self)
@@ -267,7 +302,7 @@ func _on_gui_input(event):
 
 これで完了です。スクロールインとアウトの効果を確認してみましょう：
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/minimap_10.gif" alt="ミニマップ画像">
 
 ## まとめ
 
@@ -280,7 +315,7 @@ func _on_gui_input(event):
 * マーカーをクリックするとその詳細情報が表示されるように改良
 * グリッドの代わりにマップ画像をそのままミニマップ背景として使用可能に
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 以下からプロジェクトのサンプルコードをダウンロードできます：[https://github.com/godotrecipes/minimap](https://github.com/godotrecipes/minimap)
 

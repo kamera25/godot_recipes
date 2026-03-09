@@ -1,5 +1,5 @@
 +++
-title = "Fresh Recipes"
+title = "新着レシピ"
 weight = 1
 pre = "<i class='fas fa-newspaper fa-fw'></i>&nbsp"
 +++

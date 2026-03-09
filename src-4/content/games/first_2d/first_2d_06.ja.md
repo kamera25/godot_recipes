@@ -5,19 +5,22 @@ draft: false
 pre: "06. "
 ---
 
-Before we can make enemies, powerups, or any other game objects, we need a place where they can all exist together with the player. In most games, this would be called a "level" or "main" scene, and that's what we'll call it here.
+ほとんどのゲームでは、これを「レベル」または「メインシーン」と呼びます。ここではそのように呼称します。
 
-Start the scene with a {{< gd-icon Node2D >}}`Node2D` called "Main" and save it.
+シーンを「メイン」という名前の `Node2D`（{{< gd-icon Node2D >}}で表示）で開始し、保存してください。
 
 ## 背景の作成方法
 
-Add a {{< gd-icon Sprite2D >}}`Sprite2D` child. Name this sprite "Background" and add the `Space_BG (2 frames) (64 x 64).png` as its texture.
+以下の手順で操作してください：
+1. {{< gd-icon Sprite2D >}} アイコンを使用して、新しい `Sprite2D` 子オブジェクトを追加します。
+2. このスプライトに「Background」という名前を付けます。
+3. テクスチャとして `Space_BG (2 frames) (64 x 64).png` を適用します。
 
 この画像には2つのフレームがあり、それぞれ`64x64`ピクセルのサイズです。画面全体に画像を敷き詰めたいので、まずは以下の設定から始めてください：
 
-* Under **Offset** set **Centered** to "off". This makes the image's top left corner start at the origin rather than its center.
+・「オフセット」設定で「中央揃え」をオフにします。これにより、画像の左上隅が原点から始まるようになり、中心からは始まらなくなります。
 
-* Under **Region**, turn **Enabled** "on", and then set the **Rect** to a width of `240` and a height of `320`. This makes the image stretch to the size of the screen.
+・「リージョン」設定で「有効」をオンにし、幅を「240」、高さを「320」に指定します。これにより画像が画面サイズに合わせて拡大されます。
 
 * ［テクスチャ］設定で［繰り返し表示］を「有効」に変更してください。これにより画像が画面全体に繰り返されるようになります。
 
@@ -33,9 +36,9 @@ from direct.directbase import DirectStart
 
 class BackgroundAnimatorNode(pdc.NodePath):
     def __init__(self, parent_node):
-        super().__init__(\)
+        super().__init__("BackgroundAnimation")
         parent_node.attachChild(self)
-        self.animationPlayer = pdc.AnimationPlayer(\)
+        self.animationPlayer = pdc.AnimationPlayer("AnimationPlayer")
         self.addChild(self.animationPlayer)
 
     def update_frame(self, frame_number):
@@ -44,15 +47,15 @@ class BackgroundAnimatorNode(pdc.NodePath):
 
 class MainNodePath(pdc.NodePath):
     def __init__(self):
-        super().__init__(\)
+        super().__init__("MainScene")
 
         # BackgroundAnimatorNodeのインスタンスを作成
-        background_node = BackgroundAnimatorNode(\)
+        background_node = BackgroundAnimatorNode("MainScene")
 
         # AnimationPlayerを設定する（実際の実装は省略）
         pass
 
-if __name__ == \:
+if __name__ == "__main__":
     DirectStart()
 ```
 
@@ -72,5 +75,5 @@ if __name__ == \:
 
 メインシーンが完成し、敵キャラクターを追加する準備が整いました。次のステップでは、弾丸と同じ方法で単一の敵用シーンを作成し、その後複数回インスタンス化します。
 
-| {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_05/" icon="fas fa-arrow-left" %}}Prev{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_07/" icon="fas fa-arrow-right" icon-position="right" %}}Next{{% /button %}} |
+| {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_05/" icon="fas fa-arrow-left" %}} 前の項目{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_07/" icon="fas fa-arrow-right" icon-position="right" %}} 次の項目{{% /button %}} |
 |------|------:|

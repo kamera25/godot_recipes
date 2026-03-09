@@ -23,23 +23,23 @@ Enemy: {{< gd-icon Area2D >}} Area2D
     ShootTimer: {{< gd-icon Timer >}} Timer
 ```
 
-Select the area node and click the **Node** tab next to the **Inspector**. Under **Groups**, type "enemies" an click **Add**. Remember the code we wrote on the bullet? It looks for objects in the "enemies" group.
+※「インスペクター」横の **ノード** タブをクリックします。**グループ** セクションに「enemies」と入力し、**追加** をクリックしてください。弾丸コードで指定したように、これは「enemies」グループ内のオブジェクトを探します。
 
 スプライトの**テクスチャ**に`Bon_Bon (16 x 16).png`を追加し、**アニメーション/フレーム数**を`4`に設定してください。
 
 以前と同じように矩形の衝突形状を追加し、サイズを調整してください。タイマーノードの両方で**ワンショット**を有効にします。
 
-In the {{< gd-icon AnimationPlayer >}}`AnimationPlayer`, add an animation called "bounce" and set it to looping and autoplay. Set the **Snap** at the bottom of the animation panel to `0.05`.
+```{{< gd-icon AnimationPlayer >}}`AnimationPlayer` において、「バウンス」というアニメーションを追加し、ループ再生と自動再生を設定します。アニメーションパネルの下部にある**スナップ値**を `0.05` に設定してください。
 
-Select the sprite node and press the key icons next to **Texture** and **Hframes** to create tracks for them. We're doing this because later we'll add an "explosion" animation that will use different values for these properties.
+スプライトノードを選択し、**テクスチャ** と **フレーム数** の横にあるキーアイコンをクリックしてトラックを作成します。これは、後でこれらのプロパティに異なる値を使用する「爆発」アニメーションを追加するためです。
 
-Now we'll key the individual **Frames** values we want. Start with keying **Frames** each `.1` seconds to values in this order`2`, `1`, `0`, `3`. Finally, key `0` again and put it immediately after. This will make a "pulsing" animation where the sprite grows and then bounces a little at the end. The animation setup should look like this:
+次に、必要な各**フレーム**値を設定していきます。まずは`10ミリ秒`ごとに以下の順番でフレームを設定します：`2`, `1`, `0`, `3`。最後にもう一度`0`を設定してすぐ後ろに配置します。これにより、スプライトが徐々に大きくなり、最後に少し弾むような「脈動」アニメーションが完成します。このセットアップは以下のようになるはずです：
 
 ![alt](/godot_recipes/4.x/img/2d_101_20.png)
 
 再生ボタンを押して実際に動作を確認してみてください。必要に応じて調整していただいても結構です。
 
-Now add another animation called "explode". Set its length to `0.4` seconds.
+次に、「explode」というアニメーションを追加します。長さを 0.4 秒に設定してください。
 
 スプライトの**テクスチャ**を `Explosion (16 x 16).png` に変更し、そのプロパティにキーフレームを適用します。この画像は敵キャラ画像と異なるフレーム数を持っているため、**Hフレーム**も `6` に変更し、同様にキーフレームを設定する必要があります。
 
@@ -60,7 +60,7 @@ var speed = 0
 @onready var screensize  = get_viewport_rect().size
 ```
 
-```
+The `start_pos` variable is going to keep track of the enemy's starting position so that after it moves, it can return to its original location. We'll set it when the enemy is spawned and we call its `start()` function.
 
 ```gdscript
 func start(pos):
@@ -134,7 +134,7 @@ var enemy = preload("res://enemy.tscn")
 var score = 0
 ```
 
-Spawning enemies ordinarily won't happen until we've pressed the "Start" button to begin the game, but since we haven't made that yet, we'll just spawn them immediately:
+通常、敵はゲーム開始ボタンを押してプレイを開始するまで出現しませんが、まだその段階に達していないので、ここではすぐに敵を出現させます：
 
 ```gdscript
 func _ready():
@@ -161,5 +161,5 @@ func _on_enemy_died(value):
 
 シーンを再生すると、画面上部から敵の集団が次々と出現し、定期的に画面下へ落ちていく様子が確認できるはずです。次に、これらに攻撃動作を追加していきましょう。
 
-| {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_06/" icon="fas fa-arrow-left" %}}Prev{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_08/" icon="fas fa-arrow-right" icon-position="right" %}}Next{{% /button %}} |
+| {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_06/" icon="fas fa-arrow-left" %}} 前の手順{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_08/" icon="fas fa-arrow-right" icon-position="right" %}}次の手順{{% /button %}} |
 |------|------:|

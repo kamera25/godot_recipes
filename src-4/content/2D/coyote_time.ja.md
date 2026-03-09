@@ -6,18 +6,18 @@ draft: false
 
 ## 問題文
 
-Your platformer jumping feels "off". Players don't have good control and sometimes they "miss" jumping off the edge of platforms.
+プラットフォームゲームのジャンプ操作に違和感があります。プレイヤーはコントロールが取りづらく、場合によってはプラットフォームから正しく飛び降りられないことがあります。
 
 ## 解決策
 
-The answer to this problem is to use a technique called "coyote time". This gives the player a greater feeling of control and a little "wiggle room" around the process of jumping from the edges of platforms.
+この問題を解決するには、「コヨーテ・タイム」と呼ばれるテクニックが有効です。これはプレイヤーにより高い操作感覚と、プラットフォームの端を移動するプロセスにおいて若干の「余裕時間」を提供します。また、プレイヤーがより自然にジャンプ操作を行えるようになります。
 
-"Coyote time" works like this:
+「コヨーテタイム」の仕組みは以下の通りです：
 
 プレイヤーがプラットフォームの端から離れた場合、数フレームの間は依然として地面にいるかのようにジャンプできるようにしています。
 
-{{% notice style="info" title="Origins" %}}
-The name "coyote time" comes from the famous cartoon coyote, who wouldn't fall until he looked down:
+{{% notice style="info" title="語源について" %}}
+「コヨーテタイム」という名称は、有名なカートゥーンキャラクターである怠け者のコヨーテに由来しています。彼は地面を見下ろすまで決して落ちようとしませんでした：
 
 ![alt](/godot_recipes/4.x/img/coyote.png)
  {{% /notice %}}
@@ -70,11 +70,11 @@ func _on_coyote_timer_timeout():
     coyote = false
 ```
 
-{{% notice style="tip" title="Implementing in 3D" %}}
-You can apply the same process to 3d characters.
+{{% notice style="tips" title="3Dキャラクターへの実装方法" %}}
+この手順は3Dキャラクターにも同様の方法で適用できます。
 {{% /notice %}}
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 [動くプラットフォーム](/godot_recipes/4.x/2d/moving_platforms) プロジェクト内のキャラクターにはコヨーテタイムが実装されています。
 

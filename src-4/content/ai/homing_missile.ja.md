@@ -6,14 +6,14 @@ draft: false
 
 ## 問題文
 
-You need a "homing missile" - a projectile that will seek a moving target.
+必要になるのが「ホーミングミサイル」です。これは移動する標的を自動で追尾する砲弾です。
 
 ## 解決策
 
 ```
 この例では、プロジェクトイルとして {{< gd-icon Area2D >}}`Area2D` ノードを使用します。エリアは通常、衝突検出が必要な弾丸に適しています。もし跳ね返る/反射するタイプの弾丸も必要であれば、`PhysicsBody` 型のノードの方が適しているかもしれません。
 
-The node setup and behavior of the missile is the same you would use for a "dumb" bullet. If you're creating many bullet types, you can use inheritance to base all your projectiles on the same core setup.
+ノードの設定とミサイルの挙動は、従来の「単純な」弾丸と同様の仕組みを採用しています。複数種類の弾丸を作成する場合、継承機能を活用してすべてのプロジェクトイルを共通の基本設定に基づいて構築することが可能です。
 
 使用するノード：
 
@@ -26,9 +26,10 @@ The node setup and behavior of the missile is the same you would use for a "dumb
 
 テクスチャについては、お好きな画像を自由に使用できます。一例をご紹介します：
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/missile.png" alt="ミサイル">
 
-Set up the nodes and configure the sprite's texture and the collision shape. Make sure to rotate the {{< gd-icon Sprite2D >}}`Sprite2D` node by `90°` so that it's pointing to the right, ensuring it matches the parent's "forward" direction.
+```
+ノードの設定を行い、スプライトのテクスチャと衝突形状を構成します。{{< gd-icon Sprite2D >}}`Sprite2D`ノードは必ず `90°` 回転させ、右向きになるように調整してください。これにより、親オブジェクトの「前方」方向と一致するようになります。
 
 スクリプトを追加し、{{< gd-icon Area2d >}}`Area2D`の`body_entered`シグナルと{{< gd-icon Timer >}}`Timer`の`timeout`シグナルを接続してください。
 
@@ -59,12 +60,11 @@ func _on_Lifetime_timeout():
     queue_free()
 ```
 
-This creates a "dumb" rocket that travels in a straight line when fired. To use this projectile, instance it and call its `start()` method with the desired `Transform2D` to set its position and direction.
+この設定により、発射時に直線軌道で移動する「単純な」ロケットが作成されます。この投射物を使用するためには、インスタンス化した後、`start()` メソッドを呼び出し、目的の位置と方向を設定するために適切な `Transform2D` を指定する必要があります。
 
 詳細については以下の［関連するレシピ］セクション（#関連レシピ）をご覧ください。
 
-To change the behavior to seek a target, we'll use the `acceleration`. However,
-we don't want the missile to "turn on a dime", so we'll add a variable to control its "steering" force. This will give the missile a turning radius that can be adjusted for different behavior. We also need a `target` variable so that the missile knows what to chase. We'll set that in `start()` as well:
+ターゲット捜索動作を変更するため、`acceleration`（加速度）を利用します。ただし、ミサイルが「一瞬で方向転換する」のは避けたいので、制御する「ステアリング力」を調整する変数を追加します。この設定により、異なる挙動に対応した旋回半径を調整できるようになります。また、ミサイルが追跡対象を把握するための`target`変数も必要です。これも`start()`関数内で適切に初期化します：
 
 ```gdscript
 export var steer_force = 50.0
@@ -76,12 +76,12 @@ func start(_transform, _target):
     ...
 ```
 
-To change the missile's direction to move toward the target, it needs to accelerate in that direction (acceleration is change in velocity). The missile "wants" to move straight towards the target, but its current velocity is pointing in a different direction. Using a little vector math, we can find that difference:
+ミサイルを目標に向かって移動させるには、方向転換して加速する必要があります（加速度とは速度の変化のことです）。ミサイルは本来、まっすぐ目標方向へ進みたいところですが、現在の速度ベクトルは別の方向に向いた状態です。簡単なベクトル計算によって、このずれ量を求めることができます：
 
 ```text
 ![alt](/godot_recipes/4.x/img/steering_diagram.png)
 
-The green arrow represents the needed change in velocity (i.e. `acceleration`). However, if we turn instantly, that will look unnatural, so the "steering" vector's length needs to be limited. This is the purpose of the `steer_force` variable.
+緑の矢印は必要な速度変化（すなわち「加速度」）を示しています。ただし、瞬時に方向転換すると不自然に見えるため、この「操舵」ベクトルの長さには制限を設ける必要があります。これを実現するための変数が`steer_force`です。
 
 これはその加速度を計算する関数です。注：目標が設定されていない場合、操舵は行われないため、ミサイルはそのまま直線軌道を維持します。
 

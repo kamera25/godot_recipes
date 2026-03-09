@@ -11,14 +11,14 @@ tags: []
 
 ## 解決策
 
-```
+Start with a {{< gd-icon CharacterBody3D >}}`CharacterBody3D` node, and add a {{< gd-icon CollisionShape3D >}}`CollisionShape3D` to it. The {{< gd-icon CapsuleShape3D >}}`CapsuleShape3D` collision shape is the most common choice. Depending on your world setup, you may want to add additional shapes here, but for the purposes of this example, we'll stick to the basics.
 
 サイズはすべて初期設定値のままにします（カプセルの高さは2メートルとなります）。地面と底面を揃えるため、高さを「+1.0」m移動させてください。
 
 次に、ボディの子要素として `{{< gd-icon Camera3D >}}`Camera3D` を追加し、約 `1.6`m 持ち上げてください。
 
-{{% notice style="note" title="Where's the body?" %}}
-For this example, we'll leave the character "bodyless" - meaning we're not adding a mesh to display for the player's body. Depending on your setup, you may or may not need to see the player's body.
+{{% notice style="note" title="キャラクターのボディはどこにある？" %}}
+この例では、「ボディーレス」な状態、つまりプレイヤー用の表示メッシュを追加しないケースを考えます。環境によっては、プレイヤーの身体を表示する必要があるかどうかは異なるでしょう。
 {{% /notice %}}
 
 スクリプトをボディに添付し、まずいくつかのプロパティを定義することから始めましょう：
@@ -54,7 +54,7 @@ func _physics_process(delta):
 
 入力マッピングに「W」「A」「S」「D」（標準設定）またはコントローラーの軸（好みに応じて選択可能）を使用して、適切な入力アクションを必ず追加してください。
 
-Add the player to a "World" scene where you've created some {{< gd-icon StaticBody3D >}}`StaticBody3D` nodes for the floor and some walls.
+以下の手順で「ワールド」シーンにプレイヤーを追加してください：床用に`StaticBody3D`ノードを、壁用に複数のノードを作成済みとします。
 
 移動しようとすると、前後・左右に動けるものの、回転はできないことがわかります。次はこの点を処理していきます。
 
@@ -78,9 +78,7 @@ func _input(event):
         rotate_y(-event.relative.x * mouse_sensitivity)
 ```
 
-```
 最後に、上下移動にはマウスの「y」モーションを使ってカメラを傾けます。完全に逆さまになるのは避けたいので、回転値は「clamp()」で70度という合理的な範囲に制限します。
-```
 
 ```gdscript
 func _input(event):
@@ -92,11 +90,11 @@ func _input(event):
 
 ## 武器の所持について
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/fps_01.png" alt="FPS 01">
 
 FPSキャラクターには通常、前面に位置した武器の3Dメッシュが用意されています。これをセットアップするのは、Godotエディターのいくつかの便利な機能を使えば簡単に行えます。
 
-Add your weapon mesh as a child of the {{< gd-icon Camera3D >}}`Camera3D`. Then, in the editor view menu, choose "2 Viewports" and set one of them to preview the camera. Then, you can move around the weapon and easily see how it will look from the player's perspective.
+武器モデルを{{< gd-icon Camera3D >}}`Camera3D`の子要素として追加します。その後、エディタービューメニューで「2つのビューポート」を選択し、そのうち1つをカメラプレビュー用に設定してください。これで、武器を自由に移動させながら、プレイヤー視点でどのように見えるかを容易に確認できるようになります。
 
 個性を加えるには、`AnimationPlayer` を使用して武器の位置をプレイヤーの移動に合わせて左右にアニメーションさせる方法がおすすめです。
 
@@ -106,6 +104,6 @@ Add your weapon mesh as a child of the {{< gd-icon Camera3D >}}`Camera3D`. Then,
 - [入力：マウスキャプチャーの使用方法](/godot_recipes/4.x/input/mouse_capture/)
 
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードしてください：[https://github.com/godotrecipes/basic_fps](https://github.com/godotrecipes/basic_fps)

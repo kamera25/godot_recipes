@@ -10,7 +10,7 @@ draft: false
 
 ## 解決策
 
-Try this: take a {{< gd-icon Camera3D >}}`Camera3D` node and rotate it a small amount around **X** (the red ring on the gizmo), then a small amount around **Z** (the blue ring). Now reverse the **X** rotation and click the "Preview" button. Observe how the camera is now tilted.
+以下の手順を試してみてください：`Camera3D`ノードを1つ取得し、**X軸**（ギズモ上の赤いリング）を中心にわずかに回転させた後、続いて**Z軸**（青いリング）を中心に少し回転させます。次に、**X軸**方向の回転を逆方向に反転させ、「プレビュー」ボタンをクリックしてください。カメラが斜めに傾いた状態になっていることが確認できるはずです。
 
 この問題を解決するには、カメラを_ジンバル・マウント_に取り付ける必要があります。これは、移動時も物体の水平を保つよう設計された装置です。2つの{{< gd-icon Node3D >}}`Node3D`ノードを使用することで、左右方向と上下方向の回転を個別に制御できる簡易ジンバルを作成できます。
 
@@ -24,7 +24,7 @@ Try this: take a {{< gd-icon Camera3D >}}`Camera3D` node and rotate it a small a
 
 {{< gd-icon Camera3D >}}`Camera3D` の**変換/位置**を `(0, 0, 4)` に設定してください。
 
-Here's how the gimbal works: the outer node can only be rotated in **Y**, while the inner one rotates only in **X**. You can test this out by rotating them manually, but make sure you change to "Local Space Mode" first (that's the cube icon next to the lock in the menu bar - the keyboard shortcut to toggle is "T"). Remember to only move the _green_ ring of the outer node and only the _red_ ring of the inner one. Don't touch the camera node at all.
+以下にジンバルの仕組みを説明します：外側ノードは**Y軸方向のみ**回転可能で、内側ノードは**X軸方向のみ**回転できます。手動で試したい場合は、まず「ローカル空間モード」（メニューバーのロックアイコン隣にある立方体アイコン - ショートカットキーは「T」）に切り替えることを忘れないでください。必ず外側ノードの_緑色リング_のみを、内側ノードの_赤色リング_のみを操作してください。カメラノードには一切触れないよう注意してください。
 
 <video controls src="/godot_recipes/4.x/img/gimbal_01.webm"></video>
 
@@ -34,14 +34,14 @@ Here's how the gimbal works: the outer node can only be rotated in **Y**, while 
 
 キーボード操作から始めましょう。その後、マウスを使用するオプションも追加します。必要な操作と割り当てられた入力は以下の通りです：
 
-   Action Name | Input
+   アクション名 | 入力方法
 --------|------
-`"cam_up"` | W
-`"cam_down"` | S
-`"cam_right"` | D
-`"cam_left"` | A
-`"cam_zoom_in"` | Mouse Wheel Up
-`"cam_zoom_out"` | Mouse Wheel Down
+`"cam_up"` | Wキー
+`"cam_down"` | Sキー
+`"cam_right"` | Dキー
+`"cam_left"` | Aキー
+`"cam_zoom_in"` | マウスホイール上方向回転
+`"cam_zoom_out"` | マウスホイール下方向回転
 
 以下に初期スクリプトを示します。前述の通り、各 `Node3D` をその局所座標系内で特定軸周りに回転させることに注意してください。
 
@@ -76,7 +76,7 @@ func _process(delta):
     $InnerGimbal.rotation.x = clamp($InnerGimbal.rotation.x, -1.4, -0.01)
 ```
 
-```
+The `-1.4` value lets it go *almost* to 90 degrees up, while setting a very small value for the minimum keeps the camera from clipping into the ground. Feel free to experiment with other values.
 
 ### マウス操作
 
@@ -107,7 +107,7 @@ func _process(delta):
 
 また、`_process()` 関数では、マウス操作時のキーボード入力を無効化しています。
 
-You may notice a problem with the up/down movement if you move the mouse too quickly. A large value for `event.relative.y` results in "skipping" to the opposite side of the clamped value. We can solve this by clamping the vertical mouse movement to a reasonable value. Change the above code for `y` to this:
+マウスを急激に動かすと、上下移動に問題が生じることに気付くかもしれません。`event.relative.y` の値が大きい場合、クランプされた値の反対側に「スキップ」する現象が発生します。この問題を解決するには、垂直方向のマウス移動を合理的な範囲に制限（クランプ）すればよいでしょう。上記コードの `y` 部分を以下のように変更してください：
 
 ```gdscript
 if event.relative.y != 0:
@@ -143,7 +143,7 @@ func _process(delta):
 
 `lerp()` を使用してズームレベルを変更すると、より滑らかなズーミングが可能になります。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/gimbal_02.gif" alt="Gimbal Animation">
 
 ### ターゲットの追跡中
 

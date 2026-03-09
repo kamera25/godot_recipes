@@ -1,9 +1,7 @@
-+++
-title = "Gamedev Math"
-weight = 6
-chapter = true
-pre = "<i class='fas fa-calculator fa-fw'></i>&nbsp"
-+++
+タイトル = "ゲーム開発数学"
+ウェイト = 6
+チャプター = 真
+プレテキスト = "<i class='fas fa-calculator fa-fw'></i> &nbsp"
 
 # <i class='fas fa-calculator'></i>　ゲーム開発数学
 

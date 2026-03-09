@@ -12,9 +12,9 @@ draft: false
 
 プレイヤーの体力を表示する一般的な方法として、一連のアイコン（通常はハートマーク）を使用する手法があります。プレイヤーがダメージを受けると、これらが徐々に消失していきます。
 
-In this recipe, we're going to explore three ways of displaying this information, which I'm labeling "simple", "empty", and "partial":
+本レシピでは、以下の3つの方法でこの情報を表示する方法をご紹介します：「簡易表示」「空欄表示」、そして「部分表示」です。
 
-<img src=\>
+<img src="/godot_recipes/4.x/img/heart_bar_02.png">
 
 この画像はプレイヤーが「3」の体力を持っている時、バーに表示される内容を表しています。
 
@@ -31,7 +31,7 @@ In this recipe, we're going to explore three ways of displaying this information
 ```html
 ```html
 
-Add a {{< gd-icon TextureRect >}}`TextureRect` child. Drag your heart texture into the **Texture** property and set the **Stretch Mode** to "Keep". Name the node "1" and then press "Ctrl-D" to duplicate the node for as many hearts as you need (5 in this example). Your node setup should look like this:
+`{{< gd-icon TextureRect >}}TextureRect` 子要素を追加します。ハートテクスチャを**[テクスチャ]** プロパティにドラッグし、**[伸縮モード]** を「固定」に設定してください。ノード名を「1」に指定したら、"Ctrl+D"を押して必要な数（この例では5つ）のハート用に同じノードを複製します。最終的なノード構成は以下のようになります：
 
 ![alt](/godot_recipes/4.x/img/heart_bar_03.png)
 
@@ -109,7 +109,7 @@ func update_partial(value):
 
 このハートバーの設定を独自のHUD作成の基礎として活用してください。この手法をさらに拡張すれば、多種多様な情報表示をサポートすることが可能です。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらでダウンロードできます: [https://github.com/godotrecipes/heart_bars](https://github.com/godotrecipes/heart_bars)
 

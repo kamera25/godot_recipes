@@ -48,7 +48,7 @@ layout:
      {{< gd-icon Node3D >}} CarMesh (Imported model)
 ```
 
-Here's how these nodes will interact: pressing "accelerate" will apply a force on the {{< gd-icon RigidBody3D >}}`RigidBody3D` in the direction the {{< gd-icon MeshInstance3D >}}`CarMesh` is facing, while the turning inputs will rotate the {{< gd-icon MeshInstance3D >}}`CarMesh`. As the ball rolls, it will carry the car mesh along with it (we'll ignore the ball's rotation).
+以下に、各ノードの動作原理を説明します：「加速」を押すと、{{< gd-icon RigidBody3D >}}`RigidBody3D` に対してオブジェクト（{{< gd-icon MeshInstance3D >}}`CarMesh`）が向いている方向に力が加わります。一方、旋回入力を入力すると、{{< gd-icon MeshInstance3D >}}`CarMesh`が回転します。ボールが転がる際、この動きに伴って車のメッシュも移動します（ここではボール自体の回転は考慮しません）。
 
 #### カーメッシュ
 
@@ -56,14 +56,13 @@ Here's how these nodes will interact: pressing "accelerate" will apply a force o
 
 ![alt](/godot_recipes/4.x/img/3d_sphere_car_02.png)
 
-{{% notice note %}}
-You can find this and other car models in Kenney's "Car Kit", available here:
-[https://kenney.nl/assets/car-kit](https://kenney.nl/assets/car-kit). Download the whole kit; you can use any of them that you choose. Note that this kit includes the models in multiple formats - you won't need all of them for your project. GLTF is the recommended format for use with Godot.
-{{% /notice %}}
+【お知らせ】ノート
+ケンニーの『カーキット』でこの車種や他のモデルを入手可能です。以下のURLからダウンロードできます：
+[https://kenney.nl/assets/car-kit](https://kenney.nl/assets/car-kit)。すべてのアセットをダウンロード可能です。使いたいものだけを選んでいただいて構いません。このキットには複数のフォーマット形式のモデルが含まれていますが、プロジェクトに必要な全てを使用する必要はありません。Godotでの使用にはGLTF形式を推奨します。
 
 GLTFモデルを使用する場合、インポート設定で調整する必要はありません。
 
-Here's what the node tree looks like when importing the "suv" model:
+以下は「suv」モデルをインポートした際のノードツリーの表示例です：
 
 [画像リンク: /godot_recipes/4.x/img/3d_sphere_car_04a.png]
 
@@ -78,15 +77,15 @@ Here's what the node tree looks like when importing the "suv" model:
 
 ```xml
 <!-- AngularDamping -->
-<property name=\ type=\>10.0</property>
+<property name="angular_damp" type="number">10.0</property>
 <description>このプロパティは運転時のフィーリングに大きな影響を与えます。値を大きくすると、車両がより素早く停止します。</description>
 
 <!-- GravitationalScale -->
-<property name=\ type=\>5.0</property>
+<property name="gravitational_scale" type="number">5.0</property>
 <description>デフォルト設定（9.8）の重力値はアクションゲームではややきしむ感じがするかもしれません。ジャンプ機能や坂道などの地形要素を実装予定の場合は、この値を調整すると非常に効果的です。プロジェクト設定でグローバルに設定することも可能です。</description>
 
 <!-- PhysicsMaterial/Bounce -->
-<property name=\ type=\>0.1</property>
+<property name="physics_material_bounce" type="number">0.1</property>
 <description>この値を試行錯誤しながら調整するのはとても楽しい作業です。ただし、0.5を超える値は慎重に扱ってください！</description>
 
 デモ用にデバッグ用として、衝突形状に球状メッシュも追加しました。必須機能ではありませんが、ボールが転がる様子を視覚的に確認できるとトラブルシューティング時に便利です。
@@ -95,7 +94,7 @@ Here's what the node tree looks like when importing the "suv" model:
 
 最後に、{{< gd-icon RayCast3D >}}`RayCast3D`ノードを{{< gd-icon MeshInstance3D >}}`CarMesh`の子要素として追加します。**ターゲット位置**は`(0, -1, 0)`に設定してください。
 
-<img src=\ alt=\>
+<img src="/godot_recipes/4.x/img/3d_sphere_car_03.png" alt="3D 球体カー 03">
 
 これを地面検知に使用します。車両が空中にある間はステアリングと加速制御が使えなくなります。また、ゲームのコースが平坦でない場合に、この機能を使って車メッシュを斜面に合わせることも可能です。
 
@@ -136,7 +135,6 @@ var turn_input = 0
 
 インスペクターからこれらを調整したい場合は、`@export` を指定できます。
 
-```c
 void _physics_process()
 {
     // 車の向きに基づいて車体に力を加え、さらに車メッシュをボールの位置に固定します：
@@ -146,7 +144,6 @@ void _physics_process()
     // 車メッシュの位置をボールの位置に設定
     meshComponent->SetLocalTranslation(ballPosition);
 }
-```
 
 ```gdscript
 func _physics_process(delta):
@@ -173,7 +170,7 @@ func _process(delta):
 
 ```python
 # 回転入力に基づいて車のメッシュを滑らかに回転させる
-mesh = gltf_model[\][0]  # GLTFモデルからジオメトリを取得
+mesh = gltf_model["geometry"][0]  # GLTFモデルからジオメトリを取得
 
 def _process():
     global mesh
@@ -182,13 +179,13 @@ def _process():
     # slerpを使用して滑らかな補間を実行
     current_time = time.time()
     target_transform = transform_matrix * rotation_matrix
-    current_transform = matrix_from_vectors(mesh[\], mesh[\])
+    current_transform = matrix_from_vectors(mesh["position"], mesh["rotation"])
 
     interpolation_factor = lerp_to_t(current_time - start_time, 0, 1)
     interpolated_transform = slerp(current_transform, target_transform, interpolation_factor)
 
     # 更新された変換行列を設定
-    gltf_model[\][0][\] = matrix_from_vectors(*interpolated_transform)
+    gltf_model["geometry"][0]["matrix"] = matrix_from_vectors(*interpolated_transform)
 ```
 
 ```gdscript
@@ -204,7 +201,7 @@ if linear_velocity.length() > turn_stop_limit:
 浮動小数点演算の精度限界により、変換処理を繰り返し回転させると、最終的に歪みが生じる可能性があります。スケールが変動したり、軸方向が不整合になったりする場合があります。定期的に変換を回転させるスクリプトでは、`orthonormalized()` を使用して誤差が累積する前に補正を行うことが推奨されます。
 {{% /notice %}}
 
-You should try playing again at this point. You'll be able to control the car and drive around, and everything works pretty much as expected. However, there are a few more things to add that will improve the "feel" of the driving.
+この段階で再び試してみることをお勧めします。車の制御や走行が可能になり、ほぼ期待通りに動くようになります。ただし、運転感覚をさらに向上させるために、いくつか追加すべき点があります。
 
 ### 仕上げ作業
 
@@ -281,7 +278,7 @@ body_mesh.rotation.z = lerp(body_mesh.rotation.z, t, 10 * delta)
 > - コースデータ：Keith氏による[モジュール式レーシングカートトラック（起伏のある地形テーマ）](https://fertile-soil-productions.itch.io/modular-racekart-track-hilly-terrain-theme)、Fertile Soil Productions提供
 
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードできます：[https://github.com/godotrecipes/3d_car_sphere](https://github.com/godotrecipes/3d_car_sphere)
 
