@@ -1,7 +1,9 @@
-タイトル: "GDScript入門"
-ウェイト: 2
-章見出し: 真
-前置き: <i class="fas fa-scroll fa-fw"></i> &nbsp
++++
+title = "GDScript入門"
+weight = 2
+chapter = true
+pre = "<i class='fas fa-scroll fa-fw'></i>&nbsp"
++++
 
 ## <i class='fas fa-scroll'></i>&nbsp;GDScript
 

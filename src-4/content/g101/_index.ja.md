@@ -1,8 +1,10 @@
-タイトル：『Godot入門』
-公開日：2019年4月9日19:48 JST -7時間
-重み付け：1
-章節フラグ：true
-プレテキスト：<i class="fas fa-graduation-cap fa-fw"></i>&nbsp
++++
+title = "はじめてのGodot"
+date = 2019-04-09T19:48:00-07:00
+weight = 1
+chapter = true
+pre = "<i class='fas fa-graduation-cap fa-fw'></i>&nbsp"
++++
 
 # <i class='fas fa-graduation-cap'></i>&nbsp;Godot 101
 

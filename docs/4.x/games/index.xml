@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Game Tutorials on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/games/index.html</link><description>Recent content in Game Tutorials on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://godotrecipes.com/godot_recipes/4.x/games/index.xml" rel="self" type="application/rss+xml"/><item><title>Your First 2D Game</title><link>https://godotrecipes.com/godot_recipes/4.x/games/first_2d/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/games/first_2d/index.html</guid><description>&lt;h1 id="your-first-2d-game"&gt;&lt;i class="fa fa-rocket"&gt;&lt;/i&gt; Your First 2D Game&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Game Tutorials on Godot 4 Recipes</title><link>http://localhost:1313/godot_recipes/4.x/games/index.html</link><description>Recent content in Game Tutorials on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="http://localhost:1313/godot_recipes/4.x/games/index.xml" rel="self" type="application/rss+xml"/><item><title>Your First 2D Game</title><link>http://localhost:1313/godot_recipes/4.x/games/first_2d/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/godot_recipes/4.x/games/first_2d/index.html</guid><description>&lt;h1 id="your-first-2d-game"&gt;&lt;i class="fa fa-rocket"&gt;&lt;/i&gt; Your First 2D Game&lt;/h1&gt;
 &lt;h3 id="get-started-with-godot-by-building-a-2d-shooter"&gt;Get started with Godot by building a 2D shooter.&lt;/h3&gt;
 &lt;p&gt;In this series, we&amp;rsquo;ll start with the basics and build a classic, old-school space shooter.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s a screenshot of the finished game:&lt;/p&gt;
 &lt;p&gt;
-&lt;a href="#image-5c699b8514adde7de8a125df6190c210" class="lightbox-link"&gt;
-&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/2d_101_screenshot.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
+&lt;a href="#image-2166b9da0139988a95dca963837eb51e" class="lightbox-link"&gt;
+&lt;img src="http://localhost:1313/godot_recipes/4.x/img/2d_101_screenshot.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-5c699b8514adde7de8a125df6190c210"&gt;
-&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/2d_101_screenshot.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-2166b9da0139988a95dca963837eb51e"&gt;
+&lt;img src="http://localhost:1313/godot_recipes/4.x/img/2d_101_screenshot.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In each part of the series, we&amp;rsquo;ll build a piece of the game, adding features and explaining the process along the way.&lt;/p&gt;
 &lt;div class="box notices cstyle tip"&gt;

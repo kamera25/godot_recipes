@@ -1,9 +1,8 @@
-```
 +++
-タイトル = "基礎編"
-重み = 2
-章 = true
-前置き = "<i class='fas fa-toolbox fa-fw'></i>&nbsp"
+title = "基礎"
+weight = 2
+chapter = true
+pre = "<i class='fas fa-toolbox fa-fw'></i>&nbsp"
 +++
 
 # <i class="fas fa-toolbox"></i>　基本編

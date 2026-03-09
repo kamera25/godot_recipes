@@ -1,7 +1,8 @@
-タイトル = "入力"
-ウェイト = 5
-チャプター = true
-プレ = "<i class='fas fa-gamepad fa-fw'></i>&nbsp"
++++
+title = "入力"
+weight = 5
+chapter = true
+pre = "<i class='fas fa-gamepad fa-fw'></i>&nbsp"
 +++
 
 # <i class='fas fa-gamepad'></i>　入力

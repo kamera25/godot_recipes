@@ -1,7 +1,9 @@
-タイトル: "3D"
-ウェイト: 4
-チャプター: 真
-プレフィックス: <i class="fas fa-cube fa-fw"></i> &nbsp
++++
+title = "3D"
+weight = 4
+chapter = true
+pre = "<i class='fas fa-cube fa-fw'></i>&nbsp"
++++
 
 # <i class='fas fa-cube'></i>　3D
 
