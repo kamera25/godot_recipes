@@ -18,15 +18,15 @@ draft: false
 
 ![alt](/godot_recipes/4.x/img/adventurer_sprite_sheet_v1.1.png)
 
-また、{{< gd-icon AnimationPlayer >}}`AnimationPlayer`を使用してキャラクターのアニメーション設定が完了していることを前提とします。上記のスプライトシートを用いて、「idle」、「run」、「attack1」、「attack2」、「hurt」、「die」のアニメーションを用意しています。
+We'll also assume you've already set up the character's animations using {{< gd-icon AnimationPlayer >}}`AnimationPlayer`. Using the above spritesheet, we have the following animations: "idle", "run", "attack1", "attack2", "hurt", and "die".
 
 ### アニメーションツリー
 
-シーンに {{< gd-icon AnimationTree >}}`AnimationTree` ノードを追加します。［ツリールート］プロパティで「新規アニメーションノードステートマシン」を選択してください。
+シーンに `{{< gd-icon AnimationTree >}}`AnimationTree` ノードを追加します。［ツリールート］プロパティで「新規アニメーションノードステートマシン」を選択してください。
 
 <img src="/godot_recipes/4.x/img/animation_tree_01.png" alt="アニメーションツリー">
 
-{{< gd-icon AnimationTree >}}`AnimationTree` は、{{< gd-icon AnimationPlayer >}}`AnimationPlayer`で作成されたアニメーションを制御するノードです。既存のアニメーションにアクセスさせるには、_Anim Player_ プロパティ内の「割り当て」ボタンをクリックし、使用するアニメーションノードを選択してください。
+```{{< gd-icon AnimationTree >}}AnimationTree``` は、{{< gd-icon AnimationPlayer >}}`AnimationPlayer`で作成されたアニメーションを制御するノードです。既存のアニメーションにアクセスさせるには、_Anim Player_ プロパティ内の「割り当て」ボタンをクリックし、使用するアニメーションノードを選択してください。
 
 以下は、状態機械を `AnimationTree` パネルに設定し始める方法です：
 
@@ -54,7 +54,7 @@ draft: false
 
 以下に、全てのアニメーションに関する完全なツリー構造を示します：
 
-![alt](/godot_recipes/4.x/img/anim_sm_final.png)
+!
 
 それでは、これらのアニメーションをスクリプトで使用するキャラクターを設定していきましょう。
 
@@ -79,8 +79,9 @@ func die():
     set_physics_process(false)
 ```
 
-以下は、プレイヤーがダメージを受けたり死亡した場合に呼び出される関数の例です。
-他のアニメーション（移動、攻撃など）については、入力処理や移動制御コードと組み合わせる必要があります。`velocity`変数によって、「走行」状態を表示するか「待機」状態を表示するかを決定します。
+```python
+# 以下は、プレイヤーがダメージを受けたり死亡した場合に呼び出される関数の例です。
+# 他のアニメーション（移動、攻撃など）については、入力処理や移動制御コードと組み合わせる必要があります。`velocity`変数によって、「走行」状態を表示するか「待機」状態を表示するかを決定します。
 
 ```gdscript
 func get_input():

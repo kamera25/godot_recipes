@@ -4,10 +4,10 @@
 &lt;p&gt;Spritesheets are a common way for 2D animations to be distributed. In a spritesheet, all of the animation frames are packed into a single image.&lt;/p&gt;
 &lt;p&gt;For this demo, we&amp;rsquo;ll be using the excellent &amp;ldquo;Adventurer&amp;rdquo; sprite by Elthen. You can get this and lots of other great art at&lt;a href="https://elthen.itch.io/" target="_blank"&gt;https://elthen.itch.io/&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;
-&lt;a href="#image-e97d74ad5d75118df3946b9c47bd6497" class="lightbox-link"&gt;
+&lt;a href="#image-4745df0729463c5436758badcc7904f3" class="lightbox-link"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/adventurer_sprite_sheet_v1.1.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-e97d74ad5d75118df3946b9c47bd6497"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-4745df0729463c5436758badcc7904f3"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/adventurer_sprite_sheet_v1.1.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;div class="box notices cstyle warning"&gt;
