@@ -17,6 +17,7 @@ Godotにおけるレイキャスティングには、主に2つの方法があ�
 
 We'll use the second method, querying the physics state, because we want to know, at the moment we press the "shoot" key, whether we've hit anything.
 
+{{% notice note %}}
 このレシピでは、すでに動作するFPSキャラクターコントローラーと移動可能なワールドが用意されていることを前提としています。もし用意されていない場合は、先に[基本FPSキャラクター](/godot_recipes/4.x/3d/basic_fps)のチュートリアルを参照してください。
 {{% /notice %}}
 

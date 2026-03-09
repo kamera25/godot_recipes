@@ -79,7 +79,7 @@ func _process(delta):
 
 {{% notice tip %}}
 GDScriptでは、`get_node()`の省略形として`$`を使用できます。代わりに`$AnimatedSprite2D`と記述してください。
-{{% /notice %estion %}}
+{{% /notice %}}
 
 #### より良い方法
 

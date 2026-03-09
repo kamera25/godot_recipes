@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2D on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/2d/index.html</link><description>Recent content in 2D on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://godotrecipes.com/godot_recipes/4.x/2d/index.xml" rel="self" type="application/rss+xml"/><item><title>Entering/Exiting the screen</title><link>https://godotrecipes.com/godot_recipes/4.x/2d/enter_exit_screen/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/2d/enter_exit_screen/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2D on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/2d/index.html</link><description>Recent content in 2D on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://godotrecipes.com/godot_recipes/4.x/2d/index.xml" rel="self" type="application/rss+xml"/><item><title>Entering/Exiting the screen</title><link>https://godotrecipes.com/godot_recipes/4.x/2d/enter_exit_screen/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/2d/enter_exit_screen/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
 &lt;p&gt;You want to detect when an object enters or exits the screen.&lt;/p&gt;
 &lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
 &lt;p&gt;The engine provides a node for this: &lt;i class="gd-VisibleOnScreenNotifier2D"&gt;&lt;/i&gt;&lt;code&gt;VisibleOnScreenNotifier2D&lt;/code&gt;. Attach this node to your object, and you&amp;rsquo;ll be able to use its &lt;code&gt;screen_entered&lt;/code&gt; and &lt;code&gt;screen_exited&lt;/code&gt; signals.
@@ -89,10 +89,10 @@
 &lt;i class="gd-CollisionShape2D"&gt;&lt;/i&gt; CollisionShape2D
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For the &lt;i class="gd-Sprite2D"&gt;&lt;/i&gt;&lt;code&gt;Sprite2D&lt;/code&gt;&amp;rsquo;s texture, you can use any image you like. Here&amp;rsquo;s an example one:&lt;/p&gt;
 &lt;p&gt;
-&lt;a href="#image-76f18989a0e5443536324f33aec72c41" class="lightbox-link"&gt;
+&lt;a href="#image-bbaf59cf14c7c7d7fdce70c1dcaae86c" class="lightbox-link"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/laserRed01.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-76f18989a0e5443536324f33aec72c41"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-bbaf59cf14c7c7d7fdce70c1dcaae86c"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/laserRed01.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Set up the nodes and configure the sprite and collision shape. If your texture is oriented pointing up, like the one above, make sure to rotate the &lt;i class="gd-Sprite2D"&gt;&lt;/i&gt;&lt;code&gt;Sprite&lt;/code&gt; node by &lt;code&gt;90°&lt;/code&gt; so that it&amp;rsquo;s pointing to the right, ensuring it matches the parent’s “forward” direction.&lt;/p&gt;</description></item><item><title>Car steering</title><link>https://godotrecipes.com/godot_recipes/4.x/2d/car_steering/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/2d/car_steering/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
@@ -109,10 +109,10 @@
 &lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
 &lt;p&gt;For our example, we&amp;rsquo;ll use the &lt;a href="https://remos.itch.io/mini-crusader" target="_blank"&gt;Isometric Mini-Crusader&lt;/a&gt;, which contains 8-directional animations for idle, run, attack, and several other states.&lt;/p&gt;
 &lt;p&gt;
-&lt;a href="#image-da9c9fa6b038a217d0dc4ad9df94fab4" class="lightbox-link"&gt;
+&lt;a href="#image-259b3755a21cdbde3f640c3c6e623433" class="lightbox-link"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/8_direction_01.gif" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-da9c9fa6b038a217d0dc4ad9df94fab4"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-259b3755a21cdbde3f640c3c6e623433"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/8_direction_01.gif" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The animations are organized in folders, with a separate image for each frame. We&amp;rsquo;ll use an &lt;i class="gd-AnimatedSprite2D"&gt;&lt;/i&gt;&lt;code&gt;AnimatedSprite2D&lt;/code&gt; and we&amp;rsquo;ll name each animation based on its direction. For example, &lt;code&gt;idle0&lt;/code&gt; pointing to the right and going clockwise to &lt;code&gt;idle7&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Using Y-Sort</title><link>https://godotrecipes.com/godot_recipes/4.x/2d/using_ysort/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/2d/using_ysort/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
@@ -142,10 +142,10 @@
 &lt;p&gt;You need a dynamic camera that moves and zooms to keep multiple objects on screen at the same time.&lt;/p&gt;
 &lt;p&gt;An example might be in a 2 player game, keeping both players on-screen as they move farther and closer together, like so:&lt;/p&gt;
 &lt;p&gt;
-&lt;a href="#image-add27ebcfe0a0e596753da1bdc102b61" class="lightbox-link"&gt;
+&lt;a href="#image-a005aa6c497124e2e4eba3adfcdde4e0" class="lightbox-link"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/multi_cam_01.gif" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-add27ebcfe0a0e596753da1bdc102b61"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-a005aa6c497124e2e4eba3adfcdde4e0"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/multi_cam_01.gif" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="solution"&gt;Solution&lt;/h2&gt;

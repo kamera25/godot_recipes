@@ -41,7 +41,7 @@ $AnimatedSprite.play()
 
 {{% notice info %}}
 `get_node()` 関数は、対象ノードへの **参照** を返します。
-{{% /notice %} 】
+{{% /notice %}}
 
 より複雑なシーンツリーを見てみましょう：
 

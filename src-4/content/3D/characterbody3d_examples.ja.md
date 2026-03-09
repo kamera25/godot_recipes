@@ -51,7 +51,7 @@ extends CharacterBody3D
 
 {{% notice tip %}}
 `@export` でプロパティを宣言しておけば、インスペクターで簡単に調整できるようになります。
-{{% /notice %onnect %}}
+{{% /notice %}}
 
 ```python
 # 移動処理の実装例

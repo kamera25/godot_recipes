@@ -32,7 +32,7 @@ InputMap.action_add_event("attack", ev)
 
 {{% notice note %}}
 `InputMap.add_action()` メソッドは、同じアクションが既に存在する場合にエラーを発生させます。新しいアクションを追加する前に、まず `InputMap.has_action()` で確認することをお勧めします。
-{{% /notice %} 』の部分を修正してください。
+{{% /notice %}}
 
 ### 実際の使用例
 

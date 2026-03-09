@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Godot 101 on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/g101/index.html</link><description>Recent content in Godot 101 on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 09 Apr 2019 19:48:00 -0700</lastBuildDate><atom:link href="https://godotrecipes.com/godot_recipes/4.x/g101/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting Started</title><link>https://godotrecipes.com/godot_recipes/4.x/g101/start/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/g101/start/index.html</guid><description>&lt;h3 id="getting-started"&gt;Getting Started&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Godot 101 on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/g101/index.html</link><description>Recent content in Godot 101 on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 09 Apr 2019 19:48:00 -0700</lastBuildDate><atom:link href="https://godotrecipes.com/godot_recipes/4.x/g101/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting Started</title><link>https://godotrecipes.com/godot_recipes/4.x/g101/start/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/g101/start/index.html</guid><description>&lt;h3 id="getting-started"&gt;Getting Started&lt;/h3&gt;
 &lt;p&gt;
-&lt;a href="#image-037af79bf2d6e40fbad716000a79a8ea" class="lightbox-link"&gt;
+&lt;a href="#image-e2ae31da195e6d005ae740c1fe18e137" class="lightbox-link"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/godot3_logo.png?width=250" alt="alt" style="height: auto; width: 250;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-037af79bf2d6e40fbad716000a79a8ea"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-e2ae31da195e6d005ae740c1fe18e137"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/godot3_logo.png?width=250" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Have you downloaded Godot yet? You can get it here:&lt;/p&gt;

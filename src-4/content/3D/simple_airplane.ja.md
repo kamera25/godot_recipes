@@ -99,6 +99,7 @@ func _physics_process(delta):
 
 To test, add the plane to a test scene (don't forget a {{< gd-icon Camera3D >}} `Camera`). Press the `"throttle_up"` input and you should see the plane accelerate forward.
 
+{{% notice tip %}}
 [補間カメラ機能](/godot_recipes/4.x/3d/interpolated_camera/) をこのデモで実装しています。
 {{% /notice %}}
 

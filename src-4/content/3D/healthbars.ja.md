@@ -23,6 +23,7 @@ For this solution, we're going to re-use a 2D healthbar based on a {{< gd-icon T
 
 ![alt](/godot_recipes/4.x/img/barHorizontal_red_mid%20200.png)
 
+{{% notice note %}}
 既存のオブジェクトを再利用すれば、大幅に作業時間を節約できます。ヘルスバーやカメラ、その他一般的なコンポーネントが必要なたびにゼロから作り直す必要はありません。
 {{% /notice %}}
 

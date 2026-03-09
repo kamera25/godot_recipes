@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Animation on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/animation/index.html</link><description>Recent content in Animation on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://godotrecipes.com/godot_recipes/4.x/animation/index.xml" rel="self" type="application/rss+xml"/><item><title>Spritesheet animation</title><link>https://godotrecipes.com/godot_recipes/4.x/animation/spritesheet_animation/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/animation/spritesheet_animation/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Animation on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/animation/index.html</link><description>Recent content in Animation on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://godotrecipes.com/godot_recipes/4.x/animation/index.xml" rel="self" type="application/rss+xml"/><item><title>Spritesheet animation</title><link>https://godotrecipes.com/godot_recipes/4.x/animation/spritesheet_animation/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/animation/spritesheet_animation/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
 &lt;p&gt;You want to use a spritesheet containing 2D animations.&lt;/p&gt;
 &lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
 &lt;p&gt;Spritesheets are a common way for 2D animations to be distributed. In a spritesheet, all of the animation frames are packed into a single image.&lt;/p&gt;
 &lt;p&gt;For this demo, we&amp;rsquo;ll be using the excellent &amp;ldquo;Adventurer&amp;rdquo; sprite by Elthen. You can get this and lots of other great art at&lt;a href="https://elthen.itch.io/" target="_blank"&gt;https://elthen.itch.io/&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;
-&lt;a href="#image-667931c64c500f8e60a1a8eeb12c7976" class="lightbox-link"&gt;
+&lt;a href="#image-d84d60712e2bd9d72fb892407e4a94e2" class="lightbox-link"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/adventurer_sprite_sheet_v1.1.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-667931c64c500f8e60a1a8eeb12c7976"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-d84d60712e2bd9d72fb892407e4a94e2"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/adventurer_sprite_sheet_v1.1.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;div class="box notices cstyle warning"&gt;

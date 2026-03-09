@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI/Behavior on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/ai/index.html</link><description>Recent content in AI/Behavior on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://godotrecipes.com/godot_recipes/4.x/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>Chasing the player</title><link>https://godotrecipes.com/godot_recipes/4.x/ai/chasing/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/ai/chasing/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI/Behavior on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/ai/index.html</link><description>Recent content in AI/Behavior on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://godotrecipes.com/godot_recipes/4.x/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>Chasing the player</title><link>https://godotrecipes.com/godot_recipes/4.x/ai/chasing/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/ai/chasing/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
 &lt;p&gt;You want an enemy to chase the player.&lt;/p&gt;
 &lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
 &lt;p&gt;The first step in getting an enemy to chase the player is to determine what direction the enemy needs to move. To get the vector pointing from &lt;strong&gt;A&lt;/strong&gt; to &lt;strong&gt;B&lt;/strong&gt;, you subtract: &lt;strong&gt;B&lt;/strong&gt; - &lt;strong&gt;A&lt;/strong&gt;. Normalize the result and you have a direction vector.&lt;/p&gt;
@@ -12,10 +12,10 @@
 &lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
 &lt;p&gt;We start by adding a &lt;i class="gd-Marker2D"&gt;&lt;/i&gt;&lt;code&gt;Marker2D&lt;/code&gt; to the character. This will represent the place where the pet wants to &amp;ldquo;hang out&amp;rdquo; near the character.&lt;/p&gt;
 &lt;p&gt;
-&lt;a href="#image-7fe4406a087ec6d5c71aac750b24d5c5" class="lightbox-link"&gt;
+&lt;a href="#image-7b4ddc83aed3591156219be43a02f98e" class="lightbox-link"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/pet_follow_01.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-7fe4406a087ec6d5c71aac750b24d5c5"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-7b4ddc83aed3591156219be43a02f98e"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/pet_follow_01.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In this example, we&amp;rsquo;ve made it a child of the &lt;i class="gd-Sprite2D"&gt;&lt;/i&gt;&lt;code&gt;Sprite2D&lt;/code&gt;, because the character&amp;rsquo;s code uses &lt;code&gt;$Sprite2D.scale.x = -1&lt;/code&gt; to flip the horizontal direction when the character moves left. Since the marker is a child of the sprite, it will flip too.&lt;/p&gt;</description></item></channel></rss>

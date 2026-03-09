@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Input on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/input/index.html</link><description>Recent content in Input on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://godotrecipes.com/godot_recipes/4.x/input/index.xml" rel="self" type="application/rss+xml"/><item><title>Input Actions</title><link>https://godotrecipes.com/godot_recipes/4.x/input/input_actions/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/input/input_actions/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Input on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/input/index.html</link><description>Recent content in Input on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://godotrecipes.com/godot_recipes/4.x/input/index.xml" rel="self" type="application/rss+xml"/><item><title>Input Actions</title><link>https://godotrecipes.com/godot_recipes/4.x/input/input_actions/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/input/input_actions/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
 &lt;p&gt;You want to understand Godot&amp;rsquo;s &amp;ldquo;input action&amp;rdquo; system.&lt;/p&gt;
 &lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
 &lt;p&gt;Let&amp;rsquo;s say you&amp;rsquo;re making a top-down character and you write code using &lt;code&gt;InputActionKey&lt;/code&gt; that uses the arrow keys for movement. You&amp;rsquo;ll quickly find that many players prefer to use &amp;ldquo;WASD&amp;rdquo; style controls. You can go back into your code and add the additional key checks, but this would result in duplicated/redundant code.&lt;/p&gt;
@@ -38,10 +38,10 @@
 &lt;p&gt;Realtime strategy (RTS) games often require giving orders to many units at once. A typical style of selecting multiple units is to click-and-drag a box around them. Once the units are selected, clicking on the map commands them to move.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s an example of what we&amp;rsquo;re going for:&lt;/p&gt;
 &lt;p&gt;
-&lt;a href="#image-71be4c2f895f6ef9d1245c06ae0c76cd" class="lightbox-link"&gt;
+&lt;a href="#image-3e3fd0a2e753b34b79399dc124fcad85" class="lightbox-link"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/multi_unit_01.gif" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-71be4c2f895f6ef9d1245c06ae0c76cd"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-3e3fd0a2e753b34b79399dc124fcad85"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/multi_unit_01.gif" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="unit-setup"&gt;Unit setup&lt;/h3&gt;
