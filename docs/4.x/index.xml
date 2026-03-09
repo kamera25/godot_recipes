@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/index.html</link><description>Recent content in Home on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 09 Apr 2019 22:57:31 -0700</lastBuildDate><atom:link href="https://godotrecipes.com/godot_recipes/4.x/index.xml" rel="self" type="application/rss+xml"/><item><title>Godot 101</title><link>https://godotrecipes.com/godot_recipes/4.x/g101/index.html</link><pubDate>Tue, 09 Apr 2019 19:48:00 -0700</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/g101/index.html</guid><description>&lt;h1 id="godot-101"&gt;&lt;i class='fas fa-graduation-cap'&gt;&lt;/i&gt; Godot 101&lt;/h1&gt;
 &lt;p&gt;
-&lt;a href="#image-7b74a61de1b0644f11a4ac773748b81c" class="lightbox-link"&gt;
+&lt;a href="#image-5c034246048da9cea6ac4d02fa5446e1" class="lightbox-link"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/godot3_logo.png?width=250" alt="alt" style="height: auto; width: 250;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-7b74a61de1b0644f11a4ac773748b81c"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-5c034246048da9cea6ac4d02fa5446e1"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/godot3_logo.png?width=250" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Your introduction to the Godot game engine. If you&amp;rsquo;ve never used a game engine
@@ -45,7 +45,7 @@ before, or if you’re just new to Godot, this is the place to start.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://godotrecipes.com/godot_recipes/4.x/basics/understanding_delta/index.html"&gt;Understanding &amp;#39;delta&amp;#39;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://godotrecipes.com/godot_recipes/4.x/basics/file_io/index.html"&gt;Saving/loading data&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://godotrecipes.com/godot_recipes/4.x/basics/migrating/index.html"&gt;Migrating from 3.x&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Know Your Nodes</title><link>https://godotrecipes.com/godot_recipes/4.x/kyn/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/kyn/index.html</guid><description>&lt;h1 id="hahahugoshortcode78s0hbhbknow-your-nodes"&gt;&lt;i class="gd-Node"&gt;&lt;/i&gt; Know Your Nodes&lt;/h1&gt;
+&lt;/ul&gt;</description></item><item><title>Know Your Nodes</title><link>https://godotrecipes.com/godot_recipes/4.x/kyn/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/kyn/index.html</guid><description>&lt;h1 id="hahahugoshortcode62s0hbhbknow-your-nodes"&gt;&lt;i class="gd-Node"&gt;&lt;/i&gt; Know Your Nodes&lt;/h1&gt;
 &lt;p&gt;In the &amp;ldquo;Know Your Nodes&amp;rdquo; series, we go in-depth with a single one of Godot&amp;rsquo;s nodes. Learn what makes it tick and see some examples of how it&amp;rsquo;s used.&lt;/p&gt;
 &lt;h4 id="in-this-section"&gt;In this section:&lt;/h4&gt;
 &lt;ul class="children children-li children-sort-weight"&gt;

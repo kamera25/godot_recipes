@@ -3,10 +3,10 @@
 &lt;p&gt;In this series, we&amp;rsquo;ll start with the basics and build a classic, old-school space shooter.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s a screenshot of the finished game:&lt;/p&gt;
 &lt;p&gt;
-&lt;a href="#image-aaef2c092caec022069f371bc557e12b" class="lightbox-link"&gt;
+&lt;a href="#image-1fc1c51147a82c7813eea2f1992ab4fd" class="lightbox-link"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/2d_101_screenshot.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-aaef2c092caec022069f371bc557e12b"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-1fc1c51147a82c7813eea2f1992ab4fd"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/2d_101_screenshot.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In each part of the series, we&amp;rsquo;ll build a piece of the game, adding features and explaining the process along the way.&lt;/p&gt;

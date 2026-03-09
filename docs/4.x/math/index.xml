@@ -8,10 +8,10 @@
 &lt;h2 id="2d-transforms"&gt;2D Transforms&lt;/h2&gt;
 &lt;p&gt;In 2D space, we use the familiar X-Y coordinate plane. Remember that in Godot, as in most computer graphics applications, the &lt;strong&gt;Y&lt;/strong&gt; axis points downward:&lt;/p&gt;
 &lt;p&gt;
-&lt;a href="#image-13979abbde2256d864bd0c60d0ea22df" class="lightbox-link"&gt;
+&lt;a href="#image-d5416d22db3094531f123b8af150a05a" class="lightbox-link"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/0_2d_coordinate_plane.png?width=250px" alt="alt" style="height: auto; width: 250px;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-13979abbde2256d864bd0c60d0ea22df"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-d5416d22db3094531f123b8af150a05a"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/0_2d_coordinate_plane.png?width=250px" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;To begin, let&amp;rsquo;s consider this spaceship floating in space:&lt;/p&gt;</description></item><item><title>Vectors: Using Dot and Cross Product</title><link>https://godotrecipes.com/godot_recipes/4.x/math/dot_cross_product/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/math/dot_cross_product/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
@@ -21,10 +21,10 @@
 &lt;h3 id="dot-product"&gt;Dot product&lt;/h3&gt;
 &lt;p&gt;Dot product is an operation on two vectors that returns a scalar. It is often visualized as the &lt;em&gt;projection&lt;/em&gt; of vector A onto vector B:&lt;/p&gt;
 &lt;p&gt;
-&lt;a href="#image-53f659d48114615426fb454dc003ffc8" class="lightbox-link"&gt;
+&lt;a href="#image-df85ca253e31800cf6d9592f09508918" class="lightbox-link"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/dot_cross_04.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-53f659d48114615426fb454dc003ffc8"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-df85ca253e31800cf6d9592f09508918"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/dot_cross_04.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This is the formula for calculating the dot product:&lt;/p&gt;</description></item></channel></rss>
