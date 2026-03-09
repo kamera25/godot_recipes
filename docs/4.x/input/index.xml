@@ -38,10 +38,10 @@
 &lt;p&gt;Realtime strategy (RTS) games often require giving orders to many units at once. A typical style of selecting multiple units is to click-and-drag a box around them. Once the units are selected, clicking on the map commands them to move.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s an example of what we&amp;rsquo;re going for:&lt;/p&gt;
 &lt;p&gt;
-&lt;a href="#image-3e3fd0a2e753b34b79399dc124fcad85" class="lightbox-link"&gt;
+&lt;a href="#image-ffd873bcb851e24b7bd987e82ad2d5e1" class="lightbox-link"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/multi_unit_01.gif" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-3e3fd0a2e753b34b79399dc124fcad85"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-ffd873bcb851e24b7bd987e82ad2d5e1"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/multi_unit_01.gif" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="unit-setup"&gt;Unit setup&lt;/h3&gt;

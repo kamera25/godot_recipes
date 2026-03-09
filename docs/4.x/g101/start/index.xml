@@ -7,18 +7,18 @@ programming. Game development would be a lot like that if you truly had to
 start from scratch and build &lt;em&gt;everything&lt;/em&gt; you needed.&lt;/p&gt;</description></item><item><title>The Godot Editor: Finding your way around</title><link>https://godotrecipes.com/godot_recipes/4.x/g101/start/101_02/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/g101/start/101_02/index.html</guid><description>&lt;h2 id="project-manager"&gt;Project Manager&lt;/h2&gt;
 &lt;p&gt;The &lt;strong&gt;Project Manager&lt;/strong&gt; is the first thing you&amp;rsquo;ll see when opening Godot.&lt;/p&gt;
 &lt;p&gt;
-&lt;a href="#image-bfe2b0a54eb53665f9962720c14fcab0" class="lightbox-link"&gt;
+&lt;a href="#image-052c883f7cf1a9153a64fc411dfe2f20" class="lightbox-link"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/g4_101_01.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-bfe2b0a54eb53665f9962720c14fcab0"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-052c883f7cf1a9153a64fc411dfe2f20"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/g4_101_01.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In this window you can see a list of your Godot projects. You can choose an existing project and click &amp;ldquo;Run&amp;rdquo; to play the game or click &amp;ldquo;Edit&amp;rdquo; to work on it in the Godot editor. Since you probably don&amp;rsquo;t have any projects yet, let&amp;rsquo;s start by clicking the &amp;ldquo;New Project&amp;rdquo;
 button.&lt;/p&gt;
 &lt;p&gt;
-&lt;a href="#image-77d0bb0abb1e8a7728a67d8255c31285" class="lightbox-link"&gt;
+&lt;a href="#image-02b54e703b4effee6c3574887e4837b9" class="lightbox-link"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/g4_101_02.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
 &lt;/a&gt;
-&lt;a href="javascript:history.back();" class="lightbox" id="image-77d0bb0abb1e8a7728a67d8255c31285"&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-02b54e703b4effee6c3574887e4837b9"&gt;
 &lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/g4_101_02.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
 &lt;/a&gt;&lt;/p&gt;</description></item><item><title>Nodes: Godot's building blocks</title><link>https://godotrecipes.com/godot_recipes/4.x/g101/start/101_03/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/g101/start/101_03/index.html</guid><description>&lt;p&gt;Nodes are the basic building blocks for creating games in Godot. A node is an object that can represent some kind of specialized game function. A given type of node might display graphics, play an animation, or represent a 3D model of an object. The node also contains a collection of properties, allowing you to customize its behavior. Which nodes you add to your project will depend on what functionality you need. It&amp;rsquo;s a modular system designed to give you flexibility in building your game objects.&lt;/p&gt;</description></item></channel></rss>

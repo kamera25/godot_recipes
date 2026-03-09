@@ -66,8 +66,7 @@ draft: false
 
 ### マップマーカー
 
-```{{< gd-code-block >}}
-child "PlayerMarker" {{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加し、テクスチャとして`minimapIcon_arrowA.png`を設定します。スプライトの**Transform/Position**プロパティに注目してください: `(0, 0)`で、これはこのオブジェクトが`Grid`の左上隅に正確に配置されることを意味します:
+As a child of `Grid`, add a {{< gd-icon Sprite2D >}}`Sprite2D` node named "PlayerMarker" and give it the `minimapIcon_arrowA.png` texture. Note the sprite's **Transform/Position** property: `(0, 0)`, which places it exactly in the top-left corner of the `Grid`:
 
 ![alt](/godot_recipes/4.x/img/minimap_05.png)
 

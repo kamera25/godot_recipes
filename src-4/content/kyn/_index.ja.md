@@ -1,5 +1,5 @@
 +++
-title = 「ノードを理解する」
+title = "ノードを理解する」"
 weight = 2
 chapter = true
 pre = "<i class='far fa-circle fa-fw'></i>&nbsp"

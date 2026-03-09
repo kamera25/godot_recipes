@@ -1,5 +1,5 @@
 +++
-title = 『3Dアセットの活用』
+title = "3Dアセットの活用"
 weight = 1
 chapter = true
 pre = "<i class='fas fa-cubes'></i>&nbsp"
