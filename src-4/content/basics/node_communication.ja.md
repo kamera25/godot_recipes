@@ -1,0 +1,220 @@
+---
+title: "Node communication (the right way)"
+weight: 2
+draft: false
+ghcommentid: 10
+---
+
+【お知らせ】情報: {{% notice info %}}
+本記事の元ネタとなった[Godot Discord](https://discord.gg/zH7NUgz)の@TheDurielによるオリジナル図版［ノードアクセス解説］［画像リンク］(/godot_recipes/4.x/img/node_access_theduriel.png)に心から感謝します。この資料は保存しておき、必要に応じて参照できる状態にしておくことをお勧めします。
+{{% /notice %}}
+
+## 問題文
+
+プロジェクトが複雑化してきました。複数のシーン、インスタンス、そして膨大な数のノードが存在しています。おそらく以下のようなコードを書いている状況ではないでしょうか？：
+
+```gdscript
+get_node("../../SomeNode/SomeOtherNode")
+get_parent().get_parent().get_node("SomeNode")
+get_tree().get_root().get_node("SomeNode/SomeOtherNode")
+```
+
+このようにノード参照を行うと、すぐに問題が発生することに気づくでしょう。シーンツリーの何かを変更すると、これらの参照がすべて無効になる可能性があるからです。
+
+ノード間やシーン間の通信は複雑にする必要はありません。もっと良い方法があります。
+
+## 解決策
+
+As a general rule, nodes should manage their children, not the other way around. If you're using `get_parent()` or `get_node("..")`, then you're probably headed for trouble. Node paths like this are *brittle*, meaning they can break easily. The three main problems with this arrangement:
+
+1. シーンを単独でテストすることはできません。そのシーン単体、あるいは厳密に同一のノード構成を持たないテストシーンで実行した場合、`get_node()` メソッドがクラッシュを引き起こします。
+
+2. 変更は簡単にはできません。ツリーの構造を変更する場合、パスが無効になる可能性があるのでご注意ください。
+
+3. 準備済み順序は子優先・親後回しとなっています。つまり、ノードの `_ready()` メソッド内で親プロパティにアクセスしようとすると失敗する可能性があるということです。これは親が未だ準備中状態であるためです。
+
+{{% notice tip %}}
+ノードがツリー構造にどのように追加され、準備完了状態になるかについては、[木の順序について理解する](/godot_recipes/4.x/basics/tree_ready_order/) を参照してください。
+{{% /notice %}}
+
+一般的に、ノードやシーンはゲーム内の任意の場所でインスタンス化可能であるべきであり、その親オブジェクトがどのようなものになるかについて一切仮定すべきではありません。
+
+We'll go into detailed examples later in this tutorial, but for now, here's the "golden rule" of node communication:
+
+> **「降下合図」「上方信号」**
+
+If a node is calling a child (i.e. going "down" the tree), then `get_node()` is appropriate.
+
+If a node needs to communicate "up" the tree, it should probably use a signal.
+
+シーン設定を設計する際にこのルールを念頭に置いておけば、メンテナンス性に優れ、整理されたプロジェクト構築への道筋が自然と見えてきます。また、問題を引き起こす煩雑なノードパスの使用も避けられるでしょう。
+
+それでは、これらの戦略を具体例とともに見ていきましょう。
+
+## 1. 「get_node()」関数を使用する方法
+
+`get_node()` は、指定されたパスを使用してシーンツリーを辿り、指定した名前のノードを検索します。
+
+{{% notice tip %}}
+ノードパスについてより詳しく知りたい場合は、[ノードパスの理解](/godot_recipes/4.x/basics/getting_nodes/)を参照してください。
+{{% /notice %}}
+
+#### `get_node()` の使用例
+
+以下の一般的な設定例について考えてみましょう：
+
+![alt](/godot_recipes/4.x/img/node_access_01.png)
+
+「Player」ノード内のスクリプトでは、プレイヤーの移動状況に応じて、「AnimatedSprite2D」にどのアニメーションを再生すべきか通知する必要があります。このようなケースでは「get_node()」関数が適しています：
+
+```gdscript
+extends CharacterBody2D
+
+func _process(delta):
+    if speed > 0:
+        get_node("AnimatedSprite2D").play("run")
+    else:
+        get_node("AnimatedSprite2D").play("idle")
+```
+
+{{% notice tip %}}
+GDScriptでは、`get_node()`の省略形として`$`を使用できます。代わりに`$AnimatedSprite2D`と記述してください。
+{{% /notice %estion %}}
+
+#### より良い方法
+
+このアプローチの欠点は、ノードパスを明示的に指定する必要があり、後でそのパスが変更された場合、コードも修正が必要になる点です。代わりに、`@export` 機能を使って直接ノードを選択することも可能です。
+
+```gdscript
+extends CharacterBody2D
+
+@export var animation : AnimatedSprite2D
+
+func _process(delta):
+    if speed > 0:
+        animation.play("run")
+    else:
+        animation.play("idle")
+```
+
+この方法では、ノードを選択することで、インスペクター上で変数の値を直接割り当てることができます。
+
+## 2. シグナルの活用方法
+
+Signals should be used to call functions on nodes that are higher in the tree or at the same level (i.e. "siblings").
+
+シグナルの接続はエディタ内で行うことができます（通常はゲーム開始前に存在するノードに対して）、またはコード内で行うことも可能です（実行時にインスタンス化するノードの場合）。シグナル接続の構文は以下の通りです：
+
+> `信号名.接続(ターゲットノードのターゲット関数)`
+
+Looking at this, you may be thinking "Wait, if I'm connecting to a sibling, won't I need a node paths like `../Sibling`?". While you *could* do this, it breaks our rule above. The answer to this puzzle is to make sure that connections are made by the *common parent*.
+
+ツリー構造を「ダウン」方向に辿るルールに従うと、信号発信ノードと受信ノードの共通親ノードは、定義上それらの位置を認識しており、両ノードが準備完了した時点で待機状態になります。
+
+### シグナルの使用例
+
+シグナルの最も一般的な使用例は、UI（ユーザーインターフェース）の更新です。プレイヤーの「health」変数が変化した際、対応する「Label」（ラベル表示）や「ProgressBar」（進捗バー）をリアルタイムに更新する必要があります。ただし、UIノードは通常プレイヤーオブジェクトから完全に分離されています（その方が設計上適切です）。プレイヤー側は、これらのノードがどこにあるのか、どのようにしてアクセスするのかを知る手段を一切持っていないはずです。
+
+以下に例となる設定を示します：
+
+<image> /godot_recipes/4.x/img/node_access_05.png </image>
+
+Note that the UI is an instanced scene, we're just showing the contained nodes. This is where you often see things like `get_node("../UI/VBoxContainer/HBoxContainer/Label).text = str(health)`, which is what we want to avoid.
+
+代わりに、プレイヤーがヘルス値を増減させるたびに、`health_changed`シグナルが発火します。これをUIの`update_health()`関数に送信する必要があり、この関数では`Label`の表示値を設定する処理を行います。`Player`スクリプトでは、プレイヤーのヘルス値が変更されるたびに以下のコードを使用しています：
+
+```gdscript
+health_changed.emit(health)
+```
+
+スクリプト「UI」には以下が含まれています：
+
+```gdscript
+onready var label = $VBoxContainer/HBoxContainer/Label
+
+func update_health(value):
+    label.text = str(value)
+```
+
+```ruby
+class World < ActiveRecord::Base
+  has_one :node_a, dependent: :destroy
+  has_one :node_b, through: :node_a
+
+  def node_b
+    node_a&.send(:node_b)
+  end
+end
+```
+
+この実装では、`World` モデルが両方のノード間の中間役として機能し、論理的に正しい位置で接続を実現しています。
+
+```gdscript
+func _ready():
+    $Player.health_changed.connect($UI.update_health)
+```
+
+## 3. グループを活用する方法
+
+グループ化はモジュール分離のもう一つの有効な手段であり、特に類似した複数のオブジェクトで同じ処理が必要な場合に有効です。ノードはどのグループにも自由に追加でき、メンバーシップは「`add_to_group()`」および「`remove_from_group()`」で動的に変更可能です。
+
+A common misconception about groups is that they are some kind of object or array that "contains" node references. Groups are a *tagging system*. A node is "in" a group if it has that tag assigned from it. The SceneTree keeps track of the tags and has functions like `get_nodes_in_group()` to help you find all nodes with a particular tag.
+
+### グループ使用例
+
+Let's consider a Galaga-style space shooter where you have a lots of enemies flying around. These enemies may have different types and behaviors. You'd like to add a "smart bomb" upgrade that, when activated, destroys all enemies on the screen. Using groups, you can implement this with a minimal amount of code.
+
+First, add all enemies to an "enemies" group. You can do this in the editor using the "Node" tab:
+
+![alt](/godot_recipes/4.x/img/node_access_03.png)
+
+スクリプト内でグループにノードを追加することも可能です：
+
+```gdscript
+func _ready():
+    add_to_group("enemies")
+```
+
+敵キャラ全員が死亡時に実行する処理（アニメーション再生、ドロップアイテムの生成など）を処理する「explode()」関数を持っていると仮定しましょう。これで全ての敵がグループに登録されたので、スマートボム機能を以下のように実装できます：
+
+```gdscript
+func activate_smart_bomb():
+    get_tree().call_group("enemies", "explode")
+```
+
+## 4. `owner` を使用した場合
+
+`owner` はシーン保存時に自動的に設定される `Node` プロパティです。このシーン内のすべてのノードに対して、その `owner` にはシーンのルートノードが指定されます。これにより、子信号をメインノードにスムーズに接続できる便利な仕組みとなっています。
+
+### 「owner」の使用例
+
+複雑なUI設計では、コンテナやコントロールが階層的に深々とネストされた構造になりがちです。ユーザーが操作する要素（例：`Button`）はシグナルを発生させますが、これらを適切に処理するためには、UIのルートノードにあるスクリプトに信号を接続する必要があります。
+
+例としての設定例をご紹介します：
+
+![alt](/godot_recipes/4.x/img/node_access_02.png)
+
+Root要素の`CenterContainer`スクリプトには以下の機能が含まれており、任意のボタンが押されたときに呼び出したいと考えています。
+
+```gdscript
+extends CenterContainer
+
+func _on_button_pressed(button_name):
+    print(button_name, " was pressed")
+```
+
+これらのボタンは `Button` シーンのインスタンスであり、動的にコードを実行してボタンテキストやその他のプロパティを設定できるオブジェクトを表しています。あるいは、ゲーム状態に応じてコンテナへ動的に追加・削除されるボタンがあるかもしれません。いずれにせよ、ボタンのシグナルを接続するために必要な手順は以下の通りです：
+
+```gdscript
+extends Button
+
+func _ready():
+    pressed.connect(owner._on_button_pressed.bind(name))
+```
+
+ボタンをツリー内のどこに配置しても ― 例えばコンテナを追加した場合などでも ― `CenterContainer`は常に`所有者`として機能します。
+
+## 関連レシピ
+
+- [ツリーの読み取り順序について理解する](/godot_recipes/4.x/basics/tree_ready_order/)
+- [ノードパスの取得方法を理解する](/godot_recipes/4.x/basics/getting_nodes/)

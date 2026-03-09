@@ -1,0 +1,211 @@
+---
+title: "Multitarget Camera"
+weight: 11
+draft: false
+---
+
+## 問題文
+
+複数のオブジェクトを同時に画面上に表示し続けるには、移動・ズーム機能を備えたダイナミックなカメラシステムが必要です。
+
+例を挙げると、2人用ゲームで両プレイヤーを画面内に表示したまま、互いに近づき離れていく様子を表現する場合などです：
+
+![alt](/godot_recipes/4.x/img/multi_cam_01.gif)
+
+## 解決策
+
+シングルプレイヤーモードでは、カメラをプレイヤーに追従させるのが一般的な手法です。しかし、ここでは2人以上のプレイヤーやその他の重要オブジェクトが常に画面に表示され続ける必要があるため、同様の方法は適用できません。
+
+以下の3つの機能をカメラに実装する必要があります：
+
+以下の機能を実装します：
+- ターゲットを任意の数だけ追加/削除可能
+- カメラの位置をターゲット群の中心点に固定表示
+- すべてのターゲットが画面内に収まるようズームレベルを調整
+
+以下の手順で新規シーンを作成し、`Camera2D`コンポーネントを追加してスクリプトを割り当てます。作業が完了したら、このカメラをゲームに統合します。
+
+スクリプトの動作原理を分解して説明しましょう。
+
+{{% notice note %}}
+スクリプトの全文は[記事の末尾](#full-script)で確認できます。
+{{% /notice %}}
+
+以下にスクリプトの開始部分を示します：
+
+```gdscript
+extends Camera2D
+
+@export var move_speed = 30 # camera position lerp speed
+@export var zoom_speed = 3.0  # camera zoom lerp speed
+@export var min_zoom = 5.0  # camera won't zoom closer than this
+@export var max_zoom = 0.5  # camera won't zoom farther than this
+@export var margin = Vector2(400, 200)  # include some buffer area around targets
+
+var targets = []  # Array of targets to be tracked.
+
+@onready var screen_size = get_viewport_rect().size
+```
+
+These settings will let you adjust the camera's behavior. We'll `lerp()` all camera changes, so setting the move/zoom speeds to lower values will introduce some delay in the camera "catching up" to sudden changes.
+
+最大・最小ズーム値は、ゲーム中のオブジェクトの大きさや、どこまで接近または遠ざけたいかによっても変わります。適宜調整してください。
+
+プロパティ「margin」を使用すると、ターゲット要素の周囲に余分なスペースが追加され、可視領域の端にぴったりと配置されないようになります。
+
+最後に、ターゲット配列を取得し、ビューポートサイズを確認することで、適切なスケール計算が可能になります。
+
+```gdscript
+func add_target(t):
+    if not t in targets:
+        targets.append(t)
+
+func remove_target(t):
+    if t in targets:
+        targets.erase(t)
+```
+
+For adding and removing targets, we have two helper functions. You can use these during gameplay to change what targets are being tracked ("Player 3 has entered the game!"). Note that we don't want to have the same target tracked twice, so we reject it if it's already there.
+
+機能の大部分は `_process()` メソッドで実装されています。まず、カメラの移動処理から見ていきましょう：
+
+```gdscript
+func _process(delta):
+    if !targets:
+        return
+    # Keep the camera centered between the targets
+    var p = Vector2.ZERO
+    for target in targets:
+        p += target.position
+    p /= targets.size()
+    position = lerp(position, p, move_speed * delta)
+```
+
+ここでは、ターゲットの位置を繰り返し処理し、共通の中心点を見つけます。`lerp()`関数を使うことで、スムーズに移動させることができます。
+
+次に、ズーム機能について説明します：
+
+```gdscript
+# Find the zoom that will contain all targets
+var r = Rect2(position, Vector2.ONE)
+for target in targets:
+    r = r.expand(target.position)
+r = r.grow_individual(margin.x, margin.y, margin.x, margin.y)
+var z
+if r.size.x > r.size.y * screen_size.aspect():
+    z = 1 / clamp(r.size.x / screen_size.x, min_zoom, max_zoom)
+else:
+    z = 1 / clamp(r.size.y / screen_size.y, min_zoom, max_zoom)
+zoom = lerp(zoom, Vector2.ONE * z, zoom_speed)
+```
+
+```python
+import cv2
+from skimage.draw import ellipse, circle, rectangle
+
+def create_ellipse_contours(image):
+    # Ellipse contours
+    y1, y2 = image.shape[0] * 0.33, image.shape[0] * 0.66
+    x1, x2 = image.shape[1] * 0.25, image.shape[1] * 0.75
+
+    ellipse_coords = ellipse(y1, y2, x1, x2)
+    cv2.polylines(image, [np.int32(ellipse_coords)], isClosed=True, color=(0, 255, 0), thickness=2)
+
+    # Circle contours
+    cx, cy = image.shape[1] * 0.5, image.shape[0] * 0.5
+    radius = image.shape[0] * 0.1
+
+    circle_coords = circle(cx, cy, radius)
+    cv2.polylines(image, [np.int32(circle_coords)], isClosed=True, color=(0, 0, 255), thickness=2)
+
+def create_rectangular_contours(image):
+    # Rectangle contours
+    w = image.shape[1] * 0.5
+    h = image.shape[0] * 0.3
+
+    x1, y1 = w / 2 - h / 2, h / 2 - w / 2
+    x2, y2 = w / 2 + h / 2, h / 2 + w / 2
+
+    rect_coords = rectangle(y1, x1, y2, x2)
+    cv2.polylines(image, [np.int32(rect_coords)], isClosed=True, color=(0, 0, 0), thickness=2)
+
+def create_targets_and_contours():
+    # Create target images
+    target_image = cv2.imread('path_to_your_image.jpg')  # Replace with your actual image path
+
+    create_ellipse_contours(target_image)
+    create_rectangular_contours(target_image)
+
+    return target_image, ellipse_coords, circle_coords, rect_coords
+
+def main():
+    image = create_targets_and_contours()[0]
+    ellipse_coords, _, _, _ = image
+    # Assume `expand` and `margin` functions are defined elsewhere in your code
+
+    expanded_targets = expand(target_image, ellipse_coords)
+    final_rect = cv2.rectangle(image, (x1, y1), (x2, y2), color=(0, 0, 255))  # Example rectangle coordinates
+
+if __name__ == \:
+    main()
+```
+
+Here you can see the rectangle being drawn (press "Tab" in the demo project to enable this drawing):
+
+![alt](/godot_recipes/4.x/img/multi_cam_02.gif)
+
+次に、矩形が画面のアスペクト比に対して横長か縦長かに応じて適切なスケーリング係数を求め、事前に定義した最大値/最小値の範囲内で正規化します。
+
+## 全文スクリプト
+
+```gdscript
+extends Camera2D
+
+@export var move_speed = 30 # camera position lerp speed
+@export var zoom_speed = 3.0  # camera zoom lerp speed
+@export var min_zoom = 5.0  # camera won't zoom closer than this
+@export var max_zoom = 0.5  # camera won't zoom farther than this
+@export var margin = Vector2(400, 200)  # include some buffer area around targets
+
+var targets = []
+
+@onready var screen_size = get_viewport_rect().size
+
+func _process(delta):
+    if !targets:
+        return
+
+    # Keep the camera centered among all targets
+    var p = Vector2.ZERO
+    for target in targets:
+        p += target.position
+    p /= targets.size()
+    position = lerp(position, p, move_speed * delta)
+
+    # Find the zoom that will contain all targets
+    var r = Rect2(position, Vector2.ONE)
+    for target in targets:
+        r = r.expand(target.position)
+    r = r.grow_individual(margin.x, margin.y, margin.x, margin.y)
+    var z
+    if r.size.x > r.size.y * screen_size.aspect():
+        z = 1 / clamp(r.size.x / screen_size.x, max_zoom, min_zoom)
+    else:
+        z = 1 / clamp(r.size.y / screen_size.y, max_zoom, min_zoom)
+    zoom = lerp(zoom, Vector2.ONE * z, zoom_speed * delta)
+
+    # For debug
+    get_parent().draw_cam_rect(r)
+
+func add_target(t):
+    if not t in targets:
+        targets.append(t)
+
+func remove_target(t):
+    if t in targets:
+        targets.remove(t)
+```
+
+## <i class="fas fa-code-branch"></i> Download This Project
+
+プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/multitarget_camera](https://github.com/godotrecipes/multitarget_camera)

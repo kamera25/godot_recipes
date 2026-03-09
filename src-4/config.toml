@@ -1,5 +1,6 @@
 baseURL = 'https://godotrecipes.com/godot_recipes/4.x/'
 languageCode = 'en-us'
+defaultContentLanguage = 'en'
 publishDir = "../docs/4.x"
 title = 'Godot 4 Recipes'
 theme = "hugo-theme-relearn-main"
@@ -7,6 +8,52 @@ pygmentsStyle = "nord"
 pygmentsCodeFences = true
 staticDir = ["static", "../static_shared"]
 themesDir = "../themes_shared"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    contentDir = "content"
+    weight = 1
+
+    [[languages.en.menu.shortcuts]]
+    name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+    identifier = "ds"
+    url = "https://github.com/kidscancode/godot_recipes"
+    weight = 10
+
+    [[languages.en.menu.shortcuts]]
+    name = "<i class='fas fa-tags'></i>&nbsp;Tags"
+    url = "/tags"
+    weight = 50
+
+    [[languages.en.menu.shortcuts]]
+    name = "<i class='fas fa-fw fa-bookmark'></i> Godot Docs"
+    identifier = "godotdocs"
+    url = "https://docs.godotengine.org/"
+    weight = 40
+
+  [languages.ja]
+    languageName = "日本語"
+    contentDir = "content"
+    weight = 2
+    title = 'Godot 4 レシピ'
+
+    [[languages.ja.menu.shortcuts]]
+    name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+    identifier = "ds"
+    url = "https://github.com/kidscancode/godot_recipes"
+    weight = 10
+
+    [[languages.ja.menu.shortcuts]]
+    name = "<i class='fas fa-tags'></i>&nbsp;タグ"
+    url = "/ja/tags"
+    weight = 50
+
+    [[languages.ja.menu.shortcuts]]
+    name = "<i class='fas fa-fw fa-bookmark'></i> Godotドキュメント"
+    identifier = "godotdocs"
+    url = "https://docs.godotengine.org/"
+    weight = 40
 
 [params]
     disableNextPrev = true
@@ -25,20 +72,3 @@ themesDir = "../themes_shared"
 
 [minify]
   minifyOutput = true
-
-[[menu.shortcuts]]
-name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
-identifier = "ds"
-url = "https://github.com/kidscancode/godot_recipes"
-weight = 10
-
-[[menu.shortcuts]]
-name = "<i class='fas fa-tags'></i>&nbsp;Tags"
-url = "/tags"
-weight = 50
-
-[[menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bookmark'></i> Godot Docs"
-identifier = "godotdocs"
-url = "https://docs.godotengine.org/"
-weight = 40

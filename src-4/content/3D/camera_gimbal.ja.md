@@ -1,0 +1,230 @@
+---
+title: "Camera Gimbal"
+weight: 2
+draft: false
+---
+
+## 問題文
+
+以下の機能を備えたカメラコントローラーが必要です：マウスまたはキーボード操作で、回転中も水平を保ちつつ、ターゲットを追従できるもの。
+
+## 解決策
+
+Try this: take a {{< gd-icon Camera3D >}}`Camera3D` node and rotate it a small amount around **X** (the red ring on the gizmo), then a small amount around **Z** (the blue ring). Now reverse the **X** rotation and click the "Preview" button. Observe how the camera is now tilted.
+
+この問題を解決するには、カメラを_ジンバル・マウント_に取り付ける必要があります。これは、移動時も物体の水平を保つよう設計された装置です。2つの{{< gd-icon Node3D >}}`Node3D`ノードを使用することで、左右方向と上下方向の回転を個別に制御できる簡易ジンバルを作成できます。
+
+ノードの設定は以下のようにしてください：
+
+```
+{{< gd-icon Node3D >}} Node3D: CameraGimbal
+    {{< gd-icon Node3D >}} Node3D: InnerGimbal
+        {{< gd-icon Camera3D >}} Camera3D
+```
+
+{{< gd-icon Camera3D >}}`Camera3D` の**変換/位置**を `(0, 0, 4)` に設定してください。
+
+Here's how the gimbal works: the outer node can only be rotated in **Y**, while the inner one rotates only in **X**. You can test this out by rotating them manually, but make sure you change to "Local Space Mode" first (that's the cube icon next to the lock in the menu bar - the keyboard shortcut to toggle is "T"). Remember to only move the _green_ ring of the outer node and only the _red_ ring of the inner one. Don't touch the camera node at all.
+
+<video controls src="/godot_recipes/4.x/img/gimbal_01.webm"></video>
+
+実験が完了したら、すべての回転値を`0`にリセットしてください。
+
+### キーボード操作
+
+キーボード操作から始めましょう。その後、マウスを使用するオプションも追加します。必要な操作と割り当てられた入力は以下の通りです：
+
+   Action Name | Input
+--------|------
+`"cam_up"` | W
+`"cam_down"` | S
+`"cam_right"` | D
+`"cam_left"` | A
+`"cam_zoom_in"` | Mouse Wheel Up
+`"cam_zoom_out"` | Mouse Wheel Down
+
+以下に初期スクリプトを示します。前述の通り、各 `Node3D` をその局所座標系内で特定軸周りに回転させることに注意してください。
+
+```gdscript
+extends Node3D
+
+var rotation_speed = PI/2
+
+func get_input_keyboard(delta):
+    # Rotate outer gimbal around y axis
+    var y_rotation = Input.get_axis("cam_left", "cam_right")
+    rotate_object_local(Vector3.UP, y_rotation * rotation_speed * delta)
+    # Rotate inner gimbal around local x axis
+    var x_rotation = Input.get_axis("cam_up", "cam_down")
+    x_rotation = -x_rotation if invert_y else x_rotation
+    inner.rotate_object_local(Vector3.RIGHT, x_rotation * rotation_speed * delta)
+
+func _process(delta):
+    get_input_keyboard(delta)
+```
+
+以下の手順でテストシーンを作成してください：
+
+1. `MeshInstance3D`を使用してテスト用シーンを作成します
+2. そのシーン内に`CameraGimbal`インスタンスを配置し、動作をテストします
+
+※アップ/ダウンコントロールを操作すると、カメラがぐるりと一回転してしまい、最終的には上下逆さまになってしまいます。これを防止するために、回転角度に上限を設定する「クランプ」機能が有効です。
+
+```gdscript
+func _process(delta):
+    get_input_keyboard(delta)
+    $InnerGimbal.rotation.x = clamp($InnerGimbal.rotation.x, -1.4, -0.01)
+```
+
+```
+
+### マウス操作
+
+マウスとキーボードの制御を簡単に切り替えられるよう、「mouse_control」というフラグを追加します。
+
+```gdscript
+# mouse properties
+var invert_y = false
+var invert_x = false
+var mouse_control = false
+var mouse_sensitivity = 0.005
+
+func _unhandled_input(event):
+    if mouse_control and event is InputEventMouseMotion:
+        if event.relative.x != 0:
+            var dir = 1 if invert_x else -1
+            rotate_object_local(Vector3.UP, dir * event.relative.x * mouse_sensitivity)
+        if event.relative.y != 0:
+            var dir = 1 if invert_y else -1
+            $InnerGimbal.rotate_object_local(Vector3.RIGHT, dir * event.relative.y * mouse_sensitivity)
+
+func _process(delta):
+    if !mouse_control:
+        get_input_keyboard(delta)
+```
+
+このコードは、水平方向のマウス操作を外側ジンバルの**Y軸回転**に、垂直方向の操作を内側ジンバルの**X軸回転**に変換する仕組みになっています。さらに、`invert_x` と `invert_y` フラグを追加し、いずれかの軸に対して動きを反転させることができるようにしました。多くのプレイヤーはどちらか一方の方式を好むため、両方のオプションを用意しておくのがベストです。
+
+また、`_process()` 関数では、マウス操作時のキーボード入力を無効化しています。
+
+You may notice a problem with the up/down movement if you move the mouse too quickly. A large value for `event.relative.y` results in "skipping" to the opposite side of the clamped value. We can solve this by clamping the vertical mouse movement to a reasonable value. Change the above code for `y` to this:
+
+```gdscript
+if event.relative.y != 0:
+    var dir = 1 if invert_y else -1
+    var y_rotation = clamp(event.relative.y, -30, 30)
+    $InnerGimbal.rotate_object_local(Vector3.RIGHT, dir * y_rotation * mouse_sensitivity)
+```
+
+このプロジェクトでは、ゲームプレイ中にマウス入力を取得する必要も出てくるでしょう。詳細は本ドキュメント末尾の関連リンクレシピをご覧ください。
+
+### カメラのズーム機能
+
+カメラのズーム機能は、ジンバルシステムの「スケール」を変化させることで動作します。
+
+```gdscript
+# zoom settings
+var max_zoom = 3.0
+var min_zoom = 0.5
+var zoom_speed = 0.09
+
+var zoom = 1.5
+
+func _unhandled_input(event):
+    if event.is_action_pressed("cam_zoom_in"):
+        zoom -= zoom_speed
+    if event.is_action_pressed("cam_zoom_out"):
+        zoom += zoom_speed
+    zoom = clamp(zoom, min_zoom, max_zoom)
+
+func _process(delta):
+    scale = lerp(scale, Vector3.ONE * zoom, zoom_speed)
+```
+
+`lerp()` を使用してズームレベルを変更すると、より滑らかなズーミングが可能になります。
+
+<img src=\ alt=\>
+
+### ターゲットの追跡中
+
+カメラジンバルのセットアップが完了したら、以下の手順でターゲットを追跡できるようになります：
+
+```gdscript
+@export var target : Node3D
+
+func _process(delta):
+    if target:
+        global_position = target.global_position
+```
+
+シーン内のカメラを選択し、「インスペクター」を使用して追跡したいノードを選択してください。
+
+## 最終スクリプト
+
+参考までに、カメラ設定の全変数を含む完全なスクリプトを掲載します。この内容を参考にプロジェクト環境で設定してください。
+
+```gdscript
+extends Node3D
+
+@export var target : Node3D
+
+@export_range(0.0, 2.0) var rotation_speed = PI/2
+
+# mouse properties
+@export var mouse_control = false
+@export_range(0.001, 0.1) var mouse_sensitivity = 0.005
+@export var invert_y = false
+@export var invert_x = false
+
+# zoom settings
+@export var max_zoom = 3.0
+@export var min_zoom = 0.4
+@export_range(0.05, 1.0) var zoom_speed = 0.09
+
+var zoom = 1.5
+
+@onready var inner = $InnerGimbal
+
+func _unhandled_input(event):
+    if Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
+        return
+    if event.is_action_pressed("cam_zoom_in"):
+        zoom -= zoom_speed
+    if event.is_action_pressed("cam_zoom_out"):
+        zoom += zoom_speed
+    zoom = clamp(zoom, min_zoom, max_zoom)
+    if mouse_control and event is InputEventMouseMotion:
+        if event.relative.x != 0:
+            var dir = 1 if invert_x else -1
+            rotate_object_local(Vector3.UP, dir * event.relative.x * mouse_sensitivity)
+        if event.relative.y != 0:
+            var dir = 1 if invert_y else -1
+            var y_rotation = clamp(event.relative.y, -30, 30)
+            inner.rotate_object_local(Vector3.RIGHT, dir * y_rotation * mouse_sensitivity)
+
+func get_input_keyboard(delta):
+    # Rotate outer gimbal around y axis
+    var y_rotation = Input.get_axis("cam_left", "cam_right")
+    rotate_object_local(Vector3.UP, y_rotation * rotation_speed * delta)
+    # Rotate inner gimbal around local x axis
+    var x_rotation = Input.get_axis("cam_up", "cam_down")
+    x_rotation = -x_rotation if invert_y else x_rotation
+    inner.rotate_object_local(Vector3.RIGHT, x_rotation * rotation_speed * delta)
+
+func _process(delta):
+    if !mouse_control:
+        get_input_keyboard(delta)
+    inner.rotation.x = clamp(inner.rotation.x, -1.4, -0.01)
+    scale = lerp(scale, Vector3.ONE * zoom, zoom_speed)
+    if target:
+        global_position = target.global_position
+```
+
+<!-- ## 関連レシピ
+
+- [Capturing the Mouse](/godot_recipes/3.x/input/mouse_capture/)
+- [Intro to 3D](/godot_recipes/3.x/g101/3d/) -->
+
+<!-- #### この動画が気に入ったら？
+
+{{< youtube 4NLrfxNt3ps >}} -->

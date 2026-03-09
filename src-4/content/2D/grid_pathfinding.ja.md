@@ -1,0 +1,228 @@
+---
+title: "Pathfinding on a 2D Grid"
+weight: 5
+draft: false
+---
+
+## 問題文
+
+グリッドベースの環境があり、ナビゲーションを可能にする経路探索システムを構築したいと考えています。
+
+## 解決策
+
+Godot は経路探索のための複数の手法を提供しています。今回のレシピでは「A*」アルゴリズムを取り上げます。
+
+{{% notice style="info" title="About A*" %}}
+A* is a widely-used algorithm for finding the shortest path between two points. It can be used in any graph-based data structure, not just a grid.
+{{% /notice %}}
+
+`AStarGrid2D` はGodotの汎用クラス `AStar2D` をグリッド環境用に最適化した専用バージョンです。グリッドベースで設計されているため、個々のセルや接続関係を手動で追加する必要がなく、より高速かつ簡単にセットアップできます。
+
+### グリッドの設定
+
+最も重要な設定決定事項は、セルのサイズとグリッド自体のサイズです。ここでは例として `(64, 64)` を使用しますが、ウィンドウサイズは画面上に収まるセル数を決定するために使用します。ただし、セルサイズが異なっても基本的な動作原理は同じです。
+
+このコードを `Node2D` の `{{<  gd-icon Node2D >}}`に追加してください。
+
+```gdscript
+extends Node2D
+
+@export var cell_size = Vector2i(64, 64)
+
+var astar_grid = AStarGrid2D.new()
+var grid_size
+
+func _ready():
+    initialize_grid()
+
+func initialize_grid():
+    grid_size = Vector2i(get_viewport_rect().size) / cell_size
+    astar_grid.size = grid_size
+    astar_grid.cell_size = cell_size
+    astar_grid.offset = cell_size / 2
+    astar_grid.update()
+```
+
+このコードでは、画面サイズを「セルサイズ」で割ることでグリッド全体の寸法を計算しています。これにより、`AStarGrid2D` オブジェクトの `size` プロパティを適切に設定できます。
+
+```python
+import math
+
+def calculate_path_length(points, cells):
+    total_length = 0.0
+
+    for i in range(len(points) - 1):
+        start_point = points[i]
+        end_point = points[i + 1]
+
+        # Calculate the Euclidean distance between two points
+        distance = math.sqrt(sum(math.pow(x - y, 2) for x, y in zip(start_point, end_point)))
+
+        # Adjust distance based on cell dimensions
+        adjusted_distance = distance / cells
+
+        total_length += adjusted_distance
+
+    return total_length
+```
+
+この関数は以下のように使用します：
+
+```python
+points = [(0, 0), (3, 4), (6, 8)]
+cells = 1.0  # セルのサイズを1単位と仮定
+
+path_length = calculate_path_length(points, cells)
+print(\, path_length)
+```
+
+出力結果：
+```
+経路の長さ: 7.810249675884363
+```
+
+この実装では、各セルの中心を基準にして距離を計算しているため、より正確な経路長が得られます。また、入力値に応じて柔軟に調整できるため、さまざまなシナリオに適用可能です。
+
+最後に、`AStarGrid2D`のプロパティを設定または変更した後は必ず`update()`メソッドを呼び出す必要があります。
+
+### グリッド線の描画
+
+本デモでは、グリッドの描画をプログラムコードで実装します。実際のゲームアプリケーションでは、通常 `TileMap` クラスやその他の視覚的表現を用いて世界を表現することになります。
+
+以下は、グリッドを描画するためのコード例です：
+
+```gdscript
+func _draw():
+    draw_grid()
+
+func draw_grid():
+    for x in grid_size.x + 1:
+        draw_line(Vector2(x * cell_size.x, 0),
+            Vector2(x * cell_size.x, grid_size.y * cell_size.y),
+            Color.DARK_GRAY, 2.0)
+    for y in grid_size.y + 1:
+        draw_line(Vector2(0, y * cell_size.y),
+            Vector2(grid_size.x * cell_size.x, y * cell_size.y),
+            Color.DARK_GRAY, 2.0)
+```
+
+これによりグリッドが視覚的に明確に表示されます：
+
+![alt](/godot_recipes/4.x/img/astar_grid_01.png)
+
+### 経路の描画方法
+
+パスを見つけるには、開始点と終了点が必要です。スクリプトの上部にこれらの変数を追加しましょう：
+
+```gdscript
+var start = Vector2i.ZERO
+var end = Vector2i(5, 5)
+```
+
+そして以下の行を _draw() 関数に追加して表示させます：
+
+```gdscript
+    draw_rect(Rect2(start * cell_size, cell_size), Color.GREEN_YELLOW)
+    draw_rect(Rect2(end * cell_size, cell_size), Color.ORANGE_RED)
+```
+
+```python
+# 可視化用のラインオブジェクトを追加
+line = Line2D()
+scene.add(line)
+```
+
+以下の方法でパスを取得し、得られた点を `{{< gd-icon Line2D >}}`Line2D` に追加する方法をご紹介します：
+
+```gdscript
+func update_path():
+    $Line2D.points = PackedVector2Array(astar_grid.get_point_path(start, end))
+```
+
+以下が結果です：
+
+<img src=\ alt=\>
+
+注：2点間に斜線が引かれています。これはデフォルト設定では経路に斜め移動が含まれるためです。この設定は`diagonal_mode`を変更することで変更可能です：
+
+* `DIAGONAL_MODE_ALWAYS` - The default value, uses diagonals.
+* `DIAGONAL_MODE_NEVER` - All movement is orthogonal.
+* `DIAGONAL_MODE_AT_LEAST_ONE_WALKABLE` - This allows diagonals, but prevents the path going "between" diagonally placed obstacles.
+* `DIAGONAL_MODE_ONLY_IF_NO_OBSTACLES` - This allows diagonals only in "open" areas, not near obstacles.
+
+プロパティを変更すると結果が大きく変わる可能性があるため、環境に合わせた調整が重要です。`initialize_grid()` 関数にこれを追加しましょう：
+
+```gdscript
+astar_grid.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER
+```
+
+現在可能な動きは直交移動のみです：
+
+![alt](/godot_recipes/4.x/img/astar_grid_03.png)
+
+### 障害物の追加
+
+We can also add obstacles to the grid. By marking a cell as "solid", the path will not include that cell. A cell can be toggled solid/not solid by using the `set_point_solid()` function.
+
+壁を描画するコードを追加しましょう（存在する場合）。固体セルを探し出して色付けします：
+
+```gdscript
+func fill_walls():
+    for x in grid_size.x:
+        for y in grid_size.y:
+            if astar_grid.is_point_solid(Vector2i(x, y)):
+                draw_rect(Rect2(x * cell_size.x, y * cell_size.y, cell_size.x, cell_size.y), Color.DARK_GRAY)
+```
+
+`_draw()` 内でこの関数を呼び出してください。
+
+その後、マウスを使ってセルをクリックし、その状態を切り替えることができます：
+
+```gdscript
+func _input(event):
+    if event is InputEventMouseButton:
+        # Add/remove wall
+        if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+            var pos = Vector2i(event.position) / cell_size
+            if astar_grid.is_in_boundsv(pos):
+                astar_grid.set_point_solid(pos, not astar_grid.is_point_solid(pos))
+            update_path()
+            queue_redraw()
+```
+
+注意：まず `is_in_boundsv()` をチェックしています。これにより、グリッド領域外にマウスをクリックした場合のエラー発生を防ぐことができます。
+
+現在では、障害物が経路に及ぼす影響を確認できます：
+
+![alt](/godot_recipes/4.x/img/astar_grid_04.png)
+
+### ヒューリスティック選択について
+
+A big factor that affects the resulting path is what _heuristic_ you choose to use. The term "heuristic" refers to a "best guess", and in the context of pathfinding just means: what direction should we try first when moving toward the goal?
+
+例えば、ユークリッド距離はピタゴラスの定理を用いて経路を推定します：
+
+![alt](/godot_recipes/4.x/img/astar_grid_03.png)
+
+マンハッタン距離は南北または東西方向の距離のみを考慮しますが、以下の点に注意が必要です：
+
+![alt](/godot_recipes/4.x/img/astar_grid_manhattan.png)
+
+オクトイルヒューリスティックを適用すると、以下のような経路が得られます：
+
+<img src=\ alt=\
+>
+
+このプロパティを使用してヒューリスティックを選択できます：
+
+```gdscript
+astar_grid.default_estimate_heuristic = AStarGrid2D.HEURISTIC_OCTILE
+```
+
+どの方法が最も効果的か（最も見栄えの良い経路が得られるか）は、環境の特性によって異なります。広いオープンスペースが中心で、周囲に障害物が点在しているような状況でしょうか？ それとも、複雑に絡み合った通路が入り組んだ迷路のような空間でしょうか？ 必ずご自身の具体的なプロジェクトで試行錯誤してみてください。
+
+以下のサンプルプロジェクトをダウンロードして、この設定を実際に試してみましょう。壁を配置するだけでなく、右クリック／中クリックでエンドポイントとスタート地点を移動させることができます。
+
+## <i class="fas fa-code-branch"></i> Download This Project
+
+プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/grid_pathfinding](https://github.com/godotrecipes/grid_pathfinding)
