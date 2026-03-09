@@ -1,16 +1,73 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UI on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/ui/index.html</link><description>Recent content in UI on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://godotrecipes.com/godot_recipes/4.x/ui/index.xml" rel="self" type="application/rss+xml"/><item><title>Cooldown Button</title><link>https://godotrecipes.com/godot_recipes/4.x/ui/cooldown_button/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/ui/cooldown_button/index.html</guid><description>Problem You want to make RPG-style ability buttons, including a cooldown effect.
-Solution If you need art for your buttons, you can find a wide variety of well-designed buttons at Game-icons.net. We&amp;rsquo;ll be using a few from there for this recipe.
-Node setup The scene for our ability button will need the following nodes:
-AbilityButton: TextureButton Sweep: TextureProgress Timer Counter: MarginContainer Value: Label Drop your chosen icon into the Textures/Normal property of the AbilityButton.</description></item><item><title>Heart Containers: 3 Ways</title><link>https://godotrecipes.com/godot_recipes/4.x/ui/heart_containers_3/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/ui/heart_containers_3/index.html</guid><description>Problem You need to display a heart container bar (or other icon-based bar).
-Solution A common way of displaying the player&amp;rsquo;s health is via a series of icons (typically hearts) that disappear as the player takes damage.
-In this recipe, we&amp;rsquo;re going to explore three ways of displaying this information, which I&amp;rsquo;m labeling &amp;ldquo;simple&amp;rdquo;, &amp;ldquo;empty&amp;rdquo;, and &amp;ldquo;partial&amp;rdquo;:
-This image shows what the bar displays when the player has 3 health.</description></item><item><title>Floating combat text</title><link>https://godotrecipes.com/godot_recipes/4.x/ui/floating_text/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/ui/floating_text/index.html</guid><description>Problem You want units to display damage as floating numbers when hit.
-Solution There are many ways to approach this problem. For example, you could use a bitmap font and build an image for each number out of its digits, then use a Sprite2D node to display and move it.
-However, for this recipe, we&amp;rsquo;ll use a Label node (named &amp;ldquo;FCT&amp;rdquo;). This will give us the flexibility to change the font, as well as making it easy to display the number as a string - or even other messages such as &amp;ldquo;miss&amp;rdquo;.</description></item><item><title>Level Select Menu</title><link>https://godotrecipes.com/godot_recipes/4.x/ui/level_select/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/ui/level_select/index.html</guid><description>Problem Your game needs a &amp;ldquo;level select&amp;rdquo; menu, where the user can choose from a grid of options.
-Solution As shown in the example above, we&amp;rsquo;ll make a scrolling grid of level &amp;ldquo;boxes&amp;rdquo; that the player can choose from. Let&amp;rsquo;s start with the individual level boxes:
-1: Level box Here&amp;rsquo;s the node setup:
-LevelBox: PanelContainer Label MarginContainer TextureRect The TextureRect is for displaying the lock icon, and the Label for displaying the level number.</description></item><item><title>Minimap/radar</title><link>https://godotrecipes.com/godot_recipes/4.x/ui/minimap/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/ui/minimap/index.html</guid><description>Problem You want a minimap or radar-style UI item showing the locations of objects outside of the player&amp;rsquo;s view.
-Solution Here&amp;rsquo;s an example of what we are going for: Project setup To illustrate this feature, we&amp;rsquo;ll start with a simplified top-down game using the Autotile recipe and a player based on the Top-down character recipe. See the linked recipes for details on how these parts work.
-Note The art in this project comes from kenney.</description></item><item><title>Radial Popup Menu</title><link>https://godotrecipes.com/godot_recipes/4.x/ui/radial_menu/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/ui/radial_menu/index.html</guid><description>Problem You want a radial menu - a ring of buttons that pops up for you to choose an option.
-Solution Radial menus are used in a variety of games to allow access to a selection of buttons. For example, clicking on an NPC in a game allows you to choose what action to take: talk, inspect, attack, etc.
-The specific look-and-feel of your menu should match with your game&amp;rsquo;s esthetic.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UI on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/ui/index.html</link><description>Recent content in UI on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://godotrecipes.com/godot_recipes/4.x/ui/index.xml" rel="self" type="application/rss+xml"/><item><title>Cooldown Button</title><link>https://godotrecipes.com/godot_recipes/4.x/ui/cooldown_button/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/ui/cooldown_button/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You want to make RPG-style ability buttons, including a cooldown effect.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="#image-274fe55d376c3b01b19914e21a454495" class="lightbox-link"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/cooldown_01.gif" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-274fe55d376c3b01b19914e21a454495"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/cooldown_01.gif" alt="alt" class="lightbox-image" loading="lazy"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;If you need art for your buttons, you can find a wide variety of well-designed buttons at &lt;a href="https://game-icons.net/" target="_blank"&gt;Game-icons.net&lt;/a&gt;. We&amp;rsquo;ll be using a few from there for this recipe.&lt;/p&gt;
+&lt;h3 id="node-setup"&gt;Node setup&lt;/h3&gt;
+&lt;p&gt;The scene for our ability button will need the following nodes:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;AbilityButton: &lt;i class="gd-TextureButton"&gt;&lt;/i&gt; TextureButton
+Sweep: &lt;i class="gd-TextureProgressBar"&gt;&lt;/i&gt; TextureProgress
+&lt;i class="gd-Timer"&gt;&lt;/i&gt; Timer
+Counter: &lt;i class="gd-MarginContainer"&gt;&lt;/i&gt; MarginContainer
+Value: &lt;i class="gd-Label"&gt;&lt;/i&gt; Label
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Drop your chosen icon into the &lt;strong&gt;Textures/Normal&lt;/strong&gt; property of the &lt;code&gt;AbilityButton&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Heart Containers: 3 Ways</title><link>https://godotrecipes.com/godot_recipes/4.x/ui/heart_containers_3/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/ui/heart_containers_3/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You need to display a heart container bar (or other icon-based bar).&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;A common way of displaying the player&amp;rsquo;s health is via a series of icons (typically hearts) that disappear as the player takes damage.&lt;/p&gt;
+&lt;p&gt;In this recipe, we&amp;rsquo;re going to explore three ways of displaying this information, which I&amp;rsquo;m labeling &amp;ldquo;simple&amp;rdquo;, &amp;ldquo;empty&amp;rdquo;, and &amp;ldquo;partial&amp;rdquo;:&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="#image-ec494ac5f9bd51a3eafc49efe36c5304" class="lightbox-link"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/heart_bar_02.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-ec494ac5f9bd51a3eafc49efe36c5304"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/heart_bar_02.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This image shows what the bar displays when the player has &lt;code&gt;3&lt;/code&gt; health.&lt;/p&gt;</description></item><item><title>Floating combat text</title><link>https://godotrecipes.com/godot_recipes/4.x/ui/floating_text/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/ui/floating_text/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You want units to display damage as floating numbers when hit.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="#image-c8eca9cd74bb2fe00ee688b880c4ddcc" class="lightbox-link"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/fct_demo.gif" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-c8eca9cd74bb2fe00ee688b880c4ddcc"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/fct_demo.gif" alt="alt" class="lightbox-image" loading="lazy"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;There are many ways to approach this problem. For example, you could use a bitmap font and build an image for each number out of its digits, then use a &lt;i class="gd-Sprite2D"&gt;&lt;/i&gt;&lt;code&gt;Sprite2D&lt;/code&gt; node to display and move it.&lt;/p&gt;
+&lt;p&gt;However, for this recipe, we&amp;rsquo;ll use a &lt;i class="gd-Label"&gt;&lt;/i&gt;&lt;code&gt;Label&lt;/code&gt; node (named &amp;ldquo;FCT&amp;rdquo;). This will give us the flexibility to change the font, as well as making it easy to display the number as a string - or even other messages such as &amp;ldquo;miss&amp;rdquo;.&lt;/p&gt;</description></item><item><title>Level Select Menu</title><link>https://godotrecipes.com/godot_recipes/4.x/ui/level_select/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/ui/level_select/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Your game needs a &amp;ldquo;level select&amp;rdquo; menu, where the user can choose from a grid of options.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="#image-054be5b7f21e9f43a20e84f3ad6cbff4" class="lightbox-link"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/level_select_03.gif" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-054be5b7f21e9f43a20e84f3ad6cbff4"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/level_select_03.gif" alt="alt" class="lightbox-image" loading="lazy"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;As shown in the example above, we&amp;rsquo;ll make a scrolling grid of level &amp;ldquo;boxes&amp;rdquo; that the player can choose from. Let&amp;rsquo;s start with the individual level boxes:&lt;/p&gt;
+&lt;h3 id="1-level-box"&gt;1: Level box&lt;/h3&gt;
+&lt;p&gt;Here&amp;rsquo;s the node setup:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;LevelBox: &lt;i class="gd-PanelContainer"&gt;&lt;/i&gt; PanelContainer
+&lt;i class="gd-Label"&gt;&lt;/i&gt; Label
+&lt;i class="gd-MarginContainer"&gt;&lt;/i&gt; MarginContainer
+&lt;i class="gd-TextureRect"&gt;&lt;/i&gt; TextureRect
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;i class="gd-TextureRect"&gt;&lt;/i&gt; TextureRect is for displaying the lock icon, and the &lt;i class="gd-Label"&gt;&lt;/i&gt; Label for displaying the level number. When one is showing, the other is hidden.&lt;/p&gt;</description></item><item><title>Minimap/radar</title><link>https://godotrecipes.com/godot_recipes/4.x/ui/minimap/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/ui/minimap/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You want a minimap or radar-style UI item showing the locations of objects outside of the player&amp;rsquo;s view.&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s an example of what we are going for:
+&lt;video controls src="https://godotrecipes.com/godot_recipes/4.x/img/minimap_01.webm"&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h3 id="project-setup"&gt;Project setup&lt;/h3&gt;
+&lt;p&gt;To illustrate this feature, we&amp;rsquo;ll start with a simplified top-down game using the &lt;a href="https://godotrecipes.com/godot_recipes/4.x/2d/autotile_intro/"&gt;Autotile recipe&lt;/a&gt; and a player based on the &lt;a href="godot_recipes/2d/topdown_movement/#option-2-rotate-and-move"&gt;Top-down character recipe&lt;/a&gt;. See the linked recipes for details on how these parts work.&lt;/p&gt;
+&lt;div class="box notices cstyle note"&gt;
+&lt;div class="box-label"&gt;&lt;i class="fa-fw fas fa-exclamation-circle"&gt;&lt;/i&gt; Note&lt;/div&gt;
+&lt;div class="box-content"&gt;
+&lt;p&gt;The art in this project comes from &lt;a href="https://kenney.nl" target="_blank"&gt;kenney.nl&lt;/a&gt;, which you can download here: &lt;a href="https://godotrecipes.com/godot_recipes/4.x/files/minimap_assets.zip"&gt;Minimap Assets&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Radial Popup Menu</title><link>https://godotrecipes.com/godot_recipes/4.x/ui/radial_menu/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/ui/radial_menu/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You want a radial menu - a ring of buttons that pops up for you to choose an option.&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Radial menus are used in a variety of games to allow access to a selection of buttons. For example, clicking on an NPC in a game allows you to choose what action to take: talk, inspect, attack, etc.&lt;/p&gt;
+&lt;p&gt;The specific look-and-feel of your menu should match with your game&amp;rsquo;s esthetic. For this demo, we&amp;rsquo;ll focus on the mechanics of making the menu work, and leave the styling choices to you.&lt;/p&gt;</description></item></channel></rss>

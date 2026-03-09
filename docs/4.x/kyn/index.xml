@@ -1,5 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Know Your Nodes on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/kyn/index.html</link><description>Recent content in Know Your Nodes on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://godotrecipes.com/godot_recipes/4.x/kyn/index.xml" rel="self" type="application/rss+xml"/><item><title>RayCast2D</title><link>https://godotrecipes.com/godot_recipes/4.x/kyn/raycast2d/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/kyn/raycast2d/index.html</guid><description>RayCast2D Raycasting is a common technique in game development. &amp;ldquo;Casting a ray&amp;rdquo; means extending a line from a point until it collides with something or reaches its limit.
-Node properties Add a RayCast2D node and take a look at the Inspector:
-Here are the main properties you&amp;rsquo;ll need to understand:
-Enabled Turn this off to disabled the raycast work.
-Exclude Parent This property causes the ray to ignore collisions with the parent object.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Know Your Nodes on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/kyn/index.html</link><description>Recent content in Know Your Nodes on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://godotrecipes.com/godot_recipes/4.x/kyn/index.xml" rel="self" type="application/rss+xml"/><item><title>RayCast2D</title><link>https://godotrecipes.com/godot_recipes/4.x/kyn/raycast2d/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/kyn/raycast2d/index.html</guid><description>&lt;h2 id="hahahugoshortcode55s0hbhbraycast2d"&gt;&lt;i class="gd-RayCast2D"&gt;&lt;/i&gt;RayCast2D&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Raycasting&lt;/em&gt; is a common technique in game development. &amp;ldquo;Casting a ray&amp;rdquo; means extending a line from a point until it collides with something or reaches its limit.&lt;/p&gt;
+&lt;h3 id="node-properties"&gt;Node properties&lt;/h3&gt;
+&lt;p&gt;Add a &lt;i class="gd-RayCast2D"&gt;&lt;/i&gt;&lt;code&gt;RayCast2D&lt;/code&gt; node and take a look at the Inspector:&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="#image-3e2c253aad330ee5c1e0ba33d16baf20" class="lightbox-link"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/kyn_raycast2d_01_4.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-3e2c253aad330ee5c1e0ba33d16baf20"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/kyn_raycast2d_01_4.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here are the main properties you&amp;rsquo;ll need to understand:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Enabled&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Turn this off to disabled the raycast work.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Exclude Parent&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This property causes the ray to ignore collisions with the parent object. Enabled by default.&lt;/p&gt;</description></item></channel></rss>

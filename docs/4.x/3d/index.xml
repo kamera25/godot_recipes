@@ -1,36 +1,154 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>3D on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/index.html</link><description>Recent content in 3D on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://godotrecipes.com/godot_recipes/4.x/3d/index.xml" rel="self" type="application/rss+xml"/><item><title>Working with 3D Assets</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/assets/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/assets/index.html</guid><description> Working with 3D Assets Detailed recipes for importing and working with 3D assets including models, animations, and materials.
-For these examples, we&amp;rsquo;ll be using the following 3d assets from Kay Lousberg:
-Adventurers Character Pack Dungeon Asset Pack In this section: Importing Assets Character Animation Character Controller</description></item><item><title>Basic FPS Character</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/basic_fps/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/basic_fps/index.html</guid><description>Problem You need to make a first-person shooter (FPS) character.
-Solution Start with a CharacterBody3D node, and add a CollisionShape3D to it. The CapsuleShape3D collision shape is the most common choice. Depending on your world setup, you may want to add additional shapes here, but for the purposes of this example, we&amp;rsquo;ll stick to the basics.
-We&amp;rsquo;ll leave all the sizing at the default values, meaning the capsule will be 2 meters high.</description></item><item><title>Camera Gimbal</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/camera_gimbal/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/camera_gimbal/index.html</guid><description>Problem You need a camera controller, using mouse or keyboard, that remains level while rotating and following a target.
-Solution Try this: take a Camera3D node and rotate it a small amount around X (the red ring on the gizmo), then a small amount around Z (the blue ring). Now reverse the X rotation and click the &amp;ldquo;Preview&amp;rdquo; button. Observe how the camera is now tilted.
-The solution to this problem is to place the camera on a gimbal - a device designed to keep an object level during movement.</description></item><item><title>Interpolated Camera</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/interpolated_camera/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/interpolated_camera/index.html</guid><description>Problem You need a 3D camera that smoothly follows a target (interpolates).
-Solution Info Godot&amp;rsquo;s built-in InterpolatedCamera node is deprecated and will be removed in the release of Godot 4.0.
-Attach the script below to a Camera3D node in your scene. The three export properties let you choose:
-lerp_speed - the camera&amp;rsquo;s movement speed. Lower values result in a &amp;ldquo;lazier&amp;rdquo; camera. target - choose the camera&amp;rsquo;s target node. offset - position of the camera relative to the target.</description></item><item><title>Shooting with Raycasts</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/shooting_raycasts/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/shooting_raycasts/index.html</guid><description>Problem You need to implement shooting in an FPS, but moving individual projectiles is impractical.
-Solution Game physics engines often break down when trying to handle very fast-moving objects. The solution is to cast a ray from the shooter&amp;rsquo;s location and detect the first thing that would be hit.
-There are two ways to approach raycasting in Godot: the RayCast3D node, or directly casting a ray in space using the physics engine.</description></item><item><title>CharacterBody3D: Movement</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/characterbody3d_examples/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/characterbody3d_examples/index.html</guid><description>Problem You need a player-controlled 3D character body.
-Solution For this recipe, we&amp;rsquo;ll be using this adorable tank model:
-You can grab this model on Itch.io: https://gtibo.itch.io/mini-tank or use any other model you&amp;rsquo;d like. We won&amp;rsquo;t be doing anything that&amp;rsquo;s tank-specific here.
-In the case of this asset, the download includes an OBJ file, and we&amp;rsquo;ll find it more convenient if we import it as a scene:
-We can add the model to the scene, but we&amp;rsquo;ll need a couple of additional nodes:</description></item><item><title>3D Unit Healthbars</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/healthbars/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/healthbars/index.html</guid><description>Problem You want a floating &amp;ldquo;healthbar&amp;rdquo; for your 3D game objects (mobs, characters, etc.).
-Solution For this solution, we&amp;rsquo;re going to re-use a 2D healthbar based on a TextureProgressBar node. It&amp;rsquo;s already set up with textures and code for updating the value and color. If you already have something similar, feel free to use it here. In the example, we&amp;rsquo;ll name this scene &amp;ldquo;Healthbar2D&amp;rdquo;.
-If you need some assets, here are the three images used in the bar:</description></item><item><title>Rolling Cube</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/rolling_cube/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/rolling_cube/index.html</guid><description>Problem You want to make a rolling cube in 3D.
-Solution Rolling a cube is trickier than it seems. You can&amp;rsquo;t just rotate the cube around its center:
-Instead, the cube needs to be rotated around its bottom edge.
-Here&amp;rsquo;s the tricky part: which bottom edge? It depends on which direction the cube is rolling.
-In preparing this recipe, I experimented with a few different solutions to this problem:
-Pure math - calculating and applying rotation transforms AnimationPlayer - using animations to key the rotations and offsets Helper nodes - using Spatial(s) as rotation helpers They all worked fine, but I found the last option the most flexible and easiest to adapt, so that&amp;rsquo;s what we&amp;rsquo;ll do here.</description></item><item><title>Arcade-style Spaceship</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/spaceship/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/spaceship/index.html</guid><description>Problem You want to make a 3D spaceship that flies in an arcade/cinematic way. You&amp;rsquo;re not looking for realistic physics, but more of a dog-fighting, &amp;ldquo;Star Wars&amp;rdquo;-style of spaceflight.
-Solution To accomplish this, we&amp;rsquo;ll use a CharacterBody3D for the ship. The three axis inputs (pitch, roll, and yaw) will rotate the body&amp;rsquo;s basis around the corresponding axis. The direction of motion will always point forward.
-Note You can do this with RigidBody3D and get the same results.</description></item><item><title>Arcade-style Airplane</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/simple_airplane/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/simple_airplane/index.html</guid><description>Problem You want to make an airplane controller in 3D, but don&amp;rsquo;t need a fully accurate flight-simulator.
-Solution In this recipe, we&amp;rsquo;re going to make a simplified airplane controller. By &amp;ldquo;simplified&amp;rdquo; we mean stripping things down to the basics. We&amp;rsquo;re looking for the &amp;ldquo;feel&amp;rdquo; of flying a plane - one that you can just jump in and start flying effortlessly, with a minimal control scheme.
-Note This recipe is not an accurate flight simulator.</description></item><item><title>Arcade-style Car</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/3d_sphere_car/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/3d_sphere_car/index.html</guid><description>Problem You want to make an arcade-style car game, so you&amp;rsquo;re looking for simplicity over realistic physics. In this recipe, you&amp;rsquo;ll learn how to make a fun, driveable car using a rolling sphere.
-Solution There are a lot of ways to make a driving game. Different games need different levels of realism. If you&amp;rsquo;re trying to make a light, arcade-style car, you don&amp;rsquo;t need all of the features that Godot&amp;rsquo;s VehicleBody3D node provides, such as supension, independently modeled wheels, etc.</description></item><item><title>Click to move</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/click_to_move/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/click_to_move/index.html</guid><description>Problem You want to move a 3D object to a clicked position.
-Solution We&amp;rsquo;ll start with a flat plane for our world. Our actor will move on this plane.
-The actor for this demo is a triangular prism mesh:
-Here is the code for the movement. If given a target, the object will turn and move toward it.
-extends CharacterBody3D @export var speed = 5 @export var gravity = -5 var target = Vector3.</description></item><item><title>Smooth rotation</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/rotate_interpolate/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/rotate_interpolate/index.html</guid><description>Problem You want to smoothly rotate a 3D object to point in a new direction.
-Solution When you first encounter this problem, you may find yourself thinking in terms of Euler angles - the three values representing the angles to the x/y/z axes. While Godot will allow you to see the object&amp;rsquo;s Euler angles in the rotation property, it is not recommended to use them to work in 3D. There are a number of reasons why this the case, such as a problem called &amp;ldquo;gimbal lock&amp;rdquo;, where you lose one degree of freedom when one of your rotations reaches 90 degrees.</description></item><item><title>CharacterBody3D: Align with Surface</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/3d_align_surface/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/3d_align_surface/index.html</guid><description>Problem You need your character body to align with the surface or terrain.
-Solution This recipe builds on the basic CharacterBody3D controller described in the CharacterBody3D: Movement recipe, so read that one first.
-First, we&amp;rsquo;ve added some terrain to the scene. You can download the terrain from here: https://fertile-soil-productions.itch.io/modular-terrain-pack. This is low-poly terrain, but you can use or make any terrain you like for this technique.
-As you can see, the movement still works with the terrain, but the tank seems to &amp;ldquo;float&amp;rdquo; above the slopes because it doesn&amp;rsquo;t change its orientation.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>3D on Godot 4 Recipes</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/index.html</link><description>Recent content in 3D on Godot 4 Recipes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://godotrecipes.com/godot_recipes/4.x/3d/index.xml" rel="self" type="application/rss+xml"/><item><title>Working with 3D Assets</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/assets/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/assets/index.html</guid><description>&lt;h1 id="working-with-3d-assets"&gt;&lt;i class='fas fa-cubes'&gt;&lt;/i&gt; Working with 3D Assets&lt;/h1&gt;
+&lt;p&gt;Detailed recipes for importing and working with 3D assets including models, animations, and materials.&lt;/p&gt;
+&lt;p&gt;For these examples, we&amp;rsquo;ll be using the following 3d assets from &lt;a href="https://kaylousberg.itch.io/" target="_blank"&gt;Kay Lousberg&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://kaylousberg.itch.io/kaykit-adventurers" target="_blank"&gt;Adventurers Character Pack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kaylousberg.itch.io/kaykit-dungeon-remastered" target="_blank"&gt;Dungeon Asset Pack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="in-this-section"&gt;In this section:&lt;/h4&gt;
+&lt;ul class="children children-li children-sort-weight"&gt;
+&lt;li&gt;&lt;a href="https://godotrecipes.com/godot_recipes/4.x/3d/assets/importing_assets/index.html"&gt;Importing Assets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://godotrecipes.com/godot_recipes/4.x/3d/assets/character_animation/index.html"&gt;Character Animation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://godotrecipes.com/godot_recipes/4.x/3d/assets/character_controller/index.html"&gt;Character Controller&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Basic FPS Character</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/basic_fps/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/basic_fps/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You need to make a first-person shooter (FPS) character.&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Start with a &lt;i class="gd-CharacterBody3D"&gt;&lt;/i&gt;&lt;code&gt;CharacterBody3D&lt;/code&gt; node, and add a &lt;i class="gd-CollisionShape3D"&gt;&lt;/i&gt;&lt;code&gt;CollisionShape3D&lt;/code&gt; to it. The &lt;i class="gd-CapsuleShape3D"&gt;&lt;/i&gt;&lt;code&gt;CapsuleShape3D&lt;/code&gt; collision shape is the most common choice. Depending on your world setup, you may want to add additional shapes here, but for the purposes of this example, we&amp;rsquo;ll stick to the basics.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ll leave all the sizing at the default values, meaning the capsule will be 2 meters high. Move it up by &lt;code&gt;1.0&lt;/code&gt; m to align its bottom with the ground.&lt;/p&gt;</description></item><item><title>Camera Gimbal</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/camera_gimbal/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/camera_gimbal/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You need a camera controller, using mouse or keyboard, that remains level while rotating and following a target.&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Try this: take a &lt;i class="gd-Camera3D"&gt;&lt;/i&gt;&lt;code&gt;Camera3D&lt;/code&gt; node and rotate it a small amount around &lt;strong&gt;X&lt;/strong&gt; (the red ring on the gizmo), then a small amount around &lt;strong&gt;Z&lt;/strong&gt; (the blue ring). Now reverse the &lt;strong&gt;X&lt;/strong&gt; rotation and click the &amp;ldquo;Preview&amp;rdquo; button. Observe how the camera is now tilted.&lt;/p&gt;
+&lt;p&gt;The solution to this problem is to place the camera on a &lt;em&gt;gimbal&lt;/em&gt; - a device designed to keep an object level during movement. We can create a gimbal using two &lt;i class="gd-Node3D"&gt;&lt;/i&gt;&lt;code&gt;Node3D&lt;/code&gt; nodes, which will control the camera&amp;rsquo;s left/right and up/down rotation respectively.&lt;/p&gt;</description></item><item><title>Interpolated Camera</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/interpolated_camera/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/interpolated_camera/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You need a 3D camera that smoothly follows a target (interpolates).&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;div class="box notices cstyle info"&gt;
+&lt;div class="box-label"&gt;&lt;i class="fa-fw fas fa-info-circle"&gt;&lt;/i&gt; Info&lt;/div&gt;
+&lt;div class="box-content"&gt;
+&lt;p&gt;Godot&amp;rsquo;s built-in &lt;code&gt;InterpolatedCamera&lt;/code&gt; node is deprecated and will be removed in the release of Godot 4.0.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Attach the script below to a &lt;i class="gd-Camera3D"&gt;&lt;/i&gt;&lt;code&gt;Camera3D&lt;/code&gt; node in your scene. The three &lt;code&gt;export&lt;/code&gt; properties let you choose:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lerp_speed&lt;/code&gt; - the camera&amp;rsquo;s movement speed. Lower values result in a &amp;ldquo;lazier&amp;rdquo; camera.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;target&lt;/code&gt; - choose the camera&amp;rsquo;s target node.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;offset&lt;/code&gt; - position of the camera relative to the target.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See below for some examples of the camera in action.&lt;/p&gt;</description></item><item><title>Shooting with Raycasts</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/shooting_raycasts/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/shooting_raycasts/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You need to implement shooting in an FPS, but moving individual projectiles is impractical.&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Game physics engines often break down when trying to handle very fast-moving objects. The solution is to cast a ray from the shooter&amp;rsquo;s location and detect the first thing that would be hit.&lt;/p&gt;
+&lt;p&gt;There are two ways to approach raycasting in Godot: the &lt;i class="gd-RayCast3D"&gt;&lt;/i&gt;&lt;code&gt;RayCast3D&lt;/code&gt; node, or directly casting a ray in space using the physics engine. While they can both accomplish the same thing, each has its uses. The node method tends to be best for situations where you continuously want to check for collisions - a downward-facing ray to check if you&amp;rsquo;re on the floor, for example.&lt;/p&gt;</description></item><item><title>CharacterBody3D: Movement</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/characterbody3d_examples/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/characterbody3d_examples/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You need a player-controlled 3D character body.&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;For this recipe, we&amp;rsquo;ll be using this adorable tank model:&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="#image-2696a496051952d299c5bd15ef41868a" class="lightbox-link"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/3d_kinematic_01.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-2696a496051952d299c5bd15ef41868a"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/3d_kinematic_01.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can grab this model on Itch.io: &lt;a href="https://gtibo.itch.io/mini-tank" target="_blank"&gt;https://gtibo.itch.io/mini-tank&lt;/a&gt; or use any other model you&amp;rsquo;d like. We won&amp;rsquo;t be doing anything that&amp;rsquo;s tank-specific here.&lt;/p&gt;
+&lt;p&gt;In the case of this asset, the download includes an OBJ file, and we&amp;rsquo;ll find it more convenient if we import it as a scene:&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="#image-6138cfefce041068286033337d9d86f7" class="lightbox-link"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/obj_as_scene.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-6138cfefce041068286033337d9d86f7"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/obj_as_scene.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
+&lt;/a&gt;&lt;/p&gt;</description></item><item><title>3D Unit Healthbars</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/healthbars/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/healthbars/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You want a floating &amp;ldquo;healthbar&amp;rdquo; for your 3D game objects (mobs, characters, etc.).&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;For this solution, we&amp;rsquo;re going to re-use a 2D healthbar based on a &lt;i class="gd-TextureProgressBar"&gt;&lt;/i&gt;&lt;code&gt;TextureProgressBar&lt;/code&gt; node. It&amp;rsquo;s already set up with textures and code for updating the value and color. If you already have something similar, feel free to use it here. In the example, we&amp;rsquo;ll name this scene &amp;ldquo;Healthbar2D&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="#image-0cb5af4de529b42e2b25726be0ca3b1f" class="lightbox-link"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/healthbar_example.gif" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-0cb5af4de529b42e2b25726be0ca3b1f"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/healthbar_example.gif" alt="alt" class="lightbox-image" loading="lazy"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you need some assets, here are the three images used in the bar:&lt;/p&gt;</description></item><item><title>Rolling Cube</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/rolling_cube/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/rolling_cube/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You want to make a rolling cube in 3D.&lt;/p&gt;
+&lt;p&gt;&lt;video width="500" controls src="https://godotrecipes.com/godot_recipes/4.x/img/rolling_cube.webm"&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Rolling a cube is trickier than it seems. You can&amp;rsquo;t just rotate the cube around its center:&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="#image-7a246490b3753a02f60f3af18699d791" class="lightbox-link"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/cube_001.gif" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-7a246490b3753a02f60f3af18699d791"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/cube_001.gif" alt="alt" class="lightbox-image" loading="lazy"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Instead, the cube needs to be rotated around its bottom edge.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="#image-bf87b3cd35408a08dc512dbe11eb62fe" class="lightbox-link"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/cube_002.gif" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-bf87b3cd35408a08dc512dbe11eb62fe"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/cube_002.gif" alt="alt" class="lightbox-image" loading="lazy"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s the tricky part: which bottom edge? It depends on which direction the cube is rolling.&lt;/p&gt;
+&lt;p&gt;In preparing this recipe, I experimented with a few different solutions to this problem:&lt;/p&gt;</description></item><item><title>Arcade-style Spaceship</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/spaceship/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/spaceship/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You want to make a 3D spaceship that flies in an arcade/cinematic way. You&amp;rsquo;re not looking for realistic physics, but more of a dog-fighting, &amp;ldquo;Star Wars&amp;rdquo;-style of spaceflight.&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;To accomplish this, we&amp;rsquo;ll use a &lt;i class="gd-CharacterBody3D"&gt;&lt;/i&gt; &lt;code&gt;CharacterBody3D&lt;/code&gt; for the ship. The three axis inputs (&lt;em&gt;pitch&lt;/em&gt;, &lt;em&gt;roll&lt;/em&gt;, and &lt;em&gt;yaw&lt;/em&gt;) will rotate the body&amp;rsquo;s &lt;code&gt;basis&lt;/code&gt; around the corresponding axis. The direction of motion will always point forward.&lt;/p&gt;
+&lt;div class="box notices cstyle note"&gt;
+&lt;div class="box-label"&gt;&lt;i class="fa-fw fas fa-exclamation-circle"&gt;&lt;/i&gt; Note&lt;/div&gt;
+&lt;div class="box-content"&gt;
+&lt;p&gt;You can do this with &lt;i class="gd-RigidBody3D"&gt;&lt;/i&gt; &lt;code&gt;RigidBody3D&lt;/code&gt; and get the same results. See the example project linked below, which includes a rigid body version as well.&lt;/p&gt;</description></item><item><title>Arcade-style Airplane</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/simple_airplane/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/simple_airplane/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You want to make an airplane controller in 3D, but don&amp;rsquo;t need a fully accurate flight-simulator.&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;In this recipe, we&amp;rsquo;re going to make a &lt;em&gt;simplified&lt;/em&gt; airplane controller. By &amp;ldquo;simplified&amp;rdquo; we mean stripping things down to the basics. We&amp;rsquo;re looking for the &amp;ldquo;feel&amp;rdquo; of flying a plane - one that you can just jump in and start flying effortlessly, with a minimal control scheme.&lt;/p&gt;
+&lt;div class="box notices cstyle note"&gt;
+&lt;div class="box-label"&gt;&lt;i class="fa-fw fas fa-exclamation-circle"&gt;&lt;/i&gt; Note&lt;/div&gt;
+&lt;div class="box-content"&gt;
+&lt;p&gt;This recipe is &lt;em&gt;not&lt;/em&gt; an accurate flight simulator. We are not simulating aerodynamics, so this doesn&amp;rsquo;t fly like a &lt;em&gt;real&lt;/em&gt; airplane. We&amp;rsquo;re going for simplicity and &amp;ldquo;fun&amp;rdquo; here, not accuracy.&lt;/p&gt;</description></item><item><title>Arcade-style Car</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/3d_sphere_car/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/3d_sphere_car/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You want to make an arcade-style car game, so you&amp;rsquo;re looking for simplicity over realistic physics. In this recipe, you&amp;rsquo;ll learn how to make a fun, driveable car using a rolling sphere.&lt;/p&gt;
+&lt;p&gt;&lt;video width="500" controls src="https://godotrecipes.com/godot_recipes/4.x/img/3d_sphere_car_01.webm"&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;There are a lot of ways to make a driving game. Different games need different levels of realism. If you&amp;rsquo;re trying to make a light, arcade-style car, you don&amp;rsquo;t need all of the features that Godot&amp;rsquo;s &lt;i class="gd-VehicleBody3D"&gt;&lt;/i&gt;&lt;code&gt;VehicleBody3D&lt;/code&gt; node provides, such as supension, independently modeled wheels, etc.&lt;/p&gt;</description></item><item><title>Click to move</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/click_to_move/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/click_to_move/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You want to move a 3D object to a clicked position.&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;We&amp;rsquo;ll start with a flat plane for our world. Our actor will move on this plane.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="#image-2080a084a15504c041dabf547c92768f" class="lightbox-link"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/3d_click_01.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-2080a084a15504c041dabf547c92768f"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/3d_click_01.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The actor for this demo is a triangular prism mesh:&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="#image-cbcb25ada3ad298f6607d9a0c4083ec9" class="lightbox-link"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/3d_click_02.png" alt="alt" style="height: auto; width: auto;" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;a href="javascript:history.back();" class="lightbox" id="image-cbcb25ada3ad298f6607d9a0c4083ec9"&gt;
+&lt;img src="https://godotrecipes.com/godot_recipes/4.x/img/3d_click_02.png" alt="alt" class="lightbox-image" loading="lazy"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here is the code for the movement. If given a target, the object will turn and move toward it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-gdscript" data-lang="gdscript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#81a1c1;font-weight:bold"&gt;extends&lt;/span&gt; &lt;span style="color:#8fbcbb"&gt;CharacterBody3D&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#d08770"&gt;@export&lt;/span&gt; &lt;span style="color:#81a1c1;font-weight:bold"&gt;var&lt;/span&gt; speed &lt;span style="color:#81a1c1"&gt;=&lt;/span&gt; &lt;span style="color:#b48ead"&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#d08770"&gt;@export&lt;/span&gt; &lt;span style="color:#81a1c1;font-weight:bold"&gt;var&lt;/span&gt; gravity &lt;span style="color:#81a1c1"&gt;=&lt;/span&gt; &lt;span style="color:#81a1c1"&gt;-&lt;/span&gt;&lt;span style="color:#b48ead"&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#81a1c1;font-weight:bold"&gt;var&lt;/span&gt; target &lt;span style="color:#81a1c1"&gt;=&lt;/span&gt; &lt;span style="color:#8fbcbb"&gt;Vector3&lt;/span&gt;&lt;span style="color:#81a1c1"&gt;.&lt;/span&gt;ZERO
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#81a1c1;font-weight:bold"&gt;func&lt;/span&gt; &lt;span style="color:#88c0d0"&gt;_physics_process&lt;/span&gt;&lt;span style="color:#eceff4"&gt;(&lt;/span&gt;delta&lt;span style="color:#eceff4"&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; velocity&lt;span style="color:#81a1c1"&gt;.&lt;/span&gt;y &lt;span style="color:#81a1c1"&gt;+=&lt;/span&gt; gravity &lt;span style="color:#81a1c1"&gt;*&lt;/span&gt; delta
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#81a1c1;font-weight:bold"&gt;if&lt;/span&gt; target&lt;span style="color:#eceff4"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#88c0d0"&gt;look_at&lt;/span&gt;&lt;span style="color:#eceff4"&gt;(&lt;/span&gt;target&lt;span style="color:#eceff4"&gt;,&lt;/span&gt; &lt;span style="color:#8fbcbb"&gt;Vector3&lt;/span&gt;&lt;span style="color:#81a1c1"&gt;.&lt;/span&gt;UP&lt;span style="color:#eceff4"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; rotation&lt;span style="color:#81a1c1"&gt;.&lt;/span&gt;x &lt;span style="color:#81a1c1"&gt;=&lt;/span&gt; &lt;span style="color:#b48ead"&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; velocity &lt;span style="color:#81a1c1"&gt;=&lt;/span&gt; &lt;span style="color:#81a1c1"&gt;-&lt;/span&gt;transform&lt;span style="color:#81a1c1"&gt;.&lt;/span&gt;basis&lt;span style="color:#81a1c1"&gt;.&lt;/span&gt;z &lt;span style="color:#81a1c1"&gt;*&lt;/span&gt; speed
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#81a1c1;font-weight:bold"&gt;if&lt;/span&gt; transform&lt;span style="color:#81a1c1"&gt;.&lt;/span&gt;origin&lt;span style="color:#81a1c1"&gt;.&lt;/span&gt;&lt;span style="color:#88c0d0"&gt;distance_to&lt;/span&gt;&lt;span style="color:#eceff4"&gt;(&lt;/span&gt;target&lt;span style="color:#eceff4"&gt;)&lt;/span&gt; &lt;span style="color:#81a1c1"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#81a1c1"&gt;.&lt;/span&gt;&lt;span style="color:#b48ead"&gt;5&lt;/span&gt;&lt;span style="color:#eceff4"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; target &lt;span style="color:#81a1c1"&gt;=&lt;/span&gt; &lt;span style="color:#8fbcbb"&gt;Vector3&lt;/span&gt;&lt;span style="color:#81a1c1"&gt;.&lt;/span&gt;ZERO
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; velocity &lt;span style="color:#81a1c1"&gt;=&lt;/span&gt; &lt;span style="color:#8fbcbb"&gt;Vector3&lt;/span&gt;&lt;span style="color:#81a1c1"&gt;.&lt;/span&gt;ZERO
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#88c0d0"&gt;move_and_slide&lt;/span&gt;&lt;span style="color:#eceff4"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We&amp;rsquo;ve also added a &lt;i class="gd-MeshInstance3D"&gt;&lt;/i&gt;&lt;code&gt;MeshInstance3D&lt;/code&gt; called &amp;ldquo;Marker&amp;rdquo; to the scene. This will be moved to indicate the clicked position.&lt;/p&gt;</description></item><item><title>Smooth rotation</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/rotate_interpolate/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/rotate_interpolate/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You want to smoothly rotate a 3D object to point in a new direction.&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;When you first encounter this problem, you may find yourself thinking in terms of &lt;em&gt;Euler angles&lt;/em&gt; - the three values representing the angles to the &lt;strong&gt;x/y/z&lt;/strong&gt; axes. While Godot will allow you to see the object&amp;rsquo;s Euler angles in the &lt;code&gt;rotation&lt;/code&gt; property, it is not recommended to use them to work in 3D. There are a number of reasons why this the case, such as a problem called &amp;ldquo;gimbal lock&amp;rdquo;, where you lose one degree of freedom when one of your rotations reaches 90 degrees.&lt;/p&gt;</description></item><item><title>CharacterBody3D: Align with Surface</title><link>https://godotrecipes.com/godot_recipes/4.x/3d/3d_align_surface/index.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://godotrecipes.com/godot_recipes/4.x/3d/3d_align_surface/index.html</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You need your character body to align with the surface or terrain.&lt;/p&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+&lt;p&gt;This recipe builds on the basic &lt;i class="gd-CharacterBody3D"&gt;&lt;/i&gt;&lt;code&gt;CharacterBody3D&lt;/code&gt; controller described in the &lt;a href="https://godotrecipes.com/godot_recipes/4.x/3d/characterbody3d_examples/"&gt;CharacterBody3D: Movement&lt;/a&gt; recipe, so read that one first.&lt;/p&gt;
+&lt;p&gt;First, we&amp;rsquo;ve added some terrain to the scene. You can download the terrain from here: &lt;a href="https://fertile-soil-productions.itch.io/modular-terrain-pack" target="_blank"&gt;https://fertile-soil-productions.itch.io/modular-terrain-pack&lt;/a&gt;. This is low-poly terrain, but you can use or make any terrain you like for this technique.&lt;/p&gt;
+&lt;p&gt;As you can see, the movement still works with the terrain, but the tank seems to &amp;ldquo;float&amp;rdquo; above the slopes because it doesn&amp;rsquo;t change its orientation.&lt;/p&gt;</description></item></channel></rss>
