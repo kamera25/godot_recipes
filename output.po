@@ -1660,7 +1660,7 @@ msgstr "# <i class=\"fas fa-toolbox\"></i>　基本編"
 #: Math/_index.md
 #: ai/_index.md
 msgid "#### In this section:"
-msgstr "#### このセクションでは："
+msgstr "#### 目次 ："
 
 #: basics/_index.md
 msgid "Basic Godot tips and tricks that apply to any project."
@@ -16590,7 +16590,7 @@ msgstr "次に、ボディに衝突形状を追加する必要があります。
 
 #: games/_index.md
 msgid "# <i class='fas fa-chess-pawn'></i>&nbsp;Games"
-msgstr "# <i class='fas fa-chess-pawn'></i>　試合数"
+msgstr "# <i class='fas fa-chess-pawn'></i>&nbsp;ゲーム"
 
 #: games/_index.md
 msgid ""
