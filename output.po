@@ -18736,7 +18736,7 @@ msgstr ""
 "。\n"
 "* [初めてのGodot: GDScript入門](/godot_recipes/4.x/g101/gdscript/)  - "
 "当サイトのチュートリアル\n"
-"* [Godot公式ドキュメント](https://docs.godotengine.org/ja/latest/getting_started/step_by_"
+"* [Godot公式ドキュメント](https://docs.godotengine.org/en/latest/getting_started/step_by_"
 "step/index.html) - 公式チュートリアル\n"
 "{{% /notice %}}"
 
