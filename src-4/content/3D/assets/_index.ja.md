@@ -12,6 +12,6 @@ pre = "<i class='fas fa-cubes'></i>&nbsp"
 * 『冒険者キャラクターパック』(https://kaylousberg.itch.io/kaykit-adventurers)
 * 『ダンジョンアセットパック』(https://kaylousberg.itch.io/kaykit-dungeon-remastered)
 
-#### このセクションでは：
+#### 目次 ：
 
 {{% children  sort="weight" %}}

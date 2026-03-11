@@ -9,6 +9,6 @@ pre = "<i class='fas fa-project-diagram fa-fw'></i>&nbsp"
 
 自動化された行動と（場合によってはより高度な）インテリジェントなエンティティ。
 
-#### このセクションでは：
+#### 目次 ：
 
 {{% children  sort="weight" %}}

@@ -8,6 +8,6 @@ pre = "<i class='fas fa-film fa-fw'></i>&nbsp"
 
 Godotのアニメーションシステムを使用。
 
-#### このセクションでは：
+#### 目次 ：
 
 {{% children  sort="weight" %}}

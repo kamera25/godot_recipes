@@ -10,6 +10,6 @@ pre = "<i class='fas fa-cube fa-fw'></i>&nbsp"
 
 Godot 開発の3D側面をわかりやすく解説する入門ガイド。
 
-#### このセクションでは：
+#### 目次 ：
 
 {{% children  sort="weight" %}}

@@ -9,6 +9,6 @@ pre = "<i class='far fa-circle fa-fw'></i>&nbsp"
 
 「ノードを知る」シリーズでは、Godotの単一ノードを詳細に解説します。その仕組みを理解するとともに、実際の使用例も紹介します。
 
-#### このセクションでは：
+#### 目次 ：
 
 {{% children  sort="weight" depth="2" %}}

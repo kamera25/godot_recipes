@@ -8,11 +8,11 @@ pre = "<i class='fas fa-graduation-cap fa-fw'></i>&nbsp"
 
 # <i class='fas fa-graduation-cap'></i>&nbsp;Godot 101
 
-<img src="/godot_recipes/4.x/img/godot3_logo.png" alt="Godotロゴ" width="250">
+![alt](/godot_recipes/4.x/img/godot3_logo.png?width=250)
 
 Godotゲームエンジンの入門ガイドです。これまでゲームエンジンを使ったことがない方、あるいはGodotを初めて使う方にとって、最適なスタート地点となるでしょう。
 
-#### このセクションでは：
+#### 目次 ：
 
 {{% children  sort="weight" depth="1" %}}
 

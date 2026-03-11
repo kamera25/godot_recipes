@@ -5,7 +5,7 @@ chapter = true
 pre = "<i class='fas fa-chess-pawn fa-fw'></i>&nbsp"
 +++
 
-# <i class='fas fa-chess-pawn'></i>　試合数
+# <i class='fas fa-chess-pawn'></i>&nbsp;ゲーム
 
 デモゲームとチュートリアル。
 
@@ -13,6 +13,6 @@ pre = "<i class='fas fa-chess-pawn fa-fw'></i>&nbsp"
 We're working on new content for Godot 4.0. In the meantime, we recommend new learners stick with Godot 3.x, which has a lot more resources and learning materials available.
 {{% /notice %}} -->
 
-#### このセクションでは：
+#### 目次 ：
 
 {{% children  sort="weight" %}}

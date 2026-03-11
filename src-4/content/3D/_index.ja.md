@@ -11,6 +11,6 @@ pre = "<i class='fas fa-cube fa-fw'></i>&nbsp"
 
 <!-- For a gentle introduction to working in 3D, see: [Intro to 3D](/godot_recipes/3.x/g101/3d/) -->
 
-#### このセクションでは：
+#### 目次 ：
 
 {{% children  sort="weight" %}}

@@ -9,6 +9,6 @@ pre = "<i class='fas fa-shapes fa-fw'></i>&nbsp"
 
 ゲーム開発における2D領域のヒント、テクニック、チュートリアル情報を提供します。
 
-#### このセクションでは：
+#### 目次 ：
 
 {{% children  sort="weight" %}}

@@ -14,7 +14,7 @@ msgstr "このサイトでは、必要なゲームシステムを構築するた
 
 #: _index.md
 msgid "> Godot's nodes are your ingredients. What can you cook up?"
-msgstr "> Godotのノードはあなたの材料です。これでどんな料理を作れますか？"
+msgstr "> Godotのノードを使って、どんな物を作りますか？"
 
 #: _index.md
 msgid "![alt](/godot_recipes/4.x/img/godot3_logo.png?width=400px)"
@@ -8396,9 +8396,7 @@ msgstr ""
 #: g101/_index.md
 #: g101/start/_index.md
 msgid "![alt](/godot_recipes/4.x/img/godot3_logo.png?width=250)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/godot3_logo.png\" alt=\"Godotロゴ\" "
-"width=\"250\">"
+msgstr "![alt](/godot_recipes/4.x/img/godot3_logo.png?width=250)"
 
 #: g101/_index.md
 msgid "#### See also:"
@@ -10512,7 +10510,6 @@ msgid ""
 "resources and learning materials available.\n"
 "{{% /notice %}}"
 msgstr ""
-"```\n"
 "{{% notice style=\"info\" title=\"Godot 4.0 へのアップデート準備中\" %}}\n"
 "現在は、Godot 4.0対応版のGodot 101を開発中です。それまでの間、新規学習者の方にはGodot "
 "3.xシリーズの使用をお勧めします。このバージョンにはより多くの公式リソースや学習教材が揃っています。\n"
@@ -10529,7 +10526,6 @@ msgid ""
 "In this chapter, we'll introduce the language and get you up to speed with "
 "how it works."
 msgstr ""
-"```\n"
 "Godot の組み込みスクリプト言語である GDScript は、その構文が Python をベースにしているため、Python "
 "に慣れている方ならすぐに使いこなすことができるでしょう。この章では、この言語の基本概念と動作原理について紹介します。"
 
@@ -10954,14 +10950,13 @@ msgid ""
 "selected and press the add button again. Add another {{< gd-icon Sprite2D "
 ">}}`Sprite2D` and also drag the icon into its texture."
 msgstr ""
-"```\n"
 "ノードの重要な特性の一つに、親子関係による階層構造を構築できる点があります。必ず{{< gd-icon Sprite2D "
 ">}}`Sprite2D`を選択した状態で再度追加ボタンをクリックし、別の{{< gd-icon Sprite2D "
 ">}}`Sprite2D`を追加してください。さらに、アイコンをテクスチャ領域にドラッグ＆ドロップして配置することも忘れずに行ってください。"
 
 #: g101/start/101_03.md
 msgid "![alt](/godot_recipes/4.x/img/g4_101_11.png)"
-msgstr "[画像: altテキスト](/godot_recipes/4.x/img/g4_101_11.png)"
+msgstr "![alt](/godot_recipes/4.x/img/g4_101_11.png)"
 
 #: g101/start/101_03.md
 msgid ""
