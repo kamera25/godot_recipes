@@ -56,9 +56,9 @@ layout:
 
 ![alt](/godot_recipes/4.x/img/3d_sphere_car_02.png)
 
-【お知らせ】ノート
+{{% notice note %}}
 ケンニーの『カーキット』でこの車種や他のモデルを入手可能です。以下のURLからダウンロードできます：
-[https://kenney.nl/assets/car-kit](https://kenney.nl/assets/car-kit)。すべてのアセットをダウンロード可能です。使いたいものだけを選んでいただいて構いません。このキットには複数のフォーマット形式のモデルが含まれていますが、プロジェクトに必要な全てを使用する必要はありません。Godotでの使用にはGLTF形式を推奨します。
+[https://kenney.nl/assets/car-kit](https://kenney.nl/assets/car-kit)。すべてのアセットをダウンロード可能です。使いたいものだけを選んでいただいて構いません。このキットには複数のフォーマット形式のモデルが含まれていますが、プロジェクトに必要な全てを使用する必要はありません。Godotでの使用にはGLTF形式を推奨します。{{% /notice %}}
 
 GLTFモデルを使用する場合、インポート設定で調整する必要はありません。
 

@@ -11,7 +11,6 @@ ghcommentid: 15
 
 ## 解決策
 
-```gd
 エンジンにはこの目的のためのノードが用意されています：{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`。このノードをオブジェクトに添付すれば、`screen_entered`シグナルと`screen_exited`シグナルを利用可能になります。
 *
 #### 使用例 1

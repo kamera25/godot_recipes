@@ -5,7 +5,7 @@ draft: false
 ghcommentid: 10
 ---
 
-【お知らせ】情報: {{% notice info %}}
+{{% notice info %}}
 本記事の元ネタとなった[Godot Discord](https://discord.gg/zH7NUgz)の@TheDurielによる[原型図](/godot_recipes/4.x/img/node_access_theduriel.png)に心から感謝します。この資料は保存しておき、必要に応じて参照できる状態にしておくことをお勧めします。
 {{% /notice %}}
 

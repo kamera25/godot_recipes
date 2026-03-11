@@ -7,7 +7,6 @@ ghcommentid: 12
 
 ## 課題
 
-```diff
 この「デルタ」パラメータ（別名：時間差分）は、ゲーム開発においてしばしば誤解されがちな概念です。本チュートリアルでは、これがどのように使用されるのか、フレームレートに依存しない移動の重要性、そしてGodotにおける実践的な使用例について解説します。
 
 ## 解決策
@@ -16,19 +15,6 @@ ghcommentid: 12
 
 ```
 600 pixels / 5 seconds = 120 pixels/second
-```
-
-```python
-def _process():
-    global x, y, delta_x, delta_y
-
-    # フレームごとの移動量を計算
-    delta_x = velocity * math.cos(angle)
-    delta_y = velocity * math.sin(angle)
-
-    # スプライトの位置を更新
-    self.rect.x += int(delta_x * fps_factor)
-    self.rect.y += int(delta_y * fps_factor)
 ```
 
 この実装により、ゲームが60フレーム/秒で動作している場合でも、毎フレーム正確に移動量を計算して表示することができます。fps_factorはFPSレートに応じてスケーリングするための係数です。
@@ -68,8 +54,6 @@ func _process(delta):
 When using the `_process()` function, it automatically includes a parameter called `delta` that is passed in from the engine (similarly to `_physics_process()`, which is used for physics-related code). This represents a time interval as a floating-point value, indicating the duration since the last frame. Typically this is approximately 1/60 or 0.0167 seconds.
 
 この情報があれば、各フレームの移動量を考える必要がなくなり、希望するピクセル単位速度（上記計算結果の「120」）のみを考慮すれば済むようになります。
-
-```
 
 エンジンの「デルタ」値にこの数値を掛けることで、各フレームでピクセルを移動する量が決定されます。フレーム時間が変動した場合でも自動的に調整されるため、手動での設定は不要です。
 
