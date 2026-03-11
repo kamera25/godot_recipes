@@ -60,7 +60,7 @@ func _process(delta):
 
 {{% expand "詳細情報へのリンク" %}}
 * ベクトルの基本理解：[ベクトル数学](https://docs.godotengine.org/en/latest/tutorials/math/vector_math.html)
-* `delta`とは？ [デルタについての解説](/godot_recipes/4.x/basics/understanding_delta/)
+* `delta`とは？ [デルタについての解説](/godot_recipes/4.x/ja/basics/understanding_delta/)
 {{% /expand %}}
 
 シーンを実行するには**［現在のシーンを実行］**ボタンをクリックしてください。その後、自由に移動してみてください。
@@ -118,4 +118,4 @@ func _process(delta):
 
 次のステップでは、「弾丸」シーンを作成し、プレイヤーが射撃できるようにします。
 
-│ {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_02/" icon="fas fa-arrow-left" %}}前の手順{{% /button %}} │ {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_04/" icon="fas fa-arrow-right" icon-position="right" %}}次の手順{{% /button %}}│
+│ {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_02/" icon="fas fa-arrow-left" %}}前の手順{{% /button %}} │ {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_04/" icon="fas fa-arrow-right" icon-position="right" %}}次の手順{{% /button %}}│

@@ -19,7 +19,7 @@ draft: false
 場合によってはこれで十分なこともあります。ただし、ボディーを押し出したい場合は、いくつかの変更が必要です。
 
 ```
-この例では、[プラットフォーマー用キャラクター](/godot_recipes/4.x/2d/platform_character/) レシピで解説されている2Dキャラクターを使用します。この例ではキャラクター移動の最も一般的な方法である `move_and_slide()` を採用しています。もし代わりに `move_and_collide()` を使用している場合は、以下の実装を適切に変更してください。
+この例では、[プラットフォーマー用キャラクター](/godot_recipes/4.x/ja/2d/platform_character/) レシピで解説されている2Dキャラクターを使用します。この例ではキャラクター移動の最も一般的な方法である `move_and_slide()` を採用しています。もし代わりに `move_and_collide()` を使用している場合は、以下の実装を適切に変更してください。
 
 リジッドボディとのインタラクション方法を決定する際には、以下の2つの選択肢があります：
 
@@ -81,7 +81,7 @@ func _physics_process(delta):
 
 ## 関連レシピ
 
-* [プラットフォームキャラクタ](/godot_recipes/4.x/2d/platform_character/)
+* [プラットフォームキャラクタ](/godot_recipes/4.x/ja/2d/platform_character/)
 
 ## <i class="fas fa-video"></i> 動画を観る
 {{< youtube SJuScDavstM >}}

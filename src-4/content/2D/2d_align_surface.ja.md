@@ -10,7 +10,7 @@ draft: true
 
 ## 解決策
 
-まずは基本的なキネマティックプラットフォームキャラクタから始めましょう。詳細は[プラットフォームキャラクターレシピ](/godot_recipes/4.x/2d/platform_char/)を参照してください。
+まずは基本的なキネマティックプラットフォームキャラクタから始めましょう。詳細は[プラットフォームキャラクターレシピ](/godot_recipes/4.x/ja/2d/platform_char/)を参照してください。
 
 以下の移動コードがあります：
 
@@ -102,7 +102,7 @@ func _physics_process(delta):
 
 ## 関連レシピ
 
-[プラットフォームキャラクタの実装](/godot_recipes/4.x/2d/platform_character)
-[KinematicBody2Dの活用方法](/godot_recipes/4.x/physics/godot3_kinematic2d/)
+[プラットフォームキャラクタの実装](/godot_recipes/4.x/ja/2d/platform_character)
+[KinematicBody2Dの活用方法](/godot_recipes/4.x/ja/physics/godot3_kinematic2d/)
 
 <!-- #### この動画が気に入ったら？ -->

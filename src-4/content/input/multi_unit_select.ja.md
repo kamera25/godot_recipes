@@ -160,4 +160,4 @@ func _unhandled_input(event):
 
 ## 関連レシピ
 
-- [マウス入力](/godot_recipes/4.x/input/mouse_input/)
+- [マウス入力](/godot_recipes/4.x/ja/input/mouse_input/)

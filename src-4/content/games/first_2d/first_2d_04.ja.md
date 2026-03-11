@@ -91,5 +91,5 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 
 これで弾丸シーンは完了です。それでは、プレイヤーに射撃機能を追加していきましょう。
 
-| {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_03/" icon="fas fa-arrow-left" %}}前の手順{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_05/" icon="fas fa-arrow-right" icon-position="right" %}}次の手順{{% /button %}} |
+| {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_03/" icon="fas fa-arrow-left" %}}前の手順{{% /button %}} | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_05/" icon="fas fa-arrow-right" icon-position="right" %}}次の手順{{% /button %}} |
 |------|------:|

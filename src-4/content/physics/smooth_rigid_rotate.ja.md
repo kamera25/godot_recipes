@@ -17,7 +17,7 @@ draft: false
 これはまさに「内積」が活躍する場面です。その符号からターゲットの位置が左側か右側かを判断でき、絶対値からは我々が向いている方向とターゲット方向との距離を把握できます。
 
 {{% notice style="tip" title="" %}}
-ドット積について簡単に復習するには、[ベクトル: 内積と外積の使い方](/godot_recipes/4.x/math/dot_cross_product/)をご覧ください。
+ドット積について簡単に復習するには、[ベクトル: 内積と外積の使い方](/godot_recipes/4.x/ja/math/dot_cross_product/)をご覧ください。
 {{% /notice %}}
 
 ```gdscript

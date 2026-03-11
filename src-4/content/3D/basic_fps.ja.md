@@ -101,7 +101,7 @@ FPSキャラクターには通常、前面に位置した武器の3Dメッシュ
 
 ## 関連レシピ
 
-- [入力：マウスキャプチャーの使用方法](/godot_recipes/4.x/input/mouse_capture/)
+- [入力：マウスキャプチャーの使用方法](/godot_recipes/4.x/ja/input/mouse_capture/)
 
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする

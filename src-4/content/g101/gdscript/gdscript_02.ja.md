@@ -35,7 +35,7 @@ func _process(delta):
 その結果、スプライトが毎秒 100 ピクセルの速さで右方向に移動するようになりました。
 
 {{% expand title="詳細情報" %}}
-`delta`について、またゲーム開発においてこれを使用する理由について詳しく知りたい方は、[デルタの理解](/godot_recipes/4.x/basics/understanding_delta/)をご覧ください。
+`delta`について、またゲーム開発においてこれを使用する理由について詳しく知りたい方は、[デルタの理解](/godot_recipes/4.x/ja/basics/understanding_delta/)をご覧ください。
 {{% /expand %}}
 
 ## ベクトルの使用法

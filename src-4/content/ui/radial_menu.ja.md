@@ -25,7 +25,7 @@ draft: false
 ```html
 The `Buttons` {{< gd-icon Control >}}`Control` node serves as the container where you can place any number of items as needed. Ensure you set this control's **Mouse/Filter** property to "Ignore" to prevent it from intercepting mouse clicks.
 
-本例では、[クールダウンボタンレシピ](/godot_recipes/4.x/ui/cooldown_button/) から9つのボタンを使用しています。
+本例では、[クールダウンボタンレシピ](/godot_recipes/4.x/ja/ui/cooldown_button/) から9つのボタンを使用しています。
 
 それでは、ボタンのスクリプトを見てみましょう：
 
@@ -117,4 +117,4 @@ func hide_menu():
 
 ## 関連レシピ
 
-・[UI：クールダウンボタン](/godot_recipes/4.x/ui/cooldown_button/)
+・[UI：クールダウンボタン](/godot_recipes/4.x/ja/ui/cooldown_button/)

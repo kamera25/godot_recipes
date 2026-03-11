@@ -142,6 +142,6 @@ Download the project file here: [floating_text.zip](/godot_recipes/3.x/files/flo
 
 ## 関連レシピ
 
-・[3D入門](/godot_recipes/4.x/g101/3d/)
-・[入力アクション](/godot_recipes/4.x/input/input_actions/)
+・[3D入門](/godot_recipes/4.x/ja/g101/3d/)
+・[入力アクション](/godot_recipes/4.x/ja/input/input_actions/)
 

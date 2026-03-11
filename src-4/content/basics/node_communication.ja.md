@@ -34,7 +34,7 @@ get_tree().get_root().get_node("SomeNode/SomeOtherNode")
 3. 準備済み順序は子優先・親後回しとなっています。つまり、ノードの `_ready()` メソッド内で親プロパティにアクセスしようとすると失敗する可能性があるということです。これは親が未だ準備中状態であるためです。
 
 {{% notice tip %}}
-ノードがツリー構造にどのように追加され、準備完了状態になるかについては、[木の順序について理解する](/godot_recipes/4.x/basics/tree_ready_order/) を参照してください。
+ノードがツリー構造にどのように追加され、準備完了状態になるかについては、[木の順序について理解する](/godot_recipes/4.x/ja/basics/tree_ready_order/) を参照してください。
 {{% /notice %}}
 
 一般的に、ノードやシーンはゲーム内の任意の場所でインスタンス化可能であるべきであり、その親オブジェクトがどのようなものになるかについて一切仮定すべきではありません。
@@ -56,7 +56,7 @@ get_tree().get_root().get_node("SomeNode/SomeOtherNode")
 `get_node()` は、指定されたパスを使用してシーンツリーを辿り、指定した名前のノードを検索します。
 
 {{% notice tip %}}
-ノードパスについてより詳しく知りたい場合は、[ノードパスの理解](/godot_recipes/4.x/basics/getting_nodes/)を参照してください。
+ノードパスについてより詳しく知りたい場合は、[ノードパスの理解](/godot_recipes/4.x/ja/basics/getting_nodes/)を参照してください。
 {{% /notice %}}
 
 #### `get_node()` の使用例
@@ -216,5 +216,5 @@ func _ready():
 
 ## 関連レシピ
 
-- [ツリーの読み取り順序について理解する](/godot_recipes/4.x/basics/tree_ready_order/)
-- [ノードパスの取得方法を理解する](/godot_recipes/4.x/basics/getting_nodes/)
+- [ツリーの読み取り順序について理解する](/godot_recipes/4.x/ja/basics/tree_ready_order/)
+- [ノードパスの取得方法を理解する](/godot_recipes/4.x/ja/basics/getting_nodes/)

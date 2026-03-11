@@ -70,6 +70,6 @@ for i in get_slide_collision_count():
 
 1. プラットフォームキャラクター（リンク）
 
-詳細については[プラットフォームキャラクター]レシピを参照してください（/godot_recipes/4.x/2d/platform_character/）。
+詳細については[プラットフォームキャラクター]レシピを参照してください（/godot_recipes/4.x/ja/2d/platform_character/）。
 
 2. トップダウン型シューティングゲーム（リンク）

@@ -56,7 +56,7 @@ Godot 3.5 で `SceneTreeTween` を使い始めた場合、Godot 4.0 の {{< gd-i
 
 このノードにおける最大の変更点は `move_and_slide()` 関数の使用方法です。もはやパラメータは一切不要となり、すべてが組み込みプロパティとして実装されました。これにはネイティブの `velocity`（速度）プロパティも含まれているため、ユーザーが独自定義する必要はなくなりました。
 
-これらのノードの詳細な使用例については、[プラットフォームキャラクタ](/godot_recipes/4.x/2d/platform_character/)および／または[基本FPSキャラクタ](/godot_recipes/4.x/3d/basic_fps/)を参照してください。
+これらのノードの詳細な使用例については、[プラットフォームキャラクタ](/godot_recipes/4.x/ja/2d/platform_character/)および／または[基本FPSキャラクタ](/godot_recipes/4.x/ja/3d/basic_fps/)を参照してください。
 
 
 ## タイルマップ (TileMap)

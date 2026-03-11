@@ -98,4 +98,4 @@ Godot ワークフローにおいて共通的な作業の一つにシーンの�
 プレイヤーシーンの設定はこれで完了です。ゲーム内でプレイヤーが操作する艦船に必要な機能を実装するため、ノードを追加しました。次のセクションでは、プレイヤーが艦船を制御し、射撃を行い、物体と衝突したことを検知するためのコードを追加してゆきます。
 
 <hr>
-    次のステップへ: {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_01/" icon="fas fa-arrow-left" %}}前に戻る{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_03/" icon="fas fa-arrow-right" icon-position="right" %}}次へ進む{{% /button %}} |
+    次のステップへ: {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_01/" icon="fas fa-arrow-left" %}}前に戻る{{% /button %}} | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_03/" icon="fas fa-arrow-right" icon-position="right" %}}次へ進む{{% /button %}} |

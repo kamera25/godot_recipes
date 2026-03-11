@@ -272,7 +272,7 @@ Download the project file here: [car_steering.zip](/godot_recipes/4.x/files/car_
 
 ## 関連レシピ
 
-- [ゲーム開発数学：補間法](/godot_recipes/4.x/math/interpolation/)
+- [ゲーム開発数学：補間法](/godot_recipes/4.x/ja/math/interpolation/)
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 

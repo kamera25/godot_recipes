@@ -23,7 +23,7 @@ draft: false
  {{% /notice %}}
 
 
-この機能を既存のプラットフォームキャラクタに追加します。設定方法については[プラットフォームキャラクタレシピ](/godot_recipes/4.x/2d/platform_character/)を参照してください。
+この機能を既存のプラットフォームキャラクタに追加します。設定方法については[プラットフォームキャラクタレシピ](/godot_recipes/4.x/ja/2d/platform_character/)を参照してください。
 
 タイミング処理に関しては、`CoyoteTimer`という名前の`タイマー`ノードを追加し、設定を**ワンショットモード**にします。
 
@@ -76,10 +76,10 @@ func _on_coyote_timer_timeout():
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-[動くプラットフォーム](/godot_recipes/4.x/2d/moving_platforms) プロジェクト内のキャラクターにはコヨーテタイムが実装されています。
+[動くプラットフォーム](/godot_recipes/4.x/ja/2d/moving_platforms) プロジェクト内のキャラクターにはコヨーテタイムが実装されています。
 
 プロジェクトコードはこちらからダウンロードできます: [https://github.com/godotrecipes/2d_moving_platforms](https://github.com/godotrecipes/2d_moving_platforms)
 
 ## 関連レシピ
 
-* [プラットフォームキャラクタ](/godot_recipes/4.x/2d/platform_character/)
+* [プラットフォームキャラクタ](/godot_recipes/4.x/ja/2d/platform_character/)

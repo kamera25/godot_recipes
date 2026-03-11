@@ -177,7 +177,7 @@ func _on_area_entered(area):
 
 <nav>
         <ul>
-            <li><a href="/godot_recipes/4.x/games/first_2d/first_2d_08/" class="btn prev">← Prev</a></li>
+            <li><a href="/godot_recipes/4.x/ja/games/first_2d/first_2d_08/" class="btn prev">← Prev</a></li>
             <li><a href="/godot_rules/4.x/games/first_2d/first_2d_10/" class="btn next fas fa-arrow-right" data-icon-position="right">Next→</a></li>
         </ul>
     </nav>

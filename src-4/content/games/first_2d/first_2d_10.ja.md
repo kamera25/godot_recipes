@@ -91,5 +91,5 @@ func _on_player_died():
 
 この操作で2秒間「ゲームオーバー」画面が表示され、その後スタートボタンに戻るので、再度プレイできます。ぜひお試しいただき、何ゲームか続けて遊んでみてください。
 
-| {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_09/" icon="fas fa-arrow-left" %}} 前へ{{% /button %}} | {{% button href="/godot_recipes/4.x/games/first_2d/first_2d_end/" icon="fas fa-arrow-right" icon-position="right" %}} 次へ{{% /button %}} |
+| {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_09/" icon="fas fa-arrow-left" %}} 前へ{{% /button %}} | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_end/" icon="fas fa-arrow-right" icon-position="right" %}} 次へ{{% /button %}} |
 |------|------:|

@@ -5,7 +5,7 @@ draft: false
 pre: "01. "
 ---
 
-この最初のゲームプロジェクトでは、初めてGodot Engineでゲームを作成する手順をご案内します。事前の経験は必要ありませんが、少なくとも[『Godot 101：入門ガイド』](/godot_recipes/4.x/g1intr/start/)セクションに目を通していることが望ましいです。ここでは、エディタインターフェースやGodot UIの操作方法について学ぶことができます。
+この最初のゲームプロジェクトでは、初めてGodot Engineでゲームを作成する手順をご案内します。事前の経験は必要ありませんが、少なくとも[『Godot 101：入門ガイド』](/godot_recipes/4.x/ja/g1intr/start/)セクションに目を通していることが望ましいです。ここでは、エディタインターフェースやGodot UIの操作方法について学ぶことができます。
 
 {{% notice style="note" title="なぜ2Dから始めるべきか？"%}}
 一言で言えば、3Dゲームは2Dゲームと比べて格段に複雑です。しかし、理解すべき基本エンジン機能の多くは同じものです。Godotの開発ワークフローをしっかり習得するまでは、2Dプロジェクトに専念することをおすすめします。その段階までくれば、3Dへの移行はずっとスムーズに感じられるはずです。
@@ -47,5 +47,5 @@ Godotを起動して新規プロジェクトを開始しましょう。名前は
 
 設定は完了しました。いよいよ開始できます！次のセクションでは、プレイヤーが操作する宇宙船を作成します。
 
-前の手順に戻る：<button href="/godot_recipes/4.x/games/first_2d/">《戻る》</button> |
-   次の手順へ進む：<button href="/godot_recipes/4.x/games/first_2d/first_2d_02/">《次へ》</button> |
+前の手順に戻る：<button href="/godot_recipes/4.x/ja/games/first_2d/">《戻る》</button> |
+   次の手順へ進む：<button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_02/">《次へ》</button> |

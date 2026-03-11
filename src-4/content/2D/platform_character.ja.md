@@ -19,7 +19,7 @@ ghcommentid: 16
 
 まず `CharacterBody2D` ノードを作成し、その上に `Sprite2D` と `CollisionShape2D` を追加してください。
 
-以下のスクリプトをキャラクターノードのルートに追加してください。なお、ここでは[入力マップ]で定義した入力アクション（`"walk_right"`、`"walk_left"`、および `"jump"`）を使用しています。詳細は [InputActions](/godot_recipes/4.x/input/input_actions/) をご覧ください。
+以下のスクリプトをキャラクターノードのルートに追加してください。なお、ここでは[入力マップ]で定義した入力アクション（`"walk_right"`、`"walk_left"`、および `"jump"`）を使用しています。詳細は [InputActions](/godot_recipes/4.x/ja/input/input_actions/) をご覧ください。
 
 ```gdscript
 extends CharacterBody2D
@@ -55,7 +55,7 @@ func _physics_process(delta):
 この動作を実現する効果的な方法の一つが線形補間（"lerp"）を使用することです。移動中は現在速度と最大速度の間で補間し、停止時は現在速度から0まで補間します。補間量を調整することで、さまざまな移動スタイルを実現できます。
 
 {{% notice tip %}}
-線形補間の概要については、[ゲーム開発数学：補間](/godot_recipes/4.x/math/interpolation/)をご覧ください。
+線形補間の概要については、[ゲーム開発数学：補間](/godot_recipes/4.x/ja/math/interpolation/)をご覧ください。
 {{% /notice %}}
 
 ```gdscript

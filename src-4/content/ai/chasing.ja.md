@@ -73,5 +73,5 @@ func _on_DetectRadius_body_exited(body):
 
 ## 関連レシピ
 
-- 【トップダウン移動】（/godot_recipes/4.x/2d/topdown_movement/#option-1-8-way-movement）
-- 【ホーミングミサイル】（/godot_recipes/4.x/ai/homing_missile/）
+- 【トップダウン移動】（/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement）
+- 【ホーミングミサイル】（/godot_recipes/4.x/ja/ai/homing_missile/）

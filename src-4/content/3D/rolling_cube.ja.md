@@ -209,4 +209,4 @@ var tween = create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN)
 
 ## 関連レシピ
 
-- [変換処理](/godot_recipes/4.x/math/transforms/)
+- [変換処理](/godot_recipes/4.x/ja/math/transforms/)

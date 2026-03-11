@@ -119,7 +119,7 @@ func shoot():
 ## 関連レシピ
 
 <!-- - [Top-down character](/godot_recipes/3.x/2d/topdown_movement/) -->
-- [ゲーム開発数学：トランスフォーム操作](/godot_recipes/4.x/math/transforms/)
+- [ゲーム開発数学：トランスフォーム操作](/godot_recipes/4.x/ja/math/transforms/)
 <!-- - [AI: Homing missiles](/godot_recipes/3.x/ai/homing_missile/) -->
 
 <!-- #### この動画が気に入ったら？

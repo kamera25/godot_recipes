@@ -158,6 +158,6 @@ func explode():
 ## 関連レシピ
 
 ```markdown
-- [スプライトシートアニメーション](/godot_recipes/4.x/animation/spritesheet_animation/)
-- [トップダウン型キャラクター操作](/godot_recipes/4.x/2d/topdown_movement/#option-2-rotate-and-move)
-- [トランスフォーム操作](/godot_recipes/4.x/math/transforms)
+- [スプライトシートアニメーション](/godot_recipes/4.x/ja/animation/spritesheet_animation/)
+- [トップダウン型キャラクター操作](/godot_recipes/4.x/ja/2d/topdown_movement/#option-2-rotate-and-move)
+- [トランスフォーム操作](/godot_recipes/4.x/ja/math/transforms)
