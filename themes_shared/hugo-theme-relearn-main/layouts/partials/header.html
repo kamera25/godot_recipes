@@ -134,6 +134,19 @@
               {{ .Title }}
             </span>
           {{- end }}
+          {{- if hugo.IsMultilingual }}
+            <span class="links language-switcher" style="margin-left: 1rem; font-size: 0.9em;">
+              <i class="fas fa-language fa-fw"></i>
+              {{- range $index, $translation := .Page.AllTranslations }}
+                {{- if gt $index 0 }} <span style="margin: 0 0.2rem;">|</span> {{- end }}
+                {{- if eq $translation.Lang $.Page.Lang }}
+                  <span style="font-weight: bold; color: var(--PRIMARY-color);">{{ $translation.Language.LanguageName }}</span>
+                {{- else }}
+                  <a href="{{ partial "relLangPrettyUglyURL.hugo" (dict "to" $translation "basename" $basename) }}" title="{{ $translation.Language.LanguageName }}" style="text-decoration: none;">{{ $translation.Language.LanguageName }}</a>
+                {{- end }}
+              {{- end }}
+            </span>
+          {{- end }}
           </div>
         {{- if $toc }}
 {{ $toc_content }}
