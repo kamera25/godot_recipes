@@ -23,7 +23,7 @@ pre: "04. "
 
 Just like we did with the `Player` scene, we need to consider what nodes we'll need to make the bullet work. We can again use an {{< gd-icon Area2D >}}`Area2D`, since that will allow us to detect the bullet hitting things. This means we'll need a collision shape, and a sprite to display the bullet image. Finally, we need a way to detect when the bullet goes offscreen so we can automatically remove it.
 
-以下にノードの設定を示します：
+以下にノードの設定を示します。
 
 * `Area2D` - この`Bullet`に名前を付ける
         * `Sprite2D`

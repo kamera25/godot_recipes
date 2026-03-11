@@ -22,7 +22,7 @@ draft: false
 
 ### 入力値
 
-制御用に、以下の4つの入力を［入力マップ］に追加します：
+制御用に、以下の4つの入力を［入力マップ］に追加します。
 
 - `加速`
 - `ブレーキ`
@@ -48,7 +48,7 @@ layout:
      {{< gd-icon Node3D >}} CarMesh (Imported model)
 ```
 
-以下に、各ノードの動作原理を説明します：「加速」を押すと、{{< gd-icon RigidBody3D >}}`RigidBody3D` に対してオブジェクト（{{< gd-icon MeshInstance3D >}}`CarMesh`）が向いている方向に力が加わります。一方、旋回入力を入力すると、{{< gd-icon MeshInstance3D >}}`CarMesh`が回転します。ボールが転がる際、この動きに伴って車のメッシュも移動します（ここではボール自体の回転は考慮しません）。
+以下に、各ノードの動作原理を説明します。「加速」を押すと、{{< gd-icon RigidBody3D >}}`RigidBody3D` に対してオブジェクト（{{< gd-icon MeshInstance3D >}}`CarMesh`）が向いている方向に力が加わります。一方、旋回入力を入力すると、{{< gd-icon MeshInstance3D >}}`CarMesh`が回転します。ボールが転がる際、この動きに伴って車のメッシュも移動します（ここではボール自体の回転は考慮しません）。
 
 #### カーメッシュ
 
@@ -102,7 +102,7 @@ GLTFモデルを使用する場合、インポート設定で調整する必要�
 
 ### スクリプト
 
-まずスクリプトで使用するノード参照をいくつか定義します：
+まずスクリプトで使用するノード参照をいくつか定義します。
 
 ```gdscript
 extends RigidBody3D
@@ -137,7 +137,7 @@ var turn_input = 0
 
 void _physics_process()
 {
-    // 車の向きに基づいて車体に力を加え、さらに車メッシュをボールの位置に固定します：
+    // 車の向きに基づいて車体に力を加え、さらに車メッシュをボールの位置に固定します。
     float3 force = vehicle->GetForwardVector() * kCarForceMagnitude;
     vehicle->AddForceAtPosition(force, ballPosition);
 
@@ -152,7 +152,7 @@ func _physics_process(delta):
         apply_central_force(-car_mesh.global_transform.basis.z * speed_input)
 ```
 
-次の手順は入力値を取得することですが、その前に光線が地面と衝突しているかどうかも確認します：
+次の手順は入力値を取得することですが、その前に光線が地面と衝突しているかどうかも確認します。
 
 ```gdscript
 func _process(delta):

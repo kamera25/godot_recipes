@@ -10,7 +10,7 @@ draft: false
 
 ## 解決策
 
-敵をプレイヤー追跡モードに移行させる最初のステップは、敵が移動する必要のある方向を決定することです。ベクトル **A** から **B** への方向を求めるには、以下のように計算します：**B** - **A**。この結果を正規化すれば、方向ベクトルが得られます。
+敵をプレイヤー追跡モードに移行させる最初のステップは、敵が移動する必要のある方向を決定することです。ベクトル **A** から **B** への方向を求めるには、以下のように計算します。**B** - **A**。この結果を正規化すれば、方向ベクトルが得られます。
 
 このアプローチは非常にシンプルです。毎フレーム、敵の速度ベクトルをプレイヤー方向へ向くように設定します。
 
@@ -28,7 +28,7 @@ velocity = position.direction_to(player.position) * speed
 
 ![alt](/godot_recipes/4.x/img/chase_01.png)
 
-以下にサンプルコードを示します：
+以下にサンプルコードを示します。
 
 ```gdscript
 extends CharacterBody2D
@@ -73,5 +73,5 @@ func _on_DetectRadius_body_exited(body):
 
 ## 関連レシピ
 
-- [トップダウン移動](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)
-- [ホーミングミサイル](/godot_recipes/4.x/ja/ai/homing_missile/)
+- [見下ろし型のキャラクター移動](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)
+- [追跡ミサイル](/godot_recipes/4.x/ja/ai/homing_missile/)

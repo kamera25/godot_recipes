@@ -32,7 +32,7 @@ Godot では、衝突が発生した際、接触時の法線ベクトルを取�
 
 表面法線を取得した後、タンクの**Y**軸をそれに平行に合わせる必要があります。ただし、`Transform3D.looking_at()` 関数は使用できません。このメソッドでは**-Z**軸（前方方向）が法線方向に揃ってしまうためです。
 
-これを実現するには、以下の関数を使用します：
+これを実現するには、以下の関数を使用します。
 
 ```gdscript
 func align_with_y(xform, new_y):
@@ -99,7 +99,7 @@ func _physics_process(delta):
 
 <video controls src="/godot_recipes/4.x/img/3d_kinematic_09.webm"></video>
 
-以下の手順でさらに精度の高い結果を得られます：前面と背面にそれぞれレイキャストを1回ずつ実行します。そこから平均的な法線ベクトルを算出します：
+以下の手順でさらに精度の高い結果を得られます：前面と背面にそれぞれレイキャストを1回ずつ実行します。そこから平均的な法線ベクトルを算出します。
 
 ```gdscript
 var n = ($FrontRay.get_collision_normal() + $RearRay.get_collision_normal()) / 2.0

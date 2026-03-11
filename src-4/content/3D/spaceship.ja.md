@@ -87,7 +87,7 @@ var yaw_input = 0.0
 
 三軸速度は艦船の「操作性」に直接影響を及ぼします。ご自身と目指す飛行スタイルに最適な設定値を見つけるため、ぜひ試行錯誤してみてください。
 
-次に、`get_input()` 関数に以下の行を追加して3軸入力を取得します：
+次に、`get_input()` 関数に以下の行を追加して3軸入力を取得します。
 
 ```gdscript
 pitch_input = Input.get_axis("pitch_down", "pitch_up")
@@ -192,7 +192,7 @@ yaw_input = roll_input
 
 ### 全文スクリプト
 
-以下に完全なスクリプトを示します：
+以下に完全なスクリプトを示します。
 
 ```gdscript
 extends CharacterBody3D

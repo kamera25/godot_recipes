@@ -12,7 +12,7 @@ draft: false
 
 プレイヤーの体力を表示する一般的な方法として、一連のアイコン（通常はハートマーク）を使用する手法があります。プレイヤーがダメージを受けると、これらが徐々に消失していきます。
 
-本レシピでは、以下の3つの方法でこの情報を表示する方法をご紹介します：「簡易表示」「空欄表示」、そして「部分表示」です。
+本レシピでは、以下の3つの方法でこの情報を表示する方法をご紹介します。「簡易表示」「空欄表示」、そして「部分表示」です。
 
 <img src="/godot_recipes/4.x/img/heart_bar_02.png">
 
@@ -39,7 +39,7 @@ draft: false
 
 以下のスクリプトは3種類すべてのバー構成に対応できるよう設計されています。ゲームで実際に使用するモードは1つで済むはずなので、他のモードに関連するコードは削除しても構いません。
 
-まず、必要なテクスチャを読み込み、3つのバーモードを定義します：
+まず、必要なテクスチャを読み込み、3つのバーモードを定義します。
 
 ```gdscript
 extends HBoxContainer
@@ -68,7 +68,7 @@ func update_health(value):
 入力値に対する境界チェックは行いません。ゲームで健康度を実装する方法には様々な方法があるため、これについては開発者の裁量に委ねられています。
 {{% /notice %}}
 
-まず、`update_simple()` メソッドについて説明します。この処理では、ハートコンテナを順にループしながら、各 `{{< gd-icon TextureRect >}}TextureRect` の表示状態を設定します：
+まず、`update_simple()` メソッドについて説明します。この処理では、ハートコンテナを順にループしながら、各 `{{< gd-icon TextureRect >}}TextureRect` の表示状態を設定します。
 
 ```gdscript
 func update_simple(value):
@@ -77,7 +77,7 @@ func update_simple(value):
 ```
 
 ```
-`update_empty()` は非常に似ていますが、アイコンを隠す代わりに、そのテクスチャを空のコンテナー用に変更します：
+`update_empty()` は非常に似ていますが、アイコンを隠す代わりに、そのテクスチャを空のコンテナー用に変更します。
 
 ```gdscript
 func update_empty(value):
@@ -101,7 +101,7 @@ func update_partial(value):
             get_child(i).texture = heart_empty
 ```
 
-以下に各バーモードの使用例を示します：
+以下に各バーモードの使用例を示します。
 
 ![alt](/godot_recipes/4.x/img/heart_bar_04.gif)
 
@@ -111,7 +111,7 @@ func update_partial(value):
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトのサンプルコードはこちらでダウンロードできます: [https://github.com/godotrecipes/heart_bars](https://github.com/godotrecipes/heart_bars)
+プロジェクトのサンプルコードはこちらでダウンロードできます。 [https://github.com/godotrecipes/heart_bars](https://github.com/godotrecipes/heart_bars)
 
 <!-- {{% notice note %}}
 Download the project file here: [heart_bars.zip](/godot_recipes/3.x/files/heart_bars.zip)

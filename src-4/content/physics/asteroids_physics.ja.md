@@ -12,7 +12,7 @@ draft: false
 
 ````{{< gd-icon RigidBody2D >}}`RigidBody2D` を使用する際には少し注意が必要です。Godotの物理エンジンによって制御されるため、直接移動させるのではなく力を加える必要があります。剛性ボディを扱う前に、[RigidBody2D APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html)を必ず確認することを強くお勧めします。これからこの例を進めていく過程で、このドキュメントを参照しながら進めていきましょう。
 
-本例では、以下のノード設定を使用します：
+本例では、以下のノード設定を使用します。
 
 ```
 {{< gd-icon RigidBody2D >}} RigidBody2D (Ship)
@@ -26,7 +26,7 @@ draft: false
 {{% /notice %}}
 ```
 
-以下の入力を「入力マップ」で使用します：
+以下の入力を「入力マップ」で使用します。
 
 |入力方法|キー|
 |-------|---|
@@ -89,7 +89,7 @@ func _physics_process(_delta):
 @onready var screensize = get_viewport_rect().size
 ```
 
-次に新しい機能を追加します：
+次に新しい機能を追加します。
 
 ```gdscript
 func _integrate_forces(state):
@@ -125,7 +125,7 @@ def update():
     _integrate_forces(body)
 ```
 
-まず、このために新規変数を追加します：
+まず、このために新規変数を追加します。
 
 ```gdscript
 var teleport_pos = null
@@ -141,7 +141,7 @@ def get_input():
         teleport_pos = Vector2(randf_range(0, screensize.x), randf_range(0, screensize.y))
 ```
 
-最終的に、`_integrate_forces()` 関数では、`teleport_position` が設定されている場合、まずその値を適用した後にリセットします：
+最終的に、`_integrate_forces()` 関数では、`teleport_position` が設定されている場合、まずその値を適用した後にリセットします。
 
 ```gdscript
     if teleport_pos:

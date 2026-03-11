@@ -12,7 +12,7 @@ draft: false
 
 リアルタイムストラテジー（RTS）ゲームでは、複数ユニットに同時に命令を出す必要がある場合が多い。一般的な操作手法として、対象ユニットをマウスでクリックしてドラッグすることで選択範囲を指定する方法がある。ユニットを選択したら、マップ上をクリックすることで移動コマンドを実行できる。
 
-以下に目指すべき例を示します：
+以下に目指すべき例を示します。
 
 ![alt](/godot_recipes/4.x/img/multi_unit_01.gif)
 
@@ -155,7 +155,7 @@ func _unhandled_input(event):
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトコードはこちらからダウンロードできます: [https://github.com/godotrecipes/multi_unit_support](https://github.com/godotrecipes/multi_unit_support)
+プロジェクトコードはこちらからダウンロードできます。 [https://github.com/godotrecipes/multi_unit_support](https://github.com/godotrecipes/multi_unit_support)
 
 
 ## 関連レシピ

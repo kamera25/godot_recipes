@@ -43,7 +43,7 @@ func _unhandled_input(event):
 
 これらのイベントはマウスが移動するたびに発生します。移動距離（画面座標単位）は「`relative`」プロパティで取得できます。
 
-以下に、マウス操作による3Dキャラクターの回転動作を実装した具体例を紹介します：
+以下に、マウス操作による3Dキャラクターの回転動作を実装した具体例を紹介します。
 
 ```gdscript
 # Converts mouse movement (pixels) to rotation (radians).

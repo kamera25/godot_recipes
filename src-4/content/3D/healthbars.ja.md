@@ -15,7 +15,7 @@ ghcommentid: 35
 
 <img src="/godot_recipes/4.x/img/healthbar_example.gif" alt="ヘルスバーの例">
 
-必要なアセットがある場合、バーで使用している以下の3つの画像を紹介します：
+必要なアセットがある場合、バーで使用している以下の3つの画像を紹介します。
 
 ![alt](/godot_recipes/4.x/img/barHorizontal_green_mid%20200.png)
 
@@ -29,7 +29,7 @@ ghcommentid: 35
 
 ### プロジェクト設定
 
-例として使用する「モブ」の開始点として、{{< gd-icon CharacterBody3D >}}`CharacterBody3D`ノードを設定します。このノードは自動で出現し、直線的に移動するプログラムが組まれています。また、以下のコードでダメージ処理を実装します：
+例として使用する「モブ」の開始点として、{{< gd-icon CharacterBody3D >}}`CharacterBody3D`ノードを設定します。このノードは自動で出現し、直線的に移動するプログラムが組まれています。また、以下のコードでダメージ処理を実装します。
 
 ```gdscript
 func _on_input_event(_camera, event, _position, _normal, _shape_idx):

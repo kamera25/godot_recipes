@@ -73,7 +73,7 @@ func interact(dir):
 
 追加する {{< gd-icon AnimationPlayer >}} `AnimationPlayer` と胸蓋が開くアニメーションを作成します。
 
-ドアと同様に、静的ボディを「インタラクション可能」グループに追加し、スクリプト内に `interact()` 関数を実装します：
+ドアと同様に、静的ボディを「インタラクション可能」グループに追加し、スクリプト内に `interact()` 関数を実装します。
 
 ```gdscript
 extends Node3D

@@ -4,7 +4,7 @@ weight = 1
 pre = "<i class='fas fa-newspaper fa-fw'></i>&nbsp"
 +++
 
-以下に最新追加されたレシピをご紹介します：
+以下に最新追加されたレシピをご紹介します。
 
 * [マルチターゲットカメラ](/godot_recipes/4.x/ja/2d/multitarget_camera/)
 * [キャラクターとリジッドボディの相互作用](/godot_recipes/4.x/ja/physics/character_vs_rigid/)

@@ -63,7 +63,7 @@ $CoyoteTimer.wait_time = coyote_frames / 60.0
         $CoyoteTimer.start()
 ```
 
-「CoyoteTimer」は以下のタイミングでコヨーテ状態の終了を通知します：
+「CoyoteTimer」は以下のタイミングでコヨーテ状態の終了を通知します。
 
 ```gdscript
 func _on_coyote_timer_timeout():
@@ -78,7 +78,7 @@ func _on_coyote_timer_timeout():
 
 [動くプラットフォーム](/godot_recipes/4.x/ja/2d/moving_platforms) プロジェクト内のキャラクターにはコヨーテタイムが実装されています。
 
-プロジェクトコードはこちらからダウンロードできます: [https://github.com/godotrecipes/2d_moving_platforms](https://github.com/godotrecipes/2d_moving_platforms)
+プロジェクトコードはこちらからダウンロードできます。 [https://github.com/godotrecipes/2d_moving_platforms](https://github.com/godotrecipes/2d_moving_platforms)
 
 ## 関連レシピ
 

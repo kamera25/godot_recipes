@@ -52,7 +52,7 @@ We'll also assume you've already set up the character's animations using {{< gd-
 
 ### コード内での呼び出し状態
 
-以下に、全てのアニメーションに関する完全なツリー構造を示します：
+以下に、全てのアニメーションに関する完全なツリー構造を示します。
 
 !
 
@@ -114,5 +114,5 @@ AnimationTreeStateMachineを使用して以下の処理を管理できます：
 ## 関連レシピ
 
 - [スプライトシートアニメーション](/godot_recipes/4.x/ja/animation/spritesheet_animation/)
-- [トップダウン型キャラクター操作](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)
+- [見下ろし型キャラクター操作](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)
 

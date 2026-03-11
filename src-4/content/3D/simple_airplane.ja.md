@@ -20,7 +20,7 @@ draft: false
 
 このシーンでは `CharacterBody3D` を使用します。実際の飛行力学（揚力、抗力など）はシミュレートしないため、この場合 `RigidBody3D` は必要ありません。
 
-以下にモデルのセットアップをご説明します：
+以下にモデルのセットアップをご説明します。
 
 ![alt](/godot_recipes/4.x/img/kb_plane_01.png)
 
@@ -172,7 +172,7 @@ func _physics_process(delta):
     move_and_slide()
 ```
 
-その間、`get_input()`関数では、減速時と降下時にも`grounded`を考慮に入れ、`min_flight_speed`以上の速度に達している場合にのみ離陸を許可するようにします：
+その間、`get_input()`関数では、減速時と降下時にも`grounded`を考慮に入れ、`min_flight_speed`以上の速度に達している場合にのみ離陸を許可するようにします。
 
 ```gdscript
 func get_input(delta):

@@ -40,13 +40,13 @@ func _on_area_entered(area):
 
 ## 敵への射撃を追加
 
-敵のスクリプト上部で新しい弾丸をロードします：
+敵のスクリプト上部で新しい弾丸をロードします。
 
 ```gdscript
 var bullet_scene = preload("res://enemy_bullet.tscn")
 ```
 
-次に撮影機能を更新します：
+次に撮影機能を更新します。
 
 ```gdscript
 func _on_shoot_timer_timeout():

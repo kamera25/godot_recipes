@@ -17,7 +17,7 @@ draft: false
 
 ### 1: レベルボックス
 
-以下にノードの設定を示します：
+以下にノードの設定を示します。
 
 ```
 LevelBox: {{< gd-icon PanelContainer >}} PanelContainer
@@ -97,7 +97,7 @@ func _on_gui_input(event):
 
 ![alt](/godot_recipes/4.x/img/level_select_04.png)
 
-以下のノードを使用して作成します：
+以下のノードを使用して作成します。
 
 ```
 LevelMenu:{{< gd-icon MarginContainer >}} MarginContainer

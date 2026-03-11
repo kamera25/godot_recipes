@@ -6,7 +6,7 @@ draft: false
 
 ## 課題
 
-必要になるのが「ホーミングミサイル」です。これは移動する標的を自動で追尾する砲弾です。
+必要になるのが「追跡ミサイル」です。これは移動する標的を自動で追尾する砲弾です。
 
 ## 解決策
 
@@ -23,7 +23,7 @@ draft: false
     {{< gd-icon Timer >}} Timer: Lifetime
 ```
 
-テクスチャについては、お好きな画像を自由に使用できます。一例をご紹介します：
+テクスチャについては、お好きな画像を自由に使用できます。一例をご紹介します。
 
 <img src="/godot_recipes/4.x/img/missile.png" alt="ミサイル">
 
@@ -32,7 +32,7 @@ draft: false
 
 スクリプトを追加し、{{< gd-icon Area2d >}}`Area2D`の`body_entered`シグナルと{{< gd-icon Timer >}}`Timer`の`timeout`シグナルを接続してください。
 
-以下に開始スクリプトを示します：
+以下に開始スクリプトを示します。
 
 ```gdscript
 extends Area2D
@@ -63,7 +63,7 @@ func _on_Lifetime_timeout():
 
 詳細については以下の［関連するレシピ］セクション（#関連レシピ）をご覧ください。
 
-ターゲット捜索動作を変更するため、`acceleration`（加速度）を利用します。ただし、ミサイルが「一瞬で方向転換する」のは避けたいので、制御する「ステアリング力」を調整する変数を追加します。この設定により、異なる挙動に対応した旋回半径を調整できるようになります。また、ミサイルが追跡対象を把握するための`target`変数も必要です。これも`start()`関数内で適切に初期化します：
+ターゲット捜索動作を変更するため、`acceleration`（加速度）を利用します。ただし、ミサイルが「一瞬で方向転換する」のは避けたいので、制御する「ステアリング力」を調整する変数を追加します。この設定により、異なる挙動に対応した旋回半径を調整できるようになります。また、ミサイルが追跡対象を把握するための`target`変数も必要です。これも`start()`関数内で適切に初期化します。
 
 ```gdscript
 export var steer_force = 50.0
@@ -158,5 +158,5 @@ func explode():
 ## 関連レシピ
 
 - [スプライトシートアニメーション](/godot_recipes/4.x/ja/animation/spritesheet_animation/)
-- [トップダウン型キャラクター操作](/godot_recipes/4.x/ja/2d/topdown_movement/#option-2-rotate-and-move)
+- [見下ろし型キャラクター操作](/godot_recipes/4.x/ja/2d/topdown_movement/#option-2-rotate-and-move)
 - [トランスフォーム操作](/godot_recipes/4.x/ja/math/transforms)

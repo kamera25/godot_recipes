@@ -69,7 +69,7 @@ new_bullet.transform = muzzle_transform
 この手法は「回転・移動」スタイルに限らず、あらゆる文字タイプに適用可能です。単に、弾丸を表示させたい位置に `{{< gd-icon Marker2D >}}`marker2d` タグを挿入するだけで済みます。
 {{% /notice %}}
 
-キャラクタースクリプト内で、インスタンス化用の弾丸シーンを保持する変数を追加します：
+キャラクタースクリプト内で、インスタンス化用の弾丸シーンを保持する変数を追加します。
 
 ```gdscript
 @export var Bullet : PackedScene

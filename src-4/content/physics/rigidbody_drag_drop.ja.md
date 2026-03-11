@@ -110,7 +110,7 @@ func _unhandled_input(event):
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトコードはこちらからダウンロードできます: [https://github.com/godotrecipes/rigidbody_drag_drop](https://github.com/godotrecipes/rigidbody_drag_drop)
+プロジェクトコードはこちらからダウンロードできます。 [https://github.com/godotrecipes/rigidbody_drag_drop](https://github.com/godotrecipes/rigidbody_drag_drop)
 
 ## 関連レシピ
 

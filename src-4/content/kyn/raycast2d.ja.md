@@ -14,7 +14,7 @@ ghcommentid: 87
 
 <img src="/godot_recipes/4.x/img/kyn_raycast2d_01_4.png" alt="alt">
 
-以下に主要な特性をご説明します：
+以下に主要な特性をご説明します。
 
 * **有効化済**
 
@@ -32,7 +32,7 @@ ghcommentid: 87
 
 ### 便利な機能
 
-ノードの機能一覧は[APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_raycast2d.html)で確認できます。特に便利な主要機能をいくつかご紹介します：
+ノードの機能一覧は[APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_raycast2d.html)で確認できます。特に便利な主要機能をいくつかご紹介します。
 
 * `is_colliding()`
 
@@ -52,7 +52,7 @@ ghcommentid: 87
 
 ### 使用例
 
-レイキャストには多様な用途があります：可視判定（AはBを確認できるか、その間に障害物はないか）、近接検出（壁や地面、障害物の近くにいるか）などです。以下に実用的な使用例をいくつかご紹介します：
+レイキャストには多様な用途があります：可視判定（AはBを確認できるか、その間に障害物はないか）、近接検出（壁や地面、障害物の近くにいるか）などです。以下に実用的な使用例をいくつかご紹介します。
 
 #### 1. 撮影プロセス
 
@@ -62,7 +62,7 @@ ghcommentid: 87
 
 ![alt](/godot_recipes/4.x/img/kyn_raycast2d_02.png)
 
-プレイヤーが射撃した際、光線が何かに衝突しているかどうかを判定します：
+プレイヤーが射撃した際、光線が何かに衝突しているかどうかを判定します。
 
 ```gdscript
 func _input(event):

@@ -64,7 +64,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var jumping = false
 ```
 
-以下に、アクセスが必要なノードに関する参考情報を示します：
+以下に、アクセスが必要なノードに関する参考情報を示します。
 
 ```gdscript
 @onready var spring_arm = $SpringArm3D
@@ -173,7 +173,7 @@ if blend_position > 0.5:  # 何らかの閾値チェック
 
 攻撃動作については、まず「攻撃」という入力アクションを追加します。このコマンドは左マウスボタンに割り当てています。
 
-{{< gd-icon AnimationTree >}} の `AnimationTree` には3つの異なる攻撃が存在するため、それらをリスト化します：
+{{< gd-icon AnimationTree >}} の `AnimationTree` には3つの異なる攻撃が存在するため、それらをリスト化します。
 
 ```gdscript
 var attacks = [
@@ -183,7 +183,7 @@ var attacks = [
 ]
 ```
 
-それから、`_unhandled_input()` 関数内で、アクションが押されたときにリストからランダムなアニメーションを選択するようにします：
+それから、`_unhandled_input()` 関数内で、アクションが押されたときにリストからランダムなアニメーションを選択するようにします。
 
 ```gdscript
     if event.is_action_pressed("attack"):
@@ -192,7 +192,7 @@ var attacks = [
 
 ### ジャンプ動作
 
-ジャンプモーションは複数のアニメーションが連動するため、やや複雑です。参考までに、状態マシンの設定手順を以下に示します：
+ジャンプモーションは複数のアニメーションが連動するため、やや複雑です。参考までに、状態マシンの設定手順を以下に示します。
 
 ![alt](/godot_recipes/4.x/img/anim_tree_jumping.png)
 

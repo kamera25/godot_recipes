@@ -36,7 +36,7 @@ extends Label
 func show_value(value, travel, duration, spread, crit=false):
 ```
 
-浮動テキストを出現させる際に、この関数を呼び出してパラメータを設定します：
+浮動テキストを出現させる際に、この関数を呼び出してパラメータを設定します。
 
 - `value` - 表示する数値（または文字列）
 - `travel` - 移動方向を表す `Vector2` オブジェクト
@@ -44,7 +44,7 @@ func show_value(value, travel, duration, spread, crit=false):
 - `spread` - この角度範囲内でランダムに動きが拡散される
 - `crit` - `true` の場合、ダメージが「クリティカルヒット」であることを意味するフラグ
 
-以下にこの関数の機能を説明します：
+以下にこの関数の機能を説明します。
 
 ```gdscript
     text = value
@@ -63,7 +63,7 @@ func show_value(value, travel, duration, spread, crit=false):
             Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 ```
 
-次に、補間する2つのプロパティを設定します：移動用の`rect_position`と、表示制御用の`modulate.a`です。
+次に、補間する2つのプロパティを設定します。移動用の`rect_position`と、表示制御用の`modulate.a`です。
 
 ```gdscript
     if crit:
@@ -106,7 +106,7 @@ func show_value(value, crit=false):
 
 以下の箇所では、設定内容をインスペクターに表示して簡単に変更できます。ここで定義されている`show_value()`メソッドは、フローティングラベルを生成し、そのプロパティを設定します。
 
-ゲーム内ユニットでは、このノードのインスタンスを作成して、テキストを表示させたい任意の位置に配置します。その後、ユニットの `take_damage()` メソッドに以下のようなコードを追加します：
+ゲーム内ユニットでは、このノードのインスタンスを作成して、テキストを表示させたい任意の位置に配置します。その後、ユニットの `take_damage()` メソッドに以下のようなコードを追加します。
 
 ```gdscript
 $FCTManager.show_value(dmg, crit)

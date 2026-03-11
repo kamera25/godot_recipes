@@ -10,12 +10,12 @@ draft: false
 
 ## 解決策
 
-以下に、私たちが目指している実装例をご紹介します：
+以下に、私たちが目指している実装例をご紹介します。
 <video controls src="/godot_recipes/4.x/img/minimap_01.webm"></video>
 
 ### プロジェクト設定
 
-この機能を説明するため、まずは[オートタイルレシピ](/godot_recipes/4.x/ja/2d/autotile_intro/)を使用した簡素なトップダウンゲームと[トップダウンキャラクター操作レシピ](godot_recipes/2d/topdown_movement/#option-2-rotate-and-move)に基づくプレイヤーから始めましょう。各コンポーネントの動作詳細については、リンク先のレシピを参照してください。
+この機能を説明するため、まずは[オートタイルレシピ](/godot_recipes/4.x/ja/2d/autotile_intro/)を使用した簡素なトップダウンゲームと[見下ろしキャラクター操作レシピ](godot_recipes/2d/topdown_movement/#option-2-rotate-and-move)に基づくプレイヤーから始めましょう。各コンポーネントの動作詳細については、リンク先のレシピを参照してください。
 
 {{% notice note %}}
 本プロジェクトのアートワークは[kenney.nl](https://kenney.nl)提供のものを使用しています。以下からダウンロード可能です：[Minimap アセット](/godot_recipes/4.x/ja/files/minimap_assets.zip).
@@ -88,7 +88,7 @@ As a child of `Grid`, add a {{< gd-icon Sprite2D >}}`Sprite2D` node named "Playe
 
 本デモで使用するゲームオブジェクトは2種類です：ランダムにマップを徘徊する「モブ」と、プレイヤーが持ち上げ可能な「木箱」です。これらのオブジェクトの多くがメインシーン内に散らばっています。それぞれを適切に表示するために、先ほど作成したマップマーカーのいずれかを使用する必要があります。
 
-ミニマップ上に表示させたい各アイテムを「minimap_objects」というグループに追加してください。各オブジェクトのスクリプトにおいて、`minimap_icon`プロパティを適切に設定します：
+ミニマップ上に表示させたい各アイテムを「minimap_objects」というグループに追加してください。各オブジェクトのスクリプトにおいて、`minimap_icon`プロパティを適切に設定します。
 
 ```gdscript
 # In the mob's script:
@@ -127,7 +127,7 @@ class_name Minimap
 @onready var alert_marker = $MarginContainer/Grid/AlertMarker
 ```
 
-次は、辞書を使ってユニットに割り当てた 'minimap_icon' タグを対応するマーカーにマッピングします：
+次は、辞書を使ってユニットに割り当てた 'minimap_icon' タグを対応するマーカーにマッピングします。
 
 ```gdscript
 @onready var icons = {
@@ -234,7 +234,7 @@ else:
     markers[item].hide()
 ```
 
-二点目は、視覚的な表現を変更する方法です。この場合、サイズを小さくすることで被写体がより遠くにあることを示唆します：
+二点目は、視覚的な表現を変更する方法です。この場合、サイズを小さくすることで被写体がより遠くにあることを示唆します。
 
 ```gdscript
 if grid.get_rect().has_point(obj_pos + grid.position):
@@ -247,7 +247,7 @@ else:
 
 ### オブジェクトの削除方法
 
-モブが倒されたり、木箱が拾われたりすると、マーカー参照が有効でなくなるためゲームがクラッシュしてしまいます。オブジェクトと一緒にマーカーも確実に削除されるようにする必要があります。以下に、簡易的なデモ環境でこれを実装する簡単な方法を紹介します：
+モブが倒されたり、木箱が拾われたりすると、マーカー参照が有効でなくなるためゲームがクラッシュしてしまいます。オブジェクトと一緒にマーカーも確実に削除されるようにする必要があります。以下に、簡易的なデモ環境でこれを実装する簡単な方法を紹介します。
 
 「minimap_objects」グループに追加したすべてのオブジェクトに `signal removed` を追加してください。このシグナルは、オブジェクトが破棄（または回収）される際に、マップがそのオブジェクトを識別できるように自身への参照と共に発火させます：
 
@@ -263,7 +263,7 @@ func _ready():
         object.removed.connect(minimap._on_object_removed)
 ```
 
-現在の処理：minimapスクリプトに受信機能を追加し、マーカーを解放して参照を削除します：
+現在の処理：minimapスクリプトに受信機能を追加し、マーカーを解放して参照を削除します。
 
 ```gdscript
 func _on_object_removed(object):
@@ -276,7 +276,7 @@ func _on_object_removed(object):
 
 ここまでお読みいただいた方には、最後にもう一つの機能を追加します。この「調整可能なズームレベル」を使えば、地図の上にマウスカーソルを置いた状態でホイールを回すことで、表示の拡大・縮小が可能になります。
 
-まず、`zoom`プロパティにセッターを追加します：
+まず、`zoom`プロパティにセッターを追加します。
 
 ```gdscript
 @export var zoom = 1.5:
@@ -287,7 +287,7 @@ func set_zoom(value):
     grid_scale = grid.size / (get_viewport_rect().size * zoom)
 ```
 
-ノード「MiniMap」で、インスペクター内の信号 `_gui_input` を接続して、スクロールホイールイベントを処理できるようにします：
+ノード「MiniMap」で、インスペクター内の信号 `_gui_input` を接続して、スクロールホイールイベントを処理できるようにします。
 
 ```gdscript
 func _on_gui_input(event):
@@ -319,7 +319,7 @@ func _on_gui_input(event):
 
 ## 関連レシピ
 
-- [トップダウン方式キャラクター移動](/godot_recipes/4.x/ja/2d/topdown_movement/)
+- [見下ろし方式キャラクター移動](/godot_recipes/4.x/ja/2d/topdown_movement/)
 
 <!-- #### この動画が気に入ったら？
 

@@ -54,7 +54,7 @@ func _ready():
 #	spawn_enemies()
 ```
 
-次に、`new_game()`関数を追加します：
+次に、`new_game()`関数を追加します。
 
 ```gdscript
 func new_game():

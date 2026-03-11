@@ -65,7 +65,7 @@ func load_score():
 
 リソースの保存と読み込みには、Godot クラスの `ResourceSaver` と `ResourceLoader` を使用してください。
 
-例を挙げると、キャラクターのステータス情報がすべて以下のようにリソースに格納されているとします：
+例を挙げると、キャラクターのステータス情報がすべて以下のようにリソースに格納されているとします。
 
 ```gdscript
 extends Resource
