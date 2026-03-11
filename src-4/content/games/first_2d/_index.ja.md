@@ -18,8 +18,11 @@ pre: "<i class='fa fa-rocket fa-fw'></i>&nbsp"
 
 このシリーズでは、各エピソードごとにゲームの一部を構築しながら、機能を追加し、その過程を詳しく解説していきます。
 
-＊［GoDot入門：GDScriptの基礎］（/godot_recipes/4.x/g101/gdscript/） - 当サイトのチュートリアル
-　＊［公式Godotドキュメント］（https://docs.godotengine.org/en/latest/getting_started/step_by_step/index.html） - 正式な学習リソース
+{{% notice style="tip" title="背景" %}}
+プログラミング面で困難を感じている場合は、以下のリソースを参照してください。
+* [初めてのGodot: GDScript入門](/godot_recipes/4.x/g101/gdscript/)  - 当サイトのチュートリアル
+* [Godot公式ドキュメント](https://docs.godotengine.org/ja/latest/getting_started/step_by_step/index.html) - 公式チュートリアル
+{{% /notice %}}
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトを<i class='fab fa-github'></i> GitHubからダウンロード
 

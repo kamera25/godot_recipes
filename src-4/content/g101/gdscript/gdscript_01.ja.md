@@ -32,7 +32,6 @@ GDScriptファイルの最初の行は`extends <クラス名>`で始めなけれ
 
 最初のスクリプトを作成しましょう。覚えておくべきは、どのノードにもスクリプトをアタッチできるということです。
 
-```
 エディタを開き、空のシーンに `{{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加します。新規追加したノードを右クリックし、「スクリプトを添付」を選択します。または、検索ボックス横のボタンをクリックすることも可能です。
 
 ![alt](/godot_recipes/4.x/img/gds_01_attach.png?width=250)
@@ -53,7 +52,6 @@ func _process(delta):
     pass
 ```
 
-```gd
 スクリプトが {{< gd-icon Sprite2D >}}`Sprite2D` に追加されたため、最初の行は `extends Sprite2D` に自動的に設定されます。このスクリプトは {{< gd-icon Sprite2D >}}`Sprite2D` クラスを継承しているため、{{< gd-icon Sprite2D >}}`Sprite2D`ノードが提供するすべてのプロパティとメソッドにアクセスして操作することが可能になります。
 
 {{% notice title="プロパティとメソッド" style="note" %}}
