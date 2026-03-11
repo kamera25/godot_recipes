@@ -57,7 +57,7 @@ func _process(delta):
 * 最後に、与えられた入力ベクトルを移動量として船の `position` に加算します。この時、速度値に合わせてベクトルの大きさを調整し、さらに `delta` でスケール処理を行います。
 
 {{% expand "詳細情報へのリンク" %}}
-* ベクトルの基本理解：[ベクトル数学](https://docs.godotengine.org/en/latest/tutorials/math/vector_math.html)
+* ベクトルの基本理解：[ベクトル数学](https://docs.godotengine.org/ja/latest/tutorials/math/vector_math.html)
 * `delta`とは？ [デルタについての解説](/godot_recipes/4.x/ja/basics/understanding_delta/)
 {{% /expand %}}
 

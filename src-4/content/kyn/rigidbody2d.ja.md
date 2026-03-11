@@ -162,7 +162,7 @@ func _physics_process(delta):
 
 ただし、画面の端に引っかかって動けなくなるという大失敗をしてしまいますよ。
 
-[RigidBody2D ドキュメント](https://docs.godotengine.org/en/stable/classes/class_rigidbody2d.html) から引用すると：
+[RigidBody2D ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) から引用すると：
 
 * リジッドボディの位置や線形速度をフレームごとに、あるいは頻繁に変更するのは避けるべきです。状態を直接操作する必要がある場合は、物理演算の状態を直接取得できる `_integrate_forces` メソッドを使用してください。
 

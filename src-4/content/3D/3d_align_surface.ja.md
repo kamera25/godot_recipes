@@ -45,7 +45,7 @@ func align_with_y(xform, new_y):
 与えられた変換行列と新しい**Y**方向ベクトルに基づき、この関数は、指定された法線ベクトルに対して`basis.y`成分が一致するよう、適切に回転調整された変換行列を返します。
 
 {{% notice note %}}
-クロス積やその他のベクトル数学に慣れていない方のために、Godot公式ドキュメントに[ベクトル数学入門ガイド](https://docs.godotengine.org/en/latest/tutorials/math/vector_math.html)が用意されています。
+クロス積やその他のベクトル数学に慣れていない方のために、Godot公式ドキュメントに[ベクトル数学入門ガイド](https://docs.godotengine.org/ja/latest/tutorials/math/vector_math.html)が用意されています。
 {{% /notice %}}
 
 タンクの移動コードを更新して、表面が衝突した際にこの関数を呼び出せるようにしましょう：

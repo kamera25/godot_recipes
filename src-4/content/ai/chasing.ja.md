@@ -49,7 +49,7 @@ func _on_DetectRadius_body_exited(body):
     player = null
 ```
 
-我们将连接了 `area2d` 中的 `body_entered` 和 `body_exited` 信号，这样敌机就能知道它是否处于有效范围内。
+{{< gd-icon Area2D >}}`Area2D`からの`body_entered`シグナルと`body_exited`シグナルを接続しました。これにより、敵が範囲内にいるかどうかを正確に検知できるようになっています。
 
 上記の説明では、プレイヤーが出入りする唯一のオブジェクトであると仮定しています。これは通常、適切な衝突レイヤーとマスクを設定することで実現されます。
 

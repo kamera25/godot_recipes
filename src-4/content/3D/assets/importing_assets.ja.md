@@ -44,7 +44,7 @@ draft: false
 ![alt](/godot_recipes/4.x/img/3d_import_loop.png)
 
 {{% notice style="info" title="アニメーションループの自動設定について" %}}
-自作キャラクターを作成する場合、このステップは省略可能です。ただし、アニメーション名がすべて`"-loop"`で終わるように命名してください。その他のインポート関連のヒントについては、[Godotドキュメント](https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_scenes.html#import-hints)の「インポートヒント」セクションを参照してください。
+自作キャラクターを作成する場合、このステップは省略可能です。ただし、アニメーション名がすべて`"-loop"`で終わるように命名してください。その他のインポート関連のヒントについては、[Godotドキュメント](https://docs.godotengine.org/ja/stable/tutorials/assets_pipeline/importing_scenes.html#import-hints)の「インポートヒント」セクションを参照してください。
 {{% /notice %}}
 
 ファイルシステム内の「knight.glb」を右クリックし、［新規継承シーン］を選択してください。

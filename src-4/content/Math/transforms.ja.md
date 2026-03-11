@@ -7,7 +7,7 @@ ghcommentid: 65
 ---
 
 このチュートリアルを読み進める前に、まずベクトルの概念とゲーム開発におけるその使用方法を理解しておく必要があります。もし理解が不十分な場合は、Godotドキュメント用に私が作成した以下の入門記事を読むことを強くおすすめします：
-[ベクトル数学](https://docs.godotengine.org/en/latest/tutorials/math/vector_math.html)。
+[ベクトル数学](https://docs.godotengine.org/ja/latest/tutorials/math/vector_math.html)。
 
 ## 2次元変形機能
 
@@ -45,7 +45,7 @@ while (true) {
 
 これらの「ローカル」座標軸は、オブジェクトの `transform` プロパティに含まれています。
 
-この特性を利用すれば、船を**X軸**に沿って移動させることで容易に前進させられます。角度計算や三角関数を気にする必要もありません。Godotでこれを実現するには、すべての[{{< gd-icon Node2D >}}`Node2D`]([https://link](https://docs.godotengine.org/en/latest/classes/class_node2d.html))派生ノードで利用できる`transform`プロパティを使用します。
+この特性を利用すれば、船を**X軸**に沿って移動させることで容易に前進させられます。角度計算や三角関数を気にする必要もありません。Godotでこれを実現するには、すべての[{{< gd-icon Node2D >}}`Node2D`]([https://link](https://docs.godotengine.org/ja/latest/classes/class_node2d.html))派生ノードで利用できる`transform`プロパティを使用します。
 
 ```gdscript
     position += transform.x * 10
@@ -87,7 +87,7 @@ func _unhandled_input(event):
             printt(event.position, to_local(event.position))
 ```
 
-利用可能なプロパティとメソッドの一覧については、[Transform2Dドキュメント](https://docs.godotengine.org/en/latest/classes/class_transform2d.html)を参照してください。
+利用可能なプロパティとメソッドの一覧については、[Transform2Dドキュメント](https://docs.godotengine.org/ja/latest/classes/class_transform2d.html)を参照してください。
 
 ## 3D変形機能
 
@@ -112,6 +112,6 @@ func _unhandled_input(event):
 ```
 
 {{% notice tip %}}
-Godotにはデフォルトのベクター値が定義されています。例えば：`Vector3.FORWARD == Vector3(0, 0, -1)`。詳細は[Vector2](https://docs.godotengine.org/en/latest/classes/class_vector2.html)および[Vector3](https://docs.beetsaudio.com/docs/reference/vectors.html)のドキュメントを参照してください。
+Godotにはデフォルトのベクター値が定義されています。例えば：`Vector3.FORWARD == Vector3(0, 0, -1)`。詳細は[Vector2](https://docs.godotengine.org/ja/latest/classes/class_vector2.html)および[Vector3](https://docs.beetsaudio.com/docs/reference/vectors.html)のドキュメントを参照してください。
 {{% /notice %}}
 

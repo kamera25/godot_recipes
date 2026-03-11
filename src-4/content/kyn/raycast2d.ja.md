@@ -32,7 +32,7 @@ ghcommentid: 87
 
 ### 便利な機能
 
-ノードの機能一覧は[APIドキュメント](https://docs.godotengine.org/en/stable/classes/class_raycast2d.html)で確認できます。特に便利な主要機能をいくつかご紹介します：
+ノードの機能一覧は[APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_raycast2d.html)で確認できます。特に便利な主要機能をいくつかご紹介します：
 
 * `is_colliding()`
 

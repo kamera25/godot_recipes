@@ -78,7 +78,7 @@ loc_transform = Transform::identity();
 bool is_intersected = physics_space_state->intersect_shape(&rect_shape, &loc_transform);
 ```
 
-この例では、`PhysicsDirectSpaceState2D` を使用して長方形形状と位置変換を定義し、交差判定を行っています。[Godot公式ドキュメント](https://docs.godotengine.org/en/stable/classes/class_physicsdirectspacestate2d.html#class-physicsdirectspacestate2d-method-intersect-shape) に詳細な解説がありますので、必要に応じて参照してください。
+この例では、`PhysicsDirectSpaceState2D` を使用して長方形形状と位置変換を定義し、交差判定を行っています。[Godot公式ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_physicsdirectspacestate2d.html#class-physicsdirectspacestate2d-method-intersect-shape) に詳細な解説がありますので、必要に応じて参照してください。
 
 ```gdscript
 elif dragging:

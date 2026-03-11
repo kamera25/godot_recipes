@@ -100,7 +100,7 @@ func save_character_data(data):
 
 > SaveファイルにJSONを使用するのは止めてください！
 
-Godotには[JSONサポート](https://docs.godotengine.org/en/latest/classes/class_json.html)が組み込まれていますが、ゲームデータの保存用途としては設計されていません。JSONは「データ交換」形式であり、異なるデータフォーマットやプログラミング言語を使用するシステム間でデータを相互にやり取りできるようにすることを目的としています。
+Godotには[JSONサポート](https://docs.godotengine.org/ja/latest/classes/class_json.html)が組み込まれていますが、ゲームデータの保存用途としては設計されていません。JSONは「データ交換」形式であり、異なるデータフォーマットやプログラミング言語を使用するシステム間でデータを相互にやり取りできるようにすることを目的としています。
 
 これはつまり、JSONにはゲームデータ保存時に不利となる制約があることを意味します。JSONは多くのデータ型をサポートしていないため（整数と浮動小数点数の区別ができないなど）、データを保存したり読み込んだりするためには、変換や検証に多大な労力を要します。非常に手間がかかり、時間もかかる作業です。
 
@@ -110,4 +110,4 @@ Godot 自体がシーンやリソースの保存にJSONを使用していない�
 
 ### まとめ
 
-この記事で「`FileAccess`」の基本的な機能をざっとご紹介しました。利用可能な「`FileAccess`」メソッドの全一覧については、[公式ドキュメントの`FileAccess`ページ](https://docs.godotengine.org/en/stable/classes/class_fileaccess.html)をご覧ください。
+この記事で「`FileAccess`」の基本的な機能をざっとご紹介しました。利用可能な「`FileAccess`」メソッドの全一覧については、[公式ドキュメントの`FileAccess`ページ](https://docs.godotengine.org/ja/stable/classes/class_fileaccess.html)をご覧ください。

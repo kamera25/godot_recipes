@@ -87,7 +87,7 @@ TestChild2 process
 
 ご覧の通り、これらのノードはすべてツリー順に従って上から下へ、枝を先に印刷しています - ただし`_ready()`コードは例外です。
 
-以下は[ノードリファレンス](https://docs.godotengine.org/en/3.2/classes/class_node.html#class-node-method-ready)からの引用です：
+以下は[ノードリファレンス](https://docs.godotengine.org/ja/3.2/classes/class_node.html#class-node-method-ready)からの引用です：
 
 > ノードが「準備完了」状態になった際に呼び出されます。具体的には、当該ノードおよびそのすべての子ノードがシーンツリーに完全に組み込まれた時点でトリガーされます。もしノードに子要素がある場合、まずその子ノードの `_ready` コールバック関数が先に実行され、その後親ノードに対して「準備完了」通知が行われます。
 

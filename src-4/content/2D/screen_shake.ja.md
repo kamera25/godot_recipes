@@ -85,7 +85,7 @@ func shake():
 
 このアプローチの欠点は、フレームごとにランダム値が大きく変化するため、操作感が不安定になりやすい点です。より「自然な」ランダム性を得るためには、「ノイズ」と呼ばれる概念を活用する方法があります。
 
-ノイズ、より具体的には*勾配ノイズ*とは、より自然な見た目の「ランダム」パターンを生成するための手法です。これを実現するためにGodotでは、[OpenSimplexNoise](https://docs.godotengine.org/en/latest/classes/class_opensimplexnoise.html)クラスが提供されています。
+ノイズ、より具体的には*勾配ノイズ*とは、より自然な見た目の「ランダム」パターンを生成するための手法です。これを実現するためにGodotでは、[OpenSimplexNoise](https://docs.godotengine.org/ja/latest/classes/class_opensimplexnoise.html)クラスが提供されています。
 
 {{% notice info %}}
 最も広く知られているグラジエントノイズアルゴリズムは、[パーリンノイズ](https://ja.wikipedia.org/wiki/Perlinノイズ)と呼ばれています。このアルゴリズムとその後継である[シンプレックスノイズ](https://ja.wikipedia.org/wiki/Simplex_noise)は特許で保護されているため、Godotでは[OpenSimplex](https://en.wikipedia.org/wiki/OpenSimplex_noise)という別のアルゴリズムを使用してノイズを生成しています。
