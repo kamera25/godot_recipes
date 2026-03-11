@@ -4,7 +4,7 @@ weight: 2
 draft: false
 ghcommentid: 88
 ---
-## 問題文
+## 課題
 
 対象物を滑らかに追従できる3Dカメラが必要です（補間機能が必要）。
 

@@ -4,7 +4,7 @@ weight: 3
 draft: false
 ---
 
-## 問題文
+## 課題
 
 rigidbodyを目標位置へ移動させたい。
 

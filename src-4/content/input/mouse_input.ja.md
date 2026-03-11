@@ -5,7 +5,7 @@ draft: false
 ghcommentid: 47
 ---
 
-## 問題文
+## 課題
 
 マウス入力を検出したいようです。
 

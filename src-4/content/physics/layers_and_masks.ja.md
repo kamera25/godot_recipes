@@ -4,7 +4,7 @@ weight: 4
 draft: true
 ---
 
-## 問題文
+## 課題
 
 
 

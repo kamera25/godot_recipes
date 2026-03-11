@@ -136,7 +136,7 @@ msgstr ""
 #: 2D/car_steering.md
 #: 2D/coyote_time.md
 msgid "## Problem"
-msgstr "## 問題文"
+msgstr "## 課題"
 
 #: basics/getting_nodes.md
 msgid "### A warning"
@@ -405,8 +405,7 @@ msgid ""
 msgstr ""
 "【お知らせ】情報: {{% notice info %}}\n"
 "本記事の元ネタとなった[Godot "
-"Discord](https://discord.gg/zH7NUgz)の@TheDurielによるオリジナル図版［ノードアクセス解説］［画像リンク］(/g"
-"odot_recipes/4.x/img/node_access_theduriel.png)に心から感謝します。この資料は保存しておき、必要に応じて参照で"
+"Discord](https://discord.gg/zH7NUgz)の@TheDurielによる[原型図](/godot_recipes/4.x/img/node_access_theduriel.png)に心から感謝します。この資料は保存しておき、必要に応じて参照で"
 "きる状態にしておくことをお勧めします。\n"
 "{{% /notice %}}"
 
@@ -801,7 +800,7 @@ msgstr "シグナルは、ツリーで上位に位置するノードや同じ階
 
 #: basics/node_communication.md
 msgid "![alt](/godot_recipes/4.x/img/node_access_05.png)"
-msgstr "<image> /godot_recipes/4.x/img/node_access_05.png </image>"
+msgstr "![alt](/godot_recipes/4.x/img/node_access_05.png)"
 
 #: basics/node_communication.md
 msgid ""
@@ -9706,7 +9705,7 @@ msgstr ""
 
 #: g101/3d/101_3d_04.md
 msgid "![alt](/godot_recipes/4.x/img/3d_04_01.png)"
-msgstr "[alt](/godot_recipes/4.x/img/3d_04_01.png)"
+msgstr "![alt](/godot_recipes/4.x/img/3d_04_01.png)"
 
 #: g101/3d/101_3d_04.md
 msgid ""
@@ -12343,7 +12342,7 @@ msgid ""
 "means extending a line from a point until it collides with something or "
 "reaches its limit."
 msgstr ""
-"＊レイキャスティング＊はゲーム開発で広く用いられる手法です。「レイをキャストする」とは、ある点から直線を伸ばし、それが何かに衝突するか限界に達するまで移動さ"
+"*レイキャスティング* はゲーム開発で広く用いられる手法です。「レイをキャストする」とは、ある点から直線を伸ばし、それが何かに衝突するか限界に達するまで移動さ"
 "せる操作を指します。"
 
 #: kyn/raycast2d.md
@@ -13308,7 +13307,6 @@ msgid ""
 "velocity. This will give you a \"realistic\" result - pushing heavy bodies a "
 "little, and lighter bodies a lot."
 msgstr ""
-"```\n"
 "1. 物理学を無視して直接押すことも可能です。Godot 3.x に慣れている方なら、これは「無限慣性」オプションと同等の機能です。\n"
 "1. キャラクターの想定する「質量」と「速度」に基づいて押力を発揮させることもできます。これにより「リアルな」結果が得られます - "
 "重い物体は少し、軽い物体は大きく押し出されるようになります。"
@@ -13355,7 +13353,6 @@ msgid ""
 "`move_and_slide()`. If you're using `move_and_collide()`, you'll need to "
 "adjust the examples below accordingly."
 msgstr ""
-"```\n"
 "この例では、[プラットフォーマー用キャラクター](/godot_recipes/4.x/ja/2d/platform_character/) "
 "レシピで解説されている2Dキャラクターを使用します。この例ではキャラクター移動の最も一般的な方法である `move_and_slide()` "
 "を採用しています。もし代わりに `move_and_collide()` を使用している場合は、以下の実装を適切に変更してください。"
@@ -13437,7 +13434,6 @@ msgid ""
 "You want to use a {{< gd-icon RigidBody2D >}}`RigidBody2D` to create a semi-"
 "realistic spaceship, a la *Asteroids*."
 msgstr ""
-"```\n"
 "「Astroids」のような半リアルな宇宙船を作成するため、`RigidBody2D`を使いたいと考えていますか。"
 
 #: physics/asteroids_physics.md
@@ -13710,8 +13706,8 @@ msgid ""
 "- [RigidBody2D: Move to Target](/godot_recipes/4.x/physics/smooth_rigid_move/)"
 msgstr ""
 "## 参考資料\n"
-"- 【ベクトル演算：内積と外積の活用】(/godot_レシピ集/4.x/数学/dot_cross_product/index.html)\n"
-"- 【RigidBody2D：目標位置への移動方法】(/godot_レシピ集/4.x/物理演算/smooth_rigid_move/)"
+"- [ベクトル演算：内積と外積の活用](/godot_recipes/4.x/ja/math/dot_cross_product/index.html)\n"
+"- [RigidBody2D：目標位置への移動方法](/godot_recipes/4.x/ja/physics/smooth_rigid_move/)"
 
 #: physics/smooth_rigid_rotate.md
 msgid "You want a rigid body to rotate smoothly to look at a target."
@@ -13724,17 +13720,7 @@ msgid ""
 "use `lerp()` or a {{< gd-icon Tween >}}`Tween` to make the rotation as smooth "
 "as you wish."
 msgstr ""
-"# 親スプライトの回転角度をターゲット方向に設定する例\n"
-"child_sprite.rotation = target_vector.angle()\n"
-"\n"
-"# lerp()を使った滑らかな遷移例\n"
-"child_sprite.rotation = lerp(current_angle, target_vector.angle(), smoothing_factor)\n"
-"\n"
-"# Tweenを使用したアニメーション例\n"
-"tweener = tween.Tween()\n"
-"tweener.target = target_vector.angle()\n"
-"tweener.duration = 0.5  # 遷移時間を0.5秒に設定\n"
-"child_sprite.run_action(tweener)"
+"リジッドボディを一切回転させないことで、これらの問題をすべて回避できます！代わりに、子スプライトの`rotation`プロパティをターゲット方向に合わせるように変更してください。`lerp()`関数や{{< gd-icon Tween >}}`Tween`を使用することで、滑らかにアニメーションさせることが可能になります。"
 
 #: physics/smooth_rigid_rotate.md
 msgid ""
@@ -13888,8 +13874,7 @@ msgid ""
 "good idea to scale this to a reasonable value and `clamp()` it to some "
 "maximum. Experiment to find out what works for you."
 msgstr ""
-"```python\n"
-"# 物体に衝撃力を適用するために `get_last_mouse_velocity()` を使用している点に注意 - 取り扱いには注意が必要です! "
+"物体に衝撃力を適用するために `get_last_mouse_velocity()` を使用している点に注意 - 取り扱いには注意が必要です! "
 "特に質量値が小さい場合、剛性体は高速で発射される可能性があります。適切なスケールに調整し、最大値にクランプすることをお勧めします。最適な設定を見つけるには実"
 "験が必要です。"
 
@@ -16123,7 +16108,7 @@ msgstr ""
 
 #: 2D/using_ysort.md
 msgid "![alt](/godot_recipes/4.x/img/ysort_06.png)"
-msgstr "[alt](/godot_recipes/4.x/img/ysort_06.png)"
+msgstr "![alt](/godot_recipes/4.x/img/ysort_06.png)"
 
 #: 2D/using_ysort.md
 msgid ""
@@ -17884,7 +17869,7 @@ msgstr ""
 msgid ""
 "Your `extends` line should always match the type of node the script is "
 "attached to."
-msgstr "您的 `extends` 行应始终与脚本附加到的节点类型匹配。"
+msgstr "スクリプトが『組み込まれている』ノードの種類と、`extend` 文は常に一致している必要があります。"
 
 #: games/first_2d/first_2d_03.md
 msgid "### Staying on screen"
@@ -17904,7 +17889,6 @@ msgid ""
 "would happen if it collided. We'll write code to add this functionality to "
 "the ship."
 msgstr ""
-"```\n"
 "スクリプトを記述してノードやその他のオブジェクトにアタッチすることは、ゲームの動作やメカニクスを構築する基本的な方法です。現在の`Player`シーンでは宇"
 "宙船を表示し、その衝突判定ボックスなどを定義していますが、実際には移動できず、仮に他のものと衝突しても何の反応も生じません。この機能を追加するため、これから"
 "コードを実装していきます。"
@@ -17962,10 +17946,9 @@ msgid ""
 "* Finally, we move the ship's `position` by adding that input vector, scaling "
 "it to the desired speed, and multipling by `delta`."
 msgstr ""
-"```\n"
-"※ `_process()` 関数はエンジンによって1フレームごとに呼び出されます。この関数内に書いたコードはすべて毎フレーム実行されます。\n"
-"※ `Input.get_vector()` は、指定された4つの入力状態をチェックし、それらの方向に向くベクトルを生成します。\n"
-"※ 最後に、与えられた入力ベクトルを移動量として船の `position` に加算します。この時、速度値に合わせてベクトルの大きさを調整し、さらに "
+"* `_process()` 関数はエンジンによって1フレームごとに呼び出されます。この関数内に書いたコードはすべて毎フレーム実行されます。\n"
+"* `Input.get_vector()` は、指定された4つの入力状態をチェックし、それらの方向に向くベクトルを生成します。\n"
+"* 最後に、与えられた入力ベクトルを移動量として船の `position` に加算します。この時、速度値に合わせてベクトルの大きさを調整し、さらに "
 "`delta` でスケール処理を行います。"
 
 #: games/first_2d/first_2d_03.md
@@ -17991,7 +17974,7 @@ msgstr ""
 
 #: games/first_2d/first_2d_03.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_13.png)"
-msgstr "[alt](/godot_recipes/4.x/img/2d_101_13.png)"
+msgstr "![alt](/godot_recipes/4.x/img/2d_101_13.png)"
 
 #: games/first_2d/first_2d_03.md
 msgid ""

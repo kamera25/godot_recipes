@@ -6,10 +6,10 @@ ghcommentid: 10
 ---
 
 【お知らせ】情報: {{% notice info %}}
-本記事の元ネタとなった[Godot Discord](https://discord.gg/zH7NUgz)の@TheDurielによるオリジナル図版［ノードアクセス解説］［画像リンク］(/godot_recipes/4.x/img/node_access_theduriel.png)に心から感謝します。この資料は保存しておき、必要に応じて参照できる状態にしておくことをお勧めします。
+本記事の元ネタとなった[Godot Discord](https://discord.gg/zH7NUgz)の@TheDurielによる[原型図](/godot_recipes/4.x/img/node_access_theduriel.png)に心から感謝します。この資料は保存しておき、必要に応じて参照できる状態にしておくことをお勧めします。
 {{% /notice %}}
 
-## 問題文
+## 課題
 
 プロジェクトが複雑化してきました。複数のシーン、インスタンス、そして膨大な数のノードが存在しています。おそらく以下のようなコードを書いている状況ではないでしょうか？：
 
@@ -117,7 +117,7 @@ func _process(delta):
 
 以下に例となる設定を示します：
 
-<image> /godot_recipes/4.x/img/node_access_05.png </image>
+![alt](/godot_recipes/4.x/img/node_access_05.png)
 
 注：UIはインスタンス化されたシーンであり、実際には含まれるノードを表示しているに過ぎません。ここでよく見かけるのが`get_node("../UI/VBoxContainer/HBoxContainer/Label).text = str(health)`のようなコードで、これは避けるべき実装方法です。
 

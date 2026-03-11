@@ -4,7 +4,7 @@ weight: 12
 draft: false
 ---
 
-## 問題文
+## 課題
 
 衝突検出を `{{<  gd-icon Line2D >}}Line2D` に対して行いたいとのことですね。
 

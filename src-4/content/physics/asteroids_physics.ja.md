@@ -4,9 +4,8 @@ weight: 12
 draft: false
 ---
 
-## 問題文
+## 課題
 
-```
 「Astroids」のような半リアルな宇宙船を作成するため、`RigidBody2D`を使いたいと考えていますか。
 
 ## 解決策
