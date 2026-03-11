@@ -30,7 +30,6 @@ pre: "06. "
 
 ### 背景をアニメーション化する方法
 
-```python
 import panda3d.core as pdc
 from direct.directbase import DirectStart
 

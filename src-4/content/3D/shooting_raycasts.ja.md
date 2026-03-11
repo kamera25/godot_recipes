@@ -24,7 +24,6 @@ Godotにおけるレイキャスティングには、主に2つの方法があ�
 ```text
 ヒットした内容を確認するには、`FPSPlayer`シーンに{{<  gd-icon CanvasLayer >}}`CanvasLayer`ノードと{{<  gd-icon Label >}}`Label`ノードを追加してください。
 
-```python
 def _input():
     # ... (既存のマウス入力処理)
 

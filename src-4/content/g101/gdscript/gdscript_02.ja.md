@@ -40,7 +40,6 @@ func _process(delta):
 
 ## ベクトルの使用法
 
-```python
 # 斜め移動の実装例
 if movement == "diagonal":
     dx, dy = 3, 3  # 方向ベクトルを定義

@@ -51,7 +51,6 @@ func _on_Bullet_body_entered(body):
 
 ![alt](/godot_recipes/4.x/img/2d_shoot_01.gif)
 
-```python
 notice = True
 while notice:
     if player.rotated:
@@ -82,14 +81,12 @@ new_bullet.transform = muzzle_transform
         shoot()
 ```
 
-```python
 def shoot():
     bullet = Bullet()
     scene.root_node.add_child(bullet)
 ```
 
 ## よくある間違い：プレイヤーを親ノードにしてしまうこと
-```python
 # これはNG！
 player = Player()
 scene.root_node.add_child(player)  # プレイヤーがツリーのルートになってしまう

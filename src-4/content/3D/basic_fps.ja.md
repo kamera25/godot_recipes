@@ -32,7 +32,6 @@ var jump_speed = 5
 var mouse_sensitivity = 0.002
 ```
 
-```python
 def _physics_process():
     # 移動処理を行う関数
     # Note: Input.get_vector()は前後/左右キーの組み合わせに基づいて2次元ベクトルを返す

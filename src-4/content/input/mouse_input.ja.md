@@ -19,7 +19,6 @@ ghcommentid: 47
 
 ### `InputEventMouseButton`
 
-```python
 '@GlobalScope.ButtonList' には、各ボタンタイプに対応する定数 'BUTTON_*' のリストが含まれており、これらはイベントの 'button_index' プロパティで報告されます。なお、スクロールホイールも1つのボタンとしてカウントされますのでご注意ください。正確には、`BUTTON_WHEEL_UP` と `BUTTON_WHEEL_DOWN` はそれぞれ別個のイベントとして扱われます。
 
 ```

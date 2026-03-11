@@ -185,7 +185,6 @@ func _integrate_forces(state):
         state.transform.origin.y = screensize.y
 ```
 
-```python
 # 物理状態に基づいてボディの 'transform' を調整することで、エンジンは正常に動作し続け、期待通りの結果が得られます：
 
 <figure><img src="https://github.com/GodotRecipes/Game-Development-with-Godot/blob/master/assets/images/rigidbody_ship2.gif" alt="Rigid Body Ship Animation"></figure>

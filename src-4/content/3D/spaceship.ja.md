@@ -95,7 +95,6 @@ roll_input = Input.get_axis("roll_right", "roll_left")
 yaw_input = Input.get_axis("yaw_right", "yaw_left")
 ```
 
-```python
 import math
 
 def rotate_ship(angles):
@@ -163,7 +162,6 @@ yaw_input = lerp(yaw_input, Input.get_axis("yaw_right", "yaw_left"),
 
 この操作体系には1つの問題点があります。それは操作性に難がある点です。ヨーの入力に別途スティックを必要とするため、特に射撃や他のコントロールと組み合わせた場合、スムーズな操作が困難になります。多くのゲームでは、この問題を解決するためにロール入力と連動して少量のヨー回転も発生させる仕様にしています。これを実装するには、`yaw_speed`を`roll_speed`の1/4～1/2程度に設定するのが適切です。
 
-```python
 def get_orientation(self):
     # 方位角入力を取得する処理を以下に変更
     while True:

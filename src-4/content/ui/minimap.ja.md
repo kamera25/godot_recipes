@@ -98,7 +98,6 @@ var minimap_icon = "mob"
 var minimap_icon = "alert"
 ```
 
-```python
 from unity3d import *
 
 class MinimapScript:
@@ -159,7 +158,6 @@ func _ready():
 {{< gd-icon Container >}}`Container` ノードが子要素をどのように処理するかの特性上、`_ready()` の時点では子要素の正確なサイズ値が取得できません。このため、グリッドのサイズを正しく取得するには次のフレームまで待つ必要があります。
 {{% /notice %}}
 
-```python
 from bpy import context, data, ops
 import copy
 

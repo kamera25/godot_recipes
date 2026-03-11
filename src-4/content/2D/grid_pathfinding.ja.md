@@ -45,7 +45,6 @@ func initialize_grid():
 
 このコードでは、画面サイズを「セルサイズ」で割ることでグリッド全体の寸法を計算しています。これにより、`AStarGrid2D` オブジェクトの `size` プロパティを適切に設定できます。
 
-```python
 import math
 
 def calculate_path_length(points, cells):
@@ -68,7 +67,6 @@ def calculate_path_length(points, cells):
 
 この関数は以下のように使用します。
 
-```python
 points = [(0, 0), (3, 4), (6, 8)]
 cells = 1.0  # セルのサイズを1単位と仮定
 

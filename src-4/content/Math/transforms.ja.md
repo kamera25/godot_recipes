@@ -37,7 +37,7 @@ position += Vector2(10, 0)
 
 これらの「ローカル」座標軸は、オブジェクトの `transform` プロパティに含まれています。
 
-この特性を利用すれば、船を**X軸**に沿って移動させることで容易に前進させられます。角度計算や三角関数を気にする必要もありません。Godotでこれを実現するには、すべての[{{< gd-icon Node2D >}}`Node2D`]([https://link](https://docs.godotengine.org/ja/latest/classes/class_node2d.html))派生ノードで利用できる`transform`プロパティを使用します。
+この特性を利用すれば、船を**X軸**に沿って移動させることで簡単に前進できます。角度計算や三角関数を気にする必要もありません。Godotでこれを実現するには、すべての[{{< gd-icon Node2D >}}`Node2D`]([https://link](https://docs.godotengine.org/ja/latest/classes/class_node2d.html))派生ノードで利用できる`transform`プロパティを使用します。
 
 ```gdscript
     position += transform.x * 10
@@ -57,9 +57,7 @@ position += Vector2(10, 0)
 
 ### ローカル空間とグローバル空間での座標変換
 
-```python
-# 座標変換を適用してローカル座標系からグローバル座標系への変換が可能
-# 利便性を考慮して、`Node2D` と `Spatial` にはこの処理を支援する関数が用意されています：`to_local()` と `to_global()`:
+座標変換を適用してローカル座標系からグローバル座標系への変換が可能です。利便性を考慮して、`Node2D` と `Spatial` にはこの処理を支援する関数が用意されています。それが `to_local()` と `to_global()` です。
 
 ```gdscript
     var global_position = to_global(local_position)

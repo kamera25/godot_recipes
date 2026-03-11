@@ -11,9 +11,8 @@ ghcommentid: 15
 
 ## 解決策
 
-エンジンにはこの目的のためのノードが用意されています：{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`。このノードをオブジェクトに添付すれば、`screen_entered`シグナルと`screen_exited`シグナルを利用可能になります。
-*
-#### 使用例 1
+この目的のためのノードが用意されています。{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`。このノードをオブジェクトに添付すれば、`screen_entered`シグナルと`screen_exited`シグナルを利用可能になります。
+#### 例 1
 
 発射後に直線軌道で移動する投射物を考えてみましょう。継続的に射撃を続けると、画面上から外れた物体であってもエンジンが追跡すべき対象が大量に発生し、結果的にラグの原因となる可能性があります。
 
@@ -35,9 +34,9 @@ func _on_VisibleOnScreenNotifier2D_screen_exited():
     queue_free()
 ```
 
-#### 使用例2
+#### 例2
 
-We have an enemy that performs some actions, such as moving along a path or playing an animation. On a large map with many enemies, only a few of them will be onscreen at the same time. We can disable the enemy's actions while it's offscreen using {{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`.
+敵キャラクターがいて、経路に沿って移動したりアニメーションを再生したりするなどの動作を行います。大規模なマップで多数の敵が存在する場合、同時に画面上に表示されるのはそのうちのわずか数人だけです。{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D` を使用することで、オフスクリーン状態の間だけ敵の動作を無効化することができます。
 
 コードの一部：
 

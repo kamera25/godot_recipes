@@ -7,7 +7,7 @@ ghcommentid: 46
 
 ## 課題
 
-Godotの「入力アクション」システムについて理解を深めたいようですね。
+Godotの「入力アクション」システムについて理解を深めたい。
 
 ## 解決策
 
@@ -47,7 +47,6 @@ func _process(delta):
 
 これは、継続的な動作――例えば移動など、常時確認が必要な状況に最適です。
 
-```python
 def on_event(event):
     print("イベントが発生しました:", event)
 
@@ -70,11 +69,9 @@ func _unhandled_input(event):
 
 - `is_action_pressed()`: この関数は現在アクションが「押された」状態にある場合に`true`を返します。
 
-```bash
 - `is_action_released()`: この関数は、アクションが `pressed` 状態にない場合に `true` を返します。
 
-```python
-- is_action_just_pressed() / is_action_like_released(): これらのメソッドは上記と同様の機能を持ちますが、イベント発生後の1フレーム目にのみ`true`を返す点が異なります。射撃やジャンプなど、ユーザーがキーを放した後に再度押して動作を繰り返す必要がある非反復アクションに特に有用です。
+- `is_action_just_pressed()` / `is_action_just_released()`: これらのメソッドは上記と同様の機能を持ちますが、イベント発生後の1フレーム目にのみ`true`を返す点が異なります。射撃やジャンプなど、ユーザーがキーを放した後に再度押して動作を繰り返す必要がある非反復アクションに特に有用です。
 
 ## 関連するレシピ
 

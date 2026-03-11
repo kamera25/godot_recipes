@@ -109,7 +109,6 @@ func _integrate_forces(state):
 
 ### 歪み補正機能
 
-```python
 def warp_mechanic():
     # ランダムな位置にワープするロジックを実装
     pass

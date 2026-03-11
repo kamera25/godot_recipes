@@ -49,7 +49,6 @@ Cube: {{< gd-icon CharacterBody3D >}} CharacterBody3D
 
 ![alt](/godot_recipes/4.x/img/cube_003.png)
 
-```python
 # 回転操作を実装するための関数定義
 def rotate_cube():
     global cube, pivot_position

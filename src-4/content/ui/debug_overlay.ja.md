@@ -70,7 +70,6 @@ func _process(_delta):
 　・ `label_ref` - 各プロパティは対応する {{< gd-icon Label >}}`Label`ノードと紐付けられており、この参照によりラベルの `text`属性を設定できます。
 　・ `mode` - 表示方法を指定するオプション設定です（詳細は後述）。
 
-```python
 def update_label(self):
     # ラベルの text プロパティに表示する文字列を構築
     label_content = f"{self.object}: {self.property_name} ({self.value})"

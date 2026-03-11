@@ -142,7 +142,6 @@ func _unhandled_input(event):
         model.rotation.y = lerp_angle(model.rotation.y, spring_arm.rotation.y, rotation_speed * delta)
 ```
 
-```python
 import math
 
 def lerp_angle(a, b, t):

@@ -84,7 +84,6 @@ func _ready():
 
 エディターが入力に応じて即座に提案を表示しているのに注目してください。Godotは多くの場面でベクトルを使用しており、この点については後ほど詳しく説明します。まずは「Vector2」と入力してみましょう。ヒントが表示されるので、`x` と `y` には2つの浮動小数点数を指定する必要があることがわかります。
 
-```python
 from pyglet import graphics as gl
 from pyglet.graphics import vertex_array_object as vao
 

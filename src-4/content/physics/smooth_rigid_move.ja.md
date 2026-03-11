@@ -14,7 +14,6 @@ rigidbodyを目標位置へ移動させたい。
 
 物体を移動させるには、特定の方向に力を加える必要があります - これが「*力*」です。物体が動き始めたら、最終位置に近づくにつれてこの力は徐々に小さくなるようにします。
 
-```python
 # ベクトル間の距離計算関数を使用します
 dist = Vector2.distance_to(target_vector, player_velocity)
 print("ターゲットまでの距離:", dist)

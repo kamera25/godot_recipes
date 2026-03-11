@@ -31,7 +31,6 @@ func _physics_process(delta):
     constant_torque = dir * angular_force
 ```
 
-```python
 # 以下のコードはPython形式で記述されています：
 import numpy as np
 

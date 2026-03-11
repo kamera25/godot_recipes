@@ -27,7 +27,6 @@ func _on_start_pressed():
     new_game()
 ```
 
-```python
 def _mainloop():
     while True:
         for event in pygame.event.get():

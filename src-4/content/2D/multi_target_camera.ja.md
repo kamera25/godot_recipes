@@ -99,7 +99,6 @@ else:
 zoom = lerp(zoom, Vector2.ONE * z, zoom_speed)
 ```
 
-```python
 import cv2
 from skimage.draw import ellipse, circle, rectangle
 
