@@ -27,7 +27,6 @@ draft: false
 
 <img src="/godot_recipes/4.x/img/missile.png" alt="ミサイル">
 
-```
 ノードの設定を行い、スプライトのテクスチャと衝突形状を構成します。{{< gd-icon Sprite2D >}}`Sprite2D`ノードは必ず `90°` 回転させ、右向きになるように調整してください。これにより、親オブジェクトの「前方」方向と一致するようになります。
 
 スクリプトを追加し、{{< gd-icon Area2d >}}`Area2D`の`body_entered`シグナルと{{< gd-icon Timer >}}`Timer`の`timeout`シグナルを接続してください。

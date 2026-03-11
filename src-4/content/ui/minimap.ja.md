@@ -126,7 +126,7 @@ class_name Minimap
 @onready var alert_marker = $MarginContainer/Grid/AlertMarker
 ```
 
-次は、辞書を使ってユニットに割り当てた 'minimap_icon' タグを対応するマーカーにマッピングします。
+次は、Dictonaryを使ってユニットに割り当てた 'minimap_icon' タグを対応するマーカーにマッピングします。
 
 ```gdscript
 @onready var icons = {
@@ -135,7 +135,7 @@ class_name Minimap
 }
 ```
 
-次に、マップサイズとワールドサイズの比率を計算して保持する変数が必要です。各オブジェクトにアクティブマーカーを割り当てるため、別の辞書を使用します。キーは対象オブジェクト（例：`Mob` または `Crate` インスタンス）、値は割り当てられたマーカーになります。
+次に、マップサイズとワールドサイズの比率を計算して保持する変数が必要です。各オブジェクトにアクティブマーカーを割り当てるため、別のDictonaryを使用します。キーは対象オブジェクト（例：`Mob` または `Crate` インスタンス）、値は割り当てられたマーカーになります。
 
 ```gdscript
 var grid_scale

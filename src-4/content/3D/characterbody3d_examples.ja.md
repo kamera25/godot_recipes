@@ -100,28 +100,7 @@ func get_input(delta):
 # 前方/後方移動にはキャラクターのローカル座標系の Z 軸を使用しています。
 # これにより、身体の「ローカル」前方方向へ正しく移動します。
 
-```gdscript
-import panda3d.core as p3d
-
-class MainNodePath(Spatial):
-    def __init__(self, root_node_path):
-        super().__init__()
-        self.root_node_path = root_node_path
-
-    # ... (その他の初期化コード) ...
-
-    def update_transforms(self):
-        for node in self.get_children():
-            if isinstance(node, StaticBody3D):
-                p3d.TransformNode("transform_node")
-                    .set_translation(p3d.Vector3())
-                    .set_rotation_axisangle(p3d.Vector3(), p3d.Vector3(), 0)
-                    .set_scale(p3d.Vector3(0.5, 0.5, 0.5))
-
-            elif isinstance(node, Camera3D):
-                # 補間カメラの設定を適用
-                pass
-```
+Here's the tank in action. We've made a test scene with a {{< gd-icon StaticBody3D >}}`StaticBody3D` plane for the ground and an {{< gd-icon Camera3D >}}`Camera3D` using the [Interpolated Camera](/godot_recipes/4.x/3d/interpolated_camera/index.html) recipe.
 
 <video controls src="/godot_recipes/4.x/img/3d_kinematic_09.webm"></video>
 

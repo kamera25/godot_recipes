@@ -17,7 +17,7 @@ Godot環境でリグ設定済みのアニメーション3Dキャラクターを�
 
 We've chosen {{< gd-icon CharacterBody3D >}}`CharacterBody3D` as the root node of the imported scene, and it's complaining about a missing collision shape, so let's fix that first. Add a {{< gd-icon CollisionShape3D >}}`CollisionShape3D` child and choose {{< gd-icon CapsuleShape3D >}}`CapsuleShape3D` as its **Shape** property.
 
-カプセルのサイズと位置を調整し、キャラクターの全身を覆うようにします。参考までに、私が使用した数値は以下の通りです：
+カプセルのサイズと位置を調整し、キャラクターの全身を覆うようにします。参考までに、私が使用した数値は以下の通りです。
 
 ![alt](/godot_recipes/4.x/img/3dchar_capsule.png)
 

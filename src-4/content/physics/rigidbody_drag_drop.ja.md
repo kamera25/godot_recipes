@@ -36,7 +36,7 @@ func _on_input_event(viewport, event, shape_idx):
 
 マウスクリックを検知すると、ボディへの参照を含むシグナルを発報します。複数のボディが存在する可能性があるため、メインシーン側で各ボディがドラッグ可能かどうか、あるいは既に「ホールド」状態にあるかどうかを管理する仕組みを設けます。
 
-체중이 드래그 중인 경우, 마우스의 위치에 따라 그 위치를 업데이트합니다.
+ボディがドラッグされている間は、その位置をマウスカーソルに合わせて更新します。
 
 ```gdscript
 func _physics_process(delta):
@@ -60,14 +60,7 @@ func drop(impulse=Vector2.ZERO):
         held = false
 ```
 
-def drop(obj):
-    # オブジェクトの凍結状態を解除
-    obj.freeze = False
-
-    # リリース時に適用するインパルス値を指定可能
-    impulse_value = get_optional_impulse()
-    if impulse_value is not None:
-        obj.apply_force_instantaneously(impulse_value)  # 即時強制力を適用
+`drop`関数内では、`freeze`を再び`false`に設定した後、ボディは物理エンジンの制御下に戻ります。オプションで衝撃値を指定することで、リリース時にオブジェクトを『投げる』機能を追加することも可能になります。
 
 ### メインシーン
 

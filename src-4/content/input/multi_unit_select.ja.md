@@ -6,11 +6,11 @@ draft: false
 
 ## 課題
 
-複数ユニットを選択するためにクリック＆ドラッグしたいんですね、RTSスタイルのように。
+RTS(リアルタイムストラテジー)のように、複数ユニットを選択するためにクリック＆ドラッグしたい。
 
 ## 解決策
 
-リアルタイムストラテジー（RTS）ゲームでは、複数ユニットに同時に命令を出す必要がある場合が多い。一般的な操作手法として、対象ユニットをマウスでクリックしてドラッグすることで選択範囲を指定する方法がある。ユニットを選択したら、マップ上をクリックすることで移動コマンドを実行できる。
+リアルタイムストラテジー（RTS）ゲームでは、複数ユニットに同時に命令する事があります。一般的な操作手法として、対象ユニットをマウスでクリックしてドラッグすることで選択範囲を決定。またユニットを選択したら、マップ上をクリックすることで移動コマンドを実行させる事が多いです。
 
 以下に目指すべき例を示します。
 
@@ -18,7 +18,7 @@ draft: false
 
 ### ユニット設定
 
-この機能を実際に試すには、基本的なRTSスタイルのユニットが必要です。これらのユニットはターゲットに向かって移動し、互いに衝突しないように設計されています。チュートリアルではこの点について詳しく説明しません。カスタムRTSユニット作成のベースとして使いたい場合は、ユニットスクリプトにコメントが付いています。プロジェクトをダウンロードするためのリンクは以下の通りです：
+この機能を実際に試すには、基本的なRTSスタイルのユニットが必要です。これらのユニットはターゲットに向かって移動し、互いに衝突しないように設計されています。チュートリアルではこの点について詳しく説明しません。カスタムRTSユニット作成のベースとして使いたい場合は、ユニットスクリプトにコメントが付いています。プロジェクトをダウンロードするためのリンクは以下の通りです。
 
 ### 世界設定
 
@@ -62,7 +62,7 @@ func _draw():
 
 ### 単位の選択方法
 
-「選択ボックスが作成できたら、その内部に位置するユニットを特定する必要があります。ボタンを放してドラッグ操作が終了した際には、物理空間クエリを実行して対象のユニットを検索する必要があります。なお、対象となるユニットは{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ですが、{{< gd-icon Area2D >}}`Area2D`やその他のボディタイプでも問題ありません。」
+選択ボックスが作成できたら、その内部に位置するユニットを特定する必要があります。ボタンを放してドラッグ操作が終了した際には、物理空間クエリを実行して対象のユニットを検索する必要があります。なお、対象となるユニットは{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ですが、{{< gd-icon Area2D >}}`Area2D`やその他のボディタイプでも問題ありません。
 
 ```cpp
 // Define the rectangle shape and location transform
@@ -98,25 +98,14 @@ elif dragging:
     selected = space.intersect_shape(query)
 ```
 
-# Create physics state and set it up using PhysicsShapeQueryParameters2D
-physics_state = Box2DWorld.create_physics_state()
-shape_query_params = PhysicsShapeQueryParameters2D()
-shape_query_params.set_body_shapes([car_shape])
-
-# Set origin of the query transformation to the center of the dragged area
-origin_point = pymunk.Vec2d(self.dragged_area.center())
-query_transform = TransformedPhysicsBodyFilter(physics_state, origin_point)
-shape_query_params.set_filter(query_transform)
-
-# Perform intersection test and get results
-intersection_results = physics_state.intersect_shapes2D(shape_query_params)
+これで物理状態への参照を取得し、`PhysicsShapeQueryParameters2D`を使用して形状クエリを設定できます。ここでは対象の形状を指定するとともに、ドラッグ操作中のエリアの中心座標を基準にしてクエリの変換行列を定義します。`intersect_shape()`を呼び出した後の結果は、Dictonary 配列として返され、以下のような形式になります。
 
 ```
 [{ "rid": RID(4093103833089), "collider_id": 32145147326, "collider": Unit2:<CharacterBody2D#32145147326>, "shape": 0 },
 { "rid": RID(4123168604162), "collider_id": 32229033411, "collider": Unit3:<CharacterBody2D#32229033411>, "shape": 0 }]
 ```
 
-各「コリダー」項目はそれぞれユニットへの参照であるため、これを使用すれば選択通知を行い、アウトラインシェーダーを有効にできます：
+各`collider`項目はそれぞれユニットへの参照であるため、これを使用すれば選択通知を行い、アウトラインシェーダーを有効にできます：
 
 ```gdscript
     for item in selected:
@@ -145,7 +134,6 @@ func _unhandled_input(event):
                 selected = []
 ```
 
-```
 ここでの `else` 条件は、`selected` が 0 より大きいときにマウスをクリックした場合にトリガーされます。各項目の `target` を設定した後、ユニットを選択解除することで、再度最初から開始できるようにしています。
 
 ## まとめ

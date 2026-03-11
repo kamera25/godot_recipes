@@ -6,11 +6,11 @@ draft: false
 
 ## 課題
 
-「Astroids」のような半リアルな宇宙船を作成するため、`RigidBody2D`を使いたいと考えていますか。
+「Astroids」のような半リアルな宇宙船を作成するため、`RigidBody2D`を使いたい。
 
 ## 解決策
 
-````{{< gd-icon RigidBody2D >}}`RigidBody2D` を使用する際には少し注意が必要です。Godotの物理エンジンによって制御されるため、直接移動させるのではなく力を加える必要があります。剛性ボディを扱う前に、[RigidBody2D APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html)を必ず確認することを強くお勧めします。これからこの例を進めていく過程で、このドキュメントを参照しながら進めていきましょう。
+{{< gd-icon RigidBody2D >}}`RigidBody2D` を使用する際には少し注意が必要です。Godotの物理エンジンによって制御されるため、直接移動させるのではなく力を加える必要があります。剛性ボディを扱う前に、[RigidBody2D APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html)を必ず確認することを強くお勧めします。これからこの例を進めていく過程で、このドキュメントを参照しながら進めていきましょう。
 
 本例では、以下のノード設定を使用します。
 
@@ -20,11 +20,10 @@ draft: false
      {{< gd-icon CollisionShape2D >}} CollisionShape2D
 ```
 
-```
-{{% notice style="tip" title="スプライトの向き" %}}
-必ずスプライトを正しく配置してください。回転していないオブジェクトは**+X軸**方向に向くようにしてください（つまり右方向を向いている状態）。スプライトのアートワークが別の方向を向いて描かれている場合は、`Sprite2D`（親ボディではなく）を適切に整列させるために回転させてください。
+{{% notice style="tip" title="Spriteの向き" %}}
+必ずスプライトを正しく配置してください。回転していないオブジェクトは **+X軸** 方向に向くようにしてください（つまり右方向を向いている状態）。スプライトのアートワークが別の方向を向いて描かれている場合は、`Sprite2D`（親ボディではなく）を適切に整列させるために回転させてください。
 {{% /notice %}}
-```
+
 
 以下の入力を「入力マップ」で使用します。
 
@@ -70,7 +69,6 @@ func _physics_process(_delta):
     constant_torque = rotation_dir * spin_power
 ```
 
-```
 動作はしますが、コントロールが非常に難しいのがお分かりでしょう。回転速度が速すぎて、画面外へ出る前に急激に加速してしまいます。ここで「実際の」宇宙物理の法則から脱却したい点があります。宇宙空間には摩擦がありませんが、弊社開発の『アステロイド』風宇宙船の場合、推力をかけていない時には自然に減速するようになれば、より簡単に操縦できるようになります。この制御には「減衰効果」が有効です。
 
 {{< gd-icon RigidBody2D >}}`RigidBody2D`プロパティ内では、**直線／減衰**と**角速度／減衰**の設定があります。これらをそれぞれ**1**と**2**に設定すると、移動/回転の動きが遅くなり、さらに停止させる効果も生じます。
@@ -109,20 +107,7 @@ func _integrate_forces(state):
 
 ### 歪み補正機能
 
-def warp_mechanic():
-    # ランダムな位置にワープするロジックを実装
-    pass
-
-def update():
-    global body
-
-    if inputs["warp"]:
-        warp_mechanic()
-
-    body.update()
-
-    _integrate_forces(body)
-```
+`_integrate_forces()`を使用して、問題なくボディの状態を変更できるもう一つの例を見てみましょう。『ワープ』機構を追加するとします。プレイヤーが`『ワープ』`入力を押すと、船が画面内のランダムな位置に瞬間移動するようにします。
 
 まず、このために新規変数を追加します。
 
@@ -130,10 +115,7 @@ def update():
 var teleport_pos = null
 ```
 
-def get_input():
-    # ランダムな位置を設定
-    position = random.randint(0, 2)  # 0, 1, または 2のいずれかの位置に移動
-    return position
+`get_input()` でランダムな座標をセットします。
 
 ```gdscript
     if Input.is_action_just_pressed("warp"):

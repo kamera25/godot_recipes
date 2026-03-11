@@ -31,36 +31,7 @@ func _physics_process(delta):
     constant_torque = dir * angular_force
 ```
 
-# 以下のコードはPython形式で記述されています：
-import numpy as np
-
-def calculate_torque_optimized(transform, target):
-    """
-    最適化されたトルク計算関数
-
-    Args:
-        transform: Transformオブジェクト
-        target: TargetVectorオブジェクト
-
-    Returns:
-        float: 算出されたトルク値
-    """
-    # ボディの前方ベクトルを計算
-    body_vector = transform.forward()
-
-    # ターゲットとボディの相対角度を計算
-    angle_rad = np.arctan2(target.y - body_vector.y, target.x - body_vector.x)
-
-    # トルク係数（簡略化のため定数として設定）
-    k_torque_factor = 1.0  # 実際の実装では動的に決定されるべき値
-
-    # 最適化されたトルク計算式を適用
-    torque = k_torque_factor * np.sin(angle_rad)
-
-    return torque
-```
-
-この改良版では、ベクトル演算の計算効率を考慮し、より直感的な角度ベースのアプローチを採用しています。また、トルク係数を定数ではなく変数として扱うことで、実際の実装において動的に調整可能な設計となっています。これにより、特定の動作条件に応じた最適なトルク制御が可能になります。
+ここで`transform.y`を使用している理由について疑問に思われるかもしれません。というのも、`transform.x`はボディの前方ベクトルを表すからです。もし`transform.x`を使用していれば、ドット積が最大となるのはボディが完全にターゲット方向を向いている時になりますが、私たちはその時点でトルク値をゼロにしたいと考えています。一方、`transform.y`を使用することで、ターゲット方向に完全に揃っていない状態ほどトルク値が増加するようになります。
 
 ### 剛体を完全にスキップする
 
