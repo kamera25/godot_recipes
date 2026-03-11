@@ -113,7 +113,6 @@ AnimationTreeStateMachineを使用して以下の処理を管理できます：
 
 ## 関連レシピ
 
-```markdown
 - [スプライトシートアニメーション](/godot_recipes/4.x/ja/animation/spritesheet_animation/)
 - [トップダウン型キャラクター操作](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)
 

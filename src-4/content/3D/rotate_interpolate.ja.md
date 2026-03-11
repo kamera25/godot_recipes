@@ -57,7 +57,6 @@ func _process(delta):
 
 !
 
-```markdown
 注：`interpolate_with()` は `transform` を操作するため、回転と位置の両方に対して補間を行うことができます。
 
 ## まとめ

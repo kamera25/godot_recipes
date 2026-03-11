@@ -30,7 +30,6 @@ draft: false
     - {{< gd-icon Sprite2D >}} ノード `Sprite2D`：ここではスプライトシート、個別の画像、あるいは {{< gd-icon TileMap >}} ノードとしてタイルマップを使用することもできます。
     - {{< gd-icon CollisionShape2D >}} ノード `CollisionShape2D`：ヒットボックスの大きさが大きすぎると、プレイヤーがプラットフォームの端から「浮いて」見える原因になるので注意してください。
 
-```markdown
 {{< gd-icon Sprite2D >}}`Sprite2D`の**テクスチャ**と衝突形状を適切に設定してください。{{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`では、**物理演算同期** プロパティを「オン」に設定します。コードでボディを動かしているため、これにより物理演算ステップ時に正しく移動され、プレイヤーや他の物理オブジェクトと連動した動きを維持できます。
 
 次にルートノードにスクリプトを追加します：{{< gd-icon Node2D >}}`Node2D`:

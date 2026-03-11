@@ -73,8 +73,7 @@ var jumping = false
 @onready var anim_state = $AnimationTree.get("parameters/playback")
 ```
 
-```markdown
-以下のプロパティを確認できます：
+⭐️修正要 以下のプロパティを確認できます：
 
 !
 

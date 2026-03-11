@@ -196,7 +196,6 @@ if linear_velocity.length() > turn_stop_limit:
     car_mesh.global_transform = car_mesh.global_transform.orthonormalized()
 ```
 
-```markdown
 {{% notice warning %}}
 浮動小数点演算の精度限界により、変換処理を繰り返し回転させると、最終的に歪みが生じる可能性があります。スケールが変動したり、軸方向が不整合になったりする場合があります。定期的に変換を回転させるスクリプトでは、`orthonormalized()` を使用して誤差が累積する前に補正を行うことが推奨されます。
 {{% /notice %}}

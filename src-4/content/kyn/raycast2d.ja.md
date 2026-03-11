@@ -10,7 +10,6 @@ ghcommentid: 87
 
 ### ノードのプロパティ
 
-```markdown
 {{< gd-icon RayCast2D >}}`RayCast2D`ノードを追加し、インスペクターを確認してみましょう：
 
 <img src="/godot_recipes/4.x/img/kyn_raycast2d_01_4.png" alt="alt">

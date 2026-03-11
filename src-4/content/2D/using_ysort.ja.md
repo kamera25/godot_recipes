@@ -28,7 +28,6 @@ Godotにはレンダリング順序を変更する組み込みオプションが
 
 ![alt](/godot_recipes/4.x/img/ysort_04.png)
 
-```markdown
 オブジェクトが「地面」の上に配置されているように見せたい場合、各オブジェクトのスプライトをオフセットすることで解決できます。具体的には、オブジェクトの `position` プロパティがスプライトの最下部位置と一致するようにします。：
 
 <img src="/godot_recipes/4.x/img/ysort_05.png" alt="">
