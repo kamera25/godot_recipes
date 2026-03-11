@@ -65,7 +65,7 @@ We can display a 2D image in 3D using a {{< gd-icon Sprite3D >}}`Sprite3D`. Add 
 ```
 私たちは `Sprite3D` ノードが静的なテクスチャを表示するのではなく、2D `TextureProgressBar` を表示したいと考えています。これは、テクスチャをエクスポートできる `SubViewport` ノードを使用することで実現可能です。
 
-以下の手順で操作してください：
+以下の手順で操作してください。
 1. {{< gd-icon SubViewport >}} `SubViewport` を {{< gd-icon Sprite3D >}} `Sprite3D` の子要素として追加します。
 2. インスペクターウィンドウで、_Transparent BG_ 設定を **オン** に設定してください。
 
@@ -86,13 +86,13 @@ func _ready():
 
 ### 全体を統合して接続する方法
 
-モブの `_on_input_event()` メソッド内で、ヘルスを減少させた後に以下を追加してください：
+モブの `_on_input_event()` メソッド内で、ヘルスを減少させた後に以下を追加してください。
 
 ```gdscript
 $HealthBar3D.update(health, max_health)
 ```
 
-以下の内容を `HealthBar3D.gd` に追加してください：
+以下の内容を `HealthBar3D.gd` に追加してください。
 
 ```gdscript
 func update_health(_value, _max_value):

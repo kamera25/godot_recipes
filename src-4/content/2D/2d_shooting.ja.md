@@ -74,7 +74,7 @@ new_bullet.transform = muzzle_transform
 @export var Bullet : PackedScene
 ```
 
-入力アクションが定義されているか確認してください：
+入力アクションが定義されているか確認してください。
 
 ```gdscript
     if Input.is_action_just_pressed("shoot"):

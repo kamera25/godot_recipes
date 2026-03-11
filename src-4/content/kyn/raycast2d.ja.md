@@ -73,7 +73,7 @@ func _input(event):
 
 #### 2. エッジ検出処理
 
-以下の方法でmobに下向きレイキャストを2つ追加してください：
+以下の方法でmobに下向きレイキャストを2つ追加してください。
 
 ![alt](/godot_recipes/4.x/img/kyn_raycast2d_03.png)
 

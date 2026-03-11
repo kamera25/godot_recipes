@@ -53,7 +53,7 @@ func _physics_process(delta):
 
 入力マッピングに「W」「A」「S」「D」（標準設定）またはコントローラーの軸（好みに応じて選択可能）を使用して、適切な入力アクションを必ず追加してください。
 
-以下の手順で「ワールド」シーンにプレイヤーを追加してください：床用に`StaticBody3D`ノードを、壁用に複数のノードを作成済みとします。
+以下の手順で「ワールド」シーンにプレイヤーを追加してください。床用に`StaticBody3D`ノードを、壁用に複数のノードを作成済みとします。
 
 移動しようとすると、前後・左右に動けるものの、回転はできないことがわかります。次はこの点を処理していきます。
 
@@ -105,4 +105,4 @@ FPSキャラクターには通常、前面に位置した武器の3Dメッシュ
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトコードはこちらからダウンロードしてください：[https://github.com/godotrecipes/basic_fps](https://github.com/godotrecipes/basic_fps)
+プロジェクトコードはこちらからダウンロードしてください。[https://github.com/godotrecipes/basic_fps](https://github.com/godotrecipes/basic_fps)

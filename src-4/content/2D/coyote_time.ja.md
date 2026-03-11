@@ -41,7 +41,7 @@ var last_floor = false  # Last frame's on-floor state
 $CoyoteTimer.wait_time = coyote_frames / 60.0
 ```
 
-各フレームで現在の `is_on_floor()` 値を保存し、次のフレームで使用するようにします。したがって、`move_and_slide()` の後に `_physics_process()` 内に以下を設定してください：
+各フレームで現在の `is_on_floor()` 値を保存し、次のフレームで使用するようにします。したがって、`move_and_slide()` の後に `_physics_process()` 内に以下を設定してください。
 
 ```gdscript
     last_floor = is_on_floor()

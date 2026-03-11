@@ -56,7 +56,7 @@ func _process(delta):
 
 ![alt](/godot_recipes/4.x/img/audio_mgr_01.png)
 
-プロジェクト内で音を再生したい任意の場所で、以下を使用してください：
+プロジェクト内で音を再生したい任意の場所で、以下を使用してください。
 
 ```gdscript
 AudioManager.play("res://path/to/sound")

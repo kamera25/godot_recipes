@@ -34,7 +34,7 @@ draft: false
 
 まず`{{< gd-icon MarginContainer >}}MarginContainer`を追加します。次に、その［テーマ設定/定数］をすべて`5`に設定します。このコントロールは残りのノードを保持し、他の要素に影響を与えないようにする役割を果たします。名前は「ミニマップ」とし、シーンを保存してください。
 
-次に、このプロジェクトに {{< gd-icon NinePatchRect >}}`NinePatchRect`ノードを追加します。このノードは `TextureRect`と似ていますが、角や端を引き伸ばさずにリサイズする点が異なります。アセットフォルダから **[テクスチャ]** プロパティに `panel_woodDetail_blank.png` 画像をドラッグ＆ドロップしてください。この画像は `128x128`ピクセルのもので、ルート {{< gd-icon MarginContainer >}}`MarginContainer`ノードを拡大すると、画像が伸びすぎて見栄えが悪くなります：
+次に、このプロジェクトに {{< gd-icon NinePatchRect >}}`NinePatchRect`ノードを追加します。このノードは `TextureRect`と似ていますが、角や端を引き伸ばさずにリサイズする点が異なります。アセットフォルダから **[テクスチャ]** プロパティに `panel_woodDetail_blank.png` 画像をドラッグ＆ドロップしてください。この画像は `128x128`ピクセルのもので、ルート {{< gd-icon MarginContainer >}}`MarginContainer`ノードを拡大すると、画像が伸びすぎて見栄えが悪くなります。
 
 ![alt](/godot_recipes/4.x/img/minimap_02.gif)
 
@@ -52,7 +52,7 @@ draft: false
 
 「MiniMap」の子要素（かつ「Frame」の兄弟要素）として、新たに {{< gd-icon MarginContainer >}}`MarginContainer` を追加します。**テーマオーバーライド/定数** で4つのマージンプロパティをすべて `20` に設定します。このノードの子要素として {{< gd-icon TextureRect >}}`TextureRect` を追加し、**テクスチャ** を上記の画像に割り当てます。**伸縮モード** は「タイル」に設定してください。このノードには「Grid」という名前を付けます。
 
-ルートノードのサイズを変更して効果を確認してください：
+ルートノードのサイズを変更して効果を確認してください。
 
 ![alt](/godot_recipes/4.x/img/minimap_04.gif)
 
@@ -215,7 +215,7 @@ for item in markers:
 
 <img src="/godot_recipes/4.x/img/minimap_09.png" alt="">
 
-この問題を解決するには、`obj_pos` を計算した後、マーカーの位置を設定する前に、その値をグリッドの矩形範囲にクリップしてください：
+この問題を解決するには、`obj_pos` を計算した後、マーカーの位置を設定する前に、その値をグリッドの矩形範囲にクリップしてください。
 
 ```gdscript
 obj_pos = obj_pos.clamp(Vector2.ZERO, grid.size)
@@ -253,7 +253,7 @@ else:
 removed.emit(self)
 ```
 
-メインスクリプトの`_ready()`関数内で、以下のシグナルをミニマップに接続してください：
+メインスクリプトの`_ready()`関数内で、以下のシグナルをミニマップに接続してください。
 
 ```gdscript
 func _ready():

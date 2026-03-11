@@ -19,7 +19,7 @@ In `Main` as a child of `CanvasLayer`, add a {{< gd-icon CenterContainer >}}`Cen
 @onready var start_button = $CanvasLayer/CenterContainer/Start
 ```
 
-このボタンの`押された`テクスチャを`メイン`に接続し、このコードを追加してください：
+このボタンの`押された`テクスチャを`メイン`に接続し、このコードを追加してください。
 
 ```gdscript
 func _on_start_pressed():

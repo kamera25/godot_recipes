@@ -22,7 +22,7 @@ draft: false
 
 ### 世界設定
 
-ユニット選択の処理はワールド内で行います。まず「World」という名前の{{< gd-icon Node2D >}}`Node2D`オブジェクトを作成し、その中にいくつかの`Unit`インスタンスを追加します。ワールドノードにスクリプトをアタッチし、以下の変数を設定してください：
+ユニット選択の処理はワールド内で行います。まず「World」という名前の{{< gd-icon Node2D >}}`Node2D`オブジェクトを作成し、その中にいくつかの`Unit`インスタンスを追加します。ワールドノードにスクリプトをアタッチし、以下の変数を設定してください。
 
 ```gdscript
 extends Node2D
@@ -33,7 +33,7 @@ var drag_start = Vector2.ZERO  # Location where drag began.
 var select_rect = RectangleShape2D.new()  # Collision shape for drag box.
 ```
 
-※ボックスを描画した後は、その内部にどのユニットが位置しているかを確認する方法が必要です。 `{{< gd-icon RectangleShape2D >}}`RectangleShape2D`を使用すると物理エンジンに問い合わせて、衝突した対象を確認できます。
+※ボックスを描画した後は、その内部にどのユニットが位置しているかを確認する方法が必要です。 {{< gd-icon RectangleShape2D >}}`RectangleShape2D`を使用すると物理エンジンに問い合わせて、衝突した対象を確認できます。
 
 ### ボックスの描画方法
 
@@ -62,8 +62,7 @@ func _draw():
 
 ### 単位の選択方法
 
-# 選択ボックス内に包含されるユニットを特定します
-selection_box.get_units()
+「選択ボックスが作成できたら、その内部に位置するユニットを特定する必要があります。ボタンを放してドラッグ操作が終了した際には、物理空間クエリを実行して対象のユニットを検索する必要があります。なお、対象となるユニットは{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ですが、{{< gd-icon Area2D >}}`Area2D`やその他のボディタイプでも問題ありません。」
 
 ```cpp
 // Define the rectangle shape and location transform

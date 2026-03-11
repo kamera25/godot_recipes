@@ -24,7 +24,7 @@ draft: false
 
 このアニメーション手法では、`Sprite2D`ノードを使用してテクスチャを表示し、その後`AnimationPlayer`でフレームの切り替えをアニメーション化します。これはあらゆる2Dノードで使用可能ですが、ここではデモンストレーション用に`CharacterBody2D`ノードを使用しています。
 
-以下のノードをシーンに追加してください：
+以下のノードをシーンに追加してください。
 
 ```
 {{< gd-icon CharacterBody2D >}}CharacterBody2D: Player

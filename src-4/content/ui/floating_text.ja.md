@@ -6,7 +6,7 @@ draft: false
 
 ## 課題
 
-衝突時にダメージを浮動小数点数で表示させたいようです。
+衝突時にダメージを浮動小数点数で表示させたい。
 
 ![alt](/godot_recipes/4.x/img/fct_demo.gif)
 

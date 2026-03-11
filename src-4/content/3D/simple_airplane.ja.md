@@ -105,7 +105,7 @@ func _physics_process(delta):
 
 ![alt](/godot_recipes/4.x/img/kb_plane_03.gif)
 
-次に、飛行機のピッチ角度を変更する処理を追加しましょう。`_physics_process()` 内の `get_input()` 呼び出し直後に以下を追加してください：
+次に、飛行機のピッチ角度を変更する処理を追加しましょう。`_physics_process()` 内の `get_input()` 呼び出し直後に以下を追加してください。
 
 ```gdscript
 transform.basis = transform.basis.rotated(transform.basis.x, pitch_input * pitch_speed * delta)
@@ -115,7 +115,7 @@ transform.basis = transform.basis.rotated(transform.basis.x, pitch_input * pitch
 
 ![alt](/godot_recipes/4.x/img/kb_plane_04.gif)
 
-その後、ターン入力用に以下を追加してください：
+その後、ターン入力用に以下を追加してください。
 
 ```gdscript
 transform.basis = transform.basis.rotated(Vector3.UP, turn_input * turn_speed * delta)

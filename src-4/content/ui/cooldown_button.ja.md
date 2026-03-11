@@ -30,7 +30,7 @@ AbilityButton: {{< gd-icon TextureButton >}} TextureButton
 
 「掃引」ノードでは、**プリセット**メニューから「完全矩形」を選択します。**塗りつぶしモード**を「反時計回り」に設定してください。
 
-また、クールダウン時の「放射状スワイプ」でボタンを暗く表示させたいため、**[変調]** プロパティに透明度のある濃いグレーを設定してください：
+また、クールダウン時の「放射状スワイプ」でボタンを暗く表示させたいため、**[変調]** プロパティに透明度のある濃いグレーを設定してください。
 
 ![alt](/godot_recipes/4.x/img/cooldown_02.png)
 
@@ -43,7 +43,7 @@ AbilityButton: {{< gd-icon TextureButton >}} TextureButton
 
 ### スクリプト
 
-以下のスクリプトを `AbilityButton` に追加してください：
+以下のスクリプトを `AbilityButton` に追加してください。
 - `Timer` の `timeout` シグナルと `AbilityButton` の `pressed` シグナルを接続します。
 
 ```gdscript

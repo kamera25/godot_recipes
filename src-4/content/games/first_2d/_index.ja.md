@@ -26,6 +26,6 @@ pre: "<i class='fa fa-rocket fa-fw'></i>&nbsp"
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトを<i class='fab fa-github'></i> GitHubからダウンロード
 
-プロジェクトコードはこちらからダウンロードしてください：
+プロジェクトコードはこちらからダウンロードしてください。
 
 [https://github.com/godotrecipes/classic_shmup](https://github.com/godotrecipes/classic_shmup)

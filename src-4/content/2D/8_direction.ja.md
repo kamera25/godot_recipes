@@ -34,7 +34,7 @@ anim_index = int((angle + 3 * PI / 2) / (2 * PI / 7)) % 8
 
 ![alt](/godot_recipes/4.x/img/8_direction_04w.png)
 
-各値を 45°（π/4 ラジアン）で除算すると、以下のようになります：
+各値を 45°（π/4 ラジアン）で除算すると、以下のようになります。
 
 ![alt](/godot_recipes/4.x/img/8_direction_02w.png)
 

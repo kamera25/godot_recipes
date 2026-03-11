@@ -11,7 +11,7 @@ pre: "08. "
 
 以前プレイヤー用の弾丸を作成したときと同じように、新しい「EnemyBullet」シーンを作成してください。ここでは詳細な手順は割愛しますが、行き詰まった場合はその部分を参照してください。唯一の違いは、代わりに「Enemy_projectile (16 x 16).png」画像を使用できる点です。
 
-スクリプトは少し異なります：
+スクリプトは少し異なります。
 
 ```gdscript
 extends Area2D
@@ -25,7 +25,7 @@ func _process(delta):
     position.y += speed * delta
 ```
 
-以下の方法でそれぞれ接続してください：
+以下の方法でそれぞれ接続してください。
 
 ```gdscript
 func _on_visible_on_screen_notifier_2d_screen_exited():

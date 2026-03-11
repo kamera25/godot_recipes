@@ -95,7 +95,7 @@ func _physics_process(delta):
     global_transform = global_transform.interpolate_with(xform, 12 * delta)
 ```
 
-結果は非常に滑らかでより魅力的なものになります：
+結果は非常に滑らかでより魅力的なものになります。
 
 <video controls src="/godot_recipes/4.x/img/3d_kinematic_09.webm"></video>
 

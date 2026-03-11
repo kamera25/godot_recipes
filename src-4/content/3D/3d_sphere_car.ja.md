@@ -209,7 +209,7 @@ if linear_velocity.length() > turn_stop_limit:
 
 坂での走行を試したことがある方ならご存知でしょうが、車オブジェクトは傾斜が全くつかず、常に水平を保っています。これは不自然に見えるため、[KinematicBody: 表面と位置合わせ](/godot_recipes/3.x/3d/3d_align_surface/) セクションで説明されている方法を使って修正しましょう。
 
-追加するコードは `_process()` 内でメッシュを回転させた後に配置してください：
+追加するコードは `_process()` 内でメッシュを回転させた後に配置してください。
 
 ```gdscript
 if ground_ray.is_colliding():
@@ -237,7 +237,7 @@ func align_with_y(xform, new_y):
 @onready var left_wheel = $CarMesh/suv2/wheel_frontLeft
 ```
 
-入力を取得した直後に以下を追加してください：
+入力を取得した直後に以下を追加してください。
 
 ```gdscript
     # rotate wheels for effect
@@ -265,7 +265,7 @@ var t = -rotate_input * ball.linear_velocity.length() / body_tilt
 body_mesh.rotation.z = lerp(body_mesh.rotation.z, t, 10 * delta)
 ```
 
-違いを観察してください：
+違いを観察してください。
 
 ![alt](/godot_recipes/4.x/img/3d_sphere_car_06.gif)
 

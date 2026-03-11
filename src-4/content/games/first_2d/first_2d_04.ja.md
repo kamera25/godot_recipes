@@ -64,7 +64,7 @@ func _process(delta):
 
 これはこのノードが送信可能なすべてのシグナル一覧です。シグナルはGodotで何かが発生したことを通知する仕組みです。この場合、`area_entered` シグナルを使用することで、この弾丸が他の {{< gd-icon Area2D >}}`Area2D` ノードに接触するたびに検知できます。
 
-以下の手順に従って操作してください：
+以下の手順に従って操作してください。
 
 新しい関数が追加され、名前の横に緑の「接続中」アイコンが表示されます。これはシグナルがこの関数に接続されていることを示すものです。この関数はエリアが何かに接触するたびに呼び出されるため、ここにコードを追加しましょう：
 
@@ -78,7 +78,7 @@ func _on_area_entered(area):
 
 ここで弾が敵に当たったかどうかを確認します（詳細は後述）。当たった場合は、敵に対して爆発処理を実行した後、弾オブジェクトを削除します。
 
-以下の手順に従って、{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D` の `screen_exited` シグナルも接続してください：
+以下の手順に従って、{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D` の `screen_exited` シグナルも接続してください。
 
 ```gdscript
 func _on_visible_on_screen_notifier_2d_screen_exited():

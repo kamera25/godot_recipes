@@ -135,7 +135,7 @@ func _unhandled_input(event):
 @export var rotation_speed = 12.0
 ```
 
-次に、`_physics_process()` 関数の `move_and_slide()` 呼び出し後に以下を追加してください：
+次に、`_physics_process()` 関数の `move_and_slide()` 呼び出し後に以下を追加してください。
 
 ```gdscript
     if velocity.length() > 1.0:
