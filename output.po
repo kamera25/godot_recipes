@@ -234,9 +234,7 @@ msgstr ""
 
 #: basics/getting_nodes.md
 msgid "![alt](/godot_recipes/4.x/img/node_paths_02.png)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/node_paths_02.png\" alt=\"Node Paths "
-"Example\">"
+msgstr "![alt](/godot_recipes/4.x/img/node_paths_02.png)"
 
 #: basics/getting_nodes.md
 msgid ""
@@ -1708,7 +1706,7 @@ msgstr ""
 
 #: ui/minimap.md
 msgid "![alt](/godot_recipes/4.x/img/minimap_10.gif)"
-msgstr "<img src=\"/godot_recipes/4.x/img/minimap_10.gif\" alt=\"ミニマップ画像\">"
+msgstr "![alt](/godot_recipes/4.x/img/minimap_10.gif)"
 
 #: ui/minimap.md
 msgid "### Adjusting zoom"
@@ -1754,14 +1752,11 @@ msgstr "![alt](/godot_recipes/4.x/img/minimap_05.png)"
 
 #: ui/minimap.md
 msgid "![alt](/godot_recipes/4.x/img/pattern_blueprintPaper.png)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/pattern_blueprintPaper.png\" alt=\"Pattern "
-"Blueprint Paper\">"
+msgstr "![alt](/godot_recipes/4.x/img/pattern_blueprintPaper.png)"
 
 #: ui/minimap.md
 msgid "![alt](/godot_recipes/4.x/img/minimap_12.png)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/minimap_12.png\" alt=\"Minimapスクリーンショット\">"
+msgstr "![alt](/godot_recipes/4.x/img/minimap_12.png)"
 
 #: ui/minimap.md
 msgid "### Removing objects"
@@ -1863,7 +1858,7 @@ msgstr "サイズを変更するとどうなるか、次に見てみましょう
 
 #: ui/minimap.md
 msgid "![alt](/godot_recipes/4.x/img/minimap_09.png)"
-msgstr "<img src=\"/godot_recipes/4.x/img/minimap_09.png\" alt=\"\">"
+msgstr "![alt](/godot_recipes/4.x/img/minimap_09.png)"
 
 #: ui/minimap.md
 msgid ""
@@ -2338,7 +2333,7 @@ msgstr ""
 
 #: ui/heart_containers_3.md
 msgid "![alt](/godot_recipes/4.x/img/heart_bar_02.png)"
-msgstr "<img src=\"/godot_recipes/4.x/img/heart_bar_02.png\">"
+msgstr "![alt](/godot_recipes/4.x/img/heart_bar_02.png)"
 
 #: ui/heart_containers_3.md
 msgid "The heart images I'm using are 53x45. You can get them here:"
@@ -2836,8 +2831,7 @@ msgstr "### スクリプト"
 
 #: ui/cooldown_button.md
 msgid "![alt](/godot_recipes/4.x/img/cooldown_03.gif)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/cooldown_03.gif\" alt=\"クールダウンアニメーション\">"
+msgstr "![alt](/godot_recipes/4.x/img/cooldown_03.gif)"
 
 #: ui/cooldown_button.md
 msgid ""
@@ -3044,8 +3038,7 @@ msgstr "簡単に参照できるように、私はこれを `DebugOverlay` ス�
 
 #: ui/debug_overlay.md
 msgid "![alt](/godot_recipes/4.x/img/debug_stats_01.png)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/debug_stats_01.png\" alt=\"デバッグ統計画面\">"
+msgstr "![alt](/godot_recipes/4.x/img/debug_stats_01.png)"
 
 #: ui/direction_indicators.md
 msgid ""
@@ -3396,8 +3389,7 @@ msgstr "カメラジンバルのセットアップが完了したら、以下の
 
 #: 3D/camera_gimbal.md
 msgid "![alt](/godot_recipes/4.x/img/gimbal_02.gif)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/gimbal_02.gif\" alt=\"Gimbal Animation\">"
+msgstr "![alt](/godot_recipes/4.x/img/gimbal_02.gif)"
 
 #: 3D/camera_gimbal.md
 msgid ""
@@ -3595,9 +3587,7 @@ msgstr ""
 
 #: 3D/3d_align_surface.md
 msgid "![alt](/godot_recipes/4.x/img/3d_kinematic_05.png)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/3d_kinematic_05.png\" "
-"alt=\"3Dキネマティックオブジェクト\">"
+msgstr "![alt](/godot_recipes/4.x/img/3d_kinematic_05.png)"
 
 #: 3D/3d_align_surface.md
 msgid ""
@@ -3614,7 +3604,7 @@ msgstr "補間量は自由に調整してみてください。私たちはこの
 
 #: 3D/3d_align_surface.md
 msgid "![alt](/godot_recipes/4.x/img/3d_kinematic_06.gif)"
-msgstr "<img src=\"/godot_recipes/4.x/img/3d_kinematic_06.gif\" alt=\"alt\">"
+msgstr "![alt](/godot_recipes/4.x/img/3d_kinematic_06.gif)"
 
 #: 3D/3d_align_surface.md
 msgid ""
@@ -3866,7 +3856,7 @@ msgstr "今は停止や方向転換時に、わずかな慣性が働くように
 
 #: 3D/spaceship.md
 msgid "![alt](/godot_recipes/4.x/img/3d_ship_02.gif)"
-msgstr "<img src=\"/godot_recipes/4.x/img/3d_ship_02.gif\" alt=\"3D船モデル02\">"
+msgstr "![alt](/godot_recipes/4.x/img/3d_ship_02.gif)"
 
 #: 3D/spaceship.md
 msgid "- [Interpolated Camera](/godot_recipes/4.x/3d/interpolated_camera/)"
@@ -4125,8 +4115,7 @@ msgstr "![alt](/godot_recipes/4.x/img/barHorizontal_yellow_mid%20200.png)"
 
 #: 3D/healthbars.md
 msgid "![alt](/godot_recipes/4.x/img/healthbar_example.gif)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/healthbar_example.gif\" alt=\"ヘルスバーの例\">"
+msgstr "![alt](/godot_recipes/4.x/img/healthbar_example.gif)"
 
 #: 3D/healthbars.md
 msgid ""
@@ -4483,7 +4472,7 @@ msgstr "移行タイプを変更するだけで、全く異なる印象を得ら
 
 #: 3D/rolling_cube.md
 msgid "![alt](/godot_recipes/4.x/img/cube_002.gif)"
-msgstr "<img src=\"/godot_recipes/4.x/img/cube_002.gif\" alt=\"キューブ\">"
+msgstr "![alt](/godot_recipes/4.x/img/cube_002.gif)"
 
 #: 3D/rolling_cube.md
 msgid "#### Step 1"
@@ -4844,8 +4833,7 @@ msgstr "### 仕上げ作業"
 
 #: 3D/3d_sphere_car.md
 msgid "![alt](/godot_recipes/4.x/img/3d_sphere_car_03.png)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/3d_sphere_car_03.png\" alt=\"3D 球体カー 03\">"
+msgstr "![alt](/godot_recipes/4.x/img/3d_sphere_car_03.png)"
 
 #: 3D/3d_sphere_car.md
 msgid "You can `@export` these if you'd like to adjust them from the Inspector."
@@ -5692,7 +5680,7 @@ msgstr "スクリプトをボディに添付し、まずいくつかのプロパ
 
 #: 3D/basic_fps.md
 msgid "![alt](/godot_recipes/4.x/img/fps_01.png)"
-msgstr "<img src=\"/godot_recipes/4.x/img/fps_01.png\" alt=\"FPS 01\">"
+msgstr "![alt](/godot_recipes/4.x/img/fps_01.png)"
 
 #: 3D/click_to_move.md
 msgid "### Mouse -> 3D"
@@ -5708,8 +5696,7 @@ msgstr "このデモで使用するアクターは三角柱メッシュです：
 
 #: 3D/click_to_move.md
 msgid "![alt](/godot_recipes/4.x/img/3d_click_03.png)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/3d_click_03.png\" alt=\"3Dクリック操作 (ステップ 3)\">"
+msgstr "![alt](/godot_recipes/4.x/img/3d_click_03.png)"
 
 #: 3D/click_to_move.md
 msgid ""
@@ -5937,9 +5924,7 @@ msgstr ""
 
 #: 3D/assets/character_animation.md
 msgid "![alt](/godot_recipes/4.x/img/blendspace_complete.png)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/blendspace_complete.png\" alt=\"BlendSpace "
-"完了画面\">"
+msgstr "![alt](/godot_recipes/4.x/img/blendspace_complete.png)"
 
 #: 3D/assets/character_animation.md
 msgid ""
@@ -6006,8 +5991,7 @@ msgstr ""
 
 #: 3D/assets/character_animation.md
 msgid "![alt](/godot_recipes/4.x/img/anim_tree_tree.png)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/anim_tree_tree.png\" alt=\"アニメーションツリー\">"
+msgstr "![alt](/godot_recipes/4.x/img/anim_tree_tree.png)"
 
 #: 3D/assets/character_animation.md
 msgid "### Prepping the character"
@@ -6262,8 +6246,7 @@ msgstr ""
 
 #: 3D/assets/importing_assets.md
 msgid "![alt](/godot_recipes/4.x/img/3d_import_physics.png)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/3d_import_physics.png\" alt=\"3Dインポート物理設定\">"
+msgstr "![alt](/godot_recipes/4.x/img/3d_import_physics.png)"
 
 #: 3D/assets/importing_assets.md
 msgid ""
@@ -6285,8 +6268,7 @@ msgstr ""
 
 #: 3D/assets/importing_assets.md
 msgid "![alt](/godot_recipes/4.x/img/3d_import_tab.png)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/3d_import_tab.png\" alt=\"3Dインポートタブ\">"
+msgstr "![alt](/godot_recipes/4.x/img/3d_import_tab.png)"
 
 #: 3D/assets/importing_assets.md
 msgid ""
@@ -7232,8 +7214,7 @@ msgstr ""
 
 #: input/multi_unit_select.md
 msgid "![alt](/godot_recipes/4.x/img/multi_unit_03.gif)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/multi_unit_03.gif\" alt=\"Multi Unit 03\">"
+msgstr "![alt](/godot_recipes/4.x/img/multi_unit_03.gif)"
 
 #: input/multi_unit_select.md
 msgid "### Selecting the units"
@@ -7691,9 +7672,7 @@ msgstr "AnimationTreeStateMachineを使用して以下の処理を管理でき�
 
 #: animation/using_animation_sm.md
 msgid "![alt](/godot_recipes/4.x/img/animation_tree_07.gif)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/animation_tree_07.gif\" alt=\"アニメーションツリー "
-"07\">"
+msgstr "![alt](/godot_recipes/4.x/img/animation_tree_07.gif)"
 
 #: animation/spritesheet_animation.md
 #: animation/using_animation_sm.md
@@ -7851,8 +7830,7 @@ msgstr ""
 
 #: animation/using_animation_sm.md
 msgid "![alt](/godot_recipes/4.x/img/animation_tree_01.png)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/animation_tree_01.png\" alt=\"アニメーションツリー\">"
+msgstr "![alt](/godot_recipes/4.x/img/animation_tree_01.png)"
 
 #: animation/using_animation_sm.md
 msgid "![alt](/godot_recipes/4.x/img/animation_tree_05.gif)"
@@ -7914,9 +7892,7 @@ msgstr ""
 
 #: animation/spritesheet_animation.md
 msgid "![alt](/godot_recipes/4.x/img/sprite_animation_04.gif)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/sprite_animation_04.gif\" "
-"alt=\"スプライトアニメーション\">"
+msgstr "![alt](/godot_recipes/4.x/img/sprite_animation_04.gif)"
 
 #: animation/spritesheet_animation.md
 msgid ""
@@ -7992,9 +7968,7 @@ msgstr ""
 
 #: animation/spritesheet_animation.md
 msgid "![alt](/godot_recipes/4.x/img/sprite_animation_01.png)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/sprite_animation_01.png\" alt=\"Sprite "
-"Animation 01\">"
+msgstr "![alt](/godot_recipes/4.x/img/sprite_animation_01.png)"
 
 #: animation/spritesheet_animation.md
 msgid ""
@@ -8954,7 +8928,7 @@ msgstr ""
 
 #: g101/3d/101_3d_01.md
 msgid "![alt](/godot_recipes/4.x/img/3d_gizmo.png)"
-msgstr "<img src=\"/godot_recipes/4.x/img/3d_gizmo.png\" alt=\"3Dギズモ\">"
+msgstr "![alt](/godot_recipes/4.x/img/3d_gizmo.png)"
 
 #: g101/3d/101_3d_01.md
 msgid ""
@@ -9147,7 +9121,7 @@ msgstr ""
 
 #: g101/3d/101_3d_01.md
 msgid "![alt](/godot_recipes/4.x/img/3d_primitives.png)"
-msgstr "<img src=\"/godot_recipes/4.x/img/3d_primitives.png\">"
+msgstr "![alt](/godot_recipes/4.x/img/3d_primitives.png)"
 
 #: g101/3d/101_3d_01.md
 msgid ""
@@ -9162,7 +9136,7 @@ msgstr ""
 
 #: g101/3d/101_3d_01.md
 msgid "![alt](/godot_recipes/4.x/img/3d_camera_position.png)"
-msgstr "<img src=\"/godot_recipes/4.x/img/3d_camera_position.png\">"
+msgstr "![alt](/godot_recipes/4.x/img/3d_camera_position.png)"
 
 #: g101/3d/101_3d_01.md
 msgid "![alt](/godot_recipes/4.x/img/3d_workspace.png)"
@@ -9220,7 +9194,9 @@ msgstr ""
 msgid ""
 "func _on_Timer_timeout():\n"
 "    queue_free()"
-msgstr "queue_free()"
+msgstr ""
+"func _on_Timer_timeout():\n"
+"    queue_free()"
 
 #: g101/3d/101_3d_04.md
 msgid ""
@@ -9254,15 +9230,15 @@ msgstr ""
 
 #: g101/3d/101_3d_04.md
 msgid "![alt](/godot_recipes/4.x/img/3d_04_04.gif)"
-msgstr "<img src=\"/godot_recipes/4.x/img/3d_04_04.gif\">"
+msgstr "![alt](/godot_recipes/4.x/img/3d_04_04.gif)"
 
 #: g101/3d/101_3d_04.md
 msgid "![alt](/godot_recipes/4.x/img/3d_04_03.png)"
-msgstr "[画像: /godot_recipes/4.x/img/3d_04_03.png]"
+msgstr "![alt](/godot_recipes/4.x/img/3d_04_03.png)"
 
 #: g101/3d/101_3d_04.md
 msgid "![alt](/godot_recipes/4.x/img/3d_04_02.png)"
-msgstr "[alt text](/godot_recipes/4.x/img/3d_04_02.png)"
+msgstr "![alt](/godot_recipes/4.x/img/3d_04_02.png)"
 
 #: g101/3d/101_3d_04.md
 msgid "## Areas"
@@ -10614,7 +10590,7 @@ msgstr ""
 
 #: g101/start/101_03.md
 msgid "![alt](/godot_recipes/4.x/img/g4_101_08.png?width=500)"
-msgstr "<img src=\"/godot_recipes/4.x/img/g4_101_08.png?width=500\" alt=\"\">"
+msgstr "![alt](/godot_recipes/4.x/img/g4_101_08.png?width=500)"
 
 #: g101/start/101_03.md
 msgid ""
@@ -10699,7 +10675,7 @@ msgstr ""
 
 #: g101/start/101_02.md
 msgid "![alt](/godot_recipes/4.x/img/g4_101_02.png)"
-msgstr "<img src=\"/godot_recipes/4.x/img/g4_101_02.png\" alt=\"\">"
+msgstr "![alt](/godot_recipes/4.x/img/g4_101_02.png)"
 
 #: g101/start/101_02.md
 msgid "## Project Settings"
@@ -10788,7 +10764,7 @@ msgstr ""
 
 #: g101/start/101_02.md
 msgid "![alt](/godot_recipes/4.x/img/g4_101_04.png)"
-msgstr "<img src=\"/godot_recipes/4.x/img/g4_101_04.png\" alt=\"Alt text\">"
+msgstr "![alt](/godot_recipes/4.x/img/g4_101_04.png)"
 
 #: g101/start/101_02.md
 msgid "Here you can give the project a name and create a folder to store it in."
@@ -11008,11 +10984,11 @@ msgstr ""
 
 #: Math/dot_cross_product.md
 msgid "![alt](/godot_recipes/4.x/img/dot_cross_05.png)"
-msgstr "<img src=\"/godot_recipes/4.x/img/dot_cross_05.png\" alt=\"\">"
+msgstr "![alt](/godot_recipes/4.x/img/dot_cross_05.png)"
 
 #: Math/dot_cross_product.md
 msgid "![alt](/godot_recipes/4.x/img/dot_cross_02.png)"
-msgstr "!"
+msgstr "![alt](/godot_recipes/4.x/img/dot_cross_02.png)"
 
 #: Math/dot_cross_product.md
 msgid ""
@@ -11128,7 +11104,7 @@ msgstr "## 2次元変形機能"
 
 #: Math/transforms.md
 msgid "![alt](/godot_recipes/4.x/img/0_2d_rocket2.png?width=250px)"
-msgstr "<img src=\"/godot_recipes/4.x/img/0_2d_rocket2.png\" width=\"250px\">"
+msgstr "![alt](/godot_recipes/4.x/img/0_2d_rocket2.png?width=250px)"
 
 #: Math/transforms.md
 msgid ""
@@ -11327,7 +11303,7 @@ msgstr "![alt](/godot_recipes/4.x/img/0_2d_rocket4.png?width=250px)"
 
 #: Math/transforms.md
 msgid "![alt](/godot_recipes/4.x/img/0_2d_rocket3.png?width=250px)"
-msgstr "<img src=\"/godot_recipes/4.x/img/0_2d_rocket3.png\" width=\"250px\">"
+msgstr "![alt](/godot_recipes/4.x/img/0_2d_rocket3.png?width=250px)"
 
 #: Math/_index.md
 msgid ""
@@ -11615,11 +11591,7 @@ msgstr ""
 
 #: kyn/rigidbody2d.md
 msgid "![alt](/godot_recipes/3.x/img/rigidbody_ship1.gif)"
-msgstr ""
-"<img src=\"/godot_recipes/3.x/img/rigidbody_ship1.gif\" alt=\"RigidBody ship "
-"animation\">\n"
-"   <img src=\"/godot_recipes/3.x/img/rigidbody_ship1.gif\" "
-"alt=\"RigidBody船のアニメーション\">"
+msgstr "![alt](/godot_recipes/3.x/img/rigidbody_ship1.gif)"
 
 #: kyn/rigidbody2d.md
 msgid ""
@@ -11739,10 +11711,7 @@ msgstr "* 適用トルク（'applied_torque`）"
 
 #: kyn/rigidbody2d.md
 msgid "![alt](/godot_recipes/3.x/img/rigidbody_ship2.gif)"
-msgstr ""
-"<figure><img src=\"https://github.com/GodotRecipes/Game-Development-with-"
-"Godot/blob/master/assets/images/rigidbody_ship2.gif\" alt=\"Rigid Body Ship "
-"Animation\"></figure>"
+msgstr "![alt](/godot_recipes/3.x/img/rigidbody_ship2.gif)"
 
 #: kyn/rigidbody2d.md
 msgid "Play the scene - you should be able to fly around freely:"
@@ -11978,7 +11947,7 @@ msgstr "![alt](/godot_recipes/4.x/img/kyn_raycast2d_03.png)"
 
 #: kyn/raycast2d.md
 msgid "![alt](/godot_recipes/4.x/img/kyn_raycast2d_01_4.png)"
-msgstr "<img src=\"/godot_recipes/4.x/img/kyn_raycast2d_01_4.png\" alt=\"alt\">"
+msgstr "![alt](/godot_recipes/4.x/img/kyn_raycast2d_01_4.png)"
 
 #: kyn/raycast2d.md
 msgid "![alt](/godot_recipes/4.x/img/kyn_raycast2d_02.png)"
@@ -12038,9 +12007,7 @@ msgstr "別の有用な情報として、衝突点における衝突オブジェ
 
 #: kyn/raycast2d.md
 msgid "![alt](/godot_recipes/4.x/img/kyn_raycast2d_04.gif)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/kyn_raycast2d_04.gif\" alt=\"Kyn's Raycast "
-"2D Example\">"
+msgstr "![alt](/godot_recipes/4.x/img/kyn_raycast2d_04.gif)"
 
 #: kyn/raycast2d.md
 msgid ""
@@ -12457,7 +12424,7 @@ msgstr "![alt](/godot_recipes/4.x/img/behaviors_01.png)"
 
 #: ai/homing_missile.md
 msgid "![alt](/godot_recipes/4.x/img/missile.png)"
-msgstr "<img src=\"/godot_recipes/4.x/img/missile.png\" alt=\"ミサイル\">"
+msgstr "![alt](/godot_recipes/4.x/img/missile.png)"
 
 #: ai/homing_missile.md
 msgid ""
@@ -12810,9 +12777,7 @@ msgstr "ゲームを実行してみると、ボックスを自由に移動でき
 
 #: physics/character_vs_rigid.md
 msgid "![alt](/godot_recipes/4.x/img/char_push_default.gif)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/char_push_default.gif\" "
-"alt=\"デフォルトアニメーション\">"
+msgstr "![alt](/godot_recipes/4.x/img/char_push_default.gif)"
 
 #: physics/character_vs_rigid.md
 msgid ""
@@ -14015,7 +13980,7 @@ msgstr ""
 
 #: 2D/2d_shooting.md
 msgid "![alt](/godot_recipes/4.x/img/2d_shoot_02.gif)"
-msgstr "<img src=\"/godot_recipes/4.x/img/2d_shoot_02.gif\" alt=\"\">"
+msgstr "![alt](/godot_recipes/4.x/img/2d_shoot_02.gif)"
 
 #: 2D/2d_shooting.md
 msgid ""
@@ -14877,9 +14842,7 @@ msgstr ""
 
 #: 2D/grid_pathfinding.md
 msgid "![alt](/godot_recipes/4.x/img/astar_grid_octile.png)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/astar_grid_octile.png\" alt=\"A* グリッド "
-"(オクターブ距離計算)\">"
+msgstr "![alt](/godot_recipes/4.x/img/astar_grid_octile.png)"
 
 #: 2D/grid_pathfinding.md
 msgid ""
@@ -15039,8 +15002,7 @@ msgstr "### ヒューリスティック選択について"
 
 #: 2D/grid_pathfinding.md
 msgid "![alt](/godot_recipes/4.x/img/astar_grid_02.png)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/astar_grid_02.png\" alt=\"A*グリッドマップ例\">"
+msgstr "![alt](/godot_recipes/4.x/img/astar_grid_02.png)"
 
 #: 2D/grid_pathfinding.md
 msgid ""
@@ -15497,7 +15459,7 @@ msgstr "ドロー順序は各オブジェクトの y 座標に基づいていま
 
 #: 2D/using_ysort.md
 msgid "![alt](/godot_recipes/4.x/img/ysort_01.png)"
-msgstr "<img alt=\"YSort の設定例\" src=\"/godot_recipes/4.x/img/ysort_01.png\">"
+msgstr "![alt](/godot_recipes/4.x/img/ysort_01.png)"
 
 #: 2D/using_ysort.md
 msgid "Now things look a lot better:"
@@ -15537,7 +15499,7 @@ msgstr "以下に問題の具体例を示します。"
 
 #: 2D/using_ysort.md
 msgid "![alt](/godot_recipes/4.x/img/ysort_05.png)"
-msgstr "<img src=\"/godot_recipes/4.x/img/ysort_05.png\" alt=\"\">"
+msgstr "![alt](/godot_recipes/4.x/img/ysort_05.png)"
 
 #: 2D/using_ysort.md
 msgid ""
@@ -15553,7 +15515,7 @@ msgstr ""
 
 #: 2D/using_ysort.md
 msgid "![alt](/godot_recipes/4.x/img/ysort_02.gif)"
-msgstr "<img src=\"/godot_recipes/4.x/img/ysort_02.gif\" alt=\"YSortの操作例\">"
+msgstr "![alt](/godot_recipes/4.x/img/ysort_02.gif)"
 
 #: 2D/coyote_time.md
 msgid "There are a few new variables we'll need to keep track of coyote time:"
@@ -16579,7 +16541,7 @@ msgstr "## アートワークのダウンロード方法"
 
 #: games/first_2d/first_2d_01.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_03.png?width=500)"
-msgstr "<img src=\"/godot_recipes/4.x/img/2d_101_03.png?width=500\" alt=\"\">"
+msgstr "![alt](/godot_recipes/4.x/img/2d_101_03.png?width=500)"
 
 #: games/first_2d/first_2d_01.md
 msgid ""
@@ -16831,7 +16793,7 @@ msgstr ""
 
 #: games/first_2d/first_2d_02.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_09.png?width=800)"
-msgstr "<img src=\"/godot_recipes/4.x/img/2d_101_09.png?width=800\" alt=\"\">"
+msgstr "![alt](/godot_recipes/4.x/img/2d_101_09.png?width=800)"
 
 #: games/first_2d/first_2d_02.md
 msgid ""
@@ -16848,8 +16810,7 @@ msgstr ""
 
 #: games/first_2d/first_2d_02.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_10.png?width=800)"
-msgstr ""
-"<img src=\"/godot_recipes/4.x/img/2d_101_10.png?width=800\" alt=\"Godotレシピ\">"
+msgstr "![alt](/godot_recipes/4.x/img/2d_101_10.png?width=800)"
 
 #: games/first_2d/first_2d_02.md
 msgid ""
@@ -17044,7 +17005,7 @@ msgstr "**シーン** タブで、**＋** ボタンまたは**その他のノー
 
 #: games/first_2d/first_2d_02.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_04.png)"
-msgstr "<img src=\"/godot_recipes/4.x/img/2d_101_04.png\" alt=\"\">"
+msgstr "![alt](/godot_recipes/4.x/img/2d_101_04.png)"
 
 #: games/first_2d/first_2d_02.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_11.png)"
@@ -17081,7 +17042,7 @@ msgstr "### 船舶情報の表示"
 
 #: games/first_2d/first_2d_02.md
 msgid "![alt](/godot_recipes/4.x/img/2d_player_ship.png?width=100)"
-msgstr "<img src=\"/godot_recipes/4.x/img/2d_player_ship.png\" width=\"100\">"
+msgstr "![alt](/godot_recipes/4.x/img/2d_player_ship.png?width=100)"
 
 #: games/first_2d/first_2d_03.md
 msgid ""
@@ -17908,7 +17869,7 @@ msgstr ""
 
 #: games/first_2d/first_2d_09.md
 msgid "![alt](/godot_recipes/4.x/img/make_unique.png)"
-msgstr "<img src=\"/godot_recipes/4.x/img/make_unique.png\" alt=\"作成をユニークに\">"
+msgstr "![alt](/godot_recipes/4.x/img/make_unique.png)"
 
 #: games/first_2d/first_2d_09.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_21.png)"
