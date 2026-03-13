@@ -61,7 +61,7 @@ msgid ""
 "If you're new to Godot, start here: [What is "
 "Godot?](/godot_recipes/4.x/g101/start/101_01/)."
 msgstr ""
-"Godotを初めて使う方はまずここから始めましょう：[Godotとは？](/godot_recipes/4.x/ja/g101/start/101_01/)。"
+"Godotを初めて使う方はまずここから始めましょう。[Godotとは？](/godot_recipes/4.x/ja/g101/start/101_01/)。"
 
 #: _index.md
 msgid ""
@@ -331,7 +331,7 @@ msgstr "### 相対パスと絶対パスの違い"
 
 #: basics/getting_nodes.md
 msgid "Let's look at a more complex scene tree:"
-msgstr "より複雑なシーンツリーを見てみましょう："
+msgstr "より複雑なシーンツリーを見てみましょう。"
 
 #: basics/getting_nodes.md
 msgid "> Invalid get index 'position' (on base: 'null instance')."
@@ -364,7 +364,7 @@ msgstr ""
 
 #: basics/getting_nodes.md
 msgid "As an example, let's take a simple \"Player\" scene:"
-msgstr "例として、シンプルな「プレイヤー」シーンを考えてみましょう："
+msgstr "例として、シンプルな「プレイヤー」シーンを考えてみましょう。"
 
 #: basics/getting_nodes.md
 msgid ""
@@ -803,7 +803,7 @@ msgstr "例としての設定例をご紹介します。"
 
 #: basics/node_communication.md
 msgid "Let's consider the following common configuration:"
-msgstr "以下の一般的な設定例について考えてみましょう："
+msgstr "以下の一般的な設定例について考えてみましょう。"
 
 #: basics/node_communication.md
 msgid "In the `UI` script we have:"
@@ -1005,7 +1005,7 @@ msgstr ""
 
 #: basics/understanding_delta.md
 msgid "Let's change the code to use this calculation:"
-msgstr "この計算を使用するようにコードを変更しましょう："
+msgstr "この計算を使用するようにコードを変更しましょう。"
 
 #: basics/understanding_delta.md
 msgid ""
@@ -1603,7 +1603,7 @@ msgstr "單獨在單一節點上運行此程序，按照你所料的順序如下
 msgid ""
 "Before we talk about the results, let's review what each of these callback "
 "functions represents:"
-msgstr "結果について議論する前に、まず各コールバック関数が何を表しているのかを整理しましょう："
+msgstr "結果について議論する前に、まず各コールバック関数が何を表しているのかを整理しましょう。"
 
 #: basics/_index.md
 msgid "# <i class=\"fas fa-toolbox\"></i>&nbsp;Basics"
@@ -1799,7 +1799,7 @@ msgstr ""
 
 #: ui/minimap.md
 msgid "That's it - observe the effect of scrolling in and out:"
-msgstr "これで完了です。スクロールインとアウトの効果を確認してみましょう："
+msgstr "これで完了です。スクロールインとアウトの効果を確認してみましょう。"
 
 #: ui/minimap.md
 msgid "![alt](/godot_recipes/4.x/img/minimap_03.gif)"
@@ -1860,7 +1860,7 @@ msgstr "- [見下ろし方式キャラクター移動](/godot_recipes/4.x/ja/2d/
 
 #: ui/minimap.md
 msgid "Now observe what happens when we change the size:"
-msgstr "サイズを変更するとどうなるか、次に見てみましょう："
+msgstr "サイズを変更するとどうなるか、次に見てみましょう。"
 
 #: ui/minimap.md
 msgid "![alt](/godot_recipes/4.x/img/minimap_09.png)"
@@ -1892,7 +1892,6 @@ msgid ""
 "For now, let's leave the minimap's size at `(200, 200)` - you can check the "
 "root node's **Size** property in the **Layout** section to confirm."
 msgstr ""
-"```\n"
 "まずはミニマップのサイズを `(200, 200)` のままにしておきましょう。ルートノードの **[Size]** プロパティは [レイアウト] "
 "セクションで確認できます。"
 
@@ -1943,7 +1942,6 @@ msgid ""
 "size.\n"
 "{{% /notice %}}"
 msgstr ""
-"```\n"
 "{{% notice style=\"warning\" title=\"コンテナ内ノードについて\" %}}\n"
 "{{< gd-icon Container >}}`Container` ノードが子要素をどのように処理するかの特性上、`_ready()` "
 "の時点では子要素の正確なサイズ値が取得できません。このため、グリッドのサイズを正しく取得するには次のフレームまで待つ必要があります。\n"
@@ -2099,7 +2097,6 @@ msgid ""
 "The `CanvasLayer` node is there to hold our UI, including the minimap/radar "
 "we're making in this recipe."
 msgstr ""
-"```\n"
 "`CanvasLayer` "
 "ノードは、ミニマップ／レーダーなどのUIコンポーネントを保持するために使用されます。このレシピで作成するこれらの要素を収容するためのものです。"
 
@@ -2148,7 +2145,6 @@ msgid ""
 "**Size** property), then its center will be `(75, 75)`. Put the "
 "`PlayerMarker`'s **Position** there:"
 msgstr ""
-"```\n"
 "もし現在のグリッドサイズが (150, 150) であれば（これは［サイズ］プロパティで確認できます）、中心座標は (75, 75) "
 "になります。ここにプレイヤーマーカーの位置を設定して："
 
@@ -2341,16 +2337,6 @@ msgid ""
 "we're using \"Xolonium.ttf\" with a font size of `28` and a black outline of "
 "`4` pixels."
 msgstr ""
-"```yaml\n"
-"resources:\n"
-"  - name: LabelSettings\n"
-"    properties:\n"
-"      font: Xolonium.ttf\n"
-"      size: 28\n"
-"      outline:\n"
-"        color: black\n"
-"        width: 4\n"
-"```\n"
 "この例では、\"Xolonium.ttf\" フォントを使用し、文字サイズを `28` ポイントに、アウトラインの色を黒、幅を `4` "
 "ピクセルに設定しています。"
 
@@ -2410,7 +2396,6 @@ msgid ""
 "`update_empty()` is very similar, except instead of hiding the icon, we "
 "change its texture to the empty container:"
 msgstr ""
-"```\n"
 "`update_empty()` は非常に似ていますが、アイコンを隠す代わりに、そのテクスチャを空のコンテナー用に変更します。"
 
 #: ui/heart_containers_3.md
@@ -2545,7 +2530,6 @@ msgid ""
 "scrolling, and we don't want to see a scrollbar.\n"
 "{{% /notice %}}"
 msgstr ""
-"```\n"
 "{{% notice info %}}\n"
 "「なぜこの場面で{{< gd-icon ScrollContainer >}} "
 "`ScrollContainer`を使わないのか」と疑問に思われるかもしれません。もちろん、使用することは可能ですが、私たちは連続スクロールを望んでいません"
@@ -2560,7 +2544,6 @@ msgid ""
 "gd-icon HBoxContainer >}} `HBoxContainer` called `GridBox` to `ClipControl`, "
 "and instance 3 (or more) `LevelGrid`s inside it."
 msgstr ""
-"```\n"
 "ノード「ClipControl」内にグリッドが配置されます。**コンテンツを切り取る** "
 "を有効にすると、コントロール領域を超える内容は自動的に切り取られます。これにより、水平スクロール可能なグリッドセットを作成できるようになります。「ClipC"
 "ontrol」に{{< gd-icon HBoxContainer >}} `HBoxContainer` "
@@ -2577,7 +2560,6 @@ msgid ""
 "try clicking the **Locked** property and verify that you see the lock "
 "appear/disappear."
 msgstr ""
-"```\n"
 "ここで `@tool` "
 "を使用しているのは、インスペクターでプロパティを変更した場合、その変更が即座に反映されるようにするためです。シーンを実行しなくても変化を確認できます。ぜひお"
 "試しください。**［ロック］** プロパティをクリックして、ロック表示が出たり消えたりするのを確認してください。"
@@ -2626,7 +2608,7 @@ msgid ""
 "As shown in the example above, we'll make a scrolling grid of level \"boxes\" "
 "that the player can choose from. Let's start with the individual level boxes:"
 msgstr ""
-"上記の例で示したように、プレイヤーが自由に選択できるレベル「ボックス」で構成されたスクロールグリッドを作成します。まず個々のレベルボックスから始めましょう："
+"上記の例で示したように、プレイヤーが自由に選択できるレベル「ボックス」で構成されたスクロールグリッドを作成します。まず個々のレベルボックスから始めましょう。"
 
 #: ui/level_select.md
 msgid ""
@@ -2759,8 +2741,6 @@ msgid ""
 "GridContainer >}}`GridContainer`. Add any number of `LevelBox` instances "
 "under it, making sure to set the **Columns** value. Here's one with 6 columns:"
 msgstr ""
-"```\n"
-"```\n"
 "ボックスシーンが完成したら、次に `{{< gd-icon GridContainer >}}`GridContainer` "
 "を使用して新規シーンを追加します。その上に任意の数の `LevelBox` インスタンスを配置し、**列数** "
 "値を必ず設定してください。以下は6列に設定した例です："
@@ -2860,7 +2840,6 @@ msgid ""
 "\"Bottom Wide\", and in its **Theme Overrides/Constants**, both **Margin "
 "Right** and **Margin Left** to `5`."
 msgstr ""
-"```\n"
 "`カウンター`はテキストを保持・配置するためのコンテナです。レイアウトを「ボトムワイド」に設定し、［テーマのオーバーライド／定数］セクションでは両方の "
 "**マージン右** と **マージン左** を `5` に指定してください。"
 
@@ -3039,7 +3018,7 @@ msgstr "次に、［プロジェクト設定＞自動ロード］で `DebugOverl
 
 #: ui/debug_overlay.md
 msgid "Let's take a look at the code:"
-msgstr "コードを見てみましょう："
+msgstr "コードを見てみましょう。"
 
 #: ui/debug_overlay.md
 msgid ""
@@ -3154,7 +3133,7 @@ msgstr ""
 
 #: ui/radial_menu.md
 msgid "Now, let's look at the script for the button:"
-msgstr "それでは、ボタンのスクリプトを見てみましょう："
+msgstr "それでは、ボタンのスクリプトを見てみましょう。"
 
 #: ui/radial_menu.md
 msgid ""
@@ -3238,7 +3217,7 @@ msgstr ""
 
 #: ui/radial_menu.md
 msgid "Let's look at the `show_menu()` function:"
-msgstr "以下の`show_menu()`関数を見てみましょう："
+msgstr "以下の`show_menu()`関数を見てみましょう。"
 
 #: ui/_index.md
 msgid ""
@@ -3517,7 +3496,7 @@ msgstr "これを実現するには、以下の関数を使用します。"
 msgid ""
 "We can update the tank's movement code to call this function when it collides "
 "with a surface:"
-msgstr "タンクの移動コードを更新して、表面が衝突した際にこの関数を呼び出せるようにしましょう："
+msgstr "タンクの移動コードを更新して、表面が衝突した際にこの関数を呼び出せるようにしましょう。"
 
 #: 3D/3d_align_surface.md
 msgid ""
@@ -3804,13 +3783,7 @@ msgid ""
 "In the `_physics_process()` function we interpolate the camera's position "
 "with the `target`'s (plus `offset`)."
 msgstr ""
-"```php\n"
-"function _physics_process(){\n"
-"    $this->interpolateCameraPositionWithTarget();\n"
-"}\n"
-"```\n"
-"\n"
-"// 物理処理関数内でカメラの位置をターゲット位置（＋オフセット値）に補間しています"
+"`_physics_process()`関数内では、カメラの位置を`target`の位置（プラス`offset`）に補間します。"
 
 #: 3D/interpolated_camera.md
 msgid ""
@@ -3927,7 +3900,7 @@ msgid ""
 "we'd like the controls to be:"
 msgstr ""
 "現在の回転モーションは少し「ぎこちない」感じがします。船が瞬時に回転を開始したり停止したりするため、やや不自然な動きになっています。これは "
-"`lerp()` 関数を使うことで改善できます。さらに、コントロールの「浮遊感」を調整する追加設定変数を設けることでより自然な挙動を実現できるでしょう："
+"`lerp()` 関数を使うことで改善できます。さらに、コントロールの「浮遊感」を調整する追加設定変数を設けることでより自然な挙動を実現できるでしょう。"
 
 #: 3D/spaceship.md
 msgid "### Improvements"
@@ -4320,9 +4293,8 @@ msgid ""
 ">}}`TextureProgressBar`. We can do that using a {{< gd-icon SubViewport "
 ">}}`SubViewport` node, which can export a texture."
 msgstr ""
-"```\n"
-"私たちは `Sprite3D` ノードが静的なテクスチャを表示するのではなく、2D `TextureProgressBar` "
-"を表示したいと考えています。これは、テクスチャをエクスポートできる `SubViewport` ノードを使用することで実現可能です。"
+"私たちは `Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}} `TextureProgressBar` "
+"を表示したいと考えています。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現可能です。"
 
 #: 3D/healthbars.md
 msgid "![alt](/godot_recipes/4.x/img/3d_bars01a.gif)"
@@ -4334,7 +4306,6 @@ msgid ""
 "Add one to a new scene and name it \"Healthbar3D\". First, we'll get it "
 "configured and sized, so set the _Texture_ property to the green bar image."
 msgstr ""
-"```\n"
 "We can display a 2D image in 3D using a {{< gd-icon Sprite3D >}}`Sprite3D`. "
 "Add one to a new scene and name it \"Healthbar3D\". First, we'll get it "
 "configured and sized, so set the _Texture_ property to the green bar image."
@@ -4475,13 +4446,7 @@ msgstr ""
 
 #: 3D/rotate_interpolate.md
 msgid "![alt](/godot_recipes/4.x/img/3d_rotate_01.gif)"
-msgstr ""
-"* 回転軸の選択\n"
-"  * Z軸に設定\n"
-"  * 垂直方向の動きのみ許可\n"
-"  * 水平方向には移動させない\n"
-"\n"
-"![alt](/godot_recipes/4.x/img/3d_rotate_01.gif)"
+msgstr "![alt](/godot_recipes/4.x/img/3d_rotate_01.gif)"
 
 #: 3D/rotate_interpolate.md
 msgid "You want to smoothly rotate a 3D object to point in a new direction."
@@ -4618,7 +4583,6 @@ msgid ""
 "Here we apply the two offsets shown above: shift the `Pivot` in the direction "
 "of movement, and shift the `Mesh` in the opposite direction."
 msgstr ""
-"```\n"
 "以下のように、先に示した2つのオフセットを適用します。「ピボット」を移動方向にシフトし、「メッシュ」はその反対方向にシフトします。"
 
 #: 3D/rolling_cube.md
@@ -5110,7 +5074,6 @@ msgid ""
 "car mesh will be placed at the sphere's location, making it look like it's "
 "the car that's driving."
 msgstr ""
-"```\n"
 "その代わり、駆動物理処理は単一の {{< gd-icon RigidBody3D >}}`RigidBody3D` "
 "球体で処理します。球体自体は視認できない状態にし、車のメッシュをこの球体の位置に配置することで、あたかも球体が車を動かしているかのような視覚効果を実現します"
 "。"
@@ -5224,7 +5187,7 @@ msgid ""
 "It looks nice if the front wheels turn when you steer. Add some references to "
 "the front wheel meshes at the top of the script:"
 msgstr ""
-"フロントホイールがハンドル操作に応じて動くようにすると、よりリアルに見えます。スクリプトの上部にフロントホイールメッシュに関する参照を追加しましょう："
+"フロントホイールがハンドル操作に応じて動くようにすると、よりリアルに見えます。スクリプトの上部にフロントホイールメッシュに関する参照を追加しましょう。"
 
 #: 3D/3d_sphere_car.md
 msgid ""
@@ -5243,7 +5206,6 @@ msgid ""
 "VehicleBody3D >}}`VehicleBody3D` node provides, such as supension, "
 "independently modeled wheels, etc."
 msgstr ""
-"```\n"
 "ドライビングゲームを作成する方法は数多くあります。各ゲームに求められるリアリズムのレベルは異なります。軽量なアーケードスタイルのカーモデルを作りたい場合、G"
 "odotの{{< gd-icon VehicleBody3D "
 ">}}`VehicleBody3Ud`ノードが提供するすべての機能（サスペンションシステムや個別にモデリングされた車輪など）は必要ないかもしれません。"
@@ -5321,17 +5283,7 @@ msgid ""
 "using the `vy` variable to temporarily hold that value while we assign a new "
 "velocity vector for the horizontal movement, then add it back in at the end."
 msgstr ""
-
-"# 変数の初期化と基本的な計算処理を完了\n"
-"```\n"
-"\n"
-"このコードでは以下の操作を行っています：\n"
-"\n"
-"1. **プレイヤー入力に基づく水平移動**：\n"
-"   - 前方/後方方向への地面に沿った移動と、戦車中心軸周りの回転は、それぞれ別のベクトル（`vx`と`rotation`）で管理します。\n"
-"   - "
-"`Y`方向の動きは重力のみの影響を受けるように設計しています。これは毎フレーム0にリセットすべきではないためです。そのため、一時的に`vy`変数にその値を保"
-"持し、水平移動用の新たな速度ベクトルを設定した後、最後にそれを追加しています。"
+"これをもう少し詳しく見ていきましょう。プレイヤー入力は水平方向の移動に影響を与えるべきです：地面に沿った前後移動と、戦車の中心周りの回転です。**Y軸方向**の移動は、重力の影響を受けるべきものであり、つまり毎フレーム`0`に設定すべきではありません。これが、新しい速度ベクトルを水平移動用に割り当てる間、その値を一時的に保持するために`vy`変数を使用している理由です。そして最後に、この値を新たに追加します。"
 
 #: 3D/characterbody3d_examples.md
 msgid ""
@@ -5355,7 +5307,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_kinematic_01.png)"
 
 #: 3D/characterbody3d_examples.md
 msgid "Now let's add a script, starting with the required variables:"
-msgstr "それでは、必要な変数から始めつつ、スクリプトを追加しましょう："
+msgstr "それでは、必要な変数から始めつつ、スクリプトを追加しましょう。"
 
 #: 3D/characterbody3d_examples.md
 msgid ""
@@ -5430,20 +5382,8 @@ msgstr "次に必要なのは `get_input()` 関数を定義することです。
 msgid ""
 "Using the `move_and_slide()` method makes our movement code quite simple:"
 msgstr ""
+"`move_and_slide()`メソッドを使用することで、移動コードが非常に簡潔になります。"
 
-"# 移動処理の実装例\n"
-"def move_and_slide(self, dx, dy):\n"
-"    if self.is_walking:\n"
-"        self.position[0] += dx\n"
-"        self.position[1] += dy\n"
-"        # 移動中は速度をリセットしない\n"
-"\n"
-"    else:\n"
-"        # 静止時は速度を完全にリセット\n"
-"        self.velocity = [0, 0]\n"
-"```\n"
-"\n"
-"この実装により、移動状態の判定が簡素化され、コードがより直感的になります。"
 
 #: 3D/characterbody3d_examples.md
 msgid "![alt](/godot_recipes/4.x/img/mini_tank_nodes.png)"
@@ -5609,7 +5549,7 @@ msgstr "ロール量は「turn_input」値に関連しているため、緩や�
 
 #: 3D/simple_airplane.md
 msgid "To start the script, let's look at our plane's properties:"
-msgstr "スクリプトを実行する前に、航空機のプロパティを確認しましょう："
+msgstr "スクリプトを実行する前に、航空機のプロパティを確認しましょう。"
 
 #: 3D/simple_airplane.md
 msgid ""
@@ -5627,7 +5567,7 @@ msgid ""
 "mesh:"
 msgstr ""
 "注意してほしいのですが、機体が旋回する際に、その動きがやや不自然に見えます。航空機はターン時に「バンク」（傾き）しますので、メッシュの回転角度を変更すること"
-"でこれをアニメーション化しましょう："
+"でこれをアニメーション化しましょう。"
 
 #: 3D/simple_airplane.md
 msgid ""
@@ -5863,7 +5803,7 @@ msgstr ""
 
 #: 3D/basic_fps.md
 msgid "Attach a script to the body and start by defining some properties:"
-msgstr "スクリプトをボディに添付し、まずいくつかのプロパティを定義することから始めましょう："
+msgstr "スクリプトをボディに添付し、まずいくつかのプロパティを定義することから始めましょう。"
 
 #: 3D/basic_fps.md
 msgid "![alt](/godot_recipes/4.x/img/fps_01.png)"
@@ -6719,7 +6659,7 @@ msgstr "現在は、キャラクターを回転させて、移動方向を向く
 msgid ""
 "Now we are ready to add a script to the player. We'll start with the "
 "variables we'll need:"
-msgstr "これでプレイヤーにスクリプトを追加する準備が整いました。まずは必要な変数から始めましょう："
+msgstr "これでプレイヤーにスクリプトを追加する準備が整いました。まずは必要な変数から始めましょう。"
 
 #: 3D/assets/character_controller.md
 msgid ""
@@ -6741,7 +6681,7 @@ msgid ""
 "at the top:"
 msgstr ""
 "次に、地面に接地したタイミングを把握する必要があります。これにより、「Jump_Idle」アニメーションから移行可能になります。これを実現するためには、前フ"
-"レームと比較することで接地状態を追跡する必要があります。上部に新しい変数を追加しましょう："
+"レームと比較することで接地状態を追跡する必要があります。上部に新しい変数を追加しましょう。"
 
 #: 3D/assets/character_controller.md
 msgid ""
@@ -7925,7 +7865,7 @@ msgid ""
 "animations:"
 msgstr ""
 "接続を追加できるようになりました。「ノードを接続」ボタンをクリックして、ノード間でドラッグして接続してください。例として、この2つの攻撃アニメーションを使い"
-"ましょう："
+"ましょう。"
 
 #: animation/using_animation_sm.md
 msgid ""
@@ -8375,7 +8315,7 @@ msgstr ""
 
 #: g101/3d/101_3d_03.md
 msgid "Let's add one more movement to the player: jumping."
-msgstr "プレイヤーにさらに1つの動作を追加しましょう：ジャンプです。"
+msgstr "プレイヤーにさらに1つの動作を追加しましょう。ジャンプです。"
 
 #: g101/3d/101_3d_03.md
 msgid ""
@@ -8605,7 +8545,7 @@ msgid ""
 "that\n"
 "direction. Run the program and test:"
 msgstr ""
-"`get_input()` 関数では、押されたキーを確認し、対応する方向に移動します。プログラムを実行してテストしてみましょう："
+"`get_input()` 関数では、押されたキーを確認し、対応する方向に移動します。プログラムを実行してテストしてみましょう。"
 
 #: g101/3d/101_3d_03.md
 msgid ""
@@ -8924,7 +8864,7 @@ msgid ""
 "root name to \"Crate\", then click the \"Reimport\" button."
 msgstr ""
 "ここでオブジェクトがシーンとしてインポートされ、ルートタイプが {{< gd-icon Node3D >}}`Node3D` に設定され、「Scene "
-"Root」という名前になっていることを確認できます。これらを変更しましょう：ルートタイプを {{< gd-icon RigidBody3D "
+"Root」という名前になっていることを確認できます。これらを変更しましょう。ルートタイプを {{< gd-icon RigidBody3D "
 ">}}`RigidBody3D` に、ルート名を「Crate」に設定したら、「再インポート」ボタンをクリックしてください。"
 
 #: g101/3d/101_3d_02.md
@@ -9052,7 +8992,7 @@ msgid ""
 msgstr ""
 "Godotの大きな強みの一つは、2Dゲームと3Dゲームの両方を開発できる点です。これまで2Dプロジェクトで習得した知識（ノード、シーン、シグナルなど）の多く"
 "は3D環境でも同様に適用できますが、同時に全く新しいレベルの複雑さと機能も追加されています。まず初めに、3Dエディターウィンドウで利用できるいくつかの新機能"
-"についてご紹介しましょう："
+"についてご紹介しましょう。"
 
 #: g101/3d/101_3d_01.md
 msgid ""
@@ -9497,7 +9437,7 @@ msgstr ""
 
 #: g101/3d/101_3d_04.md
 msgid "Add a spike instance to your level and try it out:"
-msgstr "レベルにスパイクインスタンスを追加して試してみましょう："
+msgstr "レベルにスパイクインスタンスを追加して試してみましょう。"
 
 #: g101/3d/101_3d_04.md
 msgid ""
@@ -9876,7 +9816,7 @@ msgstr ""
 
 #: g101/gdscript/gdscript_02.md
 msgid "That's a lot, so let's break it down:"
-msgstr "かなり多いですね。それでは、項目ごとに分解してみましょう："
+msgstr "かなり多いですね。それでは、項目ごとに分解してみましょう。"
 
 #: g101/gdscript/gdscript_02.md
 msgid ""
@@ -9945,7 +9885,7 @@ msgstr "コードを実行すると、スプライトが下方向に移動して
 
 #: g101/gdscript/gdscript_02.md
 msgid "Let's make this a little easier to deal with by using **variables**:"
-msgstr "これをより扱いやすくするために、**変数**を使ってみましょう："
+msgstr "これをより扱いやすくするために、**変数**を使ってみましょう。"
 
 #: g101/gdscript/gdscript_02.md
 msgid ""
@@ -10201,7 +10141,7 @@ msgstr "[Godot公式ウェブサイトのGDScriptドキュメント](https://doc
 
 #: g101/gdscript/gdscript_01.md
 msgid "Let's go back to the script and use that property:"
-msgstr "スクリプトに戻ってそのプロパティを使用しましょう："
+msgstr "スクリプトに戻ってそのプロパティを使用しましょう。"
 
 #: g101/gdscript/gdscript_01.md
 msgid ""
@@ -11326,7 +11266,7 @@ msgstr ""
 
 #: Math/transforms.md
 msgid "To begin, let's consider this spaceship floating in space:"
-msgstr "まず、宇宙空間を漂流しているこの宇宙船について考えてみましょう："
+msgstr "まず、宇宙空間を漂流しているこの宇宙船について考えてみましょう。"
 
 #: Math/transforms.md
 msgid ""
@@ -12219,7 +12159,7 @@ msgid ""
 "Add a {{< gd-icon RayCast2D >}}`RayCast2D` node and take a look at the "
 "Inspector:"
 msgstr ""
-"{{< gd-icon RayCast2D >}}`RayCast2D`ノードを追加し、インスペクターを確認してみましょう："
+"{{< gd-icon RayCast2D >}}`RayCast2D`ノードを追加し、インスペクターを確認してみましょう。"
 
 #: kyn/raycast2d.md
 msgid "* `get_collider()`"
@@ -12608,7 +12548,7 @@ msgstr ""
 
 #: ai/changing_behaviors.md
 msgid "Now let's examine the enemy's script:"
-msgstr "それでは敵のスクリプトを確認してみましょう："
+msgstr "それでは敵のスクリプトを確認してみましょう。"
 
 #: ai/changing_behaviors.md
 msgid ""
@@ -12656,7 +12596,7 @@ msgstr ""
 
 #: ai/changing_behaviors.md
 msgid "For this example, we’ll assume an enemy with the following behaviors:"
-msgstr "この例では、以下の行動パターンを持つ敵を想定してみましょう："
+msgstr "この例では、以下の行動パターンを持つ敵を想定してみましょう。"
 
 #: ai/changing_behaviors.md
 msgid ""
@@ -13239,7 +13179,7 @@ msgstr "![alt](/godot_recipes/4.x/img/asteroids_warp.gif)"
 msgid ""
 "`thrust` and `rotation_dir` are going to be set by pressing the inputs. Let's "
 "do that next:"
-msgstr "`thrust` と `rotation_dir` は入力操作によって設定されます。次にその方法を確認しましょう："
+msgstr "`thrust` と `rotation_dir` は入力操作によって設定されます。次にその方法を確認しましょう。"
 
 #: physics/asteroids_physics.md
 msgid ""
@@ -13262,7 +13202,7 @@ msgstr "これらの値を `_physics_process()` で適用することで飛行�
 
 #: physics/asteroids_physics.md
 msgid "Add a script to the body, and let's define some variables:"
-msgstr "スクリプトをボディに追加し、いくつかの変数を定義しましょう："
+msgstr "スクリプトをボディに追加し、いくつかの変数を定義しましょう。"
 
 #: physics/asteroids_physics.md
 msgid ""
@@ -13396,7 +13336,7 @@ msgstr ""
 
 #: physics/asteroids_physics.md
 msgid "Let's get the screensize at the top of the script:"
-msgstr "スクリプトの上部に画面サイズを設定しましょう："
+msgstr "スクリプトの上部に画面サイズを設定しましょう。"
 
 #: physics/asteroids_physics.md
 msgid ""
@@ -13757,7 +13697,7 @@ msgid ""
 msgstr ""
 "現在の実装では、移動時に速度ベクトルをローカル座標系のx軸（赤色矢印）に、重力/ジャンプ力をy軸（緑色矢印）に合わせる必要があります。入力処理コードはそのま"
 "まで、常に「velocity」がローカル座標系で計算されると仮定できます。唯一の問題は「move_and_slide()」関数が速度ベクトルをグローバル座標"
-"系で受け取ることを期待している点です。この問題を解決するため、以下のように`move_and_slide_with_snap()`を調整しましょう："
+"系で受け取ることを期待している点です。この問題を解決するため、以下のように`move_and_slide_with_snap()`を調整しましょう。"
 
 #: 2D/2d_align_surface.md
 msgid ""
@@ -13791,7 +13731,7 @@ msgstr ""
 #: 2D/grid_movement.md
 msgid ""
 "Experiment with different tween transitions for different movement effects."
-msgstr "異なるトランジション効果を試してみましょう："
+msgstr "異なるトランジション効果を試してみましょう。"
 
 #: 2D/grid_movement.md
 msgid "![alt](/godot_recipes/4.x/img/grid_example3.gif)"
@@ -13863,8 +13803,7 @@ msgid ""
 "We'll use the {{< gd-icon RayCast2D >}}`RayCast2D` to determine whether a "
 "move to the next tile is allowed."
 msgstr ""
-"```\n"
-"移動先タイルへの進入が許可されているかどうかを判定するために、`RayCast2D` 機能を使用します。"
+"移動先タイルへの進入が許可されているかどうかを判定するために、{{< gd-icon RayCast2D >}}`RayCast2D` 機能を使用します。"
 
 #: 2D/grid_movement.md
 msgid "### Collision"
@@ -14072,62 +14011,7 @@ msgid ""
 "that encloses all the targets, which we can get with the `expand()` method. "
 "We then grow the rect by the `margin`."
 msgstr ""
-
-"import cv2\n"
-"from skimage.draw import ellipse, circle, rectangle\n"
-"\n"
-"def create_ellipse_contours(image):\n"
-"    # Ellipse contours\n"
-"    y1, y2 = image.shape[0] * 0.33, image.shape[0] * 0.66\n"
-"    x1, x2 = image.shape[1] * 0.25, image.shape[1] * 0.75\n"
-"\n"
-"    ellipse_coords = ellipse(y1, y2, x1, x2)\n"
-"    cv2.polylines(image, [np.int32(ellipse_coords)], isClosed=True, color=(0, "
-"255, 0), thickness=2)\n"
-"\n"
-"    # Circle contours\n"
-"    cx, cy = image.shape[1] * 0.5, image.shape[0] * 0.5\n"
-"    radius = image.shape[0] * 0.1\n"
-"\n"
-"    circle_coords = circle(cx, cy, radius)\n"
-"    cv2.polylines(image, [np.int32(circle_coords)], isClosed=True, color=(0, "
-"0, 255), thickness=2)\n"
-"\n"
-"def create_rectangular_contours(image):\n"
-"    # Rectangle contours\n"
-"    w = image.shape[1] * 0.5\n"
-"    h = image.shape[0] * 0.3\n"
-"\n"
-"    x1, y1 = w / 2 - h / 2, h / 2 - w / 2\n"
-"    x2, y2 = w / 2 + h / 2, h / 2 + w / 2\n"
-"\n"
-"    rect_coords = rectangle(y1, x1, y2, x2)\n"
-"    cv2.polylines(image, [np.int32(rect_coords)], isClosed=True, color=(0, 0, "
-"0), thickness=2)\n"
-"\n"
-"def create_targets_and_contours():\n"
-"    # Create target images\n"
-"    target_image = cv2.imread('path_to_your_image.jpg')  # Replace with your "
-"actual image path\n"
-"\n"
-"    create_ellipse_contours(target_image)\n"
-"    create_rectangular_contours(target_image)\n"
-"\n"
-"    return target_image, ellipse_coords, circle_coords, rect_coords\n"
-"\n"
-"def main():\n"
-"    image = create_targets_and_contours()[0]\n"
-"    ellipse_coords, _, _, _ = image\n"
-"    # Assume `expand` and `margin` functions are defined elsewhere in your "
-"code\n"
-"\n"
-"    expanded_targets = expand(target_image, ellipse_coords)\n"
-"    final_rect = cv2.rectangle(image, (x1, y1), (x2, y2), color=(0, 0, 255))  "
-"# Example rectangle coordinates\n"
-"\n"
-"if __name__ == \"__main__\":\n"
-"    main()\n"
-"```"
+"ここでの主要な機能は`Rect2`によるものです。私たちはすべてのターゲットを包含する長方形を見つける必要があり、これは`expand()`メソッドを使用することで取得できます。その後、この矩形に`margin`分の大きさを追加します。"
 
 #: 2D/multi_target_camera.md
 msgid ""
@@ -14142,7 +14026,7 @@ msgstr "![alt](/godot_recipes/4.x/img/multi_cam_01.gif)"
 #: 2D/multi_target_camera.md
 msgid ""
 "Most of the functionality happens in `_process()`. First, moving the camera:"
-msgstr "機能の大部分は `_process()` メソッドで実装されています。まず、カメラの移動処理から見ていきましょう："
+msgstr "機能の大部分は `_process()` メソッドで実装されています。まず、カメラの移動処理から見ていきましょう。"
 
 #: 2D/multi_target_camera.md
 msgid ""
@@ -14218,7 +14102,6 @@ msgid ""
 "the bullets to spawn.\n"
 "{{% /notice %}}"
 msgstr ""
-"```html\n"
 "{{% notice tip %}}\n"
 "この手法は「回転・移動」スタイルに限らず、あらゆる文字タイプに適用可能です。単に、弾丸を表示させたい位置に `{{< gd-icon Marker2D "
 ">}}`marker2d` タグを挿入するだけで済みます。\n"
@@ -14265,7 +14148,8 @@ msgstr "問題は、弾丸がプレイヤーの子オブジェクトであるた
 msgid ""
 "For the {{< gd-icon Sprite2D >}}`Sprite2D`'s texture, you can use any image "
 "you like. Here's an example one:"
-msgstr "```html"
+msgstr ""
+"{{< gd-icon Sprite2D >}}`Sprite2D`のテクスチャは、好きな画像を使用できます。以下は例です。"
 
 #: 2D/2d_shooting.md
 msgid ""
@@ -14274,19 +14158,7 @@ msgid ""
 "the bullets, as they can use the transform to get the proper position *and* "
 "direction. We just set the new bullet's `transform` equal to the muzzle's."
 msgstr ""
-
-"notice = True\n"
-"while notice:\n"
-"    if player.rotated:\n"
-"        print(\"プレイヤーの回転中... マスケット銃の変換座標は依然としてガンに対して同じ方向を向いています\")\n"
-"        break\n"
-"    else:\n"
-"        print(\"プレイヤーが静止しています\")\n"
-"\n"
-"# "
-"弾丸をスポーンする際、この機能が非常に役立ちます。変換座標を使用することで、適切な位置と向きを簡単に取得できます\n"
-"new_bullet.transform = muzzle_transform\n"
-"```"
+"「プレイヤーが回転するにつれ、Muzzleの`transform`は銃に対して常に同じ向きを保つことに注目してください。これは弾丸をスポーンさせる際に非常に便利です。変換行列を使用することで、適切な位置と方向を簡単に取得できるからです。新しい弾丸の`transform`は、単にMuzzleのものと等しく設定するだけで済みます。"
 
 #: 2D/2d_shooting.md
 msgid ""
@@ -14336,17 +14208,8 @@ msgid ""
 "Now in our `shoot()` function we can instance a bullet and add it to the "
 "tree. A common mistake is to add the bullet as a child of the player:"
 msgstr ""
+"これで`shoot()`関数内では、弾丸インスタンスを生成しツリーに追加することができます。よくあるミスとして、プレイヤーノードの子要素として直接追加してしまうケースがあります"
 
-"def shoot():\n"
-"    bullet = Bullet()\n"
-"    scene.root_node.add_child(bullet)\n"
-"```\n"
-"\n"
-"## よくある間違い：プレイヤーを親ノードにしてしまうこと\n"
-
-"# これはNG！\n"
-"player = Player()\n"
-"scene.root_node.add_child(player)  # プレイヤーがツリーのルートになってしまう"
 
 #: 2D/2d_shooting.md
 msgid "- [Gamedev Math: transforms](/godot_recipes/4.x/math/transforms/)"
@@ -14680,9 +14543,9 @@ msgid ""
 "happen at that same time. This makes the two happen one after another: moving "
 "to one end of the offset, then back to the start."
 msgstr ""
-"※ `set_process_mode()`：物理演算処理段階でのみ移動が行われるようにします。\n"
-"※ `set_loops()`：トゥイーン再生を繰り返す設定です。\n"
-"※ `set_parallel(false)`：デフォルトでは、すべての `tween_property()` "
+"* `set_process_mode()`：物理演算処理段階でのみ移動が行われるようにします。\n"
+"* `set_loops()`：トゥイーン再生を繰り返す設定です。\n"
+"* `set_parallel(false)`：デフォルトでは、すべての `tween_property()` "
 "変更が同時に実行されます。これを無効にすると、2つの動作が順次行われます：オフセットの一方端に移動した後、開始位置に戻るという流れになります。"
 
 #: 2D/coyote_time.md
@@ -15150,7 +15013,7 @@ msgid ""
 "experiment based on your setup. Let's add this in the `initialize_grid()` "
 "function:"
 msgstr ""
-"プロパティを変更すると結果が大きく変わる可能性があるため、環境に合わせた調整が重要です。`initialize_grid()` 関数にこれを追加しましょう："
+"プロパティを変更すると結果が大きく変わる可能性があるため、環境に合わせた調整が重要です。`initialize_grid()` 関数にこれを追加しましょう。"
 
 #: 2D/grid_pathfinding.md
 msgid "![alt](/godot_recipes/4.x/img/astar_grid_04.png)"
@@ -15241,13 +15104,13 @@ msgstr "このコードを `Node2D` の `{{<  gd-icon Node2D >}}`に追加して
 msgid ""
 "In order to find a path, we need a start and end point. Add these variables "
 "at the top of the script:"
-msgstr "パスを見つけるには、開始点と終了点が必要です。スクリプトの上部にこれらの変数を追加しましょう："
+msgstr "パスを見つけるには、開始点と終了点が必要です。スクリプトの上部にこれらの変数を追加しましょう。"
 
 #: 2D/grid_pathfinding.md
 msgid ""
 "Godot provides a number of methods for pathfinding. For this recipe, we'll "
 "consider the `A*` algorithm."
-msgstr "Godot は経路探索のための複数の手法を提供しています。今回のレシピでは「A*」アルゴリズムを取り上げます。"
+msgstr "Godot は経路探索のための複数の手法を提供しています。今回のレシピでは「A*(エースター)」アルゴリズムを取り上げます。"
 
 #: 2D/grid_pathfinding.md
 msgid ""
@@ -15297,9 +15160,7 @@ msgid ""
 "method, but we also need to visualize it. We can use a {{< gd-icon Line2D "
 ">}}`Line2D`, so add one to the scene."
 msgstr ""
-"# 可視化用のラインオブジェクトを追加\n"
-"line = Line2D()\n"
-"scene.add(line)"
+"2点間の経路は`get_point_path()`メソッドを使用して取得できますが、これを可視化する必要もあります。ここでは{{< gd-icon Line2D >}}`Line2D`を使用できるので、シーンに追加します。"
 
 #: 2D/grid_pathfinding.md
 msgid ""
@@ -15324,46 +15185,10 @@ msgid ""
 "points. Using `cell_size / 2` means the path will be calculated from the "
 "center of each cell rather than the corners."
 msgstr ""
+"The `offset` property will come into play when we ask for a path between two "
+"points. Using `cell_size / 2` means the path will be calculated from the "
+"center of each cell rather than the corners."
 
-"import math\n"
-"\n"
-"def calculate_path_length(points, cells):\n"
-"    total_length = 0.0\n"
-"\n"
-"    for i in range(len(points) - 1):\n"
-"        start_point = points[i]\n"
-"        end_point = points[i + 1]\n"
-"\n"
-"        # Calculate the Euclidean distance between two points\n"
-"        distance = math.sqrt(sum(math.pow(x - y, 2) for x, y in "
-"zip(start_point, end_point)))\n"
-"\n"
-"        # Adjust distance based on cell dimensions\n"
-"        adjusted_distance = distance / cells\n"
-"\n"
-"        total_length += adjusted_distance\n"
-"\n"
-"    return total_length\n"
-"```\n"
-"\n"
-"この関数は以下のように使用します。\n"
-"\n"
-
-"points = [(0, 0), (3, 4), (6, 8)]\n"
-"cells = 1.0  # セルのサイズを1単位と仮定\n"
-"\n"
-"path_length = calculate_path_length(points, cells)\n"
-"print(\"経路の長さ:\", path_length)\n"
-"```\n"
-"\n"
-"出力結果：\n"
-"```\n"
-"経路の長さ: "
-"7.810249675884363\n"
-"```\n"
-"\n"
-"この実装では、各セルの中心を基準にして距離を計算しているため、より正確な経路長が得られます。また、入力値に応じて柔軟に調整できるため、さまざまなシナリオに適"
-"用可能です。"
 
 #: 2D/grid_pathfinding.md
 msgid "### Choosing a Heuristic"
@@ -15647,7 +15472,7 @@ msgstr "### シーン設定"
 
 #: 2D/car_steering.md
 msgid "Start with a few variables:"
-msgstr "以下の変数から始めましょう："
+msgstr "以下の変数から始めましょう。"
 
 #: 2D/car_steering.md
 msgid ""
@@ -15796,7 +15621,6 @@ msgid ""
 "Here we check for user input and set the velocity. Note: the speed of `500` "
 "is temporary so that we can test movement. We'll address it in the next part."
 msgstr ""
-"```\n"
 "ここではユーザー入力を確認し、移動速度を設定します。注意：速度「500」は一時的なもので、動きのテスト用です。これについては次のセクションで対処します。"
 
 #: 2D/using_ysort.md
@@ -16094,7 +15918,7 @@ msgstr "![alt](/godot_recipes/4.x/img/8_direction_02w.png)"
 
 #: 2D/8_direction.md
 msgid "![alt](/godot_recipes/4.x/img/8_direction_05.gif)"
-msgstr "!"
+msgstr "![alt](/godot_recipes/4.x/img/8_direction_05.gif)"
 
 #: 2D/8_direction.md
 msgid ""
@@ -16113,14 +15937,7 @@ msgid ""
 "to snap the angle of the mouse vector to the closest multiple of 45° (`PI/4` "
 "radians) giving the following result:"
 msgstr ""
-"# Mouse position relative to character\n"
-"mouse_rel = get_local_mouse_position()\n"
-"\n"
-"# Snap mouse vector angle to closest 45° multiple\n"
-"angle = snappeff(mouse_rel, PI / 4)\n"
-"\n"
-"# Map angle to 0-7 range for animation selection\n"
-"anim_index = int((angle + 3 * PI / 2) / (2 * PI / 7)) % 8"
+"どのアニメーションを再生するか選択するためには、マウスの方向を取得し、それを同じ範囲（0-7）にマッピングする必要があります。`get_local_mouse_position()`を使用することで、キャラクターに対するマウスカーソルの位置を取得できます。次に`snappedf()`関数を使用して、マウスベクトルの角度を最も近い45度間隔（π/4ラジアン）にスナップさせると、以下の結果が得られます。"
 
 #: 2D/_index.md
 msgid "# <i class='fas fa-shapes'></i>&nbsp;2D"
@@ -16505,7 +16322,7 @@ msgid ""
 "called whenever the area touches something, so let's add some code here:"
 msgstr ""
 "新しい関数が追加され、名前の横に緑の「接続中」アイコンが表示されます。これはシグナルがこの関数に接続されていることを示すものです。この関数はエリアが何かに接"
-"触するたびに呼び出されるため、ここにコードを追加しましょう：\n"
+"触するたびに呼び出されるため、ここにコードを追加しましょう。\n"
 
 #: games/first_2d/first_2d_04.md
 msgid ""
@@ -16574,7 +16391,7 @@ msgstr ""
 
 #: games/first_2d/first_2d_04.md
 msgid "Attach a script to the `Bullet` node and let's start with the movement:"
-msgstr "ノード「Bullet」にスクリプトをアタッチし、移動の基本設定から始めましょう："
+msgstr "ノード「Bullet」にスクリプトをアタッチし、移動の基本設定から始めましょう。"
 
 #: games/first_2d/first_2d_04.md
 msgid ""
@@ -16734,7 +16551,7 @@ msgstr "![alt](/godot_recipes/4.x/img/2d_101_17.gif)"
 
 #: games/first_2d/first_2d_05.md
 msgid "Let's head back to the `Player` script and add a few new variables:"
-msgstr "以下のコードを「Player」スクリプトに追加しましょう："
+msgstr "以下のコードを「Player」スクリプトに追加しましょう。"
 
 #: games/first_2d/first_2d_05.md
 msgid ""
@@ -17040,7 +16857,7 @@ msgid ""
 "At the bottom of the editor window, you'll see the **Animation** panel. "
 "There's a lot of information there, so let's look at how it's laid out:"
 msgstr ""
-"エディタウィンドウの下部には**アニメーション**パネルが表示されます。ここには多くの情報が配置されていますので、その構成を確認していきましょう："
+"エディタウィンドウの下部には**アニメーション**パネルが表示されます。ここには多くの情報が配置されていますので、その構成を確認していきましょう。"
 
 #: games/first_2d/first_2d_06.md
 msgid ""
@@ -17553,7 +17370,7 @@ msgstr "## スクリプトの追加方法"
 msgid ""
 "We'll start by making the ship move around the screen. Let's start with some "
 "code that does the following:"
-msgstr "まず、船を画面上で移動させる機能から作成しましょう。以下の動作を行うコードから始めてみましょう："
+msgstr "まず、船を画面上で移動させる機能から作成しましょう。以下の動作を行うコードから始めてみましょう。"
 
 #: games/first_2d/first_2d_03.md
 msgid ""
@@ -17642,7 +17459,7 @@ msgstr ""
 
 #: games/first_2d/first_2d_03.md
 msgid "Let's break this down line-by-line:"
-msgstr "これを行ごとに分解してみましょう："
+msgstr "これを行ごとに分解してみましょう。"
 
 #: games/first_2d/first_2d_03.md
 msgid ""
@@ -17682,7 +17499,7 @@ msgstr "現在のキーフレームを時間 0 時点で「0」に、時間 0.4 
 
 #: games/first_2d/first_2d_07.md
 msgid "Add a script, and start with the variables:"
-msgstr "スクリプトを追加し、変数から始めましょう："
+msgstr "スクリプトを追加し、変数から始めましょう。"
 
 #: games/first_2d/first_2d_07.md
 msgid ""
@@ -18082,7 +17899,6 @@ msgid ""
 "and instance the `UI` as its child. The `CanvasLayer` node creates another "
 "drawing layer, so our UI will be drawn on top of the rest of the game."
 msgstr ""
-"```\n"
 "次に「Main」シーンに {{< gd-icon CanvasLayer >}} ノードを追加し、その子要素として `UI` "
 "インスタンスを配置します。`CanvasLayer` ノードは新しい描画レイヤーを生成するため、UI はゲームの他のコンテンツの上に重なって表示されます。"
 
