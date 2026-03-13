@@ -12,21 +12,27 @@ def unescape_po_string(s):
 
 def extract_md_blocks(content):
     """Markdownからブロック要素を抽出し、翻訳可能なリストを返す"""
-    # 先頭のYAML Frontmatterを削除して抽出対象から外す
-    text_content = re.sub(r'^---\n.*?\n---\n', '', content, flags=re.DOTALL)
+    texts = set()
+    
+    # フロントマターの抽出 (YAML: --- または TOML: +++)
+    # より柔軟な正規表現: 行末のスペースや、様々な改行コードに対応
+    frontmatter_match = re.match(r'^(---\s*\r?\n(.*?)\r?\n---\s*|\+\+\+\s*\r?\n(.*?)\r?\n\+\+\+\s*)(\r?\n|$)', content, flags=re.DOTALL)
+    if frontmatter_match:
+        frontmatter = frontmatter_match.group(2) or frontmatter_match.group(3)
+        # title: "..." または title = "..." を抽出 (シングルクォート、ダブルクォート両対応)
+        title_match = re.search(r'title\s*[:=]\s*["\'](.*?)["\']', frontmatter)
+        if title_match:
+            texts.add(title_match.group(1))
+
+    # フロントマターを削除 (抽出時と同じ正規表現を使用)
+    text_content = re.sub(r'^(---\s*\r?\n.*?\r?\n---\s*|\+\+\+\s*\r?\n.*?\r?\n\+\+\+\s*)(\r?\n|$)', '', content, flags=re.DOTALL)
     
     # コードブロックを抽出対象から外す
     text_content = re.sub(r'```.*?```', '', text_content, flags=re.DOTALL)
     
-    # インラインHTMLのscriptやstyleも削除しておく
-    text_content = re.sub(r'<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>', '', text_content, flags=re.IGNORECASE)
-    text_content = re.sub(r'<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>', '', text_content, flags=re.IGNORECASE)
-    text_content = re.sub(r'<!--.*?-->', '', text_content, flags=re.DOTALL)
-    
     # 段落ごとに分割 (改行2つ以上)
     blocks = re.split(r'\n\n+', text_content)
     
-    texts = set()
     for block in blocks:
         block = block.strip()
         
@@ -44,6 +50,8 @@ def extract_md_blocks(content):
 
 def create_po(docs_dir, output_po_file):
     md_files = glob.glob(os.path.join(docs_dir, '**', '*.md'), recursive=True)
+    # 翻訳済みファイル (*.ja.md) および隠しファイル (.*.md) を除外
+    md_files = [f for f in md_files if not f.endswith('.ja.md') and not os.path.basename(f).startswith('.')]
     po_entries = {}
     
     print(f"Extraction: Found {len(md_files)} Markdown files in {docs_dir}")
