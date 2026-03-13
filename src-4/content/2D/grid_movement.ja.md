@@ -49,7 +49,6 @@ func _ready():
     position += Vector2.ONE * tile_size/2
 ```
 
-```bash
 `snapped()` 関数は位置をタイルの増分に最も近い値に「丸め」ます。さらに、半タイル量を追加することで、プレイヤーが必ずタイル中心に配置されるようになります。
 
 ```gdscript
@@ -70,8 +69,7 @@ func move(dir):
 
 以下の例のように、障害物を追加する方法はいくつかあります。手動で障害物を追加したい場合は{{< gd-icon StaticBody2D >}}`StaticBody2D`オブジェクトを使用するか（グリッドに正確に配置できるようスナップ機能を有効にしてください）、衝突判定が定義されたTileMapを利用することもできます。
 
-```
-移動先タイルへの進入が許可されているかどうかを判定するために、`RayCast2D` 機能を使用します。
+移動先タイルへの進入が許可されているかどうかを判定するために、{{< gd-icon RayCast2D >}}`RayCast2D` 機能を使用します。
 
 ```gdscript
 onready var ray = $RayCast2D
@@ -136,7 +134,7 @@ func move(dir):
 
 ![alt](/godot_recipes/4.x/img/grid_example3.gif)
 
-異なるトランジション効果を試してみましょう：
+異なるトランジション効果を試してみましょう。
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 

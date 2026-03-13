@@ -64,20 +64,7 @@ func _draw():
 
 選択ボックスが作成できたら、その内部に位置するユニットを特定する必要があります。ボタンを放してドラッグ操作が終了した際には、物理空間クエリを実行して対象のユニットを検索する必要があります。なお、対象となるユニットは{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ですが、{{< gd-icon Area2D >}}`Area2D`やその他のボディタイプでも問題ありません。
 
-```cpp
-// Define the rectangle shape and location transform
-PhysicsBodyRectShape rect_shape;
-Transform loc_transform;
-
-// Initialize with appropriate values
-rect_shape.set_origin(Vector2(0.5, 0.5));
-loc_transform = Transform::identity();
-
-// Perform intersection test
-bool is_intersected = physics_space_state->intersect_shape(&rect_shape, &loc_transform);
-```
-
-この例では、`PhysicsDirectSpaceState2D` を使用して長方形形状と位置変換を定義し、交差判定を行っています。[Godot公式ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_physicsdirectspacestate2d.html#class-physicsdirectspacestate2d-method-intersect-shape) に詳細な解説がありますので、必要に応じて参照してください。
+We'll use `PhysicsDirectSpaceState2D.intersect_shape()` to find the units. This requires a shape (our rectangle) and a transform (our location). See [Godot docs](https://docs.godotengine.org/en/stable/classes/class_physicsdirectspacestate2d.html#class-physicsdirectspacestate2d-method-intersect-shape) for details.
 
 ```gdscript
 elif dragging:

@@ -1702,7 +1702,7 @@ msgid "{{% notice info %}}\n`get_node()` 関数は、対象ノードへの **参
 msgstr ""
 
 #: basics/getting_nodes.ja.md
-msgid "問題の核心は「ヌルインスタンス」部分にあり、これがGodot初心者にとって最も混乱を招く要因となっています。"
+msgid "問題の核心は「nullインスタンス」部分にあり、これがGodot初心者にとって最も混乱を招く要因となっています。"
 msgstr ""
 
 #: basics/getting_nodes.ja.md

@@ -21,7 +21,7 @@ ghcommentid: 26
     {{< gd-icon CollisionShape2D >}} CollisionShape2D
 ```
 
-```html
+{{< gd-icon Sprite2D >}}`Sprite2D`のテクスチャは、好きな画像を使用できます。以下は例です。
 
 ![alt](/godot_recipes/4.x/img/laserRed01.png)
 
@@ -51,19 +51,8 @@ func _on_Bullet_body_entered(body):
 
 ![alt](/godot_recipes/4.x/img/2d_shoot_01.gif)
 
-notice = True
-while notice:
-    if player.rotated:
-        print("プレイヤーの回転中... マスケット銃の変換座標は依然としてガンに対して同じ方向を向いています")
-        break
-    else:
-        print("プレイヤーが静止しています")
+「プレイヤーが回転するにつれ、Muzzleの`transform`は銃に対して常に同じ向きを保つことに注目してください。これは弾丸をスポーンさせる際に非常に便利です。変換行列を使用することで、適切な位置と方向を簡単に取得できるからです。新しい弾丸の`transform`は、単にMuzzleのものと等しく設定するだけで済みます。
 
-# 弾丸をスポーンする際、この機能が非常に役立ちます。変換座標を使用することで、適切な位置と向きを簡単に取得できます
-new_bullet.transform = muzzle_transform
-```
-
-```html
 {{% notice tip %}}
 この手法は「回転・移動」スタイルに限らず、あらゆる文字タイプに適用可能です。単に、弾丸を表示させたい位置に `{{< gd-icon Marker2D >}}`marker2d` タグを挿入するだけで済みます。
 {{% /notice %}}
@@ -81,15 +70,7 @@ new_bullet.transform = muzzle_transform
         shoot()
 ```
 
-def shoot():
-    bullet = Bullet()
-    scene.root_node.add_child(bullet)
-```
-
-## よくある間違い：プレイヤーを親ノードにしてしまうこと
-# これはNG！
-player = Player()
-scene.root_node.add_child(player)  # プレイヤーがツリーのルートになってしまう
+これで`shoot()`関数内では、弾丸インスタンスを生成しツリーに追加することができます。よくあるミスとして、プレイヤーノードの子要素として直接追加してしまうケースがあります
 
 ```gdscript
 func shoot():

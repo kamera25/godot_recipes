@@ -42,7 +42,7 @@ func save_score():
     file.store_var(highscore)
 ```
 
-我们正在保存得分，但游戏开始时需要能够加载它：
+スコアを保存していますが、ゲーム開始時にこのデータを読み込み可能な状態にしておく必要があります。
 
 ```gdscript
 func load_score():

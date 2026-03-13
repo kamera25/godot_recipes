@@ -7,7 +7,7 @@ ghcommentid: 12
 
 ## 課題
 
-この「デルタ」パラメータ（別名：時間差分）は、ゲーム開発においてしばしば誤解されがちな概念です。本チュートリアルでは、これがどのように使用されるのか、フレームレートに依存しない移動の重要性、そしてGodotにおける実践的な使用例について解説します。
+この`delta`パラメータ（別名： "delta time" ）は、ゲーム開発においてしばしば誤解されがちな概念です。本チュートリアルでは、これがどのように使用されるのか、フレームレートに依存しない移動の重要性、そしてGodotにおける実践的な使用例について解説します。
 
 ## 解決策
 
@@ -51,7 +51,7 @@ func _process(delta):
 
 ### フレームレート問題の修正について
 
-When using the `_process()` function, it automatically includes a parameter called `delta` that is passed in from the engine (similarly to `_physics_process()`, which is used for physics-related code). This represents a time interval as a floating-point value, indicating the duration since the last frame. Typically this is approximately 1/60 or 0.0167 seconds.
+`_process()`関数を使用する場合、自動的にエンジンから渡されるパラメータとして`delta`が含まれます（これは`_physics_process()`と同様で、物理関連コード用に使用されます）。これは時間間隔を表す浮動小数点数値であり、直前のフレームから経過した時間の長さを示します。通常この値は1/60秒、つまり約0.0167秒に相当します。
 
 この情報があれば、各フレームの移動量を考える必要がなくなり、希望するピクセル単位速度（上記計算結果の「120」）のみを考慮すれば済むようになります。
 
@@ -67,7 +67,7 @@ When using the `_process()` function, it automatically includes a parameter call
 
 注：フレームレートが半分に低下した場合（すなわちフレーム時間が2倍になった場合）、所望の速度を維持するには、フレームごとの移動量も2倍にする必要があります。
 
-この計算を使用するようにコードを変更しましょう：
+この計算を使用するようにコードを変更しましょう。
 
 ```gdscript
 extends Node2D
@@ -125,8 +125,8 @@ func _process(delta):
         $Sprite.position += velocity
 ```
 
-# フレームごとに時間ステップで速度と位置を更新している点に注意してください
-# 各フレームで更新される量については、フレームレートに依存せず適切に変化させるため、必ず「delta」で乗算する必要があります
+フレームごとに時間ステップで速度と位置を更新している点に注意してください
+各フレームで更新される量については、フレームレートに依存せず適切に変化させるため、必ず「delta」で乗算する必要があります
 
 #### 運動関数の活用について
 

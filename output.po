@@ -137,7 +137,7 @@ msgstr "## 課題"
 
 #: basics/getting_nodes.md
 msgid "### A warning"
-msgstr "### 警告事項"
+msgstr "### 注意事項"
 
 #: basics/getting_nodes.md
 msgid ""
@@ -152,7 +152,7 @@ msgstr ""
 msgid ""
 "It's that last part, the \"null instance\", that's the source of this "
 "problem, and the main source of confusion for Godot beginners."
-msgstr "問題の核心は「ヌルインスタンス」部分にあり、これがGodot初心者にとって最も混乱を招く要因となっています。"
+msgstr "問題の核心は「nullインスタンス」部分にあり、これがGodot初心者にとって最も混乱を招く要因となっています。"
 
 #: 2D/2d_align_surface.md
 #: 3D/assets/character_animation.md
@@ -174,7 +174,7 @@ msgstr "もしメインスクリプトがスコアラベルにアクセスする
 
 #: basics/getting_nodes.md
 msgid "For example, the absolute path to the player node is:"
-msgstr "例如，玩家節點的絕對路徑如下："
+msgstr "例えば、プレイヤーノードが絶対パスで指定されている場合。"
 
 #: basics/getting_nodes.md
 msgid ""
@@ -256,7 +256,7 @@ msgid ""
 "your game."
 msgstr ""
 "この理由から、シーンツリーの\"上位\"方向へノードパスを指定する操作は可能な限り避けるべきです。前述の状況では、プレイヤーの体力が変化した時にシグナルを発"
-"行するように変更すれば、UIコンポーネントはその信号を受け取って自身の状態を更新できます。この方法なら、ゲームコードに影響を与えることなくノードを自由に再配"
+"行するように変更すれば、UIコンポーネントはそのシグナルを受け取って自身の状態を更新できます。この方法なら、ゲームコードに影響を与えることなくノードを自由に再配"
 "置・分離することが可能になります。"
 
 #: basics/getting_nodes.md
@@ -335,14 +335,14 @@ msgstr "より複雑なシーンツリーを見てみましょう。"
 
 #: basics/getting_nodes.md
 msgid "> Invalid get index 'position' (on base: 'null instance')."
-msgstr "> '位置' インデックスは無効です（基底オブジェクト：'null インスタンス'）。"
+msgstr "> Invalid get index 'position' (on base: 'null instance')."
 
 #: basics/getting_nodes.md
 msgid ""
 "It's probably the most common problem seen in the Godot help channels: an "
 "invalid node reference. Most often, it appears as the following error message:"
 msgstr ""
-"これはGodotヘルプチャンネルで最も頻繁に報告される問題の一つです：無効なノード参照です。ほとんどの場合、以下のようなエラーメッセージとして表示されます："
+"「無効なノード参照」、これはGodotヘルプチャンネルで最も頻繁に報告される問題の一つです。ほとんどの場合、以下のようなエラーメッセージとして表示されます："
 
 #: basics/getting_nodes.md
 msgid ""
@@ -517,7 +517,7 @@ msgid ""
 "This makes for a convenient way to connect child signals up to the main node."
 msgstr ""
 "`owner` はシーン保存時に自動的に設定される `Node` プロパティです。このシーン内のすべてのノードに対して、その `owner` "
-"にはシーンのルートノードが指定されます。これにより、子信号をメインノードにスムーズに接続できる便利な仕組みとなっています。"
+"にはシーンのルートノードが指定されます。これにより、子シグナルをメインノードにスムーズに接続できる便利な仕組みとなっています。"
 
 #: basics/node_communication.md
 msgid ""
@@ -615,7 +615,7 @@ msgid ""
 "script on the UI's root node."
 msgstr ""
 "複雑なUI設計では、コンテナやコントロールが階層的に深々とネストされた構造になりがちです。ユーザーが操作する要素（例：`Button`）はシグナルを発生させ"
-"ますが、これらを適切に処理するためには、UIのルートノードにあるスクリプトに信号を接続する必要があります。"
+"ますが、これらを適切に処理するためには、UIのルートノードにあるスクリプトにシグナルを接続する必要があります。"
 
 #: basics/node_communication.md
 msgid "You can also add nodes to the group in your script:"
@@ -794,7 +794,7 @@ msgid ""
 "to the signaling and receiving nodes will by definition know where they are "
 "and be ready after both of them."
 msgstr ""
-"ツリー構造を「ダウン」方向に辿るルールに従うと、信号発信ノードと受信ノードの共通親ノードは、定義上それらの位置を認識しており、両ノードが準備完了した時点で待"
+"ツリー構造を「ダウン」方向に辿るルールに従うと、シグナル発信ノードと受信ノードの共通親ノードは、定義上それらの位置を認識しており、両ノードが準備完了した時点で待"
 "機状態になります。"
 
 #: basics/node_communication.md
@@ -1014,7 +1014,7 @@ msgid ""
 "importance of frame-rate independent movement, and practical examples of its "
 "use in Godot."
 msgstr ""
-"この`delta`パラメータ（別名：\"delta time\"）は、ゲーム開発においてしばしば誤解されがちな概念です。本チュートリアルでは、これがどのように使用されるのか、フレー"
+"この`delta`パラメータ（別名： \"delta time\" ）は、ゲーム開発においてしばしば誤解されがちな概念です。本チュートリアルでは、これがどのように使用されるのか、フレー"
 "ムレートに依存しない移動の重要性、そしてGodotにおける実践的な使用例について解説します。"
 
 #: basics/understanding_delta.md
@@ -1965,7 +1965,7 @@ msgstr ""
 msgid ""
 "On the `MiniMap` node, connect the `_gui_input` signal in the Inspector so we "
 "can process the scroll wheel events:"
-msgstr "ノード「MiniMap」で、インスペクター内の信号 `_gui_input` を接続して、スクロールホイールイベントを処理できるようにします。"
+msgstr "ノード「MiniMap」で、インスペクター内のシグナル `_gui_input` を接続して、スクロールホイールイベントを処理できるようにします。"
 
 #: ui/minimap.md
 msgid ""
@@ -2614,7 +2614,7 @@ msgstr ""
 msgid ""
 "Add a script to the `LevelMenu` and connect the `pressed` signals of the two "
 "buttons."
-msgstr "スクリプトを `LevelMenu` に追加し、2つのボタンの `pressed` 信号を接続してください。"
+msgstr "スクリプトを `LevelMenu` に追加し、2つのボタンの `pressed`シグナルを接続してください。"
 
 #: ui/level_select.md
 msgid ""
@@ -9135,10 +9135,10 @@ msgid ""
 "* _Shift + middle button + drag_: pan camera\n"
 "* _Right-click + drag_: rotate camera in place"
 msgstr ""
-"※ _マウスホイール上下：拡大／縮小表示・縮小表示切り替え_\n"
-"※ 中ボタン＋ドラッグ操作：現在のターゲットを中心にカメラを周回移動\n"
-"※ _Shift + 中ボタン＋ドラッグ操作：カメラ視点を平行移動_\n"
-"※ 右クリック＋ドラッグ操作：その場でカメラ向きを回転"
+"* _マウスホイール上下：拡大／縮小表示・縮小表示切り替え_\n"
+"* 中ボタン＋ドラッグ操作：現在のターゲットを中心にカメラを周回移動\n"
+"* _Shift + 中ボタン＋ドラッグ操作：カメラ視点を平行移動_\n"
+"* 右クリック＋ドラッグ操作：その場でカメラ向きを回転"
 
 #: g101/3d/101_3d_01.md
 msgid ""
@@ -9177,19 +9177,7 @@ msgid ""
 "from {{< gd-icon Node3D >}}`Node3D`, which provides 3D versions of the same "
 "properties. Add one to your scene and you'll see the following object\n"
 "appear at the origin:"
-msgstr ""
-"```yaml\n"
-"scene:\n"
-"  nodes:\n"
-"    - type: Node\n"
-"      children:\n"
-"        - type: Transform\n"
-"          properties:\n"
-"            position: 0,0,0\n"
-"            rotation: 0,0,0\n"
-"```\n"
-"\n"
-"翻訳結果："
+msgstr "では、最初の3Dノードを追加しましょう。2Dノードがすべて{{< gd-icon Node2D >}}`Node2D`を継承しているのと同様に、\n`position`や`rotation`などのプロパティを提供しているように、3Dノードは{{< gd-icon Node3D >}}`Node3D`を継承しており、同じプロパティの3Dバージョンを提供しています。シーンに1つ追加すると、原点位置に以下のオブジェクトが表示されるでしょう。"
 
 #: g101/3d/101_3d_01.md
 msgid ""
@@ -10462,11 +10450,11 @@ msgid ""
 "of Godot, and have a specific need. For those that do, Godot gives the "
 "flexibility to use a combination of GDScript and C# where you need them."
 msgstr ""
-"※ "
+"* "
 "GDスクリプトはGodot専用に設計された組み込み言語で、エンジンとの統合性が最も高く、最も直感的に扱えます。当サイトで紹介する全サンプルコードはこのGDス"
 "クリプトを使用しています。大半のプロジェクトにおいて、GDスクリプトは最も適したプログラミング言語です。Godotのアプリケーション・プログラミング・インタ"
 "ーフェース（API）と緊密に連携するよう設計されており、迅速な開発が可能という特徴があります。\n"
-"※ "
+"* "
 "C#は、既にGodotの仕組みを十分理解している上級者向け、または特定のニーズがある場合にのみ使用するべきです。そのような方には、必要に応じてGDスクリプト"
 "とC#を使い分けられる柔軟性がGodotには備わっています。"
 
@@ -10925,7 +10913,7 @@ msgid ""
 "individual key or button was pressed. This is a very powerful and flexible "
 "way of handling player input."
 msgstr ""
-"画面上部にはいくつかのタブもあります。これまで「一般」タブについて説明してきましたが、ここで簡単に「入力マップ」についても触れておきます。この機能では、キー"
+"画面上部にはいくつかのタブもあります。これまで **一般** タブについて説明してきましたが、ここで簡単に **入力マップ** についても触れておきます。この機能では、キー"
 "ボード操作、ゲームパッド、マウスなど、さまざまな入力デバイスに対する個別のアクションを定義できます。実際のゲームプレイ時には、特定のキーやボタンが押されたか"
 "どうかを気にする必要はありません。これはプレイヤー入力を扱う上で非常に強力で柔軟な方法です。"
 
@@ -11963,7 +11951,7 @@ msgstr ""
 
 #: kyn/rigidbody2d.md
 msgid "* Gravity Scale (`gravity_scale`)"
-msgstr "※ 重力スケール設定（`gravity_scale`）"
+msgstr "* 重力スケール設定（`gravity_scale`）"
 
 #: kyn/rigidbody2d.md
 msgid ""
@@ -12580,7 +12568,7 @@ msgid ""
 "you're using collision layers (and you should be), set them so that they can "
 "only detect the player (or any other body you want to be chased/attacked)."
 msgstr ""
-"両方のエリアの「body_entered」信号と「body_exited」信号を接続してください。衝突レイヤーを使用している場合（使用すべきですが）、プレイ"
+"両方のエリアの「body_entered」シグナルと「body_exited」シグナルを接続してください。衝突レイヤーを使用している場合（使用すべきですが）、プレイ"
 "ヤーのみ、あるいは追跡／攻撃対象として指定した他のボディのみを検出できるように設定してください。"
 
 #: ai/changing_behaviors.md
@@ -15267,9 +15255,7 @@ msgid ""
 "- A car isn't a train; it's not on rails. Turning at high speeds should "
 "involve some sliding (drifting)."
 msgstr ""
-"※ "
-"自動車は中心軸を中心に旋回するものではない。別の言い方をすれば、後輪が左右に滑ることはない。（ドリフト走行時はこの限りではないが、その点については後述する）"
-"\n"
+"- 自動車は中心軸を中心に旋回するものではない。別の言い方をすれば、後輪が左右に滑ることはない。（ドリフト走行時はこの限りではないが、その点については後述する）"
 "- 自動車は動いている時にのみ方向転換が可能で、その場で回転することはできない。\n"
 "- 自動車は列車ではない。レールに縛られていない。高速で曲がる際にはある程度の横滑り（ドリフト）が伴うべきである。"
 
@@ -15547,7 +15533,7 @@ msgid ""
 msgstr ""
 "{{% notice note "
 "%}}\n"
-"以下の方法は、こちらのアルゴリズムに基づいています：http://engineeringdotnet.blogspot.com/2010/04/simple"
+"以下の方法は、こちらのアルゴリズムに基づいています。 http://engineeringdotnet.blogspot.com/2010/04/simple"
 "-2d-car-physics-in-games.html\n"
 "{{% /notice %}}"
 
@@ -16286,7 +16272,7 @@ msgstr ""
 
 #: games/first_2d/first_2d_04.md
 msgid "### Connecting signals"
-msgstr "### 信号の接続方法"
+msgstr "### シグナルの接続方法"
 
 #: games/first_2d/first_2d_04.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_16.png?width=350)"

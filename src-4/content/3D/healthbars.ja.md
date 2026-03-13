@@ -45,7 +45,6 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 ### 2Dを3Dに変換
 
-```
 We can display a 2D image in 3D using a {{< gd-icon Sprite3D >}}`Sprite3D`. Add one to a new scene and name it "Healthbar3D". First, we'll get it configured and sized, so set the _Texture_ property to the green bar image.
 
 {{<  gd-icon Sprite3D >}}`Sprite3D`は通常の3Dオブジェクトと同様に動作します。カメラを移動させると、視点が変わるためです。ただし、ヘルスバーは常にカメラの方を向くようにして、いつでも確認できるようにしたいと考えています。
@@ -62,8 +61,7 @@ We can display a 2D image in 3D using a {{< gd-icon Sprite3D >}}`Sprite3D`. Add 
 
 ### ビューポートテクスチャ
 
-```
-私たちは `Sprite3D` ノードが静的なテクスチャを表示するのではなく、2D `TextureProgressBar` を表示したいと考えています。これは、テクスチャをエクスポートできる `SubViewport` ノードを使用することで実現可能です。
+私たちは `Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}} `TextureProgressBar` を表示したいと考えています。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現可能です。
 
 以下の手順で操作してください。
 1. {{< gd-icon SubViewport >}} `SubViewport` を {{< gd-icon Sprite3D >}} `Sprite3D` の子要素として追加します。

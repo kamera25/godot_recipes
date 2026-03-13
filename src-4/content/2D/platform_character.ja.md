@@ -82,7 +82,7 @@ func _physics_process(delta):
 
 「摩擦係数」 と 「加速度」 の値を変更して、ゲームの操作性にどのような影響があるか試してみましょう。例えば氷ステージの場合、これらの値を非常に低く設定することで、キャラクターの動きがより鈍くなるように調整できます。
 
-![alt](/godot_recipes/4.x/img/plataformero1.gif)
+![alt](/godot_recipes/4.x/img/platformer1.gif)
 
 ## 結論
 

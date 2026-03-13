@@ -67,7 +67,7 @@ func remove_target(t):
 
 ターゲットの追加/削除については、2つの補助関数を用意しています。ゲームプレイ中にこれらを使用することで、追跡対象を変更できます（「プレイヤー3がゲームに参加しました！」）。また、同じターゲットを複数同時に追跡することは避けたいため、既に存在する場合は追加を拒否する仕組みになっています。
 
-機能の大部分は `_process()` メソッドで実装されています。まず、カメラの移動処理から見ていきましょう：
+機能の大部分は `_process()` メソッドで実装されています。まず、カメラの移動処理から見ていきましょう。
 
 ```gdscript
 func _process(delta):
@@ -99,55 +99,7 @@ else:
 zoom = lerp(zoom, Vector2.ONE * z, zoom_speed)
 ```
 
-import cv2
-from skimage.draw import ellipse, circle, rectangle
-
-def create_ellipse_contours(image):
-    # Ellipse contours
-    y1, y2 = image.shape[0] * 0.33, image.shape[0] * 0.66
-    x1, x2 = image.shape[1] * 0.25, image.shape[1] * 0.75
-
-    ellipse_coords = ellipse(y1, y2, x1, x2)
-    cv2.polylines(image, [np.int32(ellipse_coords)], isClosed=True, color=(0, 255, 0), thickness=2)
-
-    # Circle contours
-    cx, cy = image.shape[1] * 0.5, image.shape[0] * 0.5
-    radius = image.shape[0] * 0.1
-
-    circle_coords = circle(cx, cy, radius)
-    cv2.polylines(image, [np.int32(circle_coords)], isClosed=True, color=(0, 0, 255), thickness=2)
-
-def create_rectangular_contours(image):
-    # Rectangle contours
-    w = image.shape[1] * 0.5
-    h = image.shape[0] * 0.3
-
-    x1, y1 = w / 2 - h / 2, h / 2 - w / 2
-    x2, y2 = w / 2 + h / 2, h / 2 + w / 2
-
-    rect_coords = rectangle(y1, x1, y2, x2)
-    cv2.polylines(image, [np.int32(rect_coords)], isClosed=True, color=(0, 0, 0), thickness=2)
-
-def create_targets_and_contours():
-    # Create target images
-    target_image = cv2.imread('path_to_your_image.jpg')  # Replace with your actual image path
-
-    create_ellipse_contours(target_image)
-    create_rectangular_contours(target_image)
-
-    return target_image, ellipse_coords, circle_coords, rect_coords
-
-def main():
-    image = create_targets_and_contours()[0]
-    ellipse_coords, _, _, _ = image
-    # Assume `expand` and `margin` functions are defined elsewhere in your code
-
-    expanded_targets = expand(target_image, ellipse_coords)
-    final_rect = cv2.rectangle(image, (x1, y1), (x2, y2), color=(0, 0, 255))  # Example rectangle coordinates
-
-if __name__ == "__main__":
-    main()
-```
+ここでの主要な機能は`Rect2`によるものです。私たちはすべてのターゲットを包含する長方形を見つける必要があり、これは`expand()`メソッドを使用することで取得できます。その後、この矩形に`margin`分の大きさを追加します。
 
 以下の画面では、長方形が描画されている様子を確認できます（デモプロジェクトで「Tab」キーを押すとこの描画機能を有効にできます）：
 

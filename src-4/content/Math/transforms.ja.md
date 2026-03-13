@@ -15,7 +15,7 @@ ghcommentid: 65
 
 ![alt](/godot_recipes/4.x/img/0_2d_coordinate_plane.png?width=250px)
 
-まず、宇宙空間を漂流しているこの宇宙船について考えてみましょう：
+まず、宇宙空間を漂流しているこの宇宙船について考えてみましょう。
 
 ![alt](/godot_recipes/4.x/img/0_2d_rocket1.png?width=250px)
 

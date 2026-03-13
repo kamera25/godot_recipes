@@ -66,7 +66,6 @@ func _process(delta):
 
 ### ランダム変位
 
-```bash
 The `shake()` function applies random camera movements based on the current `trauma` level (raised to the specified power). In 2D, we need to calculate two translational motions and one rotational motion. Using a random number between `-1` and `1` is a simple and effective way to generate movement in either direction.
 
 ```gdscript

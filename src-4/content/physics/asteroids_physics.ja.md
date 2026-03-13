@@ -33,7 +33,7 @@ draft: false
 |`rotate_right`| **d** または →|
 |`rotate_left`| **a** または ←|
 
-スクリプトをボディに追加し、いくつかの変数を定義しましょう：
+スクリプトをボディに追加し、いくつかの変数を定義しましょう。
 
 ```gdscript
 extends RigidBody2D
@@ -47,7 +47,7 @@ var rotation_dir = 0
 
 最初の2つの変数は、船の「操縦性」を制御する方法を決定します。`engine_power`は加速と最高速度に影響を与えます。`spin_power`は船が回転する速さを調整します。
 
-`thrust` と `rotation_dir` は入力操作によって設定されます。次にその方法を確認しましょう：
+`thrust` と `rotation_dir` は入力操作によって設定されます。次にその方法を確認しましょう。
 
 ```gdscript
 func get_input():
@@ -57,8 +57,7 @@ func get_input():
     rotation_dir = Input.get_axis("rotate_left", "rotate_right")
 ```
 
-```bash
-[#3] [#4] もし「推力」入力が有効になっている場合、「thrust」ベクトルを船の進行方向に設定します。一方、`rotation_dir`は回転入力に応じて `+/-1` に設定されます。
+もし`"thrust"`入力が有効になっている場合、`thrust`ベクトルを船の進行方向に設定します。一方、`rotation_dir`は回転入力に応じて `+/-1` に設定されます。
 
 これらの値を `_physics_process()` で適用することで飛行を開始できます：
 
@@ -81,7 +80,7 @@ func _physics_process(_delta):
 
 この問題の解決策として、リジッドボディの `_integrate_forces()` コールバックを使用することが有効です。この関数内では、物理エンジンが行っている処理と干渉することなく、オブジェクトの物理特性を安全に更新できます。
 
-スクリプトの上部に画面サイズを設定しましょう：
+スクリプトの上部に画面サイズを設定しましょう。
 
 ```gdscript
 @onready var screensize = get_viewport_rect().size

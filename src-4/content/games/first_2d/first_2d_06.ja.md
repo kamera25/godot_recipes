@@ -30,35 +30,9 @@ pre: "06. "
 
 ### 背景をアニメーション化する方法
 
-import panda3d.core as pdc
-from direct.directbase import DirectStart
+We can make the scene more dynamic by animating the background. While we could do this in code by changing the `region_rect` property every frame, we'll use an {{< gd-icon AnimationPlayer >}}`AnimationPlayer` node instead; add one as a child of `Main`.
 
-class BackgroundAnimatorNode(pdc.NodePath):
-    def __init__(self, parent_node):
-        super().__init__("BackgroundAnimation")
-        parent_node.attachChild(self)
-        self.animationPlayer = pdc.AnimationPlayer("AnimationPlayer")
-        self.addChild(self.animationPlayer)
-
-    def update_frame(self, frame_number):
-        # アニメーションフレームを更新するロジックを実装
-        pass
-
-class MainNodePath(pdc.NodePath):
-    def __init__(self):
-        super().__init__("MainScene")
-
-        # BackgroundAnimatorNodeのインスタンスを作成
-        background_node = BackgroundAnimatorNode("MainScene")
-
-        # AnimationPlayerを設定する（実際の実装は省略）
-        pass
-
-if __name__ == "__main__":
-    DirectStart()
-```
-
-エディタウィンドウの下部には**アニメーション**パネルが表示されます。ここには多くの情報が配置されていますので、その構成を確認していきましょう：
+エディタウィンドウの下部には**アニメーション**パネルが表示されます。ここには多くの情報が配置されていますので、その構成を確認していきましょう。
 
 ![alt](/godot_recipes/4.x/img/2d_101_19.png)
 

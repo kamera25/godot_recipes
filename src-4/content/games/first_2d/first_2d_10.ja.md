@@ -27,25 +27,7 @@ func _on_start_pressed():
     new_game()
 ```
 
-def _mainloop():
-    while True:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
-                return False
-
-            # 他のゲームロジックをここに追加...
-
-        screen.fill(BACKGROUND_COLOR)
-        button_image = create_ready_button()
-        screen.blit(button_image, (BUTTON_POSITION[0], BUTTON_POSITION[1]))
-        pygame.display.flip()
-```
-
-## 変更点説明:
-- **`if event.type == pygame.QUIT or ...`**: QUITイベントまたはESCキー押下時にゲーム終了処理を行う。
-- **`screen.fill(BACKGROUND_COLOR)`**: 背景色を再描画する。
-- **`button_image = create_ready_button()`**: `create_ready_button()`関数で準備完了ボタンの画像を生成する。
-- **`pygame.display.flip()`**: 画面を更新して変更を適用する。
+The `new_game()` function handles starting the game, so change `_ready()` so that it no longer spawns enemies, but just ensures the button is showing:
 
 ```gdscript
 func _ready():

@@ -50,7 +50,7 @@ We've chosen {{< gd-icon CharacterBody3D >}}`CharacterBody3D` as the root node o
 
 ### 移動
 
-これでプレイヤーにスクリプトを追加する準備が整いました。まずは必要な変数から始めましょう：
+これでプレイヤーにスクリプトを追加する準備が整いました。まずは必要な変数から始めましょう。
 
 ```gdscript
 extends CharacterBody3D
@@ -64,7 +64,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var jumping = false
 ```
 
-以下に、アクセスが必要なノードに関する参考情報を示します。
+And then, some references to the nodes we'll need to access:
 
 ```gdscript
 @onready var spring_arm = $SpringArm3D
@@ -164,7 +164,7 @@ if blend_position > 0.5:  # 何らかの閾値チェック
     anim_tree.set("parameters/IWR/blend_position", Vector2(vl.x, -vl.z) / speed)
 ```
 
-```bash
+`velocity`はグローバル座標系で定義されていますが、キャラクターモデルが回転しているため、この速度をモデル空間に変換する必要があります。そのためにはモデルの`basis`を使用して変換を行います。変換後は、この3次元ベクトルをブレンドスペースの2次元ベクトルにマッピングし、`speed`で除算することで、値が-1から1の範囲内になるように調整します。また、*-z軸*は前方方向ですが、*+y軸*はブレンドスペースにおける前進アニメーションを表すため、値を反転して両者を一致させる必要があります。
 
 注意: このパラメータパスは、{{< gd-icon AnimationTree >}}`AnimationTree`インスペクターを確認することで取得できます。実際にスクリプトウィンドウにドラッグ＆ドロップして入力することも可能です。
 
@@ -205,7 +205,7 @@ var attacks = [
     anim_tree.set("parameters/conditions/jumping", jumping)
 ```
 
-次に、地面に接地したタイミングを把握する必要があります。これにより、「Jump_Idle」アニメーションから移行可能になります。これを実現するためには、前フレームと比較することで接地状態を追跡する必要があります。上部に新しい変数を追加しましょう：
+次に、地面に接地したタイミングを把握する必要があります。これにより、「Jump_Idle」アニメーションから移行可能になります。これを実現するためには、前フレームと比較することで接地状態を追跡する必要があります。上部に新しい変数を追加しましょう。
 
 ```gdscript
 var last_floor = true

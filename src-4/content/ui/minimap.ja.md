@@ -25,7 +25,6 @@ draft: false
 
 ![alt](/godot_recipes/4.x/img/minimap_01.png)
 
-```
 `CanvasLayer` ノードは、ミニマップ／レーダーなどのUIコンポーネントを保持するために使用されます。このレシピで作成するこれらの要素を収容するためのものです。
 
 ### ユーザーインターフェース配置
@@ -40,7 +39,7 @@ draft: false
 
 ```{{< gd-icon NinePatchRect >}}NinePatchRects``` のプロパティを使用することで、引き伸ばした場合もフレームサイズが一定に保たれます。これらのプロパティは「テクスチャ領域」パネルでグラフィカルに定義できますが、直接数値を入力する方が簡単な場合もあります。**パッチ余白** セクションにある4つのプロパティをすべて `64` に設定し、ノード名を "Frame" に変更してください。
 
-サイズを変更するとどうなるか、次に見てみましょう：
+サイズを変更するとどうなるか、次に見てみましょう。
 
 ![alt](/godot_recipes/4.x/img/minimap_03.gif)
 
@@ -56,7 +55,6 @@ draft: false
 
 ![alt](/godot_recipes/4.x/img/minimap_04.gif)
 
-```
 まずはミニマップのサイズを `(200, 200)` のままにしておきましょう。ルートノードの **[Size]** プロパティは [レイアウト] セクションで確認できます。
 
 この時点までに、シーンツリーは以下のようになっているはずです：
@@ -69,7 +67,6 @@ As a child of `Grid`, add a {{< gd-icon Sprite2D >}}`Sprite2D` node named "Playe
 
 ![alt](/godot_recipes/4.x/img/minimap_05.png)
 
-```
 もし現在のグリッドサイズが (150, 150) であれば（これは［サイズ］プロパティで確認できます）、中心座標は (75, 75) になります。ここにプレイヤーマーカーの位置を設定して：
 
 !
@@ -153,7 +150,6 @@ func _ready():
     grid_scale = grid.size / (get_viewport_rect().size * zoom)
 ```
 
-```
 {{% notice style="warning" title="コンテナ内ノードについて" %}}
 {{< gd-icon Container >}}`Container` ノードが子要素をどのように処理するかの特性上、`_ready()` の時点では子要素の正確なサイズ値が取得できません。このため、グリッドのサイズを正しく取得するには次のフレームまで待つ必要があります。
 {{% /notice %}}
@@ -285,7 +281,7 @@ func set_zoom(value):
     grid_scale = grid.size / (get_viewport_rect().size * zoom)
 ```
 
-ノード「MiniMap」で、インスペクター内の信号 `_gui_input` を接続して、スクロールホイールイベントを処理できるようにします。
+ノード「MiniMap」で、インスペクター内のシグナル `_gui_input` を接続して、スクロールホイールイベントを処理できるようにします。
 
 ```gdscript
 func _on_gui_input(event):
@@ -296,7 +292,7 @@ func _on_gui_input(event):
             zoom -= 0.1
 ```
 
-これで完了です。スクロールインとアウトの効果を確認してみましょう：
+これで完了です。スクロールインとアウトの効果を確認してみましょう。
 
 <img src="/godot_recipes/4.x/img/minimap_10.gif" alt="ミニマップ画像">
 

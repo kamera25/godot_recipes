@@ -29,15 +29,6 @@ Where `θ` is the angle between the two vectors and `||A||` is the magnitude of 
 
 ![alt](/godot_recipes/4.x/img/dot_cross_03.png)
 
-```bash
-dot_product = 3 * 2 + 4 * 5 + 6 * 7
-    # => 147
-
-# ベクトル間の角度を計算する関数（arccos は逆余弦関数）
-angle = acos(0.5)
-    # => 1.0471975511965979 ラジアン (約 53.13°)
-```
-
 この結果から、内積が二つのベクトル間の角度と直接関係していることがわかります。`cos(0) == 1` かつ `cos(180) == -1` であることから、内積の値は二つのベクトルがどれだけ平行しているかを示します。
 
 <img src="/godot_recipes/4.x/img/dot_cross_05.png" alt="">

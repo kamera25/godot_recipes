@@ -48,7 +48,7 @@ func align_with_y(xform, new_y):
 クロス積やその他のベクトル数学に慣れていない方のために、Godot公式ドキュメントに[ベクトル数学入門ガイド](https://docs.godotengine.org/ja/latest/tutorials/math/vector_math.html)が用意されています。
 {{% /notice %}}
 
-タンクの移動コードを更新して、表面が衝突した際にこの関数を呼び出せるようにしましょう：
+タンクの移動コードを更新して、表面が衝突した際にこの関数を呼び出せるようにしましょう。
 
 ```gdscript
 func _physics_process(delta):

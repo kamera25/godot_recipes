@@ -27,7 +27,7 @@ The `Buttons` {{< gd-icon Control >}}`Control` node serves as the container wher
 
 本例では、[クールダウンボタンレシピ](/godot_recipes/4.x/ja/ui/cooldown_button/) から9つのボタンを使用しています。
 
-それでは、ボタンのスクリプトを見てみましょう：
+それでは、ボタンのスクリプトを見てみましょう。
 
 ```gdscript
 extends TextureButton
@@ -76,7 +76,7 @@ func _on_tween_finished():
 
 トゥイーンアニメーションが完了したら、アクティブ状態を切り替え、ボタンを再有効化します。
 
-以下の`show_menu()`関数を見てみましょう：
+以下の`show_menu()`関数を見てみましょう。
 
 ```gdscript
 func show_menu():

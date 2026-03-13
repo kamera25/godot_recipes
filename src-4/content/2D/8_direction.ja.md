@@ -23,14 +23,7 @@ ghcommentid: 100
 
 マウスを使って移動します。キャラクターは常にマウスの方向を向き、マウスボタンをクリックするとその方向に走り出します。
 
-# Mouse position relative to character
-mouse_rel = get_local_mouse_position()
-
-# Snap mouse vector angle to closest 45° multiple
-angle = snappeff(mouse_rel, PI / 4)
-
-# Map angle to 0-7 range for animation selection
-anim_index = int((angle + 3 * PI / 2) / (2 * PI / 7)) % 8
+どのアニメーションを再生するか選択するためには、マウスの方向を取得し、それを同じ範囲（0-7）にマッピングする必要があります。`get_local_mouse_position()`を使用することで、キャラクターに対するマウスカーソルの位置を取得できます。次に`snappedf()`関数を使用して、マウスベクトルの角度を最も近い45度間隔（π/4ラジアン）にスナップさせると、以下の結果が得られます。
 
 ![alt](/godot_recipes/4.x/img/8_direction_04w.png)
 
@@ -57,7 +50,7 @@ func _physics_process(delta):
 
 動作テストを行ったところ、以下の現象が確認されました：
 
-!
+![alt](/godot_recipes/4.x/img/8_direction_05.gif)
 
 ### キーボード入力
 

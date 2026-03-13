@@ -16,16 +16,6 @@ draft: false
 
 ただし、このレシピでは `{{< gd-icon Label >}}`Label` ノード（名前は「FCT」）を使用します。この方法であれば、フォントの変更が柔軟に行えるだけでなく、数字を文字列として表示するのも容易になります - さらには状況に応じて「miss」などの他のメッセージを表示することも可能です。
 
-```yaml
-resources:
-  - name: LabelSettings
-    properties:
-      font: Xolonium.ttf
-      size: 28
-      outline:
-        color: black
-        width: 4
-```
 この例では、"Xolonium.ttf" フォントを使用し、文字サイズを `28` ポイントに、アウトラインの色を黒、幅を `4` ピクセルに設定しています。
 
 ラベルにスクリプトを追加します。

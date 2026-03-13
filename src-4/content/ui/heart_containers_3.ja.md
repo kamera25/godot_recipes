@@ -76,7 +76,6 @@ func update_simple(value):
         get_child(i).visible = value > i
 ```
 
-```
 `update_empty()` は非常に似ていますが、アイコンを隠す代わりに、そのテクスチャを空のコンテナー用に変更します。
 
 ```gdscript

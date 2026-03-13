@@ -39,13 +39,7 @@ func _physics_process(delta):
     look_at(target.global_transform.origin, target.transform.basis.y)
 ```
 
-```php
-function _physics_process(){
-    $this->interpolateCameraPositionWithTarget();
-}
-```
-
-// 物理処理関数内でカメラの位置をターゲット位置（＋オフセット値）に補間しています
+`_physics_process()`関数内では、カメラの位置を`target`の位置（プラス`offset`）に補間します。
 
 ### 使用例
 

@@ -10,7 +10,7 @@ draft: false
 
 ## 解決策
 
-Godot は経路探索のための複数の手法を提供しています。今回のレシピでは「A*」アルゴリズムを取り上げます。
+Godot は経路探索のための複数の手法を提供しています。今回のレシピでは「A*(エースター)」アルゴリズムを取り上げます。
 
 {{% notice style="info" title="A*について" %}}
 A*アルゴリズムは、2点間の最短経路を求めるために広く利用されている手法です。グリッドに限らず、あらゆるグラフ構造データに適用可能です。
@@ -45,41 +45,7 @@ func initialize_grid():
 
 このコードでは、画面サイズを「セルサイズ」で割ることでグリッド全体の寸法を計算しています。これにより、`AStarGrid2D` オブジェクトの `size` プロパティを適切に設定できます。
 
-import math
-
-def calculate_path_length(points, cells):
-    total_length = 0.0
-
-    for i in range(len(points) - 1):
-        start_point = points[i]
-        end_point = points[i + 1]
-
-        # Calculate the Euclidean distance between two points
-        distance = math.sqrt(sum(math.pow(x - y, 2) for x, y in zip(start_point, end_point)))
-
-        # Adjust distance based on cell dimensions
-        adjusted_distance = distance / cells
-
-        total_length += adjusted_distance
-
-    return total_length
-```
-
-この関数は以下のように使用します。
-
-points = [(0, 0), (3, 4), (6, 8)]
-cells = 1.0  # セルのサイズを1単位と仮定
-
-path_length = calculate_path_length(points, cells)
-print("経路の長さ:", path_length)
-```
-
-出力結果：
-```
-経路の長さ: 7.810249675884363
-```
-
-この実装では、各セルの中心を基準にして距離を計算しているため、より正確な経路長が得られます。また、入力値に応じて柔軟に調整できるため、さまざまなシナリオに適用可能です。
+The `offset` property will come into play when we ask for a path between two points. Using `cell_size / 2` means the path will be calculated from the center of each cell rather than the corners.
 
 最後に、`AStarGrid2D`のプロパティを設定または変更した後は必ず`update()`メソッドを呼び出す必要があります。
 
@@ -110,7 +76,7 @@ func draw_grid():
 
 ### 経路の描画方法
 
-パスを見つけるには、開始点と終了点が必要です。スクリプトの上部にこれらの変数を追加しましょう：
+パスを見つけるには、開始点と終了点が必要です。スクリプトの上部にこれらの変数を追加しましょう。
 
 ```gdscript
 var start = Vector2i.ZERO
@@ -124,9 +90,7 @@ var end = Vector2i(5, 5)
     draw_rect(Rect2(end * cell_size, cell_size), Color.ORANGE_RED)
 ```
 
-# 可視化用のラインオブジェクトを追加
-line = Line2D()
-scene.add(line)
+2点間の経路は`get_point_path()`メソッドを使用して取得できますが、これを可視化する必要もあります。ここでは{{< gd-icon Line2D >}}`Line2D`を使用できるので、シーンに追加します。
 
 以下の方法でパスを取得し、得られた点を `{{< gd-icon Line2D >}}`Line2D` に追加する方法をご紹介します。
 
@@ -146,7 +110,7 @@ func update_path():
 * `DIAGONAL_MODE_AT_LEAST_ONE_WALKABLE` - この設定では対角移動が可能ですが、斜め配置された障害物の「間」を経路が通過するのを防ぎます。
 * `DIAGONAL_MODE_ONLY_IF_NO_OBSTACLES` - この場合、障害物のないオープンエリアでのみ対角移動が可能です。障害物付近ではこのモードは適用されません。
 
-プロパティを変更すると結果が大きく変わる可能性があるため、環境に合わせた調整が重要です。`initialize_grid()` 関数にこれを追加しましょう：
+プロパティを変更すると結果が大きく変わる可能性があるため、環境に合わせた調整が重要です。`initialize_grid()` 関数にこれを追加しましょう。
 
 ```gdscript
 astar_grid.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER

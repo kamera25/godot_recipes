@@ -64,18 +64,17 @@ func _process(delta):
 
 ここで「_ready()」という関数が定義されています。GDScriptでは関数を「func」キーワードで宣言します。この`_ready()`関数はGodotが特にチェックする特別な関数で、ノードがツリーに追加されるたびに実行されます - 例えば「再生」ボタンを押した時などに呼び出されます。
 
-```plaintext
 ゲーム開始時にスプライトを特定の位置に配置したいとしましょう。インスペクターでは「**位置**」プロパティを設定する必要があります。「ノード2D」とラベル付けされたセクションにある点に注目してください。これは、これは任意の {{< gd-icon Node2D >}}`Node2D`タイプのノードが持つプロパティであり、{{< gd-icon Sprite2D >}}`Sprite2D`に限定されないことを示しています。
 
 コード内でプロパティを設定するにはどうすればよいでしょうか？1つの方法として、インスペクターでそのプロパティの上にマウスカーソルを合わせると、その名前を確認できます。
 
-[画像: alt="Alt text" /godot_recipes/4.x/img/gds_01_01.png]
+![alt](/godot_recipes/4.x/img/gds_01_01.png)
 
 Godotには非常に便利な組み込みヘルプ/リファレンスツールが用意されています。スクリプトウィンドウ上部の「クラス」をクリックし、Node2Dを検索すると、該当クラスで利用できるすべてのプロパティとメソッドが記載されたヘルプページが表示されます。少し下にスクロールすると、「メンバ変数」セクションに「position」が表示されているはずです。これが私たちが探しているものです。また、このプロパティが「Vector2」型であることも明記されています。
 
 ![alt](/godot_recipes/4.x/img/gds_01_02.png)
 
-スクリプトに戻ってそのプロパティを使用しましょう：
+スクリプトに戻ってそのプロパティを使用しましょう。
 
 ```gdscript
 func _ready():
@@ -84,25 +83,7 @@ func _ready():
 
 エディターが入力に応じて即座に提案を表示しているのに注目してください。Godotは多くの場面でベクトルを使用しており、この点については後ほど詳しく説明します。まずは「Vector2」と入力してみましょう。ヒントが表示されるので、`x` と `y` には2つの浮動小数点数を指定する必要があることがわかります。
 
-from pyglet import graphics as gl
-from pyglet.graphics import vertex_array_object as vao
-
-# ... (既存のコードは変更せずそのまま)
-
-def update_position():
-    gl.set_pos(100, 150)  # スプライトの位置を座標 (100, 150) に移動
-
-@window.event
-def on_draw():
-    gl.clear()
-    graphics['sprite'].render()
-
-@window.event
-def on_key_press(symbol, modifiers):
-    if symbol == gl.key.SPACE:
-        update_position()
-        print("位置が正常に更新されました！")
-```
+Now we have a script that says "When this sprite starts, set its position to `(100, 150)`". We can try this out by pressing the "Play Scene" button.
 
 ![alt](/godot_recipes/4.x/img/gds_01_03.png)
 
