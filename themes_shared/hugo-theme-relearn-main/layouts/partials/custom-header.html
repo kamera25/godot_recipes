@@ -4,10 +4,105 @@
 </style>
 -->
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500" rel="stylesheet">
-{{/*
-<link rel="stylesheet" href="/godot_recipes/css/gd-icon-font.css"> */}}
 <style type="text/css">
    pre code {
       white-space: pre;
    }
+
+   /* Custom Language Switcher */
+   .custom-language-switcher {
+      position: relative;
+      display: inline-block;
+      margin-left: 1rem;
+      vertical-align: middle;
+   }
+
+   #language-switcher-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px 8px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: inherit;
+   }
+
+   .current-language-flag {
+      font-size: 1.2rem;
+   }
+
+   .language-dropdown {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      background-color: var(--INTERNAL-MAIN-BG-color);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-radius: 4px;
+      z-index: 1000;
+      min-width: 120px;
+      padding: 8px 0;
+      border: 1px solid var(--INTERNAL-MENU-SELECTION-color);
+   }
+
+   .language-dropdown.show {
+      display: block;
+   }
+
+   .language-dropdown a {
+      display: block;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: var(--INTERNAL-MAIN-TEXT-color);
+      white-space: nowrap;
+      font-size: 0.9rem;
+   }
+
+   .language-dropdown a:hover {
+      background-color: var(--INTERNAL-MENU-SELECTION-color);
+   }
+
+   .language-dropdown a.active {
+      font-weight: bold;
+      color: var(--INTERNAL-PRIMARY-color);
+   }
+
+   /* Override mobile hiding */
+   @media screen and (max-width: 48rem) {
+      .custom-language-switcher {
+         display: inline-block !important; /* Keep it visible on mobile */
+      }
+      
+      #topbar > div {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding-right: 10px;
+      }
+
+      #breadcrumbs {
+         flex-grow: 1;
+      }
+   }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+   const button = document.getElementById('language-switcher-button');
+   const dropdown = document.getElementById('language-dropdown');
+   
+   if (button && dropdown) {
+      button.addEventListener('click', function(e) {
+         e.stopPropagation();
+         dropdown.classList.toggle('show');
+      });
+
+      document.addEventListener('click', function(e) {
+         if (!button.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.remove('show');
+         }
+      });
+   }
+});
+</script>
