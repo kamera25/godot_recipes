@@ -68,7 +68,7 @@ func start_tween():
 
 ## 関連レシピ
 
-* [プラットフォームキャラクタ](/godot_recipes/4.x/ja/2d/platform_character/)
+- [プラットフォームキャラクタ](/godot_recipes/4.x/ja/2d/platform_character/)
 
 <!-- #### この動画が気に入ったら？
 

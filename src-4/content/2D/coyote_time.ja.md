@@ -82,4 +82,4 @@ func _on_coyote_timer_timeout():
 
 ## 関連レシピ
 
-* [プラットフォームキャラクタ](/godot_recipes/4.x/ja/2d/platform_character/)
+- [プラットフォームキャラクタ](/godot_recipes/4.x/ja/2d/platform_character/)

@@ -79,7 +79,7 @@ func _physics_process(delta):
 
 ## 関連レシピ
 
-* [プラットフォームキャラクタ](/godot_recipes/4.x/ja/2d/platform_character/)
+- [プラットフォームキャラクタ](/godot_recipes/4.x/ja/2d/platform_character/)
 
 ## <i class="fas fa-video"></i> 動画を観る
 {{< youtube SJuScDavstM >}}

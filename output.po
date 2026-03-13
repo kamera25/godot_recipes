@@ -37,7 +37,7 @@ msgstr ""
 
 #: _index.md
 msgid "#### Experienced Developers"
-msgstr "#### 経験豊富な開発者向け"
+msgstr "#### 経験豊富な開発者の方へ"
 
 #: _index.md
 msgid ""
@@ -54,7 +54,7 @@ msgstr ""
 
 #: _index.md
 msgid "#### Beginners"
-msgstr "#### 初心者用"
+msgstr "#### 初心者の方へ"
 
 #: _index.md
 msgid ""
@@ -82,8 +82,7 @@ msgid ""
 "learning complex topics; the more you work with Godot's features, the more "
 "familiar and _easy_ they will start to feel."
 msgstr ""
-"ゲーム開発が初めての場合は、まず [Godot "
-"101：基本編](/godot_recipes/4.x/ja/basics/) のセクションから始めてください。ここではGodotアプリケーションの概要と、初めて"
+"ゲーム開発が初めての場合は、まず [はじめてのGodot(基礎編)](/godot_recipes/4.x/ja/basics/) のセクションから始めてください。ここではGodotアプリケーションの概要と、初めて"
 "のプロジェクト作成を段階的にガイドする内容が提供されています。ここで学ぶべきことは多岐にわたりますが、最初はすべてを理解する必要はありません。複雑な概念を習"
 "得するには反復練習が不可欠です。Godotの各種機能を実際に操作すればするほど、その使い方に慣れ、次第に「簡単」だと感じられるようになるでしょう。"
 
@@ -508,7 +507,7 @@ msgstr ""
 
 #: basics/node_communication.md
 msgid "> **Call down, signal up.**"
-msgstr "> **「降下合図」「上方信号」**"
+msgstr "> **「下には呼び出しで」「上にはシグナルで」**"
 
 #: basics/node_communication.md
 msgid ""
@@ -1498,7 +1497,7 @@ msgid ""
 "*top-down* fashion, starting at the root and going down each branch in turn."
 msgstr ""
 "「ツリー順序」はGodotの公式ドキュメントやチュートリアルで頻繁に言及される概念ですが、初心者にはその意味が必ずしも直感的に理解しやすいものではありません"
-"。基本的に、ノードがツリー内で処理される順番は**見下ろし方式**で、ルートノードを起点として、各ブランチごとに順番に下層へと降りていくのが原則です。"
+"。基本的に、ノードがツリー内で処理される順番は **上から下へ** で、ルートノードを起点として、各ブランチごとに順番に下層へと降りていくのが原則です。"
 
 #: basics/tree_ready_order.md
 msgid "![alt](/godot_recipes/4.x/img/tree_order_01.png)"
@@ -1607,7 +1606,7 @@ msgstr "結果について議論する前に、まず各コールバック関数
 
 #: basics/_index.md
 msgid "# <i class=\"fas fa-toolbox\"></i>&nbsp;Basics"
-msgstr "# <i class=\"fas fa-toolbox\"></i>　基本編"
+msgstr "# <i class=\"fas fa-toolbox\"></i>&nbsp;基本編"
 
 #: 2D/_index.md
 #: 3D/_index.md
@@ -2025,28 +2024,9 @@ msgid ""
 "\"minimap_objects\" group) by duplicating the matching marker node and tying "
 "the marker to the object via the `markers` dictionary:"
 msgstr ""
-
-"from bpy import context, data, ops\n"
-"import copy\n"
-"\n"
-"def create_game_object_markers():\n"
-"    # Get the current active scene\n"
-"    scene = context.scene\n"
-"\n"
-"    # Iterate over each game object in the scene\n"
-"    for obj in scene.objects:\n"
-"        if obj.type == 'GAMEOBJECT':\n"
-"            # Create a marker node with the same name as the game object\n"
-"            marker_node = bpy.data.nodes.new('ShaderNodeGroup')\n"
-"            marker_node.name = obj.name\n"
-"\n"
-"            # Ensure the marker is properly linked to the game object\n"
-"            obj.node_tree.nodes[-1].use_shader_node_group = True\n"
-"            obj.node_tree.nodes[-1].group_path = \"#\" + obj.name\n"
-"\n"
-"            # Store the marker in the dictionary for quick access\n"
-"            markers[obj] = marker_node\n"
-"```"
+"We'll also create markers for every game object (using the "
+"\"minimap_objects\" group) by duplicating the matching marker node and tying "
+"the marker to the object via the `markers` dictionary:"
 
 #: ui/minimap.md
 msgid "![alt](/godot_recipes/4.x/img/minimap_02.gif)"
@@ -3237,7 +3217,7 @@ msgstr ""
 
 #: ui/_index.md
 msgid "# <i class='far fa-window-maximize'></i>&nbsp;UI"
-msgstr "# <i class='far fa-window-maximize'></i>　UI"
+msgstr "# <i class='far fa-window-maximize'></i>&nbsp;UI"
 
 #: ui/_index.md
 msgid "Building user interfaces."
@@ -3314,7 +3294,7 @@ msgid ""
 "rotate all the way around, eventually becoming upside-down. To prevent this, "
 "we can clamp the rotation."
 msgstr ""
-"※アップ/ダウンコントロールを操作すると、カメラがぐるりと一回転してしまい、最終的には上下逆さまになってしまいます。これを防止するために、回転角度に上限を設"
+"アップ/ダウンコントロールを操作すると、カメラがぐるりと一回転してしまい、最終的には上下逆さまになってしまいます。これを防止するために、回転角度に上限を設"
 "定する「クランプ」機能が有効です。"
 
 #: 3D/camera_gimbal.md
@@ -4048,21 +4028,8 @@ msgid ""
 "In the `get_input()` function, change the line getting `yaw_input` to the "
 "following:"
 msgstr ""
-
-"def get_orientation(self):\n"
-"    # 方位角入力を取得する処理を以下に変更\n"
-"    while True:\n"
-"        try:\n"
-"            yaw = float(input(\"Enter the yaw angle (degrees, 0-360): \"))\n"
-"            if not 0 <= yaw < 360:\n"
-"                print(\"Invalid input. Please enter a value between 0 and 360 "
-"degrees.\")\n"
-"                continue\n"
-"            break\n"
-"        except ValueError:\n"
-"            print(\"Please enter a valid numerical value.\")\n"
-"    return yaw\n"
-"```"
+"In the `get_input()` function, change the line getting `yaw_input` to the "
+"following:"
 
 #: 3D/spaceship.md
 msgid ""
@@ -4085,36 +4052,8 @@ msgid ""
 "Finally, we need to rotate the ship's `Basis` according to the inputs. Note "
 "how each input affects one axis of rotation:"
 msgstr ""
-
-"import math\n"
-"\n"
-"def rotate_ship(angles):\n"
-"    rotated_coords = []\n"
-"    for angle in angles:\n"
-"        x, y, z = transformed_points[0], transformed_points[1], "
-"transformed_points[2]\n"
-"        cos_a, sin_a = math.cos(math.radians(angle)), "
-"math.sin(math.radians(angle))\n"
-"\n"
-"        # 軸ごとの回転計算\n"
-"        new_x = x * cos_a - y * sin_a\n"
-"        new_y = x * sin_a + y * cos_a\n"
-"\n"
-"        rotated_coords.append([new_x, new_y])\n"
-"\n"
-"    return rotated_coords\n"
-"\n"
-"def print_rotations():\n"
-"    for i, rotations in enumerate(transformed_points):\n"
-"        angle1, angle2 = angles[i]\n"
-"        print(\"第{}回回転後の座標:\".format(i+1))\n"
-"        print(\"軸1:\", rotations[0])\n"
-"        print(\"軸2:\", rotations[1])\n"
-"\n"
-"# 使用例\n"
-"rotated_coords = rotate_ship(angles)\n"
-"print_rotations()\n"
-"```"
+"Finally, we need to rotate the ship's `Basis` according to the inputs. Note "
+"how each input affects one axis of rotation:"
 
 #: 3D/spaceship.md
 msgid ""
@@ -4607,39 +4546,10 @@ msgid ""
 "it the opposite amount. For example, to roll to the right (**+X**), you'll "
 "end up with this:"
 msgstr ""
-
-"# 回転操作を実装するための関数定義\n"
-"def rotate_cube():\n"
-"    global cube, pivot_position\n"
-"\n"
-"    if not rotation_mode:\n"
-"        print(\"現在のモードではキューブを回転させることはできません。\")\n"
-"        return\n"
-"\n"
-"    current_position = get_current_position()\n"
-"\n"
-"    while True:\n"
-"        movement_input = input(\"移動方向を入力してください（X軸：+/-、Y軸：+/-、Z軸：+/-）： \")\n"
-"\n"
-"        if movement_input == \"quit\":\n"
-"            print(\"回転モードを終了します。\")\n"
-"            break\n"
-"\n"
-"        try:\n"
-"            axis, direction = movement_input[0], movement_input[1]\n"
-"\n"
-"            # 移動量の計算\n"
-"            move_amount = 0.5 if direction == '+' else -0.5\n"
-"\n"
-"            pivot_position += move_amount * get_vector_from_direction(axis)\n"
-"        except ValueError:\n"
-"            print(\"無効な入力形式です。X軸方向は'+/-'、Y軸・Z軸方向は'+/-'で指定してください。\")\n"
-"            continue\n"
-"\n"
-"        # キューブの位置を更新し、表示を更新\n"
-"        cube_position = get_current_position() + pivot_position\n"
-"        display_cube(cube_position)\n"
-"```"
+"Now when you want to roll the cube, you'll need to move the `Pivot` `0.5` in "
+"the direction you want to move. Since the mesh is attached, you need to move "
+"it the opposite amount. For example, to roll to the right (**+X**), you'll "
+"end up with this:"
 
 #: 3D/rolling_cube.md
 msgid "In *Step 3*:"
@@ -5104,28 +5014,9 @@ msgid ""
 "the rotation input. We'll use `slerp()` (spherical linear interpolation) to "
 "do this smoothly:"
 msgstr ""
-
-"# 回転入力に基づいて車のメッシュを滑らかに回転させる\n"
-"mesh = gltf_model[\"geometry\"][0]  # GLTFモデルからジオメトリを取得\n"
-"\n"
-"def _process():\n"
-"    global mesh\n"
-"    rotation_input = parse_mouse_movement()  # マウス移動から回転データを取得\n"
-"\n"
-"    # slerpを使用して滑らかな補間を実行\n"
-"    current_time = time.time()\n"
-"    target_transform = transform_matrix * rotation_matrix\n"
-"    current_transform = matrix_from_vectors(mesh[\"position\"], "
-"mesh[\"rotation\"])\n"
-"\n"
-"    interpolation_factor = lerp_to_t(current_time - start_time, 0, 1)\n"
-"    interpolated_transform = slerp(current_transform, target_transform, "
-"interpolation_factor)\n"
-"\n"
-"    # 更新された変換行列を設定\n"
-"    gltf_model[\"geometry\"][0][\"matrix\"] = "
-"matrix_from_vectors(*interpolated_transform)\n"
-"```"
+"Next, still in the `_process()` function, we'll rotate the car mesh based on "
+"the rotation input. We'll use `slerp()` (spherical linear interpolation) to "
+"do this smoothly:"
 
 #: 3D/3d_sphere_car.md
 msgid ""
@@ -5163,14 +5054,9 @@ msgid ""
 ">}}`RigidBody3D` sphere for the physics, and a {{< gd-icon MeshInstance3D "
 ">}}`MeshInstance3D` to display the car body. Here's the scene layout:"
 msgstr ""
-"```yaml\n"
-"scene:\n"
-"  nodes:\n"
-"    - type: RigidBody3D\n"
-"      physicsNode: true\n"
-"    - type: MeshInstance3D\n"
-"      displayNode: true\n"
-"layout:"
+"The car is made with two main nodes: a {{< gd-icon RigidBody3D "
+">}}`RigidBody3D` sphere for the physics, and a {{< gd-icon MeshInstance3D "
+">}}`MeshInstance3D` to display the car body. Here's the scene layout:"
 
 #: 3D/3d_sphere_car.md
 msgid ""
@@ -5266,9 +5152,8 @@ msgid ""
 "For the forward and back movement, we're using `transform.basis.z` so that "
 "we'll move in our body's *local* forward direction."
 msgstr ""
-
-"# 前方/後方移動にはキャラクターのローカル座標系の Z 軸を使用しています。\n"
-"# これにより、身体の「ローカル」前方方向へ正しく移動します。"
+"前方/後方移動にはキャラクターのローカル座標系の Z 軸を使用しています。\n"
+"これにより、身体の「ローカル」前方方向へ正しく移動します。"
 
 #: 3D/characterbody3d_examples.md
 msgid "![alt](/godot_recipes/4.x/img/obj_as_scene.png)"
@@ -5870,16 +5755,11 @@ msgid ""
 "automatically. All we need to do is connect our {{< gd-icon StaticBody3D "
 ">}}`StaticBody3D` ground's `input_event` signal:"
 msgstr ""
-"# Example function to simulate raycasting from static bodies\n"
-"def get_raycast_results():\n"
-"    results = []\n"
-"    for body in static_objects:\n"
-"        if body.is_static_body and body.has_input_event:\n"
-"            event_data = body.input_event.wait_for_event()\n"
-"            if event_data is not None:\n"
-"                # Process the raycast results as needed\n"
-"                pass\n"
-"    return results"
+"While this can be done manually using the {{< gd-icon Camera3D "
+">}}`Camera3D`'s `project_ray` methods, we can take advantage of the fact that "
+"{{< gd-icon CollisionObject3D >}}`CollisionObject3D` nodes do this "
+"automatically. All we need to do is connect our {{< gd-icon StaticBody3D "
+">}}`StaticBody3D` ground's `input_event` signal:"
 
 #: 3D/click_to_move.md
 msgid ""
@@ -5916,7 +5796,7 @@ msgstr ""
 
 #: 3D/_index.md
 msgid "# <i class='fas fa-cube'></i>&nbsp;3D"
-msgstr "# <i class='fas fa-cube'></i>　3D"
+msgstr "# <i class='fas fa-cube'></i>&nbsp;3D"
 
 #: 3D/_index.md
 msgid "Tips, tricks, and tutorials on the 3D side of game development."
@@ -6613,10 +6493,8 @@ msgid ""
 "In `get_move_input()`, we're setting the player's velocity. Just after that, "
 "we can set the blend position:"
 msgstr ""
-"# get_move_input() 関数内で、プレイヤーの速度を設定しています。その後、ブレンド位置を設定することができます：\n"
-"blend_position = calculate_blend_position()\n"
-"if blend_position > 0.5:  # 何らかの閾値チェック\n"
-"    player.set_velocity(speed * 2)  # スピードを倍増させる例"
+"In `get_move_input()`, we're setting the player's velocity. Just after that, "
+"we can set the blend position:"
 
 #: 3D/assets/character_controller.md
 msgid "### Input actions"
@@ -6974,10 +6852,10 @@ msgid ""
 "collision layer to `2`. Since the spring arm is checking collision layer `1`, "
 "that will prevent the camera hitting the player's head."
 msgstr ""
-"```yaml\n"
-"# スプリングアームがプレイヤーのカプセル形状と衝突しないようにするため、ルートコンポーネント{{< gd-icon CharacterBody3D "
-">}}`CharacterBody3D`の衝突レイヤーを`2`に設定します。これにより、スプリングアームはレイヤー`1`をチェック対象から除外できるため、カ"
-"メラがプレイヤーの頭部に当たる現象を防止できます。"
+"We don't want the spring arm to collide with the player's capsule shape, so "
+"in the root {{< gd-icon CharacterBody3D >}}`CharacterBody3D` set the "
+"collision layer to `2`. Since the spring arm is checking collision layer `1`, "
+"that will prevent the camera hitting the player's head."
 
 #: 3D/assets/character_controller.md
 msgid "![alt](/godot_recipes/4.x/img/3dchar_animtree_properties.png)"
@@ -7166,7 +7044,9 @@ msgid ""
 "# <i class='fas fa-cubes'></i>&nbsp;Working with 3D Assets\n"
 "Detailed recipes for importing and working with 3D assets including models, "
 "animations, and materials."
-msgstr "3Dアセットの取り扱いに関する詳細レシピ：モデル、アニメーション、マテリアルを含むインポートおよび編集方法を解説。"
+msgstr ""
+"# <i class='fas fa-cubes'></i>&nbsp;3Dアセットの取り扱いに関する詳細レシピ"
+"モデル、アニメーション、マテリアルを含むインポートおよび編集方法を解説。"
 
 #: 3D/assets/_index.md
 msgid ""
@@ -7759,7 +7639,7 @@ msgstr "入力処理 - キーボード・マウスからゲームコントロー
 
 #: input/_index.md
 msgid "# <i class='fas fa-gamepad'></i>&nbsp;Input"
-msgstr "# <i class='fas fa-gamepad'></i>　入力"
+msgstr "# <i class='fas fa-gamepad'></i>&nbsp;入力"
 
 #: input/_index.md
 msgid ""
@@ -7965,9 +7845,7 @@ msgid ""
 "combine them with our input and movement code. `velocity` determines whether "
 "we should be showing \"run\" or \"idle\"."
 msgstr ""
-
-"# 以下は、プレイヤーがダメージを受けたり死亡した場合に呼び出される関数の例です。\n"
-"# "
+"以下は、プレイヤーがダメージを受けたり死亡した場合に呼び出される関数の例です。\n"
 "他のアニメーション（移動、攻撃など）については、入力処理や移動制御コードと組み合わせる必要があります。`velocity`変数によって、「走行」状態を表示す"
 "るか「待機」状態を表示するかを決定します。"
 
@@ -8171,7 +8049,7 @@ msgstr "Godotのアニメーションシステムを使用。"
 
 #: animation/_index.md
 msgid "# <i class='fas fa-film'></i>&nbsp;Animation"
-msgstr "# <i class='fas fa-film'></i>　アニメーション"
+msgstr "# <i class='fas fa-film'></i>&nbsp;アニメーション"
 
 #: animation/_index.md
 msgid ""
@@ -9590,30 +9468,16 @@ msgid ""
 "its\n"
 "_One Shot_ and _Autostart_ properties both on."
 msgstr ""
+"Make a new scene with an Area root, and name it \"Bullet\". Add a "
+"`MeshInstance`,\n"
+"a `CollisionShape`, and a `Timer`. I'm using a sphere shape for the mesh "
+"and\n"
+"collision, scaled to a radius of `0.2` so that it won't be too big "
+"compared\n"
+"with the character. The `Timer` is to give the bullet a time limit. Set "
+"its\n"
+"_One Shot_ and _Autostart_ properties both on."
 
-"import bge\n"
-"\n"
-"# 1. 新しいシーンを作成し、ルートとして「Area」を追加、「Bullet」と命名する\n"
-"scene = bge.logic.getCurrentScene()\n"
-"area = scene.addObject(\"Area\", name=\"Bullet\")\n"
-"\n"
-"# 2. 以下のコンポーネントを追加する：\n"
-"# - `MeshInstance`（メッシュ用）\n"
-"# - `CollisionShape`（衝突検出用）\n"
-"# - `Timer`（弾速制限のため）\n"
-"mesh_instance = area.addComponent(\"MeshInstance\")\n"
-"collision_shape = area.addComponent(\"CollisionShape\")\n"
-"timer = scene.addObject(\"Timer\", name=\"BulletTimer\")\n"
-"\n"
-"# 3. メッシュ形状には球体を使用し、半径を「0.2」にスケーリングする\n"
-"# これによりキャラクターに対して適切な大きさになる\n"
-"mesh_instance.object = \"Sphere\"\n"
-"collision_shape.radius = 0.2\n"
-"\n"
-"# 4. `Timer`コンポーネントを設定して弾速制限を設ける\n"
-"timer.properties[\"One Shot\"] = True  # "
-"1回だけ実行する設定\n"
-"timer.properties[\"Autostart\"] = True  # 自動開始を有効にする"
 
 #: g101/3d/101_3d_04.md
 msgid ""
@@ -9712,7 +9576,7 @@ msgstr "スクリプトをエリアに追加し、その `body_entered` シグ�
 
 #: g101/3d/_index.md
 msgid "# <i class='fas fa-cube'></i>&nbsp;Intro to 3D"
-msgstr "# <i class='fas fa-cube'></i>　3D入門講座"
+msgstr "# <i class='fas fa-cube'></i>&nbsp;3D入門講座"
 
 #: g101/3d/_index.md
 msgid "A gentle introduction to the 3D side of Godot development."
@@ -9776,8 +9640,8 @@ msgid ""
 "1. First, we're setting `velocity` to point to the right. `Vector2.RIGHT` is "
 "a built-in *constant* that represents the vector `(1, 0)`."
 msgstr ""
-"# まず、速度ベクトルを右方向に設定します。Vector2.RIGHTは組み込みの定数で、ベクトル(1, 0)を表します\n"
-"velocity = Vector2.RIGHT"
+"1. First, we're setting `velocity` to point to the right. `Vector2.RIGHT` is "
+"a built-in *constant* that represents the vector `(1, 0)`."
 
 #: g101/gdscript/gdscript_02.md
 msgid ""
@@ -9887,17 +9751,10 @@ msgid ""
 "contains both coordinates in one quantity. Vectors can be added, so let's "
 "change the code to this:"
 msgstr ""
-
-"# 斜め移動の実装例\n"
-"if movement == \"diagonal\":\n"
-"    dx, dy = 3, 3  # 方向ベクトルを定義\n"
-"    x += dx\n"
-"    y += "
-"dy\n"
-"```\n"
-"\n"
-"このアプローチでは、`movement`変数が斜め移動を指定した場合にのみ、適切なオフセット値が加算されます。これにより、水平・垂直・斜めすべての方向への移"
-"動が可能になります。"
+"What if we want to move the sprite diagonally? That means we need to change "
+"the `x` and `y` coordinates at the same time. `position` is a **vector** - it "
+"contains both coordinates in one quantity. Vectors can be added, so let's "
+"change the code to this:"
 
 #: g101/gdscript/gdscript_02.md
 msgid ""
@@ -10241,7 +10098,7 @@ msgstr ""
 
 #: g101/start/101_01.md
 msgid "* Platform Support"
-msgstr "プラットフォーム対応状況:"
+msgstr "* プラットフォーム対応状況"
 
 #: g101/start/101_01.md
 msgid "## Game Engines"
@@ -11177,13 +11034,13 @@ msgstr "### 外積"
 
 #: Math/dot_cross_product.md
 msgid "This is the formula for calculating the dot product:"
-msgstr "以下が内積を計算するための公式です："
+msgstr "以下が内積を計算するための公式です。"
 
 #: Math/dot_cross_product.md
 msgid ""
 "Where `θ` is the angle between the two vectors and `||A||` is the magnitude "
 "of `A`."
-msgstr ""
+msgstr "ここで`θ`は2つのベクトル間の角度、`||A||`は`A`の大きさを表します。"
 
 #: Math/dot_cross_product.md
 msgid ""
@@ -11350,7 +11207,7 @@ msgid ""
 "doing something like `position += Vector2(10 * cos(angle), 10 * sin(angle))`. "
 "While this would work, there's a much more convenient way: the _Transform_."
 msgstr ""
-"どうすれば船を前方に移動させることができるでしょうか？学校で三角関数を学んでいた方なら、角度や正弦・余弦の概念を思い出し、`position += Vector2(10 * cos(angle), 10 * sin(angle))`のような計算式を考えつくかもしれません。この方法でも実現可能ですが、より便利な方法があります。それは **Transform** です。"
+"どうすれば船を前方に移動させることができるでしょうか？学校で三角関数を学んでいた方なら、角度や三角関数の概念を思い出し、`position += Vector2(10 * cos(angle), 10 * sin(angle))`のような計算式を考えつくかもしれません。この方法でも実現可能ですが、より便利な方法があります。それは **Transform** です。"
 
 #: Math/transforms.md
 msgid ""
@@ -11462,7 +11319,7 @@ msgid ""
 "the forward direction. To move forward:"
 msgstr ""
 "2Dと同様に、ローカル軸を使ってオブジェクトを前方に移動させることができます。Godotの3D座標系（**Y軸正方向**）では、デフォルトでボディの**-"
-"Z軸**が前進方向になります。前に進むには："
+" Z軸** が前進方向になります。前に進むには。"
 
 #: Math/transforms.md
 msgid "![alt](/godot_recipes/4.x/img/0_2d_rocket4.png?width=250px)"
@@ -11487,7 +11344,7 @@ msgstr ""
 
 #: Math/_index.md
 msgid "# <i class='fas fa-calculator'></i>&nbsp;Gamedev Math"
-msgstr "# <i class='fas fa-calculator'></i>　ゲーム開発数学"
+msgstr "# <i class='fas fa-calculator'></i>&nbsp;ゲーム開発数学"
 
 #: Math/_index.md
 msgid ""
@@ -11616,7 +11473,7 @@ msgstr ""
 
 #: audio/_index.md
 msgid "# <i class='fas fa-volume-up'></i>&nbsp;Audio"
-msgstr "<i class=\"fas fa-volume-up\"></i> オーディオ"
+msgstr "<i class=\"fas fa-volume-up\"></i>&nbsp;オーディオ"
 
 #: recipes/_index.md
 msgid "Other recipes that just don't fit in anywhere else."
@@ -11642,7 +11499,7 @@ msgstr ""
 
 #: recipes/_index.md
 msgid "# <i class=\"fas fa-box-open\"></i>&nbsp;Misc"
-msgstr "# <i class=\"fas fa-box-open\"></i>　その他"
+msgstr "# <i class=\"fas fa-box-open\"></i>&nbsp;その他"
 
 #: kyn/rigidbody2d.md
 msgid "### Collision detection"
@@ -11986,8 +11843,7 @@ msgid ""
 "By adjusting the body's `transform` using the physics state, the engine stays "
 "happy, and everything works as expected:"
 msgstr ""
-
-"# 物理状態に基づいてボディの 'transform' を調整することで、エンジンは正常に動作し続け、期待通りの結果が得られます："
+"物理状態に基づいてボディの 'transform' を調整することで、エンジンは正常に動作し続け、期待通りの結果が得られます："
 
 #: kyn/rigidbody2d.md
 msgid "Here's the code:"
@@ -12380,7 +12236,7 @@ msgstr ""
 
 #: kyn/_index.md
 msgid "# {{< gd-icon Node >}}&nbsp;Know Your Nodes"
-msgstr "# {{< gd-icon ノード >}}　ノードを知る"
+msgstr "# {{< gd-icon ノード >}}&nbsp;ノードを知る"
 
 #: kyn/_index.md
 msgid ""
@@ -12650,7 +12506,6 @@ msgstr ""
 #: ai/homing_missile.md
 msgid "![alt](/godot_recipes/4.x/img/steering_diagram.png)"
 msgstr ""
-"```text\n"
 "![alt](/godot_recipes/4.x/img/steering_diagram.png)"
 
 #: ai/homing_missile.md
@@ -12849,7 +12704,7 @@ msgstr ""
 
 #: ai/_index.md
 msgid "# <i class='fas fa-project-diagram'></i>&nbsp;AI/Behavior"
-msgstr "<i class=\"fas fa-project-diagram\"></i> 　 AI／振る舞い"
+msgstr "# <i class=\"fas fa-project-diagram\"></i>&nbsp;AI／振る舞い"
 
 #: ai/_index.md
 msgid "Automated behavior and (sometimes) smarter entities."
@@ -12879,7 +12734,7 @@ msgstr "深いヴォドゥー。クールなエフェクト。"
 
 #: shaders/_index.md
 msgid "# <i class='fas fa-draw-polygon'></i>&nbsp;Shaders"
-msgstr "# <i class='fas fa-draw-polygon'></i>　シェーダー"
+msgstr "# <i class='fas fa-draw-polygon'></i>&nbsp;シェーダー"
 
 #: physics/character_vs_rigid.md
 msgid "We'll try out both options below."
@@ -12945,7 +12800,7 @@ msgstr ""
 #: 2D/moving_platforms.md
 #: physics/character_vs_rigid.md
 msgid "- [Platform character](/godot_recipes/4.x/2d/platform_character/)"
-msgstr "* [プラットフォームキャラクタ](/godot_recipes/4.x/ja/2d/platform_character/)"
+msgstr "- [プラットフォームキャラクタ](/godot_recipes/4.x/ja/2d/platform_character/)"
 
 #: physics/character_vs_rigid.md
 msgid ""
@@ -13575,7 +13430,7 @@ msgstr "Godot の物理ノードの使い方を学びましょう。"
 
 #: physics/_index.md
 msgid "# <i class=\"fas fa-atom\"></i>&nbsp;Physics"
-msgstr "# <i class=\"fas fa-atom\"></i>　物理"
+msgstr "# <i class=\"fas fa-atom\"></i>&nbsp;物理"
 
 #: 2D/2d_align_surface.md
 msgid "<video controls src=\"/godot_recipes/4.x/img/2d_align_03.webm\"></video>"
@@ -15927,7 +15782,7 @@ msgstr ""
 
 #: 2D/_index.md
 msgid "# <i class='fas fa-shapes'></i>&nbsp;2D"
-msgstr "<i class=\"fas fa-shapes\"></i>　2D"
+msgstr "<i class=\"fas fa-shapes\"></i>&nbsp;2D"
 
 #: 2D/_index.md
 msgid "Tips, tricks, and tutorials on the 2D side of game development."
@@ -17774,12 +17629,8 @@ msgid ""
 "We can also connect the ship's `area_entered` signal so that we can detect "
 "when an enemy hits the ship:"
 msgstr ""
-
-"from pydub import AudioSegment\n"
-"\n"
-"# 音声ファイルを読み込む\n"
-"song1 = AudioSegment.from_file(\"song1.mp3\")  # 1番目の曲\n"
-"song2 = AudioSegment.from_file(\"song2.mpx\")  # 2番目の曲"
+"We can also connect the ship's `area_entered` signal so that we can detect "
+"when an enemy hits the ship:"
 
 #: games/first_2d/first_2d_09.md
 msgid ""

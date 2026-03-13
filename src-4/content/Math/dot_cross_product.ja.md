@@ -19,11 +19,11 @@ ghcommentid: 67
 
 ![alt](/godot_recipes/4.x/img/dot_cross_04.png)
 
-以下が内積を計算するための公式です：
+以下が内積を計算するための公式です。
 
 !
 
-Where `θ` is the angle between the two vectors and `||A||` is the magnitude of `A`.
+ここで`θ`は2つのベクトル間の角度、`||A||`は`A`の大きさを表します。
 
 これは両方のベクトルが正規化されている場合（つまり、その大きさがすべて`1`である場合）に特に有用です。その場合、公式は以下のように簡略化されます：
 
