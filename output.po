@@ -33,22 +33,7 @@ msgstr ""
 
 #: _index.md
 msgid "Home"
-msgstr ""
-"Loading plamo-2-translate ⠙\n"
-"Loading plamo-2-translate ⠹\n"
-"Loading plamo-2-translate ⠸\n"
-"Loading plamo-2-translate ⠼\n"
-"Loading plamo-2-translate ⠴\n"
-"Loading plamo-2-translate ⠦\n"
-"Loading plamo-2-translate ⠧\n"
-"Loading plamo-2-translate ⠇\n"
-"Loading plamo-2-translate ⠏\n"
-"Loading plamo-2-translate ⠋\n"
-"Loading plamo-2-translate ⠙\n"
-"Loading plamo-2-translate ⠹\n"
-"Loading plamo-2-translate ⠸\n"
-"Loading plamo-2-translate ⠼\n"
-"Loading plamo-2-translate ⠴"
+msgstr "ホーム"
 
 #: _index.md
 msgid ""
@@ -1238,7 +1223,7 @@ msgid ""
 "In the _Script_ tab, choose _File>New Script_. Make sure it inherits "
 "`Resource` and name it `PlayerHealth.gd`."
 msgstr ""
-"```\n"
+
 "スクリプトタブで、ファイル >新規スクリプト を選択します。「リソース」を継承するように設定し、ファイル名を \"PlayerHealth.gd\" "
 "とします。"
 
@@ -1492,7 +1477,7 @@ msgid ""
 "Godot's file I/O (input/output) system is based around the `FileAccess` "
 "object. You open a file by calling `open()`."
 msgstr ""
-"ゴドットのファイル入出力（IO）システムは `FileAccess` オブジェクトを基盤として構築されています。ファイルをオープンするには "
+"Godotのファイル入出力（IO）システムは `FileAccess` オブジェクトを基盤として構築されています。ファイルをオープンするには "
 "`open()` メソッドを呼び出す必要があります。"
 
 #: basics/file_io.md
@@ -2404,7 +2389,7 @@ msgid ""
 "sometimes easier to enter the values directly. Set all four properties in the "
 "**Patch Margin** section to `64` and change the node's name to \"Frame\"."
 msgstr ""
-"```{{< gd-icon NinePatchRect >}}NinePatchRects``` "
+
 "のプロパティを使用することで、引き伸ばした場合もフレームサイズが一定に保たれます。これらのプロパティは「テクスチャ領域」パネルでグラフィカルに定義できますが"
 "、直接数値を入力する方が簡単な場合もあります。**パッチ余白** セクションにある4つのプロパティをすべて `64` に設定し、ノード名を "
 "\"Frame\" に変更してください。"
@@ -2465,7 +2450,7 @@ msgstr ""
 "FindObjectOfType<Transform>(\"Player\")\n"
 "        @onready var map_canvas_node: CanvasGroup = "
 "GetComponentInParent<CanvasGroup>()\n"
-"```"
+
 
 #: ui/minimap.md
 msgid ""
@@ -2954,8 +2939,8 @@ msgid ""
 "icon HBoxContainer >}}`HBoxContainer` which will keep things aligned. Set the "
 "**Theme Overrides/Constants/Separation** to `5`."
 msgstr ""
-"```html\n"
-"```html"
+
+
 
 #: ui/heart_containers_3.md
 msgid "Here's an example using each of the bar modes:"
@@ -3312,7 +3297,7 @@ msgid ""
 "In `_process()` we use the `time_left` on the timer to set the label's `text` "
 "and the sweep's `value`."
 msgstr ""
-"```_process()``` メソッドでは、タイマーの `time_left` 値を使用してラベルの `text` とスイープの `value` "
+
 "を設定します。"
 
 #: ui/cooldown_button.md
@@ -3415,7 +3400,7 @@ msgid ""
 "default). We also want the bar to start out hidden, and appear if the unit "
 "loses health."
 msgstr ""
-"```python\n"
+
 "class HealthDisplay:\n"
 "    def __init__(self, unit):\n"
 "        self.unit = unit\n"
@@ -3439,7 +3424,7 @@ msgstr ""
 "    def render_health_bar(self):\n"
 "        # 健康ゲージのレンダリング処理を実装する（例：コンソールに表示）\n"
 "        print(\"Health Bar: [=======>]\", end=\"\")\n"
-"```"
+
 
 #: ui/unit_healthbar.md
 msgid ""
@@ -3563,7 +3548,7 @@ msgid ""
 "3. Assign your green, yellow, and red bar textures to the **Textures > "
 "Progress** property."
 msgstr ""
-"```python\n"
+
 "from gdscript import *\n"
 "\n"
 "class HealthDisplay(Node2D):\n"
@@ -3577,7 +3562,7 @@ msgstr ""
 "        # 3. 各色のテクスチャを設定\n"
 "        progress_bar.set_property(\"Textures > Progress\", [green_texture, "
 "yellow_texture, red_texture])\n"
-"```"
+
 
 #: ui/object_healthbars.md
 msgid "### Script (`health_display.gd`)"
@@ -3760,7 +3745,7 @@ msgid ""
 "you need to update the label dynamically, you can do so in code by using the "
 "`text` property."
 msgstr ""
-"```ruby\n"
+
 "# シーンに静的テキストのみが必要な場合、ここで完了です。\n"
 "# ただし、ラベルを動的に更新する必要がある場合は、コード内で`text`プロパティを使用して実装できます。"
 
@@ -3796,28 +3781,14 @@ msgid ""
 "For the majority of these, Godot's {{< gd-icon Label >}}`Label` node is the "
 "answer."
 msgstr ""
-"```plaintext\n"
+
 "やがて、スクリーンにテキストを表示する必要が出てくるでしょう。具体的にはタイトル表示、カウントダウンタイマー、スコアカウンターなど、他にも多くのケースがあり"
 "ます。これらのほとんどは、Godotの {{< gd-icon Label >}} `Label` ノードを使えば簡単に実装できます。"
 
 #: ui/debug_overlay.md
 msgid "We then need functions to add/remove properties from the display:"
-msgstr ""
-"Loading plamo-2-translate ⠙\n"
-"Loading plamo-2-translate ⠹\n"
-"Loading plamo-2-translate ⠸\n"
-"Loading plamo-2-translate ⠼\n"
-"Loading plamo-2-translate ⠴\n"
-"Loading plamo-2-translate ⠦\n"
-"Loading plamo-2-translate ⠧\n"
-"Loading plamo-2-translate ⠇\n"
-"Loading plamo-2-translate ⠏\n"
-"Loading plamo-2-translate ⠋\n"
-"Loading plamo-2-translate ⠙\n"
-"Loading plamo-2-translate ⠹\n"
-"Loading plamo-2-translate ⠸\n"
-"Loading plamo-2-translate ⠼\n"
-"Loading plamo-2-translate ⠴"
+msgstr "We then need functions to add/remove properties from the display:"
+
 
 #: ui/debug_overlay.md
 msgid ""
@@ -3865,7 +3836,7 @@ msgstr ""
 "\n"
 "    # 構築したコンテンツをラベルの text プロパティに設定\n"
 "    self.widget.text = label_content\n"
-"```"
+
 
 #: ui/debug_overlay.md
 msgid ""
@@ -3988,7 +3959,7 @@ msgid ""
 "control's **Mouse/Filter** property to \"Ignore\" so that it won't intercept "
 "mouse clicks."
 msgstr ""
-"```html\n"
+
 "The `Buttons` {{< gd-icon Control >}}`Control` node serves as the container "
 "where you can place any number of items as needed. Ensure you set this "
 "control's **Mouse/Filter** property to \"Ignore\" to prevent it from "
@@ -4068,7 +4039,7 @@ msgstr "!"
 msgid ""
 "In `_ready()` we start setting things up: hiding the menu buttons by default, "
 "and setting their positions to that of the main button."
-msgstr "```{_ready()}` メソッドでは、初期設定を開始します。デフォルトでメニューボタンを非表示にし、メインボタンと同じ位置に配置します。"
+msgstr 
 
 #: ui/radial_menu.md
 msgid ""
@@ -4342,7 +4313,7 @@ msgstr "ユーザーインターフェースを構築中です。"
 
 #: ui/_index.md
 msgid "UI"
-msgstr "Uírási felület"
+msgstr "UI"
 
 #: ui/_index.md
 msgid "# <i class='far fa-window-maximize'></i>&nbsp;UI"
@@ -4376,7 +4347,7 @@ msgid ""
 "small value for the minimum keeps the camera from clipping into the ground. "
 "Feel free to experiment with other values."
 msgstr ""
-"```\n"
+
 "`-1.4` "
 "の値を指定すると、カメラをほぼ90度上向きにしつつ、最小角度を非常に小さく設定することで地面へのクリップを防止します。他の値も自由に試してみてください。"
 
@@ -4835,7 +4806,7 @@ msgstr ""
 "\n"
 "    if keyboard.is_pressed('k'):\n"
 "        print(\"Keyboard 'K' pressed!\")\n"
-"```"
+
 
 #: 3D/shooting_raycasts.md
 msgid ""
@@ -4886,7 +4857,7 @@ msgid ""
 "To display what we've hit, add a {{< gd-icon CanvasLayer >}}`CanvasLayer` "
 "with a {{< gd-icon Label >}}`Label` node to the `FPSPlayer` scene."
 msgstr ""
-"```text\n"
+
 "ヒットした内容を確認するには、`FPSPlayer`シーンに{{<  gd-icon CanvasLayer "
 ">}}`CanvasLayer`ノードと{{<  gd-icon Label >}}`Label`ノードを追加してください。"
 
@@ -5546,7 +5517,7 @@ msgid ""
 "flies from the tank's cannon, giving it a nice arc effect. If you'd rather "
 "your projectiles move in a straight line, you can remove the line that "
 "applies it in `_physics_process()`."
-msgstr "```"
+msgstr 
 
 #: 3D/3d_shooting.md
 msgid ""
@@ -5652,7 +5623,7 @@ msgid ""
 "Using `look_at()` each frame turns the bullet to point in its direction of "
 "travel."
 msgstr ""
-"```python\n"
+
 "from pyglet import math as mp\n"
 "\n"
 "class CameraController:\n"
@@ -5680,7 +5651,7 @@ msgstr ""
 "        # 各フレームで弾丸の方向を更新\n"
 "        frame_position = self.calculate_frame_position()\n"
 "        self.update_frame_position(frame_position)\n"
-"```"
+
 
 #: 3D/3d_shooting.md
 msgid "![alt](/godot_recipes/3.x/img/3d_shoot_01.png)"
@@ -5835,11 +5806,11 @@ msgid ""
 "`move_and_slide()`. We pass the `velocity` and a direction vector of `(0, 1)` "
 "for the `up_direction` parameter."
 msgstr ""
-"```python\n"
+
 "# "
 "このコードでは、重力による下方向への加速度を現在速度に加算し、ユーザー入力を取得し（詳細は後述）、move_and_slide()関数を呼び出しています。こ"
 "の時、velocity変数と上方向を示すベクトル(0, 1)をup_directionパラメータとして渡しています。\n"
-"```"
+
 
 #: 3D/characterbody3d_examples.md 3D/kinematic_body.md
 msgid ""
@@ -5951,7 +5922,7 @@ msgid ""
 "Using the `KinematicBody.move_and_slide()` method makes our movement code "
 "quite simple:"
 msgstr ""
-"```python\n"
+
 "# 移動とスライド処理の実装例\n"
 "def move_character():\n"
 "    velocity = Vector2(0, 0)  # 初期速度は停止状態\n"
@@ -5978,7 +5949,7 @@ msgstr ""
 "        if move_result != KinematicBody.SLIDER_HIT:\n"
 "            "
 "character.physics_body.apply_central_impulse_at_local_origin(Vector2())\n"
-"```"
+
 
 #: 3D/kinematic_body.md
 msgid "![alt](/godot_recipes/3.x/img/3d_kinematic_01.png)"
@@ -6251,7 +6222,7 @@ msgid ""
 "to call `force_raycast_update()` before checking.\n"
 "{{% /notice %}}"
 msgstr ""
-"```php\n"
+
 "{{% notice note %}}\n"
 "以下の方法も使用可能です：{{< gd-icon RayCast3D "
 ">}}`RayCast3D`ノードを使用する場合。ただし、チェックを実行する前に必ず`force_raycast_update()`を呼び出すようにしてくだ"
@@ -6280,11 +6251,11 @@ msgid ""
 "in your game. For this recipe, we're only concerned with the movement.\n"
 "{{% /notice %}}"
 msgstr ""
-"```gd-icon RigidBody3D >}} 「RigidBody3D」、 {{< gd-icon CharacterBody3D >}} "
+
 "「CharacterBody3D」、または {{< gd-icon Area3D >}} "
 "「Area3D」を衝突ノードとして使用できます。ただし、移動制御の方法には若干の違いが生じます。どのノードを選択するかは、ゲームで他にどのような挙動を必要と"
 "するかによって決めるべきです。このレシピでは、単に動きに焦点を当てています。\n"
-"```gd-icon /notice >}}"
+
 
 #: 3D/rolling_cube.md
 msgid ""
@@ -6773,13 +6744,13 @@ msgid ""
 "of the vector's components is the largest. Since they can be positive or "
 "negative, we'll use `abs()` first."
 msgstr ""
-"```python\n"
+
 "import numpy as np\n"
 "\n"
 "def find_max_vector_component(vector):\n"
 "    return max(map(np.abs, vector)), "
 "\"最大成分の絶対値\"\n"
-"```\n"
+
 "この関数はベクトルの各成分を絶対値に変換した上で最大のものを返します。"
 
 #: 3D/move_with_camera.md
@@ -6880,7 +6851,7 @@ msgid ""
 "Fortunately, {{< gd-icon Camera3D >}}`Camera` can do this for us using its "
 "`unproject_position()` method."
 msgstr ""
-"```javascript\n"
+
 "const camera = new "
 "Camera();\n"
 "camera.updateMatrixWorld();\n"
@@ -6889,7 +6860,7 @@ msgstr ""
 "    rotation: [30, 45],\n"
 "    scale: { x: 0.5, z: 0.8 }\n"
 "});\n"
-"```"
+
 
 #: 2D/moving_platforms.md 3D/debug_overlay.md
 msgid "### Setting up"
@@ -6906,11 +6877,11 @@ msgid ""
 "reference to the {{< gd-icon Camera3D >}}`Camera` node. More about how we'll "
 "add those references later."
 msgstr ""
-"```python\n"
+
 "# 例：描画制御ノードがプレイヤーノードを参照しており、その速度ベクトルを描画したいとします\n"
 "# また、カメラノード｛{< gd-icon Camera3D >}｝も参照しています\n"
 "# これらの参照方法については後ほど詳しく説明します\n"
-"```"
+
 
 #: 3D/debug_overlay.md
 msgid ""
@@ -6950,7 +6921,7 @@ msgid ""
 "we want to draw. `draw_triangle()` is there to give us a nice pointed arrow "
 "appearance."
 msgstr ""
-"```python\n"
+
 "def unproject_position(camera, world_position):\n"
 "    # カメラ座標系にワールド座標を変換する関数を実装してください\n"
 "    pass\n"
@@ -6960,7 +6931,7 @@ msgstr ""
 "end_vector)\n"
 "\n"
 "draw_triangle(start_point, mid_point, end_point, color=color)\n"
-"```"
+
 
 #: 3D/debug_overlay.md
 msgid "![alt](/godot_recipes/3.x/img/3d_debug_01.png)"
@@ -7273,7 +7244,7 @@ msgid ""
 ">}}`MeshInstance3D` in the plane scene (in the example, this is "
 "`$cartoon_plane`)."
 msgstr ""
-"```\n"
+
 "mesh は、平面シーン内の {{< gd-icon MeshInstance3D >}}`MeshInstance3D` "
 "オブジェクトへの参照です（例では `$cartoon_plane`）。"
 
@@ -7610,7 +7581,7 @@ msgid ""
 "uncheck the tree's **Active** property while doing so.\n"
 "{{% /notice %}}"
 msgstr ""
-"```\n"
+
 "{{% notice style=\"note\" title=\"\" %}}\n"
 "{{< gd-icon AnimationTree >}} 「AnimationTree」がアクティブになっていると、 {{< gd-icon "
 "AnimationPlayer >}} "
@@ -8074,7 +8045,7 @@ msgid ""
 "on the `Scene Root` and on the right set the **Root Type** to {{< gd-icon "
 "CharacterBody3D >}}`CharacterBody3D`."
 msgstr ""
-"```\n"
+
 "プレイヤーが "
 "`CharacterBody3D`としてコード化されるため、ここでノードタイプを指定できます。`シーンルート`をクリックし、右側のパネルで**ルートタイプ*"
 "*を `CharacterBody3D`に設定してください。"
@@ -8121,7 +8092,7 @@ msgid ""
 "details.\n"
 "{{% /notice %}}"
 msgstr ""
-"```\n"
+
 "{{% notice style=\"info\" title=\"衝突形状の自動化設定\" "
 "%}}\n"
 "上記と同様に、衝突形状についてもインポート時の補助機能が用意されています。Blenderプロジェクトファイルに`-"
@@ -8398,7 +8369,7 @@ msgid ""
 "reminder, we're using the art packs linked in the [section "
 "description](/godot_recipes/4.x/3d/assets/)."
 msgstr ""
-"```\n"
+
 "このレシピでは、既にキャラクターモデルとアニメーションをインポートしており、アニメーションの遷移やブレンド処理用に {{< gd-icon "
 "AnimationTree >}}`AnimationTree` "
 "が適切に設定されていることを前提に進めます。まだ準備ができていない場合は、[アセットのインポート方法](/4.x/3d/assets/importing_a"
@@ -8489,7 +8460,7 @@ msgid ""
 ">}}`CollisionShape3D` child and choose {{< gd-icon CapsuleShape3D "
 ">}}`CapsuleShape3D` as its **Shape** property."
 msgstr ""
-"```\n"
+
 "インポートしたシーンのルートノードとして `CharacterBody3D` "
 "を選択しましたが、衝突形状が欠けているとエラーが出ています。まずはこれを修正しましょう。以下の手順に従ってください：\n"
 "\n"
@@ -8557,7 +8528,7 @@ msgid ""
 "objects: player, environment, enemies, etc.\n"
 "{{% /notice %}}"
 msgstr ""
-"````\n"
+
 "{{% notice style=\"info\" title=\"衝突レイヤーの整理\" "
 "%}}\n"
 "最終的には、プレイヤーオブジェクト、環境要素、敵キャラクターなど、さまざまなゲームオブジェクトに対する衝突レイヤーを適切に管理する必要があります：\n"
@@ -8657,7 +8628,7 @@ msgid ""
 "gd-icon Skeleton3D >}}`Skeleton3D` node and set its **Y** **Rotation** to "
 "`180` to correct this."
 msgstr ""
-"```json\n"
+
 "\"If you're familiar with Godot's 3D orientation, you'll also notice that the "
 "character is facing the **+Z** direction, which is backwards. Select the {{< "
 "gd-icon Skeleton3D >}}`Skeleton3D` node and set its **Y** Rotation to `180` "
@@ -8910,11 +8881,11 @@ msgid ""
 "from coming off slopes (if your track has them). We're also using the car's "
 "local down vector as the snap - again, to handle slopes correctly."
 msgstr ""
-"```python\n"
+
 "# 車が斜面から滑り落ちるのを防ぐ `move_and_slide_with_snap()` "
 "を使用している点に注意してください（トラックに坂道がある場合）。スナップ基準には車のローカル下方向ベクトルを使用しています。これも正しく坂道を処理するためで"
 "す。\n"
-"```"
+
 
 #: 3D/kinematic_car/car_base.md
 msgid ""
@@ -8936,7 +8907,7 @@ msgid ""
 "that recipe before proceeding with this one.\n"
 "{{% /notice %}}"
 msgstr ""
-"```markdown\n"
+
 "{{% notice note "
 "%}}\n"
 "3D環境においても、車両は基本的に地面に留まる性質があります。このため、移動処理の多くは実質的に2Dと同様の扱いが可能です。車の動作コードの大部分は、[2D"
@@ -9100,7 +9071,7 @@ msgid ""
 ">}}`BoxShape` for the car's body, and a {{< gd-icon CylinderShape3D "
 ">}}`CylinderShape` for each of the front and rear axles."
 msgstr ""
-"````\n"
+
 "{{< gd-icon KinematicBody3D >}} "
 "`KinematicBody`コンポーネントには衝突形状の未定義に関する警告が表示されています。まずはこの問題を解決する必要があります。具体的には以下の3つ"
 "の {{< gd-icon CollisionShape3D >}} を追加します：車両本体用の {{< gd-icon BoxShape3D >}} "
@@ -9118,7 +9089,7 @@ msgid ""
 "Olij](https://youtu.be/B5vE-nNszxA).\n"
 "{{% /notice %}}"
 msgstr ""
-"```\n"
+
 "{{% notice info %}}\n"
 "VehicleBody3D`車両ボディ`の操作方法について詳しく知りたい方には、[Bastiaan "
 "Olij氏によるこのシリーズ動画](https://youtu.be/B5vE-nNszxA)を強くお勧めします。\n"
@@ -9648,7 +9619,7 @@ msgstr "をこれに："
 msgid ""
 "`slip_speed` is how fast the car needs to be going before losing traction. "
 "You'll need to adjust this based on the car's other parameters."
-msgstr "````slip_speed` は、トラクションを失う前に車が維持すべき速度です。他の車両パラメータを考慮して適切に調整する必要があります。"
+msgstr 
 
 #: input/multi_unit_select.md
 msgid ""
@@ -10377,7 +10348,7 @@ msgid ""
 "let it access the existing animations, click \"Assign\" in the _Anim Player_ "
 "property and select your animation node."
 msgstr ""
-"```{{< gd-icon AnimationTree >}}AnimationTree``` は、{{< gd-icon "
+
 "AnimationPlayer "
 ">}}`AnimationPlayer`で作成されたアニメーションを制御するノードです。既存のアニメーションにアクセスさせるには、_Anim "
 "Player_ プロパティ内の「割り当て」ボタンをクリックし、使用するアニメーションノードを選択してください。"
@@ -10723,7 +10694,7 @@ msgid ""
 "order for this activation to be in sync with the animation, we'll use the "
 "AnimationPlayer to control it."
 msgstr ""
-"```gd-icon "
+
 "Area2D``Area2D`を使用して剣がターゲットに命中したことを検出できますが、実際に有効化する必要があるのはスイング動作中のみです。アニメーションと"
 "同期させるためには、この活性化をAnimationPlayerで制御します。"
 
@@ -10773,7 +10744,7 @@ msgid ""
 "that any body that can take damage has an {{< gd-icon Area2D >}}`Area2D` "
 "defined and placed in a group called \"hurtbox\"."
 msgstr ""
-"```gdl\n"
+
 "Now connect this new area's `area_entered` signal (or, depending on your game "
 "setup, `body_entered`). For simplicity in this demo, let's assume any body "
 "capable of taking damage has properly defined {{< gd-icon Area2D >}}`Area2D` "
@@ -10948,7 +10919,7 @@ msgstr "* [ゲームチュートリアル／初めての2Dゲーム開発](/godo
 
 #: g101/_index.md
 msgid "Godot 101"
-msgstr "ゴッドトット 基礎編"
+msgstr "はじめてのGodot"
 
 #: g101/3d/101_3d_03.md
 msgid "Creating a 3D Character"
@@ -11288,7 +11259,7 @@ msgid ""
 "add a `StandardMaterial3D` to the mesh and set its **Albedo/Color** property "
 "to change the color."
 msgstr ""
-"```\n"
+
 "メッシュインスタンス3D用のカプセル型{{< gd-icon MeshInstance3D "
 ">}}`MeshInstance3D`と、それに対応させた衝突形状{{< gd-icon CollionShape3D "
 ">}}`CollionShape3D`を追加します。また、メッシュに`StandardMaterial3D`を追加して**アルベド/カラー**プロパティを設"
@@ -11396,13 +11367,13 @@ msgid ""
 "rotate by `0.002` radians (or about `0.1` degrees).\n"
 "{{% /notice %}}"
 msgstr ""
-"```php\n"
+
 "{{% notice note %}}\n"
 "'mouse_sensitivity' "
 "の値は、マウスの移動距離（ピクセル単位）を角度回転に変換します。つまり、マウスが1ピクセル移動するごとに、`0.002`ラジアン（約`0.1`度）だけ回転し"
 "ます。\n"
 "{{% /notice %}}\n"
-"```"
+
 
 #: g101/3d/101_3d_07.md
 msgid ""
@@ -11433,7 +11404,7 @@ msgid ""
 "just above the bottom of the capsule. We'll still have the round bottom to "
 "move over things, but the box will keep us from sliding off ledges."
 msgstr ""
-"```yaml\n"
+
 "「CapsuleShape」を使用する際の問題点は、底面が丸みを帯びている点です。これは小さな障害物を自然に乗り越える際には便利ですが、同時に、プレイヤーが"
 "表面の縁に立った場合に「不自然に転がり落ちる」という問題を引き起こします。この問題を解決するには、衝突判定用に｢BoxShape｣を使用することが有効です。"
 "ボックスの範囲は`(0.4, 0.1, "
@@ -11458,7 +11429,7 @@ msgid ""
 "this work, add a `Spatial` node, which we'll call \"Pivot\", and add the "
 "`Camera` to that."
 msgstr ""
-"```plain\n"
+
 "まずは `KinematicBody` から始めましょう。これに2つの `CollisionShape` "
 "ノード(\"ボディ\"と\"足\")を追加します。また、`カメラ`も必要ですが、回転処理には注意が必要です。この*キャラクター*は**Y軸**方向にのみ回転"
 "させるべきで、一方でカメラ自体は上下を見渡すために**X軸**方向だけに回転するようにしなければなりません。これを実現するため、「ピボット」という名前の "
@@ -11497,10 +11468,10 @@ msgid ""
 "`move_and_slide()`. This keeps us from sliding down the ramp if we stand on "
 "it."
 msgstr ""
-"```ruby\n"
+
 "# 「move_and_slide()」の「stop_on_slope」パラメータにも「true」を設定しています。\n"
 "# これにより、スロープに立っても滑り落ちるのを防ぎます。\n"
-"```"
+
 
 #: g101/3d/101_3d_07.md
 msgid "![alt](/godot_recipes/3.x/img/3d_07_01.png)"
@@ -11516,7 +11487,7 @@ msgid ""
 "from the art pack. You'll notice that the model is too small for our player's "
 "scale, so set _Scale_ to `(8, 8, 8)`."
 msgstr ""
-"```meshinstanceノードに「ピボット」ノードを追加し、アートパックに含まれる「shotgun.obj」モデルを使用します。モデルがプレイヤーのス"
+
 "ケールに対して小さすぎることに気付いたら、［スケール］を（8, 8, 8）に設定してください。"
 
 #: g101/3d/101_3d_06.md
@@ -11695,7 +11666,7 @@ msgid ""
 "resemble\n"
 "a door. You can also use a cylinder shape to get an arched portal."
 msgstr ""
-"```python\n"
+
 "# 追加した CSGBox を子要素として設定し、演算モードを「減算」に設定\n"
 "csgbox_add_sub()\n"
 "\n"
@@ -11704,7 +11675,7 @@ msgstr ""
 "\n"
 "# アーチ状のポータルを作成する場合は円筒形を使用することもできます\n"
 "use_cylinder_for_arched_portal()\n"
-"```"
+
 
 #: g101/3d/101_3d_06.md
 msgid ""
@@ -11757,7 +11728,7 @@ msgid ""
 "mouse. You'll need to copy that code over to this scene as well.\n"
 "{{% /notice %}}"
 msgstr ""
-"```\n"
+
 "{{% notice tip "
 "%}}\n"
 "前のパートでは、マウスカーソルをキャプチャ／リリースするコードを追加しましたね。このシーンにも同じコードをコピーする必要があることを覚えておいてください。"
@@ -13460,7 +13431,7 @@ msgstr ""
 "if __name__ == \"__main__\":\n"
 "    game = CoinGame()\n"
 "    game.run()\n"
-"```"
+
 
 #: g101/3d/101_3d_04.md
 msgid "### Bullets"
@@ -13473,7 +13444,7 @@ msgid ""
 "or exits a region. An {{< gd-icon Area3D >}}`Area3D` can also be used to "
 "override physics properties, such as gravity or damping, in a region."
 msgstr ""
-"```\n"
+
 "{{< gd-icon Area3D >}} `Area3D` ノードは主に以下の目的で使用されます：_検出_ と "
 "_影響操作_。オブジェクト同士の重なりを検知したり、特定領域への進入・退出イベントをトリガーすることができます。また、`Area3D` "
 "は物理特性（重力や減衰など）を領域内で上書きするためにも利用可能です。"
@@ -14101,7 +14072,7 @@ msgstr "## <i class='fas fa-scroll'></i>&nbsp;GDScript"
 
 #: g101/gdscript/_index.md
 msgid "Introduction to GDScript"
-msgstr "GDスクリプト入門"
+msgstr "GDScript入門"
 
 #: g101/start/101_01.md
 msgid "What is Godot?"
@@ -14118,7 +14089,7 @@ msgid ""
 "task of writing one."
 msgstr ""
 "正確で実用的な物理エンジンを開発するのは途方もなく困難な作業だ。ほとんどのゲームでは何らかの衝突検出と応答処理が必要であり、さらに多くのタイトルが摩擦や慣性"
-"などのシミュレーションされた物理学機能を要求する。しかし、実際にそのようなシステムを自ら実装しようとする開発者はごくわずかだ。"
+"などのシミュレーションされた物理機能を要求する。しかし、実際にそのようなシステムを自ら実装しようとする開発者はごくわずかだ。"
 
 #: g101/start/101_01.md
 msgid ""
@@ -14277,7 +14248,7 @@ msgstr ""
 
 #: g101/start/101_01.md
 msgid "* Physics"
-msgstr "* 物理学"
+msgstr "* 物理"
 
 #: g101/start/101_01.md
 msgid ""
@@ -14317,11 +14288,11 @@ msgid ""
 "flexibility to use a combination of GDScript and C# where you need them."
 msgstr ""
 "* "
-"GDスクリプトはGodot専用に設計された組み込み言語で、エンジンとの統合性が最も高く、最も直感的に扱えます。当サイトで紹介する全サンプルコードはこのGDス"
-"クリプトを使用しています。大半のプロジェクトにおいて、GDスクリプトは最も適したプログラミング言語です。Godotのアプリケーション・プログラミング・インタ"
+"GDScriptはGodot専用に設計された組み込み言語で、エンジンとの統合性が最も高く、最も直感的に扱えます。当サイトで紹介する全サンプルコードはこのGDス"
+"クリプトを使用しています。大半のプロジェクトにおいて、GDScriptは最も適したプログラミング言語です。Godotのアプリケーション・プログラミング・インタ"
 "ーフェース（API）と緊密に連携するよう設計されており、迅速な開発が可能という特徴があります。\n"
 "* "
-"C#は、既にGodotの仕組みを十分理解している上級者向け、または特定のニーズがある場合にのみ使用するべきです。そのような方には、必要に応じてGDスクリプト"
+"C#は、既にGodotの仕組みを十分理解している上級者向け、または特定のニーズがある場合にのみ使用するべきです。そのような方には、必要に応じてGDScript"
 "とC#を使い分けられる柔軟性がGodotには備わっています。"
 
 #: g101/start/101_04.md
@@ -14356,7 +14327,7 @@ msgstr "このようにゲームオブジェクトを整理すると、以下の
 
 #: g101/start/101_04.md
 msgid "## Scripting in Godot"
-msgstr "## ゴートドにおけるスクリプティング"
+msgstr "## Godot におけるスクリプティング"
 
 #: g101/start/101_04.md
 msgid "Scenes and Scripts"
@@ -14407,7 +14378,7 @@ msgid ""
 "the previous section is called **Scene**. In this tab is where you add the "
 "nodes that you wish to use to build your scene."
 msgstr ""
-"```diff\n"
+
 "前回のセクションで `Sprite2D` を追加したタブの名前が **シーン** "
 "であることに注目してください。このタブでは、シーンを構築するために使用するノードを追加する場所です。"
 
@@ -14489,7 +14460,7 @@ msgstr ""
 
 #: g101/start/101_03.md
 msgid "Nodes: Godot"
-msgstr "节点：Godot"
+msgstr "Godotノード"
 
 #: g101/start/101_03.md
 msgid ""
@@ -14903,7 +14874,7 @@ msgid ""
 "sprite up to five times its starting size while fading it out (using "
 "`modulate.a`) over two seconds:"
 msgstr ""
-"```javascript\n"
+
 "const elapsedTime = Time.deltaTime;\n"
 "const duration = 0.5; // 2秒のアニメーション期間\n"
 "\n"
@@ -14921,7 +14892,7 @@ msgstr ""
 "\n"
 "// 2秒間かけてスプライトを5倍に拡大しながら徐々に透明化\n"
 "lerpScaleAndFade(\"MySprite\", 1.0, 5.0);\n"
-"```"
+
 
 #: Math/interpolation.md
 msgid ""
@@ -15609,7 +15580,7 @@ msgid ""
 "forget to convert them to strings! For example, to update a label with a "
 "given numerical value:"
 msgstr ""
-"```text\n"
+
 "* `text` - "
 "このプロパティはラベルの表示内容を決定します。コード内で変更することで、ラベルに表示させる内容を更新できます。数値を表示する場合は、必ず文字列に変換してくだ"
 "さい！例えば、指定された数値値でラベルを更新する場合："
@@ -15622,7 +15593,7 @@ msgid ""
 "movement styles. Below, each icon's `position` is tweened over the same range "
 "and timeframe:"
 msgstr ""
-"```\n"
+
 "The 'trans_type' parameter allows you to select which *transition type* you "
 "want to use in your interpolation. This specifies the mathematical formula "
 "used to calculate property values for each frame. Different types produce "
@@ -15794,7 +15765,7 @@ msgid ""
 "to use each object's `y` coordinate. Lower values of `y` (ie higher on the "
 "screen) get rendered first."
 msgstr ""
-"```{{< gd-icon YSort >}}YSort``` ノードは、子要素の描画順序を変更し、各オブジェクトの "
+"{{< gd-icon YSort >}}`YSort` ノードは、子要素の描画順序を変更し、各オブジェクトの "
 "`y`座標に基づいて並べ替えます。`y`値が小さいもの（画面上で上部に位置するもの）から順にレンダリングされます。"
 
 #: kyn/kinematicbody2d.md
@@ -15855,7 +15826,6 @@ msgid ""
 "* `rotate` - this boolean determines whether the node should rotate as it "
 "moves along the path."
 msgstr ""
-"```shell\n"
 "* `rotate` - このブール値により、ノードが経路に沿って移動する際に回転するかどうかを制御します。"
 
 #: kyn/path2d.md
@@ -15926,7 +15896,6 @@ msgid ""
 "that allows you to position a path in 2D space, and do create a new path in "
 "the editor."
 msgstr ""
-"```text\n"
 "*パス* とは 2D 空間における点の連続であり、{{< gd-icon Curve2D >}}`Curve2D` リソースによって定義されます。{{< "
 "gd-icon Path2D >}}`Path2D` ノードを使用すると、2D 空間でパスを配置できるほか、エディタ内で新規パスを作成することも可能です。"
 
@@ -16072,7 +16041,7 @@ msgid ""
 "Documentation](https://docs.godotengine.org/en/stable/classes/class_curve2d.ht"
 "ml) contains the details, but here are a few useful methods that you may want "
 "to use:"
-msgstr "```"
+msgstr ""
 
 #: kyn/path2d.md
 msgid ""
@@ -16080,11 +16049,9 @@ msgid ""
 "the {{< gd-icon PathFollow2D >}}`PathFollow2D` and adding the following to "
 "`_process()`:"
 msgstr ""
-"```python\n"
-"import Pyxel\n"
-"\n"
-"pyx.bg0 = pyx.color(255, 0, 0)  # 背景色を赤色に設定\n"
-"```"
+"This is done by making the plane {{< gd-icon Sprite2D >}}`Sprite` a child of "
+"the {{< gd-icon PathFollow2D >}}`PathFollow2D` and adding the following to "
+"`_process()`:"
 
 #: kyn/path2d.md
 msgid ""
@@ -16098,7 +16065,6 @@ msgid ""
 "> Physics properties, or by entering an {{< gd-icon Area2D >}}`Area2D` that "
 "is overriding the global physics properties."
 msgstr ""
-"```javascript\n"
 "// プロジェクト設定 > 物理プロパティ経由、またはグローバル物理特性を上書きする {{< gd-icon Area2D >}}`Area2D` "
 "に進入することで、オブジェクトの動作は世界からも影響を受けます。"
 
@@ -16671,21 +16637,10 @@ msgid ""
 "into a corner). For this situation, there is `get_slide_collision_count()` "
 "and `get_slide_collision()`."
 msgstr ""
-"```python\n"
-"class GameObject:\n"
-"    def __init__(self, position, velocity):\n"
-"        ...\n"
-"\n"
-"    def move_and_slide(self, dt, friction):\n"
-"        # ... 実装コードは省略 ...\n"
-"\n"
-"        if self.has_collided():\n"
-"            collision_count = get_slide_collision_count()\n"
-"            for _ in range(collision_count):\n"
-"                collision_details = get_slide_collision()\n"
-"                print(\"Collision detected with details:\", "
-"collision_details)\n"
-"```"
+"When using `move_and_slide()`, it's a little trickier, as it's possible to "
+"have multiple collisions occur in a single frame (for example when moving "
+"into a corner). For this situation, there is `get_slide_collision_count()` "
+"and `get_slide_collision()`."
 
 #: kyn/characterbody2d.md
 msgid "* `Floating`"
@@ -17276,16 +17231,9 @@ msgid ""
 "follow. We then get the `FollowPoint` node from that so we can get its "
 "position in `_physics_process()`:"
 msgstr ""
-"```lua\n"
-"local FollowPoint = GetNode(\"follow_point\") -- フォローポイントノードを取得\n"
-"if FollowPoint and not FollowPoint.isLocked then -- ロック状態でないことを確認\n"
-"    _speed = _speed * 0.9  -- 移動速度を徐々に減速\n"
-"\n"
-"    local dx, dy = FollowPoint:GetLocalRelativePos() - MovePosition\n"
-"    MoveSpeedX, MoveSpeedY = math.max(math.abs(dx), math.abs(dy)) * MAX_SPEED "
-"/ 20 -- 移動速度を調整\n"
-"end\n"
-"```"
+"The `parent` variable holds a reference to the character the pet should "
+"follow. We then get the `FollowPoint` node from that so we can get its "
+"position in `_physics_process()`:"
 
 #: ai/pet_following.md
 msgid "### Navigating obstacles"
@@ -17333,11 +17281,8 @@ msgid ""
 "interest, but if an obstacle cancels them out, the lower scoring goals will "
 "win."
 msgstr ""
-"```python\n"
-"# "
 "エージェントの目標によって異なります。プレイヤーを追跡することが目的なら、`interest`値はプレイヤー方向へ高く設定すべきです。複数のターゲットを設定"
 "することも可能で、近接する目標ほど関心度が高くなりますが、障害物によって無効化された場合はスコアの低い方が優先されます。\n"
-"```\n"
 "\n"
 "# 追加説明:\n"
 "- `goal_positions`: 各ターゲットの位置ベクトルを含むリストまたは配列。\n"
@@ -17526,26 +17471,10 @@ msgid ""
 "are also contained in `danger`. By summing up the remaining `interest` "
 "directions, we're left with a new direction pointing away from the obstacle."
 msgstr ""
-"Loading plamo-2-translate ⠙\n"
-"Loading plamo-2-translate ⠹\n"
-"Loading plamo-2-translate ⠸\n"
-"Loading plamo-2-translate ⠼\n"
-"Loading plamo-2-translate ⠴\n"
-"Loading plamo-2-translate ⠦\n"
-"Loading plamo-2-translate ⠧\n"
-"Loading plamo-2-translate ⠇\n"
-"Loading plamo-2-translate ⠏\n"
-"Loading plamo-2-translate ⠋\n"
-"Loading plamo-2-translate ⠙\n"
-"Loading plamo-2-translate ⠹\n"
-"Loading plamo-2-translate ⠸\n"
-"Loading plamo-2-translate ⠼\n"
-"Loading plamo-2-translate ⠴\n"
-"Loading plamo-2-translate ⠦\n"
-"Loading plamo-2-translate "
-"⠧\n"
-"これら2つの配列を組み合わせることで、「危険」方向にも含まれるあらゆる「興味」方向を排除できます。残った「興味」方向をすべて加算すると、障害物から遠ざかる新"
-"たな方向が得られます。"
+"Combining these two arrays, we can eliminate any `interest` directions that "
+"are also contained in `danger`. By summing up the remaining `interest` "
+"directions, we're left with a new direction pointing away from the obstacle."
+
 
 #: ai/context_map.md
 msgid ""
@@ -17582,23 +17511,7 @@ msgstr "![alt](/godot_recipes/3.x/img/ai_context_07.png)"
 
 #: ai/context_map.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_01.png)"
-msgstr ""
-"Loading plamo-2-translate ⠙\n"
-"Loading plamo-2-translate ⠹\n"
-"Loading plamo-2-translate ⠸\n"
-"Loading plamo-2-translate ⠼\n"
-"Loading plamo-2-translate ⠴\n"
-"Loading plamo-2-translate ⠦\n"
-"Loading plamo-2-translate ⠧\n"
-"Loading plamo-2-translate ⠇\n"
-"Loading plamo-2-translate ⠏\n"
-"Loading plamo-2-translate ⠋\n"
-"Loading plamo-2-translate ⠙\n"
-"Loading plamo-2-translate ⠹\n"
-"Loading plamo-2-translate ⠸\n"
-"Loading plamo-2-translate ⠼\n"
-"Loading plamo-2-translate ⠴\n"
-"Loading plamo-2-translate ⠦"
+msgstr "![alt](/godot_recipes/3.x/img/ai_context_01.png)"
 
 #: ai/context_map.md
 msgid "### The Code"
@@ -17820,30 +17733,8 @@ msgstr "# <i class=\"fas fa-project-diagram\"></i>&nbsp;AI／振る舞い"
 
 #: shaders/blur.md
 msgid "<video controls src='/godot_recipes/3.x/img/blur_shader3.webm'></video>"
-msgstr ""
-"Loading plamo-2-translate ⠙\n"
-"Loading plamo-2-translate ⠹\n"
-"Loading plamo-2-translate ⠸\n"
-"Loading plamo-2-translate ⠼\n"
-"Loading plamo-2-translate ⠴\n"
-"Loading plamo-2-translate ⠦\n"
-"Loading plamo-2-translate ⠧\n"
-"Loading plamo-2-translate ⠇\n"
-"Loading plamo-2-translate ⠏\n"
-"Loading plamo-2-translate ⠋\n"
-"Loading plamo-2-translate ⠙\n"
-"Loading plamo-2-translate ⠹\n"
-"Loading plamo-2-translate ⠸\n"
-"Loading plamo-2-translate ⠼\n"
-"Loading plamo-2-translate ⠴\n"
-"Loading plamo-2-translate ⠦\n"
-"Loading plamo-2-translate ⠧\n"
-"Loading plamo-2-translate ⠇\n"
-"Loading plamo-2-translate ⠏\n"
-"Loading plamo-2-translate ⠋\n"
-"Loading plamo-2-translate ⠙\n"
-"Loading plamo-2-translate ⠹\n"
-"Loading plamo-2-translate ⠸"
+msgstr "<video controls src='/godot_recipes/3.x/img/blur_shader3.webm'></video>"
+
 
 #: shaders/blur.md
 msgid ""
@@ -17856,22 +17747,9 @@ msgid ""
 "- [Shaders: Intro](/godot_recipes/3.x/shaders/intro/)\n"
 "- [Interacting with Shaders](/godot_recipes/3.x/shaders/interacting/)"
 msgstr ""
-"Loading plamo-2-translate ⠙\n"
-"Loading plamo-2-translate ⠹\n"
-"Loading plamo-2-translate ⠸\n"
-"Loading plamo-2-translate ⠼\n"
-"Loading plamo-2-translate ⠴\n"
-"Loading plamo-2-translate ⠦\n"
-"Loading plamo-2-translate ⠧\n"
-"Loading plamo-2-translate ⠇\n"
-"Loading plamo-2-translate ⠏\n"
-"Loading plamo-2-translate ⠋\n"
-"Loading plamo-2-translate ⠙\n"
-"Loading plamo-2-translate ⠹\n"
-"Loading plamo-2-translate ⠸\n"
-"Loading plamo-2-translate ⠼\n"
-"Loading plamo-2-translate ⠴\n"
-"Loading plamo-2-translate ⠦"
+"- [シェーダー入門](/godot_recipes/4.x/shaders/intro/)\n"
+"- [シェーダーとの連携](/godot_recipes/4.x/shaders/interacting/)"
+
 
 #: shaders/blur.md
 msgid ""
@@ -18440,7 +18318,7 @@ msgid ""
 "velocity. This will give you a \"realistic\" result - pushing heavy bodies a "
 "little, and lighter bodies a lot."
 msgstr ""
-"1. 物理学を無視して直接押すことも可能です。Godot 3.x に慣れている方なら、これは「無限慣性」オプションと同等の機能です。\n"
+"1. 物理を無視して直接押すことも可能です。Godot 3.x に慣れている方なら、これは「無限慣性」オプションと同等の機能です。\n"
 "1. キャラクターの想定する「質量」と「速度」に基づいて押力を発揮させることもできます。これにより「リアルな」結果が得られます - "
 "重い物体は少し、軽い物体は大きく押し出されるようになります。"
 
@@ -18739,12 +18617,12 @@ msgid ""
 "rotating\n"
 "when we let go of the keys, so set the ship's `Angular -> Damp` to `5`."
 msgstr ""
-"```yaml\n"
+
 "# デフォルトでは、物理設定により物体の速度と回転運動に適度な_減衰効果が付与されます_。\n"
 "# 宇宙空間には摩擦がないため、本来はいかなる種類の減衰も適用すべきではありません。\n"
 "# しかし「スペースインベーダー」風のゲーム感を出すため、キーを離すと船が即座に停止するようにしたいので、\n"
 "# 船の`Angular -> Damp`パラメータを`5`に設定してください。\n"
-"```"
+
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -18827,14 +18705,14 @@ msgid ""
 "`screensize`\n"
 "variable will capture the size of the screen, which we'll be using later."
 msgstr ""
-"```bash\n"
+
 "このスクリプトの動作について説明しましょう。変数`engine_thrust`と`spin_thrust`は、宇宙船の加速速度と旋回性能を制御します。インス"
 "ペクターではそれぞれ500、25000に設定してください（トルク単位のため数値が大きくなります）。\n"
 "\n"
 "変数`thrust`は宇宙船のエンジン状態を示します：走行中時は(0, "
 "0)、動力がオンの場合は`engine_thrust`の長さを持つベクトルとなります。\n"
 "`rotation_dir`は宇宙船の旋回方向を表現します。`screensize`変数には画面サイズを保持し、後ほど使用します。\n"
-"```"
+
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -18911,14 +18789,14 @@ msgid ""
 "This\n"
 "function is called every frame in `_process()`."
 msgstr ""
-"```python\n"
+
 "next,\n"
 "the `input()` function captures the state of keys and enables/disables the "
 "ship's thrust,\n"
 "as well as setting the rotation direction (`rotation_dir`) to either positive "
 "or negative.\n"
 "This function is called every frame in the `_process()` method.\n"
-"```\n"
+
 "\n"
 "## Explanation:\n"
 "- **Keystates Capture**: The `input()` function reads the current key states "
@@ -19089,7 +18967,7 @@ msgid ""
 "    set_applied_force(thrust.rotated(rotation))\n"
 "    set_applied_torque(rotation_dir * spin_thrust)"
 msgstr ""
-"```python\n"
+
 "def _physics_process(delta):\n"
 "    set_applied_force(thrust.rotated(rotation))\n"
 "    set_applied_torque(rotation_dir * spin_thrust)"
@@ -19149,7 +19027,7 @@ msgid ""
 "`_physics_process()`\n"
 "is for physics-related stuff, right?"
 msgstr ""
-"```\n"
+
 "これは見事に失敗し、プレイヤーを画面の端に閉じ込めてしまう（時折グリッチも発生）。なぜこれが機能しないのでしょうか？ドキュメントには "
 "`_physics_process()` は物理関連処理用だと書いてありますよね？"
 
@@ -19222,7 +19100,7 @@ msgid ""
 "in\n"
 "the same way."
 msgstr ""
-"```\n"
+
 "Linear velocityをリセットして`(0, "
 "0)`に設定します。では、ボールを投げて動かす場合はどうすればよいでしょうか？剛性ボディの速度や位置は手動で直接設定するべきではありません - "
 "これらは「現実世界」の物理法則を再現するためのものです。現実の世界では、物体が突然別の場所へ移動したり、静止状態から高速に移動したりすることはありません。こ"
@@ -19379,7 +19257,7 @@ msgid ""
 "what surfaces should count as a \"floor\". `move_and_slide()` also contains "
 "additional parameters:"
 msgstr ""
-"```python\n"
+
 "# 追加パラメータの説明：\n"
 "# - friction: 摩擦係数（デフォルトは0.9）\n"
 "# - bounciness: 跳ね返り強度（デフォルトは1.0）\n"
@@ -19976,15 +19854,15 @@ msgid ""
 "velocity = move_and_slide(velocity)\n"
 "{{< /highlight >}}"
 msgstr ""
-"```python\n"
+
 "var collision = move_and_collide(velocity * delta)\n"
 "if (collision) {\n"
 "    velocity = velocity.slide(collision.normal)\n"
 "}\n"
-"```\n"
-"```python\n"
+
+
 "velocity = move_and_slide(velocity)\n"
-"```"
+
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -20025,7 +19903,7 @@ msgid ""
 "Try\n"
 "removing `velocity =` and see what happens if you don't do this."
 msgstr ""
-"```python\n"
+
 "def slope_transition():\n"
 "    # ... 以前のコードは同じまま ...\n"
 "\n"
@@ -20035,7 +19913,7 @@ msgstr ""
 "\n"
 "if __name__ == \"__main__\":\n"
 "    slope_transition()\n"
-"```"
+
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -20193,12 +20071,12 @@ msgid ""
 "Attach a script to the {{< gd-icon KinematicBody2D >}}`KinematicBody2D` and "
 "add the following code:"
 msgstr ""
-"```python\n"
+
 "class MyCustomBehavior(Script):\n"
 "    def update(self, scene):\n"
 "        # カスタムロジックをここに記述\n"
 "        pass\n"
-"```\n"
+
 "\n"
 "このコードを `KinematicBody2D` スクリプトに追加してください。"
 
@@ -20248,7 +20126,7 @@ msgid ""
 "using `delta`. Do _not_ multiply your velocity vector by `delta` before "
 "passing it to `move_and_slide()`."
 msgstr ""
-"```python\n"
+
 "# 翻訳例:\n"
 "> **注意:** `move_and_slide()` 関数は内部で `delta` "
 "パラメータを使用してフレームベースの移動計算を自動的に行います。速度ベクトルに手動で `delta` を掛けたものを直接渡す必要はありません。"
@@ -20279,7 +20157,7 @@ msgstr "## 衝突形状について"
 #: physics/Godot3_kinematic2d.md
 msgid "- {{< gd-icon StaticBody2D >}}`StaticBody2D`"
 msgstr ""
-"```\n"
+
 "- {{< gd-icon StaticBody2D >}} `StaticBody2D`"
 
 #: physics/Godot3_kinematic2d.md
@@ -20304,7 +20182,7 @@ msgid ""
 "href=\"http://docs.godotengine.org/en/latest/classes/class_physicsbody2d.html"
 "\" target=\"_blank\">`PhysicsBody2D`</a> type:"
 msgstr ""
-"ゴッドートでは3種類の物理ボディが提供されており、<a "
+"Godot では3種類の物理ボディが提供されており、<a "
 "href=\"http://docs.godotengine.org/en/latest/classes/class_physicsbody2d.html"
 "\" target=\"_blank\">`PhysicsBody2D`</a> タイプに分類されます："
 
@@ -20315,7 +20193,7 @@ msgid ""
 "changing the size of the collision shape, you should always use the shape's "
 "handles."
 msgstr ""
-"```json\n"
+
 "{\n"
 "  \"translations\": [\n"
 "    {\n"
@@ -20482,13 +20360,13 @@ msgid ""
 "in the common case where you want one body to slide along the other. This is "
 "especially useful in platformers or top-down games, for example."
 msgstr ""
-"```python\n"
+
 "def move_and_slide():\n"
 "    "
 "\"\"\"衝突応答を簡略化するためのメソッドで、特に2つの物体が互いに滑り合う一般的なケースに有用です。プラットフォーマーゲームやトップダウン型ゲームなど"
 "で特に便利です。\"\"\"\n"
 "    pass  # 実際の実装内容は省略\n"
-"```"
+
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -20562,7 +20440,7 @@ msgid ""
 "\t\tvelocity = move_and_slide(velocity)\n"
 "{{< /highlight >}}"
 msgstr ""
-"```lua\n"
+
 "func _physics_process(delta):\n"
 "\tget_input()\n"
 "\tvar dir = get_global_mouse_position() - global_position\n"
@@ -20606,7 +20484,7 @@ msgid ""
 "{{< gd-icon KinematicBody2D >}}`KinematicBody2D` has collided, any _collision "
 "response_ must be coded manually."
 msgstr ""
-"```gd\n"
+
 "{{< gd-icon KinematicBody2D >}} クラスの `KinematicBody2D` を移動させる際、直接 `position` "
 "プロパティを設定する方法は推奨されません。代わりに `move_and_collide()` または `move_and_slide()` "
 "メソッドを使用する必要があります。これらのメソッドは指定されたベクトルに沿ってオブジェクトを移動させ、他のボディと衝突すると即座に停止します。{{< gd-"
@@ -20640,7 +20518,7 @@ msgid ""
 "\tb.start($Muzzle.global_position, rotation)\n"
 "\tget_parent().add_child(b)"
 msgstr ""
-"```python\n"
+
 "def shoot():\n"
 "    # \"Muzzle\" は銃身の位置に設置された Position2D オブジェクトです\n"
 "    bullet = Bullet().instance()\n"
@@ -20669,11 +20547,11 @@ msgid ""
 "below,\n"
 "there are cases where `move_and_slide()` isn't the response you want."
 msgstr ""
-"```python\n"
+
 "def move_character(position, velocity):\n"
 "    # キャラクターの移動処理を実装する\n"
 "    pass\n"
-"```"
+
 
 #: physics/Godot3_kinematic2d.md
 msgid "### Movement and collision"
@@ -20764,13 +20642,13 @@ msgid ""
 "        anim = new_anim\n"
 "        $AnimationPlayer.play(anim)"
 msgstr ""
-"```python\n"
+
 "def _process(delta):\n"
 "    get_input()\n"
 "    if new_anim != anim:\n"
 "        anim = new_anim\n"
 "        $AnimationPlayer.play(anim)\n"
-"```"
+
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -20832,7 +20710,7 @@ msgid ""
 "character controller up and running. If you've downloaded the sample project, "
 "you can find this in \"Platformer.tscn\"."
 msgstr ""
-"```python\n"
+
 "import re\n"
 "\n"
 "def count_keywords(text):\n"
@@ -20884,7 +20762,7 @@ msgstr ""
 "\n"
 "print(\"\\n強調表示されたテキスト:\")\n"
 "print(highlighted_text)\n"
-"```"
+
 
 #: physics/Godot3_kinematic2d.md
 msgid "`slope_stop_min_velocity` - default value: `5`"
@@ -20922,7 +20800,7 @@ msgid ""
 "describes the layers that the object appears _in_. By default, all bodies are "
 "on layer `1`."
 msgstr ""
-"```yaml\n"
+
 "-   **`衝突レイヤー`**\n"
 "  オブジェクトが表示される物理層を定義します。デフォルトでは、すべてのボディはレイヤー `1` に配置されます。"
 
@@ -20939,7 +20817,7 @@ msgid ""
 "in one of the mask layers, the body will ignore it. By default, all bodies "
 "scan layer `1`."
 msgstr ""
-"```diff\n"
+
 " -    `collision_mask` "
 "は衝突検知対象のレイヤーを定義します。指定したマスク層に含まれないオブジェクトは、ボディによって無視されます。デフォルトでは、すべてのボディがレイヤー 1 "
 "をスキャンします。"
@@ -20998,7 +20876,7 @@ msgid ""
 "contains data about the collision and the colliding object. Using this data "
 "you can calculate your collision response."
 msgstr ""
-"```{{< gd-icon KinematicBody2D >}}`KinematicBody2D`が衝突を検知すると、Godotは<a "
+
 "href=\"http://docs.godotengine.org/en/latest/classes/class_kinematiccollision2"
 "d.html\" "
 "target=\"_blank\">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と接触"
@@ -21102,7 +20980,7 @@ msgid ""
 "ody.html#class-kinematicbody-method-move-and-slide), we see there's a "
 "parameter called `stop_on_slope`, which defaults to `false`:"
 msgstr ""
-"```python\n"
+
 "# 「[move_and_slide()] "
 "ドキュメント」(https://docs.godotengine.org/en/stable/classes/class_kinematicbody.htm"
 "l#class-kinematicbody-method-move-and-slide) を確認すると、`stop_on_slope` "
@@ -21306,7 +21184,7 @@ msgstr ""
 #: physics/joints_2d.md
 msgid "![alt](/godot_recipes/3.x/img/joints_demo.png)"
 msgstr ""
-"```text\n"
+
 "![alt](/godot_recipes/3.x/img/joints_demo.png)"
 
 #: physics/joints_2d.md
@@ -21401,14 +21279,14 @@ msgstr ""
 #: physics/kinematic_friction.md
 msgid "Replace the `get_input()` code with the following:"
 msgstr ""
-"```python\n"
+
 "def get_input():\n"
 "    try:\n"
 "        return float(input(\"Enter a value: \"))\n"
 "    except ValueError:\n"
 "        print(\"Invalid input. Please enter a valid number.\")\n"
 "        return None\n"
-"```"
+
 
 #: physics/kinematic_friction.md
 msgid ""
@@ -21417,11 +21295,11 @@ msgid ""
 "maximum, `speed`. When decelerating, we're ramping the current speed down to "
 "`0`."
 msgstr ""
-"```python\n"
+
 "# 摩擦係数と加速度をブレンド量として使用\n"
 "# 加速時には、現在速度から最大速度までの適切な値を求めます\n"
 "# 減速時には、現在速度を徐々に0へ減衰させます\n"
-"```"
+
 
 #: physics/kinematic_friction.md
 msgid "Kinematic Friction"
@@ -21596,7 +21474,7 @@ msgid ""
 "You can make a conveyor belt object using nothing but a {{< gd-icon "
 "StaticBody2D >}}`StaticBody2D` by using its `constant_linear_velocity` "
 "property."
-msgstr "```"
+msgstr 
 
 #: physics/conveyor_belt.md
 msgid ""
@@ -21605,7 +21483,7 @@ msgid ""
 "AnimationPlayer >}}`AnimationPlayer` or in code. We'll do the latter for this "
 "example:"
 msgstr ""
-"```\n"
+
 "アニメーションプレイヤーを使用するか、コードで実装するかです。ここでは後者の方法を実演します："
 
 #: physics/conveyor_belt.md
@@ -21769,7 +21647,7 @@ msgstr "# <i class=\"fas fa-atom\"></i>&nbsp;物理"
 
 #: physics/_index.md
 msgid "Physics"
-msgstr "物理学"
+msgstr "物理"
 
 #: 2D/2d_align_surface.md
 msgid "We've changed a few things here, so let's look at them carefully."
@@ -21931,7 +21809,7 @@ msgid ""
 "and a tank set up like so, with a {{< gd-icon Position2D >}}`Position2D` "
 "designating the \"muzzle\" where the bullet will be spawned:"
 msgstr ""
-"```yaml\n"
+
 "and a tank configured like this, with a `Position2D` component specifying the "
 "\"barrel\" location where bullets will spawn:"
 
@@ -21975,7 +21853,7 @@ msgid ""
 "the **Capping** options to \"Round\". We've also added a `Gradient` in the "
 "**Fill** section:"
 msgstr ""
-"```text\n"
+
 "ラインの見た目を改善するため、**幅**を「15」に設定し、すべての**角処理**オプションを「丸み」に変更しました。さらに、**塗りつぶし**セクションに"
 "グラデーションを追加しました："
 
@@ -22031,7 +21909,7 @@ msgid ""
 "this example). We then iterate through those points, moving the position each "
 "\"step\" by the same amount the bullet will move during one frame."
 msgstr ""
-"```python\n"
+
 "`max_points`でラインに追加するポイント数の上限を設定します。`update_trajectory()`関数では、タンクから弾丸の初期位置と速度を"
 "取得します（この例では重力もタンク内で定義されています）。その後、これらの点を繰り返し処理し、各「ステップ」でポジションを、1フレーム中に弾丸が移動する量と"
 "同じだけ移動させます。"
@@ -22175,7 +22053,7 @@ msgid ""
 "project, this can be set by your main scene when instancing the player. We're "
 "using 64x64 tiles in the example below."
 msgstr ""
-"```tile_size``` "
+
 "にはタイルのサイズに合わせて適切な値を設定してください。大規模なプロジェクトでは、メインシーンからプレイヤーインスタンスを生成する際にこの設定を行います。以"
 "下の例では 64×64ピクセルのタイルを使用しています。"
 
@@ -22188,7 +22066,7 @@ msgid ""
 "- [Input Actions](/godot_recipes/3.x/input/input_actions/)\n"
 "- [Interpolation](/godot_recipes/3.x/math/interpolation/) -->"
 msgstr ""
-"```\n"
+
 "- [入力アクション設定](/godot_recipes/3.x/input/input_actions/)\n"
 "- [補間処理](/godot_recipes/3.x/math/interpolation/) -->"
 
@@ -22671,7 +22549,7 @@ msgid ""
 "In your {{< gd-icon TileMap >}}`TileMap`'s _Tile Set_ property, select \"New "
 "TileSet\" and click on it to open. You'll see the TileSet editor panel open:"
 msgstr ""
-"```\n"
+
 "{{< gd-icon TileMap "
 ">}}`TileMap`のプロパティーにある「タイルセット」設定で「新規タイルセット」を選択し、クリックするとエディターパネルが開きます："
 
@@ -22680,7 +22558,7 @@ msgid ""
 "You are using a {{< gd-icon TileMap >}} TileMap, and want to use autotiling "
 "to more quickly draw your levels."
 msgstr ""
-"```html\n"
+
 "あなたは <gt;tilemap> タイルマップを使用し、自動タイル機能を活用してレベル作成を効率化したいと考えています。"
 
 #: 2D/autotile_intro.md
@@ -22699,7 +22577,7 @@ msgid ""
 "64x64 and have a 10 pixel separation. If you're using your own art, you'll "
 "need to enter your own values."
 msgstr ""
-"```\n"
+
 "テクスチャを追加するには ⊞ "
 "ボタンをクリックし、上記で選択したタイルセットを選択してください。次に「新規オートタイル」を選択し、画像全体をドラッグして選択します。スナップ機能を有効にし"
 "、設定を調整する必要があるかもしれません。このタイルセットのタイルは 64x64 ピクセルで、各タイル間は 10 "
@@ -23099,7 +22977,7 @@ msgstr "![alt](/godot_recipes/3.x/img/anim_tile_add.png)"
 
 #: 2D/tilemap_animation.md
 msgid "![alt](/godot_recipes/3.x/img/anim_tile_draw.gif)"
-msgstr "```"
+msgstr 
 
 #: 2D/tilemap_animation.md
 msgid ""
@@ -23183,21 +23061,11 @@ msgid ""
 "- [TileMap: animated "
 "tiles](http://kidscancode.org/godot_recipes/2d/tilemap_animation/)"
 msgstr ""
-"Loading plamo-2-translate ⠙\n"
-"Loading plamo-2-translate ⠹\n"
-"Loading plamo-2-translate ⠸\n"
-"Loading plamo-2-translate ⠼\n"
-"Loading plamo-2-translate ⠴\n"
-"Loading plamo-2-translate ⠦\n"
-"Loading plamo-2-translate ⠧\n"
-"Loading plamo-2-translate ⠇\n"
-"Loading plamo-2-translate ⠏\n"
-"Loading plamo-2-translate ⠋\n"
-"Loading plamo-2-translate ⠙\n"
-"Loading plamo-2-translate ⠹\n"
-"Loading plamo-2-translate ⠸\n"
-"Loading plamo-2-translate ⠼\n"
-"Loading plamo-2-translate ⠴"
+"- [タイルマップ: "
+"オートタイルを利用する](http://kidscancode.org/godot_recipes/2d/autotile_intro/)\n"
+"- [タイルマップ: アニメーション"
+"タイル](http://kidscancode.org/godot_recipes/2d/tilemap_animation/)"
+
 
 #: 2D/tilemap_collision.md
 msgid ""
@@ -23205,7 +23073,7 @@ msgid ""
 "colliding with a {{< gd-icon TileMap >}}`TileMap`, and you want to know which "
 "tile it collided with."
 msgstr ""
-"```markdown\n"
+
 "あなたは `KinematicBody2D` キャラクターが `TileMap` "
 "と衝突している状況にあり、どのタイルに衝突したのかを判定したいと考えています。"
 
@@ -23226,7 +23094,7 @@ msgid ""
 "icon TileMap >}}`TileMap` acts as a single collider, so if you reference the "
 "`collider` property, it will be the {{< gd-icon TileMap >}}`TileMap` node."
 msgstr ""
-"```gd\n"
+
 "When a `KinematicBody2D` collides, the collision data is returned in a "
 "`KinematicCollision2D` object. The `TileMap` acts as a single collider, so if "
 "you access the `collider` property, it will be the `TileMap` node itself."
@@ -23305,7 +23173,7 @@ msgid ""
 "hitbox too big, or the player will appear to be \"hovering\" off the edge of "
 "the platform."
 msgstr ""
-"```yaml\n"
+
 "- {{< gd-icon Node2D >}} ノード `Node2D` "
 "(\"MovingPlatform\")：この親ノードは「アンカー」またはプラットフォームの起点として機能します。アニメーションでは、この親ノードを基準とし"
 "たプラットフォームの位置変化を制御します。\n"
@@ -23484,7 +23352,7 @@ msgid ""
 "number of pixels' movement needed to \"start\" a zoom.\n"
 "* `zoom_speed` - Used to smooth the zooming."
 msgstr ""
-"```\n"
+
 "- `target_return_enabled` - これを `true` に設定すると、ドラッグ後にカメラは自動的にターゲット位置に復帰します。\n"
 "- `target_return_rate` - カメラがターゲット位置に戻る速度を調整します。\n"
 "- `min_zoom` / `max_zoom` - ズームの最小/最大倍率制限値を設定します。\n"
@@ -23619,12 +23487,12 @@ msgid ""
 "In the `_process()` function, we'll move the camera towards the target (if "
 "target return is enabled and there's no touch event active)."
 msgstr ""
-"```{language}python\n"
+
 "def _process():\n"
 "    # ターゲットへの移動処理を追加\n"
 "    # （ターゲット位置取得が有効で、タッチイベントが発生していない場合）\n"
 "    pass\n"
-"```"
+
 
 #: 2D/touchscreen_camera.md
 msgid ""
@@ -23671,7 +23539,7 @@ msgid ""
 "limits, and then assign the new `zoom` level. Finally, we update "
 "`last_drag_distance` for the next event."
 msgstr ""
-"```python\n"
+
 "# アクティブなドラッグイベントが2件ある場合の処理を記述\n"
 "# \"drag_distance\" は各イベント間の距離を示し、前回計測した距離と比較して増減を確認可能\n"
 "# \"zoom_speed\" は倍率係数で、ズームイン時は「1.05」倍、アウト時は「0.95」倍に調整する\n"
@@ -23710,7 +23578,7 @@ msgid ""
 "if the camera is rotated, that rotation should be applied to the relative "
 "value as well so that the drag moves the camera in the correct direction."
 msgstr ""
-"```markdown\n"
+
 "単一のイベントのみがアクティブな場合、これは1本指でのドラッグ操作であるため、カメラの位置をそれに応じて調整できます。ただし、移動量を現在の`zoom`値に"
 "基づいてスケーリングする必要がある点に注意してください。そうしないと、ズームイン時にドラッグの動きが不自然に大きく、ズームアウト時には小さくなってしまいます"
 "。同様に、カメラが回転している場合、その回転も相対的な値に適用する必要があります。これにより、ドラッグ操作が適切な方向にカメラを動かすようになります。"
@@ -24130,7 +23998,7 @@ msgid ""
 "place it on the right side since Player 1 uses the arrow keys.\n"
 "{{% /notice %}}"
 msgstr ""
-"```\n"
+
 "{{% notice note %}}\n"
 "注意点：`ViewportContainer1`を{{< gd-icon HBoxContainer "
 ">}}`HBoxContainer`内で2番目に配置しました。この設定により、プレイヤー1が矢印キーを使用するため、コンテナは右側に表示されます。\n"
@@ -24184,7 +24052,7 @@ msgid ""
 "areas aren't visible and the\n"
 "minimap appears floating directly on top of the main viewports."
 msgstr ""
-"```diff\n"
+
 "私たちはエッジ周りのグレーゾーンを解消する必要があります。正確なズームレベルを特定して希望のミニマップサイズに合わせることも可能ですが、代わりに{{< "
 "gd-icon Viewport "
 ">}}`Viewport`設定の_透過背景(Bg_をチェックします。これで非地図領域が見えなくなり、ミニマップがメインビューポートの上に直接浮かんで表示され"
@@ -24199,14 +24067,14 @@ msgid ""
 "In the `_ready()`, set the minimap to use the same world as the other two "
 "viewports:"
 msgstr ""
-"```php\n"
+
 "public function _ready() {\n"
 "    parent::_ready();\n"
 "\n"
 "    $this->minimap->setWorldViewportIndex(0); // "
 "ミニマップのワールドビューポートインデックスを設定\n"
 "}\n"
-"```"
+
 
 #: 2D/splitscreen_demo.md
 msgid "We'll also look at a quick way to set up a minimap display."
@@ -24257,7 +24125,7 @@ msgid ""
 "the\n"
 "script editor and you'll get the node's path."
 msgstr ""
-"```\n"
+
 "The `onready` node references are for convenience - we'll be using them as we "
 "progress forward. Remember that when you type \"`$`\", Godot will "
 "automatically suggest node paths so you don't need to type them. You can also "
@@ -24430,7 +24298,7 @@ msgid ""
 ".\n"
 "{{% /notice %}}"
 msgstr ""
-"```markdown\n"
+
 "{{% notice note %}}\n"
 "このパーツのセットアップでお困りの場合は、公式Godotドキュメントの以下のセクションをご覧ください: "
 "[2D移動概要](http://docs.godotengine.org/en/stable/tutorials/2d/2d_movement.html)。"
@@ -24449,7 +24317,7 @@ msgid ""
 "to\n"
 "click _Current_ on this camera as well."
 msgstr ""
-"```json\n"
+
 "{\n"
 "  \"steps\": [\n"
 "    {\n"
@@ -25943,7 +25811,7 @@ msgid ""
 "8).png` image. It will overlap with the start button, but that's ok, we're "
 "only ever going to show one at a time."
 msgstr ""
-"```を追加し、`CenterContainer`の子要素として設定します。ノード名は`GameOver`としてください。使用する画像は`GAME_OVER"
+
 " (72 x 8).png`です。このボタンはスタートボタンの上に重なる配置になりますが、問題ありません。ゲームでは一度に表示するのは一つだけだからです。"
 
 #: games/first_2d/first_2d_10.md
@@ -26088,10 +25956,10 @@ msgid ""
 "image. Finally, we need a way to detect when the bullet goes offscreen so we "
 "can automatically remove it."
 msgstr ""
-"```gd\n"
+
 "Scene "
 "Manager.gdc\n"
-"```\n"
+
 "「Player」シーンと同様に、弾丸を正しく機能させるために必要なノードを検討する必要があります。ここでも衝突判定用の {{< gd-icon "
 "Area2D >}} コンポーネントを使用することで、物体との接触を検出できます。このため、以下のものが必要になります：\n"
 "\n"
@@ -27384,7 +27252,7 @@ msgid ""
 "position so that after it moves, it can return to its original location. "
 "We'll set it when the enemy is spawned and we call its `start()` function."
 msgstr ""
-"```python\n"
+
 "# 敵の初期位置を記録し、移動後に元の位置に帰還できるようにする変数\n"
 "start_pos = None\n"
 "\n"
@@ -27398,7 +27266,7 @@ msgstr ""
 "    # その他の初期設定...\n"
 "\n"
 "    print(\"敵が生成されました！初期位置：\", start_pos)\n"
-"```"
+
 
 #: games/first_2d/first_2d_07.md
 msgid "Here's are the nodes we'll need:"
@@ -27835,7 +27703,7 @@ msgid ""
 "You should now see a long, unfilled bar. To see what it looks like when "
 "filled, change the **Value** property in the **Range** section to anything "
 "between `0` and `100`."
-msgstr "```yaml"
+msgstr 
 
 #: games/first_2d/first_2d_09.md
 msgid ""
@@ -28034,7 +27902,7 @@ msgid ""
 "`new_game()`. In `_on_Jumper_captured()` increment it by one. Make sure to "
 "call `$HUD.update_score(score)` after each of these."
 msgstr ""
-"```lua\n"
+
 "スコアを追加するには、`new_game()` 関数内で `score` 変数を作成し、初期値として 0 "
 "を設定してください。`_on_Jumper_captured()` 関数内では、この変数の値を 1 ずつ加算します。それぞれの処理後に "
 "`$HUD.update_score(score)` を呼び出すことを忘れないでください。"
@@ -28387,7 +28255,7 @@ msgid ""
 "well), and set its _Custom Styles_ all to \"New StyleBoxEmpty\". Don't forget "
 "to add the button to the \"buttons\" group."
 msgstr ""
-"````scenes\n"
+
 "[SettingsScreen]シーンに「Ads」という名前の「Button」を中央の行に追加します。テキストを「広告を無効にする」に設定し、カスタムフォン"
 "ト（サイズ48が適切です）を適用し、さらにカスタムスタイルをすべて「New "
 "StyleBoxEmpty」に設定してください。最後に、このボタンを「buttons」グループに追加することを忘れないでください。"
@@ -28657,7 +28525,7 @@ msgid ""
 "the given `radius`. We need to size the collision shape as well as scaling "
 "the texture to match."
 msgstr ""
-"```python\n"
+
 "def init():\n"
 "    # 与えられた半径に基づいて円のサイズを設定し、衝突形状とテクスチャスケールもそれに合わせて調整する\n"
 "    circle_size = radius * 2  # 半径×2で円周の長さを求める\n"
@@ -28665,7 +28533,7 @@ msgstr ""
 "    texture_scale = circle_size / 100.0  # テクスチャのスケールは円周長÷100とする\n"
 "\n"
 "    # ... (他の初期化処理が続く)\n"
-"```"
+
 
 #: games/circle_jump/circle_jump_01.md
 msgid "![alt](/godot_recipes/3.x/img/cj_01_03.gif)"
@@ -28695,7 +28563,7 @@ msgid ""
 "Circle in it. Arrange them so the jumper will hit the Circle (Jumper's "
 "default velocity is `(100, 0)`)."
 msgstr ""
-"```node2d```を使用して「メイン」シーンを作成し、その中でジャンパーとサークルの両方をインスタンス化してください。ジャンパーがサークルに衝突するよ"
+
 "うに配置します（デフォルトのジャンプ速度は`(100, 0)`です）。"
 
 #: games/circle_jump/circle_jump_01.md
@@ -28729,7 +28597,7 @@ msgid ""
 "Select the `CollisionPolygon2D` and add three points to cover the jumper's "
 "triangular shape."
 msgstr ""
-"```\n"
+
 "`CollisionPolygon2D` を選択し、ジャンパーの三角形形状をカバーするように3点を追加してください。"
 
 #: games/circle_jump/circle_jump_01.md
@@ -28744,7 +28612,7 @@ msgid ""
 "we're here, add a `ShaderMaterial` and choose \"Load\" to use the saved "
 "`color.shader` we made earlier."
 msgstr ""
-"```res://assets/images/circle1_n.png``` "
+
 "を「スプライト」のテクスチャとして使用してください。そのついでに、「シェーダーマテリアル」を追加し、先ほど作成した保存済みの `color.shader` "
 "を使用するため「読み込み」を選択しましょう。"
 
@@ -28846,7 +28714,7 @@ msgid ""
 "However, we don't really need collision in this game, we just need to know "
 "when the jumper contacts a circle. Let's add the following nodes:"
 msgstr ""
-"```rust\n"
+
 "# 移動と衝突判定には `Area2D` を使用します。公平を期すために、ここでは `KinematicBody2D` "
 "も使用可能ですが、同等の機能を果たせます。ただし、このゲームでは正確な衝突検出は不要で、ジャンプキャラが円に接触したタイミングだけを把握できれば十分です。以"
 "下のノードを追加しましょう："
@@ -28904,7 +28772,7 @@ msgid ""
 "to the edge of the screen. Set all four of its _Custom Constants_ properties "
 "to `20`."
 msgstr ""
-"```json\n"
+
 "{\n"
 "  \"title\": \"マージンコンテナの設定\",\n"
 "  \"content\": "
@@ -28934,7 +28802,7 @@ msgid ""
 "The `change_screen()` method handles transition to the selected screen, "
 "including the `null` option for when we don't want to display a screen at all."
 msgstr ""
-"```php\n"
+
 "public function changeScreen($option){\n"
 "    switch ($option) {\n"
 "        case 'home':\n"
@@ -28954,7 +28822,7 @@ msgstr ""
 "            }\n"
 "    }\n"
 "}\n"
-"```"
+
 
 #: games/circle_jump/circle_jump_04.md
 msgid ""
@@ -29149,7 +29017,7 @@ msgid ""
 "Anywhere we called `settings.hide_ad_banner()`, etc. we can replace with the "
 "new equivalent:"
 msgstr ""
-"```python\n"
+
 "# settings.hide_ad_banner() などを呼び出している箇所は、以下の新しい同等関数で置き換え可能です：\n"
 "from adsweeper import hide_advertising_elements\n"
 "\n"
@@ -29158,7 +29026,7 @@ msgstr ""
 "    settings.disable_promotional_content()\n"
 "    settings.show_only_valid_offers()\n"
 "    # その他のカスタマイズ設定を追加可能\n"
-"```"
+
 
 #: games/circle_jump/circle_jump_13.md
 msgid ""
@@ -29290,7 +29158,7 @@ msgid ""
 "from the assets folder, and set the _Size_ to `64`. To align the label, in "
 "the \"Layout\" menu, choose \"Center\"."
 msgstr ""
-"```\n"
+
 "[カスタムフォント] セクションで、新しい `DynamicFont` を追加し、アセットフォルダから _フォントデータ_ を読み込み、 _サイズ_ を "
 "`64` に設定します。ラベルの位置を中央配置するには、「レイアウト」メニューから「中央揃え」を選択します。"
 
@@ -29502,7 +29370,7 @@ msgstr "次のパートでは、円に動きを追加します。"
 #: games/circle_jump/circle_jump_06.md
 msgid "And in `Jumper.gd`, we add the sounds like so:"
 msgstr ""
-"```lua\n"
+
 "-- Jumper.gd ファイル内でサウンドを追加します:"
 
 #: games/circle_jump/circle_jump_06.md
@@ -29517,7 +29385,7 @@ msgid ""
 "Then in the `_draw()` function where we're filling in the limited circle, "
 "replace the red color with `settings.theme[\"circle_fill\"]`."
 msgstr ""
-"```python\n"
+
 "def _draw(self):\n"
 "    # 限定された円を描画する処理\n"
 "    width = self.canvas_width\n"
@@ -29537,7 +29405,7 @@ msgstr ""
 "\n"
 "    # 中心点を描く\n"
 "    self.draw_circle_arc(cx, cy, r, 0, 360, color)\n"
-"```"
+
 
 #: games/circle_jump/circle_jump_06.md
 msgid "For the player, set the color in its `_ready()`:"
@@ -29578,7 +29446,7 @@ msgid ""
 "texture. Instead, we're going to refactor `register_buttons()` to pass a "
 "reference to the button itself:"
 msgstr ""
-"```c++\n"
+
 "// Current issue: We are currently passing only the button name,\n"
 "// which prevents us from changing its texture.\n"
 "// We're refactoring register_buttons() to accept a direct reference to the "
@@ -29962,7 +29830,7 @@ msgid ""
 "Later we'll make it more visually appealing, but for now, let's stick with a "
 "simple gradient. In the _Fill_ add a new Gradient, and go from transparent to "
 "a color of your choosing:"
-msgstr "```"
+msgstr 
 
 #: games/circle_jump/circle_jump_02.md
 msgid ""
@@ -30029,11 +29897,11 @@ msgid ""
 "The `new_game()` function initializes the game - spawning a player and a "
 "circle at the start position, and setting the camera."
 msgstr ""
-"```\n"
+
 "function new_game() {\n"
 "  // ゲームを初期化: プレイヤーとサークルを開始位置に生成し、カメラを設定する\n"
 "}\n"
-"```"
+
 
 #: games/circle_jump/circle_jump_02.md
 msgid ""
@@ -30042,7 +29910,7 @@ msgid ""
 "_Smoothing/Speed_ controls how quickly the camera interpolates to the new "
 "position. Try something between `5` and `10`."
 msgstr ""
-"```\n"
+
 "\n"
 "※注意点：翻訳文では技術的な専門用語をそのまま使用していますが、より平易な表現にする場合は以下のようになります。\n"
 "\n"
@@ -30117,7 +29985,7 @@ msgstr "Circle ノードに `AnimationPlayer` を追加します。"
 #: games/circle_jump/circle_jump_02.md
 msgid "And then in `Jumper.gd`, our jump function becomes:"
 msgstr ""
-"```gdb\n"
+
 "function Jump()\n"
 "    if IsGrounded() then\n"
 "        velocity = Vector3(0, 0, 0) -- ジャンプアニメーションの初期化\n"
@@ -30127,7 +29995,7 @@ msgstr ""
 "    end\n"
 "    isJumping = true\n"
 "end\n"
-"```"
+
 
 #: games/circle_jump/circle_jump_02.md
 msgid "Here are the functions to add to the circle script:"
