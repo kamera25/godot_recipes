@@ -8,7 +8,7 @@ msgstr ""
 
 #: _index.md
 msgid "#### Experienced Developers"
-msgstr "#### 経験豊富な開発者向け"
+msgstr "#### 経験豊富な開発者へ"
 
 #: _index.md
 msgid ""
@@ -26,7 +26,7 @@ msgstr ""
 "**Godot 4.0が正式リリースされました！**<br>\n"
 "Godot 4.0はエンジンの最新安定版バージョンです。<br>\n"
 "このサイトにはGodot 3向けの学習教材も充実しており、その多くは今でも十分に活用可能です。右上のリボンをクリックするとGodot "
-"Recipesバージョンを切り替えられますし、以下のボタンからもアクセスできます：<br>\n"
+"Recipesバージョンを切り替えられますし、以下のボタンからもアクセスできます。<br>\n"
 "{{% button href=\"/godot_recipes/3.x/\" style=\"primary\" icon=\"utensils\" "
 "%}}Godot 3レシピ集{{% /button %}}\n"
 "{{% /notice %}}"
@@ -39,7 +39,7 @@ msgstr "ホーム"
 msgid ""
 "On this site you'll find a collection of solutions and examples to help you "
 "make whatever game system you need."
-msgstr "このサイトでは、必要なゲームシステムを構築するための解決策と実例をまとめたコレクションを提供しています。"
+msgstr "このサイトでは、ゲームシステムを構築するための解決策と実例を提供しています。"
 
 #: _index.md
 msgid ""
@@ -47,8 +47,8 @@ msgid ""
 "well as a wide variety of gamedev tips and techniques. Feel free to browse "
 "the categories in the sidebar and see what catches your interest."
 msgstr ""
-"このサイトでは、Godotゲームエンジンの初心者向けガイドをはじめ、さまざまなゲーム開発のヒントやテクニックを幅広く紹介しています。サイドバーのカテゴリを自"
-"由に閲覧して、興味のあるコンテンツを見つけてください。"
+"このサイトでは、Godotゲームエンジンの初心者向けガイドをはじめ、さまざまなゲーム開発のヒントやテクニックを幅広く紹介しています。"
+"サイドバーのコンテンツを自由に閲覧して、興味のある分野を見てみてください。"
 
 #: _index.md
 msgid ""
@@ -58,7 +58,7 @@ msgid ""
 "\"Godot Way\". Code samples and example projects are available for all "
 "articles."
 msgstr ""
-"経験豊富な開発者の方や、他の最新ゲームエンジンに精通されている方は、左側のメニューを自由にご覧ください。「Godot流」の手法で各種タスクを実行する方法を詳"
+"経験豊富な開発者の方や、他のゲームエンジンに精通されている方は、左側のメニューから興味ある分野をご覧ください。「Godot流(Godot Way)」の手法で各種タスクを実行する方法を詳"
 "細に解説した、有用なガイドやチュートリアルが多数用意されています。すべての記事について、コードサンプルと実践的なプロジェクト例も提供しています。"
 
 #: _index.md
@@ -72,17 +72,16 @@ msgid ""
 "and _open_ tool for bringing your visions to life."
 msgstr ""
 "ゲーム開発を学ぶ準備はできていますか？趣味として、あるいは夢のキャリアへの第一歩として、今ほど良いタイミングはありません。現代のプログラミング言語とツールを"
-"駆使すれば、高品質なゲームを簡単に作成し、世界中に向けて配信することが可能です。その中の一つがGodotゲームエンジンです。初心者にとっては、ゲーム開発技術"
-"を楽しく学べる親しみやすい環境を提供します。一方、経験豊富な開発者にとっては、自らのビジョンを形にするための強力でカスタマイズ可能、かつオープンソースの強力"
-"なツールとして機能します。"
+"駆使すれば、高品質なゲームを簡単に作成し、世界中に向けて配信することが可能です。その中の一つがGodotゲームエンジンです。初心者にもゲーム開発技術"
+"を楽しく、親しみやすい方法で学ぶことができます。一方、経験豊富な開発者にとっては、自らのビジョンを形にするための強力でカスタマイズ可能、かつオープンソースの強力"
+"なツールです。"
 
 #: _index.md
 msgid ""
 "If you're new to Godot, start here: [What is "
 "Godot?](/godot_recipes/4.x/g101/start/101_01/)."
 msgstr ""
-"Godotを初めて使う方はまずここから始めましょう。[Godotとは？](/godot_recipes/4.x/ja/g101/start/101_01/)"
-"。"
+"Godotを初めて使う方はまずは [Godotとは？](/godot_recipes/4.x/ja/g101/start/101_01/) から始めましょう。"
 
 #: _index.md
 msgid "#### Beginners"
@@ -111,9 +110,8 @@ msgid ""
 msgstr ""
 "{{% notice info "
 "%}}\n"
-"プログラミングに関する基本的な経験があることを前提としています。もし完全に未経験で始める場合は、[こちら](https://docs.godotengine"
-".org/ja/stable/getting_started/step_by_step/index.html)をクリックして、初心者向けの学習ガイドをご覧く"
-"ださい。\n"
+"このサイトは、プログラミングに関する基本的な経験があることを前提としています。もし完全に未経験で Godot をさわり始める場合は先に、[初心者向けの学習ガイド](https://docs.godotengine"
+".org/ja/stable/getting_started/step_by_step/index.html)をご覧ください。\n"
 "{{% /notice %}}"
 
 #: _index.md
@@ -127,9 +125,9 @@ msgid ""
 "familiar and _easy_ they will start to feel."
 msgstr ""
 "ゲーム開発が初めての場合は、まず [はじめてのGodot(基礎編)](/godot_recipes/4.x/ja/basics/) "
-"のセクションから始めてください。ここではGodotアプリケーションの概要と、初めてのプロジェクト作成を段階的にガイドする内容が提供されています。ここで学ぶべ"
-"きことは多岐にわたりますが、最初はすべてを理解する必要はありません。複雑な概念を習得するには反復練習が不可欠です。Godotの各種機能を実際に操作すればする"
-"ほど、その使い方に慣れ、次第に「簡単」だと感じられるようになるでしょう。"
+"のセクションから始めてください。ここではGodotアプリケーションの概要と、初めてのプロジェクト作成を段階的に作っていきましょう。学ぶべ"
+"きことは多岐にわたりますが、最初はすべてを理解する必要はありません。複雑な概念なので、反復学習が不可欠です。Godotの各種機能を実際に操作すればする"
+"ほど、その使い方に慣れ、次第に「簡単」だと感じられるようになります。"
 
 #: _index.md
 msgid "# <i class='fas fa-utensils'></i>&nbsp;Godot Recipes"
@@ -4808,7 +4806,7 @@ msgstr ""
 msgid ""
 "You need to implement shooting in an FPS, but moving individual projectiles "
 "is impractical."
-msgstr "FPSゲームで射撃機能を実装する必要があるが、個別の発射物を手動で動かすのは非現実的だ。"
+msgstr "FPSゲームで射撃機能を実装する必要がありますが、個別の発射物を手動で動かすのは非現実的です。"
 
 #: 3D/shooting_raycasts.md
 msgid ""
@@ -14050,7 +14048,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice style=\"info\" title=\"Godot 4.0 へのアップデート準備中\" %}}\n"
-"現在は、Godot 4.0対応版のGodot 101を開発中です。それまでの間、新規学習者の方にはGodot "
+"【注 : この文章はオリジナル版の説明です】現在は、Godot 4.0対応版のGodot 101を開発中です。それまでの間、新規学習者の方にはGodot "
 "3.xシリーズの使用をお勧めします。このバージョンにはより多くの公式リソースや学習教材が揃っています。\n"
 "{{% /notice %}}"
 
@@ -14076,8 +14074,8 @@ msgid ""
 "the\n"
 "task of writing one."
 msgstr ""
-"正確で実用的な物理エンジンを開発するのは途方もなく困難な作業だ。ほとんどのゲームでは何らかの衝突検出と応答処理が必要であり、さらに多くのタイトルが摩擦や慣性"
-"などのシミュレーションされた物理機能を要求する。しかし、実際にそのようなシステムを自ら実装しようとする開発者はごくわずかだ。"
+"正確で実用的な物理エンジンを開発するのは途方もなく困難な作業です。ほとんどのゲームでは何らかの衝突検出と応答処理が必要であり、さらに多くのタイトルが摩擦や慣性"
+"などのシミュレーションされた物理機能を要求します。しかし、実際にそのようなシステムを自ら実装しようとする開発者はごくわずかです。"
 
 #: g101/start/101_01.md
 msgid ""
@@ -14131,7 +14129,7 @@ msgstr ""
 "現代的なゲームを制作するには、実際のゲーム自体を構築する前に、\n"
 "数多くの基盤技術を構築しておく必要があります。もし自分でコンピュータを一から組み立て、\n"
 "独自のオペレーティングシステムを書いてからでないとプログラミングを始められないと想像してみてください。\n"
-"その場合のゲーム開発は、まさに最初からすべてを自分で構築しなければならないようなものになるでしょう。"
+"その場合のゲーム開発は、まさに最初から _すべて_ を自分で構築しなければならないようなものになるでしょう。"
 
 #: g101/start/101_01.md
 msgid ""
@@ -14816,7 +14814,7 @@ msgstr "### 基本的な使い方"
 
 #: g101/start/_index.md
 msgid "Have you downloaded Godot yet? You can get it here:"
-msgstr "Godotはもうダウンロードしましたか？こちらから入手可能です："
+msgstr "Godotはもうダウンロードしましたか？以下のサイトから入手可能です。"
 
 #: g101/start/_index.md
 msgid "Getting Started"
@@ -17302,7 +17300,7 @@ msgstr "コンテキストに基づく操縦支援"
 msgid ""
 "Rather than a danger item canceling the interest, it could *add* to the "
 "interest in the opposite direction."
-msgstr "危険商品が金利をキャンセルするのではなく、むしろ逆方向に**加算**する可能性もある。"
+msgstr "危険商品が金利をキャンセルするのではなく、むしろ逆方向に**加算**する可能性もあります。"
 
 #: ai/context_map.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_06.png)"
@@ -20564,7 +20562,7 @@ msgstr "また、レイヤーに名前を割り当てることも可能です。
 msgid ""
 "A body that provides collision detection, but no physics. All movement must "
 "be implemented in code."
-msgstr "衝突検知機能を提供するが、物理演算は行わない。すべての移動処理はプログラムコードで実装する必要がある。"
+msgstr "衝突検知機能を提供しますが、物理演算はしません。すべての移動処理はプログラムコードで実装する必要です。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "- {{< gd-icon RigidBody2D >}}`RigidBody2D`"
@@ -25084,9 +25082,9 @@ msgid ""
 "involve some sliding (drifting)."
 msgstr ""
 "- "
-"自動車は中心軸を中心に旋回するものではない。別の言い方をすれば、後輪が左右に滑ることはない。（ドリフト走行時はこの限りではないが、その点については後述する）"
-"- 自動車は動いている時にのみ方向転換が可能で、その場で回転することはできない。\n"
-"- 自動車は列車ではない。レールに縛られていない。高速で曲がる際にはある程度の横滑り（ドリフト）が伴うべきである。"
+"- 自動車は中心軸を中心に旋回するものではありません。別の言い方をすれば、後輪が左右に滑ることはありません。（ドリフト走行時はこの限りではないが、その点については後述します）"
+"- 自動車は動いている時にのみ方向転換が可能で、その場で回転することはできません。。\n"
+"- 自動車は列車ではありません。レールに縛られていません。高速で曲がる際にはある程度の横滑り（ドリフト）が伴うべきです。"
 
 #: 2D/car_steering.md
 msgid "<video controls src='/godot_recipes/4.x/img/car_friction.webm'></video>"
