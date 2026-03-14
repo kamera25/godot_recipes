@@ -1,0 +1,15 @@
++++
+title = "3D入門講座"
+weight = 5
+chapter = true
+draft = false
+pre = "<i class='fas fa-cube fa-fw'></i>&nbsp"
++++
+
+# <i class='fas fa-cube'></i>&nbsp;3D入門講座
+
+Godot 開発の3D側面をわかりやすく解説する入門ガイド。
+
+#### 目次 ：
+
+{{% children  sort="weight" %}}

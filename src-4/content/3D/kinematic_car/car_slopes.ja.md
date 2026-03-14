@@ -1,0 +1,70 @@
+---
+title: "3D 運動学的自動車：傾斜面＆スロープ"
+weight: 4
+draft: false
+ghcommentid: 44
+---
+
+## 課題
+
+[あなたのキネマティックカー](/godot_recipes/3.x/3d/kinematic_car/car_base/) は斜面を登れるようになりましたが、見た目が少し不自然です：
+
+![alt](/godot_recipes/3.x/img/3d_car_10.png)
+
+## 解決策
+
+運動体は衝突時に自動で回転しません。画像のように車輪が地面に接触していない場合、手動で車を整列させる必要があります。
+
+To begin, we need to detect when the wheel isn't on the ground. Add two {{< gd-icon RayCast3D >}}`RayCast` nodes to the car and align them with the front and rear wheels like so:
+
+![alt](/godot_recipes/3.x/img/3d_car_11.png)
+
+両方の場合、［キャスト先］を（0、-0.25、0）に設定し、「有効」ボックスのチェックを忘れずに行ってください。
+
+### 3Dオブジェクトの整列方法
+
+以下のコードを[キネマティックボディ：表面に合わせる]レシピから再利用します。`car_base.gd`に追加してください。
+
+```gdscript
+func align_with_y(xform, new_y):
+    xform.basis.y = new_y
+    xform.basis.x = -xform.basis.z.cross(new_y)
+    xform.basis = xform.basis.orthonormalized()
+    return xform
+```
+
+`_physics_process()` 関数内で `move_and_slide_with_snap()` を呼び出した直後に、車両を整列させる必要があるかどうかをチェックします：
+
+```gdscript
+# If either wheel is in the air, align to slope.
+if $FrontRay.is_colliding() or $RearRay.is_colliding():
+    # If one wheel is in air, move it down
+    var nf = $FrontRay.get_collision_normal() if $FrontRay.is_colliding() else Vector3.UP
+    var nr = $RearRay.get_collision_normal() if $RearRay.is_colliding() else Vector3.UP
+    var n = ((nr + nf) / 2.0).normalized()
+    var xform = align_with_y(global_transform, n)
+    global_transform = global_transform.interpolate_with(xform, 0.1)
+```
+
+### 使用方法
+
+どちらの車輪も地面に接していない場合、車はまったく回転しません。
+
+それ以外の場合は、前面および背面レイの結果を平均化して使用します。衝突が発生している場合、衝突オブジェクトの表面法線が考慮されます。この方法により、例えばカーブした坂道のように2つの車輪が異なる斜面に接している状況でも、両方の車輪を可能な限り表面に接触させようとする処理が行われます：
+
+![alt](/godot_recipes/3.x/img/3d_car_12.png)
+
+この画像では、車がどちらの面にも平行ではなく、中間位置に配置されていることがわかります。
+
+レイが何も検出しない場合は、水平な面と仮定します。これにより、一方のホイールが接触している場合にもう一方の車輪が下がります。
+
+## 関連レシピ
+
+## KinematicCar：ベースモデル
+[KinematicCar：基本モデル](/godot_recipes/3.x/3d/kinematic_car/car_base/)
+
+## KinematBody：表面との整列方法
+[KinematicBody：表面との整列テクニック](/godot_recipes/3.x/3d/3d_align_surface/)
+
+#### この動画が気に入ったら？
+

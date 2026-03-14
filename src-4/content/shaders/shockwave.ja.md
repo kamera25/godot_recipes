@@ -1,0 +1,18 @@
+---
+title: "Shade d’impact"
+weight: 5
+draft: true
+---
+
+## 課題
+
+オブジェクトや画面をぼかすシェーダーが欲しいようですね。
+
+## 解決策
+
+<video controls src='/godot_recipes/img/.webm'></video>
+
+## 関連するレシピ
+
+- [シェーダー入門](/godot_recipes/4.x/shaders/intro/)
+- [シェーダーとの連携](/godot_recipes/4.x/shaders/interacting/)

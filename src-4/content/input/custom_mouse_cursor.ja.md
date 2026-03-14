@@ -1,0 +1,31 @@
+---
+title: "マウスカーソルのカスタマイズ方法"
+weight: 5
+draft: false
+ghcommentid: 50
+---
+
+## 課題
+
+カスタムマウスカーソルを使用したいようです。
+
+## 解決策
+
+マウスカーソルの設定は `入力.set_custom_mouse_cursor()` メソッドを使用して行います。必要なのは使用するテクスチャだけです。なお、このテクスチャのサイズは最大で `256x256` ピクセル以内にしてください。
+
+例えば、以下の画像を使用するには：
+
+<img src="/godot_recipes/3.x/img/crosshair137.png" alt="クロスヘア画像">
+
+そして、ホットスポットを中央位置に設定します：
+
+```gdscript
+extends Node2D
+
+func _ready():
+    入力.set_custom_mouse_cursor(cursor_image,
+            入力.CURSOR_ARROW,
+            Vector2(64, 64))
+```
+
+第2パラメータはどのシステムカーソルを置き換えるかを指定します。完全なリストについては[入力ドキュメント](https://docs.godotengine.org/en/latest/classes/class_input.html#enum-input-cursorshape)を参照してください。
