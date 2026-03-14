@@ -69,7 +69,7 @@ func _physics_process(delta):
 
 ![alt](/godot_recipes/3.x/img/inf_inertia3.gif)
 
-また、衝撃力の大きさをキャラクターの速度に応じて調整することも可能です：
+また、衝撃力の大きさをキャラクターの速度に応じて調整することもできます：
 
 ```gdscript
 collision.collider.apply_central_impulse(-collision.normal * velocity.length() * push_factor)

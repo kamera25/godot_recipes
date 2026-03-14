@@ -8,7 +8,7 @@ tags: []
 
 ## 課題
 
-あなたの `<code class="language-plaintext">{{< gd-icon KinematicBody3D >}}KinematicBody</code> は斜面を滑り降ります。
+ `<code class="language-plaintext">{{< gd-icon KinematicBody3D >}}KinematicBody</code> は斜面を滑り降ります。
 
 ## 解決策
 

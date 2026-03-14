@@ -17,7 +17,7 @@ pre: "13. "
 
 プラグインを解凍し、`admob-plugin` フォルダを `res://android/` ディレクトリに、`admob-lib` フォルダを `res://` ディレクトリに配置してください。
 
-以下の2ファイルを編集する必要があります：
+以下の2ファイルを編集する必要があります。
 
 * `res://android/build/gradle.properties`
 
@@ -51,7 +51,7 @@ AdMobアプリケーションIDを`android:value=""/>`行に貼り付けてく�
 onready var admob = $Admob
 ```
 
-# settings.hide_ad_banner() などを呼び出している箇所は、以下の新しい同等関数で置き換え可能です：
+# settings.hide_ad_banner() などを呼び出している箇所は、以下の新しい同等関数で置き換えできます：
 from adsweeper import hide_advertising_elements
 
 def customize_adseepper_config():

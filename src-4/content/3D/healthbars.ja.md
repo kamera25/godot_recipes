@@ -61,7 +61,7 @@ We can display a 2D image in 3D using a {{< gd-icon Sprite3D >}}`Sprite3D`. Add 
 
 ### ビューポートテクスチャ
 
-私たちは `Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}} `TextureProgressBar` を表示したいと考えています。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現可能です。
+私たちは `Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}} `TextureProgressBar` を表示したいと考えています。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現できます。
 
 以下の手順で操作してください。
 1. {{< gd-icon SubViewport >}} `SubViewport` を {{< gd-icon Sprite3D >}} `Sprite3D` の子要素として追加します。
@@ -73,7 +73,7 @@ We can display a 2D image in 3D using a {{< gd-icon Sprite3D >}}`Sprite3D`. Add 
 
 ![alt](/godot_recipes/4.x/img/3d_bars_03a.png)
 
-もし `SubViewport` が `Sprite3D` の子要素でなかった場合、インスペクター上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可能性があります。このため、以下のように `Sprite3D` にアタッチされたスクリプト内で設定する必要があります：
+もし `SubViewport` が `Sprite3D` の子要素でなかった場合、インスペクター上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可能性があります。このため、以下のように `Sprite3D` にアタッチされたスクリプト内で設定する必要があります。
 
 ```gdscript
 extends Sprite3D
@@ -118,7 +118,7 @@ func update_health(_value, _max_value):
 
 ### まとめ
 
-このテクニックを使えば、{{< gd-icon Node2D >}}`Node2D`ノードはもちろん、{{< gd-icon Control >}}`Control`ノード全般（例：{{< gd-icon 标签 >}}`标签`や{{< gd-icon VideoStreamPlayer >}}`VideoStreamPlayer`など）を3D空間に表示することが可能です。さらに、{{< gd-icon SubViewport >}}`SubViewport`を使えば、2Dゲーム全体を3次元空間に「投影」することもできます。
+このテクニックを使えば、{{< gd-icon Node2D >}}`Node2D`ノードはもちろん、{{< gd-icon Control >}}`Control`ノード全般（例：{{< gd-icon 标签 >}}`标签`や{{< gd-icon VideoStreamPlayer >}}`VideoStreamPlayer`など）を3D空間に表示することができます。さらに、{{< gd-icon SubViewport >}}`SubViewport`を使えば、2Dゲーム全体を3次元空間に「投影」することもできます。
 
 ## 関連レシピ
 

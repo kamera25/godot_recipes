@@ -12,7 +12,7 @@ draft: false
 
 このレシピは[キャラクターボディ3D：移動制御](/godot_recipes/4.x/ja/3d/characterbody3d_examples/) レシピで解説されている基本の{{< gd-icon CharacterBody3D >}}`CharacterBody3D`コントローラーを拡張する内容となっています。まずはそちらを先にお読みください。
 
-まず、シーンに地形を追加しました。こちらのリンクからダウンロード可能です：[https://fertile-soil-productions.itch.io/modular-terrain-pack](https://fertile-soil-productions.itch.io/modular-terrain-pack)。ローポリモデルですが、お好みの地形を自由に使用・作成していただいて構いません。
+まず、シーンに地形を追加しました。こちらのリンクからダウンロードできます：[https://fertile-soil-productions.itch.io/modular-terrain-pack](https://fertile-soil-productions.itch.io/modular-terrain-pack)。ローポリモデルですが、お好みの地形を自由に使用・作成していただいて構いません。
 
 ご覧の通り、移動自体は地形に沿って機能していますが、戦車が斜面に対して向きを変えないため、まるで「浮いて」いるかのように見えます。
 

@@ -175,7 +175,7 @@ Circle ノードに `アニメーションPlayer` を追加します。
 ![alt](/godot_recipes/3.x/img/cj_02_03.png)
 ![alt](/godot_recipes/3.x/img/cj_02_04.gif)
 
-以下の機能をサークルスクリプトに追加する必要があります：
+以下の機能をサークルスクリプトに追加する必要があります。
 
 ```gdscript
 func capture():

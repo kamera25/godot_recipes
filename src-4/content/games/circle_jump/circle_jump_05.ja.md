@@ -11,7 +11,7 @@ pre: "05. "
 
 HUDとして使用する`CanvasLayer`をルートとする新しいシーンを追加します。以下の2つの子要素を持たせます：「スコアボックス」という名前の`MarginContainer`と、「メッセージ」という名前の`标签`です。
 
-Scene treeは以下のようになっている必要があります：
+Scene treeは以下のようになっている必要があります。
 
 <img src="/godot_recipes/3.x/img/cj_05_01.png" alt="Alt text">
 

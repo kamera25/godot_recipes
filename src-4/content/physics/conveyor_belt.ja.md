@@ -34,7 +34,7 @@ You can make a conveyor belt object using nothing but a {{< gd-icon StaticBody2D
 
 ![alt](/godot_recipes/3.x/img/conveyor_05.png)
 
-「880」を選択すれば、幅が正確に10タイルのコンベアベルトを作成できます。必要な幅を自由に設定可能です。
+「880」を選択すれば、幅が正確に10タイルのコンベアベルトを作成できます。必要な幅を自由に設定できます。
 
 ![alt](/godot_recipes/3.x/img/conveyor_06.png)
 

@@ -79,7 +79,7 @@ func check_orbits():
         orbit_start = $Pivot.rotation
 ```
 
-この機能を動作させるには、ジャンパークラスに`die()`メソッドを追加する必要があります：
+この機能を動作させるには、ジャンパークラスに`die()`メソッドを追加する必要があります。
 
 ```gdscript
 func die():

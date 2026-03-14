@@ -18,7 +18,7 @@ draft: false
 この機能を説明するため、まずは[オートタイルレシピ](/godot_recipes/4.x/ja/2d/autotile_intro/)を使用した簡素なトップダウンゲームと[見下ろしキャラクター操作レシピ](godot_recipes/2d/topdown_movement/#option-2-rotate-and-move)に基づくプレイヤーから始めましょう。各コンポーネントの動作詳細については、リンク先のレシピを参照してください。
 
 {{% notice note %}}
-本プロジェクトのアートワークは[kenney.nl](https://kenney.nl)提供のものを使用しています。以下からダウンロード可能です：[Minimap アセット](/godot_recipes/4.x/ja/files/minimap_assets.zip).
+本プロジェクトのアートワークは[kenney.nl](https://kenney.nl)提供のものを使用しています。以下からダウンロードできます：[Minimap アセット](/godot_recipes/4.x/ja/files/minimap_assets.zip).
 {{% /notice %}}
 
 私たちのメインシーン設定は以下のように構成されています：

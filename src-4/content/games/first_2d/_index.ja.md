@@ -6,7 +6,7 @@ draft: false
 pre: "<i class='fa fa-rocket fa-fw'></i>&nbsp"
 ---
 
-<i class="fa fa-rocket"></i>&nbsp;あなたの初めての2Dゲーム
+<i class="fa fa-rocket"></i>&nbsp;初めての2Dゲーム
 
 ### 2Dシューティングゲーム開発でGodotの基本を学ぼう。
 

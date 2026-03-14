@@ -17,7 +17,7 @@ To access the uniform's value from GDScript, you can use `set_shader_param()` on
 node.material.set_shader_param("param_name", value)
 ```
 
-以下の方法で値を取得することも可能です：`get_shader_param()`。
+以下の方法で値を取得することもできます：`get_shader_param()`。
 
 例については、[ブラーシェーダー](/godot_recipes/3.x/shaders/blur/)のレシピを参照してください。
 

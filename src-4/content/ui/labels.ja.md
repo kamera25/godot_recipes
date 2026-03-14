@@ -18,7 +18,7 @@ ghcommentid: 55
 はじめに、フォントファイルが必要になります。Godotのフォントサポートについては別のレシピで詳しく解説しますが、ここではTTFまたはOTF形式のフォントファイルを前提とします。ビットマップフォントを使用する場合は、関連するレシピを参照してください。
 
 {{% notice note %}}
-この例では、人気のある無料フォント「Roboto」を使用します。このフォントは[Google Fonts](https://fonts.google.com/specimen/Roboto)で入手できます。こちらからもダウンロード可能です: [Roboto_font.zip](/godot_recipes/3.x/files/Roboto_font.zip)
+この例では、人気のある無料フォント「Roboto」を使用します。このフォントは[Google Fonts](https://fonts.google.com/specimen/Roboto)で入手できます。こちらからもダウンロードできます: [Roboto_font.zip](/godot_recipes/3.x/files/Roboto_font.zip)
 {{% /notice %}}
 
 ### ラベルの追加方法
@@ -43,7 +43,7 @@ ghcommentid: 55
 
 #### 色の調整
 
-ラベルのフォントカラーは「カスタムカラー」セクションで調整できます。ここでは「フォントカラー」を変更できるほか、影の色を追加することも可能です。影のプロパティは「カスタム定数」セクションで設定します。
+ラベルのフォントカラーは「カスタムカラー」セクションで調整できます。ここでは「フォントカラー」を変更できるほか、影の色を追加することもできます。影のプロパティは「カスタム定数」セクションで設定します。
 
 ![alt](/godot_recipes/3.x/img/ui_label_font_colors.png)
 

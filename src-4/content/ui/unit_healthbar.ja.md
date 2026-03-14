@@ -13,7 +13,7 @@ ghcommentid: 60
 
 ## 解決策
 
-プログレスバーの表示には、`TextureProgress`ノードを使用できます（{{< gd-icon TextureProgressBar >}}）。これは、通常の`ProgressBar`ノードと似ていますが、プログレスバー自体にテクスチャを適用できる点が異なります。バーの長さは健康状態を示しますが、さらにテクスチャの色も変更可能です。この機能を活用するために、3種類の異なる配色のバーを使用してみましょう。
+プログレスバーの表示には、`TextureProgress`ノードを使用できます（{{< gd-icon TextureProgressBar >}}）。これは、通常の`ProgressBar`ノードと似ていますが、プログレスバー自体にテクスチャを適用できる点が異なります。バーの長さは健康状態を示しますが、さらにテクスチャの色も変更できます。この機能を活用するために、3種類の異なる配色のバーを使用してみましょう。
 
 ![alt](/godot_recipes/3.x/img/barHorizontal_green.png)
 ![alt](/godot_recipes/3.x/img/barHorizontal_yellow.png)
@@ -94,7 +94,7 @@ func update_healthbar(value):
 
 このユニットに取り付けると、バーが大きすぎるように見える場合があります。インスタンス化された `HealthDisplay` の _Scale_ プロパティを調整して、ユニットのサイズに合わせて表示を変更できます。
 
-以下に、このシステムを実際に使用した事例をご紹介します。この例のプロジェクトは以下のリンクからダウンロード可能です。
+以下に、このシステムを実際に使用した事例をご紹介します。この例のプロジェクトは以下のリンクからダウンロードできます。
 
 <video controls src="/godot_recipes/3.x/img/tower_def_demo.webm"></video>
 

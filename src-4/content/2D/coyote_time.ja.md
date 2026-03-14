@@ -47,7 +47,7 @@ $CoyoteTimer.wait_time = coyote_frames / 60.0
     last_floor = is_on_floor()
 ```
 
-ジャンプ入力を検知した場合、キャラクターが床にいる状態か、またはコヨーテ時間モードかどうかを確認する必要があります：
+ジャンプ入力を検知した場合、キャラクターが床にいる状態か、またはコヨーテ時間モードかどうかを確認する必要があります。
 
 ```gdscript
     if 入力.is_action_just_pressed("jump") and (is_on_floor() or coyote):

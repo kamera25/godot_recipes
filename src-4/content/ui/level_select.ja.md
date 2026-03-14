@@ -142,7 +142,7 @@ LevelMenu:{{< gd-icon MarginContainer >}} MarginContainer
 ```
 
 {{% notice info %}}
-「なぜこの場面で{{< gd-icon ScrollContainer >}} `ScrollContainer`を使わないのか」と疑問に思われるかもしれません。もちろん、使用することは可能ですが、私たちは連続スクロールを望んでいませんし、スクロールバーが表示されることも避けたいからです。
+「なぜこの場面で{{< gd-icon ScrollContainer >}} `ScrollContainer`を使わないのか」と疑問に思われるかもしれません。もちろん、使用することはできますが、私たちは連続スクロールを望んでいませんし、スクロールバーが表示されることも避けたいからです。
 {{% /notice %}}
 
 スクリプトを `LevelMenu` に追加し、2つのボタンの `pressed`シグナルを接続してください。

@@ -152,7 +152,7 @@ if collision:
 ```
 
 {{% notice note %}}
-以下の方法も使用可能です：{{< gd-icon RayCast3D >}}`RayCast3D`ノードを使用する場合。ただし、チェックを実行する前に必ず`force_raycast_update()`を呼び出すようにしてください。
+以下の方法も使用できます：{{< gd-icon RayCast3D >}}`RayCast3D`ノードを使用する場合。ただし、チェックを実行する前に必ず`force_raycast_update()`を呼び出すようにしてください。
 {{% /notice %}}
 
 ### トランジションで遊んでみよう
