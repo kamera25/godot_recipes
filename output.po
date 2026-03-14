@@ -14110,7 +14110,7 @@ msgstr "* 開発環境"
 
 #: g101/start/101_01.md
 msgid "* Platform Support"
-msgstr "* プラットフォーム対応状況"
+msgstr "* プラットフォーム対応"
 
 #: g101/start/101_01.md
 msgid ""
@@ -18145,7 +18145,7 @@ msgstr "シェーダー"
 
 #: shaders/_index.md
 msgid "Deep voodoo. Cool effects."
-msgstr "深いヴォドゥー。クールなエフェクト。"
+msgstr "魔法のような高度な処理が生む、クールなエフェクトの世界。"
 
 #: physics/character_vs_rigid.md
 msgid ""
@@ -29582,11 +29582,11 @@ msgid ""
 "* iOS: _coming soon_\n"
 "* Web: [Game of the Month](https://gotm.io/kidscancode/circlejump/)"
 msgstr ""
-"・ Android：[Google "
+"* Android：[Google "
 "Playストア](https://play.google.com/store/apps/details?id=org.kidscancode.circlej"
 "ump)にて配信中\n"
-"・ iOS版は近日公開予定\n"
-"・ Webブラウザ版：[今月のゲームページ](https://gotm.io/kidscancode/circlejump/)で利用可能"
+"* iOS版は近日公開予定\n"
+"* Webブラウザ版：[今月のゲームページ](https://gotm.io/kidscancode/circlejump/)で利用可能"
 
 #: games/circle_jump/_index.md
 msgid "![alt](/godot_recipes/3.x/img/circle_jump.gif)"
