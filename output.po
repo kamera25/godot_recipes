@@ -1499,7 +1499,7 @@ msgid ""
 ".html)."
 msgstr ""
 "この記事で「`FileAccess`」の基本的な機能をざっとご紹介しました。利用可能な「`FileAccess`」メソッドの全一覧については、[公式ドキュメ"
-"ントの`FileAccess`ページ](https://docs.godotengine.org/ja/stable/classes/class_filea"
+"ントのFileAccessページ](https://docs.godotengine.org/ja/stable/classes/class_filea"
 "ccess.html)をご覧ください。"
 
 #: basics/file_io.md
@@ -1670,9 +1670,8 @@ msgid ""
 "* The `position` and `global_position` properties replace `translation` and "
 "`global_translation` in 3D, making them consistent with 2D."
 msgstr ""
-"- "
-"位置プロパティ（`position`）およびグローバル位置プロパティ（`global_position`）は、3D空間において従来の翻訳プロパティ（`tra"
-"nslation`）とグローバルな翻訳プロパティ（`global_translation`）に取って代わり、2Dとの一貫性が保たれます。"
+"* `position`および`global_position`プロパティは、3D空間において従来の`tra"
+"nslation`と`global_translation`に取って代わり、2Dとの一貫性が保たれます。"
 
 #: basics/migrating.md
 msgid ""
@@ -1727,7 +1726,7 @@ msgid ""
 "* {{< gd-icon PackedScene >}}`PackedScene`'s `instance()` function has been "
 "renamed to `instantiate()`."
 msgstr ""
-"* `{{< gd-icon PackedScene >}}`PackedScene` の `instance()` 関数は "
+"* {{< gd-icon PackedScene >}}`PackedScene` の `instance()` 関数は "
 "`instantiate()` に改名されました"
 
 #: basics/migrating.md
@@ -3777,7 +3776,7 @@ msgid ""
 "answer."
 msgstr ""
 
-"やがて、スクリーンにテキストを表示する必要が出てくるでしょう。具体的にはタイトル表示、カウントダウンタイマー、スコアカウンターなど、他にも多くのケースがあり"
+"やがて、スクリーンにテキストを表示する機会が増えるでしょう。例えば、タイトル表示やカウントダウンタイマー、スコアカウンターなどがその一例です。"
 "ます。これらのほとんどは、Godotの {{< gd-icon Label >}} `Label` ノードを使えば簡単に実装できます。"
 
 #: ui/debug_overlay.md
@@ -9064,7 +9063,7 @@ msgid ""
 msgstr ""
 
 "{{< gd-icon KinematicBody3D >}} "
-"`KinematicBody`コンポーネントには衝突形状の未定義に関する警告が表示されています。まずはこの問題を解決する必要があります。具体的には以下の3つ"
+"`KinematicBody`コンポーネントには衝突形状の未定義に関する警告が表示されています。この問題を、以下の3つの手順で解決します。"
 "の {{< gd-icon CollisionShape3D >}} を追加します。車両本体用の {{< gd-icon BoxShape3D >}} "
 "`BoxShape`と、前輪および後輪用の各1つずつの {{< gd-icon CylinderShape3D >}} `CylinderShape`です。"
 
@@ -14838,7 +14837,6 @@ msgid ""
 msgstr ""
 "ノードのプロパティを`lerp()`でアニメーション化することができます。例えば、経過時間を希望する持続時間で割ると、0から1の間の値が得られ、これを使ってプロパティを滑らかに変化させることができます。このスクリプトでは、スプライトを開始サイズの5倍まで拡大しつつ、2秒間かけて徐々にフェードアウトさせます（`modulate.a`を使用して)。"
 
-
 #: Math/interpolation.md
 msgid ""
 "In this formula, `a` and `b` represent the two values and `t` is the amount "
@@ -15148,7 +15146,7 @@ msgid ""
 msgstr ""
 "この特性を利用すれば、船を**X軸**に沿って移動させることで簡単に前進できます。角度計算や三角関数を気にする必要もありません。Godotでこれを実現するに"
 "は、すべての[{{< gd-icon Node2D "
-">}}`Node2D`]([https://link](https://docs.godotengine.org/ja/latest/classes/cla"
+">}}`Node2D`]([https://link](https://docs.godotengine.org/en/latest/classes/cla"
 "ss_node2d.html))派生ノードで利用できる`transform`プロパティを使用します。"
 
 #: Math/transforms.md
@@ -15271,8 +15269,9 @@ msgstr ""
 #: Math/transforms.md
 msgid ""
 "Let's use the example of an object in the 2D plane and convert mouse clicks "
-"(global space) into coordinates relative to the object:"
-msgstr "2次元平面上のオブジェクトを例に取り、マウスクリック座標（グローバル空間）をオブジェクト相対座標に変換する方法を説明します。"
+" (global space) into coordinates relative to the object:"
+msgstr ""
+"2次元平面上のオブジェクトを例に取り、マウスクリック座標（グローバル空間）をオブジェクト相対座標に変換する方法を説明します。"
 
 #: Math/transforms.md
 msgid "![alt](/godot_recipes/4.x/img/0_2d_rocket1.png?width=250px)"
@@ -15525,7 +15524,6 @@ msgid ""
 "forget to convert them to strings! For example, to update a label with a "
 "given numerical value:"
 msgstr ""
-
 "* `text` - "
 "このプロパティはラベルの表示内容を決定します。コード内で変更することで、ラベルに表示させる内容を更新できます。数値を表示する場合は、必ず文字列に変換してくだ"
 "さい！例えば、指定された数値値でラベルを更新する場合："
@@ -15538,7 +15536,6 @@ msgid ""
 "movement styles. Below, each icon's `position` is tweened over the same range "
 "and timeframe:"
 msgstr ""
-
 "The 'trans_type' parameter allows you to select which *transition type* you "
 "want to use in your interpolation. This specifies the mathematical formula "
 "used to calculate property values for each frame. Different types produce "
@@ -15883,6 +15880,12 @@ msgstr "・ `add_point()` / `remove_point()` / `clear_points()`"
 msgid "![alt](/godot_recipes/3.x/img/kyn_path2d_02.png)"
 msgstr "![alt](/godot_recipes/3.x/img/kyn_path2d_02.png)"
 
+#: kyn/path2d.md kyn/raycast2d.md
+msgid "{{< youtube Lx2d5cgMj5U >}} -->"
+msgstr ""
+"</details>\n"
+"    <!-- End of YouTube video embed -->"
+
 #: kyn/path2d.md
 msgid ""
 "By itself, a {{< gd-icon Path2D >}}`Path2D` doesn't have much functionality. "
@@ -15941,17 +15944,6 @@ msgstr "・ `get_closest_offset()`"
 msgid "## Example"
 msgstr "## 例"
 
-#: kyn/path2d.md kyn/raycast2d.md
-msgid "{{< youtube Lx2d5cgMj5U >}} -->"
-msgstr ""
-"</details>\n"
-"    <!-- End of YouTube video embed -->"
-
-#: kyn/path2d.md
-#, fuzzy
-msgid "Most useful properties:"
-msgstr "ノードプロパティを調整："
-
 #: kyn/path2d.md
 msgid ""
 "If you need to manipulate the path's points in code, these functions will "
@@ -15987,6 +15979,8 @@ msgid ""
 "ml) contains the details, but here are a few useful methods that you may want "
 "to use:"
 msgstr ""
+"パスのデータはこのリソースオブジェクトに保持されています。これには曲線の数学的表現が含まれており、そのデータと対話するためのいくつかの方法が提供されています。"
+"[APIドキュメント](https://docs.godotengine.org/en/stable/classes/class_curve2d.html)に詳細が記載されていますが、ここでは特に役立ついくつかのメソッドを紹介します。"
 
 #: kyn/path2d.md
 msgid ""
@@ -16004,13 +15998,17 @@ msgid ""
 "Steering](/godot_recipes/3.x/ai/context_map/) recipe:"
 msgstr "以下の例を[AI：コンテキストベース制御]レシピからご覧ください。"
 
+#: kyn/path2d.md
+#, fuzzy
+msgid "Most useful properties:"
+msgstr "ノードプロパティを調整："
+
 #: kyn/rigidbody2d.md
 msgid ""
-"The body’s behavior is also affected by the world, via the Project Settings -"
-"> Physics properties, or by entering an {{< gd-icon Area2D >}}`Area2D` that "
-"is overriding the global physics properties."
-msgstr ""
 "// プロジェクト設定 > 物理プロパティ経由、またはグローバル物理特性を上書きする {{< gd-icon Area2D >}}`Area2D` "
+"に進入することで、オブジェクトの動作は世界からも影響を受けます。"
+msgstr ""
+"プロジェクト設定の物理プロパティ、またはグローバル物理特性を上書きする {{< gd-icon Area2D >}}`Area2D` "
 "に進入することで、オブジェクトの動作は世界からも影響を受けます。"
 
 #: kyn/rigidbody2d.md
@@ -16262,19 +16260,6 @@ msgstr ""
 "硬い物体をより直接的に制御する必要があるケースもあります。例えば、クラシックゲーム『Asteroids』のリメイクを作ろうとしている場合を考えてみましょう。"
 "プレイヤーの宇宙船は左右矢印キーで回転させ、上矢印が押されたときに前進するようにしなければなりません。"
 
-#: kyn/rigidbody2d.md
-msgid ""
-"{{% notice warning %}}\n"
-"Setting a {{< gd-icon RigidBody2D >}}`RigidBody2D`'s physical properties, "
-"such as `position` or `linear_velocity` directly will not work correctly. The "
-"physics engine controls these values.\n"
-"{{% /notice %}}"
-msgstr ""
-"{{% notice warning %}}\n"
-"`position` や `linear_velocity` などの `RigidBody2D` "
-"の物理特性を直接設定しようとすると正しく動作しません。これらの値は物理エンジンによって管理されています。\n"
-"{{% /notice %}}"
-
 #: kyn/rigidbody2d.md physics/Godot3_KYN_rigidbody1.md
 msgid "To add force to a rigid body, you have two functions to choose from:"
 msgstr "剛性体に力を加えるには、以下の2つの関数から選択できます。"
@@ -16350,10 +16335,10 @@ msgid ""
 "[Transform2D](http://docs.godotengine.org/en/stable/classes/class_transform2d."
 "html)."
 msgstr ""
-"// _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの "
+" _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの "
 "[Physics2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class"
 "_physics2ddirectbodystate.html) を安全に変更できるからです。\n"
-"// 関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの "
+" 関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの "
 "[Transform2D](http://docs.godotengine.org/en/stable/classes/class_transform2d."
 "html) に関する情報です。"
 
@@ -16432,12 +16417,6 @@ msgstr "* `get_collider()`"
 
 #: kyn/raycast2d.md
 msgid ""
-"Add a {{< gd-icon RayCast2D >}}`RayCast2D` node and take a look at the "
-"Inspector:"
-msgstr "{{< gd-icon RayCast2D >}}`RayCast2D`ノードを追加し、インスペクターを確認してみましょう。"
-
-#: kyn/raycast2d.md
-msgid ""
 "Fast-moving projectiles often have the problem of \"tunneling\" through "
 "obstacles - they are moving too fast for the collision to be detected in a "
 "single frame. As an alternative, you can use a {{< gd-icon RayCast2D "
@@ -16500,16 +16479,16 @@ msgid "![alt](/godot_recipes/4.x/img/kyn_raycast2d_01_4.png)"
 msgstr "![alt](/godot_recipes/4.x/img/kyn_raycast2d_01_4.png)"
 
 #: kyn/raycast2d.md
+msgid "* `is_colliding()`"
+msgstr "* `is_colliding()`"
+
+#: kyn/raycast2d.md
 msgid "Boolean function, lets you know if the ray is colliding with something."
 msgstr "ブール型関数。レイが何らかの物体と衝突しているかどうかを判定します。"
 
 #: kyn/raycast2d.md
 msgid "![alt](/godot_recipes/4.x/img/kyn_raycast2d_04.gif)"
 msgstr "![alt](/godot_recipes/4.x/img/kyn_raycast2d_04.gif)"
-
-#: kyn/raycast2d.md
-msgid "* `is_colliding()`"
-msgstr "* `is_colliding()`"
 
 #: kyn/raycast2d.md
 msgid "* `get_collision_normal()`"
@@ -16909,7 +16888,8 @@ msgid ""
 "    <!-- See [Melee attacks](/godot_recipes/4.x/animation/melee_attacks/) for "
 "how to make melee attacks. -->"
 msgstr ""
-"<!-- 近接攻撃の作成方法については、[こちらを参照](/godot_recipes/4.x/animation/melee_attacks/) "
+"この状態では、プレイヤーが近接攻撃の範囲内にいるため、敵は移動を停止し、攻撃を実行します。\n"
+"    <!-- 近接攻撃の作成方法については、[こちらを参照](/godot_recipes/4.x/animation/melee_attacks/) "
 "ください -->"
 
 #: ai/changing_behaviors.md
@@ -16918,7 +16898,9 @@ msgid ""
 "there's no path assigned).\n"
 "    <!-- See [Path following](/godot_recipes/4.x/ai/path_follow/) for "
 "details. -->"
-msgstr "<!-- 詳細は[経路追従](/godot_recipes/4.x/ai/path_follow/)を参照してください -->"
+msgstr ""
+"「パトロール」状態では、事前に定義された経路に沿って移動します（経路が割り当てられていない場合は静止します）。\n"
+"    <!-- 詳細は[経路追従](/godot_recipes/4.x/ai/path_follow/)を参照してください -->"
 
 #: ai/changing_behaviors.md
 msgid ""
@@ -17061,15 +17043,6 @@ msgstr "必要になるのが「追跡ミサイル」です。これは移動す
 
 #: ai/homing_missile.md
 msgid ""
-"The node setup and behavior of the missile is the same you would use for a "
-"\"dumb\" bullet. If you're creating many bullet types, you can use "
-"inheritance to base all your projectiles on the same core setup."
-msgstr ""
-"ノードの設定とミサイルの挙動は、従来の「単純な」弾丸と同様の仕組みを採用しています。複数種類の弾丸を作成する場合、継承機能を活用してすべてのプロジェクトイル"
-"を共通の基本設定に基づいて構築することができます。"
-
-#: ai/homing_missile.md
-msgid ""
 "<video controls src='/godot_recipes/4.x/img/homing_missiles.webm'></video>"
 msgstr ""
 "<video controls src='/godot_recipes/4.x/img/homing_missiles.webm'></video>"
@@ -17206,7 +17179,7 @@ msgstr "要約すると："
 
 #: ai/context_map.md
 msgid "For example, with 32 rays, the `interest` would look like this:"
-msgstr "例如，使用32条光线时，“兴趣”效果如下："
+msgstr "例えば、使用する光線が32本の場合、`interest`は以下のようになります。"
 
 #: ai/context_map.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_05.png)"
@@ -17259,7 +17232,7 @@ msgstr "コンテキストに基づく操縦支援"
 msgid ""
 "Rather than a danger item canceling the interest, it could *add* to the "
 "interest in the opposite direction."
-msgstr "危険商品が金利をキャンセルするのではなく、むしろ逆方向に**加算**する可能性もあります。"
+msgstr "危険な要素が関心を打ち消すのではなく、逆方向への関心を*高める*ことも考えられます。"
 
 #: ai/context_map.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_06.png)"
@@ -17371,9 +17344,7 @@ msgid ""
 "`Physics2DDirectSpaceState`, we cast a ray in each direction. If there's a "
 "hit, we add a `1` in that spot."
 msgstr ""
-"Now we can populate the `danger` array. Using the "
-"`Physics2DDirectSpaceState`, we cast a ray in each direction. If there's a "
-"hit, we add a `1` in that spot."
+"次に、`danger`配列を埋めます。`Physics2DDirectSpaceState`を使用して、各方向にレイをキャストします。衝突があった場合、その位置に`1`を追加します。"
 
 #: ai/context_map.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_11.png)"
@@ -17523,7 +17494,7 @@ msgstr ""
 msgid ""
 "This method is very flexible and can be extended to produce a wide variety of "
 "complex-looking behaviors. It"
-msgstr "この方法は非常に柔軟性が高く、拡張性に優れており、複雑に見える様々な動作を生成することができます。具体的には："
+msgstr "この方法は非常に柔軟性が高く拡張性に優れており、以下のように複雑かつ多様な動作を生成できます。"
 
 #: ai/context_map.md
 msgid ""
@@ -22659,7 +22630,7 @@ msgid ""
 "[OpenSimplexNoise](https://docs.godotengine.org/en/latest/classes/class_opensi"
 "mplexnoise.html) class."
 msgstr ""
-"ノイズ、より具体的には*勾配ノイズ*とは、より自然な見た目の「ランダム」パターンを生成するための手法です。これを実現するためにGodotでは、[OpenSi"
+"ノイズ（特に*勾配ノイズ*）とは、より自然な見た目の「ランダム」パターンを生成するための手法です。これを実現するためにGodotでは、[OpenSi"
 "mplexNoise](https://docs.godotengine.org/ja/latest/classes/class_opensimplexno"
 "ise.html)クラスが提供されています。"
 
@@ -24833,7 +24804,7 @@ msgid ""
 "car a maximum speed - the point where the force from the engine can't "
 "overcome the drag force any longer."
 msgstr ""
-"これは、低速走行時には摩擦抵抗がより顕著になる一方、高速域では空気抵抗が支配的になることを意味します。これら両方の力を計算に含めます。さらに、これらの量の値"
+"これにより、低速走行時には摩擦抵抗がより顕著になる一方、高速域では空気抵抗が支配的になります。これら両方の力を計算に含めます。さらに、これらの量の値"
 "は、車の最高速度――エンジン出力がもはや空気抵抗に打ち勝てなくなる点――を示す指標にもなります。"
 
 #: 2D/car_steering.md
