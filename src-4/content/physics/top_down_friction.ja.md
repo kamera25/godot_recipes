@@ -21,13 +21,13 @@ var velocity = Vector2()
 
 func get_input():
     var input = Vector2()
-    if 入力.is_action_pressed('right'):
+    if Input.is_action_pressed('right'):
         input.x += 1
-    if 入力.is_action_pressed('left'):
+    if Input.is_action_pressed('left'):
         input.x -= 1
-    if 入力.is_action_pressed('down'):
+    if Input.is_action_pressed('down'):
         input.y += 1
-    if 入力.is_action_pressed('up'):
+    if Input.is_action_pressed('up'):
         input.y -= 1
     return input
 

@@ -34,24 +34,25 @@ def translate_content(content, translations):
     # Sort translations by length descending
     sorted_keys = sorted(translations.keys(), key=len, reverse=True)
     
-    # We need to be careful with how md_gettext.py extracts blocks.
-    # It removes YAML frontmatter and code blocks, then splits by \n\n.
-    # Here we just do a direct replacement of known strings.
+    # Identify and protect frontmatter and code blocks
+    protected_blocks = []
     
-    # One issue is that the strings in PO might have been normalized or have diff line breaks.
-    # But based on output.po view, they seem to match the literal content but with \n.
+    def protect(match):
+        placeholder = f"__PROTECTED_BLOCK_{len(protected_blocks)}__"
+        protected_blocks.append(match.group(0))
+        return placeholder
+
+    # Protect code blocks (```)
+    content = re.sub(r'```.*?```', protect, content, flags=re.DOTALL)
     
+    # Perform translation replacement on the masked content
     for msgid in sorted_keys:
         if msgid in content:
             content = content.replace(msgid, translations[msgid])
-        else:
-            # Try matching with normalized whitespace if direct match fails?
-            # Actually, let's see why it failed for the notice block.
-            # The msgid in PO: 
-            # "{{% notice style=\"tip\" title=\"Godot 4.0\"%}}\n**Godot 4.0 has been released!**<br>\n..."
-            # The md content:
-            # "{{% notice style=\"tip\" title=\"Godot 4.0\"%}}\n**Godot 4.0 has been released!**<br>\n..."
-            pass
+            
+    # Restore protected blocks
+    for i, block in enumerate(protected_blocks):
+        content = content.replace(f"__PROTECTED_BLOCK_{i}__", block)
             
     return content
 

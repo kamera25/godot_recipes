@@ -62,7 +62,7 @@ extends Sprite2D
 var target
 
 func _input(event):
-    if event is 入力EventMouseButton and event.pressed:
+    if event is InputEventMouseButton and event.pressed:
         target = event.position
 
 func _process(delta):

@@ -23,7 +23,7 @@ AbilityButton: {{< gd-icon TextureButton >}} TextureButton
    Sweep: {{< gd-icon TextureProgressBar >}} TextureProgress
    {{< gd-icon Timer >}} Timer
    Counter: {{< gd-icon MarginContainer >}} MarginContainer
-      Value: {{< gd-icon ラベル >}} ラベル
+      Value: {{< gd-icon Label >}} Label
 ```
 
 選択したアイコンを `AbilityButton` の **Textures/Normal** プロパティにドロップしてください。

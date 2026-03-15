@@ -28,7 +28,7 @@ signal clicked
 var held = false
 
 func _on_input_event(viewport, event, shape_idx):
-    if event is 入力EventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+    if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
         if event.pressed:
             print("clicked")
             clicked.emit(self)
@@ -91,9 +91,9 @@ func _on_pickable_clicked(object):
 
 ```gdscript
 func _unhandled_input(event):
-    if event is 入力EventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+    if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
         if held_object and !event.pressed:
-            held_object.drop(入力.get_last_mouse_velocity())
+            held_object.drop(Input.get_last_mouse_velocity())
             held_object = null
 ```
 

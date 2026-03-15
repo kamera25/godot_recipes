@@ -57,7 +57,7 @@ func shoot():
 この関数を呼び出せるのは、プレイヤーがキーを押している時です。`_process()` 関数の末尾、`position.clamp()` 行の後にこれを追加してください。
 
 ```gdscript
-if 入力.is_action_pressed("shoot"):
+if Input.is_action_pressed("shoot"):
     shoot()
 ```
 

@@ -16,18 +16,18 @@ draft: false
 
 ```gdscript
 func _ready():
-    入力Map.add_action("attack")
-    var ev = 入力EventKey.new()
+    InputMap.add_action("attack")
+    var ev = InputEventKey.new()
     ev.keycode = KEY_SPACE
-    入力Map.action_add_event("attack", ev)
+    InputMap.action_add_event("attack", ev)
 ```
 
 左マウスボタンも同じ操作に追加したい場合は：
 
 ```gdscript
-ev = 入力EventMouseButton.new()
+ev = InputEventMouseButton.new()
 ev.button_index = MOUSE_BUTTON_LEFT
-入力Map.action_add_event("attack", ev)
+InputMap.action_add_event("attack", ev)
 ```
 
 {{% notice note %}}
@@ -51,12 +51,12 @@ func _ready():
 func add_inputs():
     var ev
     for action in controls:
-        if not 入力Map.has_action(action):
-            入力Map.add_action(action)
+        if not InputMap.has_action(action):
+            InputMap.add_action(action)
         for key in controls[action]:
-            ev = 入力EventKey.new()
+            ev = InputEventKey.new()
             ev.keycode = key
-            入力Map.action_add_event(action, ev)
+            InputMap.action_add_event(action, ev)
 ```
 
 ## 関連レシピ

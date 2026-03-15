@@ -33,7 +33,7 @@ extends CharacterBody2D
 var speed = 400  # speed in pixels/sec
 
 func _physics_process(delta):
-    var direction = 入力.get_vector("left", "right", "up", "down")
+    var direction = Input.get_vector("left", "right", "up", "down")
     velocity = direction * speed
 
     move_and_slide()
@@ -50,8 +50,8 @@ var speed = 400  # move speed in pixels/sec
 var rotation_speed = 1.5  # turning speed in radians/sec
 
 func _physics_process(delta):
-    var move_input = 入力.get_axis("down", "up")
-    var rotation_direction = 入力.get_axis("left", "right")
+    var move_input = Input.get_axis("down", "up")
+    var rotation_direction = Input.get_axis("left", "right")
     velocity = transform.x * move_input * speed
     rotation += rotation_direction * rotation_speed * delta
     move_and_slide()
@@ -72,7 +72,7 @@ var speed = 400  # move speed in pixels/sec
 
 func _physics_process(delta):
     look_at(get_global_mouse_position())
-    var move_input = 入力.get_axis("down", "up")
+    var move_input = Input.get_axis("down", "up")
     velocity = transform.x * move_input * speed
     move_and_slide()
 ```
@@ -85,7 +85,7 @@ func _physics_process(delta):
 extends CharacterBody2D
 
 var speed = 400  # move speed in pixels/sec
-var ターゲット = null;
+var target = null
 
 func _input(event):
     if event.is_action_pressed("click"):

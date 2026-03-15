@@ -52,10 +52,10 @@ var rotation_speed = PI/2
 
 func get_input_keyboard(delta):
     # Rotate outer gimbal around y axis
-    var y_rotation = 入力.get_axis("cam_left", "cam_right")
+    var y_rotation = Input.get_axis("cam_left", "cam_right")
     rotate_object_local(Vector3.UP, y_rotation * rotation_speed * delta)
     # Rotate inner gimbal around local x axis
-    var x_rotation = 入力.get_axis("cam_up", "cam_down")
+    var x_rotation = Input.get_axis("cam_up", "cam_down")
     x_rotation = -x_rotation if invert_y else x_rotation
     inner.rotate_object_local(Vector3.RIGHT, x_rotation * rotation_speed * delta)
 
@@ -90,7 +90,7 @@ var mouse_control = false
 var mouse_sensitivity = 0.005
 
 func _unhandled_input(event):
-    if mouse_control and event is 入力EventMouseMotion:
+    if mouse_control and event is InputEventMouseMotion:
         if event.relative.x != 0:
             var dir = 1 if invert_x else -1
             rotate_object_local(Vector3.UP, dir * event.relative.x * mouse_sensitivity)
@@ -186,14 +186,14 @@ var zoom = 1.5
 @onready var inner = $InnerGimbal
 
 func _unhandled_input(event):
-    if 入力.mouse_mode != 入力.MOUSE_MODE_CAPTURED:
+    if Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
         return
     if event.is_action_pressed("cam_zoom_in"):
         zoom -= zoom_speed
     if event.is_action_pressed("cam_zoom_out"):
         zoom += zoom_speed
     zoom = clamp(zoom, min_zoom, max_zoom)
-    if mouse_control and event is 入力EventMouseMotion:
+    if mouse_control and event is InputEventMouseMotion:
         if event.relative.x != 0:
             var dir = 1 if invert_x else -1
             rotate_object_local(Vector3.UP, dir * event.relative.x * mouse_sensitivity)
@@ -204,10 +204,10 @@ func _unhandled_input(event):
 
 func get_input_keyboard(delta):
     # Rotate outer gimbal around y axis
-    var y_rotation = 入力.get_axis("cam_left", "cam_right")
+    var y_rotation = Input.get_axis("cam_left", "cam_right")
     rotate_object_local(Vector3.UP, y_rotation * rotation_speed * delta)
     # Rotate inner gimbal around local x axis
-    var x_rotation = 入力.get_axis("cam_up", "cam_down")
+    var x_rotation = Input.get_axis("cam_up", "cam_down")
     x_rotation = -x_rotation if invert_y else x_rotation
     inner.rotate_object_local(Vector3.RIGHT, x_rotation * rotation_speed * delta)
 

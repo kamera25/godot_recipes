@@ -27,7 +27,7 @@ ghcommentid: 47
 
 ```gdscript
 func _unhandled_input(event):
-    if event is 入力EventMouseButton:
+    if event is InputEventMouseButton:
         if event.button_index == BUTTON_LEFT:
             if event.pressed:
                 print("Left button was clicked at ", event.position)
@@ -48,6 +48,6 @@ func _unhandled_input(event):
 var mouse_sensitivity = 0.002
 
 func _unhandled_input(event):
-    if event is 入力EventMouseMotion:
+    if event is InputEventMouseMotion:
         rotate_y(-event.relative.x * mouse_sensitivity)
 ```

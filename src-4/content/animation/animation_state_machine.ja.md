@@ -68,7 +68,7 @@ var attacks = ["attack1", "attack2"]
 var velocity = Vector2.ZERO
 
 func _ready():
-    state_machine = $アニメーションTree.get("parameters/playback")
+    state_machine = $AnimationTree.get("parameters/playback")
 ```
 
 `state_machine` は状態マシンへの参照を保持しており、これは `アニメーションNodeStateMachinePlayback` 型です。特定のアニメーションを呼び出すには `travel()` メソッドを使用し、これにより指定されたアニメーションへの接続が辿られます。
@@ -93,21 +93,21 @@ func die():
 func get_input():
     var current = state_machine.get_current_node()
     velocity = Vector2.ZERO
-    if 入力.is_action_just_pressed("big_attack"):
+    if Input.is_action_just_pressed("big_attack"):
         state_machine.travel("attack1 2")
         return
-    if 入力.is_action_just_pressed("attack"):
+    if Input.is_action_just_pressed("attack"):
         state_machine.travel(attacks[randi() % 2])
         return
-    if 入力.is_action_pressed("move_right"):
+    if Input.is_action_pressed("move_right"):
         velocity.x += 1
         $Sprite.scale.x = 1
-    if 入力.is_action_pressed("move_left"):
+    if Input.is_action_pressed("move_left"):
         velocity.x -= 1
         $Sprite.scale.x = -1
-    if 入力.is_action_pressed("move_up"):
+    if Input.is_action_pressed("move_up"):
         velocity.y -= 1
-    if 入力.is_action_pressed("move_down"):
+    if Input.is_action_pressed("move_down"):
         velocity.y += 1
     velocity = velocity.normalized() * run_speed
     if velocity.length() != 0:

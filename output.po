@@ -5961,7 +5961,7 @@ msgstr "`speed` は戦車の移動速度（前進/後退）を、`rot_speed` は
 
 #: 3D/kinematic_body.md
 msgid "You need a player-controlled 3D kinematic body."
-msgstr "プレイヤー操作可能な3Dキネマティックボディが必要です。"
+msgstr "プレイヤー操作可能な3Dキネマティックボディが要ります。"
 
 #: 3D/characterbody3d_examples.md 3D/kinematic_body.md
 msgid "Now let's add a script, starting with the required variables:"
@@ -29942,7 +29942,7 @@ msgid ""
 "* [Interpolated Camera](/godot_recipes/4.x/3d/interpolated_camera/)\n"
 "* [Platform Character](/godot_recipes/4.x/2d/platform_character/)"
 msgstr ""
-"* [マルチターゲットカメラ](/godot_recipes/4.x/ja/2d/multitarget_camera/)\n"
+"<!-- この記事は存在しない * [マルチターゲットカメラ](/godot_recipes/4.x/ja/2d/multitarget_camera/) -->\n"
 "* [キャラクターとリジッドボディの相互作用](/godot_recipes/4.x/ja/physics/character_vs_rigid/)\n"
 "* "
 "[CharacterBody3D：サーフェスに沿わせる動作](/godot_recipes/4.x/ja/3d/3d_align_surface/)\n"

@@ -16,9 +16,9 @@ Godot 4での最も大きな変化の一つは、ノード名、関数名、プ�
 
 * 最も人気のあるノードの1つである `KinematicBody` が、{{< gd-icon CharacterBody2D >}}`CharacterBody2D`/{{< gd-icon CharacterBody3D >}}`CharacterBody3D` に名称変更されました。このノードに関するAPIの変更点については、以下をご覧ください。
 
-* `{{< gd-icon PackedScene >}}`PackedScene` の `instance()` 関数は `instantiate()` に改名されました
+* {{< gd-icon PackedScene >}}`PackedScene` の `instance()` 関数は `instantiate()` に改名されました
 
-- 位置プロパティ（`position`）およびグローバル位置プロパティ（`global_position`）は、3D空間において従来の翻訳プロパティ（`translation`）とグローバルな翻訳プロパティ（`global_translation`）に取って代わり、2Dとの一貫性が保たれます。
+* `position`および`global_position`プロパティは、3D空間において従来の`translation`と`global_translation`に取って代わり、2Dとの一貫性が保たれます。
 
 ## シグナルと呼び出し可能オブジェクト
 
@@ -79,7 +79,7 @@ Godot 3.5 で `SceneTreeTween` を使い始めた場合、Godot 4.0 の {{< gd-i
 
 ```gdscript
 var space = get_world_3d().direct_space_state
-var ray = 物理RayQueryParameters3D.create(position, destination)
+var ray = PhysicsRayQueryParameters3D.create(position, destination)
 var collision = space.intersect_ray(ray)
 if collision:
     print("ray collided")
