@@ -1,5 +1,5 @@
 ---
-title: "插值"
+title: "補間"
 weight: 1
 draft: false
 ghcommentid: 64
@@ -27,22 +27,7 @@ x = lerp(30, 2, 0.75)  # x is 9
 
 この手法が「線形補間」と呼ばれる理由は、2点間の経路が直線であるためです。
 
-const elapsedTime = Time.deltaTime;
-const duration = 0.5; // 2秒のアニメーション期間
-
-function lerpScaleAndFade(node, startSize, endSize) {
-    let scaleFactor = Mathf.Lerp(startSize, endSize, elapsedTime / duration);
-    node.scale = Vector3.one * scaleFactor;
-
-    // 2秒間かけて徐々に透明化（不透明度0〜1）
-    const fadeDuration = 0.2; // 1秒のフェード期間
-    const currentFadeValue = Mathf.Lerp(0, 1, elapsedTime / fadeDuration);
-    node.modulate.a = Mathf.LerpAmplitude(currentFadeValue, startSize, endSize);
-}
-
-// 2秒間かけてスプライトを5倍に拡大しながら徐々に透明化
-lerpScaleAndFade("MySprite", 1.0, 5.0);
-
+ノードのプロパティを`lerp()`でアニメーション化することができます。例えば、経過時間を希望する持続時間で割ると、0から1の間の値が得られ、これを使ってプロパティを滑らかに変化させることができます。このスクリプトでは、スプライトを開始サイズの5倍まで拡大しつつ、2秒間かけて徐々にフェードアウトさせます（`modulate.a`を使用して)。
 
 ```gdscript
 extends Sprite2D

@@ -4090,7 +4090,7 @@ msgstr "- [ラベル](/godot_recipes/3.x/ui/labels)"
 msgid ""
 "When *Fill* is disabled and *Expand* is enabled, the control remains at the "
 "center of its area, rather than the beginning."
-msgstr "「＊フィル」が無効で「＊拡張」が有効になっている場合、コントロールはエリアの先頭ではなく、中央に配置されたままになります。"
+msgstr "「* フィル」が無効で「* 拡張」が有効になっている場合、コントロールはエリアの先頭ではなく、中央に配置されたままになります。"
 
 #: ui/containers.md
 msgid "This container places keeps its children centered."
@@ -4242,7 +4242,7 @@ msgstr "これらの設定を試すには、以下のようなテストシーン
 
 #: ui/containers.md
 msgid "* Shrink End"
-msgstr "＊ エンドシール部の縮小"
+msgstr "*  エンドシール部の縮小"
 
 #: ui/containers.md
 msgid "![alt](/godot_recipes/3.x/img/ui_flags_example02.gif)"
@@ -14827,7 +14827,7 @@ msgstr "## 数値補間処理"
 
 #: Math/interpolation.md
 msgid "Interpolation"
-msgstr "插值"
+msgstr "補間"
 
 #: Math/interpolation.md
 msgid ""
@@ -14837,24 +14837,7 @@ msgid ""
 "sprite up to five times its starting size while fading it out (using "
 "`modulate.a`) over two seconds:"
 msgstr ""
-
-"const elapsedTime = Time.deltaTime;\n"
-"const duration = 0.5; // 2秒のアニメーション期間\n"
-"\n"
-"function lerpScaleAndFade(node, startSize, endSize) {\n"
-"    let scaleFactor = Mathf.Lerp(startSize, endSize, elapsedTime / "
-"duration);\n"
-"    node.scale = Vector3.one * scaleFactor;\n"
-"\n"
-"    // 2秒間かけて徐々に透明化（不透明度0〜1）\n"
-"    const fadeDuration = 0.2; // 1秒のフェード期間\n"
-"    const currentFadeValue = Mathf.Lerp(0, 1, elapsedTime / fadeDuration);\n"
-"    node.modulate.a = Mathf.LerpAmplitude(currentFadeValue, startSize, "
-"endSize);\n"
-"}\n"
-"\n"
-"// 2秒間かけてスプライトを5倍に拡大しながら徐々に透明化\n"
-"lerpScaleAndFade(\"MySprite\", 1.0, 5.0);\n"
+"ノードのプロパティを`lerp()`でアニメーション化することができます。例えば、経過時間を希望する持続時間で割ると、0から1の間の値が得られ、これを使ってプロパティを滑らかに変化させることができます。このスクリプトでは、スプライトを開始サイズの5倍まで拡大しつつ、2秒間かけて徐々にフェードアウトさせます（`modulate.a`を使用して)。"
 
 
 #: Math/interpolation.md
@@ -15307,11 +15290,11 @@ msgstr ""
 
 #: Math/_index.md
 msgid "Gamedev Math"
-msgstr "ゲーム開発数学"
+msgstr "ゲーム数学"
 
 #: Math/_index.md
 msgid "# <i class='fas fa-calculator'></i>&nbsp;Gamedev Math"
-msgstr "# <i class='fas fa-calculator'></i>&nbsp;ゲーム開発数学"
+msgstr "# <i class='fas fa-calculator'></i>&nbsp;ゲーム数学"
 
 #: Math/_index.md
 msgid ""
@@ -15529,7 +15512,7 @@ msgid ""
 "displayed. For example setting `0.5` would show half of the contents. Try "
 "animating this value to create a \"typewriter\" effect."
 msgstr ""
-"＊ `percent_visible` - このプロパティは表示する文字数を制限します。例えば値を `0.5` "
+"*  `percent_visible` - このプロパティは表示する文字数を制限します。例えば値を `0.5` "
 "に設定するとコンテンツの半分が表示されます。この値をアニメーション化することで「タイプライター効果」を作成できます。"
 
 #: kyn/label.md
@@ -16401,7 +16384,7 @@ msgstr "![alt](/godot_recipes/4.x/img/kyn_raycast2d_03.png)"
 
 #: kyn/raycast2d.md
 msgid "* `get_collision_point()`"
-msgstr "＊ `get_collision_point()` 関数"
+msgstr "*  `get_collision_point()` 関数"
 
 #: kyn/raycast2d.md
 msgid "## {{< gd-icon RayCast2D >}}RayCast2D"
@@ -16430,7 +16413,7 @@ msgstr "このプロパティにより、レイは親オブジェクトとの衝
 
 #: kyn/raycast2d.md
 msgid "* **Enabled**"
-msgstr "* **有効化済**"
+msgstr "* **Enabled**"
 
 #: kyn/raycast2d.md
 msgid ""
@@ -16552,11 +16535,11 @@ msgstr ""
 
 #: kyn/raycast2d.md
 msgid "* **Exclude Parent**"
-msgstr "* **親ノードを除外**"
+msgstr "* **Exclude Parent**"
 
 #: kyn/raycast2d.md
 msgid "* **Target Position**"
-msgstr "＊ 目標位置"
+msgstr "* **Target Position**"
 
 #: kyn/raycast2d.md
 msgid "#### 1. Shooting"
@@ -17482,7 +17465,7 @@ msgstr "### コード例"
 
 #: ai/context_map.md
 msgid "* Avoidance"
-msgstr "＊回避策："
+msgstr "* 回避策："
 
 #: ai/context_map.md
 msgid "In this case, the `interest` array would look like this:"
@@ -17844,7 +17827,7 @@ msgstr ""
 msgid ""
 "You can also use optional *hints* to assist in setting the value in the "
 "Inspector."
-msgstr "インスペクターで値を設定する際に補助として使用できるオプションの＊ヒント＊も利用できます。"
+msgstr "インスペクターで値を設定する際に補助として使用できるオプションの* ヒント* も利用できます。"
 
 #: shaders/intro.md
 msgid "#### Varying with time"
@@ -22377,7 +22360,7 @@ msgid ""
 "<!-- - [Top-down character](/godot_recipes/3.x/2d/topdown_movement/) -->\n"
 "- [Gamedev Math: transforms](/godot_recipes/4.x/math/transforms/)\n"
 "<!-- - [AI: Homing missiles](/godot_recipes/3.x/ai/homing_missile/) -->"
-msgstr "- [ゲーム開発数学：トランスフォーム操作](/godot_recipes/4.x/math/transforms/)"
+msgstr "- [ゲーム数学：トランスフォーム操作](/godot_recipes/4.x/math/transforms/)"
 
 #: 2D/2d_shooting.md
 msgid ""
@@ -23627,7 +23610,7 @@ msgid ""
 msgstr ""
 "{{% notice tip "
 "%}}\n"
-"線形補間の概要については、[ゲーム開発数学：補間](/godot_recipes/4.x/ja/math/interpolation/)をご覧ください。\n"
+"線形補間の概要については、[ゲーム数学：補間](/godot_recipes/4.x/ja/math/interpolation/)をご覧ください。\n"
 "{{% /notice %}}"
 
 #: 2D/platform_character.md
@@ -25039,7 +25022,7 @@ msgstr ""
 
 #: 2D/car_steering.md
 msgid "- [Gamedev Math: Interpolation](/godot_recipes/4.x/math/interpolation/)"
-msgstr "- [ゲーム開発数学：補間法](/godot_recipes/4.x/ja/math/interpolation/)"
+msgstr "- [ゲーム数学：補間](/godot_recipes/4.x/ja/math/interpolation/)"
 
 #: 2D/car_steering.md
 msgid "### Part 5: Drift/slide"
