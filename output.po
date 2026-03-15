@@ -1637,7 +1637,7 @@ msgstr "![alt](/godot_recipes/4.x/img/minimap_03.gif)"
 
 #: ui/minimap.md
 msgid "To illustrate this feature, we'll start with a simplified top-down game using the [Autotile recipe](/godot_recipes/4.x/2d/autotile_intro/) and a player based on the [Top-down character recipe](godot_recipes/2d/topdown_movement/#option-2-rotate-and-move). See the linked recipes for details on how these parts work."
-msgstr "この機能を説明するため、まずは[オートタイルレシピ](/godot_recipes/4.x/ja/2d/autotile_intro/)を使用した簡素なトップダウンゲームと[見下ろしキャラクター操作レシピ](godot_recipes/2d/topdown_movement/#option-2-rotate-and-move)に基づくプレイヤーから始めましょう。各コンポーネントの動作詳細については、リンク先のレシピを参照してください。"
+msgstr "この機能を説明するため、まずは[オートタイルレシピ](/godot_recipes/4.x/ja/2d/autotile_intro/)を使用した簡素な見下ろし型ゲームと[見下ろしキャラクター操作レシピ](godot_recipes/2d/topdown_movement/#option-2-rotate-and-move)に基づくプレイヤーから始めましょう。各コンポーネントの動作詳細については、リンク先のレシピを参照してください。"
 
 #: ui/minimap.md
 msgid "In `_ready()` we'll center the player's marker at the center of the grid. and calculate the scale factor. (**Note:** you'll need to connect the `resized` signal and do both of these things in the callback if you have a dynamically sized UI)."
@@ -6775,7 +6775,7 @@ msgid ""
 "- [Top-down character](http://kidscancode.org/godot_recipes/2d/topdown_movement/#option-1-8-way-movement)\n"
 "- [Controlling animation states](http://kidscancode.org/godot_recipes/animation/animation_state_machine/)"
 msgstr ""
-"[トップダウン型キャラクター制御](http://kidscancode.org/godot_recipes/2d/topdown_movement/#option-1-8-way-movement)\n"
+"[見下ろし型キャラクター制御](http://kidscancode.org/godot_recipes/2d/topdown_movement/#option-1-8-way-movement)\n"
 "[アニメーション状態の管理方法](http://kidscancancode.org/godot_recipes/animation/animation_state_machine/)"
 
 #: animation/melee_attacks.md
@@ -6836,7 +6836,7 @@ msgid ""
 "- [Top-down character](/godot_recipes/3.x/2d/topdown_movement/#option-1-8-way-movement)"
 msgstr ""
 "- [スプライトシートアニメーション](/godot_recipes/3.x/animation/spritesheet_animation/)\n"
-"- [トップダウン型キャラクター操作](/godot_recipes/3.x/2d/topdown_movement/#option-1-8-way-movement)"
+"- [見下ろし型キャラクター操作](/godot_recipes/3.x/2d/topdown_movement/#option-1-8-way-movement)"
 
 #: animation/animation_state_machine.md
 msgid "Now we can add connections. Click the \"Connect nodes\" button and drag between nodes to connect them."
@@ -15449,7 +15449,7 @@ msgstr "この操作方法では、左右でキャラクターを回転させ、
 
 #: 2D/topdown_movement.md
 msgid "Top-down movement"
-msgstr "トップダウン移動"
+msgstr "見下ろし型での移動"
 
 #: 2D/topdown_movement.md
 msgid "In this scenario, the player uses the four directional keys to move (including diagonals)."
@@ -15465,11 +15465,11 @@ msgstr "2D見下ろし方式のゲームを開発しており、キャラクタ�
 
 #: 2D/topdown_movement.md
 msgid "### Option 3: Aim with mouse"
-msgstr "### オプション3：マウスで照準を合わせる方法"
+msgstr "### その3：マウスで照準を合わせる方法"
 
 #: 2D/topdown_movement.md
 msgid "### Option 1: 8-way movement"
-msgstr "### オプション1：8方向移動方式"
+msgstr "### その1：8方向移動方式"
 
 #: 2D/topdown_movement.md
 msgid "Note that we stop moving if we get close to the target position. If you don't do this, the character will \"jiggle\" back and forth as it moves a little bit past the target, moves back, goes a little past it, and so on. Optionally, you can use `look_at()` to face in the direction of movement."
@@ -15477,7 +15477,7 @@ msgstr "ターゲット位置に近づくと移動を停止します。これを
 
 #: 2D/topdown_movement.md
 msgid "### Option 2: Rotate and move"
-msgstr "### オプション2: 回転と移動を組み合わせる場合"
+msgstr "### その2: 回転と移動を組み合わせる場合"
 
 #: 2D/topdown_movement.md
 msgid "We can solve this problem in many ways, depending on what type of behavior you're looking for."
@@ -15493,12 +15493,13 @@ msgid ""
 "`\"left\"` | A,←\n"
 "`\"click\"` | Mouse button 1"
 msgstr ""
-"アクション名 | キー\n"
-"`\"上\"` | W, ↑\n"
-"`\"下\"` | S, ↓\n"
-"`\"右\"` | D, →\n"
-"`\"左\"` | A, ←\n"
-"`\"クリック\"` | マウスボタン1"
+"アクション | キー\n"
+"--------|------\n"
+"`\"up\"` | W,↑\n"
+"`\"down\"` | S,↓\n"
+"`\"right\"` | D,→\n"
+"`\"left\"` | A,←\n"
+"`\"click\"` | マウスボタン1"
 
 #: 2D/topdown_movement.md
 msgid "We will also assume you're using a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` node."
@@ -15506,7 +15507,7 @@ msgstr "また、以下のノードを使用していると想定します。{{<
 
 #: 2D/topdown_movement.md
 msgid "### Option 4: Click and move"
-msgstr "### オプション4：クリックして移動"
+msgstr "### その4：クリックして移動"
 
 #: 2D/topdown_movement.md
 msgid ""
@@ -15876,7 +15877,7 @@ msgid ""
 "two players (one using arrow keys and the other using WASD controls). This is\n"
 "not a problem if our game world all fits on one screen, but if the map is large,\n"
 "we'll want to have a \"split screen\" view tracking the two players separately."
-msgstr "このデモでは、ローカルマルチプレイヤーゲーム――トップダウンスタイルの迷路ゲームを例に挙げましょう。このゲームでは2人のプレイヤーが参加し、一方は矢印キー、もう一方はWASDキーで操作します。これは問題ありませんが、もしゲーム世界全体が1画面に収められる程度の大きさであれば、特に問題はありません。しかし、マップが非常に広い場合、両プレイヤーを個別に表示する「分割画面」ビューが必要になるでしょう。"
+msgstr "このデモでは、ローカルマルチプレイヤーゲーム――見下ろし型の迷路ゲームを例に挙げましょう。このゲームでは2人のプレイヤーが参加し、一方は矢印キー、もう一方はWASDキーで操作します。これは問題ありませんが、もしゲーム世界全体が1画面に収められる程度の大きさであれば、特に問題はありません。しかし、マップが非常に広い場合、両プレイヤーを個別に表示する「分割画面」ビューが必要になるでしょう。"
 
 #: 2D/splitscreen_demo.md
 msgid ""
@@ -16638,7 +16639,7 @@ msgstr "次に、ボディに衝突形状を追加する必要があります。
 
 #: 2D/line_collision.md
 msgid "### Option 1: Using {{< gd-icon SegmentShape2D >}}`SegmentShape2D`"
-msgstr "### オプション 1：{{< gd-icon SegmentShape2D >}} `SegmentShape2D`の使用"
+msgstr "### その1：{{< gd-icon SegmentShape2D >}} `SegmentShape2D`の使用"
 
 #: 2D/line_collision.md
 msgid ""
@@ -16664,7 +16665,7 @@ msgstr "以下のノードをシーンに追加し、必要に応じてライン
 
 #: 2D/line_collision.md
 msgid "### Option 2: Using {{< gd-icon RectangleShape2D >}}`RectangleShape2D`"
-msgstr "### オプション2：{{< gd-icon RectangleShape2D >}}`RectangleShape2D`を使用する場合"
+msgstr "### その2：{{< gd-icon RectangleShape2D >}}`RectangleShape2D`を使用する場合"
 
 #: games/_index.md
 msgid "# <i class='fas fa-chess-pawn'></i>&nbsp;Games"

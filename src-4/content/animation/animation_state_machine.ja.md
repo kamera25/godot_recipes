@@ -123,7 +123,7 @@ func get_input():
 ## 関連レシピ
 
 - [スプライトシートアニメーション](/godot_recipes/3.x/animation/spritesheet_animation/)
-- [トップダウン型キャラクター操作](/godot_recipes/3.x/2d/topdown_movement/#option-1-8-way-movement)
+- [見下ろし型キャラクター操作](/godot_recipes/3.x/2d/topdown_movement/#option-1-8-way-movement)
 
 #### この動画が気に入ったら？
 

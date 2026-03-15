@@ -27,7 +27,7 @@ draft: false
 
 次に、ボディに衝突形状を追加する必要があります。以下の2つのオプションがあります。
 
-### オプション 1：{{< gd-icon SegmentShape2D >}} `SegmentShape2D`の使用
+### その1：{{< gd-icon SegmentShape2D >}} `SegmentShape2D`の使用
 
 {{< gd-icon SegmentShape2D >}}`SegmentShape2D` は線分衝突形状です。この手法の目的は、直線上の各点ペアに対して個別のセグメント衝突を作成することです。
 
@@ -44,7 +44,7 @@ func _ready():
         new_shape.shape = segment
 ```
 
-### オプション2：{{< gd-icon RectangleShape2D >}}`RectangleShape2D`を使用する場合
+### その2：{{< gd-icon RectangleShape2D >}}`RectangleShape2D`を使用する場合
 
 : SegmentShape2D`セグメント形状2Dは幅成分を持たないため、線の衝突判定に厚みが必要な場合には、代わりに矩形の衝突判定を使用することをお勧めします。
 
