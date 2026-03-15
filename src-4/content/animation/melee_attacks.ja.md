@@ -7,13 +7,13 @@ ghcommentid: 53
 
 ## 課題
 
-剣やパンチなどの近接攻撃を実装したいということですね。
+剣やパンチなどの近接攻撃を実装したいという。
 
 ## 解決策
 
 本例では、既に攻撃アニメーションが設定されたキャラクターが存在すると仮定します。説明のために、以下の2種類の攻撃を使用する：
 
-[画像: attack2.png]
+![alt](/godot_recipes/3.x/img/attack2.png)
 
 ![alt](/godot_recipes/3.x/img/attack1.png)
 
