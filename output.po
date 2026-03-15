@@ -746,7 +746,7 @@ msgstr ""
 
 #: basics/node_communication.md
 msgid "> `signal_name.connect(target_node.target_function)`"
-msgstr "> `signal_name.connect(ターゲットノードのターゲット関数)`"
+msgstr "> `signal_name.connect(target_node.target_function)`"
 
 #: basics/node_communication.md
 msgid ""
@@ -1781,7 +1781,7 @@ msgstr ""
 msgid ""
 "* Also in the category of 3D, the `Spatial` node is renamed to {{< gd-icon "
 "Node3D >}}`Node3D` to match."
-msgstr "* 3Dカテゴリにおいて、`空間`ノードは名称を{{< gd-icon Node3D >}}`Node3D`に統一されています"
+msgstr "* 3Dカテゴリにおいて、`Spatial`ノードは名称を{{< gd-icon Node3D >}}`Node3D`に統一されています"
 
 #: basics/migrating.md
 msgid ""
@@ -2637,7 +2637,7 @@ msgstr ""
 msgid ""
 "Next, we have two properties to interpolate: `rect_position` for the movement "
 "and `modulate.a` for the visibility."
-msgstr "次に、補間する2つのプロパティを設定します。移動用の`rect_position`と、表示制御用の`modulate.a`です。"
+msgstr "次に、補間する2つのプロパティを設定します。移動用の`position`と、表示制御用の`modulate.a`です。"
 
 #: ui/floating_text.md
 msgid ""
@@ -3169,7 +3169,7 @@ msgstr ""
 msgid ""
 "Now, to scroll the menu, we need to shift the `GridBox` by `710` pixels to "
 "the left/right."
-msgstr "さて、メニューをスクロールするには、`グリッドボックス` を左右に `710` ピクセル分シフトさせる必要があります。"
+msgstr "さて、メニューをスクロールするには、`GridBox` を左右に `710` ピクセル分シフトさせる必要があります。"
 
 #: ui/level_select.md
 msgid "### 3: Menu screen"
@@ -3280,7 +3280,7 @@ msgstr ""
 
 #: ui/cooldown_button.md
 msgid "The {{< gd-icon Timer >}}`Timer` node should be set to \"One Shot\"."
-msgstr "`タイマー`ノードの設定は「ワンショット」に設定する必要があります。"
+msgstr "`Timer`ノードの設定は「ワンショット」に設定する必要があります。"
 
 #: ui/cooldown_button.md
 msgid ""
@@ -4198,7 +4198,7 @@ msgstr "* 伸縮率"
 msgid ""
 "The solution is the {{< gd-icon Container >}}`Container`. Containers provide "
 "a lot of power in building your UI's layout."
-msgstr "解決策は `コンテナ` コンポーネントです。コンテナを活用することで、UIのレイアウト構築が大幅に効率化されます。"
+msgstr "解決策は `Container` コンポーネントです。コンテナを活用することで、UI의 layout 構築が大幅に効率化されます。"
 
 #: ui/containers.md
 msgid ""
@@ -4214,7 +4214,7 @@ msgstr "コンテナに関する最も重要なポイントは以下の通りで
 
 #: ui/containers.md
 msgid "* {{< gd-icon CenterContainer >}} `CenterContainer`"
-msgstr "* {{< gd-icon CenterContainer >}} `センターコンテナー`"
+msgstr "* {{< gd-icon CenterContainer >}} `CenterContainer`"
 
 #: ui/containers.md
 msgid ""
@@ -5501,7 +5501,7 @@ msgstr "プレイヤー／モブなどから投射物を発射させたいので
 msgid ""
 "Add a script and connect the {{< gd-icon Area3D >}}`Area`'s `body_entered` "
 "signal."
-msgstr "スクリプトを追加し、{{< gd-icon Area3D >}}`エリア`の`body_entered`シグナルに接続してください。"
+msgstr "スクリプトを追加し、{{< gd-icon Area3D >}}`Area3D`の`body_entered`シグナルに接続してください。"
 
 #: 3D/3d_shooting.md
 msgid ""
@@ -8599,7 +8599,7 @@ msgstr ""
 msgid ""
 "In the **Input Map**, we're using the following inputs: `forward`, `back`, "
 "`left`, `right`, and `jump`. Assign them to whatever keys/buttons you prefer."
-msgstr "以下のキー操作を使用しています。`前進`、`後退`、`左移動`、`右移動`、`ジャンプ`。お好みで任意のキー/ボタンに割り当ててください。"
+msgstr "以下のキー操作を使用しています。`forward`、`back`、`left`、`right`、`jump`。お好みで任意のキー/ボタンに割り当ててください。"
 
 #: 3D/assets/character_controller.md
 msgid ""
@@ -13669,7 +13669,7 @@ msgstr "これをシャッフルして、スプライトの移動方向をラン
 msgid ""
 "1. Finally, we multiply `velocity` by another random number to give it a "
 "random speed."
-msgstr "1. 最後に、`速度`にもう1つの乱数を乗算し、ランダムな速さを与えます。"
+msgstr "1. 最後に、`velocity`にもう1つの乱数を乗算し、ランダムな速さを与えます。"
 
 #: g101/gdscript/gdscript_02.md
 msgid ""
@@ -15453,7 +15453,7 @@ msgstr "# <i class=\"fas fa-box-open\"></i>&nbsp;その他"
 
 #: kyn/label.md
 msgid "## {{< gd-icon Label >}}`Label`"
-msgstr "## `ラベル`"
+msgstr "## `Label`"
 
 #: kyn/label.md
 msgid ""
@@ -19434,7 +19434,7 @@ msgstr ""
 msgid ""
 "Feel free to experiment with these values and how they interact with the "
 "`engine_power` and `spin_power`"
-msgstr "これらの値を自由に調整し、`エンジン出力` と `回転力` との関係を試してみて下さい。"
+msgstr "これらの値を自由に調整し、`engine_power` と `rotation_dir` との関係を試してみて下さい。"
 
 #: physics/asteroids_physics.md
 msgid ""
@@ -24810,7 +24810,7 @@ msgstr "### 第1部：動き"
 msgid ""
 "Change the input code to apply acceleration instead of directly changing the "
 "car's `velocity`."
-msgstr "入力コードを変更して、車の `速度` を直接変更するのではなく、加速度を適用するようにします。"
+msgstr "入力コードを変更して、車の `velocity` を直接変更するのではなく、加速度を適用するようにします。"
 
 #: 2D/car_steering.md
 msgid "We'll need two more settings variables:"
@@ -25235,7 +25235,7 @@ msgstr "「CoyoteTimer」は以下のタイミングでコヨーテ状態の終�
 msgid ""
 "To handle the timing, we'll add a {{< gd-icon Timer >}}`Timer` node called "
 "`CoyoteTimer` and set it to **One Shot**."
-msgstr "タイミング処理に関しては、`CoyoteTimer`という名前の`タイマー`ノードを追加し、設定を**ワンショットモード**にします。"
+msgstr "タイミング処理に関しては、`CoyoteTimer`という名前の`Timer`ノードを追加し、設定を**ワンショットモード**にします。"
 
 #: 2D/coyote_time.md
 msgid ""
@@ -25750,7 +25750,7 @@ msgstr "最後のステップとして、ゲームにスタートボタンと「
 
 #: games/first_2d/first_2d_10.md
 msgid "Connect this button's `pressed` texture to `Main` and add this code:"
-msgstr "このボタンの`押された`テクスチャを`メイン`に接続し、このコードを追加してください。"
+msgstr "このボタンの`pressed`テクスチャを`Main`に接続し、このコードを追加してください。"
 
 #: games/first_2d/first_2d_10.md
 msgid "Now add the `new_game()` function:"
@@ -25983,7 +25983,7 @@ msgstr ""
 msgid ""
 "Now select the `Bullet` node and then click the **Node** tab next to the "
 "**Inspector**."
-msgstr "次に、`弾丸`ノードを選択してから、**インスペクター**の横にある**ノード**タブをクリックしてください。"
+msgstr "次に、`bullet`ノードを選択してから、**インスペクター**の横にある**ノード**タブをクリックしてください。"
 
 #: games/first_2d/first_2d_04.md
 msgid ""
@@ -26413,7 +26413,7 @@ msgstr "![alt](/godot_recipes/4.x/img/2d_101_19.png)"
 msgid ""
 "Now add the player to the scene by selecting the `Main` node and clicking the "
 "**Instantiate Child Scene** button."
-msgstr "現在のシーンにプレイヤーを追加するには、`メイン`ノードを選択して**子シーンをインスタンス化**ボタンをクリックします。"
+msgstr "現在のシーンにプレイヤーを追加するには、`Main`ノードを選択して**子シーンをインスタンス化**ボタンをクリックします。"
 
 #: games/first_2d/first_2d_06.md
 msgid "Main Scene"
@@ -28566,7 +28566,7 @@ msgstr ""
 msgid ""
 "Since the art is drawn pointing upwards, set the `Sprite`'s _Rotation_ "
 "property to `90`."
-msgstr "アートワークが上向きに描かれているため、`Sprite`の［回転］プロパティを`90`に設定してください。"
+msgstr "アートワークが上向きに描かれているため、`Sprite2D`の［回転］プロパティを`90`に設定してください。"
 
 #: games/circle_jump/circle_jump_01.md
 msgid ""
