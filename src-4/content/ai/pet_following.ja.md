@@ -1,18 +1,18 @@
 ---
-title: "ペットのフォロー"
+title: "付いてくるペット"
 weight: 10
 draft: false
 ---
 
 ## 課題
 
-ペットやミニオンなどのゲームエンティティが必要で、キャラクターに追従させる必要があります。
+ゲーム要素としてペットやミニオンを追加します。なので、キャラクターに追従させる必要があります。
 
 <video controls src='/godot_recipes/4.x/img/pet_follow.webm'></video>
 
 ## 解決策
 
-まず、キャラクターに `Marker2D` `マーカー2D`を追加します。このマーカーは、ペットがプレイヤーの近くに「滞在したい」場所を示すものです。
+まず、キャラクターに {{< gd-icon Marker2D >}}`Marker2D` を追加します。このマーカーは、ペットがプレイヤーの近くに「滞在したい」場所を示すものです。
 
 ![alt](/godot_recipes/4.x/img/pet_follow_01.png)
 
@@ -32,7 +32,7 @@ var speed = 25
 @onready var follow_point = parent.get_node("Sprite2D/FollowPoint")
 ```
 
-The `parent` variable holds a reference to the character the pet should follow. We then get the `FollowPoint` node from that so we can get its position in `_physics_process()`:
+`parent`変数には、ペットが追従すべきキャラクターへの参照情報が格納されています。その後、そのノードから`FollowPoint`を取得し、`_physics_process()`関数内でその位置情報を取得できるようにしています。
 
 ```gdscript
 func _physics_process(delta):

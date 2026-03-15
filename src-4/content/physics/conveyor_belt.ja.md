@@ -6,11 +6,11 @@ draft: false
 
 ## 課題
 
-キネマティックまたはリジッドボディを移動させるコンベアベルトオブジェクトを作成したいとのことです。
+キネマティックまたはリジッドボディを移動させるコンベアベルトオブジェクトを作成したい。
 
 ## 解決策
 
-You can make a conveyor belt object using nothing but a {{< gd-icon StaticBody2D >}}`StaticBody2D` by using its `constant_linear_velocity` property.
+「constant_linear_velocity」プロパティを使用することで、{{< gd-icon StaticBody2D >}}`StaticBody2D`だけでコンベアベルトオブジェクトを作成できます。
 
 {{% notice note %}}
 この問題を3D環境で解決する方法については[以下を参照](#3d)ください。

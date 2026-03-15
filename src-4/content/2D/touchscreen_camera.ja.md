@@ -51,11 +51,7 @@ var last_drag_distance = 0
 
 その他の変数はカメラの状態を追跡します。`events` は辞書型変数で、アクティブなタッチスクリーンイベントを保持し、各イベントは`index`をキーとして管理されます。`last_drag_distance`は、ピンチジェスチャにおける2つのドラッグイベント間の移動距離を記録します。
 
-def _process():
-    # ターゲットへの移動処理を追加
-    # （ターゲット位置取得が有効で、タッチイベントが発生していない場合）
-    pass
-
+In the `_process()` function, we'll move the camera towards the target (if target return is enabled and there's no touch event active).
 
 ```gdscript
 func _process(delta):
@@ -124,11 +120,11 @@ if event is InputEventScreenDrag:
             last_drag_distance = drag_distance
 ```
 
-# アクティブなドラッグイベントが2件ある場合の処理を記述
-# "drag_distance" は各イベント間の距離を示し、前回計測した距離と比較して増減を確認可能
-# "zoom_speed" は倍率係数で、ズームイン時は「1.05」倍、アウト時は「0.95」倍に調整する
-# 計算結果が指定された範囲を超えないようにクランプ処理を施し、新しい "zoom" 値を設定
-# 最後に次回イベント用に "last_drag_distance" を更新
+アクティブなドラッグイベントが2件ある場合の処理を記述
+"drag_distance" は各イベント間の距離を示し、前回計測した距離と比較して増減を確認可能
+"zoom_speed" は倍率係数で、ズームイン時は「1.05」倍、アウト時は「0.95」倍に調整する
+計算結果が指定された範囲を超えないようにクランプ処理を施し、新しい "zoom" 値を設定
+最後に次回イベント用に "last_drag_distance" を更新
 
 <video controls src="/godot_recipes/3.x/img/touch_camera_02.webm"></video>
 

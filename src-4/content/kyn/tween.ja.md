@@ -18,7 +18,7 @@ tags: []
 
 ### 移行タイプ
 
-The 'trans_type' parameter allows you to select which *transition type* you want to use in your interpolation. This specifies the mathematical formula used to calculate property values for each frame. Different types produce distinct movement styles. Below, each icon's 'position' is tweened over the same range and duration:
+trans_typeパラメータを使用することで、補間に使用する遷移タイプを選択できます。これは、各フレームにおけるプロパティ値を計算するための数学的公式を指定するものです。異なるタイプのトランジションは、それぞれ特徴的な移動パターンを生成します。以下に示すように、各アイコンの'position'値は同一の範囲と時間範囲でTween処理されます。
 
 ![alt](/godot_recipes/3.x/img/tween_01.gif)
 

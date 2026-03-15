@@ -43,11 +43,7 @@ var forward = -camera.transform.basis.z.normalized()
 
 キューブは4つの基本方向（前後・左右・上下）にのみ移動できます。このため、カメラの前方ベクトルを取得し、どの軸方向に最も近いかを確認する必要があります。**+X**、**-X**、**+Z**、または**-Z**のいずれかです。
 
-import numpy as np
-
-def find_max_vector_component(vector):
-    return max(map(np.abs, vector)), "最大成分の絶対値"
-この関数はベクトルの各成分を絶対値に変換した上で最大のものを返します。
+We can find this using the `Vector3.max_axis()` function. This returns which of the vector's components is the largest. Since they can be positive or negative, we'll use `abs()` first.
 
 一旦最大の大きさの軸が特定されれば、以下のように `forward` ベクトルを調整できます。
 

@@ -1,5 +1,5 @@
 ---
-title: "コンテキストに基づく操縦支援"
+title: "場面に基づく操縦"
 weight: 10
 draft: false
 ghcommentid: 75
@@ -7,13 +7,13 @@ ghcommentid: 75
 
 ## 課題
 
-ゲームに必要なのは、経路を追従し、障害物を避け、世界を移動する方法について他の判断もできるAI制御オブジェクトです。
+経路を追従し、障害物を避け、世界を移動する方法について他の判断もできるAI制御オブジェクトがほしい。
 
 ## 解決策
 
 「ステアリング挙動」とは、この問題を解決するために使用可能な様々なアルゴリズムの総称です。どの手法を採用するかは、ゲームの特性、オブジェクトが存在する世界の種類、そして求める「知性」のレベルによって異なります。
 
-この例では、「コンテキスト行動」と呼ばれる手法を採用します。これは、オブジェクトが移動方法を選択するために十分な世界情報を得ることを目的とするものです。本テーマについてさらに詳しく知りたい方は、以下の関連リンクを参照してください。
+この例では、「状況に基づく振舞い(Context Behavior)」と呼ばれる手法を採用します。これは、オブジェクトが移動方法を選択するために十分なワールドの情報を得ることを目的とするものです。本テーマについてさらに詳しく知りたい方は、以下の関連リンクを参照してください。
 
 * [Andrew Fray: Context Behaviours Know How to Share](https://andrewfray.wordpress.com/2013/03/26/context-behaviours-know-how-to-share/)
 
@@ -47,7 +47,7 @@ ghcommentid: 75
 
 ![alt](/godot_recipes/3.x/img/ai_context_07.png)
 
-Combining these two arrays, we can eliminate any `interest` directions that are also contained in `danger`. By summing up the remaining `interest` directions, we're left with a new direction pointing away from the obstacle.
+これら2つの配列を組み合わせることで、`危険度`に含まれる`興味度`方向を除去することが可能です。残った`興味度`方向を合計すると、障害物から離れる新しい方向ベクトルが得られます。
 
 ![alt](/godot_recipes/3.x/img/ai_context_08.png)
 
@@ -60,11 +60,7 @@ Combining these two arrays, we can eliminate any `interest` directions that are 
 
 ### 興味を見つける方法
 
-エージェントの目標によって異なります。プレイヤーを追跡することが目的なら、`interest`値はプレイヤー方向へ高く設定すべきです。複数のターゲットを設定することも可能で、近接する目標ほど関心度が高くなりますが、障害物によって無効化された場合はスコアの低い方が優先されます。
-
-# 追加説明:
-- `goal_positions`: 各ターゲットの位置ベクトルを含むリストまたは配列。
-- `obstacles`: 経路を妨げる障害物オブジェクトのリスト。各オブジェクトは座標と大きさを表す属性を持つ必要があります。
+これはエージェントの目標内容によって異なります。もしその目的が『プレイヤーを追跡すること』であれば、`興味度`値はプレイヤー方向へ高くなるべきです。複数のターゲットを設定することも可能で、より近い目標ほど高い`興味度`を持ちますが、障害物によって無効化された場合、スコアが低い他の目標が優先されます。
 
 このデモでは、何らかのレースゲームを作っていると仮定しましょう。AI制御の車はサーキットを周回する必要があります。その`interest`配列はコースに沿って前方を指すように設定すべきで、そうしないと逆走を開始してしまいます。
 

@@ -26,10 +26,7 @@ draft: false
 velocity = move_and_slide(velocity, Vector2.UP)
 ```
 
-# 追加パラメータの説明：
-# - friction: 摩擦係数（デフォルトは0.9）
-# - bounciness: 跳ね返り強度（デフォルトは1.0）
-# - jump_height: ジャンプ時の高さ制限（デフォルトは0.25）
+これにより、ボディは指定された方向へ移動し、障害物に衝突した際にはその上を滑るように動きます。さらに、floor_normalパラメータを用いて、"floor"として認識すべき表面を決定することができます。`move_and_slide()`関数には、他にも以下のような追加パラメータがあります。
 
 ```text
 move_and_slide ( Vector2 linear_velocity,
@@ -39,7 +36,7 @@ move_and_slide ( Vector2 linear_velocity,
     bool infinite_inertia=true )
 ```
 
-最後の引数を変更する必要があります。GDScriptには名前付きパラメータがないため、すべての引数を渡す必要がありますが、デフォルト値をそのまま保持できます：
+最後の引数を変更する必要があります。GDScriptには名前付きパラメータがないため、すべての引数を渡す必要がありますが、デフォルト値をそのまま保持できます。
 
 ```gdscript
     velocity = move_and_slide(velocity, Vector2.UP,

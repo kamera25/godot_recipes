@@ -77,7 +77,7 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 
 このシナリオでは、「プレイヤー」ノードは「敵」と「コイン」の両方と衝突を検出します（スキャン対象レイヤーに含まれているため）。ただし、「敵」と「コイン」は互いに衝突を検出しません。なぜなら、彼らはそれぞれが属していないレイヤーのみをスキャンするように設定されているからです。
 
-## 運動学的物体
+## キネマティックボディ
 
 {{< gd-icon KinematicBody2D >}}`KinematicBody2D` は、コードによって制御されるボディを実装するためのものです。移動時に他のオブジェクトとの衝突を検出しますが、重力や摩擦といったエンジンの物理特性の影響を受けません。このため、その動作を生成するためにある程度のコーディングが必要となりますが、その一方で、動き方や反応をより精密にコントロールできるという利点があります。
 
@@ -99,12 +99,8 @@ href="http://docs.godotengine.org/en/latest/classes/class_kinematiccollision2d.h
 
 ### 移動とスライド処理
 
-def move_and_slide():
-    """衝突応答を簡略化するためのメソッドで、特に2つの物体が互いに滑り合う一般的なケースに有用です。プラットフォーマーゲームやトップダウン型ゲームなどで特に便利です。"""
-    pass  # 実際の実装内容は省略
+The `move_and_slide()` method is intended to simplify the collision response in the common case where you want one body to slide along the other. This is especially useful in platformers or top-down games, for example.
 
-
-# 翻訳例:
 > **注意:** `move_and_slide()` 関数は内部で `delta` パラメータを使用してフレームベースの移動計算を自動的に行います。速度ベクトルに手動で `delta` を掛けたものを直接渡す必要はありません。
 
 速度ベクトルに加え、`move_and_slide` には複数のパラメータが用意されており、スライド動作を細かくカスタマイズできます。
@@ -141,10 +137,9 @@ if collision:
 velocity = move_and_slide(velocity)
 {{< /highlight >}}
 
-def move_character(position, velocity):
-    # キャラクターの移動処理を実装する
-    pass
-
+Anything you do with `move_and_slide()` can also be done with `move_and_collide()`,
+it just might take a little more code. However, as we'll see in the examples below,
+there are cases where `move_and_slide()` isn't the response you want.
 
 ## 使用例
 
@@ -156,12 +151,7 @@ def move_character(position, velocity):
 
 この例では、以下の構成で `KinematicBody2D` を作成します。親ノードとして `KinematicBody2D`、その子要素として `Sprite` と `CollisionShape2D` を配置します。多くのデモと同様に、テクスチャにはGodot標準の "icon.png" ファイルを使用します（ファイルシステムドックからドラッグして、`Sprite` プロパティの「テクスチャ」に設定）。`CollisionShape2D` の「形状」プロパティでは「新規 RectangleShape2D」を選択し、スプライト画像全体を覆うサイズに調整してください。
 
-class MyCustomBehavior(Script):
-    def update(self, scene):
-        # カスタムロジックをここに記述
-        pass
-
-このコードを `KinematicBody2D` スクリプトに追加してください。
+Attach a script to the {{< gd-icon KinematicBody2D >}}`KinematicBody2D` and add the following code:
 
 {{< highlight python >}}
 extends KinematicBody2D
@@ -277,53 +267,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 ### ムーブアンドスライドを使ったプラットフォーマー開発
 
-import re
-
-def count_keywords(text):
-    # キーワードの出現回数を数える関数
-    keyword_counts = {
-        'move_and_slide()': 0,
-        'character controller': 0,
-        'platformer game': 0,
-        '2D platformer': 0,
-        'code snippet': 0
-    }
-
-    for keyword in keyword_counts.keys():
-        # キーワードの出現回数をカウント
-        keyword_counts[keyword] = len(re.findall(rf'\b{keyword}\b', text, re.IGNORECASE))
-
-    return keyword_counts
-
-def highlight_keywords(text):
-    # キーワードを強調表示する関数
-    for keyword in keyword_counts.keys():
-        if keyword_counts[keyword] > 0:
-            pattern = rf'({re.escape(keyword)})'
-            highlighted_text = re.subn(pattern, r'<mark>\1</mark>', text, flags=re.IGNORECASE)
-            text = highlighted_text[0][1] + '\
-' + highlighted_text[1]
-
-    return text
-
-# サンプル入力テキスト
-sample_input = """
-Let's try one more example - one that often gets asked about - the 2D platformer. `move_and_slide()` is ideal for quickly getting a functional character controller up and running. If you've downloaded the sample project, you can find this in "Platformer.tscn".
-"""
-
-# キーワード出現回数のカウントと強調表示
-keyword_counts = count_keywords(sample_input)
-highlighted_text = highlight_keywords(sample_input)
-
-print("キーワード出現回数:")
-for keyword, count in keyword_counts.items():
-    if count > 0:
-        print(f"- {keyword}: {count} 回")
-
-print("\
-強調表示されたテキスト:")
-print(highlighted_text)
-
+もう一つ例を挙げてみましょう。これはよく質問される2Dプラットフォーマーについてです。`move_and_slide()`関数は、機能的なキャラクターコントローラーを迅速に実装するのに最適です。サンプルプロジェクトをダウンロードした場合、この機能は"Platformer.tscn"ファイル内で確認できます。
 
 本例では、静的ボディ（StaticBody2D）オブジェクトで構成されるレベルを想定しています。形状やサイズは任意のもので構いません。サンプルプロジェクトではタイルマップを使用してレベルを配置していますが、このデモの目的上、個々の静的ボディとして扱うことも同様にできます。
 
@@ -363,11 +307,11 @@ function change_state(new_state) {
   }
 }
 
-def get_input():
+func get_input():
     velocity.x = 0
-    right = 入力.is_action_pressed('ui_right')
-    left = 入力.is_action_pressed('ui_left')
-    jump = 入力.is_action_just_pressed('ui_select')
+    var right = 入力.is_action_pressed('ui_right')
+    var left = 入力.is_action_pressed('ui_left')
+    var jump = 入力.is_action_just_pressed('ui_select')
 
     if jump and sprite_is_on_the_floor():
         set_state(JUMP)
@@ -382,12 +326,11 @@ def get_input():
     if not moving_right and not moving_left and state == RUN:
         set_state(IDLE)
 
-def _process(delta):
+func _process(delta):
     get_input()
     if new_anim != anim:
         anim = new_anim
         $アニメーションPlayer.play(anim)
-
 
 velocity.y += gravity * delta
     if state == JUMP:
@@ -403,16 +346,10 @@ velocity.y += gravity * delta
 
 現在、キャラクターの待機状態・走行状態・ジャンプ状態間の遷移を管理するため、非常に基本的なステートマシンを使用しています。
 
-def slope_transition():
-    # ... 以前のコードは同じまま ...
-
-    move_vector = move_and_slide(character.position, character.velocity)
-    character.velocity = move_vector  # スライド後の動きをキャラクタ速度に設定
-    return render_objects()
-
-if __name__ == "__main__":
-    slope_transition()
-
+When using `move_and_slide()` the function returns a vector representing the
+movement that remained after the slide collision occurred. Setting that value back
+to the character's `velocity` allows us to smoothly move up and down slopes. Try
+removing `velocity =` and see what happens if you don't do this.
 
 また、床面の法線ベクトルとして `Vector2(0, -1)` を追加しました。このベクトルは真上を指しています。つまり、キャラクターがこの法線を持つ物体に衝突した場合、それは床と判定されることを意味します。
 

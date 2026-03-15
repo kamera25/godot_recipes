@@ -84,7 +84,7 @@ func _ready():
 
 ### 全体を統合して接続する方法
 
-モブの `_on_input_event()` メソッド内で、ヘルスを減少させた後に以下を追加してください。
+モブの `_on_input_event()` メソッド内で、HPを減少させた後に以下を追加してください。
 
 ```gdscript
 $HealthBar3D.update(health, max_health)

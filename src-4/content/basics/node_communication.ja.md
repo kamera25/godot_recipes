@@ -121,7 +121,7 @@ func _process(delta):
 
 注：UIはインスタンス化されたシーンであり、実際には含まれるノードを表示しているに過ぎません。ここでよく見かけるのが`get_node("../UI/VBoxContainer/HBoxContainer/Label).text = str(health)`のようなコードで、これは避けるべき実装方法です。
 
-代わりに、プレイヤーがヘルス値を増減させるたびに、`health_changed`シグナルが発火します。これをUIの`update_health()`関数に送信する必要があり、この関数では`Label`の表示値を設定する処理を行います。`Player`スクリプトでは、プレイヤーのヘルス値が変更されるたびに以下のコードを使用しています。
+代わりに、プレイヤーがHP値を増減させるたびに、`health_changed`シグナルが発火します。これをUIの`update_health()`関数に送信する必要があり、この関数では`Label`の表示値を設定する処理を行います。`Player`スクリプトでは、プレイヤーのHP値が変更されるたびに以下のコードを使用しています。
 
 ```gdscript
 health_changed.emit(health)

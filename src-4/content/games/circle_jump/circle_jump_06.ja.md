@@ -193,26 +193,7 @@ func set_mode(_mode):
     $Sprite.material.set_shader_param("color", color)
 ```
 
-def _draw(self):
-    # 限定された円を描画する処理
-    width = self.canvas_width
-    height = self.canvas_height
-
-    cx, cy, r = 100, 100, 50  # 中心座標と半径の例値
-
-    # 背景色でキャンバス全体を塗りつぶす
-    fill_color = settings.theme["background"]
-    self.draw_rectangle(width, height, 0, 0, fill_color)
-
-    # 限定された円を描画
-    if self.is_limited():
-        color = settings.theme["circle_fill"]  # テーマ設定の色を取得
-    else:
-        color = "red"
-
-    # 中心点を描く
-    self.draw_circle_arc(cx, cy, r, 0, 360, color)
-
+Then in the `_draw()` function where we're filling in the limited circle, replace the red color with `settings.theme["circle_fill"]`.
 
 プレイヤーの設定では、`_ready()` 内で色を指定します。
 

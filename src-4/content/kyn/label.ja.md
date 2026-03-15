@@ -33,4 +33,4 @@ func update_label(value):
 
 {{< gd-icon Label >}}`Label`の「カスタムフォント」セクションにて、"Custom Fonts"を選択してください。`DynamicFont`は、指定された書体でテキストを表示するリソース型です。
 
-追加した"DynamicFont"を選択し、"Font/Font Data"でLoad"を選び、フォントファイルを選択します。また、フォントの*サイズ*も設定してください。
+追加した"DynamicFont"を選択し、"Font/Font Data"で"Load"を選び、フォントファイルを選択します。また、フォントの*サイズ*も設定してください。

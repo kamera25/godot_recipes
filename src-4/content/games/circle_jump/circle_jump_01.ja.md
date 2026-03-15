@@ -43,7 +43,7 @@ pre: "01. "
 
 ### ジャンパー（Jumper）
 
-# 移動と衝突判定には `Area2D` を使用します。公平を期すために、ここでは `KinematicBody2D` も使用できますが、同等の機能を果たせます。ただし、このゲームでは正確な衝突検出は不要で、ジャンプキャラが円に接触したタイミングだけを把握できれば十分です。以下のノードを追加しましょう。
+移動と衝突判定には `Area2D` を使用します。公平を期すために、ここでは `KinematicBody2D` も使用できますが、同等の機能を果たせます。ただし、このゲームでは正確な衝突検出は不要で、ジャンプキャラが円に接触したタイミングだけを把握できれば十分です。以下のノードを追加しましょう。
 
 * `Area2D` ("Jumper")
   * `Sprite`
@@ -178,14 +178,7 @@ func _process(delta):
     $Pivot.rotation += rotation_speed * delta
 ```
 
-def init():
-    # 与えられた半径に基づいて円のサイズを設定し、衝突形状とテクスチャスケールもそれに合わせて調整する
-    circle_size = radius * 2  # 半径×2で円周の長さを求める
-    collision_shape = CollisionShapeCircle(circle_size)
-    texture_scale = circle_size / 100.0  # テクスチャのスケールは円周長÷100とする
-
-    # ... (他の初期化処理が続く)
-
+In the `init()` function, we're setting up the size of the circle, based on the given `radius`. We need to size the collision shape as well as scaling the texture to match.
 
 テスト用に `radius` の値を変えてシーンを実行してみてください。（後で `_ready()` 内で `init()` を呼び出す処理は停止します）
 

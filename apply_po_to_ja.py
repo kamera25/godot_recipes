@@ -1,6 +1,7 @@
 import os
 import re
 import glob
+import subprocess
 
 def unescape_po_string(s):
     return s.replace('\\n', '\n').replace('\\"', '"').replace('\\\\', '\\')
@@ -89,6 +90,18 @@ def main():
             print(f"Error processing {file_path}: {e}")
             
     print(f"Successfully created {files_created} Japanese markdown files.")
+    
+    # Error checking for PO file
+    print("Validating output.po...")
+    try:
+        # Format the PO file and check for errors
+        subprocess.run(['msgcat', '--no-wrap', po_file, '-o', po_file], check=True, capture_output=True, text=True)
+        # Check the PO file for syntax errors
+        subprocess.run(['msgfmt', '-c', po_file], check=True, capture_output=True, text=True)
+        print("PO file validation successful.")
+    except subprocess.CalledProcessError as e:
+        print(f"PO file validation failed:\n{e.stderr}")
+        exit(1)
 
 if __name__ == '__main__':
     main()

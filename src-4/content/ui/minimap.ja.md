@@ -126,9 +126,7 @@ var grid_scale
 var markers = {}
 ```
 
-def _ready():
-    # グリッドの中央にプレイヤーマーカーを中央配置し、スケール係数を計算する
-    pass  # (注：動的サイズUIの場合は、'resized'シグナルに接続し、この処理をすべてコールバック内で実装する必要があります)
+In `_ready()` we'll center the player's marker at the center of the grid. and calculate the scale factor. (**Note:** you'll need to connect the `resized` signal and do both of these things in the callback if you have a dynamically sized UI).
 
 ```gdscript
 func _ready():

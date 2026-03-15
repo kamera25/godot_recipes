@@ -97,7 +97,6 @@ var steer_angle = 0.0  # current wheel angle
 
 車が斜面から滑り落ちるのを防ぐ `move_and_slide_with_snap()` を使用している点に注意してください（トラックに坂道がある場合）。スナップ基準には車のローカル下方向ベクトルを使用しています。これも正しく坂道を処理するためです。
 
-
 ```gdscript
 func _physics_process(delta):
     if is_on_floor():

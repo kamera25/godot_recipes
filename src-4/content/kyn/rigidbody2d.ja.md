@@ -70,7 +70,6 @@ The body’s behavior is also affected by the world, via the Project Settings ->
 
 衝突情報を剛性体から取得する場合は、`contact_monitor` を `true` に設定する必要があります。これを行うと、`body_entered` などのシグナルが有効になります。さらに、`contacts_reported` を調整することで、報告される衝突の数を指定することもできます。
 
-
 ### 剛体の制御について
 
 硬い物体をより直接的に制御する必要があるケースもあります。例えば、クラシックゲーム『Asteroids』のリメイクを作ろうとしている場合を考えてみましょう。プレイヤーの宇宙船は左右矢印キーで回転させ、上矢印が押されたときに前進するようにしなければなりません。
@@ -113,21 +112,7 @@ func _physics_process(delta):
     applied_torque = rotation_dir * spin_thrust
 ```
 
-def update_game_state():
-    global engine_thrust, spin_thrust, thrust, rotation_dir
-
-    # エンジン加速状態の更新
-    if key_press == 'a' and ship_speed > 0:
-        engine_thrust -= 10
-    elif key_press == 's' and ship_speed > 0:
-        engine_thrust += 10
-
-    # 旋回方向と速度の更新
-    if rotation_dir != 'up':
-        rotation_dir = 'up' if key_press == 'w' else ('down' if key_press == 's' else 'right')
-
-    # スクリーンサイズの取得（後で使用するため）
-    screensize = get_current_screen_size()
+Let’s walk through what this script is doing. The two variables, `engine_thrust` and `spin_thrust` control how fast the ship can accelerate and turn. `thrust` will represent the ship’s engine state: `(0, 0)` when coasting, or a vector with the length of `engine_thrust` when powered on. `rotation_dir` will represent what direction the ship is turning. The `screensize` variable will capture the size of the screen, which we’ll be using later.
 
 次に、`input()` 関数はキー状態を取得し、宇宙船の推進モードを有効/無効に設定するとともに、回転方向（`rotation_dir`）を正または負方向に決定します。この関数は `_process()` 内で毎フレーム呼び出されます。
 

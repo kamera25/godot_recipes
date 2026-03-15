@@ -61,8 +61,7 @@ func _physics_process(delta):
     velocity = move_and_slide(velocity, Vector3.UP)
 ```
 
-# このコードでは、重力による下方向への加速度を現在速度に加算し、ユーザー入力を取得し（詳細は後述）、move_and_slide()関数を呼び出しています。この時、velocity変数と上方向を示すベクトル(0, 1)をup_directionパラメータとして渡しています。
-
+このコードでは、重力による下方向への加速度を現在速度に加算し、ユーザー入力を取得し（詳細は後述）、move_and_slide()関数を呼び出しています。この時、velocity変数と上方向を示すベクトル(0, 1)をup_directionパラメータとして渡しています。
 
 {{% notice tip %}}
 `move_and_slide()` から返される `velocity` ベクトルを必ず取得してください。これを行わないと、物体が表面に沿って滑る動きの利点が得られなくなります。

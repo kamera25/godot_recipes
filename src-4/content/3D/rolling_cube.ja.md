@@ -40,8 +40,9 @@ Cube: {{< gd-icon CharacterBody3D >}} CharacterBody3D
     Collision: {{< gd-icon CollisionShape3D >}} CollisionShape3D
 ```
 
+{{% notice tip %}}
 「CharacterBody3D」、または {{< gd-icon Area3D >}} 「Area3D」を衝突ノードとして使用できます。ただし、移動制御の方法には若干の違いが生じます。どのノードを選択するかは、ゲームで他にどのような挙動を必要とするかによって決めるべきです。このレシピでは、単に動きに焦点を当てています。
-
+{{% /notice %}}
 
 デフォルトでは、すべてが座標 `(0, 0, 0)` を中心に配置されています。まず最初に行うことは、キューブの*底面中央*が {{< gd-icon CharacterBody3D >}}`CharacterBody3D` の位置と一致するように全体をオフセットすることです。
 

@@ -75,7 +75,7 @@ func _process(delta):
     $Path2D/PathFollow2D.offset += 250 * delta
 ```
 
-As the `offset` is increased, the node moves along the path.
+"offset"を増やすと、ノードが経路に沿って移動します。
 
 注意: `PathFollow2D` ノードの *回転* プロパティ (`{{< gd-icon PathFollow2D >}}`) により、パスに沿って移動する際、ノード自体とその子ノードが常に経路に沿った方向に向くように維持されます。
 

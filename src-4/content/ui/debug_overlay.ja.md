@@ -70,17 +70,7 @@ func _process(_delta):
 　・ `label_ref` - 各プロパティは対応する {{< gd-icon Label >}}`Label`ノードと紐付けられており、この参照によりラベルの `text`属性を設定できます。
 　・ `mode` - 表示方法を指定するオプション設定です（詳細は後述）。
 
-def update_label(self):
-    # ラベルの text プロパティに表示する文字列を構築
-    label_content = f"{self.object}: {self.property_name} ({self.value})"
-    if self.mode == 'edit':
-        label_content += " (編集モード)"
-    elif self.mode == 'view':
-        label_content += " (閲覧モード)"
-
-    # 構築したコンテンツをラベルの text プロパティに設定
-    self.widget.text = label_content
-
+In the `update_label()` method we build up a string to display in the label's `text` property. We include the object's name and which property we're showing, plus the value modified by the `mode` option.
 
 本例では、`mode` オプションの設定例として以下の2つのケースを示します。
 

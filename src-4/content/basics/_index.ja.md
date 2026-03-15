@@ -1,5 +1,5 @@
 +++
-title = "基本事項"
+title = "基本編"
 weight = 2
 chapter = true
 pre = "<i class='fas fa-toolbox fa-fw'></i>&nbsp"

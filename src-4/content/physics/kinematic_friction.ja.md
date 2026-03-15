@@ -1,5 +1,5 @@
 ---
-title: "運動摩擦係数"
+title: "動摩擦"
 weight: 3
 draft: false
 ---
@@ -51,13 +51,7 @@ lerp(start_value, end_value, amount)
 
 以下のコードでは、`摩擦係数`はキャラクターが停止する速度を、`加速度`は完全に加速するまでの速度を決定する要素です。どちらも値が`0.0`から`1.0`の範囲内で設定されます。
 
-「get_input()」のコードを以下に置き換えます。def get_input():
-    try:
-        return float(input("Enter a value: "))
-    except ValueError:
-        print("Invalid input. Please enter a valid number.")
-        return None
-
+「get_input()」のコードを以下に置き換えます。
 
 ```gdscript
 var friction = 0.1
@@ -79,10 +73,7 @@ func get_input():
 
 ### 解説
 
-# 摩擦係数と加速度をブレンド量として使用
-# 加速時には、現在速度から最大速度までの適切な値を求めます
-# 減速時には、現在速度を徐々に0へ減衰させます
-
+摩擦係数と加速度をブレンド量として使用します。加速時には、現在速度から最大速度までの適切な値を求めます。減速時には、現在速度を徐々に0へ減衰させます。
 
 {{% notice tip %}}
 値に `1.0` を使用すると、当初の「瞬間的な」移動状態が復活します。

@@ -61,7 +61,7 @@ func _on_Shell_body_entered(body):
     queue_free()
 ```
 
-We're using a custom gravity vector, `g` so that we can control how the shell flies from the tank's cannon, giving it a nice arc effect. If you'd rather your projectiles move in a straight line, you can remove the line that applies it in `_physics_process()`.
+カスタムの重力ベクトル `g` を使用することで、戦車の砲弾が綺麗な弧を描くように、大砲からどのように飛ぶかを制御できます。もし、飛び道具を直線的に移動させたい場合は、`_physics_process()` で重力を適用している行を削除してください。
 
 Using `look_at()` each frame turns the bullet to point in its direction of travel.
 

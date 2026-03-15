@@ -125,11 +125,10 @@ if event.is_action_pressed("click") and not dragging:
 神父德3.0中，角度零度指的是向右方向（沿x軸方向）。
 　　这意味着您需要为`Sprite`添加90度的旋转，以使其与身体方向保持一致。
 
-# デフォルトでは、物理設定により物体の速度と回転運動に適度な_減衰効果が付与されます_。
-# 宇宙空間には摩擦がないため、本来はいかなる種類の減衰も適用すべきではありません。
-# しかし「スペースインベーダー」風のゲーム感を出すため、キーを離すと船が即座に停止するようにしたいので、
-# 船の`Angular -> Damp`パラメータを`5`に設定してください。
-
+デフォルトでは、物理設定により物体の速度と回転運動に適度な_減衰効果が付与されます_。
+宇宙空間には摩擦がないため、本来はいかなる種類の減衰も適用すべきではありません。
+しかし「スペースインベーダー」風のゲーム感を出すため、キーを離すと船が即座に停止するようにしたいので、
+船の`Angular -> Damp`パラメータを`5`に設定してください。
 
 {{< highlight swift >}}
 extends RigidBody2D
@@ -157,17 +156,15 @@ func get_input():
 func _process(delta):
     get_input()
 
-def _physics_process(delta):
+func _physics_process(delta):
     set_applied_force(thrust.rotated(rotation))
     set_applied_torque(rotation_dir * spin_thrust)
 
 {{< /highlight >}}
 
 このスクリプトの動作について説明しましょう。変数`engine_thrust`と`spin_thrust`は、宇宙船の加速速度と旋回性能を制御します。インスペクターではそれぞれ500、25000に設定してください（トルク単位のため数値が大きくなります）。
-
 変数`thrust`は宇宙船のエンジン状態を示します。走行中時は(0, 0)、動力がオンの場合は`engine_thrust`の長さを持つベクトルとなります。
 `rotation_dir`は宇宙船の旋回方向を表現します。`screensize`変数には画面サイズを保持し、後ほど使用します。
-
 
 next,
 the `input()` function captures the state of keys and enables/disables the ship's thrust,

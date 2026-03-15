@@ -32,11 +32,7 @@ var jump_speed = 5
 var mouse_sensitivity = 0.002
 ```
 
-def _physics_process():
-    # 移動処理を行う関数
-    # Note: 入力.get_vector()は前後/左右キーの組み合わせに基づいて2次元ベクトルを返す
-    # このベクトルを使ってボディの速度成分 `x` と `z` を設定する（`y` は重力で自動的に管理されるため）
-    # ベクトルをボディの `basis` で乗算することで、回転を考慮している - 前進は常にボディの前方ベクトルとなるように
+The `_physics_process()` function is the place to handle movement. Note that `入力.get_vector()` returns a 2-dimensional vector based on the combination of the forward/back/left/right keys. We want to use this vector to set the `x` and `z` components of the body's velocity (because `y` is handled by gravity). Multiplying this vector by the body's `basis` ensures we account for rotation - forward should always be the *body's* forward vector.
 
 ```gdscript
 func _physics_process(delta):

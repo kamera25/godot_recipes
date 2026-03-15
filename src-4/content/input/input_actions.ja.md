@@ -47,17 +47,7 @@ func _process(delta):
 
 これは、継続的な動作――例えば移動など、常時確認が必要な状況に最適です。
 
-def on_event(event):
-    print("イベントが発生しました:", event)
-
-def handle_keyboard_event(key):
-    if key == 'KEY_LEFT':
-        move_left()
-    elif key == 'KEY_RIGHT':
-        move_right()
-
-input_callback = on_event  # メインループ内でのコールバック
-unhandled_input_callback = handle_keyboard_event  # 未処理入力時のハンドラ
+もし代わりに、アクションが発生したその瞬間に検出したい場合は、`_input()`または`_unhandled_input()`コールバックを使用できます。
 
 ```gdscript
 func _unhandled_input(event):

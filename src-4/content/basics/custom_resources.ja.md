@@ -43,7 +43,7 @@ extends Resource
 class_name PlayerHealth
 ```
 
-次に、ゲームオブジェクトがプレイヤーのヘルス値変化を監視するために購読できるシグナルがあります。また、ヘルス値がゼロに達するなどの追加イベント用のシグナルも実装できます。
+次に、ゲームオブジェクトがプレイヤーのHP値変化を監視するために購読できるシグナルがあります。また、HP値がゼロに達するなどの追加イベント用のシグナルも実装できます。
 
 ```gdscript
 signal health_changed
@@ -57,7 +57,7 @@ export (int) var max_value
 var current_value = 0
 ```
 
-この関数を使用すると、健康度を最大値に初期化できます。ゲームの再起動時や新しいレベルを開始する際に実行するとよいでしょう。
+この関数を使用すると、HPを最大値に初期化できます。ゲームの再起動時や新しいレベルを開始する際に実行するとよいでしょう。
 
 ```gdscript
 func reset():
@@ -152,7 +152,7 @@ func _physics_process(delta):
             body.health.heal(heal_rate * delta)
 ```
 
-最後に、UIにヘルスステータスを表示するために、同じヘルスリソースを接続し、その`health_changed`シグナルに接続します。
+最後に、UIにHPステータスを表示するために、同じHPリソースを接続し、その`health_changed`シグナルに接続します。
 
 ```gdscript
 export (Resource) var player_health

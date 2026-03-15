@@ -58,7 +58,7 @@ var Jumper = preload("res://objects/Jumper.tscn")
 var player
 ```
 
-需要が発生した際にインスタンス化できるよう、両方のオブジェクトに対する参照が必要です。
+We need references to both objects so that we can instance them when needed.
 
 ```gdscript
 func _ready():
@@ -78,10 +78,7 @@ func new_game():
     spawn_circle($StartPosition.position)
 ```
 
-function new_game() {
-  // ゲームを初期化: プレイヤーとサークルを開始位置に生成し、カメラを設定する
-}
-
+「new_game()」関数は、プレイヤーと円を開始位置にスポーンさせ、カメラを設定することでゲームを初期化します。
 
 ```gdscript
 func spawn_circle(_position=null):
@@ -106,10 +103,7 @@ func _on_Jumper_captured(object):
 
 試してみてください。円から円へジャンプできるはずです。いくつ成功しましたか？
 
-
-※注意点：翻訳文では技術的な専門用語をそのまま使用していますが、より平易な表現にする場合は以下のようになります。
-
-「カメラが次の円に移動する際に『瞬間移動』するように見える点が気になります。この問題は、カメラの［スムージング］機能を有効にすることで改善できます。［スムージング/速度］コントロールでは、カメラが新しい位置に補間されるスピードを調整します。`5`～`10`程度の間で設定してみてください。」
+カメラが次のサークルに移動するときに「瞬間移動」してしまうのは不自然です。これは、カメラの「Smoothing」を有効にすることで改善できます。「Smoothing/Speed」は、新しい位置への補間の速さを制御します。`5`から`10`の間で試してみてください。
 
 ### 調整項目
 
@@ -131,8 +125,8 @@ rotation_speed *= pow(-1, randi() % 2)
 
 これらのノードをジャンパに追加してください。
 
-* `ノード` ("軌跡"):
-     * `直線2次元` ("点"):
+* `Node` ("Trail")
+  * `Line2D` ("Points")
 
 We're going to use this to make a trail that streams out behind the player. Later we'll make it more visually appealing, but for now, let's stick with a simple gradient. In the _Fill_ add a new Gradient, and go from transparent to a color of your choosing:
 
@@ -188,15 +182,7 @@ func implode():
     queue_free()
 ```
 
-そして `Jumper.gd` で、ジャンプ関数は次のようになります。function Jump()
-    if IsGrounded() then
-        velocity = Vector3(0, 0, 0) -- ジャンプアニメーションの初期化
-    else
-        velocity = Vector3(jumpForce * Time.deltaTime, 0, 0) -- 重力を考慮した移動速度計算
-    end
-    isJumping = true
-end
-
+And then in `Jumper.gd`, our jump function becomes:
 
 ```gdscript
 func jump():

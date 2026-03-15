@@ -23,7 +23,7 @@ export var traction_fast = 0.02
 var drifting = false
 ```
 
-`slip_speed` is how fast the car needs to be going before losing traction. You'll need to adjust this based on the car's other parameters.
+「slip_speed」は、車のトラクションが失われる前に到達すべき速度を指定します。この値は、車の他のパラメータに合わせて調整する必要があります。
 
 `traction_slow` および `traction_fast` は、`slip_speed` 以下またはそれ以上におけるトラクション特性を表し、値は 0～1 の範囲で設定されます。数値が小さいほど車両は「滑りやすい」感覚が強くなります。これらを 1 に設定すると、「レール上を走る」ように完全に滑らない状態になります。
 

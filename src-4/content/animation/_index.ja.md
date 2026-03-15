@@ -7,7 +7,7 @@ pre = "<i class='fas fa-film fa-fw'></i>&nbsp"
 
 # <i class='fas fa-film'></i>&nbsp;アニメーション
 
-Godotのアニメーションシステムを使用。
+Godotのアニメーションシステムを使ってみよう。
 
 #### 目次 ：
 

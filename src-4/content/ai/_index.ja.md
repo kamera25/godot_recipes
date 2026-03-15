@@ -1,5 +1,5 @@
 +++
-title = "AI／行動特性"
+title = "AI／振る舞い"
 weight = 6
 chapter = true
 pre = "<i class='fas fa-project-diagram fa-fw'></i>&nbsp"

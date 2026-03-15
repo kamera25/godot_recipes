@@ -51,15 +51,7 @@ AdMobアプリケーションIDを`android:value=""/>`行に貼り付けてく�
 onready var admob = $Admob
 ```
 
-# settings.hide_ad_banner() などを呼び出している箇所は、以下の新しい同等関数で置き換えできます。
-from adsweeper import hide_advertising_elements
-
-def customize_adseepper_config():
-    settings.hide_ad_banner()
-    settings.disable_promotional_content()
-    settings.show_only_valid_offers()
-    # その他のカスタマイズ設定を追加可能
-
+これまでsettings.hide_ad_banner()などを呼び出していた箇所は、すべて以下の新しい同等関数で置き換え可能です
 
 ```gdscript
 admob.show_interstitial()
