@@ -1,5 +1,5 @@
 ---
-title: "3D 動力学車：ベースモデル"
+title: "3Dで自動車を作ろう：ベースモデル"
 weight: 1
 draft: false
 ghcommentid: 41
@@ -7,7 +7,7 @@ ghcommentid: 41
 
 ## 課題
 
-3Dドライビング/レーシングゲームを作りたいが、どこから手をつければいいかわからないようですね。
+3Dドライビング/レーシングゲームを作りたいが、どこから手をつければいいかわからない。
 
 ## 解決策
 
@@ -32,35 +32,35 @@ VehicleBody3D`車両ボディ`の操作方法について詳しく知りたい�
 ![alt](/godot_recipes/3.x/img/3d_car_01.png)
 
 {{% notice note %}}
-ケンニーの『カーキット』でこの車種やその他のモデルを見つけることができます。以下のリンクから入手できます：
+ケンニーの『カーキット』でこの車種やその他のモデルを見つけることができます。以下のリンクから入手できます。
 [https://kenney.nl/assets/car-kit](https://kenney.nl/assets/car-kit)。キット全体をダウンロードすれば、後で他の車両も使用できます。
 {{% /notice %}}
 
 車を読み込むには、`"Models/GLTF形式"`フォルダ内で該当モデルを探してください。今回は`sedanSports.glb`を使用します。このファイルを新規Godotプロジェクトにインポートし、できれば`res://assets/cars/`のような専用フォルダにまとめておくと良いでしょう。
 
-Godotでファイルを選択し、「インポート」タブに移動します。_ルートタイプを「KinematicBody」に設定し、「再インポート」をクリックします。これでこの車を使用する準備が整いました。
+Godotでファイルを選択し、「インポート」タブに移動します。_ルートの型を「KinematicBody」に設定し、「再インポート」をクリックします。これでこの車を使用する準備が整いました。
 
 #### {{< gd-icon KinematicBody3D >}} キネマティックボディの設定
 
-`sedanSports.glb`ファイルをダブルクリックし、「新規継承」を選択してください。以下のように新しいシーンが作成されます：
+`sedanSports.glb`ファイルをダブルクリックし、「新規継承」を選択してください。以下のように新しいシーンが作成されます。
 
-<img src="/godot_recipes/3.x/img/3d_car_02.png" alt="3Dカーモデル">
+![alt](/godot_recipes/3.x/img/3d_car_02.png)
 
 注：各パーツごとに個別のメッシュが設定されています。また、不要な「tmpParent」{{< gd-icon Node3D >}}`空間ノード`も存在しますが、こちらは無視して構いません。
 
-{{< gd-icon KinematicBody3D >}} `KinematicBody`コンポーネントには衝突形状の未定義に関する警告が表示されています。まずはこの問題を解決する必要があります。具体的には以下の3つの {{< gd-icon CollisionShape3D >}} を追加します：車両本体用の {{< gd-icon BoxShape3D >}} `BoxShape`と、前輪および後輪用の各1つずつの {{< gd-icon CylinderShape3D >}} `CylinderShape`です。
+{{< gd-icon KinematicBody3D >}} `KinematicBody`コンポーネントには衝突形状の未定義に関する警告が表示されています。この問題を、以下の3つの手順で解決します。の {{< gd-icon CollisionShape3D >}} を追加します。車両本体用の {{< gd-icon BoxShape3D >}} `BoxShape`と、前輪および後輪用の各1つずつの {{< gd-icon CylinderShape3D >}} `CylinderShape`です。
 
 形状設定が完了したら、以下のような表示になるはずです：
 
 ![alt](/godot_recipes/3.x/img/3d_car_03.png)
 
 {{% notice tip %}}
-前面と背面の形状を一致させるには、どちらか一方を作成してサイズ設定した後、複製するだけで構いません。また、各ノードに適切な名前を付けることをお勧めします：{{< gd-icon CollisionShape3D >}}`CollisionShape`ノードには `CollisionBody`、`CollisionWheelsFront`、`CollisionWheelsRear`といった名称が適切でしょう。
+前面と背面の形状を一致させるには、どちらか一方を作成してサイズ設定した後、複製するだけで構いません。また、各ノードに適切な名前を付けることをお勧めします。{{< gd-icon CollisionShape3D >}}`CollisionShape`ノードには `CollisionBody`、`CollisionWheelsFront`、`CollisionWheelsRear`といった名称が適切でしょう。
 {{% /notice %}}
 
 ### 基本スクリプト
 
-私たちは、人間が操作する場合とAIが制御する場合の両方に対応できる自動車システムを構築したいと考えています。どちらのケースでも、動作コードの大部分は共通化可能です - 実際には入力方法が異なるだけです。このため、両者で共有可能な基本カースクリプトを活用することができます。
+人間が操作する場合とAIが制御する場合の両方に対応できる自動車システムを構築したいと考えています。どちらのケースでも、動作コードの大部分は共通化可能です - 実際には入力方法が異なるだけです。このため、両者で共有可能な基本カースクリプトを活用することができます。
 
 新規スクリプト「car_base.gd」を作成します。まずは変数の定義から始めましょう。車の動作を調整するためのエクスポート変数と、状態を追跡するためのその他の変数を用意します。
 
@@ -87,7 +87,7 @@ var steer_angle = 0.0  # current wheel angle
 
 * `engine_power` と `braking` は車の加速・減速時に適用されます。
 
-・ `drag` と `friction` については[こちらで詳しく説明しています](/godot_recipes/3.x/2d/car_steering/#part-3-frictiondrag)。
+*  `drag` と `friction` については[こちらで詳しく説明しています](/godot_recipes/3.x/2d/car_steering/#part-3-frictiondrag)。
 
 スクリプトの残り部分は2Dバージョンと非常に類似しており、いくつかの変更を加えることで{{< gd-icon Node3D >}}`空間オブジェクト`と`変換`を正しく扱えるようになります。
 
@@ -95,7 +95,7 @@ var steer_angle = 0.0  # current wheel angle
 
 ここでは、コントロールを適用する前に車が地面に接地しているかを確認します。空中では操舵は不できますからね！その後、標準的な移動方程式を適用します。
 
-# 車が斜面から滑り落ちるのを防ぐ `move_and_slide_with_snap()` を使用している点に注意してください（トラックに坂道がある場合）。スナップ基準には車のローカル下方向ベクトルを使用しています。これも正しく坂道を処理するためです。
+車が斜面から滑り落ちるのを防ぐ `move_and_slide_with_snap()` を使用している点に注意してください（トラックに坂道がある場合）。スナップ基準には車のローカル下方向ベクトルを使用しています。これも正しく坂道を処理するためです。
 
 
 ```gdscript
@@ -141,7 +141,7 @@ func calculate_steering(delta):
     look_at(transform.origin + new_heading, transform.basis.y)
 ```
 
-最後に、車両の制御方法を決定する関数を作成します。これは個別の車両ごとにオーバーライドします：プレイヤーが操作する車両ではキーボード／ゲームパッド入力を、コンピュータが制御する車両ではAIによる判断を実装します。
+最後に、車両の制御方法を決定する関数を作成します。これは個別の車両ごとにオーバーライドします。プレイヤーが操作する車両ではキーボード／ゲームパッド入力を、コンピュータが制御する車両ではAIによる判断を実装します。
 
 ```gdscript
 func get_input():
@@ -163,15 +163,15 @@ func get_input():
 extends "res://cars/car_base.gd"
 
 func get_input():
-    var turn = 入力.get_action_strength("steer_left")
-    turn -= 入力.get_action_strength("steer_right")
+    var turn = Input.get_action_strength("steer_left")
+    turn -= Input.get_action_strength("steer_right")
     steer_angle = turn * deg2rad(steering_limit)
     $tmpParent/sedanSports/wheel_frontRight.rotation.y = steer_angle*2
     $tmpParent/sedanSports/wheel_frontLeft.rotation.y = steer_angle*2
     acceleration = Vector3.ZERO
-    if 入力.is_action_pressed("accelerate"):
+    if Input.is_action_pressed("accelerate"):
         acceleration = -transform.basis.z * engine_power
-    if 入力.is_action_pressed("brake"):
+    if Input.is_action_pressed("brake"):
         acceleration = -transform.basis.z * braking
 ```
 
@@ -181,18 +181,16 @@ func get_input():
 
 ステアリング操作後、加速／ブレーキ入力を確認して車両の「加速度」を設定します。
 
-<figure>
-        <img src="/godot_recipes/3.x/img/3d_car_05.gif" alt="3Dカーモデル">
-    </figure>
+![alt](/godot_recipes/3.x/img/3d_car_05.gif)
 
 ### まとめ
 
 これは基本的な車コントローラーの実装です。ゲーム開発の出発点として自由にお使いください。さらに機能を追加したい場合は、以下に挙げるフォローアップレシピで扱うトピックを参考にしてください。
 
-・牽引およびドリフト走行
-・チェイスカメラ制御と撮影操作
-・AI／NPCコントロール（ステアリング、障害物回避、コース追従）
-・傾斜地やスロープの走行処理
+* 牽引およびドリフト走行
+* チェイスカメラ制御と撮影操作
+* AI／NPCコントロール（ステアリング、障害物回避、コース追従）
+* 傾斜地やスロープの走行処理
 
 {{% notice note %}}
 ダウンロードはこちら：[https://github.com/kidscancode/3d_car_tutorial/releases](https://github.com/kidscancode/3d_car_tutorial/releases)
@@ -201,7 +199,7 @@ func get_input():
 ## 関連レシピ
 
 - [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)
-・[入力アクション](http://kidscancode.org/godot_recipes/input/input_actions/)
+* [入力アクション](http://kidscancode.org/godot_recipes/input/input_actions/)
 - [3D: KinematicBody Movement](/godot_recipes/3.x/3d/kinematic_body/)
 
 #### この動画が気に入ったら？

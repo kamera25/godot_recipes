@@ -11,7 +11,7 @@ ghcommentid: 100
 
 ## 解決策
 
-この例では、[アイソメトリック・ミニクルセイダー](https://remos.itch.io/mini-crusader)を使用します。これには待機、歩行、攻撃など8方向に対応したアニメーションが含まれています。
+この例では、[Isometric: Mini-Crusader](https://remos.itch.io/mini-crusader)を使用します。これには待機、歩行、攻撃など8方向に対応したアニメーションが含まれています。
 
 ![alt](/godot_recipes/4.x/img/8_direction_01.gif)
 
@@ -41,7 +41,7 @@ func _physics_process(delta):
     angle = snappedf(mouse.angle(), PI/4) / (PI/4)
     angle = wrapi(int(angle), 0, 8)
 
-    if 入力.is_action_pressed("left_mouse") and mouse.length() > 10:
+    if Input.is_action_pressed("left_mouse") and mouse.length() > 10:
         current_animation = "run"
         velocity = mouse.normalized() * speed
         move_and_slide()
@@ -59,7 +59,7 @@ func _physics_process(delta):
 ```gdscript
 func _process(delta):
     current_animation = "idle"
-    var input_dir = 入力.get_vector("left", "right", "up", "down")
+    var input_dir = Input.get_vector("left", "right", "up", "down")
     if input_dir.length() != 0:
         angle = input_dir.angle() / (PI/4)
         angle = wrapi(int(a), 0, 8)
@@ -72,4 +72,4 @@ func _process(delta):
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトコードはこちらからダウンロードできます：[https://github.com/godotrecipes/8_direction_animation](https://github.com/godotrecipes/8_direction_animation)
+プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/8_direction_animation](https://github.com/godotrecipes/8_direction_animation)

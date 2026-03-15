@@ -1,5 +1,5 @@
 +++
-title = "3D 運動学的カーモデル"
+title = "3Dで自動車を作ろう"
 date = 2020-12-09T20:23:50-07:00
 weight = 25
 chapter = true

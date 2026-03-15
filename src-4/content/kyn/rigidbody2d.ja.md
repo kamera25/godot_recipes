@@ -10,10 +10,10 @@ tags: []
 {{< gd-icon RigidBody2D >}}`RigidBody2D`はGodotが提供する物理シミュレーション用のボディコンポーネントです。これはつまり、ユーザーが直接{{< gd-icon RigidBody2D >}}`RigidBody2D`を操作するものではないということを意味します。代わりに、重力や衝撃力などの各種フォースを適用すると、Godot組み込みの物理エンジンが衝突検知・弾性挙動・回転運動などを含む最終的な移動計算を自動で行います。
 
 {{% notice warning %}}
-`position` や `linear_velocity` などの `RigidBody2D` の物理特性を直接設定しようとすると正しく動作しません。これらの値は物理エンジンによって管理されています。
+Setting a {{< gd-icon RigidBody2D >}}`RigidBody2D`'s physical properties, such as `position` or `linear_velocity` directly will not work correctly. The physics engine controls these values.
 {{% /notice %}}
 
-// プロジェクト設定 > 物理プロパティ経由、またはグローバル物理特性を上書きする {{< gd-icon Area2D >}}`Area2D` に進入することで、オブジェクトの動作は世界からも影響を受けます。
+The body’s behavior is also affected by the world, via the Project Settings -> 物理 properties, or by entering an {{< gd-icon Area2D >}}`Area2D` that is overriding the global physics properties.
 
 適切に使用すれば、リジッドボディはGodotツールキットの中でも強力な武器となります。しかし、多くのユーザーが誤った用途で使ったり、その仕組みを正確に理解していないためにトラブルに見舞われることがあります。
 
@@ -25,7 +25,7 @@ tags: []
 
 モード（`mode`）
 
-剛体には4つの異なるモードが存在し、それぞれその挙動に影響を与えます：
+剛体には4つの異なるモードが存在し、それぞれその挙動に影響を与えます。
 
 1. リジッド - これがデフォルトモードです。オブジェクトは物理的な剛体として動作し、衝突や外力の影響を受けます。
 1. 静的 - このモードでオブジェクトは静止状態を保ちます。{{< gd-icon StaticBody2D >}}`StaticBody2D`と同様の挙動をします。
@@ -51,7 +51,7 @@ tags: []
 
 ### 便利な機能
 
-剛性体に力を加えるには、以下の2つの関数から選択できます：
+剛性体に力を加えるには、以下の2つの関数から選択できます。
 
 * `add_force()` / `add_central_force()`
 
@@ -88,20 +88,21 @@ export var engine_thrust = 500
 export var spin_thrust = 15000
 
 var thrust = Vector2()
-    var rotation_dir = 0
-    var screensize
+var rotation_dir = 0
+var screensize
 
-screensize = get_viewport().get_visible_rect().size
+func _ready():
+    screensize = get_viewport().get_visible_rect().size
 
 func get_input():
-    if 入力.is_action_pressed("ui_up"):
+    if Input.is_action_pressed("ui_up"):
         thrust = transform.x * engine_thrust
     else:
         thrust = Vector2()
     rotation_dir = 0
-    if 入力.is_action_pressed("ui_right"):
+    if Input.is_action_pressed("ui_right"):
         rotation_dir += 1
-    if 入力.is_action_pressed("ui_left"):
+    if Input.is_action_pressed("ui_left"):
         rotation_dir -= 1
 
 func _process(delta):
@@ -140,7 +141,7 @@ def update_game_state():
 
 「アステロイド」のもう一つの特徴は、画面がループ構造になっている点です。プレイヤーが片側からはみ出すと、反対側にテレポートします。ただし、前述のように、物理エンジンを壊さずに剛体の位置を変更することはできないという課題がありました。これは剛体を操作する際に重大な問題を引き起こします。
 
-以下のような方法を試すことができます：
+以下のような方法を試すことができます。
 
 ```gdscript
 func _physics_process(delta):
@@ -162,8 +163,8 @@ func _physics_process(delta):
 
 * リジッドボディの位置や線形速度をフレームごとに、あるいは頻繁に変更するのは避けるべきです。状態を直接操作する必要がある場合は、物理演算の状態を直接取得できる `_integrate_forces` メソッドを使用してください。
 
-// _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [物理2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。
-// 関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。私たちの場合、最も重要なのはボディの [Transform2D](http://docs.godotengine.org/en/stable/classes/class_transform2d.html) に関する情報です。
+ _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [物理2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。
+ 関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](http://docs.godotengine.org/en/stable/classes/class_transform2d.html) に関する情報です。
 
 したがって、`_integrate_forces()` に移動して以下のようにコードを記述します。
 
@@ -181,7 +182,7 @@ func _integrate_forces(state):
         state.transform.origin.y = screensize.y
 ```
 
-物理状態に基づいてボディの 'transform' を調整することで、エンジンは正常に動作し続け、期待通りの結果が得られます：
+物理状態に基づいてボディの 'transform' を調整することで、エンジンは正常に動作し続け、期待通りの結果が得られます。
 
 ![alt](/godot_recipes/3.x/img/rigidbody_ship2.gif)
 

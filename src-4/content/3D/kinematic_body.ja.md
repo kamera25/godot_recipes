@@ -7,13 +7,13 @@ ghcommentid: 34
 
 ## 課題
 
-プレイヤー操作可能な3Dキネマティックボディが必要です。
+プレイヤー操作可能な3Dキネマティックボディが要ります。
 
 ## 解決策
 
 このレシピでは、こちらの可愛らしいタンクモデルを使用します。
 
-<img src="/godot_recipes/3.x/img/3d_kinematic_01.png" alt="alt">
+![alt](/godot_recipes/3.x/img/3d_kinematic_01.png)
 
 このモデルは[Itch.io](https://gtibo.itch.io/mini-tank)で入手できます。他のお好きなモデルを使用しても構いません。ここでは戦車固有の機能は特に実装しません。
 
@@ -52,31 +52,7 @@ var velocity = Vector3.ZERO
 `export` を使ってプロパティを宣言すると、インスペクターで簡単に調整できるようになります。
 {{% /notice %}}
 
-# 移動とスライド処理の実装例
-def move_character():
-    velocity = Vector2(0, 0)  # 初期速度は停止状態
-
-    while True:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                return  # ウィンドウが閉じられたら終了
-
-        # ユーザー入力に基づく移動方向の設定
-        keys = pygame.key.get_pressed()
-        if keys[pygame.K_UP]:
-            velocity += Vector2(0, -5)
-        elif keys[pygame.K_DOWN]:
-            velocity += Vector2(0, 5)
-        if keys[pygame.K_LEFT]:
-            velocity -= Vector2(-5, 0)
-        elif keys[pygame.K_RIGHT]:
-            velocity -= Vector2(5, 0)
-
-        # 衝突判定と移動処理
-        move_result = character.move_and_slide(velocity * speed, ground_layers)
-        if move_result != KinematicBody.SLIDER_HIT:
-            character.physics_body.apply_central_impulse_at_local_origin(Vector2())
-
+Using the `KinematicBody.move_and_slide()` method makes our movement code quite simple:
 
 ```gdscript
 func _physics_process(delta):
@@ -98,13 +74,13 @@ func _physics_process(delta):
 func get_input(delta):
     var vy = velocity.y
     velocity = Vector3.ZERO
-    if 入力.is_action_pressed("forward"):
+    if Input.is_action_pressed("forward"):
         velocity += -transform.basis.z * speed
-    if 入力.is_action_pressed("back"):
+    if Input.is_action_pressed("back"):
         velocity += transform.basis.z * speed
-    if 入力.is_action_pressed("right"):
+    if Input.is_action_pressed("right"):
         rotate_y(-rot_speed * delta)
-    if 入力.is_action_pressed("left"):
+    if Input.is_action_pressed("left"):
         rotate_y(rot_speed * delta)
     velocity.y = vy
 ```
@@ -123,7 +99,7 @@ func get_input(delta):
 これはあらゆる種類の運動学的キャラクターの動作基盤です。ここからジャンプ、射撃、AI挙動などを追加できます。このレシピを拡張した具体例については、関連するレシピを参照してください。
 
 <!-- {{% notice note %}}
-プロジェクトファイルはこちらからダウンロードできます: [floating_text.zip](/godot_recipes/3.x/files/floating_text.zip)
+プロジェクトファイルはこちらからダウンロードできます。 [floating_text.zip](/godot_recipes/3.x/files/floating_text.zip)
 {{% /notice %}} -->
 
 ## 関連レシピ

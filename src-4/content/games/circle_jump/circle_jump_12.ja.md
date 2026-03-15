@@ -9,7 +9,7 @@ pre: "12. "
 
 ゲームに追加した3つの切り替え可能プロパティは正常に動作していますが、アプリケーションを終了すると設定が保存されません。次回起動時にも同じ設定値が保持されるよう、これらを設定する必要があります。
 
-まず、設定ファイル「`res://settings.gd`」で定義を行います：
+まず、設定ファイル「`res://settings.gd`」で定義を行います。
 
 ```gdscript
 var settings_file = "user://settings.save"
@@ -41,7 +41,7 @@ load_settings() を呼び出すタイミングを次のように変更してく�
 - save_settings() メソッドの終了時にも同じく _ready() 内で呼び出す
 さらに、Screens.gd ファイルでは、サウンド/音楽設定が変更された際に状態を保持する必要があるため、match 文内の各ケース部分に settings.save_settings() を追加する必要があります。
 
-別の課題として、ゲーム起動時に設定メニューのアイコンが保存ファイルから読み込んだ状態を反映しない問題があります。これは`register_buttons()`関数で対処できます。すでにこの関数は全てのボタンをループ処理してシグナル接続を行っています：
+別の課題として、ゲーム起動時に設定メニューのアイコンが保存ファイルから読み込んだ状態を反映しない問題があります。これは`register_buttons()`関数で対処できます。すでにこの関数は全てのボタンをループ処理してシグナル接続を行っています。
 
 ```gdscript
 for button in buttons:
@@ -66,24 +66,24 @@ for button in buttons:
 ライセンス条件を遵守することは非常に重要です。Godotで求められる要件については、以下のページを参照してください。[ライセンス遵守について](https://docs.godotengine.org/en/latest/tutorials/legal/complying_with_licenses.html)。なお、使用するアートワークについても、クレジット表記やリンク、その他の謝辞が必要となる場合があることにご注意ください。
 {{% /notice %}}
 
-これに到達するために、私たちは「タイトル」画面に新規ボタンを追加しました：
+これに到達するために、「タイトル」画面に新規ボタンを追加しました。
 
 ![alt](/godot_recipes/3.x/img/cj_12_01.png)
 
-ボタンは他のボタンと同様に設定されています。「ボタン」グループに追加して登録されるようにしてください。`Screens.gd`ファイルで、このボタンの名前を対象とするもう一つの`match`を追加します：
+ボタンは他のボタンと同様に設定されています。「ボタン」グループに追加して登録されるようにしてください。`Screens.gd`ファイルで、このボタンの名前を対象とするもう一つの`match`を追加します。
 
 ```gdscript
 "About":
     change_screen($AboutScreen)
 ```
 
-以下に「バージョン情報」画面の表示内容を示します：
+以下に「バージョン情報」画面の表示内容を示します。
 
 ![alt](/godot_recipes/3.x/img/cj_12_02.png)
 
 「BaseScreen.tscn」を継承し、ここにテキスト編集エリアとホームボタン用のコンテナを追加しました。
 
-「テキストエディタ」設定で［_BBCode］を有効にし、［テキスト］プロパティに以下を入力します：
+「テキストエディタ」設定で［_BBCode］を有効にし、［テキスト］プロパティに以下を入力します。
 
 ```text
 [center][u]Circle Jump[/u]
@@ -100,10 +100,10 @@ Copyright © 2019 KidsCanCode
 ```
 
 {{% notice note %}}
-BBCodeの書式設定に関する詳細な仕様については、[RichText标签におけるBBCode](https://docs.godotengine.org/en/latest/tutorials/gui/bbcode_in_richtextlabel.html)のドキュメントを参照してください。
+BBCodeの書式設定に関する詳細な仕様については、[RichTextLabelにおけるBBCode](https://docs.godotengine.org/en/latest/tutorials/gui/bbcode_in_richtextlabel.html)のドキュメントを参照してください。
 {{% /notice %}}
 
-URL をクリック可能にするには、`TextEdit` の `meta_clicked` シグナルを接続します：
+URL をクリック可能にするには、`TextEdit` の `meta_clicked` シグナルを接続します。
 
 ```gdscript
 func _on_TextEdit_meta_clicked(meta):

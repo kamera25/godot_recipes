@@ -1,5 +1,5 @@
 ---
-title: "射出プロジェクトル"
+title: "投射物を発射する"
 weight: 5
 draft: false
 ghcommentid: 36
@@ -7,7 +7,7 @@ ghcommentid: 36
 
 ## 課題
 
-プレイヤー／モブなどから投射物を発射させたいのですね。
+プレイヤー／モブなどから投射物を発射させたい。
 
 ## 解決策
 
@@ -23,9 +23,9 @@ ghcommentid: 36
     {{< gd-icon CollisionShape3D >}} CollisionShape
 ```
 
-メッシュには、Godotに標準で備わっているプリミティブ形状を使用するか、以下のようなものを作成できます：
+メッシュには、Godotに標準で備わっているプリミティブ形状を使用するか、以下のようなものを作成できます。
 
-<img src="/godot_recipes/3.x/img/3d_shoot_01.png" alt="">
+![alt](/godot_recipes/3.x/img/3d_shoot_01.png)
 
 {{% notice note %}}
 ここに掲載している弾丸モデルを使用したい場合は、[ケニーの『武器パック』](https://kenney.nl/assets/weapon-pack)から入手できます。
@@ -37,7 +37,7 @@ ghcommentid: 36
 `MeshInstance` を `Area`ノードの前方方向（**-Z軸**）に合わせて整列させることを忘れないでください。そうしないと、弾丸が正しく飛んでいるように見えません！
 {{% /notice %}}
 
-スクリプトを追加し、{{< gd-icon Area3D >}}`エリア`の`body_entered`シグナルに接続してください。
+スクリプトを追加し、{{< gd-icon Area3D >}}`Area3D`の`body_entered`シグナルに接続してください。
 
 ```gdscript
 extends Area
@@ -63,37 +63,13 @@ func _on_Shell_body_entered(body):
 
 We're using a custom gravity vector, `g` so that we can control how the shell flies from the tank's cannon, giving it a nice arc effect. If you'd rather your projectiles move in a straight line, you can remove the line that applies it in `_physics_process()`.
 
-from pyglet import math as mp
-
-class CameraController:
-    def __init__(self, window):
-        # ... 初期化コードは同じ
-
-        self.cam_look_at = self.window.context.program['camera'].uniform('look_at')
-
-    def update_frame_position(self, frame_position):
-        """各フレームで弾丸の方向を更新します。"""
-        angle = mp.radians(frame_position[2])  # 角度をラジアンに変換
-
-        projection_matrix = self.window.context.get_program_uniform_mat4('proj')
-        view_matrix = self.cam_view_matrix
-
-        mp.glUniformMatrix4fv(self.cam_look_at, 1, mp.GL_FALSE, projection_matrix * view_matrix)
-
-    def update_position_and_angle(self):
-        """位置と角度を更新し、弾丸の方向を調整します。"""
-        # ... 既存の実装は同じ
-
-        # 各フレームで弾丸の方向を更新
-        frame_position = self.calculate_frame_position()
-        self.update_frame_position(frame_position)
-
+Using `look_at()` each frame turns the bullet to point in its direction of travel.
 
 また、`exploded`シグナルも発出します。これを利用して爆発エフェクトやダメージ効果を実装できます（ただし詳細な実装は別のレシピで解説します）。
 
 ### 撮影について
 
-タンク（または射撃を行っているオブジェクト）内に、弾丸が出現する位置に `{{< gd-icon Position3D >}}`Position3D` 子要素を追加します。例として戦車の場合、砲身の先端に配置します：
+タンク（または射撃を行っているオブジェクト）内に、弾丸が出現する位置に `{{< gd-icon Position3D >}}`Position3D` 子要素を追加します。例として戦車の場合、砲身の先端に配置します。
 
 ![alt](/godot_recipes/3.x/img/3d_shoot_02.png)
 
@@ -106,7 +82,7 @@ export (PackedScene) var Bullet
 そして、`_process()` または `_unhandled_input()`（入力をキャプチャしている箇所）に、以下のコードを追加して弾丸を生成してください。
 
 ```gdscript
-if 入力.is_action_just_pressed("shoot"):
+if Input.is_action_just_pressed("shoot"):
     var b = Bullet.instance()
     owner.add_child(b)
     b.transform = $Cannon/Muzzle.global_transform
@@ -118,7 +94,7 @@ if 入力.is_action_just_pressed("shoot"):
 <video controls src="/godot_recipes/3.x/img/3d_shoot_03.webm"></video>
 
 <!-- {{% notice note %}}
-プロジェクトファイルはこちらよりダウンロードできます：[3d_shooting.zip](/godot_recipes/3.x/files/3d_shooting.zip)
+プロジェクトファイルはこちらよりダウンロードできます。[3d_shooting.zip](/godot_recipes/3.x/files/3d_shooting.zip)
 {{% /notice %}} -->
 
 ## 関連レシピ

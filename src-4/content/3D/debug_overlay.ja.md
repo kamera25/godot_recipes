@@ -13,14 +13,7 @@ ghcommentid: 37
 
 2Dでの描画デバッグは非常に便利です。{{< gd-icon CanvasItem2D >}}`CanvasItem`は`_draw()`コールバック内で使用できる多彩なプリミティブ描画メソッドを提供します。3Dの場合、状況はそれほど単純ではありません。一つの解決策として`ImmediateGeometry`を使って手動でメッシュを作成する方法がありますが、これは非常に手間がかかり、迅速なデバッグには不便です。
 
-const camera = new Camera();
-camera.updateMatrixWorld();
-canvasItem.draw({
-    position: { x: 10, y: 20 },
-    rotation: [30, 45],
-    scale: { x: 0.5, z: 0.8 }
-});
-
+適切な解決策としては、引き続き`CanvasItem`の描画メソッドを使用することです。そのためにはまず、3D空間内の位置を2Dビューポートに投影する必要があります。幸い、{{< gd-icon Camera3D >}}`Camera`オブジェクトは、その`unproject_position()`メソッドを使ってこれを処理してくれます。
 
 ### セットアップ方法
 
@@ -28,9 +21,9 @@ canvasItem.draw({
 
 ![alt](/godot_recipes/3.x/img/3d_debug_03.png)
 
-# 例：描画制御ノードがプレイヤーノードを参照しており、その速度ベクトルを描画したいとします
-# また、カメラノード｛{< gd-icon Camera3D >}｝も参照しています
-# これらの参照方法については後ほど詳しく説明します
+例：描画制御ノードがプレイヤーノードを参照しており、その速度ベクトルを描画したいとします
+また、カメラノード｛{< gd-icon Camera3D >}｝も参照しています
+これらの参照方法については後ほど詳しく説明します
 
 
 ```gdscript
@@ -52,15 +45,7 @@ func draw_triangle(pos, dir, size, color):
     draw_polygon(points, PoolColorArray([color]))
 ```
 
-def unproject_position(camera, world_position):
-    # カメラ座標系にワールド座標を変換する関数を実装してください
-    pass
-
-start_point = unproject_position(main_camera, start_vector)
-end_point = unproject_position(main_camera, end_vector)
-
-draw_triangle(start_point, mid_point, end_point, color=color)
-
+ベクトルの始点と終点を求めるために`unproject_position()`を使用します。`draw_triangle()`は、見栄えの良い尖った矢印形状を表示するために用意されています。
 
 ![alt](/godot_recipes/3.x/img/3d_debug_01.png)
 
@@ -70,7 +55,7 @@ draw_triangle(start_point, mid_point, end_point, color=color)
 
 さて、これをより実用的な機能に改良しましょう。ゲームにはデバッグ用ベクトルを描画したいオブジェクトが多数存在するはずです。敵の向き、加速度ベクトル、目的地など、様々な要素が考えられます。どんなオブジェクトでも簡単にデバッグ描画レイヤーに追加できる仕組みが必要です。
 
-以下の手順で「DebugOverlay」を自動読み込みとして追加し、シングルトンとして設定してください。これにより、どのノードからでもアクセス可能になります。このスクリプトに以下の内容を追加します：
+以下の手順で「DebugOverlay」を自動読み込みとして追加し、シングルトンとして設定してください。これにより、どのノードからでもアクセス可能になります。このスクリプトに以下の内容を追加します。
 
 ```gdscript
 extends CanvasLayer
@@ -78,11 +63,11 @@ extends CanvasLayer
 onready var draw = $DebugDraw3D
 
 func _ready():
-    if not 入力Map.has_action("toggle_debug"):
-        入力Map.add_action("toggle_debug")
-        var ev = 入力EventKey.new()
+    if not InputMap.has_action("toggle_debug"):
+        InputMap.add_action("toggle_debug")
+        var ev = InputEventKey.new()
         ev.scancode = KEY_BACKSLASH
-        入力Map.action_add_event("toggle_debug", ev)
+        InputMap.action_add_event("toggle_debug", ev)
 
 func _input(event):
     if event.is_action_pressed("toggle_debug"):
@@ -138,20 +123,20 @@ func _draw():
         vector.draw(self, camera)
 ```
 
-最後に、新しいフォロー対象ベクトルを登録する関数を追加できます：
+最後に、新しいフォロー対象ベクトルを登録する関数を追加できます。
 
 ```gdscript
 func add_vector(object, property, scale, width, color):
     vectors.append(Vector.new(object, property, scale, width, color))
 ```
 
-现在，游戏中的任何对象都可以通过以下方式添加调试向量：
+これでゲーム内の任意のオブジェクトから、以下の方法でデバッグ用ベクトルを追加できるようになりました。
 
 ```gdscript
 DebugOverlay.draw.add_vector(self, "velocity", 1, 4, Color(0,1,0, 0.5))
 ```
 
-以下に、レイキャストと操舵方向を表示するAI制御車両の実例をご紹介します：
+以下に、レイキャストと操舵方向を表示するAI制御車両の実例をご紹介します。
 
 ![alt](/godot_recipes/3.x/img/3d_debug_04.gif)
 

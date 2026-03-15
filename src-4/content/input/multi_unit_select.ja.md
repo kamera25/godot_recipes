@@ -41,7 +41,7 @@ var select_rect = RectangleShape2D.new()  # Collision shape for drag box.
 
 ```gdscript
 func _unhandled_input(event):
-    if event is 入力EventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+    if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
         if event.pressed:
             # If the mouse was clicked and nothing is selected, start dragging
             if selected.size() == 0:
@@ -51,7 +51,7 @@ func _unhandled_input(event):
         elif dragging:
             dragging = false
             queue_redraw()
-    if event is 入力EventMouseMotion and dragging:
+    if event is InputEventMouseMotion and dragging:
         queue_redraw()
 
 func _draw():
@@ -64,7 +64,7 @@ func _draw():
 
 選択ボックスが作成できたら、その内部に位置するユニットを特定する必要があります。ボタンを放してドラッグ操作が終了した際には、物理空間クエリを実行して対象のユニットを検索する必要があります。なお、対象となるユニットは{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ですが、{{< gd-icon Area2D >}}`Area2D`やその他のボディタイプでも問題ありません。
 
-We'll use `物理DirectSpaceState2D.intersect_shape()` to find the units. This requires a shape (our rectangle) and a transform (our location). See [Godot docs](https://docs.godotengine.org/en/stable/classes/class_physicsdirectspacestate2d.html#class-physicsdirectspacestate2d-method-intersect-shape) for details.
+`物理DirectSpaceState2D.intersect_shape()`を使用してユニットを検出します。これには形状（ここでは矩形）と変換行列（位置）が必要です。詳細は[Godotドキュメント](https://docs.godotengine.org/ja/4.x/classes/class_physicsdirectspacestate2d.html)を参照してください。
 
 ```gdscript
 elif dragging:
@@ -78,7 +78,7 @@ elif dragging:
 
 ```gdscript
     var space = get_world_2d().direct_space_state
-    var query = 物理ShapeQueryParameters2D.new()
+    var query = PhysicsShapeQueryParameters2D.new()
     query.shape = select_rect
     query.collision_mask = 2  # Units are on collision layer 2
     query.transform = Transform2D(0, (drag_end + drag_start) / 2)
@@ -92,7 +92,7 @@ elif dragging:
 { "rid": RID(4123168604162), "collider_id": 32229033411, "collider": Unit3:<CharacterBody2D#32229033411>, "shape": 0 }]
 ```
 
-各`collider`項目はそれぞれユニットへの参照であるため、これを使用すれば選択通知を行い、アウトラインシェーダーを有効にできます：
+各`collider`項目はそれぞれユニットへの参照であるため、これを使用すれば選択通知を行い、アウトラインシェーダーを有効にできます。
 
 ```gdscript
     for item in selected:
@@ -103,11 +103,11 @@ elif dragging:
 
 ### 部隊指揮について
 
-最終的に、画面上の任意の位置をクリックすることで、選択したユニットに移動コマンドを発行できます：
+最終的に、画面上の任意の位置をクリックすることで、選択したユニットに移動コマンドを発行できます。
 
 ```gdscript
 func _unhandled_input(event):
-    if event is 入力EventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+    if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
         if event.pressed:
             # If the mouse was clicked and nothing is selected, start dragging
             if selected.size() == 0:
@@ -125,7 +125,7 @@ func _unhandled_input(event):
 
 ## まとめ
 
-この技術は様々なリアルタイムストラテジーゲーム（RTS）やその他のジャンルのゲームに応用できます。以下から完全版プロジェクトをダウンロードして、自分の作品を作る際のベースとして活用してください。
+このテクニックはリアルタイムストラテジーゲーム（RTS）やその他のジャンルのゲームに応用できます。以下から完全版プロジェクトをダウンロードして、自分の作品を作る際のベースとして活用してください。
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 

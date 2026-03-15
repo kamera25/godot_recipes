@@ -8,7 +8,7 @@ draft: true
 
 ## 解決策
 
-私たちのレベル設計には、以下のいくつかの選択肢を検討する必要があります。
+レベル設計には、以下のいくつかの選択肢を検討する必要があります。
 
 ### オプション
 
@@ -16,7 +16,7 @@ draft: true
 
 組み込みの `{{< gd-icon GridMap >}}GridMap` ノードを使用すると、エディター上でメッシュをグリッド状に配置できます。この概念は2D用の `{{< gd-icon TileMap >}}TileMap` ノードと似ていますが、機能性はやや限られています。
 
-このオプションには以下のような欠点があります：
+このオプションには以下のような欠点があります。
 
 1. Godot のグリッドマップ機能は比較的基本的なもので（特に2D版と比較すると）、長い間更新されていません。
 1. 配置は固定グリッドレイアウトに限定されるため、メッシュの配置自由度が限られています。
@@ -39,7 +39,7 @@ Godotの組み込み[Blenderサポート](https://docs.godotengine.org/ja/stable
 
 「壁とドアの足場」（wall_doorway_scaffold.glb）ファイルを**ファイルシステム**内で見つけ、ダブルクリックしてインポート設定を確認し、両方のメッシュ（ドアフレームとドア）に対して静止衝突オブジェクトが適切に作成されていることを確認してください。右クリックして「新規継承シーン」を作成します。
 
-以下の手順で進めます：
+以下の手順で進めます。
 
 1. アニメーション用に「アニメーションPlayer」ノードを追加します。このノードを使ってドアの開閉アニメーションを実装します。最終的に以下のようなノードツリー構造になります。
 
@@ -61,9 +61,9 @@ func interact(dir):
     if open:
         return
     if dir.dot(global_transform.basis.z) < 0:
-        $アニメーションPlayer.play("open+")
+        $AnimationPlayer.play("open+")
     else:
-        $アニメーションPlayer.play("open-")
+        $AnimationPlayer.play("open-")
     open = true
 ```
 
@@ -79,5 +79,5 @@ func interact(dir):
 extends Node3D
 
 func interact(_dir):
-    $アニメーションPlayer.play("open")
+    $AnimationPlayer.play("open")
 ```

@@ -99,7 +99,7 @@ else:
 zoom = lerp(zoom, Vector2.ONE * z, zoom_speed)
 ```
 
-ここでの主要な機能は`Rect2`によるものです。私たちはすべてのターゲットを包含する長方形を見つける必要があり、これは`expand()`メソッドを使用することで取得できます。その後、この矩形に`margin`分の大きさを追加します。
+ここでの主要な機能は`Rect2`によるものです。すべてのターゲットを包含する長方形を見つける必要があり、これは`expand()`メソッドを使用することで取得できます。その後、この矩形に`margin`分の大きさを追加します。
 
 以下の画面では、長方形が描画されている様子を確認できます（デモプロジェクトで「Tab」キーを押すとこの描画機能を有効にできます）：
 
@@ -159,4 +159,4 @@ func remove_target(t):
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/multitarget_camera](https://github.com/godotrecipes/multitarget_camera)
+プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/multitarget_camera](https://github.com/godotrecipes/multitarget_camera)

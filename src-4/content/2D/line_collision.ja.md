@@ -6,7 +6,7 @@ draft: false
 
 ## 課題
 
-衝突検出を `{{<  gd-icon Line2D >}}Line2D` に対して行いたいとのことですね。
+衝突検出を `{{<  gd-icon Line2D >}}Line2D` に対して行いたいとの。
 
 ## 解決策
 
@@ -25,7 +25,7 @@ draft: false
 衝突ではなく線との重複を検出したい場合は、代わりに {{< gd-icon Area2D >}}`Area2D` を使用することもできます。
 {{% /notice %}}
 
-次に、ボディに衝突形状を追加する必要があります。以下の2つのオプションがあります：
+次に、ボディに衝突形状を追加する必要があります。以下の2つのオプションがあります。
 
 ### オプション 1：{{< gd-icon SegmentShape2D >}} `SegmentShape2D`の使用
 
@@ -65,4 +65,4 @@ func _ready():
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/line2d_collision](https://github.com/godotrecipes/line2d_collision)
+プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/line2d_collision](https://github.com/godotrecipes/line2d_collision)

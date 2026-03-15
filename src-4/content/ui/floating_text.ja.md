@@ -1,12 +1,12 @@
 ---
-title: "浮動戦闘テキスト"
+title: "戦闘テキストを浮かせたい"
 weight: 12
 draft: false
 ---
 
 ## 課題
 
-衝突時にダメージを浮動小数点数で表示させたい。
+ダメージを受けたとき、浮かせながら数字を表示させたい。
 
 ![alt](/godot_recipes/4.x/img/fct_demo.gif)
 
@@ -14,14 +14,14 @@ draft: false
 
 この問題に取り組む方法はいくつかあります。例えば、ビットマップフォントを使用し、各数字をその構成桁から画像として生成した上で、`{{< gd-icon Sprite2D >}}` `Sprite2D`ノードを使って表示・移動させるといった手法が考えられます。
 
-ただし、このレシピでは `{{< gd-icon 标签 >}}`标签` ノード（名前は「FCT」）を使用します。この方法であれば、フォントの変更が柔軟に行えるだけでなく、数字を文字列として表示するのも容易になります - さらには状況に応じて「miss」などの他のメッセージを表示することもできます。
+ただし、このレシピでは `{{< gd-icon Label >}}`Label` ノード（名前は「FCT」）を使用します。この方法であれば、フォントの変更が柔軟に行えるだけでなく、数字を文字列として表示するのも容易になります - さらには状況に応じて「miss」などの他のメッセージを表示することもできます。
 
 この例では、"Xolonium.ttf" フォントを使用し、文字サイズを `28` ポイントに、アウトラインの色を黒、幅を `4` ピクセルに設定しています。
 
 ラベルにスクリプトを追加します。
 
 ```gdscript
-extends 标签
+extends Label
 
 func show_value(value, travel, duration, spread, crit=false):
 ```
@@ -53,7 +53,7 @@ func show_value(value, travel, duration, spread, crit=false):
             Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 ```
 
-次に、補間する2つのプロパティを設定します。移動用の`rect_position`と、表示制御用の`modulate.a`です。
+次に、補間する2つのプロパティを設定します。移動用の`position`と、表示制御用の`modulate.a`です。
 
 ```gdscript
     if crit:
@@ -77,7 +77,7 @@ func show_value(value, travel, duration, spread, crit=false):
 
 次に、浮遊テキストの表示位置を管理し生成するための小さなノードを作成します。このノードは、浮動テキストエフェクトを表示させたいゲームエンティティにアタッチされます。
 
-これは `Node2D` クラスのノードで「FCTManager」という名前です。このノードには以下のスクリプトが含まれています：
+これは `Node2D` クラスのノードで「FCTManager」という名前です。このノードには以下のスクリプトが含まれています。
 
 ```gdscript
 extends Node2D
@@ -104,7 +104,7 @@ $FCTManager.show_value(dmg, crit)
 
 ## まとめ
 
-最適化：多数の敵や弾が出現する場合、テキスト表示オブジェクトの頻繁な生成と破棄によりパフォーマンスが低下する可能性があります。この場合は、マネージャ内で固定数のテキストオブジェクトを生成し、アニメーション終了時に破棄するのではなく、表示／非表示を切り替える方法が有効です。
+【最適化】多数の敵や弾が出現する場合、テキスト表示オブジェクトの頻繁な生成と破棄によりパフォーマンスが低下する可能性があります。この場合は、マネージャ内で固定数のテキストオブジェクトを生成し、アニメーション終了時に破棄するのではなく、表示／非表示を切り替える方法が有効です。
 
 
 {{% notice note %}}
@@ -113,11 +113,11 @@ $FCTManager.show_value(dmg, crit)
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-以下からプロジェクトのサンプルコードをダウンロードできます：[https://github.com/godotrecipes/floating_combat_text](https://github.com/godotrecipes/floating_combat_text)
+以下からプロジェクトのサンプルコードをダウンロードできます。[https://github.com/godotrecipes/floating_combat_text](https://github.com/godotrecipes/floating_combat_text)
 
 ![alt](/godot_recipes/4.x/img/fct_demo.png)
 
 ## 関連レシピ
 
 [UI: ラベル](/godot_recipes/.x/ui/labels/)
-[UI: ユニットヘルスバー](/godot_recipes/3.x/ui/unit_healthbar/) -->
+[UI: ユニットHPバー](/godot_recipes/3.x/ui/unit_healthbar/) -->

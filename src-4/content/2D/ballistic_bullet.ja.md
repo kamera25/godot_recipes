@@ -23,7 +23,7 @@ ghcommentid: 30
     - CollisionShape2D
 ```
 
-以下の方法で利用できます：{{< gd-icon Area2D >}}`Area2D` の `gravity` プロパティを設定します。初期テストでは値を `150` に設定します。
+以下の方法で利用できます。{{< gd-icon Area2D >}}`Area2D` の `gravity` プロパティを設定します。初期テストでは値を `150` に設定します。
 
 ```gdscript
 extends Area2D
@@ -59,7 +59,7 @@ func shoot():
     b.gravity = gravity
 ```
 
-以下に実際の使用例をご紹介します：
+以下に実際の使用例をご紹介します。
 
 ![alt](/godot_recipes/3.x/img/2d_ballistic_02.gif)
 

@@ -8,7 +8,7 @@ draft: false
 
 ゲームには「レベル選択」メニューが必要です。ユーザーがグリッド形式のオプションから選べるようにする必要があります。
 
-[画像: alt="レベル選択画面" /path/to/image/level_select_03.gif]
+![alt](/godot_recipes/4.x/img/level_select_03.gif)
 
 
 ## 解決策
@@ -21,16 +21,16 @@ draft: false
 
 ```
 LevelBox: {{< gd-icon PanelContainer >}} PanelContainer
-    {{< gd-icon 标签 >}} 标签
+    {{< gd-icon Label >}} Label
     {{< gd-icon MarginContainer >}} MarginContainer
         {{< gd-icon TextureRect >}} TextureRect
 ```
 
-{{< gd-icon TextureRect >}} テクスチャレクトはロックアイコンの表示用、{{< gd-icon 标签 >}} ラベルはレベル番号の表示用に使用されます。一方が表示されている間は、もう一方は非表示になります。
+{{< gd-icon TextureRect >}} テクスチャレクトはロックアイコンの表示用、{{< gd-icon Label >}} ラベルはレベル番号の表示用に使用されます。一方が表示されている間は、もう一方は非表示になります。
 
 ご自由にスタイルを設定できます。例として：
 
-!
+![alt](/godot_recipes/4.x/img/level_select_01.gif)
 
 インスペクターで `LevelBox` の**カスタム最小サイズ**を必ず設定してください。ここでは例として `(110, 110)` を使用していますが、実際のレイアウト要件に応じて調整が必要です。
 
@@ -48,7 +48,7 @@ signal level_selected
     set = set_level
 
 @onready var lock = $MarginContainer/Lock
-@onready var label = $标签
+@onready var label = $Label
 
 func set_locked(value):
     locked = value
@@ -67,7 +67,7 @@ func set_level(value):
 func _on_gui_input(event):
     if locked:
         return
-    if event is 入力EventMouseButton and event.pressed:
+    if event is InputEventMouseButton and event.pressed:
         level_selected.emit(level_num)
         print("Clicked level ", level_num)
 ```
@@ -99,7 +99,7 @@ func _on_gui_input(event):
 ```
 LevelMenu:{{< gd-icon MarginContainer >}} MarginContainer
     {{< gd-icon VBoxContainer >}} VBoxContainer
-        Title: {{< gd-icon 标签 >}} 标签
+        Title: {{< gd-icon Label >}} Label
         {{< gd-icon HBoxContainer >}} HBoxContainer
             BackButton: {{< gd-icon TextureButton >}} TextureButton
             ClipControl: {{< gd-icon Control >}} Control
@@ -112,7 +112,7 @@ LevelMenu:{{< gd-icon MarginContainer >}} MarginContainer
     * **テーマオーバーライド/定数/マージン**: `20`
 * {{< gd-icon VBoxContainer >}} `VBoxコンテナ`
     * **テーマオーバーライド/定数/間隔**: `50`
-* {{< gd-icon 标签 >}} `タイトル`
+* {{< gd-icon Label >}} `タイトル`
     * フォントスタイルはお好みでカスタマイズ可能
 * {{< gd-icon TextureButton >}} `戻るボタン` / `次へボタン`
     * **テクスチャサイズの無視**: `有効化`
@@ -132,7 +132,7 @@ LevelMenu:{{< gd-icon MarginContainer >}} MarginContainer
 
 「クリップコンテンツ」を有効にすると、3つのグリッドはすべて表示されますが、`ClipControl`では1つずつしか表示されないようになっています。
 
-さて、メニューをスクロールするには、`グリッドボックス` を左右に `710` ピクセル分シフトさせる必要があります。
+さて、メニューをスクロールするには、`GridBox` を左右に `710` ピクセル分シフトさせる必要があります。
 
 ```
 110 (width of each LevelBox)
@@ -142,7 +142,7 @@ LevelMenu:{{< gd-icon MarginContainer >}} MarginContainer
 ```
 
 {{% notice info %}}
-「なぜこの場面で{{< gd-icon ScrollContainer >}} `ScrollContainer`を使わないのか」と疑問に思われるかもしれません。もちろん、使用することはできますが、私たちは連続スクロールを望んでいませんし、スクロールバーが表示されることも避けたいからです。
+「なぜこの場面で{{< gd-icon ScrollContainer >}} `ScrollContainer`を使わないのか」と疑問に思われるかもしれません。もちろん、使用することはできますが、連続スクロールを望んでいませんし、スクロールバーが表示されることも避けたいからです。
 {{% /notice %}}
 
 スクリプトを `LevelMenu` に追加し、2つのボタンの `pressed`シグナルを接続してください。
@@ -184,7 +184,7 @@ func _on_NextButton_pressed():
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトコードはこちらからダウンロードできます：[https://github.com/godotrecipes/ui_level_select](https://github.com/godotrecipes/ui_level_select)
+プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/ui_level_select](https://github.com/godotrecipes/ui_level_select)
 
 ## 関連レシピ
 

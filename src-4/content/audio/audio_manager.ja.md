@@ -7,7 +7,7 @@ ghcommentid: 80
 
 ## 課題
 
-オブジェクトが破壊されたり収集された際に再生するために `音声StreamPlayer` をモブ/コインなどに追加しようとしましたが、問題があります：対象のオブジェクトを削除すると、オーディオプレーヤーも同時に削除され、音が途切れてしまいます。より簡単に音声を管理できる方法が必要です。
+オブジェクトが破壊されたり収集された際に再生するために `音声StreamPlayer` をモブ/コインなどに追加しようとしましたが、問題があります。対象のオブジェクトを削除すると、オーディオプレーヤーも同時に削除され、音が途切れてしまいます。より簡単に音声を管理できる方法が必要です。
 
 ## 解決策
 
@@ -26,9 +26,9 @@ var queue = []  # The queue of sounds to play.
 
 
 func _ready():
-    # Create the pool of 音声StreamPlayer nodes.
+    # Create the pool of AudioStreamPlayer nodes.
     for i in num_players:
-        var player = 音声StreamPlayer.new()
+        var player = AudioStreamPlayer.new()
         add_child(player)
         available.append(player)
         player.finished.connect(_on_stream_finished.bind(player))
@@ -59,7 +59,7 @@ func _process(delta):
 プロジェクト内で音を再生したい任意の場所で、以下を使用してください。
 
 ```gdscript
-音声Manager.play("res://path/to/sound")
+AudioManager.play("res://path/to/sound")
 ```
 
 覚えておくと便利ですが、サウンドファイルをテキストエディタに直接ドラッグ＆ドロップすることで、ファイルパスを簡単に貼り付けることができます。
@@ -87,4 +87,4 @@ func _process(delta):
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/audio_manager](https://github.com/godotrecipes/audio_manager)
+プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/audio_manager](https://github.com/godotrecipes/audio_manager)

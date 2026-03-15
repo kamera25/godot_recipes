@@ -1,5 +1,5 @@
 ---
-title: "ホーミングミサイル"
+title: "追跡ミサイル"
 weight: 4
 draft: false
 ---
@@ -12,7 +12,7 @@ draft: false
 
 この例では、プロジェクトイルとして {{< gd-icon Area2D >}}`Area2D` ノードを使用します。エリアは通常、衝突検出が必要な弾丸に適しています。もし跳ね返る/反射するタイプの弾丸も必要であれば、`物理Body` 型のノードの方が適しているかもしれません。
 
-ノードの設定とミサイルの挙動は、従来の「単純な」弾丸と同様の仕組みを採用しています。複数種類の弾丸を作成する場合、継承機能を活用してすべてのプロジェクトイルを共通の基本設定に基づいて構築することができます。
+The node setup and behavior of the missile is the same you would use for a "dumb" bullet. If you're creating many bullet types, you can use inheritance to base all your projectiles on the same core setup.
 
 使用するノード：
 
@@ -67,14 +67,14 @@ func _on_Lifetime_timeout():
 ```gdscript
 export var steer_force = 50.0
 
-var ターゲット = null;
+var target = null
 
 func start(_transform, _target):
     target = _target
     ...
 ```
 
-ミサイルを目標に向かって移動させるには、方向転換して加速する必要があります（加速度とは速度の変化のことです）。ミサイルは本来、まっすぐ目標方向へ進みたいところですが、現在の速度ベクトルは別の方向に向いた状態です。簡単なベクトル計算によって、このずれ量を求めることができます：
+ミサイルを目標に向かって移動させるには、方向転換して加速する必要があります（加速度とは速度の変化のことです）。ミサイルは本来、まっすぐ目標方向へ進みたいところですが、現在の速度ベクトルは別の方向に向いた状態です。簡単なベクトル計算によって、このずれ量を求めることができます。
 
 ![alt](/godot_recipes/4.x/img/steering_diagram.png)
 
@@ -102,7 +102,7 @@ func _physics_process(delta):
     position += velocity * delta
 ```
 
-以下はその結果の一例です。粒子エフェクトや爆発効果などの視覚的演出を少し追加しています：
+以下はその結果の一例です。粒子エフェクトや爆発効果などの視覚的演出を少し追加しています。
 
 <video controls src='/godot_recipes/4.x/img/homing_missiles.webm'></video>
 
@@ -116,7 +116,7 @@ export var steer_force = 50.0
 
 var velocity = Vector2.ZERO
 var acceleration = Vector2.ZERO
-var ターゲット = null;
+var target = null
 
 func start(_transform, _target):
     global_transform = _transform
@@ -147,8 +147,8 @@ func _on_Lifetime_timeout():
 func explode():
     $Particles2D.emitting = false
     set_physics_process(false)
-    $アニメーションPlayer.play("explode")
-    await $アニメーションPlayer.animation_finished
+    $AnimationPlayer.play("explode")
+    await $AnimationPlayer.animation_finished
     queue_free()
 ```
 

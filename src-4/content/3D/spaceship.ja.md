@@ -8,7 +8,7 @@ tags: []
 
 ## 課題
 
-アーケード／映画のようなスタイルで飛行する3D宇宙船を作りたいとお考えですね。リアルな物理演算は求めず、ドッグファイト主体の『スター・ウォーズ』風の宇宙戦闘スタイルを重視されているということですね。
+アーケード／映画のようなスタイルで飛行する3D宇宙船を作りたいとお考えですね。リアルな物理演算は求めず、ドッグファイト主体の『スター・ウォーズ』風の宇宙戦闘スタイルを重視されているという。
 
 ## 解決策
 
@@ -20,7 +20,7 @@ tags: []
 
 ### アセット
 
-宇宙船モデルは以下のアセットパックに含まれています：
+宇宙船モデルは以下のアセットパックに含まれています。
 
 [Quaternius製「究極の宇宙船パック」](https://quaternius.com/packs/ultimatespaceships.html)
 
@@ -32,14 +32,14 @@ tags: []
 
 ### 設定手順
 
-インポートする船舶の `gltf` ファイルを選択し、［インポート］タブをクリックします。［ルートタイプ］を {{< gd-icon CharacterBody3D >}} ｢CharacterBody3D｣ に変更し、「再インポート」を実行してください。その後、`gltf`ファイルをダブルクリックすると、新たに継承されたシーンが作成され、ルートとして `CharacterBody3D`、子要素として `MeshInstance`が含まれるようになります。このボディに {{< gd-icon CollisionShape3D >}} ｢CollisionShape3D｣を追加します。
+インポートする船舶の `gltf` ファイルを選択し、［インポート］タブをクリックします。［ルートの型］を {{< gd-icon CharacterBody3D >}} ｢CharacterBody3D｣ に変更し、「再インポート」を実行してください。その後、`gltf`ファイルをダブルクリックすると、新たに継承されたシーンが作成され、ルートとして `CharacterBody3D`、子要素として `MeshInstance`が含まれるようになります。このボディに {{< gd-icon CollisionShape3D >}} `CollisionShape3D`を追加します。
 
 *プロジェクト設定 > インプットマップ* にて、以下の入力を設定してください。
 
-・`roll_right` / `roll_left` （ロール操作）
-・`pitch_up` / `pitch_down` （ピッチ操作）
-・`yaw_right` / `yaw_left` （ヨー操作）
-・`throttle_up` / `throttle_down` （スロットル操作）
+* `roll_right` / `roll_left` （ロール操作）
+* `pitch_up` / `pitch_down` （ピッチ操作）
+* `yaw_right` / `yaw_left` （ヨー操作）
+* `throttle_up` / `throttle_down` （スロットル操作）
 
 キーまたはコントローラー入力を割り当てることができます。アナログスティックの入力が最も適しています。
 
@@ -56,9 +56,9 @@ extends CharacterBody
 var forward_speed = 0
 
 func get_input(delta):
-    if 入力.is_action_pressed("throttle_up"):
+    if Input.is_action_pressed("throttle_up"):
         forward_speed = lerp(forward_speed, max_speed, acceleration * delta)
-    if 入力.is_action_pressed("throttle_down"):
+    if Input.is_action_pressed("throttle_down"):
         forward_speed = lerp(forward_speed, 0, acceleration * delta)
 
 func _physics_process(delta):
@@ -90,9 +90,9 @@ var yaw_input = 0.0
 次に、`get_input()` 関数に以下の行を追加して3軸入力を取得します。
 
 ```gdscript
-pitch_input = 入力.get_axis("pitch_down", "pitch_up")
-roll_input = 入力.get_axis("roll_right", "roll_left")
-yaw_input = 入力.get_axis("yaw_right", "yaw_left")
+pitch_input = Input.get_axis("pitch_down", "pitch_up")
+roll_input = Input.get_axis("roll_right", "roll_left")
+yaw_input = Input.get_axis("yaw_right", "yaw_left")
 ```
 
 Finally, we need to rotate the ship's `Basis` according to the inputs. Note how each input affects one axis of rotation:
@@ -120,11 +120,11 @@ transform.basis = transform.basis.orthonormalized()
 以下の内容に従って、`get_input()` 内の 3 軸入力を変更してください。
 
 ```gdscript
-pitch_input = lerp(pitch_input, 入力.get_axis("pitch_down", "pitch_up"),
+pitch_input = lerp(pitch_input, Input.get_axis("pitch_down", "pitch_up"),
         input_response * delta)
-roll_input = lerp(roll_input, 入力.get_axis("roll_right", "roll_left"),
+roll_input = lerp(roll_input, Input.get_axis("roll_right", "roll_left"),
         input_response * delta)
-yaw_input = lerp(yaw_input, 入力.get_axis("yaw_right", "yaw_left"),
+yaw_input = lerp(yaw_input, Input.get_axis("yaw_right", "yaw_left"),
         input_response * delta)
 ```
 
@@ -146,7 +146,7 @@ yaw_input = roll_input
 
 ### まとめ
 
-これで準備完了！飛行できます！このコントローラーは、思い描く宇宙ゲームを始めるのに最適なスタート地点です。さらにいくつかの機体やエフェクトを追加すれば、いよいよ本番モードに突入できます：
+これで準備完了！飛行できます！このコントローラーは、思い描く宇宙ゲームを始めるのに最適なスタート地点です。さらにいくつかの機体やエフェクトを追加すれば、いよいよ本番モードに突入できます。
 
 <video width="500" controls src="/godot_recipes/4.x/img/3d_ship_05.webm"></video>
 
@@ -170,16 +170,16 @@ var roll_input = 0.0
 var yaw_input = 0.0
 
 func get_input(delta):
-    if 入力.is_action_pressed("throttle_up"):
+    if Input.is_action_pressed("throttle_up"):
         forward_speed = lerp(forward_speed, max_speed, acceleration * delta)
-    if 入力.is_action_pressed("throttle_down"):
+    if Input.is_action_pressed("throttle_down"):
         forward_speed = lerp(forward_speed, 0.0, acceleration * delta)
 
-    pitch_input = lerp(pitch_input, 入力.get_axis("pitch_down", "pitch_up"),
+    pitch_input = lerp(pitch_input, Input.get_axis("pitch_down", "pitch_up"),
             input_response * delta)
-    roll_input = lerp(roll_input, 入力.get_axis("roll_right", "roll_left"),
+    roll_input = lerp(roll_input, Input.get_axis("roll_right", "roll_left"),
             input_response * delta)
-    # yaw_input = lerp(yaw_input, 入力.get_axis("yaw_right", "yaw_left"),
+    # yaw_input = lerp(yaw_input, Input.get_axis("yaw_right", "yaw_left"),
             input_response * delta)
     yaw_input = roll_input
 
@@ -212,4 +212,4 @@ func _physics_process(delta):
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトコードはこちらでダウンロードできます：[https://github.com/godotrecipes/3d_spaceship](https://github.com/godotrecipes/3d_spaceship)
+プロジェクトコードはこちらでダウンロードできます。[https://github.com/godotrecipes/3d_spaceship](https://github.com/godotrecipes/3d_spaceship)

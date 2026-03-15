@@ -1,5 +1,5 @@
 ---
-title: "アーケード風カー"
+title: "アーケードスタイルのカーゲーム"
 weight: 12
 draft: false
 ---
@@ -48,14 +48,14 @@ The car is made with two main nodes: a {{< gd-icon RigidBody3D >}}`RigidBody3D` 
 ![alt](/godot_recipes/4.x/img/3d_sphere_car_02.png)
 
 {{% notice note %}}
-ケンニーの『カーキット』でこの車種や他のモデルを入手できます。以下のURLからダウンロードできます：
+ケンニーの『カーキット』でこの車種や他のモデルを入手できます。以下のURLからダウンロードできます。
 [https://kenney.nl/assets/car-kit](https://kenney.nl/assets/car-kit)。すべてのアセットをダウンロードできます。使いたいものだけを選んでいただいて構いません。このキットには複数のフォーマット形式のモデルが含まれていますが、プロジェクトに必要な全てを使用する必要はありません。Godotでの使用にはGLTF形式を推奨します。{{% /notice %}}
 
 GLTFモデルを使用する場合、インポート設定で調整する必要はありません。
 
 以下は「suv」モデルをインポートした際のノードツリーの表示例です：
 
-[画像リンク: /godot_recipes/4.x/img/3d_sphere_car_04a.png]
+![alt](/godot_recipes/4.x/img/3d_sphere_car_04a.png)
 
 注：ホイールと車体はそれぞれ別のメッシュです。これにより、ステアリング時に車輪が回転するなど、視覚的な演出を簡単に追加できます。
 
@@ -63,7 +63,7 @@ GLTFモデルを使用する場合、インポート設定で調整する必要�
 
 {{< gd-icon CollisionShape3D >}}`CollisionShape3D` に球形状を追加します。ここでは半径を `1` に設定していますが、異なる走行挙動を得るには、ボールのサイズを調整して実験してみてください。
 
-以下の方法でボディの設定を調整できます：
+以下の方法でボディの設定を調整できます。
 
 - **Angular Damp: `10`** - this property will have a huge effect on the driving feel. A higher value will bring the car to a stop much faster.
 - **Gravity Scale: `5`** - Default gravity in Godot (`9.8`) feels a bit floaty, especially when going for an action feel. This will really matter if you plan to have jumps, hills, etc. in your world. You can set this globally in the **Project Settings** instead, if you prefer.
@@ -139,8 +139,8 @@ func _physics_process(delta):
 func _process(delta):
     if not ground_ray.is_colliding():
         return
-    speed_input = 入力.get_axis("brake", "accelerate") * acceleration
-    turn_input = 入力.get_axis("steer_right", "steer_left") * deg_to_rad(steering)
+    speed_input = Input.get_axis("brake", "accelerate") * acceleration
+    turn_input = Input.get_axis("steer_right", "steer_left") * deg_to_rad(steering)
     right_wheel.rotation.y = turn_input
     left_wheel.rotation.y = turn_input
 ```
@@ -235,15 +235,15 @@ body_mesh.rotation.z = lerp(body_mesh.rotation.z, t, 10 * delta)
 
 ### クレジット表記
 >
-> 本デモプロジェクトでは以下のオープンソース／クリエイティブ・コモンズ素材を使用しています：
+> 本デモプロジェクトでは以下のオープンソース／クリエイティブ・コモンズ素材を使用しています。
 > - 車両モデル：Kenney氏制作の[ケンニー・カーキット](https://kenney.nl/assets/car-kit)
 > - コースデータ：Keith氏による[モジュール式レーシングカートトラック（起伏のある地形テーマ）](https://fertile-soil-productions.itch.io/modular-racekart-track-hilly-terrain-theme)、Fertile Soil Productions提供
 
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトコードはこちらからダウンロードできます：[https://github.com/godotrecipes/3d_car_sphere](https://github.com/godotrecipes/3d_car_sphere)
+プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/3d_car_sphere](https://github.com/godotrecipes/3d_car_sphere)
 
 ## 関連レシピ
 
-・[入力アクション](http://kidscancode.org/godot_recipes/input/input_actions/)
+* [入力アクション](http://kidscancode.org/godot_recipes/input/input_actions/)

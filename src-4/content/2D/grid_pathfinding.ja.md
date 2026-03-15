@@ -70,7 +70,7 @@ func draw_grid():
             Color.DARK_GRAY, 2.0)
 ```
 
-これによりグリッドが視覚的に明確に表示されます：
+これによりグリッドが視覚的に明確に表示されます。
 
 ![alt](/godot_recipes/4.x/img/astar_grid_01.png)
 
@@ -83,7 +83,7 @@ var start = Vector2i.ZERO
 var end = Vector2i(5, 5)
 ```
 
-そして以下の行を _draw() 関数に追加して表示させます：
+そして以下の行を _draw() 関数に追加して表示させます。
 
 ```gdscript
     draw_rect(Rect2(start * cell_size, cell_size), Color.GREEN_YELLOW)
@@ -136,11 +136,11 @@ func fill_walls():
 
 `_draw()` 内でこの関数を呼び出してください。
 
-その後、マウスを使ってセルをクリックし、その状態を切り替えることができます：
+その後、マウスを使ってセルをクリックし、その状態を切り替えることができます。
 
 ```gdscript
 func _input(event):
-    if event is 入力EventMouseButton:
+    if event is InputEventMouseButton:
         # Add/remove wall
         if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
             var pos = Vector2i(event.position) / cell_size
@@ -152,13 +152,13 @@ func _input(event):
 
 注意：まず `is_in_boundsv()` をチェックしています。これにより、グリッド領域外にマウスをクリックした場合のエラー発生を防ぐことができます。
 
-現在では、障害物が経路に及ぼす影響を確認できます：
+現在では、障害物が経路に及ぼす影響を確認できます。
 
 ![alt](/godot_recipes/4.x/img/astar_grid_04.png)
 
 ### ヒューリスティック選択について
 
-結果となる経路に大きく影響する重要な要素は、使用する「ヒューリスティック手法」です。「ヒューリスティック」という用語は「最適な推測」を意味し、経路探索の文脈においては具体的に：目標地点へ向かう際に、まずどの方向を試すべきかを決定する方法を指します。
+経路に大きく影響する要素は「ヒューリスティック手法」です。これは「最適な推測」を意味し、経路探索の文脈においては：目標地点へ向かう際に、まずどの方向を試すべきかを決定する方法を指します。
 
 例えば、ユークリッド距離はピタゴラスの定理を用いて経路を推定します。
 
@@ -168,11 +168,11 @@ func _input(event):
 
 ![alt](/godot_recipes/4.x/img/astar_grid_manhattan.png)
 
-オクトイルヒューリスティックを適用すると、以下のような経路が得られます：
+オクトイルヒューリスティックを適用すると、以下のような経路が得られます。
 
 ![alt](/godot_recipes/4.x/img/astar_grid_octile.png)
 
-このプロパティを使用してヒューリスティックを選択できます：
+このプロパティを使用してヒューリスティックを選択できます。
 
 ```gdscript
 astar_grid.default_estimate_heuristic = AStarGrid2D.HEURISTIC_OCTILE
@@ -184,4 +184,4 @@ astar_grid.default_estimate_heuristic = AStarGrid2D.HEURISTIC_OCTILE
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/grid_pathfinding](https://github.com/godotrecipes/grid_pathfinding)
+プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/grid_pathfinding](https://github.com/godotrecipes/grid_pathfinding)

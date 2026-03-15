@@ -54,7 +54,7 @@ We'll also assume you've already set up the character's animations using {{< gd-
 
 以下に、全てのアニメーションに関する完全なツリー構造を示します。
 
-!
+![alt](/godot_recipes/4.x/img/anim_sm_final.png)
 
 それでは、これらのアニメーションをスクリプトで使用するキャラクターを設定していきましょう。
 
@@ -65,7 +65,7 @@ var state_machine
 var run_speed = 80.0
 var attacks = ["attack1", "attack2"]
 
-@onready var state_machine = $アニメーションTree["parameters/playback"]
+@onready var state_machine = $AnimationTree["parameters/playback"]
 ```
 
 `state_machine` は状態マシンへの参照を保持しており、これは `アニメーションNodeStateMachinePlayback` 型です。特定のアニメーションを呼び出すには `travel()` メソッドを使用し、これにより指定されたアニメーションへの接続が辿られます。
@@ -85,8 +85,8 @@ func die():
 ```gdscript
 func get_input():
     var current = state_machine.get_current_node()
-    velocity = 入力.get_vector("move_left", "move_right", "move_up", "move_down") * run_speed
-    if 入力.is_action_just_pressed("attack"):
+    velocity = Input.get_vector("move_left", "move_right", "move_up", "move_down") * run_speed
+    if Input.is_action_just_pressed("attack"):
         state_machine.travel(attacks.pick_random())
         return
     # flip the character sprite left/right
@@ -104,11 +104,11 @@ func get_input():
 
 ![alt](/godot_recipes/4.x/img/animation_tree_07.gif)
 
-アニメーションTreeStateMachineを使用して以下の処理を管理できます：
+アニメーションTreeStateMachineを使用して以下の処理を管理できます。
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/ai_behavior_demos](https://github.com/godotrecipes/ai_behavior_demos)
+プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/ai_behavior_demos](https://github.com/godotrecipes/ai_behavior_demos)
 
 ## 関連レシピ
 

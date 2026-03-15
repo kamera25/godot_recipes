@@ -45,9 +45,9 @@ func _physics_process(delta):
         $Sprite2D.scale.x = sign(velocity.x)
 
     if velocity.length() > 0:
-        $アニメーションPlayer.play("run")
+        $AnimationPlayer.play("run")
     else:
-        $アニメーションPlayer.play("idle")
+        $AnimationPlayer.play("idle")
 
     move_and_slide()
 ```
@@ -60,4 +60,4 @@ func _physics_process(delta):
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/ai_behavior_demos](https://github.com/godotrecipes/ai_behavior_demos)
+プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/ai_behavior_demos](https://github.com/godotrecipes/ai_behavior_demos)

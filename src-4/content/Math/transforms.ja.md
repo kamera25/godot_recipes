@@ -19,7 +19,7 @@ ghcommentid: 65
 
 ![alt](/godot_recipes/4.x/img/0_2d_rocket1.png?width=250px)
 
-船の進行方向は座標軸の**X軸**と同じ方向を向いています。これを前進させたい場合は、**X座標**に値を加えることで右方向へ移動させられます：
+船の進行方向は座標軸の**X軸**と同じ方向を向いています。これを前進させたい場合は、**X座標**に値を加えることで右方向へ移動させられます。
 
 ```gdscript
 position += Vector2(10, 0)
@@ -37,7 +37,7 @@ position += Vector2(10, 0)
 
 これらの「ローカル」座標軸は、オブジェクトの `transform` プロパティに含まれています。
 
-この特性を利用すれば、船を**X軸**に沿って移動させることで簡単に前進できます。角度計算や三角関数を気にする必要もありません。Godotでこれを実現するには、すべての[{{< gd-icon Node2D >}}`Node2D`]([https://link](https://docs.godotengine.org/ja/latest/classes/class_node2d.html))派生ノードで利用できる`transform`プロパティを使用します。
+この特性を利用すれば、船を**X軸**に沿って移動させることで簡単に前進できます。角度計算や三角関数を気にする必要もありません。Godotでこれを実現するには、すべての[{{< gd-icon Node2D >}}`Node2D`]([https://link](https://docs.godotengine.org/en/latest/classes/class_node2d.html))派生ノードで利用できる`transform`プロパティを使用します。
 
 ```gdscript
     position += transform.x * 10
@@ -63,13 +63,13 @@ position += Vector2(10, 0)
     var global_position = to_global(local_position)
 ```
 
-2次元平面上のオブジェクトを例に取り、マウスクリック座標（グローバル空間）をオブジェクト相対座標に変換する方法を説明します。
+Let's use the example of an object in the 2D plane and convert mouse clicks (global space) into coordinates relative to the object:
 
 ```gdscript
 extends Sprite
 
 func _unhandled_input(event):
-    if event is 入力EventMouseButton and event.pressed:
+    if event is InputEventMouseButton and event.pressed:
         if event.button_index == BUTTON_LEFT:
             printt(event.position, to_local(event.position))
 ```

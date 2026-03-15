@@ -12,7 +12,7 @@ draft: false
 
 スプライトシートは2Dアニメーションの一般的な配布形式です。単一の画像ファイルに全てのアニメーションフレームを集約した形式で、効率的なデータ管理ができます。
 
-このデモでは、Elthen氏制作の優れた「冒険者」スプライトを使用します。このアセットをはじめ、多くの高品質なアート素材は以下から入手できます：[https://elthen.itch.io/](https://elthen.itch.io/)。
+このデモでは、Elthen氏制作の優れた「冒険者」スプライトを使用します。このアセットをはじめ、多くの高品質なアート素材は以下から入手できます。[https://elthen.itch.io/](https://elthen.itch.io/)。
 
 ![alt](/godot_recipes/4.x/img/adventurer_sprite_sheet_v1.1.png)
 
@@ -30,7 +30,7 @@ draft: false
 {{< gd-icon CharacterBody2D >}}CharacterBody2D: Player
   {{< gd-icon Sprite2D >}} Sprite2D
   {{< gd-icon CollisionShape2D >}} CollisionShape2D
-  {{< gd-icon アニメーションPlayer >}} アニメーションPlayer
+  {{< gd-icon AnimationPlayer >}} AnimationPlayer
 ```
 
 {{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの _Texture_プロパティにスプライトシートテクスチャをドラッグ＆ドロップしてください。ビューポート内に完全なスプライトシートが表示されます。個別のフレームに分割するには、インスペクターの「アニメーション」セクションを拡大し、_Hframes_を `13`、_Vframes_を `8`に設定します。_Hframes_と_Vframes_は、それぞれ水平方向および垂直方向のフレーム数を指定するパラメータです。

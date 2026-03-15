@@ -15,16 +15,16 @@ ghcommentid: 50
 
 例えば、以下の画像を使用するには：
 
-<img src="/godot_recipes/3.x/img/crosshair137.png" alt="クロスヘア画像">
+![alt](/godot_recipes/3.x/img/crosshair137.png)
 
-そして、ホットスポットを中央位置に設定します：
+そして、ホットスポットを中央位置に設定します。
 
 ```gdscript
 extends Node2D
 
 func _ready():
-    入力.set_custom_mouse_cursor(cursor_image,
-            入力.CURSOR_ARROW,
+    Input.set_custom_mouse_cursor(cursor_image,
+            Input.CURSOR_ARROW,
             Vector2(64, 64))
 ```
 

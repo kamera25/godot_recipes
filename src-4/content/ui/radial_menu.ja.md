@@ -1,12 +1,12 @@
 ---
-title: "放射状ポップアップメニュー"
+title: "リングコマンド"
 weight: 13
 draft: false
 ---
 
 ## 課題
 
-ご希望の機能は「放射状メニュー」（ボタンがリング状に並んだポップアップメニュー）ですね。ユーザーがオプションを選択するためのものです。
+オプションを選択するため、「リングコマンド」を実装したい。
 
 ## 解決策
 
@@ -22,9 +22,9 @@ draft: false
 
 ルートノードとして `{{< gd-icon TextureButton >}}TextureButton` を使用しています。これがメニューの開閉に使用するボタンです。
 
-The `Buttons` {{< gd-icon Control >}}`Control` node serves as the container where you can place any number of items as needed. Ensure you set this control's **Mouse/Filter** property to "Ignore" to prevent it from intercepting mouse clicks.
+`Buttons` {{< gd-icon Control >}}`Control`ノードは、必要に応じて任意の数のアイテムを配置できるコンテナとして機能します。このコントロールの**マウス/フィルター**プロパティを "Ignore" に設定することを忘れないでください。これによりマウスクリックが誤って捕捉されるのを防ぎます。
 
-本例では、[クールダウンボタンレシピ](/godot_recipes/4.x/ja/ui/cooldown_button/) から9つのボタンを使用しています。
+本例では、[クールタイムボタンレシピ](/godot_recipes/4.x/ja/ui/cooldown_button/) から9つのボタンを使用しています。
 
 それでは、ボタンのスクリプトを見てみましょう。
 
@@ -51,7 +51,7 @@ func _ready():
         b.position = position
 ```
 
-In `_ready()` we start setting things up: hiding the menu buttons by default, and setting their positions to that of the main button.
+`_ready()`では、メニューボタンをデフォルトで非表示にし、その位置をメインボタンに設定することから始めます。
 
 メインボタンの`pressed`シグナルを接続します。
 
@@ -108,12 +108,12 @@ func hide_menu():
 
 以下が最終的な結果です：
 
-!
+![alt](/godot_recipes/4.x/img/ui_radial_menu_02.gif)
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトのサンプルコードはこちらでダウンロードできます：[https://github.com/godotrecipes/ui_radial_menu](https://github.com/godotrecipes/ui_radial_menu)
+プロジェクトのサンプルコードはこちらでダウンロードできます。[https://github.com/godotrecipes/ui_radial_menu](https://github.com/godotrecipes/ui_radial_menu)
 
 ## 関連レシピ
 
-・[UI：クールダウンボタン](/godot_recipes/4.x/ja/ui/cooldown_button/)
+* [UI：クールタイムボタン](/godot_recipes/4.x/ja/ui/cooldown_button/)

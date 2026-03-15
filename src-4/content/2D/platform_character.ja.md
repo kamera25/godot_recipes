@@ -33,13 +33,13 @@ func _physics_process(delta):
     # Add gravity every frame
     velocity.y += gravity * delta
 
-    # 入力 affects x axis only
-    velocity.x = 入力.get_axis("walk_left", "walk_right") * speed
+    # Input affects x axis only
+    velocity.x = Input.get_axis("walk_left", "walk_right") * speed
 
     move_and_slide()
 
     # Only allow jumping when on the ground
-    if 入力.is_action_just_pressed("jump") and is_on_floor():
+    if Input.is_action_just_pressed("jump") and is_on_floor():
         velocity.y = jump_speed
 ```
 
@@ -54,7 +54,7 @@ func _physics_process(delta):
 この動作を実現する効果的な方法の一つが線形補間(lerp）を使用することです。移動中は現在速度と最大速度の間で補間し、停止時は現在速度から0まで補間します。補間量を調整することで、さまざまな移動スタイルを実現できます。
 
 {{% notice tip %}}
-線形補間の概要については、[ゲーム開発数学：補間](/godot_recipes/4.x/ja/math/interpolation/)をご覧ください。
+線形補間の概要については、[ゲーム数学：補間](/godot_recipes/4.x/ja/math/interpolation/)をご覧ください。
 {{% /notice %}}
 
 ```gdscript
@@ -69,14 +69,14 @@ extends CharacterBody2D
 
 func _physics_process(delta):
     velocity.y += gravity * delta
-    var dir = 入力.get_axis("walk_left", "walk_right")
+    var dir = Input.get_axis("walk_left", "walk_right")
     if dir != 0:
         velocity.x = lerp(velocity.x, dir * speed, acceleration)
     else:
         velocity.x = lerp(velocity.x, 0.0, friction)
 
     move_and_slide()
-    if 入力.is_action_just_pressed("jump") and is_on_floor():
+    if Input.is_action_just_pressed("jump") and is_on_floor():
         velocity.y = jump_speed
 ```
 
@@ -92,7 +92,7 @@ func _physics_process(delta):
 このレシピを使用したサンプルプロジェクトをダウンロードするには：
 
 {{% notice note %}}
-プロジェクトファイルはこちらからダウンロードできます：[platform_character.zip](/godot_recipes/4.x/files/platform_charactor4.zip)
+プロジェクトファイルはこちらからダウンロードできます。[platform_character.zip](/godot_recipes/4.x/files/platform_charactor4.zip)
 {{% /notice %}} -->
 
 <!-- ## 関連レシピ -->

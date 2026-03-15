@@ -1,5 +1,5 @@
 ---
-title: "基本FPSキャラクター"
+title: "FPSキャラクター"
 weight: 2
 draft: false
 tags: []
@@ -41,13 +41,13 @@ def _physics_process():
 ```gdscript
 func _physics_process(delta):
     velocity.y += -gravity * delta
-    var input = 入力.get_vector("left", "right", "forward", "back")
+    var input = Input.get_vector("left", "right", "forward", "back")
     var movement_dir = transform.basis * Vector3(input.x, 0, input.y)
     velocity.x = movement_dir.x * speed
     velocity.z = movement_dir.z * speed
 
     move_and_slide()
-    if is_on_floor() and 入力.is_action_just_pressed("jump"):
+    if is_on_floor() and Input.is_action_just_pressed("jump"):
         velocity.y = jump_speed
 ```
 
@@ -63,7 +63,7 @@ func _physics_process(delta):
 
 ```gdscript
 func _input(event):
-    if event is 入力EventMouseMotion:
+    if event is InputEventMouseMotion:
         rotate_y(-event.relative.x * mouse_sensitivity)
 ```
 
@@ -73,7 +73,7 @@ func _input(event):
 
 ```gdscript
 func _input(event):
-    if event is 入力EventMouseMotion and 入力.mouse_mode == 入力.MOUSE_MODE_CAPTURED:
+    if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
         rotate_y(-event.relative.x * mouse_sensitivity)
 ```
 
@@ -81,7 +81,7 @@ func _input(event):
 
 ```gdscript
 func _input(event):
-    if event is 入力EventMouseMotion and 入力.mouse_mode == 入力.MOUSE_MODE_CAPTURED:
+    if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
         rotate_y(-event.relative.x * mouse_sensitivity)
         $Camera3D.rotate_x(-event.relative.y * mouse_sensitivity)
         $Camera3D.rotation.x = clampf($Camera3D.rotation.x, -deg_to_rad(70), deg_to_rad(70))

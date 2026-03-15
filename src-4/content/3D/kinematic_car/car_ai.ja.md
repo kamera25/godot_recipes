@@ -1,5 +1,5 @@
 ---
-title: "3D キネマティックカー：AIステアリング機能"
+title: "3Dで自動車を作ろう：AIステアリング機能"
 weight: 5
 draft: true
 ghcommentid: 45

@@ -16,9 +16,9 @@ draft: true
 <use xlink:href="/blog/img/symbol-defs.svg#icon-icon_rigid_body_2d"></svg> `RigidBody2D`</a> とは、Godot において物理シミュレーションを提供するオブジェクトです。これはつまり、直接 RigidBody2D を操作するわけではないということです。代わりに力（重力、衝撃など）を加えると、Godot の内蔵物理エンジンが衝突・反発・回転などの運動結果を計算してくれます。
 
 RigidBody2Dの動作は「質量」「摩擦」「反発」などのプロパティを通じて変更できます。
-これらの設定はインスペクターから行えます：
+これらの設定はインスペクターから行えます。
 
-[画像: rigidbody_properties.png]
+![alt](/godot_recipes/3.x/img/rigidbody_properties.png)
 
 The body's behavior is also affected by the world, via the _Project Settings -> 物理_
 properties, or by entering an <a href="http://docs.godotengine.org/en/latest/classes/class_area2d.html"><svg width="18" height="18" class="icon-icon_area_2d" target="_blank"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_area_2d"></svg> `Area2D`</a> that is overriding the global physics properties.
@@ -51,13 +51,13 @@ children:
 ### 投射物
 
 以下の手順に従って作成してください。
-・Blockと同じノード構成で、名前を「ボール」に変更した新しいシーンを作成します。
-・球体テクスチャのいずれかと、円形の衝突判定形状を選択してください。
-・このインスタンスをメインシーンに配置し、ブロックスタックの側面などに設置してください。
+* Blockと同じノード構成で、名前を「ボール」に変更した新しいシーンを作成します。
+* 球体テクスチャのいずれかと、円形の衝突判定形状を選択してください。
+* このインスタンスをメインシーンに配置し、ブロックスタックの側面などに設置してください。
 
-剛性体を動かすには、何らかの初速度が必要です。以下の方法で物体に初期速度を設定できます：「線形プロパティ」＞「速度」。試しにこれを `(500, 0)` に設定してみてください。
+剛性体を動かすには、何らかの初速度が必要です。以下の方法で物体に初期速度を設定できます。「線形プロパティ」＞「速度」。試しにこれを `(500, 0)` に設定してみてください。
 
-[画像: rigidbody_vel.gif](/godot_recipes/3.x/img/rigidbody_vel.gif)
+![alt](/godot_recipes/3.x/img/rigidbody_vel.gif)
 
 また、ボールの「摩擦力」と「反発係数」プロパティも調整できます。これらはどちらもゼロから1の範囲内で設定できます。個人的には「0.5」前後の反発係数が好みです。
 
@@ -68,7 +68,7 @@ children:
 
 Linear velocityをリセットして`(0, 0)`に設定します。では、ボールを投げて動かす場合はどうすればよいでしょうか？剛性ボディの速度や位置は手動で直接設定するべきではありません - これらは「現実世界」の物理法則を再現するためのものです。現実の世界では、物体が突然別の場所へ移動したり、静止状態から高速に移動したりすることはありません。こうした操作を試みると、物理エンジンがそれを拒否し、予期しない動きが生じる原因となります。代わりに、特定の方向に加速度を発生させる力を適用する必要があります（これはニュートンの第二法則としても知られています）。Godotの物理オブジェクトも全く同じ仕組みで動作します。
 
-剛性体に力を加えるには、以下の2つの関数から選択できます：
+剛性体に力を加えるには、以下の2つの関数から選択できます。
 
 - `add_force()`
 
@@ -83,7 +83,7 @@ Linear velocityをリセットして`(0, 0)`に設定します。では、ボー
 「プロジェクト設定」を開き、「インプット」タブで「クリック」という新しいアクションを追加します。
 これを左マウスボタンに接続してください。
 
-次に、ボールにスクリプトを追加し、以下のコードを記述します：
+次に、ボールにスクリプトを追加し、以下のコードを記述します。
 
 {{< highlight swift >}}
 extends RigidBody2D
@@ -103,7 +103,7 @@ if event.is_action_pressed("click") and not dragging:
 
 このスクリプトでは、マウスボタンが押されたときに `dragging` を有効にし、クリック位置を記録します。ボタンを離すと、クリックポイントからリリースポイントまでのベクトルを求め、それを用いてインパルスを適用します（スケールを調整するために `5` で乗算）。 `apply_impulse()` は第1引数として `offset` も取ります。これにより、必要に応じてボディを中心以外の地点で「ヒット」させることができます。例えば、これを `Vector2(25, 0)` に設定すると、ボールを発射する際にスピンを加えることができます。
 
-<img src="/godot_recipes/3.x/img/rigidbody_impulse.gif" alt="リジッドボディへのインパルス適用">
+![alt](/godot_recipes/3.x/img/rigidbody_impulse.gif)
 
 ## 剛体の制御について
 
@@ -112,7 +112,7 @@ if event.is_action_pressed("click") and not dragging:
 
 以下が私の船で使用している画像です：
 
-<image src="/godot_recipes/3.x/img/ship_red.png"></image>
+![alt](/godot_recipes/3.x/img/ship_red.png)
 
 また、[OpenGameArt](http://opengameart.org/) もチェックして、「素敵な宇宙背景画像」（ただしこれは完全に任意です）を検索することをお勧めします。
 
@@ -165,7 +165,7 @@ def _physics_process(delta):
 
 このスクリプトの動作について説明しましょう。変数`engine_thrust`と`spin_thrust`は、宇宙船の加速速度と旋回性能を制御します。インスペクターではそれぞれ500、25000に設定してください（トルク単位のため数値が大きくなります）。
 
-変数`thrust`は宇宙船のエンジン状態を示します：走行中時は(0, 0)、動力がオンの場合は`engine_thrust`の長さを持つベクトルとなります。
+変数`thrust`は宇宙船のエンジン状態を示します。走行中時は(0, 0)、動力がオンの場合は`engine_thrust`の長さを持つベクトルとなります。
 `rotation_dir`は宇宙船の旋回方向を表現します。`screensize`変数には画面サイズを保持し、後ほど使用します。
 
 
@@ -190,7 +190,7 @@ This function is called every frame in the `_process()` method.
 
 もう一つの『アステロイド』の特徴的な要素として、画面が循環表示（ラップ・アラウンド）されるという点があります。プレイヤーが片側から画面外へ出ると、反対側に瞬時に移動します。ただし、先に述べたように、物理エンジンを破綻させることなく剛体の位置を変更することはできないという根本的な問題があります。この点は剛体を扱う際に非常に大きな課題となります。
 
-よくある間違いとして、次のようなコードを`_physics_process()`関数に追加しようとするケースがあります：
+よくある間違いとして、次のようなコードを`_physics_process()`関数に追加しようとするケースがあります。
 
 {{< highlight swift >}}
 func _physics_process(delta):
@@ -219,7 +219,7 @@ func _physics_process(delta):
 > オブジェクトのシミュレーション状態を読み取り、**安全に変更**できます。物体の位置やその他の物理特性を直接変更する必要がある場合は、`_physics_process` の代わりにこの関数を使用してください。
 
 このように、`_physics_process()` の代わりに `_integrate_forces()` を使用する必要があります。これにより、<a href="http://docs.godotengine.org/en/latest/classes/class_physics2ddirectbodystate.html" target="_blank">物理2DDirectBodyState</a> オブジェクトにアクセスできるようになります。物理状態オブジェクトには、非常に有用な情報が豊富に含まれているので、ぜひリンク先のドキュメントを参照されることを強くお勧めします。
-私たちにとって特に重要な情報は、物体の <a href="http://docs.godotengine.org/en/latest/classes/class_transform2d.html" target="_blank">Transform2D</a> です。
+特に重要な情報は、物体の <a href="http://docs.godotengine.org/en/latest/classes/class_transform2d.html" target="_blank">Transform2D</a> です。
 （変換についての詳細な説明はこの文書の範囲を超えますので、より詳しい情報は[行列と変換](http://docs.godotengine.org/en/latest/learning/features/math/matrices_and_transforms.html)を参照してください。）
 
 体の位置はトランスフォームの `origin` に含まれています。`_physics_process()` を `_integrate_forces()` に変更し、以下のコードを追加してください。
@@ -240,7 +240,7 @@ func _integrate_forces(state):
     state.set_transform(xform)
 {{< /highlight >}}
 
-物理エンジンはそのまま正常に動作し続け、すべてが期待通りの挙動を示します：
+物理エンジンはそのまま正常に動作し続け、すべてが期待通りの挙動を示します。
 
 ![alt](/godot_recipes/3.x/img/rigidbody_ship2.gif)
 

@@ -13,6 +13,7 @@ AI制御のエンティティに対して、異なる動作モードを切り替
 
 - **パトロール**
 
+    「パトロール」状態では、事前に定義された経路に沿って移動します（経路が割り当てられていない場合は静止します）。
     <!-- 詳細は[経路追従](/godot_recipes/4.x/ai/path_follow/)を参照してください -->
 
 - **追跡中**
@@ -21,6 +22,7 @@ AI制御のエンティティに対して、異なる動作モードを切り替
 
 - **攻撃**
 
+    この状態では、プレイヤーが近接攻撃の範囲内にいるため、敵は移動を停止し、攻撃を実行します。
     <!-- 近接攻撃の作成方法については、[こちらを参照](/godot_recipes/4.x/animation/melee_attacks/) ください -->
 
 これらの行動はそれぞれ状態を表しており、敵は同時に複数の状態を保有することはできません。プレイヤーが近づくなどの特定のイベントが発生すると、別の状態に遷移します。
@@ -46,7 +48,7 @@ var attacks = ["attack1", "attack2"]
 
 enum states {PATROL, CHASE, ATTACK, DEAD}
 var state = states.PATROL
-var ターゲット = null;
+var target = null
 var player = null
 var current_patrol_point = 0
 var patrol_points = []
@@ -58,7 +60,7 @@ func _ready():
         patrol_points = patrol_path.curve.get_baked_points()
 
 func _physics_process(delta):
-    $ラベル.text = str(states.keys()[state])
+    $Label.text = str(states.keys()[state])
     velocity = Vector2.ZERO
     choose_action()
     if target:

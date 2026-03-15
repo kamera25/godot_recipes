@@ -7,7 +7,7 @@ ghcommentid: 79
 
 ## 課題
 
-オブジェクトや画面をぼかすシェーダーが欲しいようですね。
+オブジェクトや画面をぼかすシェーダーが欲しい。
 
 ## 解決策
 
@@ -26,7 +26,7 @@ void fragment() {
 ![alt](/godot_recipes/3.x/img/blur_shader1.png)
 ![alt](/godot_recipes/3.x/img/blur_shader2.png)
 
-ぼかし効果もアニメーション化できます：
+ぼかし効果もアニメーション化できます。
 
 ```gdscript
 extends Node

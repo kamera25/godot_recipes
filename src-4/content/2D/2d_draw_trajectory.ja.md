@@ -7,13 +7,13 @@ ghcommentid: 32
 
 ## 課題
 
-戦車のような弾道射撃の軌道を描きたいようですね。
+戦車のような弾道射撃の軌道を描きたい。
 
 ## 解決策
 
 ### 設定手順
 
-この例では、以下のレシピから「弾道弾丸」を使用します：
+この例では、以下のレシピから「弾道弾丸」を使用します。
 
 * [弾道弾の実装方法](/godot_recipes/3.x/2d/ballistic_bullet/)
 
@@ -21,7 +21,7 @@ and a tank configured like this, with a `Position2D` component specifying the "b
 
 ![alt](/godot_recipes/3.x/img/tank_01.png)
 
-タンクのスクリプトでは、弾丸を以下のようにインスタンス化しています：
+タンクのスクリプトでは、弾丸を以下のようにインスタンス化しています。
 
 ```gdscript
 func _unhandled_input(event):
@@ -36,9 +36,9 @@ func _unhandled_input(event):
 
 このインスタンスでは弾丸オブジェクトを作成し、「世界」ノード（戦車の所有者）の下に子要素として追加し、初期プロパティを設定します。なお、この例では重力定義に戦車を利用していますが、これは単なるデモンストレーション用です。実際のプロジェクトでは、グローバルな値を使用する方が望ましいでしょう。
 
-以下に、初期設定の動作例をご紹介します：
+以下に、初期設定の動作例をご紹介します。
 
-<img src="/godot_recipes/3.x/img/tank_02.gif" alt="Tank 02">
+![alt](/godot_recipes/3.x/img/tank_02.gif)
 
 ### ライン設定
 
@@ -46,7 +46,7 @@ func _unhandled_input(event):
 
 ラインの見た目を改善するため、**幅**を「15」に設定し、すべての**角処理**オプションを「丸み」に変更しました。さらに、**塗りつぶし**セクションにグラデーションを追加しました：
 
-<img src="/godot_recipes/3.x/img/2d_tank_03.png" alt="">
+![alt](/godot_recipes/3.x/img/2d_tank_03.png)
 
 ### 線を引くこと
 
@@ -70,7 +70,7 @@ func update_trajectory(delta):
             break
 
 func _process(delta):
-    if 入力.is_action_pressed("shoot"):
+    if Input.is_action_pressed("shoot"):
         line.show()
         update_trajectory(delta)
 

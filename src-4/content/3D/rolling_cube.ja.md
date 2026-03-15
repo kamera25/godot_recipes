@@ -1,5 +1,5 @@
 ---
-title: "回転立方体"
+title: "キューブを回転する"
 weight: 6
 draft: false
 ghcommentid: 101
@@ -7,27 +7,27 @@ ghcommentid: 101
 
 ## 課題
 
-3Dで回転する立方体を作成したいのですね。
+3Dで回転するキューブを作成したい。
 
 <video width="500" controls src="/godot_recipes/4.x/img/rolling_cube.webm"></video>
 
 ## 解決策
 
-立方体を回転させるのは見た目より難しいです。単に中心軸を中心に回すだけではうまくいきません：
+キューブを回転させるのは見た目より難しいです。単に中心軸を中心に回すだけではうまくいきません：
 
 ![alt](/godot_recipes/4.x/img/cube_001.gif)
 
-その代わり、立方体はその底面のエッジを中心に回転させる必要があります。
+代わりに、キューブを底面のエッジを中心に回転させます。
 
 ![alt](/godot_recipes/4.x/img/cube_002.gif)
 
-ここが重要なポイントです：どの底面の縁でしょうか？ それは、立方体がどの方向に転がっているかによって異なります。
+ここが重要なポイントです：どの底面の縁でしょうか？ それは、キューブがどの方向に転がっているかによって異なります。
 
 このレシピを作成するにあたり、私はいくつかの異なる解決策を試しました：
 
-・純粋数学 - 回転変換の計算と適用
-・アニメーションPlayer - アニメーションを使用して回転値とオフセットをキー設定
-・補助ノード - 空間オブジェクトを回転ヘルパーとして使用
+* 純粋数学 - 回転変換の計算と適用
+* アニメーションPlayer - アニメーションを使用して回転値とオフセットをキー設定
+* 補助ノード - 空間オブジェクトを回転ヘルパーとして使用
 
 すべて正常に動作しましたが、最後のオプションが最も柔軟で設定しやすいと感じたので、ここではその方法を採用します。
 
@@ -43,21 +43,21 @@ Cube: {{< gd-icon CharacterBody3D >}} CharacterBody3D
 「CharacterBody3D」、または {{< gd-icon Area3D >}} 「Area3D」を衝突ノードとして使用できます。ただし、移動制御の方法には若干の違いが生じます。どのノードを選択するかは、ゲームで他にどのような挙動を必要とするかによって決めるべきです。このレシピでは、単に動きに焦点を当てています。
 
 
-デフォルトでは、すべてが座標 `(0, 0, 0)` を中心に配置されています。まず最初に行うことは、立方体の*底面中央*が {{< gd-icon CharacterBody3D >}}`CharacterBody3D` の位置と一致するように全体をオフセットすることです。
+デフォルトでは、すべてが座標 `(0, 0, 0)` を中心に配置されています。まず最初に行うことは、キューブの*底面中央*が {{< gd-icon CharacterBody3D >}}`CharacterBody3D` の位置と一致するように全体をオフセットすることです。
 
 デフォルトのサイズが `(1, 1, 1)` の場合、以下のように設定します。メッシュノードと衝突判定ノードを両方とも `(0, 0.5, 0)` に移動し、その他は元のままにします。これでルートノードを選択すると、その位置がキューブの *底面* に対応します。
 
 ![alt](/godot_recipes/4.x/img/cube_003.png)
 
-Now when you want to roll the cube, you'll need to move the `Pivot` `0.5` in the direction you want to move. Since the mesh is attached, you need to move it the opposite amount. For example, to roll to the right (**+X**), you'll end up with this:
+これでキューブを転がしたい場合、`Pivot`を「移動させたい方向」に0.5ユニット動かす必要があります。メッシュはオブジェクトに取り付けられているため、反対方向に同じ量だけ動かさなければなりません。例えば、右方向へ転がす場合（**+X**軸方向）、最終的に以下のコードになります。
 
-!
+![alt](/godot_recipes/4.x/img/cube_004.gif)
 
 現在、ピボットノードは正しいエッジ上に配置されており、これを回転させるとメッシュ全体が一緒に回転します。
 
 ### 移動スクリプト
 
-この動作は3つのステップに分かれています：
+この動作は3つのステップに分かれています。
 
 #### ステップ1
 
@@ -69,7 +69,7 @@ Now when you want to roll the cube, you'll need to move the `Pivot` `0.5` in the
 
 #### ステップ3
 
-最終的にアニメーションが終了したら、すべてを初期状態にリセットして、次回の動作に備えておく必要があります。最終的には、立方体が選択方向に1単位移動し（サイズ1の立方体の場合）、かつピボットとメッシュが元の位置に戻るようにしたいということです。
+アニメーションが終了したら、初期状態にリセットして次回の動作に備えます。キューブが選択方向に1単位移動し（サイズ1のキューブの場合）、かつピボットとメッシュが元の位置に戻るようにしたいということです。
 
 ```gdscript
 extends CharacterBody3D
@@ -83,13 +83,13 @@ var rolling = false
 
 func _physics_process(delta):
     var forward = Vector3.FORWARD
-    if 入力.is_action_pressed("ui_up"):
+    if Input.is_action_pressed("ui_up"):
         roll(forward)
-    if 入力.is_action_pressed("ui_down"):
+    if Input.is_action_pressed("ui_down"):
         roll(-forward)
-    if 入力.is_action_pressed("ui_right"):
+    if Input.is_action_pressed("ui_right"):
         roll(forward.cross(Vector3.UP))
-    if 入力.is_action_pressed("ui_left"):
+    if Input.is_action_pressed("ui_left"):
         roll(-forward.cross(Vector3.UP))
 
 func roll(dir):
@@ -144,7 +144,7 @@ Mesh の回転を保持するために 2 行追加します。
 ```gdscript
 # Cast a ray before moving to check for obstacles
 var space = get_world_3d().direct_space_state
-var ray = 物理RayQueryParameters3D.create(mesh.global_position,
+var ray = PhysicsRayQueryParameters3D.create(mesh.global_position,
         mesh.global_position + dir * cube_size, collision_mask, [self])
 var collision = space.intersect_ray(ray)
 if collision:
@@ -152,14 +152,12 @@ if collision:
 ```
 
 {{% notice note %}}
-以下の方法も使用できます：{{< gd-icon RayCast3D >}}`RayCast3D`ノードを使用する場合。ただし、チェックを実行する前に必ず`force_raycast_update()`を呼び出すようにしてください。
+以下の方法も使用できます。{{< gd-icon RayCast3D >}}`RayCast3D`ノードを使用する場合。ただし、チェックを実行する前に必ず`force_raycast_update()`を呼び出すようにしてください。
 {{% /notice %}}
 
 ### トランジションで遊んでみよう
 
-public void setMoveSpeedFactor(double factor) {
-    this.moveSpeedFactor = factor;
-}
+使用する`TransitionType`を変更することで、キューブの転がり動作に様々な個性を持たせることができます。デフォルトは`Tween.TRANS_LINEAR`で、これにより移動全体を通じて一定速度が得られます。
 
 移行タイプを変更するだけで、全く異なる印象を得られます。例えば：
 
@@ -171,7 +169,7 @@ var tween = create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN)
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトコードはこちらからダウンロードできます：[https://github.com/godotrecipes/rolling_cube](https://github.com/godotrecipes/rolling_cube)
+プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/rolling_cube](https://github.com/godotrecipes/rolling_cube)
 
 ## 関連レシピ
 

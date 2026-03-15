@@ -20,7 +20,7 @@ draft: false
 
 Godotにはレンダリング順序を変更する組み込みオプションが用意されています。任意の{{< gd-icon CanvasItem >}}`CanvasItem`ノード（{{< gd-icon Node2D >}}`Node2D`または{{< gd-icon Control >}}`Control`）に対して、**Y軸ソート有効化** プロパティを有効にすることができます。この機能が有効になると、すべての子ノードがY軸に沿って並べ替えられます。
 
-上記の例では、{{< gd-icon TileMap >}}`TileMap`ノード上でプロパティを有効にできます。ただし、まだ解決すべき問題が残っています：
+上記の例では、{{< gd-icon TileMap >}}`TileMap`ノード上でプロパティを有効にできます。ただし、まだ解決すべき問題が残っています。
 
 ![alt](/godot_recipes/4.x/img/ysort_01.png)
 
@@ -28,7 +28,7 @@ Godotにはレンダリング順序を変更する組み込みオプションが
 
 ![alt](/godot_recipes/4.x/img/ysort_04.png)
 
-オブジェクトが「地面」の上に配置されているように見せたい場合、各オブジェクトのスプライトをオフセットすることで解決できます。具体的には、オブジェクトの `position` プロパティがスプライトの最下部位置と一致するようにします。：
+オブジェクトが「地面」の上に配置されているように見せたい場合、オブジェクトの `position` プロパティがスプライトの最下部位置と一致するようにオフセットすることで解決できます。
 
 ![alt](/godot_recipes/4.x/img/ysort_05.png)
 
@@ -38,4 +38,4 @@ Godotにはレンダリング順序を変更する組み込みオプションが
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/using_ysort](https://github.com/godotrecipes/using_ysort)
+プロジェクトのサンプルコード: [https://github.com/godotrecipes/using_ysort](https://github.com/godotrecipes/using_ysort)

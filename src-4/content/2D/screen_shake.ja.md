@@ -7,7 +7,7 @@ ghcommentid: 28
 
 ## 課題
 
-「画面シェイク」エフェクトを作成したいとのことですね。
+「画面シェイク」エフェクトを作成したいとの。
 
 ## 解決策
 
@@ -15,7 +15,7 @@ ghcommentid: 28
 
 このエフェクトの仕組みはシンプルです。爆発や重い物体が障害物に衝突するなど、何らかのイベントが発生したときに、カメラを短時間だけ徐々に、かつ段階的に移動させたい場合に適しています。
 
-このエフェクトを実装する方法は複数あります。今回のレシピでは、以下のGDC講演で解説されているテクニックを模倣していきます：
+このエフェクトを実装する方法は複数あります。今回のレシピでは、以下のGDC講演で解説されているテクニックを模倣していきます。
 
 {{< youtube tu-Qe66AvtY >}}
 
@@ -39,7 +39,7 @@ var trauma = 0.0  # Current shake strength.
 var trauma_power = 2  # Trauma exponent. Use [2, 3].
 ```
 
-`trauma_power` は `trauma` とカメラの実際の移動量との関係を表します（例: `amount = trauma * trauma`）。通常は正方形関係(2)または立方体関係(3)が最も効果的ですが、自由に実験してみてください。
+`trauma_power` は `trauma` とカメラの実際の移動量との関係を表します（例: `amount = trauma * trauma`）。通常は正方形関係(2)またはキューブ関係(3)が最も効果的ですが、自由に実験してみてください。
 
 さらに、カメラインスタンスを任意の場所に配置し、追従させるターゲットノードを指定できる `target` 変数を追加しました。
 
@@ -84,7 +84,7 @@ func shake():
 
 このアプローチの欠点は、フレームごとにランダム値が大きく変化するため、操作感が不安定になりやすい点です。より「自然な」ランダム性を得るためには、「ノイズ」と呼ばれる概念を活用する方法があります。
 
-ノイズ、より具体的には*勾配ノイズ*とは、より自然な見た目の「ランダム」パターンを生成するための手法です。これを実現するためにGodotでは、[OpenSimplexNoise](https://docs.godotengine.org/ja/latest/classes/class_opensimplexnoise.html)クラスが提供されています。
+ノイズ（特に*勾配ノイズ*）とは、より自然な見た目の「ランダム」パターンを生成するための手法です。これを実現するためにGodotでは、[OpenSimplexNoise](https://docs.godotengine.org/ja/latest/classes/class_opensimplexnoise.html)クラスが提供されています。
 
 {{% notice info %}}
 最も広く知られているグラジエントノイズアルゴリズムは、[パーリンノイズ](https://ja.wikipedia.org/wiki/Perlinノイズ)と呼ばれています。このアルゴリズムとその後継である[シンプレックスノイズ](https://ja.wikipedia.org/wiki/Simplex_noise)は特許で保護されているため、Godotでは[OpenSimplex](https://en.wikipedia.org/wiki/OpenSimplex_noise)という別のアルゴリズムを使用してノイズを生成しています。
@@ -123,7 +123,7 @@ offset.y = max_offset.y * amount * noise.get_noise_2d(noise.seed*3, noise_y)
 ![alt](/godot_recipes/3.x/img/shake_noise01.gif)
 
 {{% notice note %}}
-プロジェクトファイルはこちらからダウンロードできます：[screen_shake.zip](/godot_recipes/3.x/files/screen_shake.zip)
+プロジェクトファイルはこちらからダウンロードできます。[screen_shake.zip](/godot_recipes/3.x/files/screen_shake.zip)
 {{% /notice %}}
 
 ## 関連レシピ

@@ -69,8 +69,8 @@ func _physics_process(delta):
 func get_input(delta):
     var vy = velocity.y
     velocity = Vector3.ZERO
-    var move = 入力.get_axis("back", "forward")
-    var turn = 入力.get_axis("right", "left")
+    var move = Input.get_axis("back", "forward")
+    var turn = Input.get_axis("right", "left")
     velocity += -transform.basis.z * move * speed
     rotate_y(turn_speed * turn * delta)
     velocity.y = vy
@@ -94,11 +94,11 @@ Here's the tank in action. We've made a test scene with a {{< gd-icon StaticBody
 プロジェクトのサンプルコードをダウンロードする：[https://github.com/godotrecipes/characterbody3d_examples](https://github.jp/godotrecipes/characterbody3d_examples)
 
 <!-- {{% notice note %}}
-プロジェクトファイルはこちらからダウンロードできます: [floating_text.zip](/godot_recipes/3.x/files/floating_text.zip)
+プロジェクトファイルはこちらからダウンロードできます。 [floating_text.zip](/godot_recipes/3.x/files/floating_text.zip)
 {{% /notice %}} -->
 
 ## 関連レシピ
 
-・[3D入門](/godot_recipes/4.x/ja/g101/3d/)
-・[入力アクション](/godot_recipes/4.x/ja/input/input_actions/)
+* [3D入門](/godot_recipes/4.x/ja/g101/3d/)
+* [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)
 

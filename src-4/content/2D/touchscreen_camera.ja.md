@@ -11,7 +11,7 @@ ghcommentid: 31
 
 ## 解決策
 
-このレシピでは、複数のタッチ操作に対応した汎用2Dカメラを作成します：
+このレシピでは、複数のタッチ操作に対応した汎用2Dカメラを作成します。
 
 * ドラッグで画面移動
 * 2本指でピンチイン/アウトすると拡大縮小できます
@@ -20,7 +20,7 @@ ghcommentid: 31
 
 当社のカメラは内蔵ノードを拡張するため、新しいシーンに `{{<  gd-icon Camera2D>}}`**Camera2D**` を追加し、「TouchCamera」と名前を付けてください。保存後、スクリプトをアタッチします。
 
-以下に必要となる変数を示します：
+以下に必要となる変数を示します。
 
 ```gdscript
 extends Camera2D
@@ -71,11 +71,11 @@ func _process(delta):
 
 ※このジェスチャーは、プロジェクト設定の「入力デバイス」→「ポインティング」で「マウスからタッチをエミュレート」を有効化することでパソコンでテストできます。
 
-マウスイベントやキーボードイベントと同様、タッチイベントも`入力Event`を継承し、同じ入力優先度に従います。処理には`_unhandled_input()`関数を使用するため、他のノード（例：{{< gd-icon Control >}}`Control`ノード）が先にイベントを処理できます：
+マウスイベントやキーボードイベントと同様、タッチイベントも`入力Event`を継承し、同じ入力優先度に従います。処理には`_unhandled_input()`関数を使用するため、他のノード（例：{{< gd-icon Control >}}`Control`ノード）が先にイベントを処理できます。
 
 ```gdscript
 func _unhandled_input(event):
-    if event is 入力EventScreenTouch:
+    if event is InputEventScreenTouch:
         if event.pressed:
             events[event.index] = event
         else:
@@ -87,7 +87,7 @@ func _unhandled_input(event):
 次は、タッチ動作の後に発生するドラッグ操作について処理する必要があります。
 
 ```gdscript
-    if event is 入力EventScreenDrag:
+    if event is InputEventScreenDrag:
         events[event.index] = event
         if events.size() == 1:
             position += event.relative.rotated(rotation) * zoom.x
@@ -110,7 +110,7 @@ func _unhandled_input(event):
 「ピンチ」操作でカメラのズーム機能が作動します。これは2回連続のドラッグイベントを検知した場合に発生します。ドラッグ方向が同じ方向に移動する場合はズームイン、反対方向に移動する場合はズームアウトします。
 
 ```gdscript
-if event is 入力EventScreenDrag:
+if event is InputEventScreenDrag:
     events[event.index] = event
     if events.size() == 1:
         position += event.relative.rotated(rotation) * zoom.x
@@ -134,14 +134,14 @@ if event is 入力EventScreenDrag:
 
 ## まとめ
 
-このカメラをご自身の撮影ニーズのベースとして活用いただけます。以下に、ご自身で試せるいくつかの提案をご紹介します：
+このカメラをご自身の撮影ニーズのベースとして活用いただけます。以下に、ご自身で試せるいくつかの提案をご紹介します。
 
-・ズーム動作を滑らかにするには`lerp()`を使用してください。
-・ズームは自動的にデフォルトレベルに戻ります。
-・ダブルタップでリセットできます。
-・さらにジェスチャーを追加可能 - 例：3本指操作など。
+* ズーム動作を滑らかにするには`lerp()`を使用してください。
+* ズームは自動的にデフォルトレベルに戻ります。
+* ダブルタップでリセットできます。
+* さらにジェスチャーを追加可能 - 例：3本指操作など。
 
-完全な参考として、以下にフルバージョンの「TouchCamera.gd」スクリプトを記載します：
+完全な参考として、以下にフルバージョンの「TouchCamera.gd」スクリプトを記載します。
 
 ```gdscript
 extends Camera2D
@@ -165,13 +165,13 @@ func _process(delta):
 
 
 func _unhandled_input(event):
-    if event is 入力EventScreenTouch:
+    if event is InputEventScreenTouch:
         if event.pressed:
             events[event.index] = event
         else:
             events.erase(event.index)
 
-    if event is 入力EventScreenDrag:
+    if event is InputEventScreenDrag:
         events[event.index] = event
         if events.size() == 1:
             position += event.relative.rotated(rotation) * zoom.x
@@ -185,7 +185,7 @@ func _unhandled_input(event):
 ```
 
 <!-- {{% notice note %}}
-プロジェクトファイルはこちらからダウンロードできます： [2d_touch_camera.zip](/godot_recipes/3.x/files/2d_touch_camera.zip)
+プロジェクトファイルはこちらからダウンロードできます。 [2d_touch_camera.zip](/godot_recipes/3.x/files/2d_touch_camera.zip)
 {{% /notice %}} -->
 
 ## 関連レシピ

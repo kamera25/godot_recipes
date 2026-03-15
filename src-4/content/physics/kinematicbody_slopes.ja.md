@@ -12,7 +12,7 @@ tags: []
 
 ## 解決策
 
-まず、シンプルな {{< gd-icon KinematicBody3D >}}`KinematicBody` を使用し、`move_and_slide()` メソッドを実装しました。以下のスクリプトを使用しています：
+まず、シンプルな {{< gd-icon KinematicBody3D >}}`KinematicBody` を使用し、`move_and_slide()` メソッドを実装しました。以下のスクリプトを使用しています。
 
 ```gdscript
 extends KinematicBody
@@ -27,13 +27,13 @@ var jumping = false
 
 func get_input(delta):
     var input = Vector3.ZERO
-    if 入力.is_action_pressed("forward"):
+    if Input.is_action_pressed("forward"):
         input += -transform.basis.z * speed
-    if 入力.is_action_pressed("back"):
+    if Input.is_action_pressed("back"):
         input += transform.basis.z * speed
-    if 入力.is_action_pressed("right"):
+    if Input.is_action_pressed("right"):
         rotate_y(-rot_speed * delta)
-    if 入力.is_action_pressed("left"):
+    if Input.is_action_pressed("left"):
         rotate_y(rot_speed * delta)
     velocity.x = input.x
     velocity.z = input.z
@@ -47,13 +47,13 @@ func _physics_process(delta):
     if jumping and is_on_floor():
         jumping = false
 
-    if 入力.is_action_just_pressed("jump"):
+    if Input.is_action_just_pressed("jump"):
         if is_on_floor():
             jumping = true
             velocity.y = jump_speed
 ```
 
-傾斜地で動きを止めると、問題が明らかになります：
+傾斜地で動きを止めると、問題が明らかになります。
 
 ![alt](/godot_recipes/3.x/img/kbd_slopes_01.gif)
 
@@ -65,7 +65,7 @@ func _physics_process(delta):
 
 > 設定値が `true` の場合、重力を考慮した線形速度を適用した状態でオブジェクトが静止している場合、傾斜面でも滑りません。
 
-このように、移動方法を次のように変更できます：
+このように、移動方法を次のように変更できます。
 
 ```gdscript
 velocity = move_and_slide(velocity, Vector3.UP, true)
@@ -76,9 +76,9 @@ velocity = move_and_slide(velocity, Vector3.UP, true)
 ![alt](/godot_recipes/3.x/img/kbd_slopes_02.gif)
 
 
-しかし依然として問題が残っています。これは`gravity`に低い値を設定した場合により顕著になります：
+しかし依然として問題が残っています。これは`gravity`に低い値を設定した場合により顕著になります。
 
-<img src="/godot_recipes/3.x/img/kbd_slopes_03.gif" alt="Keyboard Slopes 03">
+![alt](/godot_recipes/3.x/img/kbd_slopes_03.gif)
 
 停止時にわずかに上向きの運動量が生じるため、小さな「ホップ」が発生します。この問題は、`move_and_slide_with_snap()` メソッドに切り替えることで解決できます。
 

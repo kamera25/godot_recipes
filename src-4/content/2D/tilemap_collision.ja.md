@@ -28,13 +28,13 @@ if collision.collider is TileMap:
     var tile_id = collision.collider.get_cellv(tile_pos)
 ```
 
-`tile_id`を取得した後、`TileSet`リソースからタイルのプロパティを取得できます。これは{{< gd-icon TileMap >}}`TileMap`オブジェクトの`tile_set`プロパティで参照できます。例えば、特定のタイル名を取得するには以下のようにします：
+`tile_id`を取得した後、`TileSet`リソースからタイルのプロパティを取得できます。これは{{< gd-icon TileMap >}}`TileMap`オブジェクトの`tile_set`プロパティで参照できます。例えば、特定のタイル名を取得するには以下のようにします。
 
 ```gdscript
     var tile_name = collision.collider.tile_set.tile_get_name(tile_id)
 ```
 
-また、新しい`id`を設定することでタイルを変更することもできます：
+また、新しい`id`を設定することでタイルを変更することもできます。
 
 ```gdscript
     collision.collider.set_cellv(tile_pos, new_id)

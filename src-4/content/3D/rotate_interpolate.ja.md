@@ -21,7 +21,7 @@ Godotではオブジェクトの`transform`プロパティを利用すること�
 
 ### look_at()
 
-以下の例では、ミサイルや矢のような3Dオブジェクトを目標方向に向ける方法を示します。これは`Node3D`クラスの`look_at()`メソッドを使用することで実現できます：
+以下の例では、ミサイルや矢のような3Dオブジェクトを目標方向に向ける方法を示します。これは`Node3D`クラスの`look_at()`メソッドを使用することで実現できます。
 
 ```gdscript
 func _process(delta):
@@ -50,7 +50,7 @@ func _process(delta):
     $Arrow.transform  = $Arrow.transform.interpolate_with(new_transform, speed * delta)
 ```
 
-!
+![alt](/godot_recipes/4.x/img/3d_rotate_02.gif)
 
 注：`interpolate_with()` は `transform` を操作するため、回転と位置の両方に対して補間を行うことができます。
 

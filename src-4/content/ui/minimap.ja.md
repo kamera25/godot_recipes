@@ -6,11 +6,11 @@ draft: false
 
 ## 課題
 
-プレイヤーの視界外にあるオブジェクトの位置を表示するためのミニマップまたはレーダー風UI要素が欲しいとのことですね。
+プレイヤーの視界外にあるオブジェクトの位置を表示するためのミニマップまたはレーダー風UI要素が欲しいとの。
 
 ## 解決策
 
-以下に、私たちが目指している実装例をご紹介します。
+以下に、目指している実装例をご紹介します。
 <video controls src="/godot_recipes/4.x/img/minimap_01.webm"></video>
 
 ### プロジェクト設定
@@ -18,10 +18,10 @@ draft: false
 この機能を説明するため、まずは[オートタイルレシピ](/godot_recipes/4.x/ja/2d/autotile_intro/)を使用した簡素なトップダウンゲームと[見下ろしキャラクター操作レシピ](godot_recipes/2d/topdown_movement/#option-2-rotate-and-move)に基づくプレイヤーから始めましょう。各コンポーネントの動作詳細については、リンク先のレシピを参照してください。
 
 {{% notice note %}}
-本プロジェクトのアートワークは[kenney.nl](https://kenney.nl)提供のものを使用しています。以下からダウンロードできます：[Minimap アセット](/godot_recipes/4.x/ja/files/minimap_assets.zip).
+本プロジェクトのアートワークは[kenney.nl](https://kenney.nl)提供のものを使用しています。以下からダウンロードできます。[Minimap アセット](/godot_recipes/4.x/ja/files/minimap_assets.zip).
 {{% /notice %}}
 
-私たちのメインシーン設定は以下のように構成されています：
+メインシーン設定は以下のように構成されています。
 
 ![alt](/godot_recipes/4.x/img/minimap_01.png)
 
@@ -43,7 +43,7 @@ draft: false
 
 ![alt](/godot_recipes/4.x/img/minimap_03.gif)
 
-次に、フレームの内側部分をグリッドパターン「pattern_blueprintPaper.png」で埋めたいと思います：
+次に、フレームの内側部分をグリッドパターン「pattern_blueprintPaper.png」で埋めたいと思います。
 
 ![alt](/godot_recipes/4.x/img/pattern_blueprintPaper.png)
 
@@ -59,17 +59,17 @@ draft: false
 
 この時点までに、シーンツリーは以下のようになっているはずです：
 
-!
+![alt](/godot_recipes/4.x/img/minimap_06.png)
 
 ### マップマーカー
 
-As a child of `Grid`, add a {{< gd-icon Sprite2D >}}`Sprite2D` node named "PlayerMarker" and give it the `minimapIcon_arrowA.png` texture. Note the sprite's **Transform/Position** property: `(0, 0)`, which places it exactly in the top-left corner of the `Grid`:
+`Grid`の子要素として、名前を「PlayerMarker」とする`Sprite2D`ノードを追加します。また、minimapIcon_arrowA.pngテクスチャを適用します。スプライトのTransform/Positionプロパティに注意してください：(0, 0)となっており、これによりグリッドの左上隅に正確に配置されます。
 
 ![alt](/godot_recipes/4.x/img/minimap_05.png)
 
 もし現在のグリッドサイズが (150, 150) であれば（これは［サイズ］プロパティで確認できます）、中心座標は (75, 75) になります。ここにプレイヤーマーカーの位置を設定して：
 
-!
+![alt](/godot_recipes/4.x/img/minimap_07.png)
 
 心配しないでください。後で自動化します。
 
@@ -95,20 +95,7 @@ var minimap_icon = "mob"
 var minimap_icon = "alert"
 ```
 
-from unity3d import *
-
-class MinimapScript:
-    def Start(self):
-        # メインシーンにミニマップが追加される際にインスペクターで割り当て可能なプレイヤー参照変数を作成
-        self.player_ref = None
-        
-        # スケール調整用のズームプロパティを定義 - ミニマップが「見える」範囲を指定可能にする
-        self.zoom_factor = 1.0  # デフォルト値
-
-        # @onready属性を持つ変数を作成し、必要なノードへのアクセスをより便利に実装
-        @onready var player_node: Transform = FindObjectOfType<Transform>("Player")
-        @onready var map_canvas_node: CanvasGroup = GetComponentInParent<CanvasGroup>()
-
+これで`Minimap`にスクリプトを追加する準備が整いました。まず、メインシーンにミニマップが追加された時にインスペクターで割り当て可能なプレイヤー参照と、スケールを調整するズームプロパティを実装します。必要なノードへのアクセスを容易にするため、`@onready`変数も用意しました。
 
 ```gdscript
 extends MarginContainer
@@ -154,7 +141,7 @@ func _ready():
 {{< gd-icon Container >}}`Container` ノードが子要素をどのように処理するかの特性上、`_ready()` の時点では子要素の正確なサイズ値が取得できません。このため、グリッドのサイズを正しく取得するには次のフレームまで待つ必要があります。
 {{% /notice %}}
 
-We'll also create markers for every game object (using the "minimap_objects" group) by duplicating the matching marker node and tying the marker to the object via the `markers` dictionary:
+これで`Minimap`にスクリプトを追加し始めることができます。まず第一に、メインシーンにミニマップが追加された際にインスペクタで割り当て可能な`player`リファレンスと、スケールを調整するための`zoom`プロパティが必要です。これにより、ミニマップが「視認」できる範囲を設定できます。また、必要なノードにより簡単にアクセスできるよう、いくつかの`@onready`変数も追加しています。
 
 ```gdscript
     var map_objects = get_tree().get_nodes_in_group("minimap_objects")
@@ -187,7 +174,7 @@ for item in markers:
     markers[item].position = obj_pos
 ```
 
-この問題は、マーカーがグリッドの外側にも配置できてしまう点にあります：
+この問題は、マーカーがグリッドの外側にも配置できてしまう点にあります。
 
 ![alt](/godot_recipes/4.x/img/minimap_09.png)
 
@@ -223,7 +210,7 @@ else:
 
 モブが倒されたり、木箱が拾われたりすると、マーカー参照が有効でなくなるためゲームがクラッシュしてしまいます。オブジェクトと一緒にマーカーも確実に削除されるようにする必要があります。以下に、簡易的なデモ環境でこれを実装する簡単な方法を紹介します。
 
-「minimap_objects」グループに追加したすべてのオブジェクトに `signal removed` を追加してください。このシグナルは、オブジェクトが破棄（または回収）される際に、マップがそのオブジェクトを識別できるように自身への参照と共に発火させます：
+「minimap_objects」グループに追加したすべてのオブジェクトに `signal removed` を追加してください。このシグナルは、オブジェクトが破棄（または回収）される際に、マップがそのオブジェクトを識別できるように自身への参照と共に発火させます。
 
 ```gdscript
 removed.emit(self)
@@ -265,7 +252,7 @@ func set_zoom(value):
 
 ```gdscript
 func _on_gui_input(event):
-    if event is 入力EventMouseButton and event.pressed:
+    if event is InputEventMouseButton and event.pressed:
         if event.button_index == MOUSE_BUTTON_WHEEL_UP:
             zoom += 0.1
         if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
@@ -289,7 +276,7 @@ func _on_gui_input(event):
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-以下からプロジェクトのサンプルコードをダウンロードできます：[https://github.com/godotrecipes/minimap](https://github.com/godotrecipes/minimap)
+以下からプロジェクトのサンプルコードをダウンロードできます。[https://github.com/godotrecipes/minimap](https://github.com/godotrecipes/minimap)
 
 ## 関連レシピ
 

@@ -12,16 +12,16 @@ draft: true
 
 まずは基本的なキネマティックプラットフォームキャラクタから始めましょう。詳細は[プラットフォームキャラクターレシピ](/godot_recipes/4.x/ja/2d/platform_char/)を参照してください。
 
-以下の移動コードがあります：
+以下の移動コードがあります。
 
 ```gdscript
 func _physics_process(delta):
     velocity.y += gravity * delta
-    var dir = 入力.get_axis("walk_left", "walk_right")
+    var dir = Input.get_axis("walk_left", "walk_right")
     velocity.x = dir * speed
 
     move_and_slide()
-    if 入力.is_action_just_pressed("jump") and is_on_floor():
+    if Input.is_action_just_pressed("jump") and is_on_floor():
         velocity.y = jump_speed
 ```
 
@@ -29,7 +29,7 @@ func _physics_process(delta):
 
 ご覧の通り、いくつかの問題があります。第一に、キャラクターは走っている時に斜面から滑り落ちてしまいます。また、入力がない状態でも坂を滑って降りていきます。
 
-以下の方法で部分的に解決できます：`move_and_slide()`から`move_and_slide_with_snap()`に変更する：
+以下の方法で部分的に解決できます。`move_and_slide()`から`move_and_slide_with_snap()`に変更する：
 
 ```gdscript
 snap = Vector2.DOWN * 128 if !is_jumping else Vector2.ZERO
@@ -42,7 +42,7 @@ velocity = move_and_slide_with_snap(velocity, snap, Vector2.UP, true)
 
 ## 速度ベクトルの方向決定
 
-この問題を解決するには、速度ベクトルを斜面に対して適切に調整すればよいでしょう。具体的に説明するため、まずキャラクターの向きを調整して斜面と平行にします。これは、床の上にいるときに床面法線を確認することで実現できます：
+この問題を解決するには、速度ベクトルを斜面に対して適切に調整すればよいでしょう。具体的に説明するため、まずキャラクターの向きを調整して斜面と平行にします。これは、床の上にいるときに床面法線を確認することで実現できます。
 
 ```gdscript
 if is_on_floor():
@@ -67,9 +67,9 @@ velocity = velocity.rotated(-rotation)
 
 ここではいくつか変更点がありますので、詳しく見ていきましょう。
 
-・`snap`ベクトルは現在ローカルの下向きベクトルとなっており、斜面に対して常に垂直方向を指し示すようになります。
-・`floor_normal`パラメータもローカル上向き方向（`-transform.y`）に変更されます。
-・速度変換では、まずプレイヤーの回転に合わせて座標系を調整し、その後逆操作を行って結果的な速度を再びローカル座標系に戻します。
+* `snap`ベクトルは現在ローカルの下向きベクトルとなっており、斜面に対して常に垂直方向を指し示すようになります。
+* `floor_normal`パラメータもローカル上向き方向（`-transform.y`）に変更されます。
+* 速度変換では、まずプレイヤーの回転に合わせて座標系を調整し、その後逆操作を行って結果的な速度を再びローカル座標系に戻します。
 
 結果：
 
@@ -77,7 +77,7 @@ velocity = velocity.rotated(-rotation)
 
 ## まとめ
 
-この手法により、さまざまなプラットフォーマー風の移動システムを実現できます。例えば、以下のような楽しい機能を実装できます：
+この手法により、さまざまなプラットフォーマー風の移動システムを実現できます。例えば、以下のような楽しい機能を実装できます。
 
 <video controls src="/godot_recipes/4.x/img/2d_align_06.webm"></video>
 
@@ -95,7 +95,7 @@ func _physics_process(delta):
     if is_on_floor():
         rotation = get_floor_normal().angle() + PI/2
         is_jumping = false
-        if 入力.is_action_just_pressed("ui_up"):
+        if Input.is_action_just_pressed("ui_up"):
             is_jumping = true
             velocity.y = jump_speed
 ```

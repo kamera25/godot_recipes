@@ -1,5 +1,5 @@
 ---
-title: "産卵サークル"
+title: "サークルをスポーンさせる"
 weight: 2
 draft: false
 pre: "02. "
@@ -31,7 +31,7 @@ pre: "02. "
 signal captured
 ```
 
-ジャンパーが円に接触した時に、このシグナルを発生させます：
+ジャンパーが円に接触した時に、このシグナルを発生させます。
 
 ```gdscript
 func _on_Jumper_area_entered(area):
@@ -166,7 +166,7 @@ Circle ノードに `アニメーションPlayer` を追加します。
 
 新しいアニメーション「implode」を追加してください。長さを 0.4 に設定し、ルートノードである Area2D の 2 つのプロパティにキーフレームを設定してください。スケールは (1, 1) に、モジュレートはデフォルト値 (1, 1, 1, 1) に。その後、スクラブバーを最後まで移動させ、値として (0.1, 0.1) と (1, 1, 1, 0) を設定します（これは色のアルファ値です）。
 
-<img src="/godot_recipes/3.x/img/cj_02_02.png" alt="">
+![alt](/godot_recipes/3.x/img/cj_02_02.png)
 
 ### アニメーションのキャプチャ
 
@@ -179,16 +179,16 @@ Circle ノードに `アニメーションPlayer` を追加します。
 
 ```gdscript
 func capture():
-    $アニメーションPlayer.play("capture")
+    $AnimationPlayer.play("capture")
 
 func implode():
-    if !$アニメーションPlayer.is_playing():
-        $アニメーションPlayer.play("implode")
-    yield($アニメーションPlayer, "animation_finished")
+    if !$AnimationPlayer.is_playing():
+        $AnimationPlayer.play("implode")
+    yield($AnimationPlayer, "animation_finished")
     queue_free()
 ```
 
-function Jump()
+そして `Jumper.gd` で、ジャンプ関数は次のようになります。function Jump()
     if IsGrounded() then
         velocity = Vector3(0, 0, 0) -- ジャンプアニメーションの初期化
     else
@@ -205,7 +205,7 @@ func jump():
     velocity = transform.x * jump_speed
 ```
 
-メイン画面では、「キャプチャ」メソッドが実際のキャプチャ処理を実行します：
+メイン画面では、「キャプチャ」メソッドが実際のキャプチャ処理を実行します。
 
 ```gdscript
 func _on_Jumper_captured(object):

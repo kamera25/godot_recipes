@@ -34,24 +34,24 @@ AdMobアプリケーションIDを`android:value=""/>`行に貼り付けてく�
 
 ## 設定
 
-これで `AdMob` ノードを `Main` シーンに追加できます：
+これで `AdMob` ノードを `Main` シーンに追加できます。
 
-<img src="/godot_recipes/3.x/img/admob_3.2_01.png" alt="alt">
+![alt](/godot_recipes/3.x/img/admob_3.2_01.png)
 
 クリックしてみると、ノードの設定に使用するエクスポート済みプロパティセットが表示されます。ここで広告ユニットIDを貼り付け、本番広告やテスト広告などを構成していきます。
 
-<img src="/godot_recipes/3.x/img/admob_3.2_02.png" alt="AdMob実装例">
+![alt](/godot_recipes/3.x/img/admob_3.2_02.png)
 
 注: 「AdMob」ノードは接続可能なシグナルを提供しており、広告の読み込み完了、クローズ、ロード失敗時に通知されます。このゲームでは「リワード型」広告は使用していませんが、これらのシグナルを利用すれば適切なタイミングで報酬を付与することができます。
 
 
-以前のプラグインを使用していた場合、`settings`シングルトン内でプラグインの初期化と広告の表示/非表示処理を実装していました。しかし、`AdMob`ノードがこの機能を管理できるようになったため、このコードは不要になりました。代わりに、`Main`内の該当呼び出し箇所を`AdMob`ノードへの呼び出しに置き換えます：
+以前のプラグインを使用していた場合、`settings`シングルトン内でプラグインの初期化と広告の表示/非表示処理を実装していました。しかし、`AdMob`ノードがこの機能を管理できるようになったため、このコードは不要になりました。代わりに、`Main`内の該当呼び出し箇所を`AdMob`ノードへの呼び出しに置き換えます。
 
 ```gdscript
 onready var admob = $Admob
 ```
 
-# settings.hide_ad_banner() などを呼び出している箇所は、以下の新しい同等関数で置き換えできます：
+# settings.hide_ad_banner() などを呼び出している箇所は、以下の新しい同等関数で置き換えできます。
 from adsweeper import hide_advertising_elements
 
 def customize_adseepper_config():

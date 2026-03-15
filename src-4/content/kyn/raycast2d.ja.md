@@ -1,30 +1,30 @@
 ---
-title: "レイキャスト2D"
+title: "RayCast2D"
 draft: false
 ghcommentid: 87
 ---
 
-## {{< gd-icon レイキャスト2D >}}レイキャスト2D
+## {{< gd-icon RayCast2D >}}RayCast2D
 
 *レイキャスティング* はゲーム開発で広く用いられる手法です。「レイをキャストする」とは、ある点から直線を伸ばし、それが何かに衝突するか限界に達するまで移動させる操作を指します。
 
 ### ノードのプロパティ
 
-{{< gd-icon レイキャスト2D >}}`レイキャスト2D`ノードを追加し、インスペクターを確認してみましょう。
+Add a {{< gd-icon RayCast2D >}}`RayCast2D` node and take a look at the Inspector:
 
 ![alt](/godot_recipes/4.x/img/kyn_raycast2d_01_4.png)
 
 以下に主要な特性をご説明します。
 
-* **有効化済**
+* **Enabled**
 
 この機能を無効にするとレイキャスト操作が無効化されます。
 
-* **親ノードを除外**
+* **Exclude Parent**
 
 このプロパティにより、レイは親オブジェクトとの衝突を無視するようになります。デフォルトで有効になっています。
 
-＊ 目標位置
+* **Target Position**
 
 これはレイの到達点です。※注：この座標系はローカル座標です。
 
@@ -38,7 +38,7 @@ ghcommentid: 87
 
 ブール型関数。レイが何らかの物体と衝突しているかどうかを判定します。
 
-＊ `get_collision_point()` 関数
+*  `get_collision_point()` 関数
 
 光線が衝突している場合、この関数は衝突位置をグローバル座標系で返します。
 
@@ -52,11 +52,11 @@ ghcommentid: 87
 
 ### 使用例
 
-レイキャストには多様な用途があります：可視判定（AはBを確認できるか、その間に障害物はないか）、近接検出（壁や地面、障害物の近くにいるか）などです。以下に実用的な使用例をいくつかご紹介します。
+レイキャストには多様な用途があります。可視判定（AはBを確認できるか、その間に障害物はないか）、近接検出（壁や地面、障害物の近くにいるか）などです。以下に実用的な使用例をいくつかご紹介します。
 
 #### 1. 撮影プロセス
 
-高速で移動する発射物には、障害物を「すり抜けてしまう」という問題がよく発生します。これは、衝突判定が1フレーム内で検出できないほど物体の移動速度が速いためです。代替案として、経路（あるいはレーザーなど）を表現するには {{< gd-icon レイキャスト2D >}}`Raycast2D` を使用する方法があります。
+高速で移動する発射物には、障害物を「すり抜けてしまう」という問題がよく発生します。これは、衝突判定が1フレーム内で検出できないほど物体の移動速度が速いためです。代替案として、経路（あるいはレーザーなど）を表現するには {{< gd-icon RayCast2D >}}`Raycast2D` を使用する方法があります。
 
 ここに、銃の先端にレイキャストが取り付けられたプレイヤースプライトがあります。`target_position`は`(250, 0)`に設定されています。
 
@@ -67,8 +67,8 @@ ghcommentid: 87
 ```gdscript
 func _input(event):
     if event.is_action_pressed("shoot"):
-        if $レイキャスト2D.is_colliding():
-            print($レイキャスト2D.get_collider().name)
+        if $RayCast2D.is_colliding():
+            print($RayCast2D.get_collider().name)
 ```
 
 #### 2. エッジ検出処理
@@ -97,11 +97,10 @@ func _physics_process(delta):
 
 ## 関連レシピ
 
-・[補間カメラの使用方法](/godot_recipes/3.x/3d/interpolated_camera/)
-・[入力操作入門](/godot_recipes/3.x/input/input_intro/)
-・[キネマティックボディによる移動制御](/godot_recipes/3.x/3d/kinematic_body/) →
+* [補間カメラの使用方法](/godot_recipes/3.x/3d/interpolated_camera/)
+* [入力操作入門](/godot_recipes/3.x/input/input_intro/)
+* [キネマティックボディによる移動制御](/godot_recipes/3.x/3d/kinematic_body/) →
 
 <!-- #### Videoが気に入ったら？ -->
 
-</details>
-    <!-- End of YouTube video embed -->
+{{< youtube Lx2d5cgMj5U >}} -->

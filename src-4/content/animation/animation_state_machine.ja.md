@@ -25,7 +25,7 @@ We'll also assume you've already set up the character's animations using {{< gd-
 
 シーンに `{{< gd-icon アニメーションTree >}}`アニメーションTree` ノードを追加します。［ツリールート］プロパティで「新規アニメーションノードステートマシン」を選択してください。
 
-<img src="/godot_recipes/3.x/img/animation_tree_01.png" alt="アニメーションツリーのスクリーンショット">
+![alt](/godot_recipes/3.x/img/animation_tree_01.png)
 
 アニメーションPlayer >}}`アニメーションPlayer`で作成されたアニメーションを制御するノードです。既存のアニメーションにアクセスさせるには、_Anim Player_ プロパティ内の「割り当て」ボタンをクリックし、使用するアニメーションノードを選択してください。
 

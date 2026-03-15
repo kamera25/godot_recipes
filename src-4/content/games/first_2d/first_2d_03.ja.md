@@ -42,7 +42,7 @@ extends Area2D
 @export var speed = 150
 
 func _process(delta):
-    var input = 入力.get_vector("left", "right", "up", "down")
+    var input = Input.get_vector("left", "right", "up", "down")
     position += input * speed * delta
 ```
 
@@ -79,12 +79,12 @@ func _process(delta):
 
 ```gdscript
 func _process(delta):
-    var input = 入力.get_vector("left", "right", "up", "down")
+    var input = Input.get_vector("left", "right", "up", "down")
     position += input * speed * delta
     position = position.clamp(Vector2.ZERO, screensize)
 ```
 
-もう一度シーンを実行して、画面の端から移動してみてください。船の半分が画面からはみ出していることに気付くはずです。これは、船の `position` 値が `Sprite2D` オブジェクトの中心位置に設定されているためです。私たちの船のサイズは `16x16` ピクセルであることがわかっているため、`clamp()` 関数に追加で8ピクセル分を包含するように変更できます：
+もう一度シーンを実行して、画面の端から移動してみてください。船の半分が画面からはみ出していることに気付くはずです。これは、船の `position` 値が `Sprite2D` オブジェクトの中心位置に設定されているためです。船のサイズは `16x16` ピクセルであることがわかっているため、`clamp()` 関数に追加で8ピクセル分を包含するように変更できます。
 
 ```gdscript
 position = position.clamp(Vector2(8, 8), screensize - Vector2(8, 8))
@@ -98,7 +98,7 @@ position = position.clamp(Vector2(8, 8), screensize - Vector2(8, 8))
 
 ```gdscript
 func _process(delta):
-    var input = 入力.get_vector("left", "right", "up", "down")
+    var input = Input.get_vector("left", "right", "up", "down")
     if input.x > 0:
         $Ship.frame = 2
         $Ship/Boosters.animation = "right"

@@ -9,7 +9,7 @@ pre: "03. "
 
 ## サークルモードについて
 
-最終的には様々なモードを実装する予定ですが、まずは「制限モード」から始めましょう。このモードでは、円は特定回数の周回後に消滅します。まず、残りの周回数を表示する `标签` ノードを追加しましょう。テキストフィールドに数値（例：`1`）を入力して、表示方法を確認してみてください。
+最終的には様々なモードを実装する予定ですが、まずは「制限モード」から始めましょう。このモードでは、円は特定回数の周回後に消滅します。まず、残りの周回数を表示する `Label` ノードを追加しましょう。テキストフィールドに数値（例：`1`）を入力して、表示方法を確認してみてください。
 
 [カスタムフォント] セクションで、新しい `DynamicFont` を追加し、アセットフォルダから _フォントデータ_ を読み込み、 _サイズ_ を `64` に設定します。ラベルの位置を中央配置するには、「レイアウト」メニューから「中央揃え」を選択します。
 
@@ -31,16 +31,16 @@ func set_mode(_mode):
     mode = _mode
     match mode:
         MODES.STATIC:
-            $标签.hide()
+            $Label.hide()
         MODES.LIMITED:
             current_orbits = num_orbits
-            $标签.text = str(orbits_left)
-            $标签.show()
+            $Label.text = str(orbits_left)
+            $Label.show()
 ```
 
 現在はこれら2つのモードが定義されていますが、後でさらに追加される予定です。
 
-さらに、`init()` メソッドにモードを引数として渡す方法も追加しましょう。デフォルト値は `STATIC` のままにしますが、今回はテスト用に `LIMITED` を使用することにします。これにより、以下のことが可能になります：
+さらに、`init()` メソッドにモードを引数として渡す方法も追加しましょう。デフォルト値は `STATIC` のままにしますが、今回はテスト用に `LIMITED` を使用することにします。これにより、以下のことが可能になります。
 
 ```gdscript
 func init(_position, _radius=radius, _mode=MODES.LIMITED):
@@ -52,14 +52,14 @@ The jumper is setting the rotation position when it's captured. Remove the line 
 ```gdscript
 func capture(target):
     jumper = target
-    $アニメーションPlayer.play("capture")
+    $AnimationPlayer.play("capture")
     $Pivot.rotation = (jumper.position - position).angle()
     orbit_start = $Pivot.rotation
 ```
 
 注意：現在はジャンパーへの参照を渡しているため、スクリプトの先頭に`var jumper = null`を追加し、`Main.gd`スクリプト内の呼び出しを`object.capture(player)`に変更してください。
 
-現在位置が一周したか確認し、もしそうであれば`current_orbits`を1減算します：
+現在位置が一周したか確認し、もしそうであれば`current_orbits`を1減算します。
 
 ```gdscript
 func _process(delta):
@@ -71,7 +71,7 @@ func check_orbits():
     # Check if the jumper completed a full circle
     if abs($Pivot.rotation - orbit_start) > 2 * PI:
         current_orbits -= 1
-        $标签.text = str(current_orbits)
+        $Label.text = str(current_orbits)
         if orbits_left <= 0:
             jumper.die()
             jumper = null
@@ -93,13 +93,13 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 さらに、ジャンパの `VisibilityNotifier2D` シグナルも接続しました。これにより、プレイヤーが画面外に出た際にプレイヤーオブジェクトを削除できるようになっています。
 
-試しに動かしてみると、今のところ問題なく動作しています：
+試しに動かしてみると、今のところ問題なく動作しています。
 
-<img src="/godot_recipes/3.x/img/cj_03_01.gif" alt="">
+![alt](/godot_recipes/3.x/img/cj_03_01.gif)
 
 ### サークル効果
 
-このセクションの最後の作業として、軌道が尽きつつあることを示すために円に「塗り」効果を追加します。まず、[公式ドキュメント](https://docs.godotengine.org/en/latest/tutorials/2d/custom_drawing_in_2d.html#arc-polygon-function)にある描画コードを使用します：
+このセクションの最後の作業として、軌道が尽きつつあることを示すために円に「塗り」効果を追加します。まず、[公式ドキュメント](https://docs.godotengine.org/en/latest/tutorials/2d/custom_drawing_in_2d.html#arc-polygon-function)にある描画コードを使用します。
 
 
 ```gdscript
@@ -115,7 +115,7 @@ func draw_circle_arc_poly(center, radius, angle_from, angle_to, color):
     draw_polygon(points_arc, colors)
 ```
 
-以下の関数は _draw() 内で呼び出されます：
+以下の関数は _draw() 内で呼び出されます。
 
 ```gdscript
 func _draw():

@@ -1,5 +1,5 @@
 ---
-title: "射出プロジェクトル"
+title: "投射物を発射する"
 weight: 2
 draft: false
 ghcommentid: 26
@@ -7,7 +7,7 @@ ghcommentid: 26
 
 ## 課題
 
-プレイヤー／モブなどから投射物を発射させたいのですね。
+プレイヤー／モブなどから投射物を発射させたい。
 
 ## 解決策
 
@@ -66,7 +66,7 @@ func _on_Bullet_body_entered(body):
 入力アクションが定義されているか確認してください。
 
 ```gdscript
-    if 入力.is_action_just_pressed("shoot"):
+    if Input.is_action_just_pressed("shoot"):
         shoot()
 ```
 
@@ -96,7 +96,7 @@ func shoot():
 
 ## 関連レシピ
 
-- [ゲーム開発数学：トランスフォーム操作](/godot_recipes/4.x/math/transforms/)
+- [ゲーム数学：トランスフォーム操作](/godot_recipes/4.x/math/transforms/)
 
 <!-- #### Videoが気に入ったら？ -->
 
@@ -104,4 +104,4 @@ func shoot():
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトコードはこちらからダウンロードできます：[https://github.com/godotrecipes/2d_shooting](https://github.com/godotrecipes/2d_shooting)
+プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/2d_shooting](https://github.com/godotrecipes/2d_shooting)

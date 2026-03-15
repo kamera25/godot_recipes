@@ -51,14 +51,14 @@ var rotation_dir = 0
 ```gdscript
 func get_input():
     thrust = Vector2.ZERO
-    if 入力.is_action_pressed("thrust"):
+    if Input.is_action_pressed("thrust"):
         thrust = transform.x * engine_power
-    rotation_dir = 入力.get_axis("rotate_left", "rotate_right")
+    rotation_dir = Input.get_axis("rotate_left", "rotate_right")
 ```
 
 もし`"thrust"`入力が有効になっている場合、`thrust`ベクトルを船の進行方向に設定します。一方、`rotation_dir`は回転入力に応じて `+/-1` に設定されます。
 
-これらの値を `_physics_process()` で適用することで飛行を開始できます：
+これらの値を `_physics_process()` で適用することで飛行を開始できます。
 
 ```gdscript
 func _physics_process(_delta):
@@ -71,7 +71,7 @@ func _physics_process(_delta):
 
 {{< gd-icon RigidBody2D >}}`RigidBody2D`プロパティ内では、**直線／減衰**と**角速度／減衰**の設定があります。これらをそれぞれ**1**と**2**に設定すると、移動/回転の動きが遅くなり、さらに停止させる効果も生じます。
 
-これらの値を自由に調整し、`エンジン出力` と `回転力` との関係を試してみて下さい。
+これらの値を自由に調整し、`engine_power` と `rotation_dir` との関係を試してみて下さい。
 
 ### 画面巻き戻し機能
 
@@ -116,7 +116,7 @@ var teleport_pos = null
 `get_input()` でランダムな座標をセットします。
 
 ```gdscript
-    if 入力.is_action_just_pressed("warp"):
+    if Input.is_action_just_pressed("warp"):
         teleport_pos = Vector2(randf_range(0, screensize.x), randf_range(0, screensize.y))
 ```
 
@@ -132,4 +132,4 @@ var teleport_pos = null
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/asteroids_support](https://github.com/godotrecipes/asteroids_support)
+プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/asteroids_support](https://github.com/godotrecipes/asteroids_support)

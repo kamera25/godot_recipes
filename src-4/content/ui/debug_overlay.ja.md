@@ -28,7 +28,7 @@ class Property:
     var num_format = "%4.2f"
     var object  # The object being tracked.
     var property  # The property to display (NodePath).
-    var label_ref  # A reference to the 标签.
+    var label_ref  # A reference to the Label.
     var mode  # Display option (rounded, etc.)
 
     func _init(_object, _property, _label, _mode):
@@ -65,9 +65,9 @@ func _process(_delta):
 
 まず、追跡対象オブジェクトとプロパティのデータをカプセル化するカスタムクラスから始めましょう。このクラスのプロパティを分解します。
 
-・ `object` - 追跡対象オブジェクトへの参照です。
+*  `object` - 追跡対象オブジェクトへの参照です。
 　・ `property` - `NodePath`形式で指定し、例えば `"position"` だけでなく `"position:x"` のようなプロパティも追跡できます。
-　・ `label_ref` - 各プロパティは対応する {{< gd-icon 标签 >}}`标签`ノードと紐付けられており、この参照によりラベルの `text`属性を設定できます。
+　・ `label_ref` - 各プロパティは対応する {{< gd-icon Label >}}`Label`ノードと紐付けられており、この参照によりラベルの `text`属性を設定できます。
 　・ `mode` - 表示方法を指定するオプション設定です（詳細は後述）。
 
 def update_label(self):
@@ -104,13 +104,13 @@ func remove_property(object, property):
 
 `add_property()` は任意のノードから呼び出すことができます（デバッグ表示機能はシングルトンとしてロードする必要があります - 後述参照）。
 
-注意：現在「debug_label」シーンのロードとインスタンス化を行っています。これにより、個別のラベルの表示方法（フォント、サイズ、色など）を自由にカスタマイズできます。別途、{{< gd-icon 标签 >}}`标签`ノードを含むシーンを作成し、お好みの設定に調整してください。
+注意：現在「debug_label」シーンのロードとインスタンス化を行っています。これにより、個別のラベルの表示方法（フォント、サイズ、色など）を自由にカスタマイズできます。別途、{{< gd-icon Label >}}`Label`ノードを含むシーンを作成し、お好みの設定に調整してください。
 
 ### ゲームへの追加について
 
 ゲーム内でこの機能を使用するには、2D/3Dを問わず、デバッグ表示がゲーム画面の上に重ねて表示されるようにする必要があります。「DebugOverlay」というシーンをさらに1つ作成し、そのルートノードに{{< gd-icon CanvasLayer >}}`CanvasLayer`を設定してください。次に、このScene内に`DebugStats`シーンを子要素として追加します。
 
-簡単に参照できるように、私はこれを `DebugOverlay` スクリプトに追加しています：
+簡単に参照できるように、私はこれを `DebugOverlay` スクリプトに追加しています。
 
 ```gdscript
 @onready var stats = $DebugStats
@@ -118,7 +118,7 @@ func remove_property(object, property):
 
 次に、［プロジェクト設定＞自動ロード］で `DebugOverlay` を追加してください。
 
-現在では、ゲーム中の任意のノードで以下のようにプロパティを登録・削除できます：
+現在では、ゲーム中の任意のノードで以下のようにプロパティを登録・削除できます。
 
 ```gdscript
 DebugOverlay.stats.add_property(self, "velocity", "length")

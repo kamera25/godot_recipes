@@ -13,8 +13,8 @@ ghcommentid: 22
 
 この問題に取り組む際、初心者はしばしば実際の車とはかけ離れた挙動のゲームを作ってしまいがちです。アマチュアが作ったカーゲームでよく見られる典型的な失敗例をご紹介します。
 
-- 自動車は中心軸を中心に旋回するものではない。別の言い方をすれば、後輪が左右に滑ることはない。（ドリフト走行時はこの限りではないが、その点については後述する）- 自動車は動いている時にのみ方向転換が可能で、その場で回転することはできない。
-- 自動車は列車ではない。レールに縛られていない。高速で曲がる際にはある程度の横滑り（ドリフト）が伴うべきである。
+- 自動車は中心軸を中心に旋回するものではありません。別の言い方をすれば、後輪が左右に滑ることはありません。（ドリフト走行時はこの限りではないが、その点については後述します）- 自動車は動いている時にのみ方向転換が可能で、その場で回転することはできません。。
+- 自動車は列車ではありません。レールに縛られていません。高速で曲がる際にはある程度の横滑り（ドリフト）が伴うべきです。
 
 2Dカー物理の実装には様々なアプローチ方法があり、主に「リアル志向」か「アーケードスタイル」かによって選択が分かれます。このソリューションでは、リアリティよりもアクション性を優先する「アーケードレベル」の現実感を追求していきます。
 
@@ -74,10 +74,10 @@ func _physics_process(delta):
 
 ```gdscript
 func get_input():
-    var turn = 入力.get_axis("steer_left", "steer_right")
+    var turn = Input.get_axis("steer_left", "steer_right")
     steer_direction = turn * deg_to_rad(steering_angle)
     velocity = Vector2.ZERO
-    if 入力.is_action_pressed("accelerate"):
+    if Input.is_action_pressed("accelerate"):
         velocity = transform.x * 500
 ```
 
@@ -112,17 +112,17 @@ var engine_power = 900  # Forward acceleration force.
 var acceleration = Vector2.ZERO
 ```
 
-入力コードを変更して、車の `速度` を直接変更するのではなく、加速度を適用するようにします。
+入力コードを変更して、車の `velocity` を直接変更するのではなく、加速度を適用するようにします。
 
 ```gdscript
 func get_input():
-    var turn = 入力.get_axis("steer_left", "steer_right")
+    var turn = Input.get_axis("steer_left", "steer_right")
     steer_direction = turn * deg_to_rad(steering_angle)
-    if 入力.is_action_pressed("accelerate"):
+    if Input.is_action_pressed("accelerate"):
         acceleration = transform.x * engine_power
 ```
 
-一旦加速度が得られたら、以下のように速度に適用できます：
+一旦加速度が得られたら、以下のように速度に適用できます。
 
 ```gdscript
 func _physics_process(delta):
@@ -141,9 +141,9 @@ func _physics_process(delta):
 
 - 摩擦力は路面が車に及ぼす抵抗力です。砂地では非常に強いですが、氷上では極めて小さくなります。この力は速度に比例し、スピードが速いほど大きくなります。
 
-・ドラッグは空気抵抗によって生じる力です。車両の断面積が大きいほど影響が大きくなります - 流線型のレースカーに比べて大型トラックやバンの方がより大きな抗力を受けます。ドラッグの値は速度の二乗に比例します。
+* ドラッグは空気抵抗によって生じる力です。車両の断面積が大きいほど影響が大きくなります - 流線型のレースカーに比べて大型トラックやバンの方がより大きな抗力を受けます。ドラッグの値は速度の二乗に比例します。
 
-これは、低速走行時には摩擦抵抗がより顕著になる一方、高速域では空気抵抗が支配的になることを意味します。これら両方の力を計算に含めます。さらに、これらの量の値は、車の最高速度――エンジン出力がもはや空気抵抗に打ち勝てなくなる点――を示す指標にもなります。
+これにより、低速走行時には摩擦抵抗がより顕著になる一方、高速域では空気抵抗が支配的になります。これら両方の力を計算に含めます。さらに、これらの量の値は、車の最高速度――エンジン出力がもはや空気抵抗に打ち勝てなくなる点――を示す指標にもなります。
 
 以下にこれらの数量に対する初期値を示します。
 
@@ -156,7 +156,7 @@ var drag = -0.06
 
 ![alt](/godot_recipes/4.x/img/car_graph_friction.png)
 
-こちらのツールで値を変更してその影響を確認できます：
+こちらのツールで値を変更してその影響を確認できます。
 [https://www.desmos.com/calculator/e4ayu3xkip](https://www.desmos.com/calculator/e4ayu3xkip)
 
 関数 _physics_process() では、現在の摩擦係数を計算する関数を呼び出し、それを加速度力に適用します。
@@ -196,7 +196,7 @@ var max_speed_reverse = 250
 add input to `get_input()`:
 
 ```gdscript
-    if 入力.is_action_pressed("brake"):
+    if Input.is_action_pressed("brake"):
         acceleration = transform.x * braking
 ```
 
@@ -260,18 +260,18 @@ func calculate_steering(delta):
 
 ### 調整項目
 
-この時点で、車両の挙動を制御する多数の設定項目が存在します。これらを調整することで、車の運転特性を大きく変更することが可能です。さまざまな値を試す作業をより簡単にするため、以下にレシピ用プロジェクトをダウンロードしてください。ゲームを起動すると、走行中に車の挙動を変更可能なスライダーパネルが表示されます（`<Tab>`キーでスライダーパネルの表示/非表示を切り替え可能）。
+この時点で、車両の挙動を制御する多数の設定項目が存在します。これらを調整することで、車の運転特性を大きく変更することができます。さまざまな値を試す作業をより簡単にするため、以下にレシピ用プロジェクトをダウンロードしてください。ゲームを起動すると、走行中に車の挙動を変更可能なスライダーパネルが表示されます（`<Tab>`キーでスライダーパネルの表示/非表示を切り替え可能）。
 
 ![alt](/godot_recipes/4.x/img/car_sliders.png)
 
 <!-- {{% notice note %}}
-プロジェクトファイルをこちらからダウンロードできます： [car_steering.zip](/godot_recipes/4.x/files/car_steering.zip)
+プロジェクトファイル: [car_steering.zip](/godot_recipes/4.x/files/car_steering.zip)
 {{% /notice %}} -->
 
 ## 関連レシピ
 
-- [ゲーム開発数学：補間法](/godot_recipes/4.x/ja/math/interpolation/)
+- [ゲーム数学：補間](/godot_recipes/4.x/ja/math/interpolation/)
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトコードはこちらからダウンロードできます：[https://github.com/godotrecipes/2d_car_estrada](https://github.com/godotrecipes/2d_car_estrada)
+プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/2d_car_estrada](https://github.com/godotrecipes/2d_car_estrada)

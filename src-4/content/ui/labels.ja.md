@@ -7,18 +7,18 @@ ghcommentid: 55
 
 ## 課題
 
-画面にテキストを表示したいのですね。
+画面にテキストを表示したい。
 
 ## 解決策
 
-やがて、スクリーンにテキストを表示する必要が出てくるでしょう。具体的にはタイトル表示、カウントダウンタイマー、スコアカウンターなど、他にも多くのケースがあります。これらのほとんどは、Godotの {{< gd-icon 标签 >}} `标签` ノードを使えば簡単に実装できます。
+やがて、スクリーンにテキストを表示する機会が増えるでしょう。例えば、タイトル表示やカウントダウンタイマー、スコアカウンターなどがその一例です。ます。これらのほとんどは、Godotの {{< gd-icon Label >}} `Label` ノードを使えば簡単に実装できます。
 
 ### フォント操作について
 
 はじめに、フォントファイルが必要になります。Godotのフォントサポートについては別のレシピで詳しく解説しますが、ここではTTFまたはOTF形式のフォントファイルを前提とします。ビットマップフォントを使用する場合は、関連するレシピを参照してください。
 
 {{% notice note %}}
-この例では、人気のある無料フォント「Roboto」を使用します。このフォントは[Google Fonts](https://fonts.google.com/specimen/Roboto)で入手できます。こちらからもダウンロードできます: [Roboto_font.zip](/godot_recipes/3.x/files/Roboto_font.zip)
+この例では、人気のある無料フォント「Roboto」を使用します。このフォントは[Google Fonts](https://fonts.google.com/specimen/Roboto)で入手できます。こちらからもダウンロードできます。 [Roboto_font.zip](/godot_recipes/3.x/files/Roboto_font.zip)
 {{% /notice %}}
 
 ### ラベルの追加方法
@@ -37,7 +37,7 @@ ghcommentid: 55
 
 フォントファイル（この例では`Roboto-Medium.ttf`を使用しています）を*フォントデータ*プロパティにドラッグするか、「読み込み」を選択して直接ファイルを指定します。調整すべきプロパティは複数ありますが、まずは*サイズ*を少し大きくしてみましょう。
 
-テキストの表示に与える影響を自由に調整してみてください。例えば、以下の画像では、2番目のラベルに*フィルター*プロパティが有効になっています：
+テキストの表示に与える影響を自由に調整してみてください。例えば、以下の画像では、2番目のラベルに*フィルター*プロパティが有効になっています。
 
 ![alt](/godot_recipes/3.x/img/ui_label_font_filter.png)
 
@@ -52,7 +52,7 @@ ghcommentid: 55
 # シーンに静的テキストのみが必要な場合、ここで完了です。
 # ただし、ラベルを動的に更新する必要がある場合は、コード内で`text`プロパティを使用して実装できます。
 
-{{< gd-icon Timer >}}`Timer`ノードがシーンに含まれている場合、以下のように操作できます：
+{{< gd-icon Timer >}}`Timer`ノードがシーンに含まれている場合、以下のように操作できます。
 
 ```gdscript
 extends Control
@@ -60,11 +60,11 @@ extends Control
 var counter = 0
 
 func _ready():
-    $标签.text = str(counter)
+    $Label.text = str(counter)
 
 func _on_Timer_timeout():
     counter += 1
-    $标签.text = str(counter)
+    $Label.text = str(counter)
 ```
 
 ラベルの使用例やUIノードとの連携方法については、「関連レシピ」セクションをご覧ください。

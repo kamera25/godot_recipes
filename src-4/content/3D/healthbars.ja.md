@@ -1,5 +1,5 @@
 ---
-title: "3Dユニットヘルスバー"
+title: "3DユニットHPバー"
 weight: 5
 draft: false
 ghcommentid: 35
@@ -7,11 +7,11 @@ ghcommentid: 35
 
 ## 課題
 
-3Dゲームオブジェクト（敵キャラクター、プレイヤーキャラなど）用に、フローティング表示の「ヘルスバー」が必要ですね。
+3Dゲームオブジェクト（敵キャラクター、プレイヤーキャラなど）用に、フローティング表示の「HPバー」をつけたい。
 
 ## 解決策
 
-このソリューションでは、既存の {{< gd-icon TextureProgressBar >}}`TextureProgressBar` ノードをベースにした 2D ヘルスバーを再利用します。すでにテクスチャが設定されており、値と色を更新するためのコードも実装済みです。既に同様のシステムをお持ちの場合は、それをそのまま使用していただいて構いません。サンプルではこのシーンを「Healthbar2D」と名付けます。
+このソリューションでは、既存の {{< gd-icon TextureProgressBar >}}`TextureProgressBar` ノードをベースにした 2D HPバーを再利用します。すでにテクスチャが設定されており、値と色を更新するためのコードも実装済みです。既に同様のシステムをお持ちの場合は、それをそのまま使用していただいて構いません。サンプルではこのシーンを「Healthbar2D」と名付けます。
 
 ![alt](/godot_recipes/4.x/img/healthbar_example.gif)
 
@@ -24,7 +24,7 @@ ghcommentid: 35
 ![alt](/godot_recipes/4.x/img/barHorizontal_red_mid%20200.png)
 
 {{% notice note %}}
-既存のオブジェクトを再利用すれば、大幅に作業時間を節約できます。ヘルスバーやカメラ、その他一般的なコンポーネントが必要なたびにゼロから作り直す必要はありません。
+既存のオブジェクトを再利用すれば、大幅に作業時間を節約できます。HPバーやカメラ、その他一般的なコンポーネントが必要なたびにゼロから作り直す必要はありません。
 {{% /notice %}}
 
 ### プロジェクト設定
@@ -33,7 +33,7 @@ ghcommentid: 35
 
 ```gdscript
 func _on_input_event(_camera, event, _position, _normal, _shape_idx):
-    if event is 入力EventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+    if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
         health -= 1
         if health <= 0:
             queue_free()
@@ -45,11 +45,11 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 ### 2Dを3Dに変換
 
-We can display a 2D image in 3D using a {{< gd-icon Sprite3D >}}`Sprite3D`. Add one to a new scene and name it "Healthbar3D". First, we'll get it configured and sized, so set the _Texture_ property to the green bar image.
+{{< gd-icon Sprite3D >}}`Sprite3D`を使用することで、2D画像を3D空間で表示することが可能です。新しいシーンに追加し、「Healthbar3D」という名前を付けましょう。まず設定とサイズ調整を行いますので、 _テクスチャプロパティ_ に緑色のバー画像を設定してください。
 
-{{<  gd-icon Sprite3D >}}`Sprite3D`は通常の3Dオブジェクトと同様に動作します。カメラを移動させると、視点が変わるためです。ただし、ヘルスバーは常にカメラの方を向くようにして、いつでも確認できるようにしたいと考えています。
+{{<  gd-icon Sprite3D >}}`Sprite3D`は通常の3Dオブジェクトと同様に動作します。カメラを移動させると、視点が変わるためです。ただし、HPバーは常にカメラの方を向くようにして、いつでも確認できるようにしたいと考えています。
 
-インスペクターで、［フラグ］セクションの［ビルボード］を「有効」に設定してください。
+インスペクターで、 _Flags_ セクションの _Billboard_ を「Enabled」に設定してください。
 
 続いてカメラを動かして、テクスチャが常にプレイヤー側を向いているか確認してください。
 
@@ -61,19 +61,19 @@ We can display a 2D image in 3D using a {{< gd-icon Sprite3D >}}`Sprite3D`. Add 
 
 ### ビューポートテクスチャ
 
-私たちは `Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}} `TextureProgressBar` を表示したいと考えています。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現できます。
+`Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}} `TextureProgressBar` を表示したいと考えています。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現できます。
 
 以下の手順で操作してください。
 1. {{< gd-icon SubViewport >}} `SubViewport` を {{< gd-icon Sprite3D >}} `Sprite3D` の子要素として追加します。
 2. インスペクターウィンドウで、_Transparent BG_ 設定を **オン** に設定してください。
 
-さらに、ヘルスバーテクスチャのサイズに合わせてビューポートのサイズを設定する必要があり、そのサイズは`(200, 26)`です。
+さらに、HPバーテクスチャのサイズに合わせてビューポートのサイズを設定する必要があり、そのサイズは`(200, 26)`です。
 
 インスタンス化する際に、`HealthBar2D` を {{< gd-icon Viewport >}}`Viewport` の子要素として配置してください。シーン構成は以下のようになるはずです：
 
 ![alt](/godot_recipes/4.x/img/3d_bars_03a.png)
 
-もし `SubViewport` が `Sprite3D` の子要素でなかった場合、インスペクター上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可能性があります。このため、以下のように `Sprite3D` にアタッチされたスクリプト内で設定する必要があります。
+もし `SubViewport` が `Sprite3D` の子要素でなかった場合、インスペクター上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可能性があります。そのため、以下のように `Sprite3D` にアタッチされたスクリプト内で設定します。
 
 ```gdscript
 extends Sprite3D
@@ -97,7 +97,7 @@ func update_health(_value, _max_value):
     $SubViewport/HealthBar2D.update_health(_value, _max_value)
 ```
 
-このコードは、2Dバーに既に存在するupdateメソッドを呼び出しています。進捗バーの値を設定するとともに、バーの色を選択しています：
+このコードは、2Dバーに既に存在するupdateメソッドを呼び出しています。進捗バーの値を設定するとともに、バーの色を選択しています。
 
 ```gdscript
 func update_health(_value, _max_value):
@@ -118,12 +118,12 @@ func update_health(_value, _max_value):
 
 ### まとめ
 
-このテクニックを使えば、{{< gd-icon Node2D >}}`Node2D`ノードはもちろん、{{< gd-icon Control >}}`Control`ノード全般（例：{{< gd-icon 标签 >}}`标签`や{{< gd-icon VideoStreamPlayer >}}`VideoStreamPlayer`など）を3D空間に表示することができます。さらに、{{< gd-icon SubViewport >}}`SubViewport`を使えば、2Dゲーム全体を3次元空間に「投影」することもできます。
+このテクニックを使えば、{{< gd-icon Node2D >}}`Node2D`ノードはもちろん、{{< gd-icon Control >}}`Control`ノード全般（例：{{< gd-icon Label >}}`Label`や{{< gd-icon VideoStreamPlayer >}}`VideoStreamPlayer`など）を3D空間に表示することができます。さらに、{{< gd-icon SubViewport >}}`SubViewport`を使えば、2Dゲーム全体を3次元空間に「投影」することもできます。
 
 ## 関連レシピ
 
-- [オブジェクトのヘルスバー（2D）](/godot_recipes/4.x/ui/unit_healthbar/) -->
+- [オブジェクトのHPバー（2D）](/godot_recipes/4.x/ui/unit_healthbar/) -->
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトコードはこちらからダウンロードできます：[https://github.com/godotrecipes/3d_object_healthbars](https://github.com/godotrecipes/3d_object_healthbars)
+プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/3d_object_healthbars](https://github.com/godotrecipes/3d_object_healthbars)

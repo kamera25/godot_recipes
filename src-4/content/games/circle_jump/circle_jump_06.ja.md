@@ -20,7 +20,7 @@ var circles_per_level = 5
 
 スクリプトを自動読み込みに登録するには、「プロジェクト設定」を開き、「自動読み込み」タブを選択してください。ロードしたいスクリプトのフォルダをクリックし、その後「追加」をクリックします。
 
-<img src="/godot_recipes/3.x/img/cj_06_01.png" alt="CJLスクリプト例">
+![alt](/godot_recipes/3.x/img/cj_06_01.png)
 
 ## サウンドの追加方法
 
@@ -30,7 +30,7 @@ var circles_per_level = 5
 
 - 「スクリーン」シーンに新たに「クリック」という画面を追加します。ボタンをタップした際にこの画面が表示されるようにします。アセットフォルダから「menu_click.wav」を使用します。
 
-・「Circle」シーンに、名前を『Beep』としたオーディオプレイヤーを追加し、`89.ogg`サウンドファイルを使用します。
+* 「Circle」シーンに、名前を『Beep』としたオーディオプレイヤーを追加し、`89.ogg`サウンドファイルを使用します。
 
 - 最後にジャンパー部では、「ジャンプ」と「キャプチャー」の2種類の効果音が必要です。それぞれ`70.ogg`と`88.ogg`を使用してください。
 
@@ -55,7 +55,7 @@ if settings.enable_sound:
     $Click.play()
 ```
 
-円軌道において、限定された円（制限軌道）が1周完了した際に「ビープ音」を再生したいと考えています。これは`check_orbits()`関数内で実装します：
+円軌道において、限定された円（制限軌道）が1周完了した際に「ビープ音」を再生したいと考えています。これは`check_orbits()`関数内で実装します。
 
 ```gdscript
 current_orbits -= 1
@@ -63,7 +63,7 @@ if settings.enable_sound:
     $Beep.play()
 ```
 
--- Jumper.gd ファイル内でサウンドを追加します:
+そして `Jumper.gd` に、次のようにサウンドを追加します。-- Jumper.gd ファイル内でサウンドを追加します:
 
 ```gdscript
 func jump():
@@ -87,7 +87,7 @@ func _on_Jumper_area_entered(area):
 
 音声機能が正常に動作するようになったので、「設定」画面で音と音楽を切り替えられるボタンも接続できるようになりました。
 
-ボタンの表示を、プロパティの現在のオン／オフ状態に合わせる必要があります。まずはテクスチャを読み込んでから、必要に応じて割り当てられるようにします：
+ボタンの表示を、プロパティの現在のオン／オフ状態に合わせる必要があります。まずはテクスチャを読み込んでから、必要に応じて割り当てられるようにします。
 
 ```gdscript
 var sound_buttons = {true: preload("res://assets/images/buttons/audioOn.png"),
@@ -104,14 +104,14 @@ var music_buttons = {true: preload("res://assets/images/buttons/musicOn.png"),
 button.connect("pressed", self, "_on_button_pressed", [button])
 ```
 
-その後で `_on_button_pressed()` を以下のように更新できます：
+その後で `_on_button_pressed()` を以下のように更新できます。
 
 ```gdscript
 func _on_button_pressed(button):
     if settings.enable_sound:
         $Click.play()
     match button.name:
-        "ホーム":
+        "Home":
             change_screen($TitleScreen)
         "Play":
             change_screen(null)
@@ -129,7 +129,7 @@ func _on_button_pressed(button):
 
 ## カラーテーマ設定
 
-さらに、色テーマをカスタマイズできる機能も追加予定です。これらは以下のような方法で変更できます：設定項目として選択するか、プレイヤーがより高いレベルに到達するにつれて段階的に変化させる、といった方法が考えられます。
+さらに、色テーマをカスタマイズできる機能も追加予定です。これらは以下のような方法で変更できます。設定項目として選択するか、プレイヤーがより高いレベルに到達するにつれて段階的に変化させる、といった方法が考えられます。
 
 カラースキームデータを辞書形式で保存します。キーは各配色の「名称」となります。各配色自体も辞書形式とし、キーはその配色を使用するゲームコンポーネントを示します。
 
@@ -175,7 +175,7 @@ $Sprite.material = $Sprite.material.duplicate()
 $SpriteEffect.material = $Sprite.material
 ```
 
-円形の色はそのモードによって決定されるため、実際の選択処理は `set_mode()` 関数内で行います：
+円形の色はそのモードによって決定されるため、実際の選択処理は `set_mode()` 関数内で行います。
 
 ```gdscript
 func set_mode(_mode):
@@ -183,12 +183,12 @@ func set_mode(_mode):
     var color
     match mode:
         MODES.STATIC:
-            $标签.hide()
+            $Label.hide()
             color = settings.theme["circle_static"]
         MODES.LIMITED:
             current_orbits = num_orbits
-            $标签.text = str(current_orbits)
-            $标签.show()
+            $Label.text = str(current_orbits)
+            $Label.show()
             color = settings.theme["circle_limited"]
     $Sprite.material.set_shader_param("color", color)
 ```
@@ -214,7 +214,7 @@ def _draw(self):
     self.draw_circle_arc(cx, cy, r, 0, 360, color)
 
 
-プレイヤーの設定では、`_ready()` 内で色を指定します：
+プレイヤーの設定では、`_ready()` 内で色を指定します。
 
 ```gdscript
 func _ready():

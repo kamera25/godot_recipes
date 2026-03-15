@@ -95,7 +95,7 @@ func _on_Timer_timeout():
     set_process(false)
 ```
 
-タイマーが切れるとすべての設定は初期化されます。複数のボタンを `{{< gd-icon HBoxContainer >}}HBoxContainer` に配置するだけで、アクションバーが完成します。
+タイマーが切れるとすべての設定は初期化されます。複数のボタンを {{< gd-icon HBoxContainer >}}`HBoxContainer` に配置するだけで、アクションバーが完成します。
 
 ![alt](/godot_recipes/4.x/img/cooldown_03.gif)
 

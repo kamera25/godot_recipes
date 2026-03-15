@@ -17,7 +17,7 @@ pre: "07. "
 Enemy: {{< gd-icon Area2D >}} Area2D
     {{< gd-icon Sprite2D >}} Sprite2D
     {{< gd-icon CollisionShape2D >}} CollisionShape2D
-    {{< gd-icon アニメーションPlayer >}} アニメーションPlayer
+    {{< gd-icon AnimationPlayer >}} AnimationPlayer
     MoveTimer: {{< gd-icon Timer >}} Timer
     ShootTimer: {{< gd-icon Timer >}} Timer
 ```
@@ -59,20 +59,7 @@ var speed = 0
 @onready var screensize  = get_viewport_rect().size
 ```
 
-# 敵の初期位置を記録し、移動後に元の位置に帰還できるようにする変数
-start_pos = None
-
-def spawn_enemy():
-    global start_pos
-
-    # 敵を生成時に初期化
-    if not start_pos:
-        start_pos = Enemy.initial_position()  # 敵クラスの初期位置取得メソッドを呼び出す
-
-    # その他の初期設定...
-
-    print("敵が生成されました！初期位置：", start_pos)
-
+The `start_pos` variable is going to keep track of the enemy's starting position so that after it moves, it can return to its original location. We'll set it when the enemy is spawned and we call its `start()` function.
 
 ```gdscript
 func start(pos):
@@ -118,10 +105,10 @@ func _process(delta):
 ```gdscript
 func explode():
     speed = 0
-    $アニメーションPlayer.play("explode")
+    $AnimationPlayer.play("explode")
     set_deferred("monitoring", false)
     died.emit(5)
-    await $アニメーションPlayer.animation_finished
+    await $AnimationPlayer.animation_finished
     queue_free()
 ```
 
@@ -137,7 +124,7 @@ signal died
 
 ## 敵キャラクターの出現
 
-それでは、「メイン」シーンに移動して、これらの敵キャラクターをゲームに追加しましょう。「メイン」シーンにスクリプトを追加し、まず敵キャラ用シーンを読み込むことから始めます：
+それでは、「メイン」シーンに移動して、これらの敵キャラクターをゲームに追加しましょう。「メイン」シーンにスクリプトを追加し、まず敵キャラ用シーンを読み込むことから始めます。
 
 ```gdscript
 extends Node2D
@@ -146,7 +133,7 @@ var enemy = preload("res://enemy.tscn")
 var score = 0
 ```
 
-通常、敵はゲーム開始ボタンを押してプレイを開始するまで出現しませんが、まだその段階に達していないので、ここではすぐに敵を出現させます：
+通常、敵はゲーム開始ボタンを押してプレイを開始するまで出現しませんが、まだその段階に達していないので、ここではすぐに敵を出現させます。
 
 ```gdscript
 func _ready():

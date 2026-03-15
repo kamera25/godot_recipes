@@ -1,5 +1,5 @@
 ---
-title: "コヨーテの時間"
+title: "コヨーテタイム"
 weight: 5
 draft: false
 ---
@@ -16,8 +16,8 @@ draft: false
 
 プレイヤーがプラットフォームの端から離れた場合、数フレームの間は依然として地面にいるかのようにジャンプできるようにしています。
 
-{{% notice style="info" title="語源について" %}}
-「コヨーテタイム」という名称は、有名なカートゥーンキャラクターである怠け者のコヨーテに由来しています。彼は地面を見下ろすまで決して落ちようとしませんでした：
+{{% notice style="info" title="そもそもなぜコヨーテ？" %}}
+「コヨーテタイム」という名称は、地面を見下ろすまで落下しないカートゥーンキャラクターのコヨーテに由来しています。
 
 ![alt](/godot_recipes/4.x/img/coyote.png)
  {{% /notice %}}
@@ -25,9 +25,9 @@ draft: false
 
 この機能を既存のプラットフォームキャラクタに追加します。設定方法については[プラットフォームキャラクタレシピ](/godot_recipes/4.x/ja/2d/platform_character/)を参照してください。
 
-タイミング処理に関しては、`CoyoteTimer`という名前の`タイマー`ノードを追加し、設定を**ワンショットモード**にします。
+タイミング処理に関しては、`CoyoteTimer`という名前の`Timer`ノードを追加し、設定を**ワンショットモード**にします。
 
-コヨーテの時間管理に必要な新しい変数がいくつかあります：
+コヨーテタイム管理に必要な新しい変数がいくつかあります。
 
 ```gdscript
 var coyote_frames = 6  # How many in-air frames to allow jumping
@@ -35,27 +35,27 @@ var coyote = false  # Track whether we're in coyote time or not
 var last_floor = false  # Last frame's on-floor state
 ```
 
-フレーム単位で時間を設定しているため、`_ready()`内で`Timer`の長さを設定する際にも次のように変換できます：
+フレーム単位で時間を設定しているため、`_ready()`内で`Timer`の長さを設定する際にも次のように変換できます。
 
 ```gdscript
 $CoyoteTimer.wait_time = coyote_frames / 60.0
 ```
 
-各フレームで現在の `is_on_floor()` 値を保存し、次のフレームで使用するようにします。したがって、`move_and_slide()` の後に `_physics_process()` 内に以下を設定してください。
+各フレームで現在の `is_on_floor()` 値を保存し、次のフレームで使用するようにします。したがって、`move_and_slide()` の後に `_physics_process()` 内に以下を設定します。
 
 ```gdscript
     last_floor = is_on_floor()
 ```
 
-ジャンプ入力を検知した場合、キャラクターが床にいる状態か、またはコヨーテ時間モードかどうかを確認する必要があります。
+ジャンプ入力を検知した場合、キャラクターが床にいる状態か、またはコヨーテ時間モードかどうかを確認します。
 
 ```gdscript
-    if 入力.is_action_just_pressed("jump") and (is_on_floor() or coyote):
+    if Input.is_action_just_pressed("jump") and (is_on_floor() or coyote):
         velocity.y = jump_speed
         jumping = true
 ```
 
-コヨーテ状態への移行は、プレイヤーがプラットフォームの端から降りた瞬間に開始されます。これはつまり、前回のフレームでは床の上にいたが、現在は床から離れた位置にいるということを意味します。この条件を確認した上で、ちょうど「オンフロア」から「オフフロア」に移行した場合のみ、タイマーを起動することができます：
+コヨーテ状態への移行は、プレイヤーがプラットフォームの端から降りた瞬間に開始されます。これは、前回のフレームでは床の上にいたが、現在は床から離れた位置にいるということです。この条件を確認した上で、ちょうど「オンフロア」から「オフフロア」に移行した場合のみ、タイマーを起動することができます。
 
 ```gdscript
     if !is_on_floor() and last_floor and !jumping:

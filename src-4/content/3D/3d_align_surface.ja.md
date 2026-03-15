@@ -1,5 +1,5 @@
 ---
-title: "文字体體積三維：與表面對齊"
+title: "CharacterBody3D: 表面に位置合わせ"
 weight: 15
 draft: false
 ---
@@ -12,7 +12,7 @@ draft: false
 
 このレシピは[キャラクターボディ3D：移動制御](/godot_recipes/4.x/ja/3d/characterbody3d_examples/) レシピで解説されている基本の{{< gd-icon CharacterBody3D >}}`CharacterBody3D`コントローラーを拡張する内容となっています。まずはそちらを先にお読みください。
 
-まず、シーンに地形を追加しました。こちらのリンクからダウンロードできます：[https://fertile-soil-productions.itch.io/modular-terrain-pack](https://fertile-soil-productions.itch.io/modular-terrain-pack)。ローポリモデルですが、お好みの地形を自由に使用・作成していただいて構いません。
+まず、シーンに地形を追加しました。こちらのリンクからダウンロードできます。[https://fertile-soil-productions.itch.io/modular-terrain-pack](https://fertile-soil-productions.itch.io/modular-terrain-pack)。ローポリモデルですが、お好みの地形を自由に使用・作成していただいて構いません。
 
 ご覧の通り、移動自体は地形に沿って機能していますが、戦車が斜面に対して向きを変えないため、まるで「浮いて」いるかのように見えます。
 
@@ -30,7 +30,7 @@ draft: false
 
 Godot では、衝突が発生した際、接触時の法線ベクトルを取得できます。これは衝突する物体の **接触点における** 法線方向になります。
 
-表面法線を取得した後、タンクの**Y**軸をそれに平行に合わせる必要があります。ただし、`Transform3D.looking_at()` 関数は使用できません。このメソッドでは**-Z**軸（前方方向）が法線方向に揃ってしまうためです。
+表面法線を取得した後、タンクの**Y**軸をそれに平行に合わせます。ただし、`Transform3D.looking_at()` 関数は使用できません。このメソッドでは**-Z**軸（前方方向）が法線方向に揃ってしまうためです。
 
 これを実現するには、以下の関数を使用します。
 
@@ -79,7 +79,7 @@ func _physics_process(delta):
     global_transform = align_with_y(global_transform, n)
 ```
 
-これはかなり改善されましたが、タンクがエッジを越えるたびに瞬時に整列するため、まだ少し不自然に見えます：
+これはかなり改善されましたが、タンクがエッジを越えるたびに瞬時に整列するため、まだ少し不自然に見えます。
 
 <video controls src="/godot_recipes/4.x/img/3d_kinematic_08.webm"></video>
 
@@ -99,13 +99,13 @@ func _physics_process(delta):
 
 <video controls src="/godot_recipes/4.x/img/3d_kinematic_09.webm"></video>
 
-以下の手順でさらに精度の高い結果を得られます：前面と背面にそれぞれレイキャストを1回ずつ実行します。そこから平均的な法線ベクトルを算出します。
+以下の手順でさらに精度の高い結果を得られます。前面と背面にそれぞれレイキャストを1回ずつ実行します。そこから平均的な法線ベクトルを算出します。
 
 ```gdscript
 var n = ($FrontRay.get_collision_normal() + $RearRay.get_collision_normal()) / 2.0
 ```
 
-補間量は自由に調整してみてください。私たちはこの環境で「12」が最適でしたが、環境によってはさらに高い値や低い値が適している場合もあります。
+補間量は自由に調整してみてください。この環境で「12」が最適でしたが、環境によってはさらに高い値や低い値が適している場合もあります。
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
@@ -113,7 +113,7 @@ var n = ($FrontRay.get_collision_normal() + $RearRay.get_collision_normal()) / 2
 
 ## 関連レシピ
 
-・[CharacterBody3D: 移動操作](/godot_recipes/4.x/ja/3d/characterbody3d_examples/)
-・[数学演算: 補間処理](/godot_recipes/4.x/ja/math/interpolation/)
-・[数学演算: 座標変換](/godot_recipes/4.x/ja/math/transforms/)
+* [CharacterBody3D: 移動操作](/godot_recipes/4.x/ja/3d/characterbody3d_examples/)
+* [数学演算: 補間処理](/godot_recipes/4.x/ja/math/interpolation/)
+* [数学演算: 座標変換](/godot_recipes/4.x/ja/math/transforms/)
 

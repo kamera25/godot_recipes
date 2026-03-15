@@ -10,7 +10,7 @@ draft: false
 
 ## 解決策
 
-このレシピでは、「簡素化された」航空機コントローラーを作成します。ここで言う「簡素化」とは、基本機能だけに絞り込むことを意味します。私たちが目指しているのは、飛行機の操縦感覚――特別な訓練なしですぐに飛び立て、最小限の操作体系で簡単に飛行を楽しめるような体験です。
+このレシピでは、「簡素化された」航空機コントローラーを作成します。ここで言う「簡素化」とは、基本機能だけに絞り込むことを意味します。目指しているのは、飛行機の操縦感覚――特別な訓練なしですぐに飛び立て、最小限の操作体系で簡単に飛行を楽しめるような体験です。
 
 {{% notice note %}}
 このレシピは厳密な飛行シミュレーターではありません。航空力学を再現しているわけではないので、本物の飛行機のように飛ぶわけではありません。ここでは正確性よりもシンプルさと「楽しさ」を追求しています。
@@ -68,22 +68,22 @@ var pitch_input = 0
 ```gdscript
 func get_input(delta):
     # Throttle input
-    if 入力.is_action_pressed("throttle_up"):
+    if Input.is_action_pressed("throttle_up"):
         target_speed = min(forward_speed + throttle_delta * delta, max_flight_speed)
-    if 入力.is_action_pressed("throttle_down"):
+    if Input.is_action_pressed("throttle_down"):
         var limit = 0 if grounded else min_flight_speed
         target_speed = max(forward_speed - throttle_delta * delta, limit)
 
     # Turn (roll/yaw) input
-    turn_input = 入力.get_axis("roll_right", "roll_left")
+    turn_input = Input.get_axis("roll_right", "roll_left")
 
     # Pitch (climb/dive) input
-    pitch_input =  入力.get_axis("pitch_down", "pitch_up")
+    pitch_input =  Input.get_axis("pitch_down", "pitch_up")
 ```
 
 ### 移動
 
-モーション処理は `_physics_process()` 内で行われ、まず速度を目標値にリニア補間した後、`move_and_slide()` 関数を使用して移動とスライディングを行います：
+モーション処理は `_physics_process()` 内で行われ、まず速度を目標値にリニア補間した後、`move_and_slide()` 関数を使用して移動とスライディングを行います。
 
 ```gdscript
 func _physics_process(delta):
@@ -176,23 +176,23 @@ func _physics_process(delta):
 ```gdscript
 func get_input(delta):
     # Throttle input
-    if 入力.is_action_pressed("throttle_up"):
+    if Input.is_action_pressed("throttle_up"):
         target_speed = min(forward_speed + throttle_delta * delta, max_flight_speed)
-    if 入力.is_action_pressed("throttle_down"):
+    if Input.is_action_pressed("throttle_down"):
         var limit = 0 if grounded else min_flight_speed
         target_speed = max(forward_speed - throttle_delta * delta, limit)
 
     # Turn (roll/yaw) input
-    turn_input = 入力.get_axis("roll_right", "roll_left")
+    turn_input = Input.get_axis("roll_right", "roll_left")
     if forward_speed <= 0.5:
         turn_input = 0
 
     # Pitch (climb/dive) input
     pitch_input = 0
     if not grounded:
-        pitch_input -= 入力.get_action_strength("pitch_down")
+        pitch_input -= Input.get_action_strength("pitch_down")
     if forward_speed >= min_flight_speed:
-        pitch_input += 入力.get_action_strength("pitch_up")
+        pitch_input += Input.get_action_strength("pitch_up")
 ```
 
 ![alt](/godot_recipes/4.x/img/kb_plane_07.gif)
@@ -237,28 +237,28 @@ var can_shoot = true
 @onready var mesh = $cartoon_plane
 
 func _ready():
-    $cartoon_plane/アニメーションPlayer.play("prop_spin")
+    $cartoon_plane/AnimationPlayer.play("prop_spin")
 
 func get_input(delta):
     # Throttle input
-    if 入力.is_action_pressed("throttle_up"):
+    if Input.is_action_pressed("throttle_up"):
         target_speed = min(forward_speed + throttle_delta * delta, max_flight_speed)
-    if 入力.is_action_pressed("throttle_down"):
+    if Input.is_action_pressed("throttle_down"):
         var limit = 0 if grounded else min_flight_speed
         target_speed = max(forward_speed - throttle_delta * delta, limit)
 
     # Turn (roll/yaw) input
-    turn_input = 入力.get_axis("roll_right", "roll_left")
+    turn_input = Input.get_axis("roll_right", "roll_left")
     if forward_speed <= 0.5:
         turn_input = 0
 
     # Pitch (climb/dive) input
     pitch_input = 0
     if not grounded:
-        pitch_input -= 入力.get_action_strength("pitch_down")
+        pitch_input -= Input.get_action_strength("pitch_down")
     if forward_speed >= min_flight_speed:
-        pitch_input += 入力.get_action_strength("pitch_up")
-#	pitch_input =  入力.get_axis("pitch_down", "pitch_up")
+        pitch_input += Input.get_action_strength("pitch_up")
+#	pitch_input =  Input.get_axis("pitch_down", "pitch_up")
 
 func _physics_process(delta):
     get_input(delta)
@@ -295,4 +295,4 @@ func _physics_process(delta):
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトのサンプルコードはこちらからダウンロードできます：[https://github.com/godotrecipes/3d_airplane_demo](https://github.com/godotrecipes/3d_airplane_demo)
+プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/3d_airplane_demo](https://github.com/godotrecipes/3d_airplane_demo)

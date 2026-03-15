@@ -1,5 +1,5 @@
 ---
-title: "3D 運動学的自動車：傾斜面＆スロープ"
+title: "3Dで自動車を作ろう：傾斜面＆スロープ"
 weight: 4
 draft: false
 ghcommentid: 44
@@ -33,7 +33,7 @@ func align_with_y(xform, new_y):
     return xform
 ```
 
-`_physics_process()` 関数内で `move_and_slide_with_snap()` を呼び出した直後に、車両を整列させる必要があるかどうかをチェックします：
+`_physics_process()` 関数内で `move_and_slide_with_snap()` を呼び出した直後に、車両を整列させる必要があるかどうかをチェックします。
 
 ```gdscript
 # If either wheel is in the air, align to slope.
@@ -50,7 +50,7 @@ if $FrontRay.is_colliding() or $RearRay.is_colliding():
 
 どちらの車輪も地面に接していない場合、車はまったく回転しません。
 
-それ以外の場合は、前面および背面レイの結果を平均化して使用します。衝突が発生している場合、衝突オブジェクトの表面法線が考慮されます。この方法により、例えばカーブした坂道のように2つの車輪が異なる斜面に接している状況でも、両方の車輪を可能な限り表面に接触させようとする処理が行われます：
+それ以外の場合は、前面および背面レイの結果を平均化して使用します。衝突が発生している場合、衝突オブジェクトの表面法線が考慮されます。この方法により、例えばカーブした坂道のように2つの車輪が異なる斜面に接している状況でも、両方の車輪を可能な限り表面に接触させようとする処理が行われます。
 
 ![alt](/godot_recipes/3.x/img/3d_car_12.png)
 

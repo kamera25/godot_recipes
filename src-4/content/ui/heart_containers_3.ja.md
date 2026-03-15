@@ -1,34 +1,34 @@
 ---
-title: "ハート容器：3つの方法"
+title: "ハートの器 と 3つの方法"
 weight: 5
 draft: false
 ---
 
 ## 課題
 
-ハート型のコンテナバー（または他のアイコンベースのバー）を表示する必要があります。
+ハートの器のようなバー（または他のアイコンベースのバー）を表示したい。
 
 ## 解決策
 
 プレイヤーの体力を表示する一般的な方法として、一連のアイコン（通常はハートマーク）を使用する手法があります。プレイヤーがダメージを受けると、これらが徐々に消失していきます。
 
-本レシピでは、以下の3つの方法でこの情報を表示する方法をご紹介します。「簡易表示」「空欄表示」、そして「部分表示」です。
+本レシピでは、以下の3つの方法でこの情報を表示する方法をご紹介します。「シンプル」「空き」、そして「部分」です。
 
 ![alt](/godot_recipes/4.x/img/heart_bar_02.png)
 
 この画像はプレイヤーが「3」の体力を持っている時、バーに表示される内容を表しています。
 
-* **シンプル表示**：ハートのみを表示します。
-* **空の状態表示**：空き容量があるハートコンテナを表示します。
-* **部分充填表示**：プレイヤーが部分的に満たされたコンテナを持つことを許可します。
+* **シンプル**：ハートのみを表示。
+* **空き**：空き容量があるハートを表示。
+* **部分**：部分的に満たされたハートを表示。
 
 ### バーの設定手順
 
-使用している心臓画像のサイズは53×45ピクセルです。以下から入手できます：
+使用しているハートのアイコン のサイズは53×45ピクセルです。以下から入手できます。
 
 [ケンニードットネット：プラットフォーマーアートデラックス](https://kenney.nl/assets/platformer-art-deluxe)
 
-Ideally, your heart bar will be easy to drop into your overall HUD/UI. It therefore makes sense to make it a separate scene. We'll start with an {{< gd-icon HBoxContainer >}}`HBoxContainer` which will keep things aligned. Set the **Theme Overrides/Constants/Separation** to `5`.
+理想的には、ハートバーは全体のHUD/UIに簡単に組み込めるものであるべきです。したがって、これを別個のシーンとして作成するのが合理的です。まず{{< gd-icon HBoxContainer >}}`HBoxContainer`から始めましょう。これにより要素が適切に整列されます。テーマオーバーライド/定数/分離幅を5に設定してください。
 
 {{< gd-icon TextureRect >}}`TextureRect` 子要素を追加します。ハートテクスチャを **テクスチャ** プロパティにドラッグし、**[伸縮モード]** を「固定」に設定してください。ノード名を「1」に指定したら、"Ctrl+D"を押して必要な数（この例では5つ）のハート用に同じノードを複製します。最終的なノード構成は以下のようになります。
 
@@ -112,7 +112,7 @@ func update_partial(value):
 プロジェクトのサンプルコードはこちらでダウンロードできます。 [https://github.com/godotrecipes/heart_bars](https://github.com/godotrecipes/heart_bars)
 
 <!-- {{% notice note %}}
-プロジェクトファイルはこちらからダウンロードできます: [heart_bars.zip](/godot_recipes/3.x/files/heart_bars.zip)
+プロジェクトファイルはこちらからダウンロードできます。 [heart_bars.zip](/godot_recipes/3.x/files/heart_bars.zip)
 {{% /notice %}} -->
 
 ## 関連レシピ

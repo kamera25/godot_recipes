@@ -36,12 +36,12 @@ Godotの「入力アクション」システムについて理解を深めたい
 
 ### 入力アクションの使用について
 
-以下の方法でアクションをチェックできます：
-・各フレームごとに単一インスタンス `入力` をポーリングする方法：
+以下の方法でアクションをチェックできます。
+* 各フレームごとに単一インスタンス `入力` をポーリングする方法：
 
 ```gdscript
 func _process(delta):
-    if 入力.is_action_pressed("shoot"):
+    if Input.is_action_pressed("shoot"):
         # This will execute every frame as long as the input is held.
 ```
 
@@ -65,7 +65,7 @@ func _unhandled_input(event):
        # This will run once on the frame when the action is first pressed
 ```
 
-入力状態を確認するために使える機能はいくつかあります：
+入力状態を確認するために使える機能はいくつかあります。
 
 - `is_action_pressed()`: この関数は現在アクションが「押された」状態にある場合に`true`を返します。
 

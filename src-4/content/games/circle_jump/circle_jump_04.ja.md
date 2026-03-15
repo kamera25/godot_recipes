@@ -14,7 +14,7 @@ pre: "04. "
 * `CanvasLayer` ("BaseScreen"レイヤー)
   * `MarginContainer`
     * `VBoxContainer`
-      * `标签`
+      * `Label`
       * `HBoxContainer` ("ボタン領域")
   * `Tween`コンポーネント
 
@@ -29,7 +29,7 @@ pre: "04. "
 
 最後に、「ボタン」という名前の `HBoxContainer` を追加します。このコンテナには、後でスクリーンに追加するボタンが格納されます。その _間隔_ を `75` に設定します。次にノードを複製して、もう1列分のボタンを作成します。
 
-スクリーンは画面外に表示開始されるので、ルートノードの _オフセット値_ を `(500, 0)` に設定してください。その後、シーンにスクリプトを追加します：
+スクリーンは画面外に表示開始されるので、ルートノードの _オフセット値_ を `(500, 0)` に設定してください。その後、シーンにスクリプトを追加します。
 
 ```gdscript
 extends CanvasLayer
@@ -53,7 +53,7 @@ func disappear():
 
 以下は、指定されたボタン名を使用した3つのシーンの外観例です：
 
-<img src="/godot_recipes/3.x/img/cj_04_01.png" alt="">
+![alt](/godot_recipes/3.x/img/cj_04_01.png)
 
 さらに「スクリーン」という名前のルートノードを持つシーンを1つ作成し、その中に3つの画面インスタンスを追加してください。以下のスクリプトを追加すると、シーン遷移と状態管理を処理できます。
 
@@ -75,7 +75,7 @@ func register_buttons():
 
 func _on_button_pressed(name):
     match name:
-        "ホーム":
+        "Home":
             change_screen($TitleScreen)
         "Play":
             change_screen(null)
@@ -99,26 +99,7 @@ func game_over():
 
 このスクリプトでは、すべてのボタンを接続するために、`pressed`シグナルを結び付け、ボタンの名前をパラメータとして渡します。これにより、`_on_button_press()`メソッドがそれぞれのボタンに適切な動作を決定できるようになります。
 
-public function changeScreen($option){
-    switch ($option) {
-        case 'home':
-            $this->renderホームScreen();
-            break;
-        case 'settings':
-            $this->renderSettingsScreen();
-            break;
-        case 'about':
-            $this->renderAboutScreen();
-            break;
-        default:
-            if ($option == 'null') {
-                echo "No screen will be displayed.";
-            } else {
-                echo "Invalid option specified.";
-            }
-    }
-}
-
+`change_screen()`メソッドは、選択した画面への遷移を処理します。これには、画面に何も表示したくない場合の`null`オプションも含まれます。
 
 以下のコマンドを実行して画面遷移をテストしてください。
 

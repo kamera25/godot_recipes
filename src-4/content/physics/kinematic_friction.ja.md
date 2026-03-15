@@ -10,9 +10,9 @@ draft: false
 
 ## 解決策
 
-多くのゲームにおいて、私たちは必ずしも完全な物理シミュレーションを求めているわけではありません。重要なのはアクション性、反応の良さ、そしてアーケードならではの爽快感です。だからこそ私たちは、剛性ボディではなくキネマティックボディを選択するのです - これによって物体の動きを直接制御できるようになります。ただし、ある程度の物理的な挙動は必要です。これはつまり、オブジェクトが突然方向を変えたり停止したりしないようにするためです。
+多くのゲームにおいて、必ずしも完全な物理シミュレーションを求めているわけではありません。重要なのはアクション性、反応の良さ、そしてアーケードならではの爽快感です。だからこそ、剛性ボディではなくキネマティックボディを選択するのです - これによって物体の動きを直接制御できるようになります。ただし、ある程度の物理的な挙動は必要です。これはつまり、オブジェクトが突然方向を変えたり停止したりしないようにするためです。
 
-以下に、シンプルな運動力学に基づくプラットフォーマーキャラクター用のコードを示します：
+以下に、シンプルな運動力学に基づくプラットフォーマーキャラクター用のコードを示します。
 
 ```gdscript
 extends KinematicBody2D
@@ -25,16 +25,16 @@ var velocity = Vector2.ZERO
 
 func get_input():
     velocity.x = 0
-    if 入力.is_action_pressed("ui_right"):
+    if Input.is_action_pressed("ui_right"):
         velocity.x += speed
-    if 入力.is_action_pressed("ui_left"):
+    if Input.is_action_pressed("ui_left"):
         velocity.x -= speed
 
 func _physics_process(delta):
     get_input()
     velocity.y += gravity * delta
     velocity = move_and_slide(velocity, Vector2.UP)
-    if 入力.is_action_just_pressed("ui_select"):
+    if Input.is_action_just_pressed("ui_select"):
         if is_on_floor():
             velocity.y = jump_speed
 ```
@@ -51,7 +51,7 @@ lerp(start_value, end_value, amount)
 
 以下のコードでは、`摩擦係数`はキャラクターが停止する速度を、`加速度`は完全に加速するまでの速度を決定する要素です。どちらも値が`0.0`から`1.0`の範囲内で設定されます。
 
-def get_input():
+「get_input()」のコードを以下に置き換えます。def get_input():
     try:
         return float(input("Enter a value: "))
     except ValueError:
@@ -65,9 +65,9 @@ var acceleration = 0.5
 
 func get_input():
     var input_dir = 0
-    if 入力.is_action_pressed("ui_right"):
+    if Input.is_action_pressed("ui_right"):
         input_dir += 1
-    if 入力.is_action_pressed("ui_left"):
+    if Input.is_action_pressed("ui_left"):
         input_dir -= 1
     if dir != 0:
         # accelerate when there's input
@@ -88,7 +88,7 @@ func get_input():
 値に `1.0` を使用すると、当初の「瞬間的な」移動状態が復活します。
 {{% /notice %}}
 
-<img src="/godot_recipes/3.x/img/friction_platformer.gif" alt="摩擦を利用したプラットフォーマー">
+![alt](/godot_recipes/3.x/img/friction_platformer.gif)
 
 ## 関連するレシピ
 

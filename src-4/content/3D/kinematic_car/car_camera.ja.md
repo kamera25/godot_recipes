@@ -1,5 +1,5 @@
 ---
-title: "3D 運動力学カー：チェイスカメラ"
+title: "3Dで自動車を作ろう：カメラで追いかけよう"
 weight: 3
 draft: false
 ghcommentid: 43
@@ -17,7 +17,7 @@ Godot には組み込みの `InterpolatedCamera` ノードが用意されてお�
 
 ### カメラのセットアップ方法
 
-新しいシーンを《《<gd-icon Camera3D>》》`カメラ`で追加します。名前は「ChaseCamera」とし、保存してからスクリプトを追加してください。
+新しいシーンを{{< gd-icon Camera3D >}}`Camera3D`で追加します。名前は「ChaseCamera」とし、保存してからスクリプトを追加してください。
 
 「ChaseCamera」には追跡対象の「target」が設定されます。また、必要に応じてこのターゲットを変更する機能も実装します。
 
@@ -26,7 +26,7 @@ extends Camera
 
 export var lerp_speed = 10.0
 
-var ターゲット = null;
+var target = null
 
 func _physics_process(delta):
     if !target:
@@ -46,7 +46,7 @@ func _on_change_camera(t):
 各 `Position3D` 要素を各自選択した異なる位置に移動・配置してください。位置の **-Z** 軸は車両方向を指すように設定します。
 
 {{% notice tip %}}
-作業を効率的に進めるために、一時的に {{< gd-icon Camera3D >}}`カメラ` を適切な位置に配置し、"プレビュー"モードを使用して、{{< gd-icon Position3D >}}`Position3D`が正しい方向を向くように調整することをお勧めします（作業が完了したらカメラは削除できます）。
+You may find it helpful to temporarily attach a {{< gd-icon Camera3D >}}`Camera` to the position and use its "Preview" mode to help aim the {{< gd-icon Position3D >}}`Position3D` so that it's pointing directly where you want (you can remove the camera once you're done).
 ![alt](/godot_recipes/3.x/img/3d_car_09.png)
 {{% /notice %}}
 
@@ -69,9 +69,9 @@ func _input(event):
         emit_signal("change_camera", $CameraPositions.get_child(current_camera))
 ```
 
-インプットマップにカメラ切り替え用のアクションを追加します。ここではTabキーと右ショルダーボタンを使用しています：
+インプットマップにカメラ切り替え用のアクションを追加します。ここではTabキーと右ショルダーボタンを使用しています。
 
-<img src="/godot_recipes/3.x/img/3d_car_07.png" alt="">
+![alt](/godot_recipes/3.x/img/3d_car_07.png)
 
 ### 接続方法
 

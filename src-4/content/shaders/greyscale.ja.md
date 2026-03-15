@@ -11,7 +11,7 @@ ghcommentid: 78
 
 ## 解決策
 
-まずは `canvas_item`（2D）用シェーダーから始めましょう。グレースケールに変換しつつピクセルのコントラストを維持するには、画素値を**平均化**する必要があります。カラーチャンネルをすべて加算し、3で割ることで実現できます：
+まずは `canvas_item`（2D）用シェーダーから始めましょう。グレースケールに変換しつつピクセルのコントラストを維持するには、画素値を**平均化**する必要があります。カラーチャンネルをすべて加算し、3で割ることで実現できます。
 
 ```glsl
 shader_type canvas_item;
@@ -23,11 +23,11 @@ void fragment() {
 }
 ```
 
-<img src="/godot_recipes/3.x/img/shader_greyscale01.png" alt="">
+![alt](/godot_recipes/3.x/img/shader_greyscale01.png)
 
 この機能を画面全体に適用するには、{{< gd-icon ColorRect >}} `ColorRect` コンポーネント（カメラの動きを無視するため {{< gd-icon CanvasLayer >}} `CanvasLayer` 内に配置）を追加し、画面全体を覆うようにスケールを調整してください。
 
-変更：`texture()` 関数を修正し、オブジェクトのピクセルではなく画面を直接サンプリングするようにします：
+変更：`texture()` 関数を修正し、オブジェクトのピクセルではなく画面を直接サンプリングするようにします。
 
 ```glsl
 COLOR = texture(SCREEN_TEXTURE, SCREEN_UV);

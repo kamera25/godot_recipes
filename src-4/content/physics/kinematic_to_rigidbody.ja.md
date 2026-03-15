@@ -14,13 +14,13 @@ draft: false
 
 デフォルトでは、`move_and_slide()` または `move_and_collide()` で移動させた運動体は、衝突した剛体すべてに影響を及ぼします。この相互作用は、運動体移動関数の `infinite_inertia`（無限慣性）パラメータのため、剛体の物理特性を考慮しません。
 
-!
+![alt](/godot_recipes/3.x/img/inf_inertia1.gif)
 
 ※場合によってはこれだけで十分なこともあります。ただし、キャラクターが重なって見えたり、トンネル現象が発生したりするなど、現実離れした挙動を防ぎたい場合は、相互作用に関するコードを追加する必要があります。
 
 本例では、[プラットフォームキャラクターレシピ](http://kidscancode.org/godot_recipes/ai/platform_character) で説明されている2Dキャラクターを使用します。
 
-最も一般的に使用されている動的ボディの移動方法は `move_and_slide()` です。サンプルコードでは、この処理は以下の行で行われています：
+最も一般的に使用されている動的ボディの移動方法は `move_and_slide()` です。サンプルコードでは、この処理は以下の行で行われています。
 
 ```gdscript
 velocity = move_and_slide(velocity, Vector2.UP)
@@ -48,7 +48,7 @@ move_and_slide ( Vector2 linear_velocity,
 
 现在，如果尝试移动，你会看到机械体在碰撞时完全停止。它根本不能推动刚体。
 
-<img src="/godot_recipes/3.x/img/inf_inertia2.gif" alt="無限慣性アニメーション">
+![alt](/godot_recipes/3.x/img/inf_inertia2.gif)
 
 衝突する物体に「押し」を与えるには、インパルスを適用する必要があります。インパルスとは瞬間的な「衝撃」のことで、野球でバットがボールを打つようなイメージです。これは、物体に対して連続的に力を加えるフォースとは異なります。
 
@@ -69,7 +69,7 @@ func _physics_process(delta):
 
 ![alt](/godot_recipes/3.x/img/inf_inertia3.gif)
 
-また、衝撃力の大きさをキャラクターの速度に応じて調整することもできます：
+また、衝撃力の大きさをキャラクターの速度に応じて調整することもできます。
 
 ```gdscript
 collision.collider.apply_central_impulse(-collision.normal * velocity.length() * push_factor)
@@ -80,7 +80,7 @@ collision.collider.apply_central_impulse(-collision.normal * velocity.length() *
 実験を通じて、特定のゲームに最適な設定を見つけましょう。
 
 <!-- {{% notice note %}}
-プロジェクトファイルはこちらからダウンロードできます: [kinematic_vs_rigid.zip](/godot_recipes/3.x/files/kinematic_vs_rigid.zip)
+プロジェクトファイルはこちらからダウンロードできます [kinematic_vs_rigid.zip](/godot_recipes/3.x/files/kinematic_vs_rigid.zip)
 {{% /notice %}} -->
 
 ## 関連レシピ

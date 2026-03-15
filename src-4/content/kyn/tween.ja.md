@@ -20,7 +20,7 @@ tags: []
 
 The 'trans_type' parameter allows you to select which *transition type* you want to use in your interpolation. This specifies the mathematical formula used to calculate property values for each frame. Different types produce distinct movement styles. Below, each icon's 'position' is tweened over the same range and duration:
 
-[Altテキスト](/godot_recipes/3.x/img/tween_01.gif)
+![alt](/godot_recipes/3.x/img/tween_01.gif)
 
 {{% notice note %}}
 {{% /notice %}}

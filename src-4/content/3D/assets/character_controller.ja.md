@@ -29,7 +29,7 @@ Godot環境でリグ設定済みのアニメーション3Dキャラクターを�
 
 ### 入力操作
 
-以下のキー操作を使用しています：`前進`、`後退`、`左移動`、`右移動`、`ジャンプ`。お好みで任意のキー/ボタンに割り当ててください。
+以下のキー操作を使用しています。`forward`、`back`、`left`、`right`、`jump`。お好みで任意のキー/ボタンに割り当ててください。
 
 ### カメラ機能
 
@@ -63,22 +63,22 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var jumping = false
 ```
 
-その後で、アクセスに必要なノードへの参照をいくつか示します：
+その後で、アクセスに必要なノードへの参照をいくつか示します。
 
 ```gdscript
 @onready var spring_arm = $SpringArm3D
 @onready var model = $Rig
-@onready var anim_tree = $アニメーションTree
-@onready var anim_state = $アニメーションTree.get("parameters/playback")
+@onready var anim_tree = $AnimationTree
+@onready var anim_state = $AnimationTree.get("parameters/playback")
 ```
 
-⭐️修正要 以下のプロパティを確認できます：
+ここでは`anim_tree`リファレンスを使用して、アイドル/歩行/ランニングブレンドスペースのブレンド位置と、ジャンプトリガー条件を設定します。まず{{< gd-icon アニメーションTree >}}`アニメーションTree`を選択し、これらのプロパティがインスペクタに表示されることを確認してください。
 
-!
+![alt](/godot_recipes/4.x/img/3dchar_animtree_properties.png)
 
 `anim_state` はアニメーション状態マシンへの参照で、これを使用して異なるアニメーション間の遷移を呼び出すことができます。設定方法については、[キャラクターアニメーション](/4.x/3d/assets/character_animation/) レシピを参照してください。
 
-移動処理は、プレイヤーの入力を取得して`move_and_slide()`関数を呼び出すことで実現されます：
+移動処理は、プレイヤーの入力を取得して`move_and_slide()`関数を呼び出すことで実現されます。
 
 ```gdscript
 func _physics_process(delta):
@@ -96,7 +96,7 @@ func _physics_process(delta):
 func get_move_input(delta):
     var vy = velocity.y
     velocity.y = 0
-    var input = 入力.get_vector("left", "right", "forward", "back")
+    var input = Input.get_vector("left", "right", "forward", "back")
     var dir = Vector3(input.x, 0, input.y).rotated(Vector3.UP, spring_arm.rotation.y)
     velocity = lerp(velocity, dir * speed, acceleration * delta)
     velocity.y = vy
@@ -118,7 +118,7 @@ func get_move_input(delta):
 
 ```gdscript
 func _unhandled_input(event):
-    if event is 入力EventMouseMotion:
+    if event is InputEventMouseMotion:
         spring_arm.rotation.x -= event.relative.y * mouse_sensitivity
         spring_arm.rotation_degrees.x = clamp(spring_arm.rotation_degrees.x, -90.0, 30.0)
         spring_arm.rotation.y -= event.relative.x * mouse_sensitivity
@@ -141,12 +141,7 @@ func _unhandled_input(event):
         model.rotation.y = lerp_angle(model.rotation.y, spring_arm.rotation.y, rotation_speed * delta)
 ```
 
-import math
-
-def lerp_angle(a, b, t):
-    """線形補間により角度 a を角度 b に滑らかに変化させる関数。範囲 [0, 360] 内で動作する。"""
-    normalized_a = a % 360
-    normalized_b = b % 36ang
+Using `lerp_angle()` ensures we'll always rotate the shortest direction to the new angle (rather than going the long way around from a 359° rotation to a 1° rotation, for example).
 
 ### アイダブルアールアニメーション作品
 
@@ -194,7 +189,7 @@ var attacks = [
 まず、「ジャンプ開始」アニメーションに移行するために `jumping = true` を設定します。これにより状態機械での遷移がトリガーされます。
 
 ```gdscript
-    if is_on_floor() and 入力.is_action_just_pressed("jump"):
+    if is_on_floor() and Input.is_action_just_pressed("jump"):
         velocity.y = jump_speed
         jumping = true
         anim_tree.set("parameters/conditions/grounded", false)
@@ -207,7 +202,7 @@ var attacks = [
 var last_floor = true
 ```
 
-そして最初の`if`文の後にこの`if`ステートメントがあります：
+そして最初の`if`文の後にこの`if`ステートメントがあります。
 
 ```gdscript
     # We just hit the floor after being in the air
@@ -217,7 +212,7 @@ var last_floor = true
     last_floor = is_on_floor()
 ```
 
-最終的に、段差から飛び降りた際に「Jump_Idle」に直接移行する仕組みがあります：
+最終的に、段差から飛び降りた際に「Jump_Idle」に直接移行する仕組みがあります。
 
 ```gdscript
     # We're in the air, but we didn't jump

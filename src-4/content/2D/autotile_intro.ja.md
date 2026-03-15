@@ -11,39 +11,39 @@ ghcommentid: 23
 
 ## 解決策
 
-本デモでは、以下のタイルセットを使用します：
+本デモでは、以下のタイルセットを使用します。
 
-<img src="/godot_recipes/3.x/img/autotile_tileset.png" alt="自動タイルセット">
+![alt](/godot_recipes/3.x/img/autotile_tileset.png)
 
 {{% notice note %}}
-これらのタイルはKenney氏の『Topdown Shooter』アートパックに含まれており、こちらから入手できます：[https://kenney.nl/assets/topdown-shooter](https://kenney.nl/assets/topdown-shooter)
+これらのタイルはKenney氏の『Topdown Shooter』アートパックに含まれており、こちらから入手できます。[https://kenney.nl/assets/topdown-shooter](https://kenney.nl/assets/topdown-shooter)
 {{% /notice %}}
 
 これらのタイルから地図を作成する場合、1枚ずつ手動で配置していくと非常に手間がかかります。角や交差点、終点部分を合わせるために、常に異なるタイルを切り替えながら作業することになるからです。
 
 自動タイル機能を使用すると、壁を任意の方向に自由に描画でき、アルゴリズムが正しいタイルを選択して全体をシームレスに配置します。
 
-以下に具体例を示します：
+以下に具体例を示します。
 
-画像を表示できません: ![alt](/godot_recipes/3.x/img/autotile_demo.gif)
+![alt](/godot_recipes/3.x/img/autotile_demo.gif)
 
 ### 自動タイリングの仕組みについて
 
 使用しているタイルは｢3×3（最小）｣タイリング用に設計されています。単一のタイルを3×3グリッドに分割した場合を考えてみましょう。
 
-<img src="/godot_recipes/3.x/img/autotile_bitmask_tile.png" alt="オートタイル用ビットマスクタイル">
+![alt](/godot_recipes/3.x/img/autotile_bitmask_tile.png)
 
-タイルの「アクティブ」部分（つまり壁ではない箇所）に目印を付けることができます：
+タイルの「アクティブ」部分（つまり壁ではない箇所）に目印を付けることができます。
 
 ![alt](/godot_recipes/3.x/img/autotile_bitmask_tile2.png)
 
 これを各タイルごとに実行すれば、コンピュータはどのタイルを隣接させても確実に互換性が確保されるようにできます。
 
-3×3のグリッド上には、512通りの組み合わせパターンが存在します（2^9）。これらのほとんどは連続した壁を作る上で実用的ではないため、除外して構いません。実際に適切な形で壁面を覆うためには、48枚のタイルが必要であることが分かりました。これは私たちのタイルセットに用意されているものです。以下の7枚のタイルは無視することにします - 右下隅に位置する白い背景のタイルです：
+3×3のグリッド上には、512通りの組み合わせパターンが存在します（2^9）。これらのほとんどは連続した壁を作る上で実用的ではないため、除外して構いません。実際に適切な形で壁面を覆うためには、48枚のタイルが必要であることが分かりました。これはタイルセットに用意されているものです。以下の7枚のタイルは無視することにします - 右下隅に位置する白い背景のタイルです：
 
 ### タイルセットの作成方法
 
-{{< gd-icon TileMap >}}`TileMap`のプロパティーにある「タイルセット」設定で「新規タイルセット」を選択し、クリックするとエディターパネルが開きます：
+{{< gd-icon TileMap >}}`TileMap`のプロパティーにある「タイルセット」設定で「新規タイルセット」を選択し、クリックするとエディターパネルが開きます。
 
 ![alt](/godot_recipes/3.x/img/autotile_frame.png)
 
@@ -66,5 +66,5 @@ ghcommentid: 23
 また、自動タイルセットに衝突判定、移動経路、または遮蔽効果を追加することもできます。以下のサンプルプロジェクトをダウンロードすると、すべてのタイル上にポリゴンが定義された完全なタイルセットを入手できます。
 
 <!-- {{% notice note %}}
-プロジェクトファイルはこちらからダウンロードできます: [autotile_intro.zip](/godot_recipes/3.x/files/autotile_intro.zip)
+プロジェクトファイルはこちらからダウンロードできます。 [autotile_intro.zip](/godot_recipes/3.x/files/autotile_intro.zip)
 {{% /notice %}} -->
