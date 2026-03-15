@@ -1407,7 +1407,7 @@ msgstr "データを保存/読み込み中"
 
 #: basics/file_io.md
 msgid "You need to save and load local data between game sessions."
-msgstr "ゲームセッション間でローカルデータを保存・読み込みする必要があります。"
+msgstr "ゲームセッション間でローカルデータを保存・読み込みします。"
 
 #: basics/file_io.md
 msgid ""
@@ -1510,7 +1510,7 @@ msgid ""
 "try and save/load your data. It's cumbersome and time consuming."
 msgstr ""
 "JSONにはゲームデータ保存時に不利となる制約があります。JSONは多くのデータ型をサポートしていないため（整数と浮動小数点数の区"
-"別ができないなど）、保存や読み込みの際に変換や検証の手間がかかります。"
+"別ができないなど）、保存や読み込みの際に変換や検証の手間がかかってしまいます。"
 
 #: basics/file_io.md
 msgid "### What about JSON?"
@@ -1561,8 +1561,8 @@ msgid ""
 "Don't forget to check for the file's existence before attempting to read from "
 "it - it may not be there! If that's the case, you can use a default value."
 msgstr ""
-"ファイルを読み込もうとする前に、まずその存在を確認することを忘れないでください。存在しない可能性があるためです。もし存在しない場合は、デフォルト値を使用する"
-"ことができます。"
+"ファイルを読み込もうとする前に、まずその存在を確認してください。存在しない場合もあるためです。存在しない場合は、デフォルト値を使用"
+"できます。"
 
 #: basics/file_io.md
 msgid ""
@@ -1743,8 +1743,7 @@ msgid ""
 "* You no longer need to call `randomize()` - this is automatic. If you do "
 "want repeatable \"randomness\", use `seed()` to set it to a preselected value."
 msgstr ""
-"* もう `randomize()` を呼び出す必要はありません - "
-"これは自動処理されます。再現性のある「乱数」が必要な場合は、事前に設定した値を設定するために `seed()` を使用してください。"
+"* もう `randomize()` を呼び出す必要はありません。自動で処理されます。再現性のある「乱数」が必要な場合は、`seed()` で事前に設定した値を指定します。"
 
 #: basics/migrating.md
 msgid "## New Names"
@@ -1800,8 +1799,8 @@ msgid ""
 "native `velocity` property, so you no longer need to declare your own."
 msgstr ""
 "このノードにおける最大の変更点は `move_and_slide()` "
-"関数の使用方法です。もはやパラメータは一切不要となり、すべてが組み込みプロパティとして実装されました。これにはネイティブの "
-"`velocity`（速度）プロパティも含まれているため、ユーザーが独自定義する必要はなくなりました。"
+"関数の使用方法です。パラメータは一切不要となり、すべてが組み込みプロパティとして実装されました。ネイティブの "
+"`velocity`（速度）プロパティも含まれているため、独自に定義する必要はありません。"
 
 #: basics/migrating.md
 msgid "Our \"Using TileMaps\" guide is coming soon."
@@ -1936,8 +1935,8 @@ msgid ""
 "notification afterwards."
 msgstr ""
 "> "
-"ノードが「準備完了」状態になった際に呼び出されます。具体的には、当該ノードおよびそのすべての子ノードがシーンツリーに完全に組み込まれた時点でトリガーされます"
-"。もしノードに子要素がある場合、まずその子ノードの `_ready` コールバック関数が先に実行され、その後親ノードに対して「準備完了」通知が行われます。"
+"ノードが「準備完了」状態になった際に呼び出されます。当該ノードおよびすべての子ノードがシーンツリーに組み込まれた時点でトリガーされます"
+"。子要素がある場合、まず子ノードの `_ready` コールバックが実行され、その後に親ノードへ通知されます。"
 
 #: basics/tree_ready_order.md
 msgid ""
@@ -4633,7 +4632,7 @@ msgid ""
 "it. Note that we can't use `Transform3D.looking_at()`, because that will "
 "align the **-Z** (forward) axis with the normal."
 msgstr ""
-"表面法線を取得した後、タンクの**Y**軸をそれに平行に合わせる必要があります。ただし、`Transform3D.looking_at()` "
+"表面法線を取得した後、タンクの**Y**軸をそれに平行に合わせます。ただし、`Transform3D.looking_at()` "
 "関数は使用できません。このメソッドでは**-Z**軸（前方方向）が法線方向に揃ってしまうためです。"
 
 #: 3D/3d_align_surface.md
@@ -4804,7 +4803,7 @@ msgstr ""
 msgid ""
 "You need to implement shooting in an FPS, but moving individual projectiles "
 "is impractical."
-msgstr "FPSゲームで射撃機能を実装する必要がありますが、個別の発射物を手動で動かすのは非現実的です。"
+msgstr "FPSゲームで射撃機能を実装しますが、個別の発射物を手動で動かすのは非現実的です。"
 
 #: 3D/shooting_raycasts.md
 msgid ""
@@ -4836,7 +4835,7 @@ msgid ""
 "can see what kind of object we hit."
 msgstr ""
 "次に、`shoot()` メソッドを定義します。この関数が呼び出されるたびに、以下の処理を実行する "
-"`PhysicsRayQueryParameters3D` オブジェクトを作成する必要があります。\n"
+"`PhysicsRayQueryParameters3D` オブジェクトを作成します。\n"
 "1. レイの始点（カメラ位置）を定義\n"
 "2. レイの終点（カメラから前方100メートル投影された位置）を定義\n"
 "\n"
@@ -5339,7 +5338,7 @@ msgid ""
 msgstr ""
 "もし `SubViewport` が `Sprite3D` "
 "の子要素でなかった場合、インスペクター上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可"
-"能性があります。このため、以下のように `Sprite3D` にアタッチされたスクリプト内で設定する必要があります。"
+"能性があります。そのため、以下のように `Sprite3D` にアタッチされたスクリプト内で設定します。"
 
 #: 3D/healthbars.md
 msgid ""
@@ -6135,7 +6134,7 @@ msgid ""
 "in the chosen direction (for a cube of size 1) and have the pivot and mesh "
 "back at their original positions."
 msgstr ""
-"最終的にアニメーションが終了したら、すべてを初期状態にリセットして、次回の動作に備えておく必要があります。最終的には、立方体が選択方向に1単位移動し（サイズ"
+"アニメーションが終了したら、初期状態にリセットして次回の動作に備えます。立方体が選択方向に1単位移動し（サイズ"
 "1の立方体の場合）、かつピボットとメッシュが元の位置に戻るようにしたいということです。"
 
 #: 3D/rolling_cube.md
@@ -6227,7 +6226,7 @@ msgstr "### 衝突チェック中"
 
 #: 3D/rolling_cube.md
 msgid "Instead, the cube needs to be rotated around its bottom edge."
-msgstr "その代わり、立方体はその底面のエッジを中心に回転させる必要があります。"
+msgstr "代わりに、立方体を底面のエッジを中心に回転させます。"
 
 #: 3D/rolling_cube.md
 msgid "![alt](/godot_recipes/4.x/img/cube_002.gif)"
