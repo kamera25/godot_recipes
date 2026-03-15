@@ -23,7 +23,7 @@ RigidBody2Dの動作は「質量」「摩擦」「反発」などのプロパテ
 The body's behavior is also affected by the world, via the _Project Settings -> 物理_
 properties, or by entering an <a href="http://docs.godotengine.org/en/latest/classes/class_area2d.html"><svg width="18" height="18" class="icon-icon_area_2d" target="_blank"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_area_2d"></svg> `Area2D`</a> that is overriding the global physics properties.
 
-## 剛性体2Dの使用方法
+## RigidBody2Dを使う
 
 リジッドボディを使用する主な利点の一つは、コードを1行も書かなくても、多くの動作機能が「無料」で手に入る点です。例えば、落下ブロックを使った簡易的な『Angry Birds』風ゲームを作る場合を考えてみましょう。必要なのはブロックと発射体用にRigidBody2Dを作成し、各プロパティを設定するだけです。積み重なり、落下、跳ね返りといった物理演算処理はすべて自動的に物理エンジンが担当してくれます。
 
@@ -66,7 +66,7 @@ children:
 
 ### 力の作用
 
-Linear velocityをリセットして`(0, 0)`に設定します。では、ボールを投げて動かす場合はどうすればよいでしょうか？剛性ボディの速度や位置は手動で直接設定するべきではありません - これらは「現実世界」の物理法則を再現するためのものです。現実の世界では、物体が突然別の場所へ移動したり、静止状態から高速に移動したりすることはありません。こうした操作を試みると、物理エンジンがそれを拒否し、予期しない動きが生じる原因となります。代わりに、特定の方向に加速度を発生させる力を適用する必要があります（これはニュートンの第二法則としても知られています）。Godotの物理オブジェクトも全く同じ仕組みで動作します。
+Linear velocityをリセットして`(0, 0)`に設定します。では、ボールを投げて動かす場合は？剛性ボディの速度や位置は手動で直接設定するべきではありません - これらは「現実世界」の物理法則を再現するためのものです。現実の世界では、物体が突然別の場所へ移動したり、静止状態から高速に移動したりすることはありません。こうした操作を試みると、物理エンジンがそれを拒否し、予期しない動きが生じる原因となります。代わりに、特定の方向に加速度を発生させる力を適用が必要です（これはニュートンの第二法則としても知られています）。Godotの物理オブジェクトも全く同じ仕組みで動作します。
 
 剛性体に力を加えるには、以下の2つの関数から選択できます。
 
@@ -108,13 +108,13 @@ if event.is_action_pressed("click") and not dragging:
 ## 剛体の制御について
 
 より直接的な剛体制御が必要になるケースがあります。例えば：
-古典的なゲーム『アステロイド』のリメイクを作ろうとしている場合を考えてみましょう。プレイヤーの宇宙船は、左右矢印キーで回転させ、上矢印キーを押すと前進するように設計する必要があります。
+古典的なゲーム『アステロイド』のリメイクを作ろうとしている場合を考えてみましょう。プレイヤーの宇宙船は、左右矢印キーで回転させ、上矢印キーを押すと前進するように設計が必要です。
 
 以下が私の船で使用している画像です：
 
 ![alt](/godot_recipes/3.x/img/ship_red.png)
 
-また、[OpenGameArt](http://opengameart.org/) もチェックして、「素敵な宇宙背景画像」（ただしこれは完全に任意です）を検索することをお勧めします。
+また、[OpenGameArt](http://opengameart.org/) もチェックして、「素敵な宇宙背景画像」（ただしこれは完全に任意です）を検索することをオススメします。
 
 上記と同様に、以下のノード構造を用いて艦船用の新規シーンを作成してください。
 
@@ -215,11 +215,11 @@ func _physics_process(delta):
 
 > オブジェクトのシミュレーション状態を読み取り、**安全に変更**できます。物体の位置やその他の物理特性を直接変更する必要がある場合は、`_physics_process` の代わりにこの関数を使用してください。
 
-このように、`_physics_process()` の代わりに `_integrate_forces()` を使用する必要があります。これにより、<a href="http://docs.godotengine.org/en/latest/classes/class_physics2ddirectbodystate.html" target="_blank">物理2DDirectBodyState</a> オブジェクトにアクセスできるようになります。物理状態オブジェクトには、非常に有用な情報が豊富に含まれているので、ぜひリンク先のドキュメントを参照されることを強くお勧めします。
+このように、`_physics_process()` の代わりに `_integrate_forces()` を使用が必要です。これにより、<a href="http://docs.godotengine.org/en/latest/classes/class_physics2ddirectbodystate.html" target="_blank">物理2DDirectBodyState</a> オブジェクトにアクセスできるようになります。物理状態オブジェクトには、非常に有用な情報が豊富に含まれているので、ぜひリンク先のドキュメントを参照されることを強くオススメします。
 特に重要な情報は、物体の <a href="http://docs.godotengine.org/en/latest/classes/class_transform2d.html" target="_blank">Transform2D</a> です。
 （変換についての詳細な説明はこの文書の範囲を超えますので、より詳しい情報は[行列と変換](http://docs.godotengine.org/en/latest/learning/features/math/matrices_and_transforms.html)を参照してください。）
 
-体の位置はトランスフォームの `origin` に含まれています。`_physics_process()` を `_integrate_forces()` に変更し、以下のコードを追加してください。
+Bodyの位置はトランスフォームの `origin` に含まれています。`_physics_process()` を `_integrate_forces()` に変更し、以下のコードを追加してください。
 
 {{< highlight swift >}}
 func _integrate_forces(state):

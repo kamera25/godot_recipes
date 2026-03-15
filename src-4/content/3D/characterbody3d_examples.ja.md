@@ -1,5 +1,5 @@
 ---
-title: "文字体3D：移動"
+title: "CharacterBody3Dの移動"
 weight: 4
 draft: false
 ---

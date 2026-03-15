@@ -1,5 +1,5 @@
 ---
-title: "身体運動：移動"
+title: "KinematicBodyの移動"
 weight: 4
 draft: false
 ghcommentid: 34

@@ -21,7 +21,7 @@ void fragment() {
 }
 ```
 
-例えば：シーン切り替え効果のために、画面全体を徐々にぼかすには：
+例えば、シーン切り替え効果のために画面全体を徐々にぼかすには。
 
 ![alt](/godot_recipes/3.x/img/blur_shader1.png)
 ![alt](/godot_recipes/3.x/img/blur_shader2.png)

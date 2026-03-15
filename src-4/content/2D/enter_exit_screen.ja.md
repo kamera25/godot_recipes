@@ -36,7 +36,7 @@ func _on_VisibleOnScreenNotifier2D_screen_exited():
 
 #### 例2
 
-敵キャラクターがいて、経路に沿って移動したりアニメーションを再生したりするなどの動作を行います。大規模なマップで多数の敵が存在する場合、同時に画面上に表示されるのはそのうちのわずか数人だけです。{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D` を使用することで、オフスクリーン状態の間だけ敵の動作を無効化することができます。
+敵キャラクターがいて、経路に沿って移動したりアニメーションを再生したりするなどの動作を行います。大規模なマップで多数の敵が存在する場合、同時に画面上に表示されるのはそのうちのわずか数人だけです。{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D` を使用することで、オフスクリーン状態の間だけ敵の動作を無効化できます。
 
 コードの一部：
 

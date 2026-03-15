@@ -64,7 +64,7 @@ func _on_pressed():
         show_menu()
 ```
 
-このボタンをクリックするとメニューの表示／非表示が切り替わります。また、このボタンを一時的に無効化する必要があります。そうしないと、Tween実行中にもう一度クリックすると、Tweenが最初から再生され直してしまいます。
+このボタンをクリックするとメニューの表示／非表示が切り替わります。また、このボタンを一時的に無効化が必要です。そうしないと、Tween実行中にもう一度クリックすると、Tweenが最初から再生され直してしまいます。
 
 ```gdscript
 func _on_tween_finished():
@@ -106,7 +106,7 @@ func hide_menu():
         tw.tween_property(b, "scale", Vector2(0.5, 0.5), speed).set_trans(Tween.TRANS_LINEAR)
 ```
 
-以下が最終的な結果です：
+結果、こうなりました。
 
 ![alt](/godot_recipes/4.x/img/ui_radial_menu_02.gif)
 

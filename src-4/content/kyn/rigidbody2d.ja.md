@@ -30,7 +30,7 @@ The body’s behavior is also affected by the world, via the Project Settings ->
 1. リジッド - これがデフォルトモードです。オブジェクトは物理的な剛体として動作し、衝突や外力の影響を受けます。
 1. 静的 - このモードでオブジェクトは静止状態を保ちます。{{< gd-icon StaticBody2D >}}`StaticBody2D`と同様の挙動をします。
 1. キャラクター - このモードではオブジェクトの動作は通常のリジッドモードと同じですが、回転はしません。
-1. キネマティック - このモードではオブジェクトは {{< gd-icon KinematicBody2D >}}`KinematicBody2D`と同様に、コードによる制御でのみ移動できます。**注記:** これは `move_and_slide()` といった {{< gd-icon KinematicBody2D >}}`KinematicBody2D`の補助関数を利用できるという意味ではありません。すべての移動と衝突応答は手動で実装する必要があります。
+1. キネマティック - このモードではオブジェクトは {{< gd-icon KinematicBody2D >}}`KinematicBody2D`と同様に、コードによる制御でのみ移動できます。**注記:** これは `move_and_slide()` といった {{< gd-icon KinematicBody2D >}}`KinematicBody2D`の補助関数を利用できるという意味ではありません。すべての移動と衝突応答は手動で実装が必要です。
 
 * 重力スケール設定（`gravity_scale`）
 
@@ -68,7 +68,7 @@ The body’s behavior is also affected by the world, via the Project Settings ->
 
 デフォルトでは、`RigidBody2D` オブジェクトが他の空間内の物体と衝突・相互作用しても、その衝突は報告されません。
 
-衝突情報を剛性体から取得する場合は、`contact_monitor` を `true` に設定する必要があります。これを行うと、`body_entered` などのシグナルが有効になります。さらに、`contacts_reported` を調整することで、報告される衝突の数を指定することもできます。
+衝突情報を剛性体から取得する場合は、`contact_monitor` を `true` に設定が必要です。これを行うと、`body_entered` などのシグナルが有効になります。さらに、`contacts_reported` を調整することで、報告される衝突の数を指定することもできます。
 
 ### 剛体の制御について
 

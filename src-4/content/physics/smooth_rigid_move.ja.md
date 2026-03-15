@@ -1,5 +1,5 @@
 ---
-title: "RigidBody2D：目標位置へ移動"
+title: "RigidBody2D で目標位置へ移動"
 weight: 3
 draft: false
 ---
@@ -10,7 +10,7 @@ rigidbodyを目標位置へ移動させたい。
 
 ## 解決策
 
-{{< gd-icon RigidBody2D >}}`RigidBody2D` の操作は少し複雑です。Godot の物理エンジンで制御されるため、直接移動させるのではなく、力を加える必要があります。剛性ボディを扱う前に、[RigidBody2D API ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) を読むことを強くお勧めします。
+{{< gd-icon RigidBody2D >}}`RigidBody2D` の操作は少し複雑です。Godot の物理エンジンで制御されるため、直接移動させるのではなく、力を加える必要があります。剛性ボディを扱う前に、[RigidBody2D API ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) を読むことを強くオススメします。
 
 物体を移動させるには、特定の方向に力を加える必要があります - これが「*力*」です。物体が動き始めたら、最終位置に近づくにつれてこの力は徐々に小さくなるようにします。
 

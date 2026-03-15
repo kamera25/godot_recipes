@@ -29,7 +29,7 @@ ghcommentid: 56
 
     このコンテナは子要素を中央に配置します。
 
-* `{{< gd-icon MarginContainer >}}`MarginContainer`
+* {{< gd-icon MarginContainer >}}`MarginContainer`
 
     このコンテナはマージンを保持しており、子要素がコンテナの端に近づきすぎるのを防ぎます。マージン値はプロパティの「カスタム定数」セクションで設定できます。
 
@@ -77,9 +77,9 @@ ghcommentid: 56
 
 ### ネストされたコンテナー
 
-より複雑なUI構成の場合は、他のコンテナを保持するコンテナを使用する必要があります。例えば{{< gd-icon GridContainer >}}`GridContainer`内の各アイテム自体が{{< gd-icon VBoxContainer >}}`VBoxContainer`であり、その全てが{{< gd-icon MarginContainer >}}`MarginContainer`内に配置されている、といった構造になります。
+より複雑なUI構成の場合は、他のコンテナを保持するコンテナを使用が必要です。例えば{{< gd-icon GridContainer >}}`GridContainer`内の各アイテム自体が{{< gd-icon VBoxContainer >}}`VBoxContainer`であり、その全てが{{< gd-icon MarginContainer >}}`MarginContainer`内に配置されている、といった構造になります。
 
-これらのコンテナをネストした構造は、シーンツリーが非常に複雑になり、管理が困難になる原因となります。特にボタンやラベルなど繰り返し使用する要素が多い場合に顕著です。UIは適切な単位で分割し、各部分を個別のシーンとして保存することをおすすめします。これにより、必要に応じて大規模なシーン内でインスタンス化できるようになります。
+これらのコンテナをネストした構造は、シーンツリーが非常に複雑になり、管理が困難になる原因となります。特にボタンやラベルなど繰り返し使用する要素が多い場合に顕著です。UIは適切な単位で分割し、各部分を個別のシーンとして保存することをオススメします。これにより、必要に応じて大規模なシーン内でインスタンス化できるようになります。
 
 <!-- {{% notice note %}}
 プロジェクトファイルをこちらからダウンロードしてください: [screen_shake.zip](/godot_recipes/3.x/files/screen_shake.zip)

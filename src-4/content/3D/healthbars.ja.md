@@ -1,5 +1,5 @@
 ---
-title: "3DユニットHPバー"
+title: "3D空間にHPバーを置く"
 weight: 5
 draft: false
 ghcommentid: 35
@@ -41,13 +41,13 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 ![alt](/godot_recipes/4.x/img/3d_bars01a.gif)
 
-単位をクリックするたびに1ダメージが与えられます。合計10ダメージを与えると、そのユニットは破壊されます。この状態を2Dバーを使って視覚的に表現する必要があります。
+単位をクリックするたびに1ダメージが与えられます。合計10ダメージを与えると、そのユニットは破壊されます。この状態を2Dバーを使って視覚的に表現が必要です。
 
 ### 2Dを3Dに変換
 
 {{< gd-icon Sprite3D >}}`Sprite3D`を使用することで、2D画像を3D空間で表示することが可能です。新しいシーンに追加し、「Healthbar3D」という名前を付けましょう。まず設定とサイズ調整を行いますので、 _テクスチャプロパティ_ に緑色のバー画像を設定してください。
 
-{{<  gd-icon Sprite3D >}}`Sprite3D`は通常の3Dオブジェクトと同様に動作します。カメラを移動させると、視点が変わるためです。ただし、HPバーは常にカメラの方を向くようにして、いつでも確認できるようにしたいと考えています。
+{{<  gd-icon Sprite3D >}}`Sprite3D`は通常の3Dオブジェクトと同様に動作します。カメラを移動させると、視点が変わるためです。ただし、HPバーは常にカメラの方を向くようにして、いつでも確認できるようにしたいです。
 
 インスペクターで、 _Flags_ セクションの _Billboard_ を「Enabled」に設定してください。
 
@@ -61,7 +61,7 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 ### ビューポートテクスチャ
 
-`Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}} `TextureProgressBar` を表示したいと考えています。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現できます。
+`Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}} `TextureProgressBar` を表示したいです。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現できます。
 
 以下の手順で操作してください。
 1. {{< gd-icon SubViewport >}} `SubViewport` を {{< gd-icon Sprite3D >}} `Sprite3D` の子要素として追加します。
@@ -118,7 +118,7 @@ func update_health(_value, _max_value):
 
 ### まとめ
 
-このテクニックを使えば、{{< gd-icon Node2D >}}`Node2D`ノードはもちろん、{{< gd-icon Control >}}`Control`ノード全般（例：{{< gd-icon Label >}}`Label`や{{< gd-icon VideoStreamPlayer >}}`VideoStreamPlayer`など）を3D空間に表示することができます。さらに、{{< gd-icon SubViewport >}}`SubViewport`を使えば、2Dゲーム全体を3次元空間に「投影」することもできます。
+このテクニックを使えば、{{< gd-icon Node2D >}}`Node2D`ノードはもちろん、{{< gd-icon Control >}}`Control`ノード全般（例：{{< gd-icon Label >}}`Label`や{{< gd-icon VideoStreamPlayer >}}`VideoStreamPlayer`など）を3D空間に表示できます。さらに、{{< gd-icon SubViewport >}}`SubViewport`を使えば、2Dゲーム全体を3D空間に「投影」することもできます。
 
 ## 関連レシピ
 

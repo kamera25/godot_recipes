@@ -8,7 +8,7 @@ draft: true
 
 ## 解決策
 
-レベル設計には、以下のいくつかの選択肢を検討する必要があります。
+レベル設計には、以下のいくつかの選択肢を検討が必要です。
 
 ### オプション
 
@@ -29,7 +29,7 @@ draft: true
 
 第三の選択肢として、専用ツールでレベルを設計した後、Godotにインポートする方法があります。[Blender](https://blender.org/)はこの目的で非常に人気の高い選択です。すでに独自の3Dアセットを作成している場合、おそらくモデリング作業にはBlenderを使用していることでしょう。
 
-Blenderを使用することで、使い慣れたモデリングツールでレベルを作成し、その後 `GLTF` 形式でGodot向けにエクスポートすることができます。さらに[インポート時のヒント機能](https://docs.godotengine.org/ja/stable/tutorials/assets_pipeline/importing_scenes.html#import-hints)を活用すれば、Godotが自動的に衝突判定用シェイプやライトなどをインポートしたレベル内に生成してくれます。
+Blenderを使用することで、使い慣れたモデリングツールでレベルを作成し、その後 `GLTF` 形式でGodot向けにエクスポートできます。さらに[インポート時のヒント機能](https://docs.godotengine.org/ja/stable/tutorials/assets_pipeline/importing_scenes.html#import-hints)を活用すれば、Godotが自動的に衝突判定用シェイプやライトなどをインポートしたレベル内に生成してくれます。
 
 Godotの組み込み[Blenderサポート](https://docs.godotengine.org/ja/stable/tutorials/assets_pipeline/importing_scenes.html#importing-blend-files-directly-within-godot)を活用すれば、さらに簡単に連携できます。`.blend`ファイルに変更を加えると、その変更が即座にGodotプロジェクトに反映されます。
 

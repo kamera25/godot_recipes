@@ -29,7 +29,7 @@ func _process(delta):
 
 ![alt](/godot_recipes/3.x/img/circle_motion_02.gif)
 
-この手法は3次元空間でも完璧に機能します。
+この手法は3D空間でも完璧に機能します。
 
 ```gdscript
 extends Spatial

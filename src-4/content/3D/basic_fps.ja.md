@@ -7,7 +7,7 @@ tags: []
 
 ## 課題
 
-ファーストパーソン・シューティングゲーム（FPS）用のキャラクターを作成する必要があります。
+ファーストパーソン・シューティングゲーム（FPS）用のキャラクターを作成が必要です。
 
 ## 解決策
 
@@ -15,7 +15,7 @@ tags: []
 
 サイズはすべて初期設定値のままにします（カプセルの高さは2メートルとなります）。地面と底面を揃えるため、高さを「+1.0」m移動させてください。
 
-次に、ボディの子要素として `{{< gd-icon Camera3D >}}`Camera3D` を追加し、約 `1.6`m 持ち上げてください。
+次に、ボディの子要素として {{< gd-icon Camera3D >}}`Camera3D` を追加し、約 `1.6`m 持ち上げてください。
 
 {{% notice style="note" title="キャラクターのボディはどこにある？" %}}
 この例では、「ボディーレス」な状態、つまりプレイヤー用の表示メッシュを追加しないケースを考えます。環境によっては、プレイヤーの身体を表示する必要があるかどうかは異なるでしょう。
@@ -32,7 +32,7 @@ var jump_speed = 5
 var mouse_sensitivity = 0.002
 ```
 
-The `_physics_process()` function is the place to handle movement. Note that `入力.get_vector()` returns a 2-dimensional vector based on the combination of the forward/back/left/right keys. We want to use this vector to set the `x` and `z` components of the body's velocity (because `y` is handled by gravity). Multiplying this vector by the body's `basis` ensures we account for rotation - forward should always be the *body's* forward vector.
+`_physics_process()`関数は移動処理を担当する箇所です。注意すべき点として、`入力.get_vector()`関数は前進/後退/左右キーの組み合わせに基づいて2次元ベクトルを返します。このベクトルを利用して、ボディの速度における`x`および`z`成分を設定することになります（`y`方向は重力によって自動的に処理されるため）。このベクトルにボディの`basis`を掛けることで、回転を考慮に入れつつ適切な方向に移動させることができます。つまり、前方は常に『ボディ自体』の前進ベクトルを指すようにするわけです。
 
 ```gdscript
 func _physics_process(delta):
@@ -55,7 +55,7 @@ func _physics_process(delta):
 
 ## 3D空間におけるマウス操作制御
 
-まず第一に、マウスを動かすのと同じ方向にプレイヤーを左／右に回転させる必要があります。マウス入力は画面座標系で2次元的に表現されるため、マウスの水平方向（`x`）の動きを、垂直軸である`y`を軸にしたプレイヤー本体の回転に変換する必要があります。先ほど定義した`mouse_sensitivity`プロパティを使えば、マウス移動量がどれだけ回転角度に相当するかを調整できます。
+まず第一に、マウスを動かすのと同じ方向にプレイヤーを左／右に回転させる必要があります。マウス入力は画面座標系で2次元的に表現されるため、マウスの水平方向（`x`）の動きを、垂直軸である`y`を軸にしたプレイヤー本体の回転に変換が必要です。先ほど定義した`mouse_sensitivity`プロパティを使えば、マウス移動量がどれだけ回転角度に相当するかを調整できます。
 
 ```gdscript
 func _input(event):
@@ -91,7 +91,7 @@ FPSキャラクターには通常、前面に位置した武器の3Dメッシュ
 
 武器モデルを{{< gd-icon Camera3D >}}`Camera3D`の子要素として追加します。その後、エディタービューメニューで「2つのビューポート」を選択し、そのうち1つをカメラプレビュー用に設定してください。これで、武器を自由に移動させながら、プレイヤー視点でどのように見えるかを容易に確認できるようになります。
 
-個性を加えるには、`アニメーションPlayer` を使用して武器の位置をプレイヤーの移動に合わせて左右にアニメーションさせる方法がおすすめです。
+個性を加えるには、`アニメーションPlayer` を使用して武器の位置をプレイヤーの移動に合わせて左右にアニメーションさせる方法がオススメです。
 
 
 ## 関連レシピ

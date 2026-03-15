@@ -1,5 +1,5 @@
 ---
-title: "経路追従機能"
+title: "パスを追従する"
 weight: 2
 draft: false
 ghcommentid: 72
@@ -17,7 +17,7 @@ ghcommentid: 72
 
 ### 経路の描画
 
-{{{ gd-icon Path2D }}}`Path2D`ノードを追加すると、ビューポート上部に新しいボタンが表示されます。
+{{< gd-icon Path2D >}}`Path2D`ノードを追加すると、ビューポート上部に新しいボタンが表示されます。
 
 ![alt](/godot_recipes/3.x/img/path2d_buttons.png)
 
@@ -43,7 +43,7 @@ func _ready():
         patrol_points = get_node(patrol_path).curve.get_baked_points()
 ```
 
-Exporting the `patrol_path` lets us assign the path node directly in the Inspector. Then, if it's assigned, we can get the points that make up the line in `_ready()`.
+`patrol_path`をエクスポートすることで、インスペクター内で直接パスノードを割り当てることができます。その後、そのノードが割り当てられていれば、`_ready()`関数内でラインを構成するポイント情報を取得可能です。
 
 次のステップとして、現在パス上で選択されている点を移動先として使用できます。十分に近づけると、曲線の次のポイントに移動し、`wrapi()` 関数を使用して終点に到達したら最初のポイントに戻るループ処理を行います。
 

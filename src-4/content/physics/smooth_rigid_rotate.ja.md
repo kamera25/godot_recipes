@@ -1,16 +1,16 @@
 ---
-title: "RigidBody2D：対象物を見る"
+title: "RigidBody2D で対象物を見る"
 weight: 2
 draft: false
 ---
 
 ## 課題
 
-対象物を観察するため、剛体に滑らかな回転動作を行わせたい。
+対象物を観察するため、剛体に滑らかな回転動作をしたい。
 
 ## 解決策
 
-{{< gd-icon RigidBody2D >}}`RigidBody2D` の操作は少し複雑です。Godot の物理エンジンで制御されるため、直接移動させるのではなく、力を加える必要があります。剛性ボディを扱う前に、[RigidBody2D API ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) を読むことを強くお勧めします。
+{{< gd-icon RigidBody2D >}}`RigidBody2D` の操作は少し複雑です。Godot の物理エンジンで制御されるため、直接移動させるのではなく、力を加える必要があります。剛性ボディを扱う前に、[RigidBody2D API ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) を読むことを強くオススメします。
 
 物体を回転させるには、回転力である**トルク**を加える必要があります。一度物体が回転し始めたら、最終回転に近づくにつれてトルクを小さくしていきたいものです。
 
@@ -31,7 +31,7 @@ func _physics_process(delta):
     constant_torque = dir * angular_force
 ```
 
-ここで`transform.y`を使用している理由について疑問に思われるかもしれません。というのも、`transform.x`はボディの前方ベクトルを表すからです。もし`transform.x`を使用していれば、ドット積が最大となるのはボディが完全にターゲット方向を向いている時になりますが、その時点でトルク値をゼロにしたいと考えています。一方、`transform.y`を使用することで、ターゲット方向に完全に揃っていない状態ほどトルク値が増加するようになります。
+ここで`transform.y`を使用している理由について疑問に思われるかもしれません。というのも、`transform.x`はボディの前方ベクトルを表すからです。もし`transform.x`を使用していれば、ドット積が最大となるのはボディが完全にターゲット方向を向いている時になりますが、その時点でトルク値をゼロにしたいです。一方、`transform.y`を使用することで、ターゲット方向に完全に揃っていない状態ほどトルク値が増加するようになります。
 
 ### 剛体を完全にスキップする
 

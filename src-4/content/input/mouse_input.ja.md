@@ -14,7 +14,7 @@ ghcommentid: 47
 `入力EventMouse` はマウスイベントの基本クラスです。これには `position` および `global_position` プロパティが含まれています。このクラスを継承するサブクラスとして、`入力EventMouseButton` と `入力EventMouseMotion` の2つが存在します。
 
 {{% notice note %}}
-インプットマップでマウスボタンイベントを割り当てられるので、`is_action_pressed()` 関数を使用してこれらを利用することができます。
+インプットマップでマウスボタンイベントを割り当てられるので、`is_action_pressed()` 関数を使用してこれらを利用できます。
 {{% /notice %}}
 
 ### `入力EventMouseButton`

@@ -6,7 +6,7 @@ draft: false
 
 ## 課題
 
-キャラクターの体は地面や地形と平行になるように調整する必要があります。
+キャラクターの体は地面や地形と平行になるように調整が必要です。
 
 ## 解決策
 
@@ -30,7 +30,7 @@ draft: false
 
 Godot では、衝突が発生した際、接触時の法線ベクトルを取得できます。これは衝突する物体の **接触点における** 法線方向になります。
 
-表面法線を取得した後、タンクの**Y**軸をそれに平行に合わせます。ただし、`Transform3D.looking_at()` 関数は使用できません。このメソッドでは**-Z**軸（前方方向）が法線方向に揃ってしまうためです。
+表面法線を取得した後、タンクの**Y**軸をそれに平行に合わせます。ただし、`Transform3D.looking_at()` 関数は使用できません。このメソッドでは **-Z** 軸（前方方向）が法線方向に揃ってしまうためです。
 
 これを実現するには、以下の関数を使用します。
 
@@ -60,13 +60,13 @@ func _physics_process(delta):
         global_transform = align_with_y(global_transform, c.get_normal())
 ```
 
-この動作は期待通りではありません：
+この動作は期待通りになりません。
 
 <video controls src="/godot_recipes/4.x/img/3d_kinematic_07.webm"></video>
 
 問題は、タンクの衝突判定形状が地形面のうち複数箇所と干渉している可能性があることです。さらに、`move_and_slide()` 関数では1フレーム内で複数箇所で衝突が発生する場合があり、これが画面表示のカクつき（ジャダー）を引き起こしています。この問題を解決するためには、単一の面を選択し、一貫してその面で判定を行う必要があります。
 
-タンクに `{{< gd-icon RayCast3D >}}`RayCast3D` 子要素を追加し、**ターゲット位置** を `(0, -1, 0)` に設定してください。
+タンクに `{{< gd-icon RayCast3D >}}`RayCast3D` 子要素を追加し、 **ターゲット位置** を `(0, -1, 0)` に設定してください。
 
 このレイキャストが戦車の中心真下から下方向に発射されているため、衝突する個別の面、すなわち戦車直下の表面に整列させます。
 
@@ -113,7 +113,7 @@ var n = ($FrontRay.get_collision_normal() + $RearRay.get_collision_normal()) / 2
 
 ## 関連レシピ
 
-* [CharacterBody3D: 移動操作](/godot_recipes/4.x/ja/3d/characterbody3d_examples/)
-* [数学演算: 補間処理](/godot_recipes/4.x/ja/math/interpolation/)
-* [数学演算: 座標変換](/godot_recipes/4.x/ja/math/transforms/)
+* [CharacterBody3Dの移動](/godot_recipes/4.x/ja/3d/characterbody3d_examples/)
+* [ゲーム数学 補間](/godot_recipes/4.x/ja/math/interpolation/)
+* [ゲーム数学 トランスフォーム](/godot_recipes/4.x/ja/math/transforms/)
 

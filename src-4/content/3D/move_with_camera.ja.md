@@ -41,7 +41,7 @@ var forward = -camera.transform.basis.z.normalized()
 
 ![alt](/godot_recipes/3.x/img/3d_move_camera_01.gif)
 
-キューブは4つの基本方向（前後・左右・上下）にのみ移動できます。このため、カメラの前方ベクトルを取得し、どの軸方向に最も近いかを確認する必要があります。**+X**、**-X**、**+Z**、または**-Z**のいずれかです。
+キューブは4つの基本方向（前後・左右・上下）にのみ移動できます。このため、カメラの前方ベクトルを取得し、どの軸方向に最も近いかを確認が必要です。**+X**、**-X**、**+Z**、または**-Z**のいずれかです。
 
 We can find this using the `Vector3.max_axis()` function. This returns which of the vector's components is the largest. Since they can be positive or negative, we'll use `abs()` first.
 

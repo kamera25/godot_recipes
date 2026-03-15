@@ -14,7 +14,7 @@ tags: []
 
 * `interpolate_property()`
 
-※ `interpolate_method()` 関数
+* `interpolate_method()` 関数
 
 ### 移行タイプ
 

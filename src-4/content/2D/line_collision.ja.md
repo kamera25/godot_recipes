@@ -25,7 +25,7 @@ draft: false
 衝突ではなく線との重複を検出したい場合は、代わりに {{< gd-icon Area2D >}}`Area2D` を使用することもできます。
 {{% /notice %}}
 
-次に、ボディに衝突形状を追加する必要があります。以下の2つのオプションがあります。
+次に、ボディに衝突形状を追加が必要です。以下の2つのオプションがあります。
 
 ### その1：{{< gd-icon SegmentShape2D >}} `SegmentShape2D`の使用
 
@@ -46,7 +46,7 @@ func _ready():
 
 ### その2：{{< gd-icon RectangleShape2D >}}`RectangleShape2D`を使用する場合
 
-: SegmentShape2D`セグメント形状2Dは幅成分を持たないため、線の衝突判定に厚みが必要な場合には、代わりに矩形の衝突判定を使用することをお勧めします。
+: SegmentShape2D`セグメント形状2Dは幅成分を持たないため、線の衝突判定に厚みが必要な場合には、代わりに矩形の衝突判定を使用することをオススメします。
 
 ```gdscript
 extends Line2D

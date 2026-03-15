@@ -82,7 +82,7 @@ velocity = move_and_slide(velocity, Vector3.UP, true)
 
 停止時にわずかに上向きの運動量が生じるため、小さな「ホップ」が発生します。この問題は、`move_and_slide_with_snap()` メソッドに切り替えることで解決できます。
 
-Jump 機能を確実に動作させるため、ジャンプ中のスナップ機能も無効にする必要があります。そうしないと、プレイヤーは地面にしっかりと「固定」されたままになってしまいます：
+Jump 機能を確実に動作させるため、ジャンプ中のスナップ機能も無効が必要です。そうしないと、プレイヤーは地面にしっかりと「固定」されたままになってしまいます：
 
 ```gdscript
     var snap = Vector3.DOWN if not jumping else Vector3.ZERO

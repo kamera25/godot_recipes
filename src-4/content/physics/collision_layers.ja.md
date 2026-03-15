@@ -27,7 +27,7 @@ Godot 4では、プロジェクト設定の［レイヤー名］＞［2D物理�
 
 ### ノードの選択方法
 
-Godot 4では、ビット操作を容易にするため、`get_collision_layer_value(layer_number)`と`set_collision_layer_value(layer_number, value)`を使用することをおすすめします。
+Godot 4では、ビット操作を容易にするため、`get_collision_layer_value(layer_number)`と`set_collision_layer_value(layer_number, value)`を使用することをオススメします。
 
 ```gdscript
 # Enable layer 2

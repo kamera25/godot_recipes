@@ -19,7 +19,7 @@ func _ready():
 
 ## スプライトの移動
 
-このスプライトを画面上で移動させたいと思います。Godotはデフォルトで*60 fps*（フレーム/秒）で動作しており、各フレームごとに少しずつ動かしたいと考えています。このコードをスクリプトに追加して実行すると、どのような動きになるか確認できます。
+このスプライトを画面上で移動させたいと思います。Godotはデフォルトで*60 fps*（フレーム/秒）で動作しており、各フレームごとに少しずつ動かしたいです。このコードをスクリプトに追加して実行すると、どのような動きになるか確認できます。
 
 ```gdscript
 func _process(delta):
@@ -83,7 +83,7 @@ func _ready():
 
 1. First, we're setting `velocity` to point to the right. `Vector2.RIGHT` is a built-in *constant* that represents the vector `(1, 0)`.
 
-* 次に、`Vector2`の`rotated()`メソッドを使ってベクトルを回転させます。`rotated()`メソッドの括弧内には角度を指定する必要があります。
+* 次に、`Vector2`の`rotated()`メソッドを使ってベクトルを回転させます。`rotated()`メソッドの括弧内には角度を指定が必要です。
 
 * ランダムな角度で回転させたいので、`randf_range()`を使って`0`から`TAU`までの乱数を取得します。
 
