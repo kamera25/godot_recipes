@@ -899,7 +899,8 @@ msgstr ""
 
 #: basics/understanding_delta.md
 msgid "Understanding "
-msgstr ""
+msgstr "「delta」の理解中"
+
 
 #: basics/understanding_delta.md
 msgid ""
@@ -1114,9 +1115,9 @@ msgstr ""
 "<img src=\"/godot_recipes/3.x/img/custom_resource_02.png\" alt=\"カスタムリソースの例\">"
 
 #: basics/custom_resources.md
-#, fuzzy
 msgid "#### Using the resource"
-msgstr "### リソース節約について"
+msgstr "#### リソースの使用方法"
+
 
 #: basics/custom_resources.md
 msgid ""
@@ -1317,9 +1318,9 @@ msgid ""
 msgstr "回復ゾーン（`Area2D`オブジェクト）は、内部に位置し`health`プロパティを持つすべてのオブジェクトに影響を与えます。"
 
 #: basics/custom_resources.md
-#, fuzzy
 msgid "### Example: Player health"
-msgstr "### サンプルプロジェクト例"
+msgstr "### 例：プレイヤーの移動"
+
 
 #: basics/custom_resources.md
 msgid ""
@@ -1347,7 +1348,7 @@ msgid ""
 "- [Object healthbars](/godot_recipes/3.x/ui/unit_healthbar/)"
 msgstr ""
 "- [プラットフォームキャラクター](/godot_recipes/3.x/2d/platform_character/)\n"
-"- [オブジェクトのヘルスバー](/godot_recipes/3.x/ui/unit_healthbar/)"
+"- [オブジェクトのHPバー](/godot_recipes/3.x/ui/unit_healthbar/)"
 
 #: basics/custom_resources.md
 msgid "This function should be called whenever the player needs to be healed."
@@ -2429,21 +2430,11 @@ msgid ""
 "minimap can \"see\". We also have some `@onready` variables to make it more "
 "convenient to access the nodes we need."
 msgstr ""
-"from unity3d import *\n"
-"\n"
-"class MinimapScript:\n"
-"    def Start(self):\n"
-"        # メインシーンにミニマップが追加される際にインスペクターで割り当て可能なプレイヤー参照変数を作成\n"
-"        self.player_ref = None\n"
-"        \n"
-"        # スケール調整用のズームプロパティを定義 - ミニマップが「見える」範囲を指定可能にする\n"
-"        self.zoom_factor = 1.0  # デフォルト値\n"
-"\n"
-"        # @onready属性を持つ変数を作成し、必要なノードへのアクセスをより便利に実装\n"
-"        @onready var player_node: Transform = "
-"FindObjectOfType<Transform>(\"Player\")\n"
-"        @onready var map_canvas_node: CanvasGroup = "
-"GetComponentInParent<CanvasGroup>()\n"
+"Now we can begin adding a script to the `Minimap`. First, a `player` "
+"reference that can be assigned in the Inspector when the minimap is added to "
+"the main scene and a `zoom` property to calibrate the scale - how far the "
+"minimap can \"see\". We also have some `@onready` variables to make it more "
+"convenient to access the nodes we need."
 
 
 #: ui/minimap.md
@@ -2452,9 +2443,7 @@ msgid ""
 "\"minimap_objects\" group) by duplicating the matching marker node and tying "
 "the marker to the object via the `markers` dictionary:"
 msgstr ""
-"We'll also create markers for every game object (using the "
-"\"minimap_objects\" group) by duplicating the matching marker node and tying "
-"the marker to the object via the `markers` dictionary:"
+"これで`Minimap`にスクリプトを追加し始めることができます。まず第一に、メインシーンにミニマップが追加された際にインスペクタで割り当て可能な`player`リファレンスと、スケールを調整するための`zoom`プロパティが必要です。これにより、ミニマップが「視認」できる範囲を設定できます。また、必要なノードにより簡単にアクセスできるよう、いくつかの`@onready`変数も追加しています。"
 
 #: ui/minimap.md
 msgid ""
@@ -2658,7 +2647,7 @@ msgid ""
 "- [UI: Object Healthbars](/godot_recipes/3.x/ui/unit_healthbar/) -->"
 msgstr ""
 "[UI: ラベル](/godot_recipes/.x/ui/labels/)\n"
-"[UI: ユニットヘルスバー](/godot_recipes/3.x/ui/unit_healthbar/) -->"
+"[UI: ユニットHPバー](/godot_recipes/3.x/ui/unit_healthbar/) -->"
 
 #: ui/floating_text.md
 msgid ""
@@ -3233,11 +3222,11 @@ msgid ""
 "- [UI: Object Healthbars](/godot_recipes/3.x/ui/unit_healthbar/) -->"
 msgstr ""
 "- [UI: ラベル](/godot_recipes/3.x/ui/labels/)\n"
-"   - [UI: ユニットヘルスバー](/godot_recipes/3.x/ui/unit_healthbar/) -->"
+"   - [UI: ユニットHPバー](/godot_recipes/3.x/ui/unit_healthbar/) -->"
 
 #: ui/cooldown_button.md
 msgid "Cooldown Button"
-msgstr "冷却ボタン"
+msgstr "クールタイムボタン"
 
 #: 2D/line_collision.md 3D/3d_sphere_car.md 3D/rolling_cube.md
 #: 3D/simple_airplane.md animation/spritesheet_animation.md
@@ -3252,7 +3241,7 @@ msgstr "「掃引」ノードでは、**プリセット**メニューから「�
 
 #: ui/cooldown_button.md
 msgid "You want to make RPG-style ability buttons, including a cooldown effect."
-msgstr "RPG風のスキルボタンを作成したい。クールダウン効果も組み込みたい。"
+msgstr "RPG風のスキルボタンを作成したい。クールタイム効果も組み込みたい。"
 
 #: ui/cooldown_button.md
 msgid "The scene for our ability button will need the following nodes:"
@@ -3274,7 +3263,7 @@ msgid ""
 "need it running when we're not in cooldown mode."
 msgstr ""
 "最後に、スイープ値を 0 に設定し、ノードの処理フラグを false にします。アニメーションは _process() "
-"内で処理するため、クールダウンモードではない時に実行される必要がないようにします。"
+"内で処理するため、クールタイムモードではない時に実行される必要がないようにします。"
 
 #: ui/cooldown_button.md
 msgid "The {{< gd-icon Timer >}}`Timer` node should be set to \"One Shot\"."
@@ -3338,7 +3327,7 @@ msgid ""
 "value. Then we hide the label, because we only want to display it during the "
 "countdown."
 msgstr ""
-"まず、能力のクールダウン時間を格納する`cooldown`変数をエクスポートします。次に、`_ready()`メソッド内でこの値を使用して`Timer`を設"
+"まず、能力のクールタイム時間を格納する`cooldown`変数をエクスポートします。次に、`_ready()`メソッド内でこの値を使用して`Timer`を設"
 "定できます。最後に、カウントダウン中のみ表示させたいため、ラベルは非表示にしておきます。"
 
 #: ui/cooldown_button.md
@@ -3375,7 +3364,7 @@ msgid ""
 "We also want our cooldown \"radial wipe\" to darken the button, so set the "
 "**Modulate** property to a dark gray with some transparency:"
 msgstr ""
-"また、クールダウン時の「放射状スワイプ」でボタンを暗く表示させたいため、**[変調]** プロパティに透明度のある濃いグレーを設定してください。"
+"また、クールタイム時の「放射状スワイプ」でボタンを暗く表示させたいため、**[変調]** プロパティに透明度のある濃いグレーを設定してください。"
 
 #: ui/cooldown_button.md
 msgid ""
@@ -3483,7 +3472,7 @@ msgstr "この設定により、バーの回転を防止します。常に接続
 
 #: ui/object_healthbars.md ui/unit_healthbar.md
 msgid "Object Healthbars"
-msgstr "オブジェクトヘルスバー"
+msgstr "オブジェクトHPバー"
 
 #: ui/unit_healthbar.md
 msgid "![alt](/godot_recipes/3.x/img/unit_healthbar_preview.png)"
@@ -3500,7 +3489,7 @@ msgstr "<img src=\"/godot_recipes/3.x/img/unit_healthbar_nodes.png\">"
 #: ui/unit_healthbar.md
 msgid ""
 "You want units in your game to have healthbars that follow them as they move."
-msgstr "ゲーム中のユニットに、移動に合わせて追従するヘルスバーを表示させたいということですね。"
+msgstr "ゲーム中のユニットに、移動に合わせて追従するHPバーを表示させたいということですね。"
 
 #: ui/unit_healthbar.md
 msgid ""
@@ -3583,7 +3572,7 @@ msgstr ""
 msgid ""
 "You want a health bar that follows a 2D unit as it moves, without rotating "
 "with the unit."
-msgstr "移動しても回転せずに2Dユニットに追従するヘルスバーが欲しいとのこと。"
+msgstr "移動しても回転せずに2Dユニットに追従するHPバーが欲しいとのこと。"
 
 #: ui/object_healthbars.md
 msgid ""
@@ -3595,9 +3584,9 @@ msgstr ""
 "4ではプロパティやテクスチャの扱い方は基本的に同様ですが、構造をより明確にするため `@onready` と `@export` を使用しています。"
 
 #: ui/object_healthbars.md
-#, fuzzy
 msgid "### Node Setup"
 msgstr "### ノード設定"
+
 
 #: ui/labels.md
 msgid "#### Adjusting color"
@@ -3652,7 +3641,7 @@ msgstr ""
 
 #: ui/labels.md
 msgid "You want to display some text on the screen."
-msgstr "画面にテキストを表示したいのですね。"
+msgstr "画面にテキストを表示したい。"
 
 #: 2D/screen_shake.md ui/containers.md ui/labels.md
 msgid "<!-- {{< youtube C-Sn55e5wnk >}} -->"
@@ -4065,12 +4054,12 @@ msgid ""
 "For this example, we're using 9 buttons from our [Cooldown "
 "Button](/godot_recipes/4.x/ui/cooldown_button/) recipe."
 msgstr ""
-"本例では、[クールダウンボタンレシピ](/godot_recipes/4.x/ja/ui/cooldown_button/) "
+"本例では、[クールタイムボタンレシピ](/godot_recipes/4.x/ja/ui/cooldown_button/) "
 "から9つのボタンを使用しています。"
 
 #: ui/radial_menu.md
 msgid "- [UI: Cooldown Button](/godot_recipes/4.x/ui/cooldown_button/)"
-msgstr "・[UI：クールダウンボタン](/godot_recipes/4.x/ja/ui/cooldown_button/)"
+msgstr "・[UI：クールタイムボタン](/godot_recipes/4.x/ja/ui/cooldown_button/)"
 
 #: ui/radial_menu.md
 msgid "Let's look at the `show_menu()` function:"
@@ -4520,7 +4509,7 @@ msgid ""
 "and only the _red_ ring of the inner one. Don't touch the camera node at all."
 msgstr ""
 "以下にジンバルの仕組みを説明します。外側ノードは**Y軸方向のみ**回転可能で、内側ノードは**X軸方向のみ**回転できます。手動で試したい場合は、まず「ー"
-"カル空間を使用」（メニューバーのロックアイコン隣にある立方体アイコン - "
+"カル空間を使用」（メニューバーのロックアイコン隣にあるキューブアイコン - "
 "ショートカットキーは「T」）に切り替えることを忘れないでください。必ず外側ノードの_緑色リング_のみを、内側ノードの_赤色リング_のみを操作してください。カ"
 "メラノードには一切触れないよう注意してください。"
 
@@ -5274,7 +5263,7 @@ msgid ""
 msgstr ""
 "このソリューションでは、既存の {{< gd-icon TextureProgressBar >}}`TextureProgressBar` "
 "ノードをベースにした 2D "
-"ヘルスバーを再利用します。すでにテクスチャが設定されており、値と色を更新するためのコードも実装済みです。既に同様のシステムをお持ちの場合は、それをそのまま使"
+"HPバーを再利用します。すでにテクスチャが設定されており、値と色を更新するためのコードも実装済みです。既に同様のシステムをお持ちの場合は、それをそのまま使"
 "用していただいて構いません。サンプルではこのシーンを「Healthbar2D」と名付けます。"
 
 #: 3D/healthbars.md
@@ -5310,14 +5299,14 @@ msgid ""
 "healthbar to always \"face\" toward the camera so that we can see it."
 msgstr ""
 "{{<  gd-icon Sprite3D "
-">}}`Sprite3D`は通常の3Dオブジェクトと同様に動作します。カメラを移動させると、視点が変わるためです。ただし、ヘルスバーは常にカメラの方を向くよ"
+">}}`Sprite3D`は通常の3Dオブジェクトと同様に動作します。カメラを移動させると、視点が変わるためです。ただし、HPバーは常にカメラの方を向くよ"
 "うにして、いつでも確認できるようにしたいと考えています。"
 
 #: 3D/healthbars.md
 msgid ""
 "You want a floating \"healthbar\" for your 3D game objects (mobs, characters, "
 "etc.)."
-msgstr "3Dゲームオブジェクト（敵キャラクター、プレイヤーキャラなど）用に、フローティング表示の「ヘルスバー」が必要ですね。"
+msgstr "3Dゲームオブジェクト（敵キャラクター、プレイヤーキャラなど）用に、フローティング表示の「HPバー」をつけたい。"
 
 #: 3D/healthbars.md
 msgid "![alt](/godot_recipes/4.x/img/3d_bars_03a.png)"
@@ -5325,7 +5314,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_bars_03a.png)"
 
 #: 3D/healthbars.md
 msgid "In the Inspector, under _Flags_, set _Billboard_ to \"Enabled\"."
-msgstr "インスペクターで、［フラグ］セクションの［ビルボード］を「有効」に設定してください。"
+msgstr "インスペクターで、 _Flags_ セクションの _Billboard_ を「Enabled」に設定してください。"
 
 #: 3D/healthbars.md
 msgid ""
@@ -5367,7 +5356,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_bars04.png)"
 
 #: 3D/healthbars.md
 msgid "3D Unit Healthbars"
-msgstr "3Dユニットヘルスバー"
+msgstr "3DユニットHPバー"
 
 #: 3D/healthbars.md
 msgid "![alt](/godot_recipes/4.x/img/barHorizontal_yellow_mid%20200.png)"
@@ -5412,7 +5401,7 @@ msgstr "### 2Dを3Dに変換"
 
 #: 3D/healthbars.md
 msgid "- [Object Healthbars (2D)](/godot_recipes/4.x/ui/unit_healthbar/) -->"
-msgstr "- [オブジェクトのヘルスバー（2D）](/godot_recipes/4.x/ui/unit_healthbar/) -->"
+msgstr "- [オブジェクトのHPバー（2D）](/godot_recipes/4.x/ui/unit_healthbar/) -->"
 
 #: 3D/healthbars.md
 msgid "### Viewport texture"
@@ -5424,9 +5413,7 @@ msgid ""
 "Add one to a new scene and name it \"Healthbar3D\". First, we'll get it "
 "configured and sized, so set the _Texture_ property to the green bar image."
 msgstr ""
-"We can display a 2D image in 3D using a {{< gd-icon Sprite3D >}}`Sprite3D`. "
-"Add one to a new scene and name it \"Healthbar3D\". First, we'll get it "
-"configured and sized, so set the _Texture_ property to the green bar image."
+"{{< gd-icon Sprite3D >}}`Sprite3D`を使用することで、2D画像を3D空間で表示することが可能です。新しいシーンに追加し、「Healthbar3D」という名前を付けましょう。まず設定とサイズ調整を行いますので、 _テクスチャプロパティ_ に緑色のバー画像を設定してください。"
 
 #: 3D/healthbars.md
 msgid "![alt](/godot_recipes/4.x/img/3d_bars01a.gif)"
@@ -5445,7 +5432,7 @@ msgid ""
 msgstr ""
 "{{% notice note "
 "%}}\n"
-"既存のオブジェクトを再利用すれば、大幅に作業時間を節約できます。ヘルスバーやカメラ、その他一般的なコンポーネントが必要なたびにゼロから作り直す必要はありませ"
+"既存のオブジェクトを再利用すれば、大幅に作業時間を節約できます。HPバーやカメラ、その他一般的なコンポーネントが必要なたびにゼロから作り直す必要はありませ"
 "ん。\n"
 "{{% /notice %}}"
 
@@ -5453,7 +5440,7 @@ msgstr ""
 msgid ""
 "We also need to set the size of the viewport to match the size of the "
 "healthbar texture, which is `(200, 26)`."
-msgstr "さらに、ヘルスバーテクスチャのサイズに合わせてビューポートのサイズを設定する必要があり、そのサイズは`(200, 26)`です。"
+msgstr "さらに、HPバーテクスチャのサイズに合わせてビューポートのサイズを設定する必要があり、そのサイズは`(200, 26)`です。"
 
 #: 3D/3d_shooting.md
 msgid ""
@@ -5489,11 +5476,11 @@ msgstr ""
 
 #: 2D/2d_shooting.md 3D/3d_shooting.md
 msgid "Shooting projectiles"
-msgstr "射出プロジェクトル"
+msgstr "投射物を発射する"
 
 #: 2D/2d_shooting.md 3D/3d_shooting.md
 msgid "You want to shoot projectiles from your player/mob/etc.."
-msgstr "プレイヤー／モブなどから投射物を発射させたいのですね。"
+msgstr "プレイヤー／モブなどから投射物を発射させたい。"
 
 #: 3D/3d_shooting.md
 msgid ""
@@ -6017,7 +6004,7 @@ msgstr ""
 
 #: 3D/rolling_cube.md
 msgid "You want to make a rolling cube in 3D."
-msgstr "3Dで回転する立方体を作成したいのですね。"
+msgstr "3Dで回転するキューブを作成したい。"
 
 #: 3D/rolling_cube.md
 msgid "### Movement script"
@@ -6051,13 +6038,13 @@ msgstr "#### ステップ1"
 msgid ""
 "Rolling a cube is trickier than it seems. You can't just rotate the cube "
 "around its center:"
-msgstr "立方体を回転させるのは見た目より難しいです。単に中心軸を中心に回すだけではうまくいきません："
+msgstr "キューブを回転させるのは見た目より難しいです。単に中心軸を中心に回すだけではうまくいきません："
 
 #: 3D/rolling_cube.md
 msgid ""
 "Here's the tricky part: which bottom edge? It depends on which direction the "
 "cube is rolling."
-msgstr "ここが重要なポイントです：どの底面の縁でしょうか？ それは、立方体がどの方向に転がっているかによって異なります。"
+msgstr "ここが重要なポイントです：どの底面の縁でしょうか？ それは、キューブがどの方向に転がっているかによって異なります。"
 
 #: 3D/rolling_cube.md
 msgid ""
@@ -6065,7 +6052,7 @@ msgid ""
 "going to do is offset everything so that the *bottom center* of the cube is "
 "the {{< gd-icon CharacterBody3D >}}`CharacterBody3D`'s position."
 msgstr ""
-"デフォルトでは、すべてが座標 `(0, 0, 0)` を中心に配置されています。まず最初に行うことは、立方体の*底面中央*が {{< gd-icon "
+"デフォルトでは、すべてが座標 `(0, 0, 0)` を中心に配置されています。まず最初に行うことは、キューブの*底面中央*が {{< gd-icon "
 "CharacterBody3D >}}`CharacterBody3D` の位置と一致するように全体をオフセットすることです。"
 
 #: 3D/rolling_cube.md
@@ -6133,8 +6120,8 @@ msgid ""
 "in the chosen direction (for a cube of size 1) and have the pivot and mesh "
 "back at their original positions."
 msgstr ""
-"アニメーションが終了したら、初期状態にリセットして次回の動作に備えます。立方体が選択方向に1単位移動し（サイズ"
-"1の立方体の場合）、かつピボットとメッシュが元の位置に戻るようにしたいということです。"
+"アニメーションが終了したら、初期状態にリセットして次回の動作に備えます。キューブが選択方向に1単位移動し（サイズ"
+"1のキューブの場合）、かつピボットとメッシュが元の位置に戻るようにしたいということです。"
 
 #: 3D/rolling_cube.md
 msgid "The movement is broken in to 3 steps:"
@@ -6146,7 +6133,7 @@ msgstr "![alt](/godot_recipes/4.x/img/cube_001.gif)"
 
 #: 3D/rolling_cube.md
 msgid "Rolling Cube"
-msgstr "回転立方体"
+msgstr "キューブを回転する"
 
 #: 3D/rolling_cube.md
 msgid ""
@@ -6195,9 +6182,9 @@ msgid ""
 "* AnimationPlayer - using animations to key the rotations and offsets\n"
 "* Helper nodes - using Spatial(s) as rotation helpers"
 msgstr ""
-"・純粋数学 - 回転変換の計算と適用\n"
-"・AnimationPlayer - アニメーションを使用して回転値とオフセットをキー設定\n"
-"・補助ノード - 空間オブジェクトを回転ヘルパーとして使用"
+"* 純粋数学 - 回転変換の計算と適用\n"
+"* AnimationPlayer - アニメーションを使用して回転値とオフセットをキー設定\n"
+"* 補助ノード - 空間オブジェクトを回転ヘルパーとして使用"
 
 #: 3D/rolling_cube.md
 msgid ""
@@ -6225,7 +6212,7 @@ msgstr "### 衝突チェック中"
 
 #: 3D/rolling_cube.md
 msgid "Instead, the cube needs to be rotated around its bottom edge."
-msgstr "代わりに、立方体を底面のエッジを中心に回転させます。"
+msgstr "代わりに、キューブを底面のエッジを中心に回転させます。"
 
 #: 3D/rolling_cube.md
 msgid "![alt](/godot_recipes/4.x/img/cube_002.gif)"
@@ -6726,7 +6713,7 @@ msgstr ""
 
 #: 3D/move_with_camera.md
 msgid "In the script for the cube, we have the following code for movement:"
-msgstr "立方体のスクリプトには、移動に関する以下のコードが含まれています。"
+msgstr "キューブのスクリプトには、移動に関する以下のコードが含まれています。"
 
 #: 3D/move_with_camera.md
 msgid ""
@@ -6757,7 +6744,7 @@ msgid ""
 "- [Rolling Cube](/godot_recipes/3.x/3d/rolling_cube/)\n"
 "- [Camera Gimbal](/godot_recipes/3.x/3d/camera_gimbal/)"
 msgstr ""
-"- ［転がる立方体］(/godot_recipes/3.x/3d/rolling_cube/)\n"
+"- ［転がるキューブ］(/godot_recipes/3.x/3d/rolling_cube/)\n"
 "- ［カメラ・ジンバル］(/godot_recipes/3.x/3d/camera_gimbal/)"
 
 #: 3D/move_with_camera.md
@@ -7498,7 +7485,7 @@ msgid ""
 "- [UI: Object Healthbars](/godot_recipes/3.x/ui/unit_healthbar/) -->"
 msgstr ""
 "<!-- - [UI: ラベル](/godot_recipes/3.x/ui/labels/)\n"
-"- [UI: ユニットヘルスバー](/godot_recipes/3.x/ui/unit_healthbar/) -->"
+"- [UI: ユニットHPバー](/godot_recipes/3.x/ui/unit_healthbar/) -->"
 
 #: 3D/click_to_move.md
 msgid "### Mouse -> 3D"
@@ -8331,7 +8318,8 @@ msgid ""
 "Idle/Walk/Run blendspace and the trigger conditions for jumping. Select the "
 "{{< gd-icon AnimationTree >}}`AnimationTree` and you can see these properties "
 "in the Inspector:"
-msgstr "⭐️修正要 以下のプロパティを確認できます。"
+msgstr ""
+"ここでは`anim_tree`リファレンスを使用して、アイドル/歩行/ランニングブレンドスペースのブレンド位置と、ジャンプトリガー条件を設定します。まず{{< gd-icon AnimationTree >}}`AnimationTree`を選択し、これらのプロパティがインスペクタに表示されることを確認してください。"
 
 #: 3D/assets/character_controller.md g101/3d/101_3d_03.md
 msgid "### Jumping"
@@ -8919,7 +8907,7 @@ msgstr "コーディングを開始する前に、まず自動車の3Dモデル�
 msgid ""
 "You're looking to make a 3D driving or racing game and don't know where to "
 "start."
-msgstr "3Dドライビング/レーシングゲームを作りたいが、どこから手をつければいいかわからないようですね。"
+msgstr "3Dドライビング/レーシングゲームを作りたいが、どこから手をつければいいかわからない。"
 
 #: 3D/kinematic_car/car_base.md
 msgid "Here's the car model we'll use for this demonstration:"
@@ -11430,9 +11418,9 @@ msgstr ""
 "る優れた基盤となるはずです。"
 
 #: g101/3d/101_3d_07.md
-#, fuzzy
 msgid "## Character Scene"
-msgstr "### キャラクター設定"
+msgstr "## キャラクターシーン"
+
 
 #: g101/3d/101_3d_07.md
 msgid ""
@@ -11552,13 +11540,13 @@ msgid "![alt](/godot_recipes/3.x/img/3d_06_03.png?width=200)"
 msgstr "![alt](/godot_recipes/3.x/img/3d_06_03.png?width=200)"
 
 #: g101/3d/101_3d_06.md
-#, fuzzy
 msgid "## Building a Room"
-msgstr "## 3Dシーンの構築"
+msgstr "## 部屋の構築"
+
 
 #: g101/3d/101_3d_06.md
 msgid "Using CSG"
-msgstr "CSGを使用中"
+msgstr "CSGを使う"
 
 #: g101/3d/101_3d_06.md
 msgid "* Ramp"
@@ -11661,7 +11649,7 @@ msgid ""
 "is\n"
 "being \"added\" to the cube. Try changing it to \"Intersection\":"
 msgstr ""
-"デフォルトでは、形状の演算は［結合］に設定されています。円柱形状が立方体に\n"
+"デフォルトでは、形状の演算は［結合］に設定されています。円柱形状がキューブに\n"
 "［追加］されようとしています。これを［交差］に変更してみてください。"
 
 #: g101/3d/101_3d_06.md
@@ -11758,7 +11746,7 @@ msgid ""
 "a\n"
 "plain cube mesh with the following properties:"
 msgstr ""
-"以下が利用可能なCSG形状です。開始するには`CSGBox`を選択してください。以下のような基本立方体メッシュが表示されます。\n"
+"以下が利用可能なCSG形状です。開始するには`CSGBox`を選択してください。以下のような基本キューブメッシュが表示されます。\n"
 "プロパティは以下の通りです："
 
 #: g101/3d/101_3d_06.md
@@ -12258,9 +12246,9 @@ msgstr ""
 "{{< /highlight >}}"
 
 #: g101/3d/101_3d_05.md
-#, fuzzy
 msgid "## Capturing the Mouse"
-msgstr "## 背景の作成方法"
+msgstr "## マウスのキャプチャ"
+
 
 #: g101/3d/101_3d_05.md
 msgid "![alt](/godot_recipes/3.x/img/3d_05_01.png?width=250)"
@@ -12448,9 +12436,9 @@ msgid "Now that first click capturing the mouse won't also fire a bullet."
 msgstr "現在は、最初のクリックでマウスをキャプチャしても、弾丸が発射されることはありません。"
 
 #: g101/3d/101_3d_05.md
-#, fuzzy
 msgid "## Animated Coins"
-msgstr "### アニメーション機能"
+msgstr "## アニメーション付きコイン"
+
 
 #: g101/3d/101_3d_05.md
 msgid ""
@@ -12512,9 +12500,9 @@ msgid ""
 msgstr "アニメーションの仕上がりを確認するには「再生」ボタンを押してください。各個別キーフレームをクリックして、イージング値を調整してみましょう。"
 
 #: g101/3d/101_3d_05.md
-#, fuzzy
 msgid "## Edge Detection"
-msgstr "## 2. エッジ検出"
+msgstr "## エッジ検出"
+
 
 #: g101/3d/101_3d_05.md
 msgid ""
@@ -12764,7 +12752,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_intro_cube_labels.png)"
 
 #: g101/3d/101_3d_01.md
 msgid "For example, a cube is made up of 8 vertices, 12 edges, and 6 faces."
-msgstr "たとえば、立方体は8つの頂点、12本の辺、6つの面で構成されています。"
+msgstr "たとえば、キューブは8つの頂点、12本の辺、6つの面で構成されています。"
 
 #: g101/3d/101_3d_01.md
 msgid ""
@@ -12981,7 +12969,7 @@ msgid ""
 msgstr ""
 "通常、メッシュはBlenderなどの3Dモデリングソフトウェアを使用して作成します。\n"
 "自分で作成できない場合には、ダウンロード可能な3Dモデルのコレクションも多数利用できます。\n"
-"ただし、多くの場合必要なのは単なる立方体や球といった基本的な形状だけです。このような場合、Godotでは _プリミティブ_ と呼ばれるシンプルなメッシュを作成す"
+"ただし、多くの場合必要なのは単なるキューブや球といった基本的な形状だけです。このような場合、Godotでは _プリミティブ_ と呼ばれるシンプルなメッシュを作成す"
 "る機能を提供しています。"
 
 #: g101/3d/101_3d_01.md
@@ -13020,7 +13008,7 @@ msgid ""
 msgstr ""
 "ここで利用可能なプリミティブのリストを確認できます。これらは便利な機能を集約した、一般的な有用形状のコレクションです。新規から「BoxMesh」を選択すると、"
 "\n"
-"画面上にシンプルな立方体が表示されるはずです。"
+"画面上にシンプルなキューブが表示されるはずです。"
 
 #: g101/3d/101_3d_01.md
 msgid ""
@@ -15459,7 +15447,7 @@ msgstr ""
 
 #: kyn/label.md
 msgid "Label"
-msgstr "ラベル"
+msgstr "Label"
 
 #: kyn/label.md
 msgid ""
@@ -15730,7 +15718,7 @@ msgstr "KinematicBody2D"
 msgid ""
 "## {{< gd-icon Path2D >}}`Path2D & {{< gd-icon PathFollow2D >}} PathFollow2D`"
 msgstr ""
-"## `{{< gd-icon Path2D >}}Path2D & {{< gd-icon PathFollow2D >}} PathFollow2D`"
+"## {{< gd-icon Path2D >}}`Path2D と {{< gd-icon PathFollow2D >}} PathFollow2D`"
 
 #: kyn/path2d.md
 msgid "![alt](/godot_recipes/3.x/img/kyn_path2d_03.png)"
@@ -15772,7 +15760,7 @@ msgstr ""
 
 #: kyn/path2d.md
 msgid "As the `offset` is increased, the node moves along the path."
-msgstr "オフセットを増やすと、ノードが経路に沿って移動します。"
+msgstr `offset`を増やすと、ノードが経路に沿って移動します。"
 
 #: kyn/path2d.md
 msgid ""
@@ -15851,7 +15839,7 @@ msgstr ""
 
 #: kyn/path2d.md
 msgid "Path2D & PathFollow2D"
-msgstr "経路 2D & 経路追従 2D"
+msgstr "Path2D と PathFollow2D"
 
 #: kyn/path2d.md
 msgid ""
@@ -15869,8 +15857,8 @@ msgid ""
 "`unit_offset` is a percentage (eg `0` is the start, `.5` is halfway, `1.0` is "
 "the end)"
 msgstr ""
-"* `オフセット` と `単位オフセット` - これらのプロパティは経路上の起点からの距離を表します。`オフセット` "
-"はピクセル単位で測定され、`単位オフセット` はパーセント値で示されます（例：`0` が開始位置、`.5` が中間点、`1.0` が終点）"
+"* `offset` と `unit_offset` - これらのプロパティは経路上の起点からの距離を表します。`offset` "
+"はピクセル単位で測定され、`unit_offset` はパーセント値で示されます（例：`0` が開始位置、`.5` が中間点、`1.0` が終点）"
 
 #: kyn/path2d.md
 msgid "* `add_point()` / `remove_point()` / `clear_points()`"
@@ -15882,9 +15870,7 @@ msgstr "![alt](/godot_recipes/3.x/img/kyn_path2d_02.png)"
 
 #: kyn/path2d.md kyn/raycast2d.md
 msgid "{{< youtube Lx2d5cgMj5U >}} -->"
-msgstr ""
-"</details>\n"
-"    <!-- End of YouTube video embed -->"
+msgstr "{{< youtube Lx2d5cgMj5U >}} -->"
 
 #: kyn/path2d.md
 msgid ""
@@ -15954,7 +15940,7 @@ msgstr "コード内でパスのポイントを操作する必要がある場合
 msgid ""
 "For example, consider this plane moving along a path (you can make the path "
 "visible by setting *Debug>Visible Navigation*):"
-msgstr "例えば、この平面が経路に沿って移動する様子を考えてみましょう（経路を可視化するには、*デバッグ＞ナビゲート表示* を設定してください）："
+msgstr "例えば、この平面が経路に沿って移動する様子を考えてみましょう（経路を可視化するには、*デバッグ > ナビゲート表示* を設定してください。"
 
 #: kyn/path2d.md
 msgid "* `get_closest_point()`"
@@ -16496,7 +16482,7 @@ msgstr "* `get_collision_normal()`"
 
 #: kyn/raycast2d.md
 msgid "RayCast2D"
-msgstr "レイキャスト2D"
+msgstr "RayCast2D"
 
 #: kyn/raycast2d.md
 msgid ""
@@ -17681,7 +17667,7 @@ msgstr "ぼかし効果もアニメーション化できます。"
 
 #: shaders/blur.md shaders/shockwave.md
 msgid "You want a shader to blur an object or the screen."
-msgstr "オブジェクトや画面をぼかすシェーダーが欲しいようですね。"
+msgstr "オブジェクトや画面をぼかすシェーダーが欲しい。"
 
 #: shaders/blur.md
 msgid "Blur shader"
@@ -17697,9 +17683,7 @@ msgid ""
 "on the object's `material` property. If the attached material is a "
 "ShaderMaterial, then you can access it like so:"
 msgstr ""
-"To access the uniform's value from GDScript, you can use `set_shader_param()` "
-"on the object's `material` property. If the attached material is a "
-"ShaderMaterial, then you can access it like so:"
+"GDScriptから uniform の値にアクセスするには、オブジェクトの`material`プロパティに対して`set_shader_param()`メソッドを使用できます。もしアタッチされているマテリアルが`ShaderMaterial`の場合、以下のようにアクセス可能です。"
 
 #: shaders/interacting.md
 msgid ""
@@ -17709,7 +17693,7 @@ msgstr "例については、[ブラーシェーダー](/godot_recipes/3.x/shade
 
 #: shaders/interacting.md
 msgid "You want to interact with a Godot shader from GDScript."
-msgstr "您希望从 GDScript 编程方式与神经网格着色器进行交互。"
+msgstr "GDScriptからGodotシェーダーと連携したい。"
 
 #: shaders/greyscale.md shaders/interacting.md
 msgid "- [Shaders: Intro](/godot_recipes/3.x/shaders/intro/)"
@@ -17801,7 +17785,7 @@ msgstr "インスペクターで値を設定する際に補助として使用で
 
 #: shaders/intro.md
 msgid "#### Varying with time"
-msgstr "#### 時間変動型"
+msgstr "#### 時間で変動させる"
 
 #: shaders/intro.md
 msgid "For example, observe what happens with the following:"
@@ -17815,7 +17799,7 @@ msgstr "ここで解説するシェーダーには主に2種類あります。_�
 
 #: shaders/intro.md
 msgid "You want to get started coding shaders."
-msgstr "シェーダーのコーディングを始めたいようですね。"
+msgstr "シェーダーのコーディングを始めたい。"
 
 #: shaders/intro.md
 msgid "It's also possible to change only one channel of the `COLOR` output:"
@@ -18039,7 +18023,7 @@ msgstr "現在の赤色チャンネルは、左側から右側にかけて「0�
 
 #: shaders/intro.md
 msgid "#### UV coordinates"
-msgstr "#### 紫外線座標"
+msgstr "#### UV座標"
 
 #: shaders/intro.md
 msgid ""
@@ -20072,7 +20056,8 @@ msgstr "## 衝突形状について"
 
 #: physics/Godot3_kinematic2d.md
 msgid "- {{< gd-icon StaticBody2D >}}`StaticBody2D`"
-msgstr ""
+msgstr "- {{< gd-icon StaticBody2D >}}`StaticBody2D`"
+
 
 "- {{< gd-icon StaticBody2D >}} `StaticBody2D`"
 
@@ -21081,7 +21066,7 @@ msgstr ""
 
 #: physics/joints_2d.md
 msgid "You'd like to understand Godot's `Joint2D` nodes."
-msgstr "Godotの`Joint2D`ノードについて理解したいようですね。"
+msgstr "Godotの`Joint2D`ノードについて理解したい。"
 
 #: physics/joints_2d.md
 msgid ""
@@ -21099,7 +21084,8 @@ msgstr ""
 
 #: physics/joints_2d.md
 msgid "![alt](/godot_recipes/3.x/img/joints_demo.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/joints_demo.png)"
+
 
 "![alt](/godot_recipes/3.x/img/joints_demo.png)"
 
@@ -21194,7 +21180,8 @@ msgstr ""
 
 #: physics/kinematic_friction.md
 msgid "Replace the `get_input()` code with the following:"
-msgstr ""
+msgstr "「get_input()」のコードを以下に置き換えます。"
+
 
 "def get_input():\n"
 "    try:\n"
@@ -21779,7 +21766,7 @@ msgstr "### 線を引くこと"
 
 #: 2D/2d_draw_trajectory.md
 msgid "You want to draw the trajectory of a ballistic shot, like from a tank."
-msgstr "戦車のような弾道射撃の軌道を描きたいようですね。"
+msgstr "戦車のような弾道射撃の軌道を描きたい。"
 
 #: 2D/2d_draw_trajectory.md
 msgid ""
@@ -21939,12 +21926,12 @@ msgid ""
 "  - {{< gd-icon AnimationPlayer >}}`AnimationPlayer`: For playing the "
 "character's walk animation(s)."
 msgstr ""
-"- `Area2D` (\"プレイヤー\"): `Area2D` を使用することで、オブジェクトのピックアップや敵との衝突判定が可能になります。\n"
-"  - `Sprite2D`: ここではスプライトシートを使用できます（アニメーション設定は後述します）。\n"
-"  - `CollisionShape2D`: "
+"- {{< gd-icon Area2D >}}`Area2D` (\"プレイヤー\"): `Area2D` を使用することで、オブジェクトのピックアップや敵との衝突判定が可能になります。\n"
+"  - {{< gd-icon Sprite2D >}}`Sprite2D`: ここではスプライトシートを使用できます（アニメーション設定は後述します）。\n"
+"  - {{< gd-icon CollisionShape2D >}}`CollisionShape2D`: "
 "ヒットボックスが大きすぎないように注意してください。プレイヤーがタイルの中心に立つため、オーバーラップ判定も中央から行われます。\n"
-"  - `RayCast2D`: 指定された方向への移動が可能かどうかを確認する際に使われます。\n"
-"  - `AnimationPlayer`: キャラクターの歩行アニメーションを再生するために使用します。"
+"  - {{< gd-icon RayCast2D >}}`RayCast2D`: 指定された方向への移動が可能かどうかを確認する際に使われます。\n"
+"  - {{< gd-icon AnimationPlayer >}}`AnimationPlayer`: キャラクターの歩行アニメーションを再生するために使用します。"
 
 #: 2D/grid_movement.md
 msgid ""
@@ -22689,7 +22676,7 @@ msgid ""
 "relationship is typically the best, but feel free to experiment."
 msgstr ""
 "`trauma_power` は `trauma` とカメラの実際の移動量との関係を表します（例: `amount = trauma * "
-"trauma`）。通常は正方形関係(2)または立方体関係(3)が最も効果的ですが、自由に実験してみてください。"
+"trauma`）。通常は正方形関係(2)またはキューブ関係(3)が最も効果的ですが、自由に実験してみてください。"
 
 #: 2D/screen_shake.md
 msgid ""
@@ -23938,9 +23925,10 @@ msgstr ""
 "extends Node"
 
 #: 2D/splitscreen_demo.md
-#, fuzzy
+#: 2D/camera_limits.md
 msgid "### Camera limits"
-msgstr "### カメラのズーム機能"
+msgstr "### カメラの制限"
+
 
 #: 2D/splitscreen_demo.md
 msgid "## Minimap"
@@ -24111,9 +24099,9 @@ msgid "Splitscreen multiplayer"
 msgstr "分割画面マルチプレイヤー"
 
 #: 2D/splitscreen_demo.md
-#, fuzzy
 msgid "### Game setup"
-msgstr "### ノード設定"
+msgstr "### ゲーム設定"
+
 
 #: 2D/splitscreen_demo.md
 msgid "Attach the following script to each camera:"
@@ -24358,9 +24346,9 @@ msgid ""
 msgstr "もう一つ便利な機能を追加しましょう。マップ全体を見渡せるミニマップです。プレイヤーが現在地を把握しやすくなります。"
 
 #: 2D/splitscreen_demo.md
-#, fuzzy
 msgid "#### Adding the World"
-msgstr "### メッシュの追加方法"
+msgstr "#### 空間（World）の追加"
+
 
 #: 2D/splitscreen_demo.md
 msgid ""
@@ -25372,7 +25360,7 @@ msgid ""
 "Crusader](https://remos.itch.io/mini-crusader), which contains 8-directional "
 "animations for idle, run, attack, and several other states."
 msgstr ""
-"この例では、[アイソメトリック・ミニクルセイダー](https://remos.itch.io/mini-"
+"この例では、[Isometric: Mini-Crusader](https://remos.itch.io/mini-"
 "crusader)を使用します。これには待機、歩行、攻撃など8方向に対応したアニメーションが含まれています。"
 
 #: 2D/8_direction.md
@@ -25969,7 +25957,7 @@ msgid ""
 "This places the player at the bottom center of the screen - a good place to "
 "start. It also ensures that the cooldown timer has the correct wait time."
 msgstr ""
-"これにより、プレイヤーは画面の中央下部に配置され、最適なスタート位置となります。また、クールダウンタイマーが適切な待機時間を設定することを保証します。"
+"これにより、プレイヤーは画面の中央下部に配置され、最適なスタート位置となります。また、クールタイムタイマーが適切な待機時間を設定することを保証します。"
 
 #: games/first_2d/first_2d_05.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_17.gif)"
@@ -26002,7 +25990,7 @@ msgid ""
 "`false`."
 msgstr ""
 "`can_shoot`はプログラミング用語で言うところの「フラグ」です。これはある条件を制御するブール型変数です。この場合、プレイヤーが射撃可能かどうかを決"
-"定します。クールダウン期間中、この変数は`false`に設定されます。"
+"定します。クール期間中、この変数は`false`に設定されます。"
 
 #: games/first_2d/first_2d_05.md
 msgid ""
@@ -26026,7 +26014,7 @@ msgid ""
 "calling its `start()` function to make sure it's placed in the correct "
 "position (just above the player's ship)."
 msgstr ""
-"プレイヤーが射撃可能状態の場合、フラグを`false`に設定し、クールダウンタイマーを開始します。その後、新しい弾丸オブジェクトを作成しゲームに追加し、その"
+"プレイヤーが射撃可能状態の場合、フラグを`false`に設定し、クールタイムタイマーを開始します。その後、新しい弾丸オブジェクトを作成しゲームに追加し、その"
 "`start()`関数を呼び出して正しい位置に配置します（プレイヤーの宇宙船すぐ上）。"
 
 #: games/first_2d/first_2d_05.md
@@ -26061,7 +26049,7 @@ msgid ""
 "that you can adjust the cooldown time. Set the `bullet_scene` by clicking the "
 "property and choosing the `bullet.tscn` file."
 msgstr ""
-"以下の2つの`@export`変数を使用すると、インスペクターで設定可能なため、クールダウン時間を調整できます。プロパティをクリックして`bullet.ts"
+"以下の2つの`@export`変数を使用すると、インスペクターで設定可能なため、クールタイムを調整できます。プロパティをクリックして`bullet.ts"
 "cn`ファイルを選択する形で`bullet_scene`を設定してください。"
 
 #: games/first_2d/first_2d_05.md
@@ -26074,7 +26062,7 @@ msgstr "撮影中"
 
 #: games/first_2d/first_2d_05.md
 msgid "When the cooldown ends, we can allow shooting again."
-msgstr "冷却期間が終了したら、再び射撃を許可できます。"
+msgstr "クールタイムが終了したら、再び射撃を許可できます。"
 
 #: games/first_2d/first_2d_05.md
 msgid ""
@@ -26746,7 +26734,7 @@ msgstr "### 排気システム"
 
 #: games/first_2d/first_2d_02.md
 msgid "### Gun cooldown"
-msgstr "### 銃のクールダウン時間"
+msgstr "### 銃のクールタイム時間"
 
 #: games/first_2d/first_2d_02.md
 msgid ""
@@ -28236,14 +28224,14 @@ msgstr ""
 "像は初期設定では白色になっていますので、後で動的に色付けする際に作業がしやすくなります。"
 
 #: games/circle_jump/circle_jump_01.md
-#, fuzzy
 msgid "### Circle"
-msgstr "### コイン数"
+msgstr "### サークル（Circle）"
+
 
 #: games/circle_jump/circle_jump_01.md
-#, fuzzy
 msgid "## Gameplan"
-msgstr "## ゲームエンジン"
+msgstr "## ゲームプラン"
+
 
 #: games/circle_jump/circle_jump_01.md
 msgid ""
@@ -28346,9 +28334,9 @@ msgid "## Main Scene"
 msgstr "## 主要場面"
 
 #: games/circle_jump/circle_jump_01.md
-#, fuzzy
 msgid "### Jumper"
-msgstr "### ジャンプ動作"
+msgstr "### ジャンパー（Jumper）"
+
 
 #: games/circle_jump/circle_jump_01.md
 msgid ""
@@ -28471,9 +28459,9 @@ msgstr ""
 "うに配置します（デフォルトのジャンプ速度は`(100, 0)`です）。"
 
 #: games/circle_jump/circle_jump_01.md
-#, fuzzy
 msgid "### Color Shader"
-msgstr "### カメラ機能"
+msgstr "### カラーシェーダー"
+
 
 #: games/circle_jump/circle_jump_01.md
 msgid ""
@@ -28558,9 +28546,9 @@ msgstr ""
 "、単にプレイヤーを捕捉する機能だけを実装します。"
 
 #: games/circle_jump/circle_jump_01.md
-#, fuzzy
 msgid "## Game Objects"
-msgstr "## 再利用可能なオブジェクト"
+msgstr "## ゲームオブジェクト"
+
 
 #: games/circle_jump/circle_jump_01.md
 msgid "![alt](/godot_recipes/3.x/img/cj_01_02.gif)"
@@ -29273,7 +29261,8 @@ msgstr "次のパートでは、円に動きを追加します。"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "And in `Jumper.gd`, we add the sounds like so:"
-msgstr ""
+msgstr "そして `Jumper.gd` に、次のようにサウンドを追加します。"
+
 
 "-- Jumper.gd ファイル内でサウンドを追加します:"
 
@@ -29445,7 +29434,7 @@ msgstr "このゲームは以下のプラットフォームで利用できます
 
 #: games/circle_jump/_index.md
 msgid "# <i class=\"far fa-circle\"></i>&nbsp;Circle Jump"
-msgstr "# <i class=\"far fa-circle\"></i>　円ジャンプ"
+msgstr "# <i class=\"far fa-circle\"></i>&nbsp;サークルジャンプ"
 
 #: games/circle_jump/_index.md
 msgid ""
@@ -29858,7 +29847,7 @@ msgstr "## メインシーンのスクリプト化"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "Spawning Circles"
-msgstr "産卵サークル"
+msgstr "サークルをスポーンさせる"
 
 #: games/circle_jump/circle_jump_02.md
 msgid ""
@@ -29888,7 +29877,8 @@ msgstr "Circle ノードに `AnimationPlayer` を追加します。"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "And then in `Jumper.gd`, our jump function becomes:"
-msgstr ""
+msgstr "そして `Jumper.gd` で、ジャンプ関数は次のようになります。"
+
 
 "function Jump()\n"
 "    if IsGrounded() then\n"
@@ -29957,7 +29947,7 @@ msgstr ""
 "[RigidBody2D：ドラッグ＆ドロップ操作](/godot_recipes/4.x/ja/physics/rigidbody_drag_drop/)"
 "\n"
 "* [2D自動車のステアリング制御](/godot_recipes/4.x/ja/2d/car_steering/)\n"
-"* [3Dヘルスバー表示システム](/godot_recipes/4.x/ja/3d/healthbars/)\n"
+"* [3DHPバー表示システム](/godot_recipes/4.x/ja/3d/healthbars/)\n"
 "* [グリッドベース移動機構](/godot_recipes/4.x/ja/2d/grid_movement)\n"
 "* [アーケードスタイル3D宇宙船モデル](/godot_recipes/4.x/ja/3d/spaceship)\n"
 "* [補間機能付きカメラシステム](/godot_recipes/4.x/ja/3d/interpolated_camera/)\n"
