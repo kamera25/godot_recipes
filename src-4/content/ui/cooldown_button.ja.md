@@ -23,7 +23,7 @@ AbilityButton: {{< gd-icon TextureButton >}} TextureButton
    Sweep: {{< gd-icon TextureProgressBar >}} TextureProgress
    {{< gd-icon Timer >}} Timer
    Counter: {{< gd-icon MarginContainer >}} MarginContainer
-      Value: {{< gd-icon 标签 >}} 标签
+      Value: {{< gd-icon ラベル >}} ラベル
 ```
 
 選択したアイコンを `AbilityButton` の **Textures/Normal** プロパティにドロップしてください。
@@ -34,7 +34,7 @@ AbilityButton: {{< gd-icon TextureButton >}} TextureButton
 
 ![alt](/godot_recipes/4.x/img/cooldown_02.png)
 
-`タイマー`ノードの設定は「ワンショット」に設定する必要があります。
+`Timer`ノードの設定は「ワンショット」に設定する必要があります。
 
 `カウンター`はテキストを保持・配置するためのコンテナです。レイアウトを「ボトムワイド」に設定し、［テーマのオーバーライド／定数］セクションでは両方の **マージン右** と **マージン左** を `5` に指定してください。
 

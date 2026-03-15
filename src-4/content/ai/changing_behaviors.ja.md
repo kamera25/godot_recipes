@@ -58,7 +58,7 @@ func _ready():
         patrol_points = patrol_path.curve.get_baked_points()
 
 func _physics_process(delta):
-    $标签.text = str(states.keys()[state])
+    $ラベル.text = str(states.keys()[state])
     velocity = Vector2.ZERO
     choose_action()
     if target:

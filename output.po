@@ -1474,7 +1474,7 @@ msgid ""
 "object. You open a file by calling `open()`."
 msgstr ""
 "Godotのファイル入出力（IO）システムは `FileAccess` オブジェクトを基盤として構築されています。ファイルをオープンするには "
-"`open()` メソッドを呼び出す必要があります。"
+"`open()` メソッドを呼び出します。"
 
 #: basics/file_io.md
 msgid ""
@@ -1509,8 +1509,8 @@ msgid ""
 "float, for example) so you have to do a lot of converting and validating to "
 "try and save/load your data. It's cumbersome and time consuming."
 msgstr ""
-"これはつまり、JSONにはゲームデータ保存時に不利となる制約があることを意味します。JSONは多くのデータ型をサポートしていないため（整数と浮動小数点数の区"
-"別ができないなど）、データを保存したり読み込んだりするためには、変換や検証に多大な労力を要します。非常に手間がかかり、時間もかかる作業です。"
+"JSONにはゲームデータ保存時に不利となる制約があります。JSONは多くのデータ型をサポートしていないため（整数と浮動小数点数の区"
+"別ができないなど）、保存や読み込みの際に変換や検証の手間がかかります。"
 
 #: basics/file_io.md
 msgid "### What about JSON?"
@@ -1552,7 +1552,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice warning %}}\n"
-"ユーザーデータは `user://` パスにのみ保存する必要があります。エディタから直接実行している場合には `res://` "
+"ユーザーデータは `user://` パスにのみ保存します。エディタから直接実行している場合には `res://` "
 "も使用できますが、プロジェクトをエクスポートすると、`res://` パスは読み取り専用になります。\n"
 "{{% /notice %}}"
 
@@ -1633,7 +1633,7 @@ msgid ""
 "cast a ray in 3D:"
 msgstr ""
 "コード内でレイキャストを実行する際、新たなAPIが導入されました。`PhysicsDirectSpaceState[2D|3D].intersect_ray"
-"()`関数には、専用オブジェクトをパラメータとして指定する必要があります。これによりレイの特性を正確に定義できます。例えば3次元空間でレイを描画する場合は："
+"()`関数には、専用オブジェクトをパラメータとして指定します。これによりレイの特性を正確に定義できます。例えば3次元空間でレイを描画する場合は："
 
 #: basics/migrating.md
 msgid ""
@@ -1863,7 +1863,7 @@ msgstr "單獨在單一節點上運行此程序，按照你所料的順序如下
 #: basics/tree_ready_order.md
 msgid ""
 "You need to understand in what order Godot handles nodes in the scene tree."
-msgstr "神がシーンツリー内のノードをどのように処理するかを理解しておく必要があります。"
+msgstr "Godotがシーンツリー内のノードをどのように処理するかを理解しておく必要があります。"
 
 #: basics/tree_ready_order.md
 msgid ""
@@ -15453,7 +15453,7 @@ msgstr "# <i class=\"fas fa-box-open\"></i>&nbsp;その他"
 
 #: kyn/label.md
 msgid "## {{< gd-icon Label >}}`Label`"
-msgstr "## `Label`"
+msgstr "## {{< gd-icon Label >}}`Label`"
 
 #: kyn/label.md
 msgid ""
@@ -15461,7 +15461,7 @@ msgid ""
 "displaying unformatted text, with options for controlling the text's "
 "alignment, wrapping, etc."
 msgstr ""
-"{{< gd-icon Label >}} の `ラベル` は、フォーマットされていないテキストを表示するための {{< gd-icon Control "
+"{{< gd-icon Label >}} `ラベル` は、フォーマットされていないテキストを表示するための {{< gd-icon Control "
 ">}}`コントロール`ノードであり、テキストの配置や折り返しなどの制御オプションを備えています。"
 
 #: kyn/characterbody2d.md kyn/label.md kyn/raycast2d.md kyn/rigidbody2d.md
@@ -15478,7 +15478,7 @@ msgstr ""
 
 #: kyn/label.md
 msgid "Label"
-msgstr "标签"
+msgstr "ラベル"
 
 #: kyn/label.md
 msgid ""
@@ -15496,7 +15496,7 @@ msgid ""
 "Click on the \"DynamicFont\" you added, and under \"Font/Font Data\", choose "
 "\"Load\" and select your font file. You should also set the font's *Size*."
 msgstr ""
-"追加した「DynamicFont」を選択し、「フォント/フォントデータ」で「ロード」を選び、フォントファイルを選択します。また、フォントの*サイズ*も設定し"
+"追加した\"DynamicFont\"を選択し、\"Font/Font Data\"で"\"Load\"を選び、フォントファイルを選択します。また、フォントの*サイズ*も設定し"
 "てください。"
 
 #: kyn/label.md
@@ -15511,7 +15511,7 @@ msgid ""
 "text from a given font."
 msgstr ""
 "{{< gd-icon Label "
-">}}の「カスタムフォント」セクションにて、「新規ダイナミックフォント」を選択してください。`ダイナミックフォント`は、指定された書体でテキストを表示するリ"
+">}}`Label`の「カスタムフォント」セクションにて、\"Custom Fonts\"を選択してください。`DynamicFont`は、指定された書体でテキストを表示するリ"
 "ソース型です。"
 
 #: kyn/label.md
@@ -24742,8 +24742,8 @@ msgid ""
 "of pathfinding just means: what direction should we try first when moving "
 "toward the goal?"
 msgstr ""
-"結果となる経路に大きく影響する重要な要素は、使用する「ヒューリスティック手法」です。「ヒューリスティック」という用語は「最適な推測」を意味し、経路探索の文脈"
-"においては具体的に：目標地点へ向かう際に、まずどの方向を試すべきかを決定する方法を指します。"
+"経路に大きく影響する要素は「ヒューリスティック手法」です。これは「最適な推測」を意味し、経路探索の文脈"
+"においては：目標地点へ向かう際に、まずどの方向を試すべきかを決定する方法を指します。"
 
 #: 2D/grid_pathfinding.md
 msgid "Call this function in `_draw()`."
@@ -25123,7 +25123,7 @@ msgid ""
 "{{% /notice %}} -->"
 msgstr ""
 "<!-- {{% notice note %}}\n"
-"プロジェクトファイルをこちらからダウンロードできます。 "
+"プロジェクトファイル: "
 "[car_steering.zip](/godot_recipes/4.x/files/car_steering.zip)\n"
 "{{% /notice %}} -->"
 
@@ -25146,7 +25146,7 @@ msgid ""
 "[https://github.com/godotrecipes/using_ysort](https://github.com/godotrecipes/"
 "using_ysort)"
 msgstr ""
-"プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/using_ysort](h"
+"プロジェクトのサンプルコード: [https://github.com/godotrecipes/using_ysort](h"
 "ttps://github.com/godotrecipes/using_ysort)"
 
 #: 2D/using_ysort.md
@@ -25180,8 +25180,8 @@ msgid ""
 "we can solve this by offsetting each object's sprite so that the object's "
 "`position` is aligned with the *bottom* of the sprite:"
 msgstr ""
-"オブジェクトが「地面」の上に配置されているように見せたい場合、各オブジェクトのスプライトをオフセットすることで解決できます。具体的には、オブジェクトの "
-"`position` プロパティがスプライトの最下部位置と一致するようにします。："
+"オブジェクトが「地面」の上に配置されているように見せたい場合、オブジェクトの "
+"`position` プロパティがスプライトの最下部位置と一致するようにオフセットすることで解決できます。"
 
 #: 2D/using_ysort.md
 msgid ""
@@ -25254,9 +25254,8 @@ msgid ""
 "The name \"coyote time\" comes from the famous cartoon coyote, who wouldn't "
 "fall until he looked down:"
 msgstr ""
-"{{% notice style=\"info\" title=\"語源について\" "
-"%}}\n"
-"「コヨーテタイム」という名称は、有名なカートゥーンキャラクターである怠け者のコヨーテに由来しています。彼は地面を見下ろすまで決して落ちようとしませんでした："
+"{{% notice style=\"info\" title=\"そもそもなぜコヨーテ？\" %}}\n"
+"「コヨーテタイム」という名称は、地面を見下ろすまで落下しないカートゥーンキャラクターのコヨーテに由来しています。"
 
 #: 2D/coyote_time.md
 msgid "\"Coyote time\" works like this:"
@@ -25266,7 +25265,7 @@ msgstr "「コヨーテタイム」の仕組みは以下の通りです。"
 msgid ""
 "When we detect the jump input, we need to check if the character is on the "
 "floor *or* in coyote time:"
-msgstr "ジャンプ入力を検知した場合、キャラクターが床にいる状態か、またはコヨーテ時間モードかどうかを確認する必要があります。"
+msgstr "ジャンプ入力を検知した場合、キャラクターが床にいる状態か、またはコヨーテ時間モードかどうかを確認します。"
 
 #: 2D/coyote_time.md
 msgid "There are a few new variables we'll need to keep track of coyote time:"
@@ -25283,7 +25282,7 @@ msgid ""
 "`move_and_slide()`:"
 msgstr ""
 "各フレームで現在の `is_on_floor()` 値を保存し、次のフレームで使用するようにします。したがって、`move_and_slide()` "
-"の後に `_physics_process()` 内に以下を設定してください。"
+"の後に `_physics_process()` 内に以下を設定します。"
 
 #: 2D/coyote_time.md
 msgid ""
@@ -25292,8 +25291,8 @@ msgid ""
 "frame. We can check that like this, and start the timer if we did just "
 "transition from on- to off-floor:"
 msgstr ""
-"コヨーテ状態への移行は、プレイヤーがプラットフォームの端から降りた瞬間に開始されます。これはつまり、前回のフレームでは床の上にいたが、現在は床から離れた位置"
-"にいるということを意味します。この条件を確認した上で、ちょうど「オンフロア」から「オフフロア」に移行した場合のみ、タイマーを起動することができます。"
+"コヨーテ状態への移行は、プレイヤーがプラットフォームの端から降りた瞬間に開始されます。これは、前回のフレームでは床の上にいたが、現在は床から離れた位置"
+"にいるということです。この条件を確認した上で、ちょうど「オンフロア」から「オフフロア」に移行した場合のみ、タイマーを起動することができます。"
 
 #: 2D/coyote_time.md
 msgid ""
@@ -26643,7 +26642,7 @@ msgid ""
 msgstr ""
 "最後に設定する必要があるのは、プレイヤーの射撃速度を制御する`Timer`です。`Player`ノードの下に`Timer`を追加し、名前を`GunCoold"
 "own`とします。**One Shot** "
-"プロパティは「オン」に設定してください。これは、タイマーが終了しても自動的にリセットされないことを意味します。実際の実装では、プレイヤーが銃を撃つタイミング"
+"プロパティを「オン」に設定します。これにより、タイマー終了後に自動リセットされなくなります。実際の実装では、プレイヤーが銃を撃つタイミング"
 "でタイマーを起動させ、タイマーが切れるまでは再射撃できないようにします。"
 
 #: games/first_2d/first_2d_02.md
@@ -27214,20 +27213,10 @@ msgid ""
 "position so that after it moves, it can return to its original location. "
 "We'll set it when the enemy is spawned and we call its `start()` function."
 msgstr ""
+"The `start_pos` variable is going to keep track of the enemy's starting "
+"position so that after it moves, it can return to its original location. "
+"We'll set it when the enemy is spawned and we call its `start()` function."
 
-"# 敵の初期位置を記録し、移動後に元の位置に帰還できるようにする変数\n"
-"start_pos = None\n"
-"\n"
-"def spawn_enemy():\n"
-"    global start_pos\n"
-"\n"
-"    # 敵を生成時に初期化\n"
-"    if not start_pos:\n"
-"        start_pos = Enemy.initial_position()  # 敵クラスの初期位置取得メソッドを呼び出す\n"
-"\n"
-"    # その他の初期設定...\n"
-"\n"
-"    print(\"敵が生成されました！初期位置：\", start_pos)\n"
 
 
 #: games/first_2d/first_2d_07.md
@@ -27464,7 +27453,7 @@ msgid ""
 msgstr ""
 "これはなぜかというと、`Resource`オブジェクト（例えば`Texture`）はメモリにロードされてから共有されるからです。実際には単一のテクスチャしか"
 "存在しないため、このアプローチは非常に効率的です - "
-"同じ画像を何度も読み込んでメモリを浪費する必要がないためです。しかし、特定のものをユニークにしたい場合には、明示的に指定する必要があることを意味します。"
+"同じ画像を何度も読み込んでメモリを浪費するのを防げます。ただし、特定のノードをユニークにする場合は明示的に指定します。"
 
 #: games/first_2d/first_2d_09.md
 msgid ""
@@ -27821,7 +27810,7 @@ msgid ""
 "and display a message:"
 msgstr ""
 "メインシーンにHUDインスタンスを作成し、`_ready()`関数と`_on_Jumper_died()`関数内に`$HUD.hide()`を追加します。`"
-"new_game()`関数では、HUDを表示してメッセージを表示する必要があります。具体的には以下のように実装します。"
+"new_game()`関数では、HUDを表示してメッセージを表示します。以下のように実装します。"
 
 #: games/circle_jump/circle_jump_05.md
 msgid ""
@@ -28503,7 +28492,7 @@ msgstr "![alt](/godot_recipes/3.x/img/cj_01_03.gif)"
 
 #: games/circle_jump/circle_jump_01.md
 msgid "Jumping means leaving a circle and traveling forward at our jump speed:"
-msgstr "ジャンプとは、円軌道を離れて一定の速度で前進することを意味します。"
+msgstr "ジャンプすると、円軌道を離れて一定速度で前進します。"
 
 #: games/circle_jump/circle_jump_01.md
 msgid ""

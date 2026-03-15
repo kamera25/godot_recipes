@@ -12,7 +12,7 @@ Godot 4での最も大きな変化の一つは、ノード名、関数名、プ�
 
 * 2D/3Dノードの命名規則 - Godot 3.x では2Dノードに「2D」サフィックスが付いていた一方、3Dノードには何も付加されていませんでした。この不整合が解消され、現在ではすべてのノードが「2D」または「3D」を明示するようになりました。具体例：{{< gd-icon RigidBody2D >}}`RigidBody2D` と {{< gd-icon RigidBody3D >}}`RigidBody3D`。
 
-* 3Dカテゴリにおいて、`空間`ノードは名称を{{< gd-icon Node3D >}}`Node3D`に統一されています
+* 3Dカテゴリにおいて、`Spatial`ノードは名称を{{< gd-icon Node3D >}}`Node3D`に統一されています
 
 * 最も人気のあるノードの1つである `KinematicBody` が、{{< gd-icon CharacterBody2D >}}`CharacterBody2D`/{{< gd-icon CharacterBody3D >}}`CharacterBody3D` に名称変更されました。このノードに関するAPIの変更点については、以下をご覧ください。
 
@@ -75,7 +75,7 @@ Godot 3.5 で `SceneTreeTween` を使い始めた場合、Godot 4.0 の {{< gd-i
 
 ## レイキャスティング
 
-コード内でレイキャストを実行する際、新たなAPIが導入されました。`物理DirectSpaceState[2D|3D].intersect_ray()`関数には、専用オブジェクトをパラメータとして指定する必要があります。これによりレイの特性を正確に定義できます。例えば3次元空間でレイを描画する場合は：
+コード内でレイキャストを実行する際、新たなAPIが導入されました。`物理DirectSpaceState[2D|3D].intersect_ray()`関数には、専用オブジェクトをパラメータとして指定します。これによりレイの特性を正確に定義できます。例えば3次元空間でレイを描画する場合は：
 
 ```gdscript
 var space = get_world_3d().direct_space_state
