@@ -17,7 +17,7 @@ ghcommentid: 53
 
 ![alt](/godot_recipes/3.x/img/attack1.png)
 
-Area2D``Area2D`を使用して剣がターゲットに命中したことを検出できますが、実際に有効化する必要があるのはスイング動作中のみです。アニメーションと同期させるためには、この活性化をアニメーションPlayerで制御します。
+{{< gd-icon Area2D >}}`Area2D` を使用して剣がターゲットに命中したことを検出できますが、実際に有効化する必要があるのはスイング動作中のみです。アニメーションと同期させるためには、この活性化をアニメーションPlayerで制御します。
 
 シーンに `Area2D` と `CollisionShape2D` を追加します。ヒットボックスには矩形形状を使用し、剣が振り上げフレームで完全にカバーされるようにサイズを調整します。
 
@@ -27,7 +27,7 @@ Area2D``Area2D`を使用して剣がターゲットに命中したことを検�
 
 ![alt](/godot_recipes/3.x/img/melee_attack_02.gif)
 
-Now connect this new area's `area_entered` signal (or, depending on your game setup, `body_entered`). For simplicity in this demo, let's assume any body capable of taking damage has properly defined {{< gd-icon Area2D >}}`Area2D` components and is grouped under the "hurtbox" category.
+新しいエリアの`area_entered`シグナル（またはゲームの設定によっては、`body_entered`）を接続します。このデモでは、ダメージを受け取れる任意のボディには{{< gd-icon Area2D >}}`Area2D`が定義され、「hurtbox」というグループ内に配置されているとしましょう。
 
 ```gdscript
 func _on_SwordHit_area_entered(area):
@@ -41,7 +41,7 @@ func _on_SwordHit_area_entered(area):
 
 ### ヒットボックスサイズの変更方法
 
-複数の攻撃アニメーションがある場合、ダメージ範囲の大きさが統一されていないことがあります。上記のアニメーション例では、最初の動きは広範囲をカバーする斜め上方向への振り下ろし攻撃です。この処理に対応するため、衝突形状の_Extents_プロパティに対するアニメーショントラックも追加が必要です。この値を設定して各アニメーションの開始時にキーフレームとして登録してください。
+複数の攻撃アニメーションがある場合、ダメージ範囲の大きさが統一されていないことがあります。上記のアニメーション例では、最初の動きは広範囲をカバーする斜め上方向への振り下ろし攻撃です。この処理に対応するため、衝突形状の _Extents_ プロパティに対するアニメーショントラックも追加が必要です。この値を設定して各アニメーションの開始時にキーフレームとして登録してください。
 
 ![alt](/godot_recipes/3.x/img/melee_attack_04.gif)
 

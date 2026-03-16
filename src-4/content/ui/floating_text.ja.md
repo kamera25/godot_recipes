@@ -1,12 +1,12 @@
 ---
-title: "戦闘テキストを浮かせたい"
+title: "ダメージのポップアップ表示"
 weight: 12
 draft: false
 ---
 
 ## 課題
 
-ダメージを受けたとき、浮かせながら数字を表示させたい。
+ダメージを受けたとき、数字を浮かせながら表示(Floating Combat Text)させたい。
 
 ![alt](/godot_recipes/4.x/img/fct_demo.gif)
 
@@ -108,7 +108,7 @@ $FCTManager.show_value(dmg, crit)
 
 
 {{% notice note %}}
-本デモで使用しているアートワークは[ルイス・ズノ氏](https://www.patreon.com/ansimuz)による作品です。
+本デモで使用しているアートワークは[Luis Zuno氏](https://www.patreon.com/ansimuz)による作品です。
 {{% /notice %}}
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする

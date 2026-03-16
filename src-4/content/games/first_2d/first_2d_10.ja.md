@@ -11,7 +11,7 @@ pre: "10. "
 
 現在ゲームを実行するとすぐに開始されますが、起動用のボタンを追加しましょう。
 
-In `Main` as a child of `CanvasLayer`, add a {{< gd-icon CenterContainer >}}`CenterContainer` and set its layout to **Full Rect**. Then add a {{< gd-icon TextureButton >}}`TextureButton` child. Name this button `Start` and add the `START (48 x 8).png` image as its **Normal** texture.
+`Main`を`CanvasLayer`の子要素として追加し、そこに{{< gd-icon CenterContainer >}}`CenterContainer`を追加し、そのレイアウトを**フル矩形**に設定します。次に、{{< gd-icon TextureButton >}}`TextureButton`をその子要素として追加します。このボタンに「Start」という名前を付け、その**通常状態**のテクスチャとして`START (48 x 8).png`画像を設定します。
 
 スクリプトの上部に参照を追加：
 
@@ -27,7 +27,7 @@ func _on_start_pressed():
     new_game()
 ```
 
-The `new_game()` function handles starting the game, so change `_ready()` so that it no longer spawns enemies, but just ensures the button is showing:
+`new_game()`関数はゲームの開始処理を担当するため、`_ready()`を変更し、敵を生成しないようにしつつ、ボタンが表示されるようにするだけです。
 
 ```gdscript
 func _ready():

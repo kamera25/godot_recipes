@@ -192,7 +192,7 @@ In the `init()` function, we're setting up the size of the circle, based on the 
 
 ----------
 
-#### このプロジェクトをGitHubでフォローしよう：
+#### GitHubでプロジェクトをフォローしてください！
 
 [https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)
 

@@ -158,7 +158,7 @@ func _process(delta):
         return
 ```
 
-如果存在玩家，首先我们会根据玩家的方向旋转玩家标记。由于我们的 PlayerMarker 图灵向上方而不是沿 x 轴指向，因此需要增加 90 度：
+もし`player`が存在する場合、まずプレイヤーマーカーを回転させてプレイヤーの向きに合わせます。私たちの `PlayerMarker` スプライトは `x` 軸に沿ってではなく上方を向いているため、90度を追加する必要があります。
 
 ```gdscript
 player_marker.rotation = player.rotation + PI/2

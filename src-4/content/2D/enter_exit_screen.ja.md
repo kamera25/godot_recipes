@@ -11,7 +11,7 @@ ghcommentid: 15
 
 ## 解決策
 
-この目的のためのノードが用意されています。{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`。このノードをオブジェクトに添付すれば、`screen_entered`シグナルと`screen_exited`シグナルを利用可能になります。
+この目的のためのノードが用意されています。{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`。このノードをオブジェクトにアタッチすれば、`screen_entered`シグナルと`screen_exited`シグナルを利用可能になります。
 #### 例 1
 
 発射後に直線軌道で移動する投射物を考えてみましょう。継続的に射撃を続けると、画面上から外れた物体であってもエンジンが追跡すべき対象が大量に発生し、結果的にラグの原因となる可能性があります。

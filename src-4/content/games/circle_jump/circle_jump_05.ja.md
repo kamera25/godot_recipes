@@ -84,7 +84,7 @@ $HUD.show_message("Go!")
 
 ----------
 
-#### このプロジェクトをGitHubでフォローしよう：
+#### GitHubでプロジェクトをフォローしてください！
 
 [https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)
 

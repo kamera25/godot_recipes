@@ -11,7 +11,7 @@ ghcommentid: 85
 
 ## 解決策
 
-Godotの`Resource`クラスは、データを格納・操作するための強力なツールです。Godotで扱う最も一般的なオブジェクトの多くは[Resource](https://docs.godotengine.org/ja/stable/classes/class_resource.html#class-resource)タイプを拡張しています。アニメーション、衝突形状、画像など。リソースは単なるデータ保持だけでなく、そのデータを操作することもできます（Unityの「スクリプト可能オブジェクト」概念に馴染みのある方なら、類似した考え方だと理解できるでしょう）。
+Godotの`Resource`クラスは、データを格納・操作するための強力なツールです。Godotで扱う最も一般的なオブジェクトの多くは[Resource](https://docs.godotengine.org/ja/stable/classes/class_resource.html#class-resource)タイプを拡張しています。アニメーション、衝突形状、画像など。リソースは単なるデータ保持だけでなく、そのデータを操作することもできます（Unityの *ScriptableObject* に似ています。）。
 
 Godot に標準で用意されているすべての `リソース`タイプに加え、独自のカスタムリソースを作成してゲーム固有のデータを管理することもできます。これはデータの抽象化とカプセル化を実現する利点があり、ゲーム内の他のあらゆるオブジェクトから利用できる汎用的なコンポーネントを作成できます。
 

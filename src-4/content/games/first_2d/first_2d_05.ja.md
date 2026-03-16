@@ -1,5 +1,5 @@
 ---
-title: "撮影中"
+title: "射撃"
 weight: 5
 draft: false
 pre: "05. "

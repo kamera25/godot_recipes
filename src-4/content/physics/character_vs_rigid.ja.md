@@ -1,12 +1,12 @@
 ---
-title: "キャラとリジッドボディの相互作用"
+title: "CharacterとRigidBodyの相互作用"
 weight: 5
 draft: false
 ---
 
 ## 課題
 
-キャラクターのボディを剛体と相互作用させたい場合に使用します。
+キャラクターのボディをリジッドボディと相互作用させたい場合に使用します。
 
 ## 解決策
 
@@ -65,7 +65,7 @@ func _physics_process(delta):
             c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
 ```
 
-衝突正規ベクトルは剛体の外側を指しているため、これを反転させてキャラクターから離れる方向に調整し、`push_force` 係数を適用します。これで再び押す動作が可能になりますが、壁越しに剛体を移動させることはできません。：
+衝突正規ベクトルはリジッドボディの外側を指しているため、これを反転させてキャラクターから離れる方向に調整し、`push_force` 係数を適用します。これで再び押す動作が可能になりますが、壁越しにリジッドボディを移動させることはできません。：
 
 ![alt](/godot_recipes/4.x/img/char_push_impulse.gif)
 

@@ -6,13 +6,13 @@ draft: false
 
 ## 課題
 
-動的なキャラクターが剛体と相互作用するようにしたい。
+動的なキャラクターがリジッドボディと相互作用するようにしたい。
 
 ## 解決策
 
 このレシピは2Dノードと3Dノードの両方に同様に適用できます。
 
-デフォルトでは、`move_and_slide()` または `move_and_collide()` で移動させた運動体は、衝突した剛体すべてに影響を及ぼします。この相互作用は、運動体移動関数の `infinite_inertia`（無限慣性）パラメータのため、剛体の物理特性を考慮しません。
+デフォルトでは、`move_and_slide()` または `move_and_collide()` で移動させた運動体は、衝突したリジッドボディすべてに影響を及ぼします。この相互作用は、運動体移動関数の `infinite_inertia`（無限慣性）パラメータのため、リジッドボディの物理特性を考慮しません。
 
 ![alt](/godot_recipes/3.x/img/inf_inertia1.gif)
 
@@ -43,7 +43,7 @@ move_and_slide ( Vector2 linear_velocity,
                     false, 4, PI/4, false)
 ```
 
-现在，如果尝试移动，你会看到机械体在碰撞时完全停止。它根本不能推动刚体。
+ここで移動を試みると、衝突時にキネマティックボディがただ停止するのが分かります。RigidBody を押し出すことはできません。
 
 ![alt](/godot_recipes/3.x/img/inf_inertia2.gif)
 
@@ -62,7 +62,7 @@ func _physics_process(delta):
             collision.collider.apply_central_impulse(-collision.normal * push)
 ```
 
-衝突法線ベクトルは剛体の外側を向いているため、これを反転させてキャラクターから離れる方向に向け直し、`push`係数を適用します。これで再び押し出し機能が有効になりますが、壁を通過させるほどの強い力にはなりません：
+衝突法線ベクトルはリジッドボディの外側を向いているため、これを反転させてキャラクターから離れる方向に向け直し、`push`係数を適用します。これで再び押し出し機能が有効になりますが、壁を通過させるほどの強い力にはなりません：
 
 ![alt](/godot_recipes/3.x/img/inf_inertia3.gif)
 

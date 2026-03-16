@@ -17,7 +17,7 @@ ghcommentid: 32
 
 * [弾道弾の実装方法](/godot_recipes/3.x/2d/ballistic_bullet/)
 
-and a tank configured like this, with a `Position2D` component specifying the "barrel" location where bullets will spawn:
+そしてこのように設定したタンクで、弾丸が生成される「銃口」位置を指定する{{< gd-icon Position2D >}}`Position2D`を設定します。
 
 ![alt](/godot_recipes/3.x/img/tank_01.png)
 

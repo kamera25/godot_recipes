@@ -7,7 +7,7 @@ pre = "<i class='fas fa-project-diagram fa-fw'></i>&nbsp"
 
 # <i class="fas fa-project-diagram"></i>&nbsp;AI／振る舞い
 
-自動化された行動と（場合によってはより高度な）インテリジェントなエンティティ。
+自律的なアクションと、知的なキャラクターの実装を。
 
 #### 目次 ：
 

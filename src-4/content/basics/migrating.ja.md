@@ -71,7 +71,7 @@ Godot 3.5 で `SceneTreeTween` を使い始めた場合、Godot 4.0 の {{< gd-i
 
 * もう `randomize()` を呼び出す必要はありません。自動で処理されます。再現性のある「乱数」が必要な場合は、`seed()` で事前に設定した値を指定します。
 
-* `rand_range()` 関数は、浮動小数点数の場合は `randf_range()`、整数の場合は `randi_range()` にそれぞれ置き換えられました。
+* `rand_range()` は、浮動小数点数の場合は `randf_range()`、整数の場合は `randi_range()` にそれぞれ置き換えられました。
 
 ## レイキャスティング
 

@@ -63,7 +63,7 @@ position += Vector2(10, 0)
     var global_position = to_global(local_position)
 ```
 
-Let's use the example of an object in the 2D plane and convert mouse clicks (global space) into coordinates relative to the object:
+2次元平面上のオブジェクトを例に取り、マウスクリック座標（グローバル空間）をオブジェクト相対座標に変換する方法を説明します。
 
 ```gdscript
 extends Sprite
@@ -92,7 +92,7 @@ func _unhandled_input(event):
 このモードでは、「Local Space Mode」が有効になっている間、3本の色分けされた軸線がオブジェクトの局所座標系の基底軸として表示されます。
 {{% /notice %}}
 
-2Dと同様に、ローカル軸を使ってオブジェクトを前方に移動させることができます。Godotの3D座標系（**Y軸正方向**）では、デフォルトでボディの**- Z軸** が前進方向になります。前に進むには。
+2Dと同様に、ローカル軸を使ってオブジェクトを前方に移動させることができます。Godotの3D座標系（ **Y軸正方向** ）では、デフォルトでボディの **-Z軸** が前進方向になります。前に進むには。
 
 ```gdscript
     position += -transform.basis.z * speed * delta

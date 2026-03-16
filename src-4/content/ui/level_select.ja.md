@@ -108,17 +108,17 @@ LevelMenu:{{< gd-icon MarginContainer >}} MarginContainer
 
 ノードプロパティを調整：
 
-* {{< gd-icon MarginContainer >}}`レベルメニュー`
+* {{< gd-icon MarginContainer >}}`LevelMenu`
     * **テーマオーバーライド/定数/マージン**: `20`
-* {{< gd-icon VBoxContainer >}} `VBoxコンテナ`
+* {{< gd-icon VBoxContainer >}} `VBoxContainer`
     * **テーマオーバーライド/定数/間隔**: `50`
-* {{< gd-icon Label >}} `タイトル`
+* {{< gd-icon Label >}} `Title`
     * フォントスタイルはお好みでカスタマイズ可能
-* {{< gd-icon TextureButton >}} `戻るボタン` / `次へボタン`
+* {{< gd-icon TextureButton >}} `BackButton` / `NextButton`
     * **テクスチャサイズの無視**: `有効化`
     * **伸縮モード**: `中央固定`
     * **レイアウト/コンテナサイズ指定/水平方向/拡張**: `有効化`
-* {{< gd-icon Control >}} `クリップコントロール`
+* {{< gd-icon Control >}} `ClipControl`
     * **レイアウト/内容クリッピング**: `有効化`
     * **レイアウト/カスタム最小サイズ**: `(710, 350)` (`レベルグリッド`のサイズに相当)
 

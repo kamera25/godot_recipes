@@ -36,10 +36,10 @@ func load_settings():
         f.close()
 ```
 
-load_settings() を呼び出すタイミングを次のように変更してください。
-- set_enable_ads() メソッドの終了時に _ready() 内で呼び出す
-- save_settings() メソッドの終了時にも同じく _ready() 内で呼び出す
-さらに、Screens.gd ファイルでは、サウンド/音楽設定が変更された際に状態を保持する必要があるため、match 文内の各ケース部分に settings.save_settings() を追加が必要です。
+`load_settings()` を呼び出すタイミングを次のように変更してください。
+- `set_enable_ads()` の終了時に `_ready()` 内で呼び出す
+- `save_settings()` の終了時にも同じく `_ready()` 内で呼び出す
+さらに、`Screens.gd` ファイルでは、サウンド/音楽設定が変更された際に状態を保持する必要があるため、match 文内の各ケース部分に `settings.save_settings()` を追加が必要です。
 
 別の課題として、ゲーム起動時に設定メニューのアイコンが保存ファイルから読み込んだ状態を反映しない問題があります。これは`register_buttons()`関数で対処できます。すでにこの関数は全てのボタンをループ処理してシグナル接続を行っています。
 
@@ -112,7 +112,7 @@ func _on_TextEdit_meta_clicked(meta):
 
 ----------
 
-#### このプロジェクトをGitHubでフォローしよう：
+#### GitHubでプロジェクトをフォローしてください！
 
 [https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)
 

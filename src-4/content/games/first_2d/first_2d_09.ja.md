@@ -139,7 +139,7 @@ func set_shield(value):
         died.emit()
 ```
 
-We can also connect the ship's `area_entered` signal so that we can detect when an enemy hits the ship:
+また、艦船の`area_entered`シグナルも接続することで、敵が艦船に命中したことを検出できます。
 
 ```gdscript
 func _on_area_entered(area):

@@ -103,7 +103,7 @@ func set_tween(object=null, key=null):
 
 ----------
 
-#### このプロジェクトをGitHubでフォローしよう：
+#### GitHubでプロジェクトをフォローしてください！
 
 [https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)
 
