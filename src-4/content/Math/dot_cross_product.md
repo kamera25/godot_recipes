@@ -21,13 +21,33 @@ Dot product is an operation on two vectors that returns a scalar. It is often vi
 
 This is the formula for calculating the dot product:
 
-![alt](/godot_recipes/4.x/img/dot_cross_02.png)
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" mathsize="200%">>
+  <mi>A</mi>
+  <mo>⋅</mo>
+  <mi>B</mi>
+  <mo>=</mo>
+  <mo fence="true" form="prefix">∥</mo>
+  <mi>A</mi>
+  <mo fence="true" form="postfix">∥</mo>
+  <mo fence="true" form="prefix">∥</mo>
+  <mi>B</mi>
+  <mo fence="true" form="postfix">∥</mo>
+  <mi>cos</mi>
+  <mi>θ</mi>
+</math>
 
 Where `θ` is the angle between the two vectors and `||A||` is the magnitude of `A`.
 
 This is very useful when both vectors are normalized (i.e. their magnitudes are `1`), then the formula simplifies to:
 
-![alt](/godot_recipes/4.x/img/dot_cross_03.png)
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" mathsize="200%">>
+  <mi>A</mi>
+  <mo>⋅</mo>
+  <mi>B</mi>
+  <mo>=</mo>
+  <mi>cos</mi>
+  <mi>θ</mi>
+</math>
 
 This shows that the dot product is directly related to the angle between the two vectors. Since `cos(0) == 1` and `cos(180) == -1`, the result of the dot product can tell you how closely aligned two vectors are:
 

@@ -21,13 +21,33 @@ ghcommentid: 67
 
 以下が内積を計算するための公式です。
 
-![alt](/godot_recipes/4.x/img/dot_cross_02.png)
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" mathsize="200%">>
+  <mi>A</mi>
+  <mo>⋅</mo>
+  <mi>B</mi>
+  <mo>=</mo>
+  <mo fence="true" form="prefix">∥</mo>
+  <mi>A</mi>
+  <mo fence="true" form="postfix">∥</mo>
+  <mo fence="true" form="prefix">∥</mo>
+  <mi>B</mi>
+  <mo fence="true" form="postfix">∥</mo>
+  <mi>cos</mi>
+  <mi>θ</mi>
+</math>
 
 ここで`θ`は2つのベクトル間の角度、`||A||`は`A`の大きさを表します。
 
 これは両方のベクトルが正規化されている場合（つまり、その大きさがすべて`1`である場合）に特に有用です。その場合、公式は以下のように簡略化されます。
 
-![alt](/godot_recipes/4.x/img/dot_cross_03.png)
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" mathsize="200%">>
+  <mi>A</mi>
+  <mo>⋅</mo>
+  <mi>B</mi>
+  <mo>=</mo>
+  <mi>cos</mi>
+  <mi>θ</mi>
+</math>
 
 この結果から、内積が二つのベクトル間の角度と直接関係していることがわかります。`cos(0) == 1` かつ `cos(180) == -1` であることから、内積の値は二つのベクトルがどれだけ平行しているかを示します。
 
