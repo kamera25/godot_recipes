@@ -1,5 +1,5 @@
 ---
-title: "まとめ中"
+title: "まとめ"
 weight: 99
 draft: false
 pre: "11. "

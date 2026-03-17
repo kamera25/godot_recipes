@@ -83,7 +83,7 @@ func _process(delta):
 
 ### 経路の探索
 
-以下の例を[AI：コンテキストベース制御]レシピからご覧ください。
+以下の例を[AI：場面に基づく操縦](/godot_recipes/4.x/ja/ai/context_map/)レシピからご覧ください。
 
 ![alt](/godot_recipes/3.x/img/ai_context_10.gif)
 

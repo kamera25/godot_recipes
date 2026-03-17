@@ -1,11 +1,11 @@
 +++
-title = "アニメーション"
+title = "Animation"
 weight = 5
 chapter = true
 pre = "<i class='fas fa-film fa-fw'></i>&nbsp"
 +++
 
-# <i class='fas fa-film'></i>&nbsp;アニメーション
+# <i class='fas fa-film'></i>&nbsp;Animation
 
 Godotのアニメーションシステムを使ってみよう。
 

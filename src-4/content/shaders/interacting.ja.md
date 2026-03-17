@@ -23,4 +23,4 @@ node.material.set_shader_param("param_name", value)
 
 ## 関連するレシピ
 
-- [シェーダー入門](/godot_recipes/3.x/shaders/intro/)
+- [シェーダー入門](/godot_recipes/4.x/ja/shaders/intro/)

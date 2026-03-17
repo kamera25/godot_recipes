@@ -145,7 +145,7 @@ func set_default_interest():
         interest[i] = max(0, d)
 ```
 
-次に、`danger`配列を埋めます。`物理2DDirectSpaceState`を使用して、各方向にレイをキャストします。衝突があった場合、その位置に`1`を追加します。
+次に、`danger`配列を埋めます。`Physics2DDirectSpaceState`を使用して、各方向にレイをキャストします。衝突があった場合、その位置に`1`を追加します。
 
 ```gdscript
 func set_danger():

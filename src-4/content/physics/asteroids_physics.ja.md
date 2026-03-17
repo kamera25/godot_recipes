@@ -95,7 +95,7 @@ func _integrate_forces(state):
     state.transform = xform
 ```
 
-ご覧の通り、`_integrate_forces()` 関数には `state` というパラメータが含まれています。このオブジェクトはボディの [物理DirectBodyState2D](https://docs.godotengine.org/ja/stable/classes/class_physicsdirectbodystate2d.html) です。ここには、力、速度、位置など、現在の物理特性がすべて保持されています。
+ご覧の通り、`_integrate_forces()` 関数には `state` というパラメータが含まれています。このオブジェクトはボディの [PhysicsDirectBodyState2D](https://docs.godotengine.org/ja/stable/classes/class_physicsdirectbodystate2d.html) です。ここには、力、速度、位置など、現在の物理特性がすべて保持されています。
 
 州レベルでは、現在の変換行列を取得し、`wrapf()` 関数を使用して画面全体を覆うように変更した後、元の状態に復元します。
 

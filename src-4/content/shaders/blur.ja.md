@@ -46,5 +46,5 @@ func _process(delta):
 
 ## 関連するレシピ
 
-- [シェーダー入門](/godot_recipes/4.x/shaders/intro/)
-- [シェーダーとの連携](/godot_recipes/4.x/shaders/interacting/)
+- [シェーダー入門](/godot_recipes/4.x/ja/shaders/intro/)
+- [シェーダーとの連携](/godot_recipes/4.x/ja/shaders/interacting/)

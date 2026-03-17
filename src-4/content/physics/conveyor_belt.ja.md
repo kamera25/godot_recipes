@@ -68,7 +68,7 @@ This works perfectly well with kinematic bodies, too. Here's the same conveyor b
 
 執筆時点では、`constant_linear_velocity`は{{< gd-icon StaticBody3D >}}`StaticBody`を使用した3D環境で正しく動作しません。
 
-ただし、プロジェクト設定で「弾丸」から「Godot物理」エンジンに変更すれば、この手法を使用できます。
+ただし、プロジェクト設定で「弾丸」から「GodotPhysics」エンジンに変更すれば、この手法を使用できます。
 
 ![alt](/godot_recipes/3.x/img/conveyor_03.png)
 

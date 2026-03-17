@@ -206,4 +206,4 @@ func _ready():
 ## 関連レシピ
 
 - [ツリーの読み取り順序について理解する](/godot_recipes/4.x/ja/basics/tree_ready_order/)
-- [ノードパスの取得方法を理解する](/godot_recipes/4.x/ja/basics/getting_nodes/)
+- [ノードパスを理解しよう](/godot_recipes/4.x/ja/basics/getting_nodes/)

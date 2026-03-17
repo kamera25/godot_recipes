@@ -10,7 +10,7 @@ draft: false
 
 ## 解決策
 
-この例では、プロジェクトイルとして {{< gd-icon Area2D >}}`Area2D` ノードを使用します。エリアは通常、衝突検出が必要な弾丸に適しています。もし跳ね返る/反射するタイプの弾丸も必要であれば、`物理Body` 型のノードの方が適しているかもしれません。
+この例では、プロジェクトイルとして {{< gd-icon Area2D >}}`Area2D` ノードを使用します。エリアは通常、衝突検出が必要な弾丸に適しています。もし跳ね返る/反射するタイプの弾丸も必要であれば、`PhysicsBody` 型のノードの方が適しているかもしれません。
 
 The node setup and behavior of the missile is the same you would use for a "dumb" bullet. If you're creating many bullet types, you can use inheritance to base all your projectiles on the same core setup.
 

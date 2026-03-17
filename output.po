@@ -255,7 +255,7 @@ msgstr "ノード参照を `get_node()` で取得する状況は非常に頻繁�
 
 #: basics/remote_tree.md
 msgid "### Checking node paths"
-msgstr "### ノードパスの確認中"
+msgstr "### ノードパスを確認する"
 
 #: basics/remote_tree.md
 msgid "Using the Remote Scene Tree"
@@ -329,7 +329,7 @@ msgid ""
 "- [Understanding node paths](/godot_recipes/4.x/basics/getting_nodes/)"
 msgstr ""
 "- [ツリーの読み取り順序について理解する](/godot_recipes/4.x/ja/basics/tree_ready_order/)\n"
-"- [ノードパスの取得方法を理解する](/godot_recipes/4.x/ja/basics/getting_nodes/)"
+"- [ノードパスを理解しよう](/godot_recipes/4.x/ja/basics/getting_nodes/)"
 
 #: basics/node_communication.md
 msgid "Note that the UI is an instanced scene, we're just showing the contained nodes. This is where you often see things like `get_node(\"../UI/VBoxContainer/HBoxContainer/Label).text = str(health)`, which is what we want to avoid."
@@ -763,7 +763,7 @@ msgstr "スクリプトタブで、ファイル >新規スクリプト を選択
 
 #: basics/custom_resources.md
 msgid "You're looking for a way to handle data and/or create flexible data objects in your game."
-msgstr "ゲーム内でデータを処理する方法や、柔軟なデータオブジェクトを作成する方法を探しているようです。"
+msgstr "ゲーム内でデータを処理する方法や、柔軟なデータオブジェクトを作成する方法を探しています。"
 
 #: basics/custom_resources.md
 msgid ""
@@ -841,7 +841,7 @@ msgstr "### 例：プレイヤーの移動"
 
 #: basics/custom_resources.md
 msgid "For this example, we'll take the concept of player health in a platformer game. A lot of game systems interact with the player's health. For example:"
-msgstr "この例では、プラットフォーマーゲームにおけるプレイヤーの体力管理を取り上げます。多くのゲームプレイシステムはプレイヤーの健康状態と連動しています。例えば："
+msgstr "この例では、プラットフォーマーゲームにおけるプレイヤーの体力管理を取り上げます。多くのゲームプレイシステムはプレイヤーの健康状態と連動しています。"
 
 #: 2D/2d_align_surface.md 3D/simple_airplane.md basics/custom_resources.md
 msgid "Here's the full script:"
@@ -1531,7 +1531,7 @@ msgstr "ここでいくつかの重要な判断が求められます。ミニマ
 
 #: ui/minimap.md
 msgid "Add `signal removed` to any object that you've put in the \"minimap_objects\" group. Emit this signal when the object is destroyed (or collected), along with a reference to itself so the map can identify it:"
-msgstr "「minimap_objects」グループに追加したすべてのオブジェクトに `signal removed` を追加してください。このシグナルは、オブジェクトが破棄（または回収）される際に、マップがそのオブジェクトを識別できるように自身への参照と共に発火させます。"
+msgstr "「minimap_objects」グループに追加したすべてのオブジェクトに `signal removed` を追加してください。このシグナルは、オブジェクトが破棄（または回収）される際に、マップがそのオブジェクトを識別できるように参照と共に発火させます。"
 
 #: ui/minimap.md
 msgid "Don't worry, we'll automate this later."
@@ -3343,7 +3343,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_ship_02.gif)"
 
 #: 3D/spaceship.md
 msgid "The three axis speeds will affect the \"handling\" of the ship. Experiment to find values the work for you and your desired flight style."
-msgstr "三軸速度は艦船の「操作性」に直接影響を及ぼします。ご自身と目指す飛行スタイルに最適な設定値を見つけるため、ぜひ試行錯誤してみてください。"
+msgstr "三軸速度は艦船の「操作性」に直接影響を及ぼします。最適なフライトのために、ぜひ試行錯誤してみてください。"
 
 #: 3D/spaceship.md
 msgid "Change the three axis inputs in `get_input()` to the following:"
@@ -5588,7 +5588,7 @@ msgstr "レベルの設計"
 
 #: 3D/assets/_index.md
 msgid "Working with 3D Assets"
-msgstr "3Dアセットの操作中"
+msgstr "3Dアセットの扱い方"
 
 #: 3D/assets/_index.md
 msgid "For these examples, we'll be using the following 3d assets from [Kay Lousberg](https://kaylousberg.itch.io/):"
@@ -5599,14 +5599,16 @@ msgid ""
 "* [Adventurers Character Pack](https://kaylousberg.itch.io/kaykit-adventurers)\n"
 "* [Dungeon Asset Pack](https://kaylousberg.itch.io/kaykit-dungeon-remastered)"
 msgstr ""
-"* 『冒険者キャラクターパック』(https://kaylousberg.itch.io/kaykit-adventurers)\n"
-"* 『ダンジョンアセットパック』(https://kaylousberg.itch.io/kaykit-dungeon-remastered)"
+"* [冒険者キャラクターパック](https://kaylousberg.itch.io/kaykit-adventurers)\n"
+"* [ダンジョンアセットパック](https://kaylousberg.itch.io/kaykit-dungeon-remastered)"
 
 #: 3D/assets/_index.md
 msgid ""
 "# <i class='fas fa-cubes'></i>&nbsp;Working with 3D Assets\n"
 "Detailed recipes for importing and working with 3D assets including models, animations, and materials."
-msgstr "# <i class='fas fa-cubes'></i>&nbsp;3Dアセットの取り扱いに関する詳細レシピモデル、アニメーション、マテリアルを含むインポートおよび編集方法を解説。"
+msgstr ""
+"# <i class='fas fa-cubes'></i>&nbsp;3Dアセットを扱う\n"
+"モデル、アニメーション、マテリアルを含むインポートおよび編集方法を解説。"
 
 #: 3D/kinematic_car/car_base.md
 msgid "#### Setting up the {{< gd-icon KinematicBody3D >}} KinematicBody"
@@ -6153,7 +6155,7 @@ msgstr "リアルタイムストラテジー（RTS）ゲームでは、複数ユ
 
 #: input/multi_unit_select.md
 msgid "This technique can be expanded to a wide range of RTS or other game styles. Download the full project below and use it as a base for your own game."
-msgstr "このテクニックはリアルタイムストラテジーゲーム（RTS）やその他のジャンルのゲームに応用できます。以下から完全版プロジェクトをダウンロードして、自分の作品を作る際のベースとして活用してください。"
+msgstr "このテクニックはリアルタイムストラテジーゲーム（RTS）やその他のジャンルのゲームに応用できます。以下から完全版プロジェクトをダウンロードして、ゲームを作る際に活用してください。"
 
 #: input/multi_unit_select.md
 msgid "The `else` clause here triggers if we click the mouse when `selected` is greater than `0`. Each item's `target` is set, and we make sure to deselect the units so we can start again."
@@ -7564,7 +7566,7 @@ msgid ""
 "own models to use in your game. If not, there are many sources where you can\n"
 "download objects or even collections of objects for particular game types. One\n"
 "of our favorite makers of free game art is [Kenney.nl](https://kenney.nl/)."
-msgstr "Blenderなどの3Dモデリングソフトに慣れている方なら、ご自身でゲーム用のモデルを作成することもできます。そうでない場合でも、特定のゲームタイプ向けに作られたオブジェクトや、複数のオブジェクトがセットになったコレクションをダウンロードできるリソースは数多く存在します。個人的にオススメするフリーゲームアートの制作者の一つに[Kenney.nl](https://kenney.nl/)があります。"
+msgstr "Blenderなどの3Dモデリングソフトに慣れている方なら、ゲーム用のモデルを作成することもできます。そうでない場合でも、特定のゲームタイプ向けに作られたオブジェクトや、複数のオブジェクトがセットになったコレクションをダウンロードできるリソースは数多く存在します。個人的にオススメするフリーゲームアートの制作者の一つに[Kenney.nl](https://kenney.nl/)があります。"
 
 #: g101/3d/101_3d_02.md
 msgid ""
@@ -8439,7 +8441,7 @@ msgid ""
 "Now when you rotate the object, the gizmo arrows point along the _object's_\n"
 "axes and not the world's. Switching back and forth between Local and World\n"
 "space can make it much easier to place an object exactly where you want it."
-msgstr "オブジェクトを回転させると、そのギズモの矢印は _オブジェクト自身_ の座標軸に沿って表示されます。ワールド座標系とローカル座標系を切り替えながら操作することで、より正確に狙った位置に配置できるようになります。"
+msgstr "オブジェクトを回転させると、そのギズモの矢印は _オブジェクト_ の座標軸に沿って表示されます。ワールド座標系とローカル座標系を切り替えながら操作することで、より正確に狙った位置に配置できるようになります。"
 
 #: g101/3d/101_3d_01.md
 msgid "![alt](/godot_recipes/4.x/img/3d_local_space_button.png)"
@@ -9448,7 +9450,7 @@ msgstr "次に、**表示設定**セクションを確認しましょう。こ�
 
 #: g101/start/101_02.md
 msgid "We also have localization options, if you plan to support multiple languages. Autoloading, which we'll get to later, and plugins.  The Godot community has created a variety of useful plugins that you can download and add to supply more features, different tools, and so on."
-msgstr "また、多言語対応を予定している場合、ローカライゼーション機能も使えます。後で詳しく説明するオートロード機構やプラグインシステムもあります。Godotコミュニティが開発した様々な便利なプラグインをダウンロード・追加することで、さらに多くの機能やツールなどを拡張できます。"
+msgstr "また、多言語対応を予定している場合、ローカライゼーション機能も使えます。後で詳しく説明する自動機構やプラグインシステムもあります。Godotコミュニティが開発した様々な便利なプラグインをダウンロード・追加することで、さらに多くの機能やツールなどを拡張できます。"
 
 #: g101/start/101_02.md
 msgid "Let's name this new project \"getting_started\". Type this name, click **Create Folder**, and then click **Create & Edit**."
@@ -9875,8 +9877,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"この音声マネージャーは、[SFXPlayer by TheDuriel] の協力を得て適応されています\n"
-"(https://github.com/TheDuriel/DurielsGodotUtilities)。\n"
+"この音声マネージャーは、[SFXPlayer by TheDuriel](https://github.com/TheDuriel/DurielsGodotUtilities) の協力を得て適応されています\n"
 "{{% /notice %}}"
 
 #: audio/audio_manager.md
@@ -9893,7 +9894,7 @@ msgstr "![alt](/godot_recipes/4.x/img/audio_mgr_01.png)"
 
 #: audio/audio_manager.md
 msgid "Set this script as an autoload in Project Settings. Give it an easily recognizable name, such as \"AudioManager\"."
-msgstr "このスクリプトをプロジェクト設定でオートロードに設定してください。「AudioManager」のように、わかりやすく認識しやすい名前を付けてください。"
+msgstr "このスクリプトをプロジェクト設定で 自動読み込み に設定してください。「AudioManager」のように、わかりやすく認識しやすい名前を付けてください。"
 
 #: audio/audio_manager.md
 msgid "Remember, you can drag sound files directly into the text editor to paste the file path."
@@ -10316,7 +10317,7 @@ msgstr "This is done by making the plane {{< gd-icon Sprite2D >}}`Sprite` a chil
 
 #: kyn/path2d.md
 msgid "Consider this example, from the [AI: Context-based Steering](/godot_recipes/3.x/ai/context_map/) recipe:"
-msgstr "以下の例を[AI：コンテキストベース制御]レシピからご覧ください。"
+msgstr "以下の例を[AI：場面に基づく操縦](/godot_recipes/4.x/ja/ai/context_map/)レシピからご覧ください。"
 
 #: kyn/path2d.md
 #, fuzzy
@@ -11380,8 +11381,8 @@ msgid ""
 "- [Shaders: Intro](/godot_recipes/3.x/shaders/intro/)\n"
 "- [Interacting with Shaders](/godot_recipes/3.x/shaders/interacting/)"
 msgstr ""
-"- [シェーダー入門](/godot_recipes/4.x/shaders/intro/)\n"
-"- [シェーダーとの連携](/godot_recipes/4.x/shaders/interacting/)"
+"- [シェーダー入門](/godot_recipes/4.x/ja/shaders/intro/)\n"
+"- [シェーダーとの連携](/godot_recipes/4.x/ja/shaders/interacting/)"
 
 #: shaders/blur.md
 msgid ""
@@ -11421,7 +11422,7 @@ msgstr "GDScriptからGodotシェーダーと連携したい。"
 
 #: shaders/greyscale.md shaders/interacting.md
 msgid "- [Shaders: Intro](/godot_recipes/3.x/shaders/intro/)"
-msgstr "- [シェーダー入門](/godot_recipes/3.x/shaders/intro/)"
+msgstr "- [シェーダー入門](/godot_recipes/4.x/ja/shaders/intro/)"
 
 #: shaders/interacting.md
 msgid "Interacting with Shaders"
@@ -11641,7 +11642,7 @@ msgstr "![alt](/godot_recipes/4.x/img/shader_intro_01.png)"
 
 #: shaders/intro.md
 msgid "This is just a tiny introduction to what's possible with shaders. See the rest of the recipes in this section for more examples you can use in your projects."
-msgstr "これはシェーダーで実現できる機能のほんの一例に過ぎません。このセクションの他のレシピも参照して、ご自身のプロジェクトで使えるより多様な事例をご覧ください。"
+msgstr "これはシェーダーで実現できる機能のほんの一例に過ぎません。このセクションの他のレシピも参照して、プロジェクトで使えるテクニックを増やしていきましょう。"
 
 #: shaders/intro.md
 msgid "Now the red channel ranges from `0` on the left to `1.0` on the right, varying along with the **UV**."
@@ -15183,7 +15184,7 @@ msgstr "次は、タッチ動作の後に発生するドラッグ操作につい
 
 #: 2D/touchscreen_camera.md
 msgid "You can use this camera as a basis for your own camera needs. Here are some suggestions you can try to make yourself:"
-msgstr "このカメラをご自身の撮影ニーズのベースとして活用いただけます。以下に、ご自身で試せるいくつかの提案をご紹介します。"
+msgstr "これを底本にして、ニーズに合わせて活用できます。以下に、試せるいくつかの提案をご紹介します。"
 
 #: 2D/touchscreen_camera.md
 msgid "Touchscreen Camera"
@@ -16061,7 +16062,7 @@ msgstr "### グリッドの設定"
 
 #: 2D/grid_pathfinding.md
 msgid "Which of these works best (results in the most pleasing paths) depends on the nature of your environment. Is it mostly wide-open spaces with few obstacles scattered around? Or is it a maze of twisty passages? Make sure to experiment with your specific project."
-msgstr "どの方法が最も効果的か（最も見栄えの良い経路が得られるか）は、環境の特性によって異なります。広いオープンスペースが中心で、周囲に障害物が点在しているような状況でしょうか？ それとも、複雑に絡み合った通路が入り組んだ迷路のような空間でしょうか？ 必ずご自身の具体的なプロジェクトで試行錯誤してみてください。"
+msgstr "どの方法が最も効果的か（最も見栄えの良い経路が得られるか）は、環境の特性によって異なります。広いオープンスペースが中心で、周囲に障害物が点在しているような状況でしょうか？ それとも、複雑に絡み合った通路が入り組んだ迷路のような空間でしょうか？ ぜひプロジェクトの中で試行錯誤してみてください。"
 
 #: 2D/grid_pathfinding.md
 msgid "![alt](/godot_recipes/4.x/img/astar_grid_manhattan.png)"
@@ -16696,7 +16697,7 @@ msgstr "## さらに詳しく学ぶ"
 
 #: games/first_2d/first_2d_end.md
 msgid "Wrapping up"
-msgstr "まとめ中"
+msgstr "まとめ"
 
 #: games/first_2d/first_2d_end.md
 msgid ""
@@ -16820,7 +16821,7 @@ msgstr "## ゲーム終了方法"
 
 #: games/first_2d/first_2d_10.md
 msgid "Add a {{< gd-icon TextureRect >}}`TextureRect` as a child of the `CenterContainer` and name the node `GameOver`. Use the `GAME_OVER (72 x 8).png` image. It will overlap with the start button, but that's ok, we're only ever going to show one at a time."
-msgstr " (72 x 8).png`です。このボタンはスタートボタンの上に重なる配置になりますが、問題ありません。ゲームでは一度に表示するのは一つだけだからです。"
+msgstr " `CenterContainer`の子として `{{< gd-icon TextureRect >}}`TextureRect` を追加し、ノード名を `GameOver` に設定します。画像には `GAME_OVER (72 x 8).png` を使用します。この画像はスタートボタンと重なりますが、問題ありません。ゲームでは一度に表示するのは一つだけだからです。"
 
 #: games/first_2d/first_2d_10.md
 msgid ""
@@ -17162,11 +17163,11 @@ msgstr "## アートワークのダウンロード方法"
 
 #: games/first_2d/first_2d_06.md
 msgid "We can make the scene more dynamic by animating the background. While we could do this in code by changing the `region_rect` property every frame, we'll use an {{< gd-icon AnimationPlayer >}}`AnimationPlayer` node instead; add one as a child of `Main`."
-msgstr "We can make the scene more dynamic by animating the background. While we could do this in code by changing the `region_rect` property every frame, we'll use an {{< gd-icon AnimationPlayer >}}`AnimationPlayer` node instead; add one as a child of `Main`."
+msgstr "背景アニメーションを追加することでシーンに動きを与えることができます。フレームごとに `region_rect` プロパティを変更することでコード上で実現することも可能ですが、ここでは代わりに {{< gd-icon AnimationPlayer >}}`AnimationPlayer` ノードを使用しましょう。`Main` の子要素として追加してください。"
 
 #: games/first_2d/first_2d_06.md
 msgid "* Under **Texture** change **Repeat** to `Enabled`. This causes the image to repeat over the full size of the screen."
-msgstr "* ［テクスチャ］設定で［繰り返し表示］を「有効」に変更してください。これにより画像が画面全体に繰り返されるようになります。"
+msgstr "* **テクスチャ** 設定で **繰り返し表示** を **有効** に変更してください。これにより画像が画面全体に繰り返されるようになります。"
 
 #: games/first_2d/first_2d_06.md
 msgid "Add a {{< gd-icon Sprite2D >}}`Sprite2D` child. Name this sprite \"Background\" and add the `Space_BG (2 frames) (64 x 64).png` as its texture."
@@ -17186,7 +17187,7 @@ msgstr "ほとんどのゲームでは、これを「レベル」または「メ
 
 #: games/first_2d/first_2d_06.md
 msgid "* Under **Offset** set **Centered** to \"off\". This makes the image's top left corner start at the origin rather than its center."
-msgstr "* 「オフセット」設定で「中央揃え」をオフにします。これにより、画像の左上隅が原点から始まるようになり、中心からは始まらなくなります。"
+msgstr "* **オフセット** 設定で **中央揃え** をオフにします。これにより、画像の左上隅が原点から始まるようになり、中心からは始まらなくなります。"
 
 #: games/first_2d/first_2d_06.md
 msgid "This image has two frames, each `64x64` pixels in size. We'd like the image to tile across the full size of the screen, so start with the following settings:"
@@ -17230,7 +17231,7 @@ msgstr "メインシーン"
 
 #: games/first_2d/first_2d_06.md
 msgid "* Under **Region**, turn **Enabled** \"on\", and then set the **Rect** to a width of `240` and a height of `320`. This makes the image stretch to the size of the screen."
-msgstr "* 「リージョン」設定で「有効」をオンにし、幅を「240」、高さを「320」に指定します。これにより画像が画面サイズに合わせて拡大されます。"
+msgstr "* **リージョン** 設定で **Enabled** をオンにし、幅を「240」、高さを「320」に指定します。これにより画像が画面サイズに合わせて拡大されます。"
 
 #: games/first_2d/first_2d_06.md
 msgid "The main scene is now ready for us to add enemies. In the next step we'll make a single enemy scene, as we did with the bullets, and then instantiate that multiple times."
@@ -17421,7 +17422,7 @@ msgstr "処理が少し遅いので、フレームレートを「10 FPS」に変
 
 #: games/first_2d/first_2d_02.md
 msgid "From the **FileSystem** tab, drag the `Player_ship (16x16).png` file from the art pack and drop it in the **Texture** property of the **Inspector**."
-msgstr "「ファイルシステム」タブから、アートパック内の `Player_ship (16x16).png` ファイルをドラッグし、インスペクターの「テクスチャ」プロパティにドロップしてください。"
+msgstr "**ファイルシステム** タブから、アートパック内の `Player_ship (16x16).png` ファイルをドラッグし、 **インスペクター** の **テクスチャ** プロパティにドロップしてください。"
 
 #: games/first_2d/first_2d_02.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_08.png?width=800)"
@@ -17691,7 +17692,7 @@ msgstr "次に、「explode」というアニメーションを追加します�
 
 #: games/first_2d/first_2d_07.md
 msgid "The `start_pos` variable is going to keep track of the enemy's starting position so that after it moves, it can return to its original location. We'll set it when the enemy is spawned and we call its `start()` function."
-msgstr "The `start_pos` variable is going to keep track of the enemy's starting position so that after it moves, it can return to its original location. We'll set it when the enemy is spawned and we call its `start()` function."
+msgstr "変数 `start_pos` は、敵の初期位置を追跡するために使用され、移動後に元の位置に復帰できるようにします。これは敵が生成される際に設定し、`start()` 関数を呼び出すときに行います。"
 
 #: games/first_2d/first_2d_07.md
 msgid "Here's are the nodes we'll need:"
@@ -17858,12 +17859,8 @@ msgid ""
 "| {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_08/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_10/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n"
 "|------|------:|"
 msgstr ""
-"<nav>\n"
-"        <ul>\n"
-"            <li><a href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_08/\" class=\"btn prev\">← Prev</a></li>\n"
-"            <li><a href=\"/godot_rules/4.x/games/first_2d/first_2d_10/\" class=\"btn next fas fa-arrow-right\" data-icon-position=\"right\">Next→</a></li>\n"
-"        </ul>\n"
-"    </nav>"
+"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_08/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_10/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n"
+"|------|------:|"
 
 #: games/first_2d/first_2d_09.md
 msgid "We can also add the shield to the player's script. Add these new lines at the top of `player.gd`:"
@@ -18213,11 +18210,11 @@ msgstr "これはモジュール用の設定変数です。`real_ads` を `false
 
 #: games/circle_jump/circle_jump_11.md
 msgid "Back in the Godot editor, we need to make some changes to the export configuration. First, open _Project -> Project Settings_ and find the \"Android\" section. In the _Modules_ property is where you list the module(s) you want to use in your code. The module name is listed on the `godot-admob` page: \"org/godotengine/godot/GodotAdMob\". If you have more than one module, separate them with commas."
-msgstr "神道エディタに戻って、エクスポート設定にいくつかの変更を加える必要があります。まず、_プロジェクト -> プロジェクト設定_ を開き、「Android」セクションを見つけてください。_モジュール_ プロパティには、コードで使用するモジュールをリストします。モジュール名は `godot-admob` ページに記載されています。\"org/godotengine/godot/GodotAdMob\"。使用するモジュールが複数ある場合は、カンマで区切ってください。"
+msgstr "Godot エディタに戻って、エクスポート設定にいくつかの変更を加える必要があります。まず、_プロジェクト -> プロジェクト設定_ を開き、「Android」セクションを見つけてください。_モジュール_ プロパティには、コードで使用するモジュールをリストします。モジュール名は `godot-admob` ページに記載されています。\"org/godotengine/godot/GodotAdMob\"。使用するモジュールが複数ある場合は、カンマで区切ってください。"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "Compiling export templates is not difficult, but it does require setting up a build environment on your computer - downloading the required programs and libraries needed to build Godot. If you're new to this concept and interested in learning about it, see the [Compiling](https://docs.godotengine.org/en/latest/development/compiling/introduction_to_the_buildsystem.html) section of the official docs."
-msgstr "翻訳："
+msgstr "エクスポートテンプレートのコンパイルは難しくありませんが、コンピュータ上にビルド環境を設定する必要があります。これには、Godotをビルドするために必要なプログラムやライブラリをダウンロードすることが含まれます。この概念に慣れておらず詳しく知りたい場合は、公式ドキュメントの [コンパイル] セクションを参照してください [Compiling](https://docs.godotengine.org/ja/latest/development/compiling/introduction_to_the_buildsystem.html)。"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "We'll use this function to show the interstitial ad at the end of a game."
@@ -18261,7 +18258,7 @@ msgstr "この設定により、ボタンを押した際にバナー追加機能
 
 #: games/circle_jump/circle_jump_11.md
 msgid "`ad_banner_id` and `ad_interstitial_id` should be filled with _your_ ad unit values from your AdMob account."
-msgstr "`ad_banner_id` および `ad_interstitial_id` には、AdMobアカウントから取得したご自身の広告ユニット値を設定が必要です。"
+msgstr "`ad_banner_id` および `ad_interstitial_id` には、AdMobアカウントから取得した広告ユニット値を設定が必要です。"
 
 #: games/circle_jump/circle_jump_11.md
 msgid ""
@@ -19068,7 +19065,7 @@ msgstr "その後で `_on_button_pressed()` を以下のように更新できま
 
 #: games/circle_jump/circle_jump_06.md
 msgid "Add the script as an autoload by opening \"Project Settings\" and selecting the \"Autoloads\" tab. Click the folder to load the script and then click \"Add\"."
-msgstr "スクリプトを自動読み込みに登録するには、「プロジェクト設定」を開き、「自動読み込み」タブを選択してください。ロードしたいスクリプトのフォルダをクリックし、その後「追加」をクリックします。"
+msgstr "スクリプトを 自動読み込み に登録するには、「プロジェクト設定」を開き、「自動読み込み」タブを選択してください。ロードしたいスクリプトのフォルダをクリックし、その後「追加」をクリックします。"
 
 #: games/circle_jump/_index.md
 msgid "Mobile Game: Circle Jump"
@@ -19218,7 +19215,7 @@ msgstr "### アニメーションのキャプチャ"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "Let's also configure the camera. Set its _Offset_ to `(0, -200)` - this will ensure we can see more of the world ahead of us. Also set _Current_ to \"On\"."
-msgstr "カメラの設定も行いましょう。オフセットを `(0, -200)` に設定してください - これにより、前方の世界をより広く確認できるようになります。また、カレントモードは「オン」に設定してください。"
+msgstr "カメラの設定も行いましょう。 _オフセット_ を `(0, -200)` に設定してください。これにより、前方の世界をより広く確認できるようになります。また、カレントモードは「オン」に設定してください。"
 
 #: games/circle_jump/circle_jump_02.md
 msgid ""

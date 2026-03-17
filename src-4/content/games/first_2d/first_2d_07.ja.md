@@ -28,7 +28,7 @@ Enemy: {{< gd-icon Area2D >}} Area2D
 
 以前と同じように矩形の衝突形状を追加し、サイズを調整してください。タイマーノードの両方で**ワンショット**を有効にします。
 
-{{< gd-icon アニメーションPlayer >}}`アニメーションPlayer` において、「バウンス」というアニメーションを追加し、ループ再生と自動再生を設定します。アニメーションパネルの下部にある**スナップ値**を `0.05` に設定してください。
+{{< gd-icon AnimationPlayer >}}`AnimationPlayer` において、「バウンス」というアニメーションを追加し、ループ再生と自動再生を設定します。アニメーションパネルの下部にある**スナップ値**を `0.05` に設定してください。
 
 スプライトノードを選択し、**テクスチャ** と **フレーム数** の横にあるキーアイコンをクリックしてトラックを作成します。これは、後でこれらのプロパティに異なる値を使用する「爆発」アニメーションを追加するためです。
 
@@ -59,7 +59,7 @@ var speed = 0
 @onready var screensize  = get_viewport_rect().size
 ```
 
-The `start_pos` variable is going to keep track of the enemy's starting position so that after it moves, it can return to its original location. We'll set it when the enemy is spawned and we call its `start()` function.
+変数 `start_pos` は、敵の初期位置を追跡するために使用され、移動後に元の位置に復帰できるようにします。これは敵が生成される際に設定し、`start()` 関数を呼び出すときに行います。
 
 ```gdscript
 func start(pos):

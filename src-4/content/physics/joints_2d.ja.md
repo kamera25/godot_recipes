@@ -11,7 +11,7 @@ Godotの`Joint2D`ノードについて理解したい。
 
 ## 解決策
 
-ジョイントは、接続された物理オブジェクトの動きを制限するために使用されます。任意のジョイントノードには、`物理Object2D` から拡張される2つのボディを結合が必要です。
+ジョイントは、接続された物理オブジェクトの動きを制限するために使用されます。任意のジョイントノードには、`PhysicsObject2D` から拡張される2つのボディを結合が必要です。
 
 #### プロパティ
 
@@ -59,7 +59,7 @@ Godotの`Joint2D`ノードについて理解したい。
 - __長さ__：溝の全長。この最大距離を超える位置まで付属パーツは移動できません。
 - __初期オフセット__：溝に沿った起点となる「位置」です。
 
-<a target="_blank" href="https://github.com/GodotRecipes/物理JointsExample/archive/refs/heads/main.zip">[物理ジョイントサンプルプロジェクト]</a>をダウンロードできます。 [physics_joints.zip](https://github.com/GodotRecipes/物理JointsExample/archive/refs/heads/main.zip)）
+<a target="_blank" href="https://github.com/GodotRecipes/PhysicsJointsExample/archive/refs/heads/main.zip">[物理ジョイントサンプルプロジェクト]</a>をダウンロードできます。 [physics_joints.zip](https://github.com/GodotRecipes/PhysicsJointsExample/archive/refs/heads/main.zip)）
 
 ![alt](/godot_recipes/3.x/img/joints_demo.png)
 

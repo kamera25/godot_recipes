@@ -130,7 +130,7 @@ if event is InputEventScreenDrag:
 
 ## まとめ
 
-このカメラをご自身の撮影ニーズのベースとして活用いただけます。以下に、ご自身で試せるいくつかの提案をご紹介します。
+これを底本にして、ニーズに合わせて活用できます。以下に、試せるいくつかの提案をご紹介します。
 
 * ズーム動作を滑らかにするには`lerp()`を使用してください。
 * ズームは自動的にデフォルトレベルに戻ります。
@@ -187,7 +187,7 @@ func _unhandled_input(event):
 ## 関連レシピ
 
 - [入力操作: 入力アクション](/godot_recipes/3.x/input/input_actions/)
-- [複数ユニットのドラッグ選択方法](/godot_recipes/3.x/input/multi_unit_select/)
+- [マウスドラッグでのユニットの選択](/godot_recipes/3.x/input/multi_unit_select/)
 
 #### この動画が気に入ったら？
 

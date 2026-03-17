@@ -10,7 +10,7 @@ draft: false
 
 ## 解決策
 
-アニメーション状態機械を作成するには `アニメーションTree` (`<{ gd-icon アニメーションTree }>`)を使用してください。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御することが可能になります。
+アニメーション状態機械を作成するには `AnimationTree` (`<{ gd-icon AnimationTree }>`)を使用してください。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御することが可能になります。
 
 ### はじめに
 
@@ -18,17 +18,17 @@ draft: false
 
 ![alt](/godot_recipes/4.x/img/adventurer_sprite_sheet_v1.1.png)
 
-We'll also assume you've already set up the character's animations using {{< gd-icon アニメーションPlayer >}}`アニメーションPlayer`. Using the above spritesheet, we have the following animations: "idle", "run", "attack1", "attack2", "hurt", and "die".
+We'll also assume you've already set up the character's animations using {{< gd-icon AnimationPlayer >}}`AnimationPlayer`. Using the above spritesheet, we have the following animations: "idle", "run", "attack1", "attack2", "hurt", and "die".
 
 ### アニメーションツリー
 
-シーンに `{{< gd-icon アニメーションTree >}}`アニメーションTree` ノードを追加します。［ツリールート］プロパティで「新規アニメーションノードステートマシン」を選択してください。
+シーンに `{{< gd-icon AnimationTree >}}`AnimationTree` ノードを追加します。［ツリールート］プロパティで「新規アニメーションノードステートマシン」を選択してください。
 
 ![alt](/godot_recipes/4.x/img/animation_tree_01.png)
 
-{{< gd-icon アニメーションTree >}}`アニメーションTree`で作成されたアニメーションを制御するノードです。既存のアニメーションにアクセスさせるには、_Anim Player_ プロパティ内の「割り当て」ボタンをクリックし、使用するアニメーションノードを選択してください。
+{{< gd-icon AnimationTree >}}`AnimationTree`で作成されたアニメーションを制御するノードです。既存のアニメーションにアクセスさせるには、_Anim Player_ プロパティ内の「割り当て」ボタンをクリックし、使用するアニメーションノードを選択してください。
 
-以下は、状態機械を `アニメーションTree` パネルに設定し始める方法です：
+以下は、状態機械を `AnimationTree` パネルに設定し始める方法です：
 
 ![alt](/godot_recipes/4.x/img/anim_tree_panel.png)
 
@@ -68,7 +68,7 @@ var attacks = ["attack1", "attack2"]
 @onready var state_machine = $AnimationTree["parameters/playback"]
 ```
 
-`state_machine` は状態マシンへの参照を保持しており、これは `アニメーションNodeStateMachinePlayback` 型です。特定のアニメーションを呼び出すには `travel()` メソッドを使用し、これにより指定されたアニメーションへの接続が辿られます。
+`state_machine` は状態マシンへの参照を保持しており、これは `AnimationNodeStateMachinePlayback` 型です。特定のアニメーションを呼び出すには `travel()` メソッドを使用し、これにより指定されたアニメーションへの接続が辿られます。
 
 ```gdscript
 func hurt():
@@ -104,7 +104,7 @@ func get_input():
 
 ![alt](/godot_recipes/4.x/img/animation_tree_07.gif)
 
-アニメーションTreeStateMachineを使用して以下の処理を管理できます。
+AnimationTreeStateMachineを使用して以下の処理を管理できます。
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 

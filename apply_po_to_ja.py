@@ -47,7 +47,7 @@ def translate_content(content, translations):
     content = re.sub(r'```.*?```', protect, content, flags=re.DOTALL)
     
     # Words to preserve in English when standalone or in simple markup
-    PRESERVE_WORDS = {'Physics'}
+    PRESERVE_WORDS = {'Physics', 'Audio','Animation','InputActionKey', 'Export'}
     
     # Perform translation replacement on the masked content
     for msgid in sorted_keys:

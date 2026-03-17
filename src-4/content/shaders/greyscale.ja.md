@@ -37,4 +37,4 @@ COLOR = texture(SCREEN_TEXTURE, SCREEN_UV);
 
 ## 関連するレシピ
 
-- [シェーダー入門](/godot_recipes/3.x/shaders/intro/)
+- [シェーダー入門](/godot_recipes/4.x/ja/shaders/intro/)

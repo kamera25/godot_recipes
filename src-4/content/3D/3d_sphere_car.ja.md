@@ -67,7 +67,7 @@ GLTFモデルを使用する場合、インポート設定で調整する必要�
 
 - **Angular Damp: `10`** - this property will have a huge effect on the driving feel. A higher value will bring the car to a stop much faster.
 - **Gravity Scale: `5`** - Default gravity in Godot (`9.8`) feels a bit floaty, especially when going for an action feel. This will really matter if you plan to have jumps, hills, etc. in your world. You can set this globally in the **Project Settings** instead, if you prefer.
-- **物理 Material/Bounce: `0.1`** - Playing around with this value can be a lot of fun. Be careful going above 0.5, though!
+- **Physics Material/Bounce: `0.1`** - Playing around with this value can be a lot of fun. Be careful going above 0.5, though!
 
 デモ用にデバッグ用として、衝突形状に球状メッシュも追加しました。必須機能ではありませんが、ボールが転がる様子を視覚的に確認できるとトラブルシューティング時に便利です。
 
