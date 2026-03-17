@@ -6161,7 +6161,7 @@ msgstr "ここでの `else` 条件は、`selected` が 0 より大きいとき�
 
 #: input/multi_unit_select.md
 msgid "### World setup"
-msgstr "### 世界設定"
+msgstr "### ワールドのセットアップ"
 
 #: input/multi_unit_select.md
 msgid "Each of those `collider` items is a reference to a unit, so we can use this to notify them that they've been selected, activating the outline shader:"
@@ -6173,11 +6173,11 @@ msgstr "RTS(リアルタイムストラテジー)のように、複数ユニッ�
 
 #: input/multi_unit_select.md
 msgid "### Selecting the units"
-msgstr "### 単位の選択方法"
+msgstr "### ユニットの選択方法"
 
 #: input/multi_unit_select.md
 msgid "Mouse: Drag-select multiple units"
-msgstr "マウスでユニットをドラッグ選択"
+msgstr "マウスドラッグでユニットを選択"
 
 #: input/multi_unit_select.md
 msgid "### Commanding the units"
@@ -6909,7 +6909,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_scene_01.png)"
 
 #: g101/3d/101_3d_03.md
 msgid "We're going to continue using the Kenney Platformer Kit we downloaded in [Part 2](/godot_recipes/4.x/g101/3d/101_3d_02/). Select all the `block*.glb` files and in the **Import** tab set their **Root Type** to {{< gd-icon StaticBody3D >}}`StaticBody3D`. Uncheck the **Root Name** property and click **Reimport**. Select `blockLarge.glb` and make a new inherited scene. Use the **Create Single Convex Collision Sibling** option on the mesh using the menu as you did in the last tutorial. Now you can save the scene - I recommend making a separate folder for this, as soon you're going to have a bunch of scenes representing the differently shaped platform parts."
-msgstr "引き続き、[パート2](/godot_recipes/4.x/ja/g101/3d/101_3d_02/)でダウンロードしたKenney Platformer Kitを使用します。すべての`block*.glb`ファイルを選択し、**インポート**タブでその**ルートの型**を{{< gd-icon StaticBody3D >}} `StaticBody3U`に設定してください。**ルート名**プロパティはチェックを外しておき、**再インポート**をクリックします。`blockLarge.glb`を選択して新しい継承シーンを作成します。前回のチュートリアルと同様に、メニューからメッシュに対して **「Collision Shape Placement」で兄弟** オプションを使用してください。これでシーンを保存できます - 私は別にフォルダを作成することをオススメします。なぜなら、すぐに様々な形状のプラットフォームパーツを表すシーンが大量に出来上がるからです。"
+msgstr "引き続き、[パート2](/godot_recipes/4.x/ja/g101/3d/101_3d_02/)でダウンロードしたKenney Platformer Kitを使用します。すべての`block*.glb`ファイルを選択し、**インポート**タブでその**ルートの型**を{{< gd-icon StaticBody3D >}} `StaticBody3D`に設定してください。**ルート名**プロパティはチェックを外しておき、**再インポート**をクリックします。`blockLarge.glb`を選択して新しい継承シーンを作成します。前回のチュートリアルと同様に、メニューからメッシュに対して **「Collision Shape Placement」で兄弟** オプションを使用してください。これでシーンを保存できます - 私は別にフォルダを作成することをオススメします。なぜなら、すぐに様々な形状のプラットフォームパーツを表すシーンが大量に出来上がるからです。"
 
 #: g101/3d/101_3d_03.md
 msgid "In its properties, set **Spring Length** to `5`, and set its **Position** to `(0, 1, 0)`, which is at the character's head. Note the yellow line indicating the **Spring Length**. The camera will move along this line - at its end whenever possible, but moving closer if an obstacle is there."
@@ -6917,7 +6917,7 @@ msgstr "プロパティ設定で、**スプリング長さ**を「5」に、**�
 
 #: g101/3d/101_3d_03.md
 msgid "In the last part, we covered how to import 3D objects and how to arrange them in a scene. In this installment, we'll add more objects to the scene, including a user-controlled character."
-msgstr "前回の解説では、3Dオブジェクトのインポート方法とシーン内での配置方法について取り上げました。今回のチュートリアルでは、さらに多くのオブジェクトを追加し、ユーザー操作可能なキャラクターも実装していきます。"
+msgstr "前回の解説では、3Dオブジェクトのインポート方法とシーン内での配置方法について取り上げました。今回のチュートリアルでは、さらにオブジェクトを追加し、ユーザー操作可能なキャラクターも実装していきます。"
 
 #: g101/3d/101_3d_03.md
 msgid "![alt](/godot_recipes/4.x/img/3d_move_01.gif)"
@@ -7044,7 +7044,7 @@ msgid ""
 msgstr ""
 "前のステップで作成した「Ground」平面と木箱を含むシーンを開いてください。\n"
 "まず、木箱を削除し、大型ブロックのインスタンスを追加します。これらのブロックを整列させて配置できるようにしたいので、以下の手順を実行してください。\n"
-"ビューポート上部の「Transform」メニューから「スナップ設定」を選択します → _移動方向スナップ_ を `0.5` に設定します。\n"
+"ビューポート上部の「Transform」メニューから「スナップ設定」を選択します → _移動スナップ_ を `0.5` に設定します。\n"
 "次に、「スナップモード」ボタンをクリックするか（または **`Y`** キーを押す）ことでスナップモードを有効にします。これでブロックをいくつか複製し、ドラッグして配置できるようになります。"
 
 #: g101/3d/101_3d_03.md
@@ -7057,7 +7057,7 @@ msgid ""
 "Open a new scene and start with a {{< gd-icon CharacterBody3D >}}`CharacterBody3D` named \"Character\". This `PhysicsBody` node behaves very much like its 2D equivalent (you've already done the 2D tutorials, right?). It has a `move_and_slide()` method that we'll use to perform the movement and collision detection."
 msgstr ""
 "次に、プラットフォーム上を歩き回れるようにキャラクターを作成します。\n"
-"新しいシーンを開き、\"Character\"という名前の{{< gd-icon CharacterBody3D >}}`CharacterBody3D`コンポーネントを追加します。この`PhysicsBody`ノードは2D版とほぼ同じ動作をします（2Dチュートリアルは既に習得済みですよね？）。このコンポーネントには`move_and_slide()`メソッドが用意されており、これを使って移動と衝突検出を行います。"
+"新しいシーンを開き、\"Character\"という名前の{{< gd-icon CharacterBody3D >}}`CharacterBody3D`コンポーネントを追加します。この`PhysicsBody`ノードは2D版とほぼ同じ動作をします（2Dチュートリアルはお済みですか？）。このコンポーネントには`move_and_slide()`メソッドが用意されており、これを使って移動と衝突検出を行います。"
 
 #: g101/3d/101_3d_03.md
 msgid "If you're curious how you would do this in first person, see the [Basic FPS Character](/godot_recipes/4.x/3d/basic_fps/index.html) recipe. You'll notice several similarities with the 3rd person script we wrote above."
@@ -7345,7 +7345,7 @@ msgid ""
 "The area is featureless right now, but to make things more visually\n"
 "interesting, you can add individual lights in each room (more about lighting\n"
 "in a later tutorial). Here's an example of adding some `OmniLight` and `SpotLight` nodes to the scene:"
-msgstr "現在このエリアには特徴がありませんが、見た目をより印象的にするために、各部屋ごとに個別のライトを追加できます（照明に関する詳細は後日解説するチュートリアルで詳しく説明します）。以下に、シーンにいくつかの`OmniLight`と`SpotLight`ノードを追加する例を示しましょう。"
+msgstr "現在このエリアには特徴がありませんが、見た目をより印象的にするために、各部屋ごとに個別のライトを追加できます（ライティングに関する詳細は後日解説するチュートリアルで詳しく説明します）。以下に、シーンにいくつかの`OmniLight`と`SpotLight`ノードを追加する例を示しましょう。"
 
 #: g101/3d/101_3d_06.md
 msgid ""
@@ -7609,7 +7609,7 @@ msgstr "ルートノードにスクリプトを追加し、以下の内容を追
 
 #: g101/3d/101_3d_02.md
 msgid "Why is the scene so dark? Because there's no light! By default, Godot doesn't add any lighting or environment to your scenes, like it does in the editor viewport. This is great when you want to set up your own specific lighting, but for a quick example scene like this, there's a shortcut."
-msgstr "シーンが暗く表示される理由は、照明が全く設定されていないからです。デフォルトでは、Godotはエディタのビューポートと同様に、シーンに任意の照明や環境設定を追加しません。これは独自のライティングをカスタマイズしたい場合には便利ですが、このような簡易サンプルシーンの場合は、ショートカットが使えます。"
+msgstr "シーンが暗く表示される理由は、ライティングが全く設定されていないからです。デフォルトでは、Godotはエディタのビューポートと同様に、シーンに任意のライティングや環境設定を追加しません。これは独自のライティングをカスタマイズしたい場合には便利ですが、このような簡易サンプルシーンの場合は、ショートカットが使えます。"
 
 #: g101/3d/101_3d_02.md
 msgid ""
@@ -7623,11 +7623,11 @@ msgstr "次に「crate.glb」を右クリックし、**新しい継承シーン*
 
 #: g101/3d/101_3d_02.md
 msgid "There are multiple light nodes available in 3D, which you can use to create a variety of lighting effects. But we're going to start with {{< gd-icon DirectionalLight3D >}}`DirectionalLight3D`. However, instead of adding one manually, we're going to have Godot use the same one it's using in the editor window. At the top ove the viewport, there are two icons that control the *preview lighting* and *preview environment*. If you click the three dots next to them, you can see their settings."
-msgstr "3D環境には多種多様な照明効果を作成可能なライトノードが複数用意されています。まずは{{< gd-icon DirectionalLight3D >}}`DirectionalLight3D`から解説を始めましょう。ただし手動で追加するのではなく、エディタウィンドウで使用されているのと同じライトを使用する方法を紹介します。ビューポート上部には、*プレビューライティング*と*プレビュー環境*を制御する2つのアイコンがあります。これらの横にある三点リーダーをクリックすると、その設定内容を確認できます。"
+msgstr "3D環境には多種多様なライティング効果を作成可能なライトノードが複数用意されています。まずは{{< gd-icon DirectionalLight3D >}}`DirectionalLight3D`から解説を始めましょう。ただし手動で追加するのではなく、エディタウィンドウで使用されているのと同じライトを使用する方法を紹介します。ビューポート上部には、*プレビューライティング*と*プレビュー環境*を制御する2つのアイコンがあります。これらの横にある三点リーダーをクリックすると、その設定内容を確認できます。"
 
 #: g101/3d/101_3d_02.md
 msgid "### Lighting"
-msgstr "### 照明設備"
+msgstr "### ライティング"
 
 #: g101/3d/101_3d_02.md
 msgid ""
@@ -7664,7 +7664,7 @@ msgstr "{{% /notice %}}"
 
 #: g101/3d/101_3d_02.md
 msgid "Create a new scene with a {{< gd-icon Node3D >}}`Node3D` root. The first child we'll add is one to give us a \"ground\" to stack some crates on. Add a {{< gd-icon StaticBody3D >}}`StaticBody3D` called \"Ground\", and to that add a {{< gd-icon MeshInstance3D >}}`MeshInstance3D`. In the **Mesh** property, select \"New BoxMesh\" and then click it to open its properties. Set **Size** to `(10, 0.1, 10)` so that we have a nice large surface. However, it would look better if it weren't plain white."
-msgstr "{{< gd-icon Node3D >}}`Node3D`をルートとして新規シーンを作成します。最初に追加する子オブジェクトは、木箱を積み上げるための「地面」機能を提供するものです。\"Ground\"という名前の {{< gd-icon StaticBody3D >}}`StaticBody3D`を作成し、それに {{< gd-icon MeshInstance3D >}}`MeshInstance3D`を追加します。**メッシュ** プロパティで \"新規 BoxMesh\" を選択し、クリックしてそのプロパティを開きます。**サイズ** を `(10, 0.1, 10)` に設定することで、広々とした表面を確保できます。ただし、白色一色では見た目がやや単調になるため、もう少し工夫を加えましょう。"
+msgstr "{{< gd-icon Node3D >}}`Node3D`をルートとして新規シーンを作成します。最初に追加する子オブジェクトは、木箱を積み上げるための「地面」機能を提供するものです。\"Ground\"という名前の {{< gd-icon StaticBody3D >}}`StaticBody3D`を作成し、それに {{< gd-icon MeshInstance3D >}}`MeshInstance3D`を追加します。**メッシュ** プロパティから 新規で「BoxMesh」 を選択し、クリックしてそのプロパティを開きます。**サイズ** を `(10, 0.1, 10)` に設定することで、広々とした表面を確保できます。ただし、白色一色では見た目がやや単調になるため、もう少し工夫を加えましょう。"
 
 #: g101/3d/101_3d_02.md
 msgid "Importing 3D Objects"
@@ -7723,7 +7723,7 @@ msgstr "メッシュのプロパティには、さらに**マテリアル**設�
 
 #: g101/3d/101_3d_02.md
 msgid "Click the **Add Sun to Scene** button, and Godot will add a {{< gd-icon DirectionalLight3D >}}`DirectionalLight3D` to your scene. Click **Add Environment to Scene** and it will do the same with the preview sky by adding a {{< gd-icon WorldEnvironment >}}`WorldEnvironment` node."
-msgstr " 「シーンに太陽を追加」ボタンをクリックしてください。Godotはシーンに `DirectionalLight3D` ノードを追加します。次に「環境をシーンに追加」をクリックすると、プレビュー用の空に対しても同様に処理が行われ、`WorldEnvironment` ノードが追加されます。"
+msgstr " 「太陽をシーンに追加」ボタンをクリックしてください。Godotはシーンに `DirectionalLight3D` ノードを追加します。次に「環境をシーンに追加」をクリックすると、プレビュー用の空に対しても同様に処理が行われ、`WorldEnvironment` ノードが追加されます。"
 
 #: g101/3d/101_3d_05.md
 msgid ""
@@ -9109,7 +9109,7 @@ msgid ""
 "good rendering pipeline needs to work with modern GPU features, high resolution\n"
 "displays, and effects like lighting and perspective, while maintaining a high\n"
 "frame rate."
-msgstr "「レンダリング」とは、プレイヤーの画面にゲームを表示するプロセスです。優れたレンダリングパイプラインでは、現代的なGPU機能、高解像度ディスプレイ、照明や透視投影といった効果を適切に処理しつつ、高いフレームレートを維持することが求められます。"
+msgstr "「レンダリング」とは、プレイヤーの画面にゲームを表示するプロセスです。優れたレンダリングパイプラインでは、現代的なGPU機能、高解像度ディスプレイ、ライティングや透視投影といった効果を適切に処理しつつ、高いフレームレートを維持することが求められます。"
 
 #: g101/start/101_01.md
 msgid ""
@@ -15270,7 +15270,7 @@ msgid ""
 "- [Drag-select multiple units](/godot_recipes/3.x/input/multi_unit_select/)"
 msgstr ""
 "- [入力操作: Input Actions](/godot_recipes/3.x/input/input_actions/)\n"
-"- [複数ユニットのドラッグ選択方法](/godot_recipes/3.x/input/multi_unit_select/)"
+"- [マウスドラッグでのユニットの選択](/godot_recipes/3.x/input/multi_unit_select/)"
 
 #: 2D/touchscreen_camera.md
 msgid "<video controls src=\"/godot_recipes/4.x/img/touch_camera_02.webm\"></video>"
