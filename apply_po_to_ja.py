@@ -46,8 +46,21 @@ def translate_content(content, translations):
     # Protect code blocks (```)
     content = re.sub(r'```.*?```', protect, content, flags=re.DOTALL)
     
+    # Words to preserve in English when standalone or in simple markup
+    PRESERVE_WORDS = {'Physics'}
+    
     # Perform translation replacement on the masked content
     for msgid in sorted_keys:
+        # Check if msgid is essentially just a preserved word
+        # (remove common markdown/HTML/spacing)
+        clean_msgid = re.sub(r'<[^>]+>', '', msgid)
+        clean_msgid = clean_msgid.replace('&nbsp;', '')
+        clean_msgid = clean_msgid.strip('*# `\t\n')
+        
+        if clean_msgid in PRESERVE_WORDS:
+            # Skip this translation for standalone technical terms
+            continue
+            
         if msgid in content:
             content = content.replace(msgid, translations[msgid])
             
