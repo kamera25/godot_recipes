@@ -1,5 +1,5 @@
 ---
-title: "Shade d’impact"
+title: "衝撃波シェーダー"
 weight: 5
 draft: true
 ---

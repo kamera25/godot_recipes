@@ -51,7 +51,7 @@ func add_trauma(amount):
     trauma = min(trauma + amount, 1.0)
 ```
 
-関数 `add_trauma()` は、揺れを開始または強化するために使用する機能です。引数には 0 から 1 の間の値を指定してください。
+`add_trauma()` 関数は、揺れを開始または強化するために使用する機能です。引数には 0 から 1 の間の値を指定してください。
 
 ```gdscript
 func _process(delta):

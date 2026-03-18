@@ -27,7 +27,7 @@ func _physics_process(delta):
 
 <video controls src="/godot_recipes/4.x/img/2d_align_01.webm"></video>
 
-ご覧の通り、いくつかの問題があります。第一に、キャラクターは走っている時に斜面から滑り落ちてしまいます。また、入力がない状態でも坂を滑って降りていきます。
+ご覧の通りこれには問題があります。第一に、キャラクターは走っている時に斜面から滑り落ちてしまいます。また、入力がない状態でも坂を滑って降りていきます。
 
 以下の方法で部分的に解決できます。`move_and_slide()`から`move_and_slide_with_snap()`に変更する：
 
@@ -65,7 +65,7 @@ velocity = move_and_slide_with_snap(velocity.rotated(rotation),
 velocity = velocity.rotated(-rotation)
 ```
 
-ここではいくつか変更点がありますので、詳しく見ていきましょう。
+ここで変更点がありますので、詳しく見ていきましょう。
 
 * `snap`ベクトルは現在ローカルの下向きベクトルとなっており、斜面に対して常に垂直方向を指し示すようになります。
 * `floor_normal`パラメータもローカル上向き方向（`-transform.y`）に変更されます。

@@ -9,7 +9,7 @@ ghcommentid: 68
 本チュートリアルはGodotレシピ集が公開される前に執筆されたものです。今後、当サイトの他のドキュメントと同様にフォーマットを更新する予定です。
 {{% /notice %}}
 
-Godotでは、衝突判定と応答処理を提供するために複数のコリジョンオブジェクトを用意しています。プロジェクトに最適なものを選択するのは時に複雑ですが、各機能の仕組みとその長所・短所を理解しておけば、問題を回避しつつ開発を簡素化できます。このチュートリアルでは、`KinematicBody2D`ノードについて詳細に解説し、実際の使用例をいくつかご紹介します。
+Godotでは、衝突判定と応答処理を提供するために複数のコリジョンオブジェクトを用意しています。プロジェクトに最適なものを選択するのは時に複雑ですが、各機能の仕組みとその長所・短所を理解しておけば、問題を回避しつつ開発を簡素化できます。このチュートリアルでは、`KinematicBody2D`ノードについて詳細に解説し、実際の使用例をご紹介します。
 
 ## 導入：物理ボディについて
 
@@ -230,8 +230,8 @@ func _physics_process(delta):
 {{< highlight python>}}
 extends KinematicBody2D
 
-var 速度 = 750
-var 速度ベクトル = Vector2()
+var speed = 750
+var velocity = Vector2()
 
 func start(pos, dir):
 	rotation = dir
@@ -283,22 +283,15 @@ var 新規アニメ
 
 funció _ready():
 
-function change_state(new_state) {
-  state = new_state;
-  switch (state) {
-    case IDLE:
-      new_anim = 'idle';
-      break;
-    case RUN:
-      new_anim = 'run';
-      break;
-    case JUMP:
-      new_anim = 'jump_up';
-      break;
-    default:
-      new_anim = 'unknown';
-  }
-}
+func change_state(new_state):
+    state = new_state
+    match state:
+        IDLE:
+            new_anim = 'idle'
+        RUN:
+            new_anim = 'run'
+        JUMP:
+            new_anim = 'jump_up'
 
 func get_input():
     velocity.x = 0

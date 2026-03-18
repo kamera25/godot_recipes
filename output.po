@@ -8507,8 +8507,8 @@ msgid ""
 "to orient the bullet and make it move forward (remember in Godot's orientation,\n"
 "\"forward\" is along the negative **z** axis)."
 msgstr ""
-"// プレイヤーの位置から正確に前方へ発射するため、プレイヤーのトランスフォームを start() に渡し、\n"
-"// これを使用して弾丸の方向を調整し、前進させます (Godot では向きに関して、「前方」は負の z軸方向です)。"
+"プレイヤーの位置から正確に前方へ発射するため、プレイヤーのトランスフォームを start() に渡し、\n"
+"これを使用して弾丸の方向を調整し、前進させます (Godot では向きに関して、「前方」は負の z軸方向です)。"
 
 #: g101/3d/101_3d_04.md
 msgid "Add a spike instance to your level and try it out:"
@@ -8538,7 +8538,8 @@ msgid ""
 "    transform = xform\n"
 "    velocity = -transform.basis.z * speed"
 msgstr ""
-"transform = xform\n"
+"func start(xform):\n"
+"    transform = xform\n"
 "    velocity = -transform.basis.z * speed"
 
 #: g101/3d/101_3d_04.md
@@ -8558,7 +8559,8 @@ msgid ""
 "        queue_free()\n"
 "{{< /highlight >}}"
 msgstr ""
-"if body is StaticBody:\n"
+"func _on_Bullet_body_entered(body):\n"
+"    if body is StaticBody:\n"
 "        queue_free()\n"
 "{{< /highlight >}}"
 
@@ -8800,9 +8802,7 @@ msgstr "## ベクトルの使用法"
 
 #: g101/gdscript/gdscript_02.md
 msgid "We've taken this quantity and made it a variable. You **declare** a variable by using the keyword `var`, giving the variable a name, and then assigning a value with `=`."
-msgstr ""
-"const 数量 = 10; // 変数の宣言と初期化は同じ行で行えます\n"
-"console.log(数量); // Output: 10"
+msgstr "この数量を変数として定義しました。変数は、キーワード `var` を使用して宣言し、名前を付けた後、`=` 演算子で値を代入することで作成します。"
 
 #: g101/gdscript/gdscript_02.md
 msgid ""
@@ -9262,11 +9262,9 @@ msgid ""
 "1. Since scenes are self-contained objects, you can use them as if they were nodes. Adding the player to the level is as easy as adding any of Godot's built-in nodes.\n"
 "1. Many game objects are not unique - you'll want to have lots of them in the game. Whether you are doing it in the Godot editor or via code, adding copies of the scene object is easy to do."
 msgstr ""
-"* 複雑なプロジェクト管理を効率化できる：特定のシーンに取り組んでいる間、他のシーンのことを気にかける必要がありません。プレイヤーキャラクターに関連するすべての機能に集中でき、ゲームの他の部分から注意が逸れることもありません。\n"
-"\n"
-"* 自己完結型オブジェクトとして扱える：シーンはノードと同様の扱いができます。レベルにプレイヤーを追加する作業は、Godot標準の組み込みノードを配置するのと同じくらい簡単です。\n"
-"\n"
-"* 多くのゲームオブジェクトは複製が必要：ゲーム内に同じ種類のオブジェクトを複数配置したい場合がよくあります。Godotエディタでもコード経由でも、シーンオブジェクトを簡単にコピーして追加できます。"
+"1. 複雑なプロジェクト管理を効率化できる：特定のシーンに取り組んでいる間、他のシーンのことを気にかける必要がありません。プレイヤーキャラクターに関連するすべての機能に集中でき、ゲームの他の部分から注意が逸れることもありません。\n"
+"1. 自己完結型オブジェクトとして扱える：シーンはノードと同様の扱いができます。レベルにプレイヤーを追加する作業は、Godot標準の組み込みノードを配置するのと同じくらい簡単です。\n"
+"1. 多くのゲームオブジェクトは複製が必要：ゲーム内に同じ種類のオブジェクトを複数配置したい場合がよくあります。Godotエディタでもコード経由でも、シーンオブジェクトを簡単にコピーして追加できます。"
 
 #: g101/start/101_04.md
 msgid "Notice that the tab where you added the {{< gd-icon Sprite2D >}}`Sprite2D` in the previous section is called **Scene**. In this tab is where you add the nodes that you wish to use to build your scene."
@@ -10071,7 +10069,7 @@ msgstr "この問題は、スプライトをオフセットしてオブジェク
 
 #: kyn/ysort.md
 msgid "## {{< gd-icon YSort >}}`YSort`"
-msgstr "## `YSort` ({{< gd-icon YSort >}})"
+msgstr "## {{< gd-icon YSort >}}`YSort`"
 
 #: kyn/ysort.md
 msgid "![alt](/godot_recipes/4.x/img/ysort_01.gif)"
@@ -10211,7 +10209,7 @@ msgstr "この例では、AIエージェントは壁や他のエージェント�
 #: kyn/path2d.md
 #, fuzzy
 msgid "## Following a path"
-msgstr "### ターゲットの追跡中"
+msgstr "## ターゲットの追跡中"
 
 #: kyn/path2d.md
 msgid "A *path* is a sequence of points in 2D space, defined by a {{< gd-icon Curve2D >}}`Curve2D` resource. The {{< gd-icon Path2D >}}`Path2D` is a node that allows you to position a path in 2D space, and do create a new path in the editor."
@@ -10464,7 +10462,7 @@ msgid "If your fast-moving body is tunneling through objects, you might need to 
 msgstr "※高速移動する物体が障害物を貫通してしまう場合、この機能を有効にする必要があるかもしれません。「連続衝突判定」は、移動後に個別に衝突チェックを行うのではなく、経路に沿って継続的に物体を動かすことで衝突を事前に予測します。精度は向上しますが処理負荷も大きくなるため、使用には注意が必要です。"
 
 #: kyn/rigidbody2d.md
-msgid "> You should not change a RigidBody2D’s `position` or `linear_velocity` every frame or even very often. If you need to directly affect the body’s state, use `_integrate_forces`, which allows you to directly access the physics state."
+msgid "* You should not change a RigidBody2D’s `position` or `linear_velocity` every frame or even very often. If you need to directly affect the body’s state, use `_integrate_forces`, which allows you to directly access the physics state."
 msgstr "* リジッドボディの位置や線形速度をフレームごとに、あるいは頻繁に変更するのは避けるべきです。状態を直接操作する必要がある場合は、物理演算の状態を直接取得できる `_integrate_forces` メソッドを使用してください。"
 
 #: kyn/rigidbody2d.md
@@ -10501,7 +10499,7 @@ msgstr "![alt](/godot_recipes/4.x/img/rigidbody_ship2.gif)"
 
 #: kyn/rigidbody2d.md
 msgid "Let’s walk through what this script is doing. The two variables, `engine_thrust` and `spin_thrust` control how fast the ship can accelerate and turn. `thrust` will represent the ship’s engine state: `(0, 0)` when coasting, or a vector with the length of `engine_thrust` when powered on. `rotation_dir` will represent what direction the ship is turning. The `screensize` variable will capture the size of the screen, which we’ll be using later."
-msgstr ""
+msgstr "このスクリプトの処理内容を順を追って説明します。このスクリプトでは、2つの変数 `engine_thrust` と `spin_thrust` によって、宇宙船の加速速度と旋回速度を制御します。`thrust` は宇宙船のエンジン状態を表す変数で、惰行時には (0, 0)、エンジンが作動中の場合は `engine_thrust` の長さを持つベクトル値になります。`rotation_dir` は宇宙船の回転方向を表す変数です。また、`screensize` 変数には画面サイズを格納し、後で使用します。"
 
 #: kyn/rigidbody2d.md
 msgid "Another feature of “Asteroids” is that the screen “wraps around”. If the player goes off one side, it teleports to the other side. But we already talked above about how you can’t change a rigid body’s position without breaking the physics engine. This presents a huge problem when working with rigid bodies."
@@ -10539,7 +10537,7 @@ msgstr "![alt](/godot_recipes/4.x/img/kyn_raycast2d_03.png)"
 
 #: kyn/raycast2d.md
 msgid "* `get_collision_point()`"
-msgstr "*  `get_collision_point()` 関数"
+msgstr "*  `get_collision_point()`"
 
 #: kyn/raycast2d.md
 msgid "## {{< gd-icon RayCast2D >}}RayCast2D"
@@ -11198,7 +11196,7 @@ msgstr "In `_physics_process()` we'll populate the context arrays and execute th
 
 #: ai/context_map.md
 msgid "* [Andrew Fray: Context Behaviours Know How to Share](https://andrewfray.wordpress.com/2013/03/26/context-behaviours-know-how-to-share/)"
-msgstr ""
+msgstr "* [Andrew Fray: Context Behaviours Know How to Share](https://andrewfray.wordpress.com/2013/03/26/context-behaviours-know-how-to-share/)"
 
 #: ai/context_map.md
 msgid "Combining these two arrays, we can eliminate any `interest` directions that are also contained in `danger`. By summing up the remaining `interest` directions, we're left with a new direction pointing away from the obstacle."
@@ -11302,7 +11300,7 @@ msgstr "![alt](/godot_recipes/4.x/img/ai_context_08.png)"
 
 #: ai/path_follow.md
 msgid "![alt](/godot_recipes/4.x/img/path2d_buttons.png)"
-msgstr "!"
+msgstr "![alt](/godot_recipes/4.x/img/path2d_buttons.png)"
 
 #: ai/path_follow.md
 msgid "Select the \"Add points\" button and click to start adding. If you want a closed curve, the \"Close curve\" button will connect the last point to the first one."
@@ -11462,7 +11460,7 @@ msgstr "<video controls src='/godot_recipes/img/.webm'></video>"
 
 #: shaders/shockwave.md
 msgid "Shockwave shader"
-msgstr "Shade d’impact"
+msgstr "衝撃波シェーダー"
 
 #: shaders/intro.md
 msgid "This ramps the alpha channel down, resulting in a fade-out effect."
@@ -11765,7 +11763,9 @@ msgid ""
 "{{% notice note %}}\n"
 "This recipe applies equally well in both 2D and 3D nodes.\n"
 "{{% /notice %}}"
-msgstr "このレシピは2Dノードと3Dノードの両方に同様に適用できます。"
+msgstr ""
+"{{% notice note %}}\n"
+"このレシピは2Dノードと3Dノードの両方に同様に適用できます。{{% /notice %}}"
 
 #: physics/character_vs_rigid.md
 msgid "Then, we've placed the player on the \"player\" layer (layer 2), and configured the mask to ignore the \"items\":"
@@ -11841,8 +11841,8 @@ msgid ""
 "var dragging\n"
 "var drag_start = Vector2()"
 msgstr ""
-"var ドラッグ中: bool = false\n"
-"var ドラッグ開始位置: Vector2 = Vector2()"
+"var dragging\n"
+"var drag_start = Vector2()"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -11938,7 +11938,9 @@ msgstr "上記と同様に、以下のノード構造を用いて艦船用の新
 msgid ""
 "func _ready():\n"
 "    screensize = get_viewport().get_visible_rect().size"
-msgstr "screensize = get_viewport().get_visible_rect().size"
+msgstr ""
+"func _ready():\n"
+"    screensize = get_viewport().get_visible_rect().size"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -12106,15 +12108,9 @@ msgid ""
 "function is called every frame in `_process()`."
 msgstr ""
 "next,\n"
-"the `input()` function captures the state of keys and enables/disables the ship's thrust,\n"
-"as well as setting the rotation direction (`rotation_dir`) to either positive or negative.\n"
-"This function is called every frame in the `_process()` method.\n"
-"\n"
-"## Explanation:\n"
-"- **Keystates Capture**: The `input()` function reads the current key states to determine which keys are currently pressed.\n"
-"- **Thrust Control**: It manages whether the spaceship's thrust is active or not.\n"
-"- **Rotation Direction**: Sets the rotation direction to either positive or negative, controlling the ship's turning behavior.\n"
-"- **Frame Update**: This functionality is called every frame in the `_process()` method to ensure it updates continuously during gameplay."
+"次に、`input()` 関数はキー状態を取得し、宇宙船の `thrust` を\n"
+"オン/オフに設定するとともに、回転方向 (`rotation_dir`) を正または負に設定します。この\n"
+"関数は毎フレーム `_process()` 内で呼び出されます。"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -12134,8 +12130,9 @@ msgid ""
 "> This means you need to add a `Rotation` of `90` to the `Sprite` so it will\n"
 "> match the body's direction."
 msgstr ""
-"神父德3.0中，角度零度指的是向右方向（沿x軸方向）。\n"
-"　　这意味着您需要为`Sprite`添加90度的旋转，以使其与身体方向保持一致。"
+"> 注意：Godot 3.0では、0度は右方向（**x** 軸に沿って）を指します。\n"
+"> このため、`Sprite` に `Rotation` を 90度追加する必要があります。そうすることで\n"
+"> スプライトの向きが物体の方向と一致するようになります。"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -12152,8 +12149,8 @@ msgid ""
 "var screensize"
 msgstr ""
 "var thrust = Vector2()\n"
-"    var rotation_dir = 0\n"
-"    var screensize"
+"var rotation_dir = 0\n"
+"var screensize"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -12237,7 +12234,7 @@ msgstr "![alt](/godot_recipes/4.x/img/rigidbody_block_scene.png)"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "![alt](/godot_recipes/4.x/img/ship_red.png)"
-msgstr "<image src=\"/godot_recipes/4.x/img/ship_red.png\"></image>"
+msgstr "![alt](/godot_recipes/4.x/img/ship_red.png)"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -12542,7 +12539,7 @@ msgid ""
 "|`rotate_right`|**d** or →|\n"
 "|`rotate_left`|**a** or ←|"
 msgstr ""
-"|入力方法|キー|\n"
+"|アクション|キー|\n"
 "|-------|---|\n"
 "|`thrust`| **w** または ↑|\n"
 "|`rotate_right`| **d** または →|\n"
@@ -12638,7 +12635,7 @@ msgstr "![alt](/godot_recipes/4.x/img/asteroids_warp.gif)"
 
 #: physics/asteroids_physics.md
 msgid "Add a script to the body, and let's define some variables:"
-msgstr "スクリプトをボディに追加し、いくつかの変数を定義しましょう。"
+msgstr "RigidBody2Dにスクリプトを追加し、変数を定義しましょう。"
 
 #: physics/asteroids_physics.md
 msgid "Then, in `get_input()`, we'll set a random position:"
@@ -12863,22 +12860,15 @@ msgid ""
 "        JUMP:\n"
 "            new_anim = 'jump_up'"
 msgstr ""
-"function change_state(new_state) {\n"
-"  state = new_state;\n"
-"  switch (state) {\n"
-"    case IDLE:\n"
-"      new_anim = 'idle';\n"
-"      break;\n"
-"    case RUN:\n"
-"      new_anim = 'run';\n"
-"      break;\n"
-"    case JUMP:\n"
-"      new_anim = 'jump_up';\n"
-"      break;\n"
-"    default:\n"
-"      new_anim = 'unknown';\n"
-"  }\n"
-"}"
+"func change_state(new_state):\n"
+"    state = new_state\n"
+"    match state:\n"
+"        IDLE:\n"
+"            new_anim = 'idle'\n"
+"        RUN:\n"
+"            new_anim = 'run'\n"
+"        JUMP:\n"
+"            new_anim = 'jump_up'"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -13316,6 +13306,11 @@ msgid ""
 "\tb.start($Muzzle.global_position, rotation)\n"
 "\tget_parent().add_child(b)"
 msgstr ""
+"func shoot():\n"
+"\t# \"Muzzle\" is a Position2D placed at the barrel of the gun\n"
+"\tvar b = Bullet.instance()\n"
+"\tb.start($Muzzle.global_position, rotation)\n"
+"\tget_parent().add_child(b)"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -13358,7 +13353,7 @@ msgstr "以下がプレイヤーボディのコードです："
 
 #: physics/Godot3_kinematic2d.md
 msgid "Godot offers a number of collision objects to provide both collision detection and response. Trying to decide which one to use for your project can be confusing. You can avoid problems and simplify development if you understand how each each works and what their pros and cons are. In this tutorial, we'll look at the `KinematicBody2D` node and show some examples of how it can be used."
-msgstr "Godotでは、衝突判定と応答処理を提供するために複数のコリジョンオブジェクトを用意しています。プロジェクトに最適なものを選択するのは時に複雑ですが、各機能の仕組みとその長所・短所を理解しておけば、問題を回避しつつ開発を簡素化できます。このチュートリアルでは、`KinematicBody2D`ノードについて詳細に解説し、実際の使用例をいくつかご紹介します。"
+msgstr "Godotでは、衝突判定と応答処理を提供するために複数のコリジョンオブジェクトを用意しています。プロジェクトに最適なものを選択するのは時に複雑ですが、各機能の仕組みとその長所・短所を理解しておけば、問題を回避しつつ開発を簡素化できます。このチュートリアルでは、`KinematicBody2D`ノードについて詳細に解説し、実際の使用例をご紹介します。"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -13367,9 +13362,10 @@ msgid ""
 "\tposition = pos\n"
 "\tvelocity = Vector2(speed, 0).rotated(rotation)"
 msgstr ""
-"rotation = dir\n"
-"    position = pos\n"
-"    velocity = Vector2(speed, 0).rotated(rotation)"
+"func start(pos, dir):\n"
+"\trotation = dir\n"
+"\tposition = pos\n"
+"\tvelocity = Vector2(speed, 0).rotated(rotation)"
 
 #: physics/Godot3_kinematic2d.md
 msgid "## Introduction: Physics bodies"
@@ -13408,8 +13404,8 @@ msgid ""
 "var speed = 750\n"
 "var velocity = Vector2()"
 msgstr ""
-"var 速度 = 750\n"
-"var 速度ベクトル = Vector2()"
+"var speed = 750\n"
+"var velocity = Vector2()"
 
 #: physics/Godot3_kinematic2d.md
 msgid "### Bouncing/reflecting and collision detection"
@@ -13587,7 +13583,7 @@ msgstr "停止時にわずかに上向きの運動量が生じるため、小さ
 
 #: physics/kinematicbody_slopes.md
 msgid "Checking the [`move_and_slide()` documentation](https://docs.godotengine.org/en/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide), we see there's a parameter called `stop_on_slope`, which defaults to `false`:"
-msgstr "「[move_and_slide()] ドキュメント」(https://docs.godotengine.org/en/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide) を確認すると、`stop_on_slope` というパラメータがあり、デフォルト値は `false` です:"
+msgstr "「[move_and_slide() ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide) を確認すると、`stop_on_slope` というパラメータがあり、デフォルト値は `false` です:"
 
 #: physics/kinematicbody_slopes.md
 msgid "But there is still a problem, which is easier to see if you use a low value for `gravity`:"
@@ -13705,7 +13701,7 @@ msgstr "![alt](/godot_recipes/4.x/img/springjoint_example.gif)"
 
 #: physics/joints_2d.md
 msgid "<!-- You can download an example project to play with these joints here: [physics_joints.zip](/godot_recipes/3.x/files/physics_joints.zip) -->"
-msgstr "<a target=\"_blank\" href=\"https://github.com/GodotRecipes/PhysicsJointsExample/archive/refs/heads/main.zip\">[物理ジョイントサンプルプロジェクト]</a>をダウンロードできます。 [physics_joints.zip](https://github.com/GodotRecipes/PhysicsJointsExample/archive/refs/heads/main.zip)）"
+msgstr "<!-- You can download an example project to play with these joints here: [physics_joints.zip](/godot_recipes/3.x/files/physics_joints.zip) -->"
 
 #: physics/joints_2d.md
 msgid "![alt](/godot_recipes/4.x/img/groovejoint_example.gif)"
@@ -13732,8 +13728,8 @@ msgid ""
 "- _Length_: The groove's length. The attached bodies can't move past this maximum distance.\n"
 "- _Initial Offset_: Starting \"position\" along the groove."
 msgstr ""
-"- __長さ__：溝の全長。この最大距離を超える位置まで付属パーツは移動できません。\n"
-"- __初期オフセット__：溝に沿った起点となる「位置」です。"
+"- _Length_：溝の全長。この最大距離を超える位置まで付属パーツは移動できません。\n"
+"- _Initial Offset_：溝に沿った起点となる「位置」です。"
 
 #: physics/joints_2d.md
 msgid "![alt](/godot_recipes/4.x/img/pinjoint_example2.gif)"
@@ -13949,7 +13945,7 @@ msgstr "マウスでリジッドボディを選択して移動させたい場合
 
 #: physics/rigidbody_drag_drop.md
 msgid "Create a main scene with some static body obstacles or a {{< gd-icon TileMap >}}`TileMap` and instance a few copies of the pickable body."
-msgstr "メインシーンを作成し、静的な障害物を配置するか、{{< gd-icon TileMap >}}`TileMap`を使用して、選択可能なボディのインスタンスをいくつか作成してください。"
+msgstr "メインシーンを作成し、静的な障害物を配置するか、{{< gd-icon TileMap >}}`TileMap`を使用して、選択可能なボディのインスタンスを作成してください。"
 
 #: physics/rigidbody_drag_drop.md
 msgid "Here's the script for the main scene. We start by connecting the `clicked` signal on any pickable bodies that are in the scene."
@@ -14029,7 +14025,7 @@ msgstr "物理"
 
 #: 2D/2d_align_surface.md
 msgid "We've changed a few things here, so let's look at them carefully."
-msgstr "ここではいくつか変更点がありますので、詳しく見ていきましょう。"
+msgstr "ここで変更点がありますので、詳しく見ていきましょう。"
 
 #: 2D/2d_align_surface.md
 msgid ""
@@ -14071,7 +14067,7 @@ msgstr "この手法により、さまざまなプラットフォーマー風の
 
 #: 2D/2d_align_surface.md
 msgid "As you can see, there are a couple of problems. First, the character flies off the slope when running. It's also sliding down the slope when there's no input."
-msgstr "ご覧の通り、いくつかの問題があります。第一に、キャラクターは走っている時に斜面から滑り落ちてしまいます。また、入力がない状態でも坂を滑って降りていきます。"
+msgstr "ご覧の通りこれには問題があります。第一に、キャラクターは走っている時に斜面から滑り落ちてしまいます。また、入力がない状態でも坂を滑って降りていきます。"
 
 #: 2D/2d_align_surface.md
 msgid "<video controls src=\"/godot_recipes/4.x/img/2d_align_02.webm\"></video>"
@@ -14249,15 +14245,11 @@ msgstr "プロジェクトコードはこちらよりダウンロードできま
 
 #: 2D/grid_movement.md
 msgid "We'll ignore any input while the tween is running and remove the direct `position` change so that the tween can handle it."
-msgstr ""
-"while tween_running:\n"
-"    # Tween実行中は入力を無視し、直接的な位置変更を削除して\n"
-"    # Tweenが適切に処理できるようにする。\n"
-"    pass"
+msgstr "Tween が実行されている間は入力を無視し、直接的な位置変更を削除することで、Tween自体がその処理を行えるようにします。"
 
 #: 2D/grid_movement.md
 msgid "Add some input actions to the Input Map. We'll use \"up\", \"down\", \"left\", and \"right\" for this example."
-msgstr "インプットマップにいくつかの操作を追加しましょう。この例では「上」「下」「左」「右」を使用します。"
+msgstr "インプットマップに操作を追加しましょう。この例では「上」「下」「左」「右」を使用します。"
 
 #: 2D/grid_movement.md
 msgid ""
@@ -14855,7 +14847,7 @@ msgstr "さらに、カメラインスタンスを任意の場所に配置し、
 
 #: 2D/screen_shake.md
 msgid "The `add_trauma()` function is what we call to start or increase shaking. Pass it a value from `0` to `1`."
-msgstr "関数 `add_trauma()` は、揺れを開始または強化するために使用する機能です。引数には 0 から 1 の間の値を指定してください。"
+msgstr "`add_trauma()` 関数は、揺れを開始または強化するために使用する機能です。引数には 0 から 1 の間の値を指定してください。"
 
 #: 2D/tilemap_animation.md
 msgid "### Creating an AnimatedTexture"
@@ -19010,10 +19002,7 @@ msgstr "現在各オブジェクトに対して、設定プロパティに基づ
 
 #: games/circle_jump/circle_jump_06.md
 msgid "Right now, we're not handling the buttons when they're pressed. The issue is that we're currently passing the button's name, which won't let us change its texture. Instead, we're going to refactor `register_buttons()` to pass a reference to the button itself:"
-msgstr ""
-"// Current issue: We are currently passing only the button name,\n"
-"// which prevents us from changing its texture.\n"
-"// We're refactoring register_buttons() to accept a direct reference to the button object instead:"
+msgstr "現時点では、ボタンが押されている状態を適切に処理できていません。問題は、現在ボタンの名前を渡しているため、テクスチャを変更することができない点です。代わりに、`register_buttons()` 関数を再設計し、ボタン自体への参照を渡すようにします"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "In this script we'll place the configuration settings for the game."

@@ -56,10 +56,10 @@ Godotの`Joint2D`ノードについて理解したい。
 
 以下のプロパティは溝の動作を制御します。
 
-- __長さ__：溝の全長。この最大距離を超える位置まで付属パーツは移動できません。
-- __初期オフセット__：溝に沿った起点となる「位置」です。
+- _Length_：溝の全長。この最大距離を超える位置まで付属パーツは移動できません。
+- _Initial Offset_：溝に沿った起点となる「位置」です。
 
-<a target="_blank" href="https://github.com/GodotRecipes/PhysicsJointsExample/archive/refs/heads/main.zip">[物理ジョイントサンプルプロジェクト]</a>をダウンロードできます。 [physics_joints.zip](https://github.com/GodotRecipes/PhysicsJointsExample/archive/refs/heads/main.zip)）
+<!-- You can download an example project to play with these joints here: [physics_joints.zip](/godot_recipes/3.x/files/physics_joints.zip) -->
 
 ![alt](/godot_recipes/3.x/img/joints_demo.png)
 

@@ -88,8 +88,8 @@ Linear velocityをリセットして`(0, 0)`に設定します。では、ボー
 {{< highlight swift >}}
 extends RigidBody2D
 
-var ドラッグ中: bool = false
-var ドラッグ開始位置: Vector2 = Vector2()
+var dragging
+var drag_start = Vector2()
 
 if event.is_action_pressed("click") and not dragging:
         dragging = true
@@ -122,8 +122,9 @@ if event.is_action_pressed("click") and not dragging:
     - `Sprite`
     - `CollisionShape2D`
 
-神父德3.0中，角度零度指的是向右方向（沿x軸方向）。
-　　这意味着您需要为`Sprite`添加90度的旋转，以使其与身体方向保持一致。
+> 注意：Godot 3.0では、0度は右方向（**x** 軸に沿って）を指します。
+> このため、`Sprite` に `Rotation` を 90度追加する必要があります。そうすることで
+> スプライトの向きが物体の方向と一致するようになります。
 
 デフォルトでは、物理設定により物体の速度と回転運動に適度な_減衰効果が付与されます_。
 宇宙空間には摩擦がないため、本来はいかなる種類の減衰も適用すべきではありません。
@@ -137,10 +138,11 @@ extends RigidBody2D
 エクスポート（int）変数：var spin_thrust
 
 var thrust = Vector2()
-    var rotation_dir = 0
-    var screensize
+var rotation_dir = 0
+var screensize
 
-screensize = get_viewport().get_visible_rect().size
+func _ready():
+    screensize = get_viewport().get_visible_rect().size
 
 func get_input():
     if 入力.is_action_pressed("ui_up"):
@@ -167,15 +169,9 @@ func _physics_process(delta):
 `rotation_dir`は宇宙船の旋回方向を表現します。`screensize`変数には画面サイズを保持し、後ほど使用します。
 
 next,
-the `input()` function captures the state of keys and enables/disables the ship's thrust,
-as well as setting the rotation direction (`rotation_dir`) to either positive or negative.
-This function is called every frame in the `_process()` method.
-
-## Explanation:
-- **Keystates Capture**: The `input()` function reads the current key states to determine which keys are currently pressed.
-- **Thrust Control**: It manages whether the spaceship's thrust is active or not.
-- **Rotation Direction**: Sets the rotation direction to either positive or negative, controlling the ship's turning behavior.
-- **Frame Update**: This functionality is called every frame in the `_process()` method to ensure it updates continuously during gameplay.
+次に、`input()` 関数はキー状態を取得し、宇宙船の `thrust` を
+オン/オフに設定するとともに、回転方向 (`rotation_dir`) を正または負に設定します。この
+関数は毎フレーム `_process()` 内で呼び出されます。
 
 最後に、物理関連の処理は`_physics_process()`内で行う必要があります。ここではまず、船が向いている`方向`に沿って`推力`を適用するために`set_applied_force()`を使用しています。その後、`set_applied_torque()`を使用して船を回転させます。
 

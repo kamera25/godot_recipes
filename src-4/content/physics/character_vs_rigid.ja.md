@@ -10,7 +10,8 @@ draft: false
 
 ## 解決策
 
-このレシピは2Dノードと3Dノードの両方に同様に適用できます。
+{{% notice note %}}
+このレシピは2Dノードと3Dノードの両方に同様に適用できます。{{% /notice %}}
 
 デフォルトでは、 `move_and_slide()` または `move_and_collide()` で移動させた `CharacterBody2D` は、衝突する任意の `RigidBody2D` を押しません。リジッドボディは全く反応せず、単なる `StaticBody2D` と同じように振る舞います。
 

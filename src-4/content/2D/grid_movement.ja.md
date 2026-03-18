@@ -23,7 +23,7 @@ ghcommentid: 21
   - {{< gd-icon RayCast2D >}}`RayCast2D`: 指定された方向への移動が可能かどうかを確認する際に使われます。
   - {{< gd-icon AnimationPlayer >}}`AnimationPlayer`: キャラクターの歩行アニメーションを再生するために使用します。
 
-インプットマップにいくつかの操作を追加しましょう。この例では「上」「下」「左」「右」を使用します。
+インプットマップに操作を追加しましょう。この例では「上」「下」「左」「右」を使用します。
 
 ### 基本的な動き
 
@@ -110,10 +110,7 @@ func _unhandled_input(event):
             move(dir)
 ```
 
-while tween_running:
-    # Tween実行中は入力を無視し、直接的な位置変更を削除して
-    # Tweenが適切に処理できるようにする。
-    pass
+Tween が実行されている間は入力を無視し、直接的な位置変更を削除することで、Tween自体がその処理を行えるようにします。
 
 ```gdscript
 func move(dir):

@@ -96,9 +96,7 @@ var music_buttons = {true: preload("res://assets/images/buttons/musicOn.png"),
                     false: preload("res://assets/images/buttons/musicOff.png")}
 ```
 
-// Current issue: We are currently passing only the button name,
-// which prevents us from changing its texture.
-// We're refactoring register_buttons() to accept a direct reference to the button object instead:
+現時点では、ボタンが押されている状態を適切に処理できていません。問題は、現在ボタンの名前を渡しているため、テクスチャを変更することができない点です。代わりに、`register_buttons()` 関数を再設計し、ボタン自体への参照を渡すようにします
 
 ```gdscript
 button.connect("pressed", self, "_on_button_pressed", [button])

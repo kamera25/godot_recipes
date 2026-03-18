@@ -38,7 +38,7 @@ Add a {{< gd-icon RayCast2D >}}`RayCast2D` node and take a look at the Inspector
 
 ブール型関数。レイが何らかの物体と衝突しているかどうかを判定します。
 
-*  `get_collision_point()` 関数
+*  `get_collision_point()`
 
 光線が衝突している場合、この関数は衝突位置をグローバル座標系で返します。
 

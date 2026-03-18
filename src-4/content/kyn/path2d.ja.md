@@ -52,7 +52,7 @@ ghcommentid: 94
 
 ![alt](/godot_recipes/3.x/img/kyn_path2d_03.png)
 
-### ターゲットの追跡中
+## ターゲットの追跡中
 
 単体では{{< gd-icon Path2D >}} `Path2D`ノードにはほとんど機能がありません。経路に沿って移動するには、{{< gd-icon PathFollow2D >}} `PathFollow2D` ノードも併せて使用が必要です。これは親の {{< gd-icon Path2D >}} `Path2D` に沿って移動する役割を持つノードです。
 
