@@ -8,7 +8,7 @@ ghcommentid: 91
 
 {{< gd-icon Label >}} `ラベル` は、フォーマットされていないテキストを表示するための {{< gd-icon Control >}}`コントロール`ノードであり、テキストの配置や折り返しなどの制御オプションを備えています。
 
-[APIドキュメント](https://docs.godotengine.org/en/stable/classes/class_label.html)
+[APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_label.html)
 
 ### ノードのプロパティ
 

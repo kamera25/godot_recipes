@@ -79,5 +79,5 @@ func _on_gun_cooldown_timeout():
 
 シューティングゲームは撃つ対象がなければ面白くありません。敵キャラの作成に取り掛かりますが、その前にプレイヤーや敵、その他のゲーム内オブジェクトを配置するシーンを作成が必要です。
 
-| {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_04/" icon="fas fa-arrow-left" %}}前のステップ{{% /button %}} | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_06/" icon="fas fa-arrow-right" icon-position="right" %}}次のステップ{{% /button %}} |
+| {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_04/" icon="fas fa-arrow-left" %}}戻る{{% /button %}} | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_06/" icon="fas fa-arrow-right" icon-position="right" %}}次へ{{% /button %}} |
 |------|------:|

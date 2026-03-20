@@ -47,5 +47,5 @@ Godotを起動して新規プロジェクトを開始しましょう。名前は
 
 設定は完了しました。いよいよ開始できます！次のセクションでは、プレイヤーが操作する宇宙船を作成します。
 
-前の手順に戻る：<button href="/godot_recipes/4.x/ja/games/first_2d/">《戻る》</button> |
-   次の手順へ進む：<button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_02/">《次へ》</button> |
+| {{% button href="/godot_recipes/4.x/ja/games/first_2d/" icon="fas fa-arrow-left" %}}戻る{{% /button %}} | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_02/" icon="fas fa-arrow-right" icon-position="right" %}}次へ{{% /button %}} |
+|------|------:|

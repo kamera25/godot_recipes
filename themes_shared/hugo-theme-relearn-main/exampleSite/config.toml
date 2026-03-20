@@ -157,6 +157,39 @@ disableHugoGeneratorInject = true
     url = "tags/"
     weight = 40
 
+  [Languages.ja]
+    title = "Hugo Relearn Theme"
+    weight = 3
+    languageName = "日本語"
+    landingPageName = "<i class='fas fa-home'></i> ホーム"
+
+  [[Languages.ja.menu.shortcuts]]
+    name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+    identifier = "ds"
+    url = "https://github.com/McShelby/hugo-theme-relearn"
+    weight = 10
+
+  [[Languages.ja.menu.shortcuts]]
+    name = "<i class='fas fa-fw fa-camera'></i> ショーケース"
+    url = "more/showcase/"
+    weight = 11
+
+  [[Languages.ja.menu.shortcuts]]
+    name = "<i class='fas fa-fw fa-bookmark'></i> Hugo ドキュメント"
+    identifier = "hugodoc"
+    url = "https://gohugo.io/"
+    weight = 20
+
+  [[Languages.ja.menu.shortcuts]]
+    name = "<i class='fas fa-fw fa-bullhorn'></i> クレジット"
+    url = "more/credits/"
+    weight = 30
+
+  [[Languages.ja.menu.shortcuts]]
+    name = "<i class='fas fa-fw fa-tags'></i> タグ"
+    url = "tags/"
+    weight = 40
+
 # mounts are only needed in this showcase to access the publicly available screenshots;
 # remove this section if you don't need further mounts
 [module]
@@ -206,4 +239,4 @@ disableHugoGeneratorInject = true
   # security reasons
   mermaidInitialize = "{ \"securityLevel\": \"loose\" }"
   mermaidZoom = true
-  additionalContentLanguage = [ "en" ]
+  additionalContentLanguage = [ "en", "ja" ]

@@ -9755,7 +9755,7 @@ msgstr "トランスフォーム"
 
 #: Math/transforms.md
 msgid "Knowing this, we can move the ship forward by moving it along its own **X** axis and we won't have to worry about angles and trig functions. To do this in Godot, we can use the `transform` property, which is available to all [{{< gd-icon Node2D >}}`Node2D`]([https://link](https://docs.godotengine.org/en/latest/classes/class_node2d.html)) derived nodes."
-msgstr "この特性を利用すれば、船を**X軸**に沿って移動させることで簡単に前進できます。角度計算や三角関数を気にする必要もありません。Godotでこれを実現するには、すべての[{{< gd-icon Node2D >}}`Node2D`]([https://link](https://docs.godotengine.org/en/latest/classes/class_node2d.html))派生ノードで利用できる`transform`プロパティを使用します。"
+msgstr "この特性を利用すれば、船を**X軸**に沿って移動させることで簡単に前進できます。角度計算や三角関数を気にする必要もありません。Godotでこれを実現するには、すべての[{{< gd-icon Node2D >}}`Node2D`]([https://link](https://docs.godotengine.org/ja/latest/classes/class_node2d.html))派生ノードで利用できる`transform`プロパティを使用します。"
 
 #: Math/transforms.md
 msgid "## 3D Transforms"
@@ -9964,7 +9964,7 @@ msgstr "### ノードのプロパティ"
 
 #: kyn/label.md
 msgid "[API Documentation](https://docs.godotengine.org/en/stable/classes/class_label.html)"
-msgstr "[APIドキュメント](https://docs.godotengine.org/en/stable/classes/class_label.html)"
+msgstr "[APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_label.html)"
 
 #: kyn/label.md
 msgid "Label"
@@ -10307,7 +10307,7 @@ msgstr "「ポイントを追加」を選択し、エディタウィンドウ内
 
 #: kyn/path2d.md
 msgid "The data of the path is held in this Resource object. It contains the mathematical representation of the curve, and provides some ways to interact with that data. The [API Documentation](https://docs.godotengine.org/en/stable/classes/class_curve2d.html) contains the details, but here are a few useful methods that you may want to use:"
-msgstr "パスのデータはこのリソースオブジェクトに保持されています。これには曲線の数学的表現が含まれており、そのデータと対話するためのいくつかの方法が提供されています。[APIドキュメント](https://docs.godotengine.org/en/stable/classes/class_curve2d.html)に詳細が記載されていますが、ここでは特に役立ついくつかのメソッドを紹介します。"
+msgstr "パスのデータはこのリソースオブジェクトに保持されています。これには曲線の数学的表現が含まれており、そのデータと対話するためのいくつかの方法が提供されています。[APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_curve2d.html)に詳細が記載されていますが、ここでは特に役立ついくつかのメソッドを紹介します。"
 
 #: kyn/path2d.md
 msgid "This is done by making the plane {{< gd-icon Sprite2D >}}`Sprite` a child of the {{< gd-icon PathFollow2D >}}`PathFollow2D` and adding the following to `_process()`:"
@@ -10509,7 +10509,7 @@ msgstr "「アステロイド」のもう一つの特徴は、画面がループ
 msgid "So the answer is to use `_integrate_forces()` *instead* of `_physics_process()`, because in that function you are able to safely modify the body's [Physics2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html). I highly recommend you take a look at the linked document; there is a lot of really useful data provided in the physics state object. For our purposes, the key piece of information is the body’s [Transform2D](http://docs.godotengine.org/en/stable/classes/class_transform2d.html)."
 msgstr ""
 " _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [Physics2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。\n"
-" 関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](http://docs.godotengine.org/en/stable/classes/class_transform2d.html) に関する情報です。"
+" 関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](http://docs.godotengine.org/ja/stable/classes/class_transform2d.html) に関する情報です。"
 
 #: kyn/rigidbody2d.md
 msgid "Play the scene - you should be able to fly around freely:"
@@ -11611,7 +11611,7 @@ msgstr "ピクセルカラーを直接設定するため、Godotアイコンの�
 
 #: shaders/intro.md
 msgid "Hints are available for a variety of data types. See the [Shader Language Reference](https://docs.godotengine.org/en/latest/tutorials/shading/shading_reference/shading_language.html#uniforms) for a full list."
-msgstr "各種データ型に対応するヒントが用意されています。完全なリストについては [シェーダー言語リファレンス](https://docs.godotengine.org/en/latest/tutorials/shading/shading_reference/shading_language.html#uniforms) を参照してください。"
+msgstr "各種データ型に対応するヒントが用意されています。完全なリストについては [シェーダー言語リファレンス](https://docs.godotengine.org/ja/latest/tutorials/shading/shading_reference/shading_language.html#uniforms) を参照してください。"
 
 #: shaders/intro.md
 msgid "The output of a shader program is the color of the set of pixels of the object. Shaders can be used in 2d (`canvas_item` shaders) and 3D (`spatial` shaders)."
@@ -11805,7 +11805,7 @@ msgid ""
 "properties, or by entering an <a href=\"http://docs.godotengine.org/en/latest/classes/class_area2d.html\"><svg width=\"18\" height=\"18\" class=\"icon-icon_area_2d\" target=\"_blank\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_area_2d\"></svg> `Area2D`</a> that is overriding the global physics properties."
 msgstr ""
 "The body's behavior is also affected by the world, via the _Project Settings -> Physics_\n"
-"properties, or by entering an <a href=\"http://docs.godotengine.org/en/latest/classes/class_area2d.html\"><svg width=\"18\" height=\"18\" class=\"icon-icon_area_2d\" target=\"_blank\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_area_2d\"></svg> `Area2D`</a> that is overriding the global physics properties."
+"properties, or by entering an <a href=\"http://docs.godotengine.org/ja/latest/classes/class_area2d.html\"><svg width=\"18\" height=\"18\" class=\"icon-icon_area_2d\" target=\"_blank\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_area_2d\"></svg> `Area2D`</a> that is overriding the global physics properties."
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -16832,7 +16832,7 @@ msgid ""
 "| {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_03/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_05/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n"
 "|------|------:|"
 msgstr ""
-"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_03/\" icon=\"fas fa-arrow-left\" %}}前の手順{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_05/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}次の手順{{% /button %}} |\n"
+"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_03/\" icon=\"fas fa-arrow-left\" %}}戻る{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_05/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}次へ{{% /button %}} |\n"
 "|------|------:|"
 
 #: games/first_2d/first_2d_04.md
@@ -17019,7 +17019,7 @@ msgid ""
 "| {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_04/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_06/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n"
 "|------|------:|"
 msgstr ""
-"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_04/\" icon=\"fas fa-arrow-left\" %}}前のステップ{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_06/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}次のステップ{{% /button %}} |\n"
+"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_04/\" icon=\"fas fa-arrow-left\" %}}戻る{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_06/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}次へ{{% /button %}} |\n"
 "|------|------:|"
 
 #: games/first_2d/first_2d_05.md
@@ -17101,8 +17101,8 @@ msgid ""
 "| {{% button href=\"/godot_recipes/4.x/games/first_2d/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_02/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n"
 "|------|------:|"
 msgstr ""
-"前の手順に戻る：<button href=\"/godot_recipes/4.x/ja/games/first_2d/\">《戻る》</button> |\n"
-"   次の手順へ進む：<button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_02/\">《次へ》</button> |"
+"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/\" icon=\"fas fa-arrow-left\" %}}戻る{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_02/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}次へ{{% /button %}} |\n"
+"|------|------:|"
 
 #: games/first_2d/first_2d_01.md
 msgid "This first game project will guide you through making your first Godot Engine game. While you don't need any previous experience, it's expected that you've at least read through the [Godot 101: Getting Started](/godot_recipes/4.x/g101/start/) section. There, you'll learn about the editor interface and how to get around the Godot UI."
@@ -17198,7 +17198,7 @@ msgid ""
 "| {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_05/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_07/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n"
 "|------|------:|"
 msgstr ""
-"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_05/\" icon=\"fas fa-arrow-left\" %}} 前の項目{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_07/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}} 次の項目{{% /button %}} |\n"
+"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_05/\" icon=\"fas fa-arrow-left\" %}} 戻る{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_07/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}} 次へ{{% /button %}} |\n"
 "|------|------:|"
 
 #: games/first_2d/first_2d_06.md
@@ -17381,8 +17381,8 @@ msgid ""
 "| {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_01/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_03/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n"
 "|------|------:|"
 msgstr ""
-"<hr>\n"
-"    次のステップへ: {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_01/\" icon=\"fas fa-arrow-left\" %}}前に戻る{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_03/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}次へ進む{{% /button %}} |"
+"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_01/\" icon=\"fas fa-arrow-left\" %}}戻る{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_03/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}次へ{{% /button %}} |\n"
+"|------|------:|"
 
 #: games/first_2d/first_2d_02.md
 msgid "The ship will look much more dynamic with a little animation. Included in the art pack are some animations of exhaust flames named \"Boosters\". There are three: one for each version of the ship (left, forward, and right)."
@@ -17486,7 +17486,9 @@ msgstr "## 移動"
 msgid ""
 "| {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_02/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_04/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n"
 "|------|------:|"
-msgstr "│ {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_02/\" icon=\"fas fa-arrow-left\" %}}前の手順{{% /button %}} │ {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_04/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}次の手順{{% /button %}}│"
+msgstr ""
+"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_02/\" icon=\"fas fa-arrow-left\" %}}戻る{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_04/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}次へ{{% /button %}} |\n"
+"|------|------:|"
 
 #: games/first_2d/first_2d_03.md
 msgid "One problem we have is that if you keep moving, you'll go off the screen. We need to lock the player's `position` property inside the bounds of the screen rectangle. Add this line at the top of the script:"
@@ -17587,7 +17589,7 @@ msgid ""
 "| {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_06/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_08/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n"
 "|------|------:|"
 msgstr ""
-"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_06/\" icon=\"fas fa-arrow-left\" %}} 前の手順{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_08/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}次の手順{{% /button %}} |\n"
+"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_06/\" icon=\"fas fa-arrow-left\" %}} 戻る{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_08/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}次へ{{% /button %}} |\n"
 "|------|------:|"
 
 #: games/first_2d/first_2d_07.md
@@ -17755,7 +17757,7 @@ msgid ""
 "| {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_07/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_09/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n"
 "|------|------:|"
 msgstr ""
-"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_07/\" icon=\"fas fa-arrow-left\" %}} 前のステップ{{% /button %}} | {{% button href=\"/godot_secretaries/4.x/games/first_2d/first_2d_09/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}} 次のステップ{{% /button %}} |\n"
+"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_07/\" icon=\"fas fa-arrow-left\" %}}戻る{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_09/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}次へ{{% /button %}} |\n"
 "|------|------:|"
 
 #: games/first_2d/first_2d_08.md
@@ -17851,7 +17853,7 @@ msgid ""
 "| {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_08/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_10/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n"
 "|------|------:|"
 msgstr ""
-"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_08/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_10/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n"
+"| {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_08/\" icon=\"fas fa-arrow-left\" %}}戻る{{% /button %}} | {{% button href=\"/godot_recipes/4.x/ja/games/first_2d/first_2d_10/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}次へ{{% /button %}} |\n"
 "|------|------:|"
 
 #: games/first_2d/first_2d_09.md
@@ -17979,7 +17981,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice style=\"tip\" title=\"背景\" %}}\n"
-"プログラミング面で困難を感じている場合は、以下のリソースを参照してください。\n"
+"プログラミングが難しいと思っている人は、以下のリソースを先に参照してください。\n"
 "* [初めてのGodot: GDScript入門](/godot_recipes/4.x/ja/g101/gdscript/)  - 当サイトのチュートリアル\n"
 "* [Godot公式ドキュメント](https://docs.godotengine.org/ja/latest/getting_started/step_by_step/index.html) - 公式チュートリアル\n"
 "{{% /notice %}}"

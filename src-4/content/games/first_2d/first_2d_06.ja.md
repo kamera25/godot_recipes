@@ -48,5 +48,5 @@ pre: "06. "
 
 メインシーンが完成し、敵キャラクターを追加する準備が整いました。次のステップでは、弾丸と同じ方法で単一の敵用シーンを作成し、その後複数回インスタンス化します。
 
-| {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_05/" icon="fas fa-arrow-left" %}} 前の項目{{% /button %}} | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_07/" icon="fas fa-arrow-right" icon-position="right" %}} 次の項目{{% /button %}} |
+| {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_05/" icon="fas fa-arrow-left" %}} 戻る{{% /button %}} | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_07/" icon="fas fa-arrow-right" icon-position="right" %}} 次へ{{% /button %}} |
 |------|------:|

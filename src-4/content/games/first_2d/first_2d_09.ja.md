@@ -167,6 +167,6 @@ func _on_area_entered(area):
 
 基本機能はほぼ完成しました。あとはゲームの開始と終了方法を追加するだけです。
 
-| {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_08/" icon="fas fa-arrow-left" %}}Prev{{% /button %}} | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_10/" icon="fas fa-arrow-right" icon-position="right" %}}Next{{% /button %}} |
+| {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_08/" icon="fas fa-arrow-left" %}}戻る{{% /button %}} | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_10/" icon="fas fa-arrow-right" icon-position="right" %}}次へ{{% /button %}} |
 |------|------:|
 

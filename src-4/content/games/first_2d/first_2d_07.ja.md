@@ -160,5 +160,5 @@ func _on_enemy_died(value):
 
 シーンを再生すると、画面上部から敵の集団が次々と出現し、定期的に画面下へ落ちていく様子が確認できるはずです。次に、これらに攻撃動作を追加していきましょう。
 
-| {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_06/" icon="fas fa-arrow-left" %}} 前の手順{{% /button %}} | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_08/" icon="fas fa-arrow-right" icon-position="right" %}}次の手順{{% /button %}} |
+| {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_06/" icon="fas fa-arrow-left" %}} 戻る{{% /button %}} | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_08/" icon="fas fa-arrow-right" icon-position="right" %}}次へ{{% /button %}} |
 |------|------:|

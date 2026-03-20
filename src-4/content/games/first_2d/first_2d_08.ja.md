@@ -59,5 +59,5 @@ func _on_shoot_timer_timeout():
 
 メインシーンを再び再生すると、ランダムな敵の弾丸が表示されるはずです。
 
-| {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_07/" icon="fas fa-arrow-left" %}} 前のステップ{{% /button %}} | {{% button href="/godot_secretaries/4.x/games/first_2d/first_2d_09/" icon="fas fa-arrow-right" icon-position="right" %}} 次のステップ{{% /button %}} |
+| {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_07/" icon="fas fa-arrow-left" %}}戻る{{% /button %}} | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_09/" icon="fas fa-arrow-right" icon-position="right" %}}次へ{{% /button %}} |
 |------|------:|

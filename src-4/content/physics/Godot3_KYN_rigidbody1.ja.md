@@ -21,7 +21,7 @@ RigidBody2Dの動作は「質量」「摩擦」「反発」などのプロパテ
 ![alt](/godot_recipes/3.x/img/rigidbody_properties.png)
 
 The body's behavior is also affected by the world, via the _Project Settings -> Physics_
-properties, or by entering an <a href="http://docs.godotengine.org/en/latest/classes/class_area2d.html"><svg width="18" height="18" class="icon-icon_area_2d" target="_blank"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_area_2d"></svg> `Area2D`</a> that is overriding the global physics properties.
+properties, or by entering an <a href="http://docs.godotengine.org/ja/latest/classes/class_area2d.html"><svg width="18" height="18" class="icon-icon_area_2d" target="_blank"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_area_2d"></svg> `Area2D`</a> that is overriding the global physics properties.
 
 ## RigidBody2Dを使う
 

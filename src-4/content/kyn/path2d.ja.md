@@ -12,7 +12,7 @@ ghcommentid: 94
 
 ### `Curve2D`について【{{<  gd-icon Curve2D >}}】
 
-パスのデータはこのリソースオブジェクトに保持されています。これには曲線の数学的表現が含まれており、そのデータと対話するためのいくつかの方法が提供されています。[APIドキュメント](https://docs.godotengine.org/en/stable/classes/class_curve2d.html)に詳細が記載されていますが、ここでは特に役立ついくつかのメソッドを紹介します。
+パスのデータはこのリソースオブジェクトに保持されています。これには曲線の数学的表現が含まれており、そのデータと対話するためのいくつかの方法が提供されています。[APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_curve2d.html)に詳細が記載されていますが、ここでは特に役立ついくつかのメソッドを紹介します。
 
 *  `add_point()` / `remove_point()` / `clear_points()`
 

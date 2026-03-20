@@ -39,10 +39,22 @@ themesDir = "../themes_shared"
     title = 'Godot 4 レシピ'
 
     [[languages.ja.menu.shortcuts]]
-    name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
-    identifier = "ds"
-    url = "https://github.com/kidscancode/godot_recipes"
+    name = "<i class='fab fa-fw fa-github'></i> GitHubリポジトリ"
+    identifier = "ds1"
+    url = "https://github.com/kamera25/godot_recipes"
     weight = 10
+
+    [[languages.ja.menu.shortcuts]]
+    name = "<i class='fab fa-fw fa-github'></i> GitHubリポジトリ(原文)"
+    identifier = "ds2"
+    url = "https://github.com/kidscancode/godot_recipes"
+    weight = 20
+
+    [[languages.ja.menu.shortcuts]]
+    name = "<i class='fas fa-fw fa-book'></i> Kids Can Code"
+    identifier = "kcc"
+    url = "https://kidscancode.org/godot_recipes/"
+    weight = 45
 
     [[languages.ja.menu.shortcuts]]
     name = "<i class='fas fa-tags'></i>&nbsp;タグ"
@@ -52,7 +64,7 @@ themesDir = "../themes_shared"
     [[languages.ja.menu.shortcuts]]
     name = "<i class='fas fa-fw fa-bookmark'></i> Godotドキュメント"
     identifier = "godotdocs"
-    url = "https://docs.godotengine.org/"
+    url = "https://docs.godotengine.org/ja/"
     weight = 40
 
 [params]
