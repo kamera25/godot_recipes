@@ -61,6 +61,10 @@ def main(docs_dir):
                 parser.feed(content)
                 
                 for link in parser.links:
+                    # Skip if link is None or empty
+                    if not link:
+                        continue
+                    
                     # Skip anchors within the same page
                     if link.startswith('#'):
                         continue
