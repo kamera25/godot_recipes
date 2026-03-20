@@ -91,16 +91,17 @@ def load_po(file_path):
     blocks = content.split('\n\n')
     for block in blocks:
         # 複数行対応の簡易パース (シンプル化のため結合して検索)
-        msgid_match = re.search(r'msgid\s+"(.*)"(?:\nmsgstr|$)', block, flags=re.DOTALL)
-        msgstr_match = re.search(r'msgstr\s+"(.*)"', block, flags=re.DOTALL)
+        # msgidとmsgstrのパターンを修正し、複数行の引用符を正しく処理する
+        msgid_match = re.search(r'msgid\s*(?P<msgid_content>(?:"[^"]*"\s*)+)', block, flags=re.DOTALL)
+        msgstr_match = re.search(r'msgstr\s*(?P<msgstr_content>(?:"[^"]*"\s*)+)', block, flags=re.DOTALL)
         
         if msgid_match and msgstr_match:
-            # 複数行の "..."\n"..." を結合
-            msgid = "".join(re.findall(r'"([^"]*)"', msgid_match.group(0)))
-            msgstr = "".join(re.findall(r'"([^"]*)"', msgstr_match.group(0)))
-            # msgidとmsgstrからそれぞれキーワードを除外
-            msgid = msgid.replace('msgid', '', 1).strip()
-            msgstr = msgstr.replace('msgstr', '', 1).strip()
+            # 各引用符で囲まれた部分を抽出し、結合する
+            msgid_parts = re.findall(r'"([^"]*)"', msgid_match.group('msgid_content'))
+            msgstr_parts = re.findall(r'"([^"]*)"', msgstr_match.group('msgstr_content'))
+            
+            msgid = "".join(msgid_parts)
+            msgstr = "".join(msgstr_parts)
             
             if msgid and msgstr:
                 entries[unescape_po_string(msgid)] = unescape_po_string(msgstr)
@@ -131,7 +132,10 @@ def apply_translations(docs_dir, po_file):
             original_content = content
             
             # 各翻訳について、HTMLソース内の元のインナーHTMLを置換する
-            for msgid, msgstr in valid_translations.items():
+            # 長い文字列から先に置換する（部分一致による誤置換を防ぐため）
+            sorted_keys = sorted(valid_translations.keys(), key=len, reverse=True)
+            for msgid in sorted_keys:
+                msgstr = valid_translations[msgid]
                 if msgid in content:
                     # 完全一致で置換 (単純な部分一致を避けるため)
                     content = content.replace(msgid, msgstr)

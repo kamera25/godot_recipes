@@ -99,15 +99,17 @@ def load_po(file_path):
         
     blocks = content.split('\n\n')
     for block in blocks:
-        # 複数行対応
-        msgid_match = re.search(r'msgid\s+"(.*)"(?:\nmsgstr|$)', block, flags=re.DOTALL)
-        msgstr_match = re.search(r'msgstr\s+"(.*)"', block, flags=re.DOTALL)
+        # msgidとmsgstrのパターンを修正し、複数行の引用符を正しく処理する
+        msgid_match = re.search(r'msgid\s*(?P<msgid_content>(?:"[^"]*"\s*)+)', block, flags=re.DOTALL)
+        msgstr_match = re.search(r'msgstr\s*(?P<msgstr_content>(?:"[^"]*"\s*)+)', block, flags=re.DOTALL)
         
         if msgid_match and msgstr_match:
-            msgid = "".join(re.findall(r'"([^"]*)"', msgid_match.group(0)))
-            msgstr = "".join(re.findall(r'"([^"]*)"', msgstr_match.group(0)))
-            msgid = msgid.replace('msgid', '', 1).strip()
-            msgstr = msgstr.replace('msgstr', '', 1).strip()
+            # 各引用符で囲まれた部分を抽出し、結合する
+            msgid_parts = re.findall(r'"([^"]*)"', msgid_match.group('msgid_content'))
+            msgstr_parts = re.findall(r'"([^"]*)"', msgstr_match.group('msgstr_content'))
+            
+            msgid = "".join(msgid_parts)
+            msgstr = "".join(msgstr_parts)
             
             if msgid and msgstr:
                 entries[unescape_po_string(msgid)] = unescape_po_string(msgstr)
