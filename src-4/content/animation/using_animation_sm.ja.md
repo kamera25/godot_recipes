@@ -10,7 +10,7 @@ draft: false
 
 ## 解決策
 
-アニメーション状態機械を作成するには `AnimationTree` (`<{ gd-icon AnimationTree }>`)を使用してください。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御することが可能になります。
+アニメーション状態機械を作成するには {{< gd-icon AnimationTree >}}`AnimationTree` を使用してください。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御することが可能になります。
 
 ### はじめに
 
@@ -104,7 +104,7 @@ func get_input():
 
 ![alt](/godot_recipes/4.x/img/animation_tree_07.gif)
 
-AnimationTreeStateMachineを使用して以下の処理を管理できます。
+AnimationTreeStateMachine を使用して以下の処理を管理できます。
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 

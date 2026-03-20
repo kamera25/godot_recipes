@@ -111,7 +111,7 @@ func update_health(_value, _max_value):
         texture_progress = bar_red
 ```
 
-クリックしてモブの体力ゲージが変化する様子を確認しましょう。
+クリックしてモブのHPゲージが変化する様子を確認しましょう。
 
 ![alt](/godot_recipes/4.x/img/3d_bars_05a.gif)
 
@@ -120,7 +120,7 @@ func update_health(_value, _max_value):
 
 このテクニックを使えば、{{< gd-icon Node2D >}}`Node2D`ノードはもちろん、{{< gd-icon Control >}}`Control`ノード全般（例：{{< gd-icon Label >}}`Label`や{{< gd-icon VideoStreamPlayer >}}`VideoStreamPlayer`など）を3D空間に表示できます。さらに、{{< gd-icon SubViewport >}}`SubViewport`を使えば、2Dゲーム全体を3D空間に「投影」することもできます。
 
-## 関連レシピ
+<!-- ## 関連レシピ
 
 - [オブジェクトのHPバー（2D）](/godot_recipes/4.x/ui/unit_healthbar/) -->
 

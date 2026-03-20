@@ -81,7 +81,7 @@ velocity = velocity.rotated(-rotation)
 
 <video controls src="/godot_recipes/4.x/img/2d_align_06.webm"></video>
 
-以下が完全なスクリプトです：
+以下が完全なスクリプトです。
 
 ```gdscript
 func _physics_process(delta):

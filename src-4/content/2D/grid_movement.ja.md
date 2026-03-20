@@ -137,7 +137,7 @@ func move(dir):
 
 プロジェクトコードはこちらよりダウンロードできます。[https://github.com/godotrecipes/2d_grid_movement/](https://github.com/godotrecipes/2d_grid_movement/)
 
-## 関連レシピ
+<!-- ## 関連レシピ
 
 - [入力アクション設定](/godot_recipes/3.x/input/input_actions/)
 - [補間処理](/godot_recipes/3.x/math/interpolation/) -->

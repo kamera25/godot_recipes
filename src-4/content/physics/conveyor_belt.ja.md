@@ -76,6 +76,6 @@ This works perfectly well with kinematic bodies, too. Here's the same conveyor b
 
 ## 関連レシピ
 
-[プラットフォームキャラクターの実装](http://kidscancode.org/godot_recipes/2d/platform_character)
-[KinematicBody2Dコンポーネントの使用方法](/godot_recipes/3.x/physics/godot3_kinematic2d/)
-[移動式プラットホームの作成方法](/godot_recipes/3.x/2d/moving_platforms/)
+- [プラットフォームキャラクターの実装](http://kidscancode.org/godot_recipes/2d/platform_character)
+- [KinematicBody2Dコンポーネントの使用方法](/godot_recipes/4.x/physics/godot3_kinematic2d/)
+- [プラットホームゲームの作成](/godot_recipes/4.x/2d/moving_platforms/)

@@ -17,7 +17,7 @@ ghcommentid: 18
 ゲームワールドのセットアップに多くの時間をかける必要はありません。2人のプレイヤーは、シンプルな8方向移動を実装した{{< gd-icon KinematicBody2D >}}`KinematicBody2D`オブジェクトです。
 
 {{% notice note %}}
-このパーツのセットアップでお困りの場合は、公式Godotドキュメントの以下のセクションをご覧ください: [2D移動概要](http://docs.godotengine.org/en/stable/tutorials/2d/2d_movement.html)。
+このパーツのセットアップでお困りの場合は、公式Godotドキュメントの以下のセクションをご覧ください: [2D移動概要](http://docs.godotengine.org/ja/stable/tutorials/2d/2d_movement.html)。
 {{% /notice %}}
 
 各操作は、プロジェクト設定の[インプットマップ]セクションで個別に設定されています。「right_1」は右矢印キー、「right_2」はDキーなどです。このように命名することで、コード内で以下の構文を使用でき、開発効率を大幅に向上させられます。

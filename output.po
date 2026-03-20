@@ -98,7 +98,7 @@ msgstr "ではここで、より複雑なシーンツリーを見てみましょ
 
 #: basics/getting_nodes.md
 msgid "For this reason, you should try to avoid using node paths that go *up* the scene tree. In the above situation, if the player instead emitted a signal when the health changed, the UI could listen for that signal to update itself. You could then rearrange and separate nodes without fear of breaking your game."
-msgstr "この理由から、シーンツリーの *上位* 方向へノードパスを指定する操作は避けるべきです。前述の状況では、プレイヤーの体力が変化した時にシグナルを発行するように変更すれば、UIコンポーネントはそのシグナルを受け取って自身の状態を更新できます。この方法なら、ゲームコードに影響を与えることなくノードを自由に再配置・分離することが可能になります。"
+msgstr "この理由から、シーンツリーの *上位* 方向へノードパスを指定する操作は避けるべきです。前述の状況では、プレイヤーのHPが変化した時にシグナルを発行するように変更すれば、UIコンポーネントはそのシグナルを受け取って自身の状態を更新できます。この方法なら、ゲームコードに影響を与えることなくノードを自由に再配置・分離することが可能になります。"
 
 #: basics/getting_nodes.md
 msgid "Understanding node paths"
@@ -110,7 +110,7 @@ msgstr "上記の例は問題なく動作しますが、後々問題を引き起
 
 #: 2D/grid_movement.md 3D/healthbars.md basics/getting_nodes.md
 msgid "<!-- ## Related Recipes"
-msgstr "## 関連レシピ"
+msgstr "<!-- ## 関連レシピ"
 
 #: basics/getting_nodes.md
 msgid "- [Using KinematicBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->"
@@ -341,7 +341,7 @@ msgstr "`owner` はシーン保存時に自動的に設定される `Node` プ�
 
 #: basics/node_communication.md
 msgid "3. Ready order is children-first, parent-last. This means that trying to access a parent's property in a node's `_ready()` can fail because the parent isn't ready yet."
-msgstr "3. 準備済み順序は子ノード優先・親ノード後回しとなっています。つまり、ノードの `_ready()` メソッド内で親プロパティにアクセスしようとすると失敗するケースがあります。これは親ノードがまだ準備中(_readyが呼ばれていない)状態であるためです。"
+msgstr "3. ノードの`_ready()`が呼ばれる順番は、子ノード優先、親ノード後回しとなります。つまり、ノードの `_ready()` メソッド内で親プロパティにアクセスしようとすると失敗するケースがあります。これは親ノードがまだ準備中(`_ready()`が呼ばれていない)状態であるためです。"
 
 #: basics/node_communication.md
 msgid "1. You can't test a scene independently. If you run the scene by itself or in a test scene that doesn't have the *exact* same node setup, `get_node()` will cause a crash."
@@ -425,7 +425,7 @@ msgstr "ノードが子要素を呼び出している場合（つまりツリー
 
 #: basics/node_communication.md
 msgid "Communication between nodes and scenes doesn't have to be complicated. There is a better way."
-msgstr "もっと良い方法があります。ノード間やシーン間のやり取りを複雑にする必要はありません。"
+msgstr "もっと良い方法があります。ノード間やシーン間のやり取りをシンプルにしましょう。"
 
 #: basics/node_communication.md
 msgid "We'll go into detailed examples later in this tutorial, but for now, here's the \"golden rule\" of node communication:"
@@ -447,7 +447,7 @@ msgstr ""
 
 #: basics/node_communication.md
 msgid "Following the rule of calling *down* the tree, a node that's a common parent to the signaling and receiving nodes will by definition know where they are and be ready after both of them."
-msgstr "ツリー構造を「ダウン」方向に辿るルールに従うと、シグナル発信ノードと受信ノードの共通親ノードは、定義上それらの位置を認識しており、両ノードが準備完了した時点で待機状態になります。"
+msgstr "ツリー構造を **下方向** に辿るルールに従うと、シグナル発信ノードと受信ノードの共通親ノードは、定義上それらの位置を認識しており、両ノードが準備完了した時点で待機状態になります。"
 
 #: basics/node_communication.md
 msgid "Looking at this, you may be thinking \"Wait, if I'm connecting to a sibling, won't I need a node paths like `../Sibling`?\". While you *could* do this, it breaks our rule above. The answer to this puzzle is to make sure that connections are made by the *common parent*."
@@ -527,11 +527,11 @@ msgstr "## 2. シグナルの活用方法"
 
 #: basics/node_communication.md
 msgid "Instead the player emits a `health_changed` signal whenever it adds/loses health. We need to send that signal to the UI's `update_health()` function, which handles setting the `Label` value. In the `Player` script we use this code whenever the player's health is changed:"
-msgstr "代わりに、プレイヤーがHP値を増減させるたびに、`health_changed`シグナルが発火します。これをUIの`update_health()`関数に送信する必要があり、この関数では`Label`の表示値を設定する処理を行います。`Player`スクリプトでは、プレイヤーのHP値が変更されるたびに以下のコードを使用しています。"
+msgstr "代わりに、プレイヤーがHPを増減させるたびに、`health_changed`シグナルが発火します。これをUIの`update_health()`関数に送信する必要があり、この関数では`Label`の表示値を設定する処理を行います。`Player`スクリプトでは、プレイヤーのHPが変更されるたびに以下のコードを使用しています。"
 
 #: basics/node_communication.md
 msgid "As a general rule, nodes should manage their children, not the other way around. If you're using `get_parent()` or `get_node(\"..\")`, then you're probably headed for trouble. Node paths like this are *brittle*, meaning they can break easily. The three main problems with this arrangement:"
-msgstr "一般的な原則として、ノードはその子ノードを管理するべきです。逆の関係(子ノードが親ノードを管理する)は避ける必要があります。`get_parent()`や`get_node(\"..\")`を使用している場合、すでに問題が発生し始めています。このようなノードパスは「脆弱」（brittle）であり、容易に壊れてしまう性質があります。この構成には主に3つの重大な問題点があります。"
+msgstr "基本的に、ノードはその子ノードを管理するべきです。逆の関係(子ノードが親ノードを管理する)は避ける必要があります。`get_parent()`や`get_node(\"..\")`を使用している場合、すでに問題が発生し始めています。このようなノードパスは **脆弱** であり、容易に壊れてしまう性質があります。この構成には主に3つの重大な問題点があります。"
 
 #: basics/node_communication.md
 msgid "Let's assume every enemy has an `explode()` function that handles what happens when it dies (playing an animation, spawning dropped items, etc). Now that every enemy is in the group, we can implement our smart bomb function like this:"
@@ -544,7 +544,7 @@ msgstr "## 関連レシピ"
 
 #: basics/understanding_delta.md
 msgid "<!-- - [Using KinematicBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->"
-msgstr "<li>[KinematicBody2Dの使用](/godot_recipes/3.x/physics/godot3_kinematic2d/)</li>"
+msgstr "<!-- - [KinematicBody2Dの使用](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->"
 
 #: basics/understanding_delta.md
 msgid "Try adjusting `delta` and `target_fps` in the following code to see the effect:"
@@ -621,7 +621,7 @@ msgstr ""
 
 #: basics/understanding_delta.md
 msgid "If you don't use `delta` when applying acceleration to your velocity, then your acceleration will be subject to fluctuations in frame rate. This can have a_much more subtle effect on movement - it will be inconsistent, but much more difficult to diagnose."
-msgstr "加速を適用する際に「デルタ値」を考慮しない場合、フレームレートの変動の影響を受けやすくなります。この影響は運動挙動に・より微妙な形で現れます。一貫性を欠く動作となりますが、その原因を特定するのははるかに困難です。"
+msgstr "加速を適用する際に `delta` を考慮しない場合、フレームレートの変動の影響を受けやすくなります。この影響は運動挙動に「より微妙な形」で現れます。発生した場合は辻褄が合わない動作となりますが、その原因を特定する微々たる影響のためとても困難です。"
 
 #: basics/understanding_delta.md
 msgid "When using the `_process()` function, it automatically includes a parameter called `delta` that's passed in from the engine (so does `_physics_process()`, which is used for physics-related code). This is a floating point value representing the length of time since the previous frame. Typically, this will be approximately 1/60 or `0.0167` seconds."
@@ -645,7 +645,7 @@ msgstr "たとえば、重力を適用している場合、これは加速度で
 
 #: basics/understanding_delta.md
 msgid "In the above examples, we've used a `Sprite` to keep things simple, updating the `position` every frame. If you're using a kinematic body (in 2D or 3D), you'll instead be using one of its movement methods. Specifically in the case of `move_and_slide()`, there tends to be some confusion, because it uses the velocity vector, not the position. This means you won't multiply your velocity by `delta` to find distance - the function does that for you. But you will still need to apply it on any *other* calculations, such as the acceleration. For example:"
-msgstr "上記の例では簡略化のため`Sprite`を使用していますが、実際には2D/3D空間における移動ボディを使用する場合、それぞれに適した移動メソッドを使用になります。特に`move_and_slide()`関数については、速度ベクトルを扱うため若干混乱が生じやすい点に注意が必要です。つまり、距離計算のために速度に時間差分（delta）を掛ける必要はありません。これは関数側で自動的に処理されます。ただし、加速度などの他の計算には依然としてこの値を適用が必要です。"
+msgstr "上記の例では簡略化のため`Sprite`を使用していますが、実際には2D/3D空間における移動ボディを使用する場合、それぞれに適した移動メソッドを使用します。また`move_and_slide()`関数については、速度ベクトルを扱うため若干混乱が生じやすい点に注意が必要で、距離計算のために速度に`delta`を掛ける必要はありません。これは関数側で自動的に処理されます。ただし、加速度などの他の計算には依然として`delta`を掛けるひつようがあります。"
 
 #: basics/understanding_delta.md
 msgid "Note that we're multiplying by our timestep each frame to update both `velocity` and `position`. Any quantity that is updated every frame should be multiplied by `delta` to ensure it changes independent or frame rate."
@@ -709,7 +709,7 @@ msgstr "この関数を使用すると、HPを最大値に初期化できます�
 
 #: basics/custom_resources.md
 msgid "Next we have a signal that game objects can subscribe to if they need to know when the player's health changes. You could also add additional signals for the health reaching zero, etc."
-msgstr "次に、ゲームオブジェクトがプレイヤーのHP値変化を監視するために購読できるシグナルがあります。また、HP値がゼロに達するなどの追加イベント用のシグナルも実装できます。"
+msgstr "次に、ゲームオブジェクトがプレイヤーのHP変化を監視するために購読できるシグナルがあります。また、HPがゼロに達するなどの追加イベント用のシグナルも実装できます。"
 
 #: basics/custom_resources.md
 msgid "Once the resource has been created and saved, we're ready to use it. Once again, in this scenario we have the following objects:"
@@ -755,7 +755,7 @@ msgstr "最後に、UIにHPステータスを表示するために、同じHPリ
 
 #: basics/custom_resources.md
 msgid "We won't include all of the code for the game, just the parts that pertain to the health resource."
-msgstr "ゲームの全コードを掲載するのではなく、体力リソースに関連する部分だけを取り上げます。"
+msgstr "ゲームの全コードを掲載するのではなく、HPリソースに関連する部分だけを取り上げます。"
 
 #: basics/custom_resources.md
 msgid "In the _Script_ tab, choose _File>New Script_. Make sure it inherits `Resource` and name it `PlayerHealth.gd`."
@@ -775,7 +775,7 @@ msgstr ""
 "* プレイヤーが障害物に衝突するとダメージを受ける場合があります\n"
 "* 敵キャラクターがプレイヤーに触れたり攻撃したりすることでダメージを与えられます\n"
 "* オブジェクトを拾う、または特定の場所に立つことでプレイヤーが回復できます\n"
-"* ゲーム画面には体力ゲージを表示し、発生する変化を適切に表示が必要です"
+"* ゲーム画面にはHPゲージを表示し、発生する変化を適切に表示が必要です"
 
 #: basics/custom_resources.md
 msgid ""
@@ -818,10 +818,10 @@ msgid ""
 "* Heal zone - an {{< gd-icon Area2D >}}`Area2D` that heals anything that stands in it\n"
 "* Spikes - {{< gd-icon TileMap >}}`TileMap` tiles that cause damage if touched"
 msgstr ""
-"* プレイヤー： `KinematicBody2D`（{{< gd-icon KinematicBody2D >}}）オブジェクト\n"
-"* UI要素：健康状態を表示する `ProgressTexture`（{{< gd-icon TextureProgressBar >}}）を含むコンポーネント\n"
-"* 回復エリア：その範囲内に入った対象を回復する `Area2D`（{{< gd-icon Area2D >}}）ノード\n"
-"* スパイクゾーン：接触するとダメージを与えるタイルマップのタイルセット"
+"* プレイヤー： {{< gd-icon KinematicBody2D >}}`KinematicBody2D` \n"
+"* UI要素：健康状態を表示する {{< gd-icon TextureProgressBar >}}`ProgressTexture` を含むコンポーネント\n"
+"* 回復エリア：その範囲内に入った対象を回復する {{< gd-icon Area2D >}}`Area2D`\n"
+"* スパイクゾーン：接触するとダメージを与える {{< gd-icon TileMap >}}`TileMap` のタイルセット"
 
 #: basics/custom_resources.md
 msgid "These are the properties we'll be using."
@@ -841,15 +841,15 @@ msgstr "### 例：プレイヤーの移動"
 
 #: basics/custom_resources.md
 msgid "For this example, we'll take the concept of player health in a platformer game. A lot of game systems interact with the player's health. For example:"
-msgstr "この例では、プラットフォーマーゲームにおけるプレイヤーの体力管理を取り上げます。多くのゲームプレイシステムはプレイヤーの健康状態と連動しています。"
+msgstr "この例では、プラットフォーマーゲームにおけるプレイヤーのHP管理を取り上げます。多くのゲームプレイシステムはプレイヤーの健康状態と連動しています。"
 
 #: 2D/2d_align_surface.md 3D/simple_airplane.md basics/custom_resources.md
 msgid "Here's the full script:"
-msgstr "以下が完全なスクリプトです："
+msgstr "以下が完全なスクリプトです。"
 
 #: basics/custom_resources.md
 msgid "In addition, there may be other interactions: maybe the game's soundtrack changes as the player's health gets low, or enemy behavior changes based on the player's status."
-msgstr "さらに、他の相互作用も存在する可能性があります。プレイヤーが体力を減らすとゲームのサウンドトラックが変化する、あるいは敵の行動パターンがプレイヤーのステータスに応じて変化する、といった具合です。"
+msgstr "さらに、他の相互作用も存在する可能性があります。プレイヤーがHPを減らすとゲームのサウンドトラックが変化する、あるいは敵の行動パターンがプレイヤーのステータスに応じて変化する、といった具合です。"
 
 #: basics/custom_resources.md
 msgid ""
@@ -869,7 +869,7 @@ msgstr "![alt](/godot_recipes/4.x/img/custom_resource_03.png)"
 
 #: basics/custom_resources.md
 msgid "First, we need to define our new custom resource, which we'll call `PlayerHealth`. This resource needs to keep track of properties related to health. It also provides some functionality and signals to handle the changing of the health amount (such as healing and taking damage)."
-msgstr "まず最初に、新しいカスタムリソース「PlayerHealth」を定義が必要です。このリソースは健康状態に関連するプロパティを管理が必要です。さらに、体力値の変化（回復やダメージを受けるなど）を処理するための機能とシグナルを提供します。"
+msgstr "まず最初に、新しいカスタムリソース「PlayerHealth」を定義が必要です。このリソースは健康状態に関連するプロパティを管理が必要です。さらに、HPの変化（回復やダメージを受けるなど）を処理するための機能とシグナルを提供します。"
 
 #: basics/custom_resources.md
 msgid "Using Custom Resources"
@@ -1012,11 +1012,11 @@ msgstr "オブジェクトを別のオブジェクトの周りで「周回」（
 
 #: basics/rotation.md
 msgid "This works just as well in 3D, too:"
-msgstr "この手法は3D空間でも完璧に機能します。"
+msgstr "この手法は3D空間でも同じように機能します。"
 
 #: basics/rotation.md
 msgid "Place the orbiting sprite in a child node of the main sprite (we're calling it \"Pivot\"). Give it an offset and rotate the `Pivot`."
-msgstr "オービティングスプライトをメインスプライトの子ノードに配置します（ここでは「ピボット」と呼びます）。オフセット値を適用し、「ピボット」を回転させます。"
+msgstr "軌道周回させるスプライトをメインスプライトの子ノードに配置します（ここでは「ピボット」と呼びます）。オフセット値を適用し、「ピボット」を回転させます。"
 
 #: basics/rotation.md
 msgid "![alt](/godot_recipes/4.x/img/circle_motion_02.gif)"
@@ -1028,7 +1028,7 @@ msgstr "円運動"
 
 #: basics/rotation.md
 msgid "This is a common beginner question, and often comes after a bunch of messy experimenting with trig functions. The answer is much simpler:"
-msgstr "これは初心者がよく抱く疑問で、三角関数をあれこれ試した後によく出てきます。答えは実はとてもシンプルです："
+msgstr "これは初心者がよく抱く疑問で、三角関数をあれこれ試した後によく出てきます。答えは実はとてもシンプルです。"
 
 #: basics/migrating.md
 msgid "For detailed examples of using these nodes, see [Platform Character](/godot_recipes/4.x/2d/platform_character/) and/or [Basic FPS Character](/godot_recipes/4.x/3d/basic_fps/)."
@@ -1084,7 +1084,7 @@ msgstr "## Tweens（中間アニメーション）"
 
 #: basics/migrating.md
 msgid "## RNG"
-msgstr "## RNG (乱数生成器)"
+msgstr "## 乱数生成"
 
 #: basics/migrating.md
 msgid "* 2D/3D nodes - In Godot 3.x, 2D nodes had the \"2D\" suffix, but 3D nodes had none. This has been made consistent - they all now have \"2D\" or \"3D\" suffixes. For example: {{< gd-icon RigidBody2D >}}`RigidBody2D` vs. {{< gd-icon RigidBody3D >}}`RigidBody3D`."
@@ -1092,7 +1092,7 @@ msgstr "* 2D/3Dノードの命名規則 - Godot 3.x では2Dノードに「2D」
 
 #: basics/migrating.md
 msgid "## TileMap"
-msgstr "## タイルマップ (TileMap)"
+msgstr "## タイルマップ"
 
 #: basics/migrating.md
 msgid "* {{< gd-icon PackedScene >}}`PackedScene`'s `instance()` function has been renamed to `instantiate()`."
@@ -1778,7 +1778,7 @@ msgstr "使用しているハートのアイコン のサイズは53×45ピク�
 
 #: ui/heart_containers_3.md
 msgid "A common way of displaying the player's health is via a series of icons (typically hearts) that disappear as the player takes damage."
-msgstr "プレイヤーの体力を表示する一般的な方法として、一連のアイコン（通常はハートマーク）を使用する手法があります。プレイヤーがダメージを受けると、これらが徐々に消失していきます。"
+msgstr "プレイヤーのHPを表示する一般的な方法として、一連のアイコン（通常はハートマーク）を使用する手法があります。プレイヤーがダメージを受けると、これらが徐々に消失していきます。"
 
 #: ui/heart_containers_3.md
 msgid "First, the `update_simple()` method. Here, we loop through the heart containers and set the visibility of each {{< gd-icon TextureRect >}}`TextureRect`:"
@@ -1816,7 +1816,7 @@ msgstr ""
 
 #: ui/heart_containers_3.md
 msgid "This image shows what the bar displays when the player has `3` health."
-msgstr "この画像はプレイヤーが「3」の体力を持っている時、バーに表示される内容を表しています。"
+msgstr "この画像はプレイヤーが「3」のHPを持っている時、バーに表示される内容を表しています。"
 
 #: ui/heart_containers_3.md
 msgid "![alt](/godot_recipes/4.x/img/heart_bar_03.png)"
@@ -2183,7 +2183,7 @@ msgstr "プロジェクトのサンプルコードはこちらからダウンロ
 
 #: ui/unit_healthbar.md
 msgid "The `HealthDisplay` should be attached to a unit. If the unit has a `max_health` property, we use that to set the range of the bar (it's `100` by default). We also want the bar to start out hidden, and appear if the unit loses health."
-msgstr "`HealthDisplay`ノードは、ユニットオブジェクトに取り付ける必要があります。もしそのユニットが`max_health`プロパティを持っている場合、その値を使用してバーの表示範囲を設定します（デフォルト値は100です）。また、初期状態ではバーは非表示とし、ユニットのHP値が減少した際にのみ表示されるように設計されています。"
+msgstr "`HealthDisplay`ノードは、ユニットオブジェクトに取り付ける必要があります。もしそのユニットが`max_health`プロパティを持っている場合、その値を使用してバーの表示範囲を設定します（デフォルト値は100です）。また、初期状態ではバーは非表示とし、ユニットのHPが減少した際にのみ表示されるように設計されています。"
 
 #: ui/unit_healthbar.md
 msgid "Here's an example of this system in use. You can download the example project for this below."
@@ -2255,11 +2255,11 @@ msgstr ""
 
 #: ui/unit_healthbar.md
 msgid "Finally, we have a function we can call when the unit's health changes. It updates the value of the bar and sets the texture based on the remaining proportion."
-msgstr "最終的に、ユニットのHP値が変化するたびに呼び出せる関数が完成しました。この関数はバーの表示値を更新し、残りの割合に応じて適切なテクスチャを適用します。"
+msgstr "最終的に、ユニットのHPが変化するたびに呼び出せる関数が完成しました。この関数はバーの表示値を更新し、残りの割合に応じて適切なテクスチャを適用します。"
 
 #: ui/unit_healthbar.md
 msgid "The script starts by loading the three colored bars, which will change as the health decreases. We also store a reference to the progress bar."
-msgstr "スクリプトはまず3本のカラーバーを読み込みます。これらは体力が低下するにつれて変化します。また、プログレスバーへの参照も保持します。"
+msgstr "スクリプトはまず3本のカラーバーを読み込みます。これらはHPが低下するにつれて変化します。また、プログレスバーへの参照も保持します。"
 
 #: ui/object_healthbars.md
 msgid ""
@@ -2771,7 +2771,7 @@ msgstr "コンテナー"
 
 #: ui/_index.md
 msgid "Building user interfaces."
-msgstr "ユーザーインターフェースを構築中です。"
+msgstr "ユーザーインターフェースを構築しましょう。"
 
 #: ui/_index.md
 msgid "UI"
@@ -3391,7 +3391,7 @@ msgstr "### 全体を統合して接続する方法"
 
 #: 3D/healthbars.md
 msgid "Click on the mobs to see the health bars change."
-msgstr "クリックしてモブの体力ゲージが変化する様子を確認しましょう。"
+msgstr "クリックしてモブのHPゲージが変化する様子を確認しましょう。"
 
 #: 3D/healthbars.md
 msgid "Download the project code here: [https://github.com/godotrecipes/3d_object_healthbars](https://github.com/godotrecipes/3d_object_healthbars)"
@@ -5947,7 +5947,7 @@ msgstr "3Dで自動車を作ろう"
 
 #: 3D/kinematic_car/_index.md
 msgid "Making a 3D car using `KinematicBody`."
-msgstr "3Dカーを`KinematicBody`を使用して作成中です。"
+msgstr "3Dカーを`KinematicBody`を使用して作成しましょう。"
 
 #: 3D/kinematic_car/car_camera.md
 msgid "The only parameter to set here is the `lerp_speed`, which controls how quickly the camera updates its position. Set it low, and the camera will \"lag\" behind the car. Set it high, and it will remain locked on."
@@ -6481,7 +6481,7 @@ msgstr "カーソルのカスタマイズ"
 
 #: input/custom_mouse_cursor.md
 msgid "The second parameter sets which system cursor to replace. See the [Input docs](https://docs.godotengine.org/en/latest/classes/class_input.html#enum-input-cursorshape) for the full list."
-msgstr "第2パラメータはどのシステムカーソルを置き換えるかを指定します。完全なリストについては[入力ドキュメント](https://docs.godotengine.org/en/latest/classes/class_input.html#enum-input-cursorshape)を参照してください。"
+msgstr "第2パラメータはどのシステムカーソルを置き換えるかを指定します。完全なリストについては[入力ドキュメント](https://docs.godotengine.org/ja/latest/classes/class_input.html#enum-input-cursorshape)を参照してください。"
 
 #: input/custom_mouse_cursor.md
 msgid "You want to use a custom mouse cursor."
@@ -6599,11 +6599,11 @@ msgstr "![alt](/godot_recipes/4.x/img/animation_tree_07.gif)"
 
 #: animation/using_animation_sm.md
 msgid "You can use the AnimationTreeStateMachine to handle"
-msgstr "AnimationTreeStateMachineを使用して以下の処理を管理できます。"
+msgstr "AnimationTreeStateMachine を使用して以下の処理を管理できます。"
 
 #: animation/animation_state_machine.md animation/using_animation_sm.md
 msgid "Use an {{< gd-icon AnimationTree >}}`AnimationTree` to create an animation _state machine_. This will allow us to organize our animations and most importantly, control the transitions between them."
-msgstr "アニメーション状態機械を作成するには `AnimationTree` (`<{ gd-icon AnimationTree }>`)を使用してください。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御することが可能になります。"
+msgstr "アニメーション状態機械を作成するには {{< gd-icon AnimationTree >}}`AnimationTree` を使用してください。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御することが可能になります。"
 
 #: animation/animation_state_machine.md animation/using_animation_sm.md
 msgid "Note that we're using `return` after traveling to the attack animations. This is so that we won't instead travel to the \"run\" or \"idle\" animations further down in the function."
@@ -11571,7 +11571,7 @@ msgstr "![alt](/godot_recipes/4.x/img/shader_intro_02.png)"
 
 #: shaders/intro.md
 msgid "Every pixel is red. `COLOR` is the output of the fragment shader and is applied to every pixel simultaneously. But what if we want some variation?"
-msgstr "全てのピクセルが赤色になります。`COLOR`はフラグメントシェーダーの出力値であり、これをすべてのピクセルに同時に適用します。しかし、何らかのバリエーションを持たせたい場合は？"
+msgstr "全てのピクセルが赤色になります。`COLOR`はフラグメントシェーダーの出力値であり、これをすべてのピクセルに同時に適用します。しかし、何らかのバリエーションを持たせたい場合はどうしましょうか？"
 
 #: shaders/intro.md
 msgid "### Vertex shader"
@@ -11858,7 +11858,7 @@ msgstr "リジッドボディを使用"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "And the [description for _integrate_forces](http://docs.godotengine.org/en/latest/classes/class_rigidbody2d.html#class-rigidbody2d-integrate-forces):"
-msgstr "[統合力の説明](http://docs.godotengine.org/en/latest/classes/class_rigidbody2d.html#class-rigidbody2d-integrate-forces)："
+msgstr "[_integrate_forces の説明](http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#class-rigidbody2d-integrate-forces)："
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -11994,7 +11994,7 @@ msgid ""
 "etc.) and Godot's built-in physics engine calculates the resulting movement, including\n"
 "collisions, bouncing, rotating, etc."
 msgstr ""
-"<a href=\"http://docs.godotengine.org/en/latest/classes/class_rigidbody2d.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_rigid_body_2d\">\n"
+"<a href=\"http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_rigid_body_2d\">\n"
 "<use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_rigid_body_2d\"></svg> `RigidBody2D`</a> とは、Godot において物理シミュレーションを提供するオブジェクトです。これはつまり、直接 RigidBody2D を操作するわけではないということです。代わりに力（重力、衝撃など）を加えると、Godot の内蔵物理エンジンが衝突・反発・回転などの運動結果を計算してくれます。"
 
 #: physics/Godot3_KYN_rigidbody1.md
@@ -12085,8 +12085,8 @@ msgid ""
 "Add a few <a href=\"http://docs.godotengine.org/en/latest/classes/class_staticbody2d.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_staticbody2d\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_static_body_2d\"></svg>StaticBody2D</a>\n"
 "nodes with rectangular collision shapes to serve as your \"ground\" and walls."
 msgstr ""
-"メインシーンを作成します（通常は<a href=\"http://docs.godotengine.org/en/latest/classes/class_node.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_node\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_node\"></svg>Node</a>を使用します）。\n"
-"地面と壁として機能させるため、長方形の衝突形状を持つ<a href=\"http://docs.godotengine.org/en/latest/classes/class_staticbody2d.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_staticbody2d\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_static_body_2d\"></svg>StaticBody2D</a>ノードをいくつか追加してください。"
+"メインシーンを作成します（通常は<a href=\"http://docs.godotengine.org/ja/latest/classes/class_node.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_node\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_node\"></svg>Node</a>を使用します）。\n"
+"地面と壁として機能させるため、長方形の衝突形状を持つ<a href=\"http://docs.godotengine.org/ja/latest/classes/class_staticbody2d.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_staticbody2d\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_static_body_2d\"></svg>StaticBody2D</a>ノードをいくつか追加してください。"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -12097,9 +12097,9 @@ msgid ""
 "(Explaining transforms is beyond the scope of this document - see [Matrices and transforms](http://docs.godotengine.org/en/latest/learning/features/math/matrices_and_transforms.html)\n"
 "for more information.)"
 msgstr ""
-"このように、`_physics_process()` の代わりに `_integrate_forces()` を使用が必要です。これにより、<a href=\"http://docs.godotengine.org/en/latest/classes/class_physics2ddirectbodystate.html\" target=\"_blank\">Physics2DDirectBodyState</a> オブジェクトにアクセスできるようになります。物理状態オブジェクトには、非常に有用な情報が豊富に含まれているので、ぜひリンク先のドキュメントを参照されることを強くオススメします。\n"
-"特に重要な情報は、物体の <a href=\"http://docs.godotengine.org/en/latest/classes/class_transform2d.html\" target=\"_blank\">Transform2D</a> です。\n"
-"（変換についての詳細な説明はこの文書の範囲を超えますので、より詳しい情報は[行列と変換](http://docs.godotengine.org/en/latest/learning/features/math/matrices_and_transforms.html)を参照してください。）"
+"このように、`_physics_process()` の代わりに `_integrate_forces()` を使用が必要です。これにより、<a href=\"http://docs.godotengine.org/ja/latest/classes/class_physics2ddirectbodystate.html\" target=\"_blank\">Physics2DDirectBodyState</a> オブジェクトにアクセスできるようになります。物理状態オブジェクトには、非常に有用な情報が豊富に含まれているので、ぜひリンク先のドキュメントを参照されることを強くオススメします。\n"
+"特に重要な情報は、物体の <a href=\"http://docs.godotengine.org/ja/latest/classes/class_transform2d.html\" target=\"_blank\">Transform2D</a> です。\n"
+"（変換についての詳細な説明はこの文書の範囲を超えますので、より詳しい情報は[行列と変換](http://docs.godotengine.org/ja/latest/learning/features/math/matrices_and_transforms.html)を参照してください。）"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -12206,8 +12206,8 @@ msgid ""
 "<a href=\"http://docs.godotengine.org/en/latest/classes/class_collisionshape2D.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_collision_shape_2d\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_collision_shape_2d\"></svg>`CollisionShape2D`</a>\n"
 "children:"
 msgstr ""
-"Start by creating a RigidBody2D for the block and adding <a href=\"http://docs.godotengine.org/en/latest/classes/class_sprite.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_sprite\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_sprite\"></svg>`Sprite`</a> and\n"
-"<a href=\"http://docs.godotengine.org/en/latest/classes/class_collisionshape2D.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_collision_shape_2d\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_collision_shape_2d\"></svg>`CollisionShape2D`</a>\n"
+"Start by creating a RigidBody2D for the block and adding <a href=\"http://docs.godotengine.org/ja/latest/classes/class_sprite.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_sprite\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_sprite\"></svg>`Sprite`</a> and\n"
+"<a href=\"http://docs.godotengine.org/ja/latest/classes/class_collisionshape2D.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_collision_shape_2d\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_collision_shape_2d\"></svg>`CollisionShape2D`</a>\n"
 "children:"
 
 #: physics/Godot3_KYN_rigidbody1.md
@@ -13063,7 +13063,7 @@ msgstr "これは、斜面に立ったときの最小速度です。これによ
 
 #: physics/Godot3_kinematic2d.md
 msgid "Godot offers three kinds of physics bodies, grouped under the <a href=\"http://docs.godotengine.org/en/latest/classes/class_physicsbody2d.html\" target=\"_blank\">`PhysicsBody2D`</a> type:"
-msgstr "Godot では3種類の物理ボディが提供されており、<a href=\"http://docs.godotengine.org/en/latest/classes/class_physicsbody2d.html\" target=\"_blank\">`PhysicsBody2D`</a> タイプに分類されます。"
+msgstr "Godot では3種類の物理ボディが提供されており、<a href=\"http://docs.godotengine.org/ja/latest/classes/class_physicsbody2d.html\" target=\"_blank\">`PhysicsBody2D`</a> タイプに分類されます。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "> **Note:** Be careful to never scale your collision shapes in the editor. The `Scale` property in the Inspector should remain at `(1, 1)`. When changing the size of the collision shape, you should always use the shape's handles."
@@ -13503,11 +13503,11 @@ msgid ""
 "comfortable with the class methods."
 msgstr ""
 "この導入では {{< gd-icon KinematicBody2D >}}`KinematicBody2D` の機能のほんの一端を紹介したに過ぎません。\n"
-"Godot のすべてのノードと同様、<a href=\"http://docs.godotengine.org/en/latest/classes/class_kinematicbody2d.html\" target=\"_blank\">API ドキュメント</a> は心強い味方です。クラスメソッドを使いこなせるようになるまで、頻繁に参照してください。"
+"Godot のすべてのノードと同様、<a href=\"http://docs.godotengine.org/ja/latest/classes/class_kinematicbody2d.html\" target=\"_blank\">API ドキュメント</a> は心強い味方です。クラスメソッドを使いこなせるようになるまで、頻繁に参照してください。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "When a {{< gd-icon KinematicBody2D >}}`KinematicBody2D` detects a collision, Godot provides a <a href=\"http://docs.godotengine.org/en/latest/classes/class_kinematiccollision2d.html\" target=\"_blank\">`KinematicCollision2D`</a> object. This object contains data about the collision and the colliding object. Using this data you can calculate your collision response."
-msgstr "href=\"http://docs.godotengine.org/en/latest/classes/class_kinematiccollision2d.html\" target=\"_blank\">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と接触した物体のデータが含まれています。このデータを活用することで、適切な衝突応答を計算できます。"
+msgstr "href=\"http://docs.godotengine.org/ja/latest/classes/class_kinematiccollision2d.html\" target=\"_blank\">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と接触した物体のデータが含まれています。このデータを活用することで、適切な衝突応答を計算できます。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "### <a href=\"/blog/img/KYN3.0_KinematicBody2D.zip\">Download the sample project</a>"
@@ -13639,7 +13639,7 @@ msgstr "この関節は、接続された物体が直線的に移動するよう
 
 #: physics/joints_2d.md
 msgid "The spring's behavior can be adjusted with these properties:"
-msgstr "このプロパティでスプリングの挙動を調整できます。"
+msgstr "以下のプロパティでスプリングの挙動を調整できます。"
 
 #: physics/joints_2d.md
 msgid "The pin joint's _Softness_ property gives some \"springiness\" to the connection. The value can range from `0` (the default) which allows no movement, to `16`."
@@ -13679,9 +13679,9 @@ msgid ""
 "- _Bias_: The rate at which the joint pulls the two bodies back together if they move apart. Defaults to `0`.\n"
 "- _Disable Collisions_: Allows the connected bodies to ignore collisions between them. Defaults to `true`."
 msgstr ""
-"*  **ノード A** および **ノード B**：割り当てられた物理ボディ\n"
-"*  **バイアス**：両オブジェクトが離れる方向に関節が引き寄せる速度。デフォルト値は 0 です\n"
-"*  **衝突を無効化**：接続されたオブジェクト間の衝突を考慮しないようにできます。デフォルトは true（有効）です"
+"*  _Node A_ and _Node B_：割り当てられた物理ボディ\n"
+"*  _Bias_：両オブジェクトが離れる方向に関節が引き寄せる速度。デフォルト値は 0 です\n"
+"*  _Disable Collisions_：接続されたオブジェクト間の衝突を考慮しないようにできます。デフォルトは true（有効）です"
 
 #: physics/joints_2d.md
 msgid "![alt](/godot_recipes/4.x/img/pinjoint_example.gif)"
@@ -13714,10 +13714,10 @@ msgid ""
 "- _Stiffness_: The spring's \"stretchiness\", i.e. how much it resists forces pulling against it.\n"
 "- _Damping_: How quickly the spring stops \"bouncing\"."
 msgstr ""
-"*  _長さ_ : 関節の最大許容長値\n"
-"*  _休息時の長さ_ : 外力や運動が作用していない状態における関節の長さ\n"
-"*  _剛性係数_ : ばねの「伸びにくさ」、すなわち外力に対する抵抗強度を表す指標\n"
-"*  _減衰率_ : ばねが「反発動作」を停止する速度特性を示すパラメータ"
+"*  _Length_ : 関節の最大許容長値\n"
+"*  _Rest Length_ : 外力や運動が作用していない状態における関節の長さ\n"
+"*  _Stiffness_ : ばねの「伸びにくさ」、すなわち外力に対する抵抗強度を表す指標\n"
+"*  _Damping_ : ばねが「反発動作」を停止する速度特性を示すパラメータ"
 
 #: physics/joints_2d.md
 msgid "You'd like to understand Godot's `Joint2D` nodes."
@@ -13779,11 +13779,11 @@ msgstr "このコードを実行すると、キャラクターの**x**方向速�
 
 #: physics/kinematic_friction.md
 msgid "For most games, we're not necessarily interested in a perfect physics simulation. We want action, responsiveness, and arcade feel. This is why you choose a kinematic body over a rigid one: so that you can control its behavior directly. However, *some* amount of physics is good - it means an object doesn't instantly change direction or come to a stop."
-msgstr "多くのゲームにおいて、必ずしも完全な物理シミュレーションを求めているわけではありません。重要なのはアクション性、反応の良さ、そしてアーケードならではの爽快感です。だからこそ、剛性ボディではなくキネマティックボディを選択するのです - これによって物体の動きを直接制御できるようになります。ただし、ある程度の物理的な挙動は必要です。これはつまり、オブジェクトが突然方向を変えたり停止したりしないようにするためです。"
+msgstr "多くのゲームにおいて、必ずしも完全な物理シミュレーションを求めているわけではありません。重要なのはアクション性、反応の良さ、そしてアーケードならではの爽快感です。だからこそ、RigidBodyではなくKinematicBodyを選択するのです - これによって物体の動きを直接制御できるようになります。ただし、ある程度の物理的な挙動は必要です。これはつまり、オブジェクトが突然方向を変えたり停止したりしないようにするためです。"
 
 #: physics/kinematic_friction.md
 msgid "In the code below, `friction`  represents how quickly the character comes to a stop, while `acceleration` determines how quickly it gets up to full speed. Both are values between `0.0` and `1.0`."
-msgstr "以下のコードでは、`摩擦係数`はキャラクターが停止する速度を、`加速度`は完全に加速するまでの速度を決定する要素です。どちらも値が`0.0`から`1.0`の範囲内で設定されます。"
+msgstr "以下のコードでは、`friction(摩擦係数)`はキャラクターが停止する速度を、`acceleration(加速力)`は最大加速するまでの速度を決定する要素です。どちらも値が`0.0`から`1.0`の範囲内で設定されます。"
 
 #: physics/kinematic_friction.md
 msgid "`lerp()`, aka _linear interpolate_, finds a \"blended\" value between two given numbers.  See [Interpolation](/godot_recipes/3.x/math/interpolation/) for details."
@@ -13881,9 +13881,9 @@ msgid ""
 "- [Using KinematicBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/)\n"
 "- [Moving Platforms](/godot_recipes/3.x/2d/moving_platforms/)"
 msgstr ""
-"[プラットフォームキャラクターの実装](http://kidscancode.org/godot_recipes/2d/platform_character)\n"
-"[KinematicBody2Dコンポーネントの使用方法](/godot_recipes/3.x/physics/godot3_kinematic2d/)\n"
-"[移動式プラットホームの作成方法](/godot_recipes/3.x/2d/moving_platforms/)"
+"- [プラットフォームキャラクターの実装](http://kidscancode.org/godot_recipes/2d/platform_character)\n"
+"- [KinematicBody2Dコンポーネントの使用方法](/godot_recipes/4.x/physics/godot3_kinematic2d/)\n"
+"- [プラットホームゲームの作成](/godot_recipes/4.x/2d/moving_platforms/)"
 
 #: physics/conveyor_belt.md
 msgid "There are many ways to present the *appearance* of your conveyor belt, depending on your art assets. For this demo project, I have only a TileMap which is using this single 88x88 tile:"
@@ -15792,7 +15792,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"このパーツのセットアップでお困りの場合は、公式Godotドキュメントの以下のセクションをご覧ください: [2D移動概要](http://docs.godotengine.org/en/stable/tutorials/2d/2d_movement.html)。\n"
+"このパーツのセットアップでお困りの場合は、公式Godotドキュメントの以下のセクションをご覧ください: [2D移動概要](http://docs.godotengine.org/ja/stable/tutorials/2d/2d_movement.html)。\n"
 "{{% /notice %}}"
 
 #: 2D/splitscreen_demo.md
@@ -18766,7 +18766,7 @@ msgstr "![alt](/godot_recipes/4.x/img/admob_3.2_03.png)"
 
 #: games/circle_jump/circle_jump_03.md
 msgid "The last thing we'll do for this part is add a \"fill\" effect to the circle to show that the orbits are running out. To begin, we'll use some drawing code from the [official docs](https://docs.godotengine.org/en/latest/tutorials/2d/custom_drawing_in_2d.html#arc-polygon-function):"
-msgstr "このセクションの最後の作業として、軌道が尽きつつあることを示すために円に「塗り」効果を追加します。まず、[公式ドキュメント](https://docs.godotengine.org/en/latest/tutorials/2d/custom_drawing_in_2d.html#arc-polygon-function)にある描画コードを使用します。"
+msgstr "このセクションの最後の作業として、軌道が尽きつつあることを示すために円に「塗り」効果を追加します。まず、[公式ドキュメント](https://docs.godotengine.org/ja/latest/tutorials/2d/custom_drawing_in_2d.html#arc-polygon-function)にある描画コードを使用します。"
 
 #: games/circle_jump/circle_jump_03.md
 msgid "If we try it out, everything looks good so far:"
@@ -19108,7 +19108,7 @@ msgstr "![alt](/godot_recipes/4.x/img/circle_jump.gif)"
 
 #: games/circle_jump/circle_jump_12.md
 msgid "Saving settings"
-msgstr "設定を保存中"
+msgstr "設定を保存しよう"
 
 #: games/circle_jump/circle_jump_12.md
 msgid "The button is setup just like the others - add it to the \"buttons\" group so that it will get registered. In the `Screens.gd`, add another `match` for this button's name:"
@@ -19124,7 +19124,7 @@ msgstr "別の課題として、ゲーム起動時に設定メニューのアイ
 
 #: games/circle_jump/circle_jump_12.md
 msgid "First, we'll define our settings file in `res://settings.gd`:"
-msgstr "まず、設定ファイル「`res://settings.gd`」で定義を行います。"
+msgstr "まず、設定ファイル `res://settings.gd` で定義を行います。"
 
 #: games/circle_jump/circle_jump_12.md
 msgid "![alt](/godot_recipes/4.x/img/cj_12_01.png)"
@@ -19153,7 +19153,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice warning %}}\n"
-"ライセンス条件を遵守することは非常に重要です。Godotで求められる要件については、以下のページを参照してください。[ライセンス遵守について](https://docs.godotengine.org/en/latest/tutorials/legal/complying_with_licenses.html)。なお、使用するアートワークについても、クレジット表記やリンク、その他の謝辞が必要となる場合があることにご注意ください。\n"
+"ライセンス条件を遵守することは非常に重要です。Godotで求められる要件については、以下のページを参照してください。[ライセンス遵守について](https://docs.godotengine.org/ja/4.x/about/complying_with_licenses.html)。なお、使用するアートワークについても、クレジット表記やリンク、その他の謝辞が必要となる場合があることにご注意ください。\n"
 "{{% /notice %}}"
 
 #: games/circle_jump/circle_jump_12.md
@@ -19179,7 +19179,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"BBCodeの書式設定に関する詳細な仕様については、[RichTextLabelにおけるBBCode](https://docs.godotengine.org/en/latest/tutorials/gui/bbcode_in_richtextlabel.html)のドキュメントを参照してください。\n"
+"BBCodeの書式設定に関する詳細な仕様については、[RichTextLabelにおけるBBCode](https://docs.godotengine.org/ja/latest/tutorials/gui/bbcode_in_richtextlabel.html)のドキュメントを参照してください。\n"
 "{{% /notice %}}"
 
 #: games/circle_jump/circle_jump_12.md

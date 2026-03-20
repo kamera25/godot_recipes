@@ -15,7 +15,7 @@ Godotでは、衝突判定と応答処理を提供するために複数のコリ
 
 ゲーム開発において、ゲーム内空間内の二つのオブジェクトが交差するか接触するかどうかを判断する必要が生じる場面は頻繁に存在します。これは「衝突検知」と呼ばれる処理です。衝突が検出された場合、通常は何らかのアクションを発生させたいものです。この部分を総称して「衝突応答」と呼びます。
 
-Godot では3種類の物理ボディが提供されており、<a href="http://docs.godotengine.org/en/latest/classes/class_physicsbody2d.html" target="_blank">`PhysicsBody2D`</a> タイプに分類されます。
+Godot では3種類の物理ボディが提供されており、<a href="http://docs.godotengine.org/ja/latest/classes/class_physicsbody2d.html" target="_blank">`PhysicsBody2D`</a> タイプに分類されます。
 
 - {{< gd-icon StaticBody2D >}}`StaticBody2D`- {{< gd-icon StaticBody2D >}} `StaticBody2D`
 
@@ -88,7 +88,7 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 
 ##### KinematicCollision2D
 
-href="http://docs.godotengine.org/en/latest/classes/class_kinematiccollision2d.html" target="_blank">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と接触した物体のデータが含まれています。このデータを活用することで、適切な衝突応答を計算できます。
+href="http://docs.godotengine.org/ja/latest/classes/class_kinematiccollision2d.html" target="_blank">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と接触した物体のデータが含まれています。このデータを活用することで、適切な衝突応答を計算できます。
 
 ### 移動とスライド処理
 
@@ -347,7 +347,7 @@ removing `velocity =` and see what happens if you don't do this.
 ## 結論
 
 この導入では {{< gd-icon KinematicBody2D >}}`KinematicBody2D` の機能のほんの一端を紹介したに過ぎません。
-Godot のすべてのノードと同様、<a href="http://docs.godotengine.org/en/latest/classes/class_kinematicbody2d.html" target="_blank">API ドキュメント</a> は心強い味方です。クラスメソッドを使いこなせるようになるまで、頻繁に参照してください。
+Godot のすべてのノードと同様、<a href="http://docs.godotengine.org/ja/latest/classes/class_kinematicbody2d.html" target="_blank">API ドキュメント</a> は心強い味方です。クラスメソッドを使いこなせるようになるまで、頻繁に参照してください。
 
 運動体は非常に便利な仕組みなので、今後は『ノードの活用術』といった続編記事でさらに多くの活用法を探っていきたいと思います。その他に取り上げてほしい具体例やアイデアがあれば、ぜひコメント欄でご意見をお寄せください。
 

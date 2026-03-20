@@ -7,7 +7,7 @@ pre = "<i class='far fa-window-maximize fa-fw'></i>&nbsp"
 
 # <i class='far fa-window-maximize'></i>&nbsp;UI
 
-ユーザーインターフェースを構築中です。
+ユーザーインターフェースを構築しましょう。
 
 #### 目次 ：
 

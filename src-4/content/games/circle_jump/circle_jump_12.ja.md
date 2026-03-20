@@ -1,5 +1,5 @@
 ---
-title: "設定を保存中"
+title: "設定を保存しよう"
 weight: 12
 draft: false
 pre: "12. "
@@ -9,7 +9,7 @@ pre: "12. "
 
 ゲームに追加した3つの切り替え可能プロパティは正常に動作していますが、アプリケーションを終了すると設定が保存されません。次回起動時にも同じ設定値が保持されるよう、これらを設定が必要です。
 
-まず、設定ファイル「`res://settings.gd`」で定義を行います。
+まず、設定ファイル `res://settings.gd` で定義を行います。
 
 ```gdscript
 var settings_file = "user://settings.save"
@@ -63,7 +63,7 @@ for button in buttons:
 このセクションに追加するもう一つの要素は「ゲームについて」画面です。これはプレイヤーがこのゲームの概要を把握し、ライセンス情報とこのページへのリンクを確認するためのものです。本作はチュートリアルゲームであるため、このような情報提供が不可欠です。
 
 {{% notice warning %}}
-ライセンス条件を遵守することは非常に重要です。Godotで求められる要件については、以下のページを参照してください。[ライセンス遵守について](https://docs.godotengine.org/en/latest/tutorials/legal/complying_with_licenses.html)。なお、使用するアートワークについても、クレジット表記やリンク、その他の謝辞が必要となる場合があることにご注意ください。
+ライセンス条件を遵守することは非常に重要です。Godotで求められる要件については、以下のページを参照してください。[ライセンス遵守について](https://docs.godotengine.org/ja/4.x/about/complying_with_licenses.html)。なお、使用するアートワークについても、クレジット表記やリンク、その他の謝辞が必要となる場合があることにご注意ください。
 {{% /notice %}}
 
 これに到達するために、「タイトル」画面に新規ボタンを追加しました。
@@ -100,7 +100,7 @@ Copyright © 2019 KidsCanCode
 ```
 
 {{% notice note %}}
-BBCodeの書式設定に関する詳細な仕様については、[RichTextLabelにおけるBBCode](https://docs.godotengine.org/en/latest/tutorials/gui/bbcode_in_richtextlabel.html)のドキュメントを参照してください。
+BBCodeの書式設定に関する詳細な仕様については、[RichTextLabelにおけるBBCode](https://docs.godotengine.org/ja/latest/tutorials/gui/bbcode_in_richtextlabel.html)のドキュメントを参照してください。
 {{% /notice %}}
 
 URL をクリック可能にするには、`TextEdit` の `meta_clicked` シグナルを接続します。

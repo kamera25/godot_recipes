@@ -199,7 +199,7 @@ func get_input(delta):
 
 ### 全文スクリプト
 
-以下が完全なスクリプトです：
+以下が完全なスクリプトです。
 
 {{% expand "Click to expand..." %}}
 
