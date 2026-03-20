@@ -1,5 +1,5 @@
 ---
-title: "3D空間にHPバーを置く"
+title: "3D空間に浮かぶHPバー"
 weight: 5
 draft: false
 ghcommentid: 35

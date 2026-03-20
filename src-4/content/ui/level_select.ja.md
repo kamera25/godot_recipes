@@ -78,7 +78,7 @@ func _on_gui_input(event):
 
 ### 2: グリッド表示
 
-ボックスシーンが完成したら、次に `{{< gd-icon GridContainer >}}`GridContainer` を使用して新規シーンを追加します。その上に任意の数の `LevelBox` インスタンスを配置し、**列数** 値を必ず設定してください。以下は6列に設定した例です：
+ボックスシーンが完成したら、次に {{< gd-icon GridContainer >}}`GridContainer` を使用して新規シーンを追加します。その上に任意の数の `LevelBox` インスタンスを配置し、**列数** 値を必ず設定してください。以下は6列に設定した例です。
 
 ![alt](/godot_recipes/4.x/img/level_select_02.png)
 
@@ -115,12 +115,12 @@ LevelMenu:{{< gd-icon MarginContainer >}} MarginContainer
 * {{< gd-icon Label >}} `Title`
     * フォントスタイルはお好みでカスタマイズ可能
 * {{< gd-icon TextureButton >}} `BackButton` / `NextButton`
-    * **テクスチャサイズの無視**: `有効化`
-    * **伸縮モード**: `中央固定`
-    * **レイアウト/コンテナサイズ指定/水平方向/拡張**: `有効化`
+    * **Ignore Texture Size**: `有効化`
+    * **Stretch Mode**: `中央固定`
+    * **Layout/Container Sizing/Horizontal/Expand**: `有効化`
 * {{< gd-icon Control >}} `ClipControl`
-    * **レイアウト/内容クリッピング**: `有効化`
-    * **レイアウト/カスタム最小サイズ**: `(710, 350)` (`レベルグリッド`のサイズに相当)
+    * **Layout/Clip Contents**: `有効化`
+    * **Layout/Custom Minimum Size**: `(710, 350)` (`レベルグリッド`のサイズに相当)
 
 ノード「ClipControl」内にグリッドが配置されます。**コンテンツを切り取る** を有効にすると、コントロール領域を超える内容は自動的に切り取られます。これにより、水平スクロール可能なグリッドセットを作成できるようになります。「ClipControl」に{{< gd-icon HBoxContainer >}} `HBoxContainer` 要素を「GridBox」という名前で追加し、その内部にインスタンス3個以上の `LevelGrid`を配置してください。
 

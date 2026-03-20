@@ -129,7 +129,7 @@ offset.y = max_offset.y * amount * noise.get_noise_2d(noise.seed*3, noise_y)
 ## 関連レシピ
 
 - [ノイズジェネレーター](/godot_recipes/3.x/math/noise/)
-     - [プラットフォームキャラクター実装](http://kidscancode.org/godot_recipes/ai/platform_character)
+- [プラットフォームキャラクター実装](http://kidscancode.org/godot_recipes/ai/platform_character)
 
 #### この動画が気に入ったら？
 

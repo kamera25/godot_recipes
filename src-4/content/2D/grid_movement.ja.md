@@ -21,7 +21,7 @@ ghcommentid: 21
   - {{< gd-icon Sprite2D >}}`Sprite2D`: ここではスプライトシートを使用できます（アニメーション設定は後述します）。
   - {{< gd-icon CollisionShape2D >}}`CollisionShape2D`: ヒットボックスが大きすぎないように注意してください。プレイヤーがタイルの中心に立つため、オーバーラップ判定も中央から行われます。
   - {{< gd-icon RayCast2D >}}`RayCast2D`: 指定された方向への移動が可能かどうかを確認する際に使われます。
-  - {{< gd-icon AnimationPlayer >}}`AnimationPlayer`: キャラクターの歩行アニメーションを再生するために使用します。
+  - {{< gd-icon アニメーションPlayer >}}`アニメーションPlayer`: キャラクターの歩行アニメーションを再生するために使用します。
 
 インプットマップに操作を追加しましょう。この例では「上」「下」「左」「右」を使用します。
 

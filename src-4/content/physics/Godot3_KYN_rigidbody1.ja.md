@@ -20,7 +20,7 @@ RigidBody2Dの動作は「質量」「摩擦」「反発」などのプロパテ
 
 ![alt](/godot_recipes/3.x/img/rigidbody_properties.png)
 
-The body's behavior is also affected by the world, via the _Project Settings -> Physics_
+The body's behavior is also affected by the world, via the _Project Settings -> 物理_
 properties, or by entering an <a href="http://docs.godotengine.org/ja/latest/classes/class_area2d.html"><svg width="18" height="18" class="icon-icon_area_2d" target="_blank"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_area_2d"></svg> `Area2D`</a> that is overriding the global physics properties.
 
 ## RigidBody2Dを使う
@@ -37,7 +37,7 @@ children:
 
 スプライトにテクスチャを追加し、矩形の衝突形状を設定します。**重要** ： 衝突形状のスケールは__変更しないでください__。一般的にこれは推奨されない方法であり、予期しない衝突挙動を引き起こす原因となります。常に形状内のサイズハンドルを使用し、外側の`Node2D`由来のスケーリングハンドルは使わないようにしてください。
 
-> ※重要：本サンプルで使用しているテクスチャは、Kenney.nl の［物理アセットパック］（[Physics Asset](http://kenney.nl/assets/physics-assets)）を使用しています。このパッケージには、さまざまな形状・材質のブロックが多数収録されています。
+> ※重要：本サンプルで使用しているテクスチャは、Kenney.nl の［物理アセットパック］（[物理 Asset](http://kenney.nl/assets/physics-assets)）を使用しています。このパッケージには、さまざまな形状・材質のブロックが多数収録されています。
 
 ※「再生」を押すとブロックがゆっくりと下方に落ちていくのが確認できるでしょう。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクターで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。私は値を`3`に設定しています。
 
@@ -55,7 +55,7 @@ children:
 * 球体テクスチャのいずれかと、円形の衝突判定形状を選択してください。
 * このインスタンスをメインシーンに配置し、ブロックスタックの側面などに設置してください。
 
-剛性体を動かすには、何らかの初速度が必要です。以下の方法で物体に初期速度を設定できます。「線形プロパティ」＞「速度」。試しにこれを `(500, 0)` に設定してみてください。
+リジッドボディを動かすには、何らかの初速度が必要です。以下の方法で物体に初期速度を設定できます。「線形プロパティ」＞「速度」。試しにこれを `(500, 0)` に設定してみてください。
 
 ![alt](/godot_recipes/3.x/img/rigidbody_vel.gif)
 
@@ -66,9 +66,9 @@ children:
 
 ### 力の作用
 
-Linear velocityをリセットして`(0, 0)`に設定します。では、ボールを投げて動かす場合は？剛性ボディの速度や位置は手動で直接設定するべきではありません - これらは「現実世界」の物理法則を再現するためのものです。現実の世界では、物体が突然別の場所へ移動したり、静止状態から高速に移動したりすることはありません。こうした操作を試みると、物理エンジンがそれを拒否し、予期しない動きが生じる原因となります。代わりに、特定の方向に加速度を発生させる力を適用が必要です（これはニュートンの第二法則としても知られています）。Godotの物理オブジェクトも全く同じ仕組みで動作します。
+Linear velocityをリセットして`(0, 0)`に設定します。では、ボールを投げて動かす場合は？リジッドボディの速度や位置は手動で直接設定するべきではありません - これらは「現実世界」の物理法則を再現するためのものです。現実の世界では、物体が突然別の場所へ移動したり、静止状態から高速に移動したりすることはありません。こうした操作を試みると、物理エンジンがそれを拒否し、予期しない動きが生じる原因となります。代わりに、特定の方向に加速度を発生させる力を適用が必要です（これはニュートンの第二法則としても知られています）。Godotの物理オブジェクトも全く同じ仕組みで動作します。
 
-剛性体に力を加えるには、以下の2つの関数から選択できます。
+リジッドボディに力を加えるには、以下の2つの関数から選択できます。
 
 - `add_force()`
 
@@ -211,7 +211,7 @@ func _physics_process(delta):
 
 > オブジェクトのシミュレーション状態を読み取り、**安全に変更**できます。物体の位置やその他の物理特性を直接変更する必要がある場合は、`_physics_process` の代わりにこの関数を使用してください。
 
-このように、`_physics_process()` の代わりに `_integrate_forces()` を使用が必要です。これにより、<a href="http://docs.godotengine.org/ja/latest/classes/class_physics2ddirectbodystate.html" target="_blank">Physics2DDirectBodyState</a> オブジェクトにアクセスできるようになります。物理状態オブジェクトには、非常に有用な情報が豊富に含まれているので、ぜひリンク先のドキュメントを参照されることを強くオススメします。
+このように、`_physics_process()` の代わりに `_integrate_forces()` を使用が必要です。これにより、<a href="http://docs.godotengine.org/ja/latest/classes/class_physics2ddirectbodystate.html" target="_blank">物理2DDirectBodyState</a> オブジェクトにアクセスできるようになります。物理状態オブジェクトには、非常に有用な情報が豊富に含まれているので、ぜひリンク先のドキュメントを参照されることを強くオススメします。
 特に重要な情報は、物体の <a href="http://docs.godotengine.org/ja/latest/classes/class_transform2d.html" target="_blank">Transform2D</a> です。
 （変換についての詳細な説明はこの文書の範囲を超えますので、より詳しい情報は[行列と変換](http://docs.godotengine.org/ja/latest/learning/features/math/matrices_and_transforms.html)を参照してください。）
 

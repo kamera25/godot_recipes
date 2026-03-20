@@ -119,5 +119,5 @@ $FCTManager.show_value(dmg, crit)
 
 ## 関連レシピ
 
-[UI: ラベル](/godot_recipes/.x/ui/labels/)
-[UI: ユニットHPバー](/godot_recipes/3.x/ui/unit_healthbar/) -->
+- [UI: ラベル](/godot_recipes/ja/4.x/ui/labels/)
+- [UI: ユニットHPバー](/godot_recipes/ja/4.x/ui/unit_healthbar/) -->

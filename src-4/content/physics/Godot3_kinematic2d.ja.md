@@ -15,7 +15,7 @@ Godotでは、衝突判定と応答処理を提供するために複数のコリ
 
 ゲーム開発において、ゲーム内空間内の二つのオブジェクトが交差するか接触するかどうかを判断する必要が生じる場面は頻繁に存在します。これは「衝突検知」と呼ばれる処理です。衝突が検出された場合、通常は何らかのアクションを発生させたいものです。この部分を総称して「衝突応答」と呼びます。
 
-Godot では3種類の物理ボディが提供されており、<a href="http://docs.godotengine.org/ja/latest/classes/class_physicsbody2d.html" target="_blank">`PhysicsBody2D`</a> タイプに分類されます。
+Godot では3種類の物理ボディが提供されており、<a href="http://docs.godotengine.org/ja/latest/classes/class_physicsbody2d.html" target="_blank">`物理Body2D`</a> タイプに分類されます。
 
 - {{< gd-icon StaticBody2D >}}`StaticBody2D`- {{< gd-icon StaticBody2D >}} `StaticBody2D`
 
@@ -50,7 +50,7 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 
  -    `collision_mask` は衝突検知対象のレイヤーを定義します。指定したマスク層に含まれないオブジェクトは、ボディによって無視されます。デフォルトでは、すべてのボディがレイヤー 1 をスキャンします。
 
-また、レイヤーに名前を割り当てることもできます。「プロジェクト設定」内の「レイヤー名→2D物理演算」セクションをご確認ください。
+また、レイヤーに名前を割り当てることもできます。「プロジェクト設定」内の「レイヤー名→2D物理」セクションをご確認ください。
 
 ![alt](/godot_recipes/3.x/img/k2d_layer_names.png?width=300)
 
@@ -316,7 +316,7 @@ func _process(delta):
     get_input()
     if new_anim != anim:
         anim = new_anim
-        $AnimationPlayer.play(anim)
+        $アニメーションPlayer.play(anim)
 
 velocity.y += gravity * delta
     if state == JUMP:

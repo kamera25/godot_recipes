@@ -1,5 +1,5 @@
 ---
-title: "プラットフォームキャラクタ"
+title: "プラットフォームキャラクター"
 weight: 1
 draft: false
 ghcommentid: 16

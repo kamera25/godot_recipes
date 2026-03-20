@@ -1,5 +1,5 @@
 ---
-title: "投射物を発射する"
+title: "投射物の発射"
 weight: 5
 draft: false
 ghcommentid: 36

@@ -23,7 +23,7 @@ draft: false
  {{% /notice %}}
 
 
-この機能を既存のプラットフォームキャラクタに追加します。設定方法については[プラットフォームキャラクタレシピ](/godot_recipes/4.x/ja/2d/platform_character/)を参照してください。
+この機能を既存のプラットフォームキャラクターに追加します。設定方法については[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)を参照してください。
 
 タイミング処理に関しては、`CoyoteTimer`という名前の`Timer`ノードを追加し、設定を**ワンショットモード**にします。
 
@@ -82,4 +82,4 @@ func _on_coyote_timer_timeout():
 
 ## 関連レシピ
 
-- [プラットフォームキャラクタ](/godot_recipes/4.x/ja/2d/platform_character/)
+- [プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)

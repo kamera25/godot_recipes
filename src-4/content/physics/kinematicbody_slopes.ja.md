@@ -8,7 +8,7 @@ tags: []
 
 ## 課題
 
- `<code class="language-plaintext">{{< gd-icon KinematicBody3D >}}KinematicBody</code> は斜面を滑り降ります。
+ {{< gd-icon KinematicBody3D >}}`KinematicBody` を使っているのですが、地面が斜面の時に滑ってしまします。
 
 ## 解決策
 
@@ -61,7 +61,7 @@ func _physics_process(delta):
 
 重力によって生じる落下速度が、表面に沿って滑動しています。
 
-「[move_and_slide() ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide) を確認すると、`stop_on_slope` というパラメータがあり、デフォルト値は `false` です:
+「[move_and_slide() ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide) を確認すると、`stop_on_slope` というパラメータがあり、デフォルト値は `false` です。
 
 > 設定値が `true` の場合、重力を考慮した線形速度を適用した状態でオブジェクトが静止している場合、傾斜面でも滑りません。
 

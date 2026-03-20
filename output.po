@@ -1032,7 +1032,7 @@ msgstr "これは初心者がよく抱く疑問で、三角関数をあれこれ
 
 #: basics/migrating.md
 msgid "For detailed examples of using these nodes, see [Platform Character](/godot_recipes/4.x/2d/platform_character/) and/or [Basic FPS Character](/godot_recipes/4.x/3d/basic_fps/)."
-msgstr "これらのノードの詳細な使用例については、[プラットフォームキャラクタ](/godot_recipes/4.x/ja/2d/platform_character/)および／または[基本FPSキャラクタ](/godot_recipes/4.x/ja/3d/basic_fps/)を参照してください。"
+msgstr "これらのノードの詳細な使用例については、[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)および／または[基本FPSキャラクタ](/godot_recipes/4.x/ja/3d/basic_fps/)を参照してください。"
 
 #: basics/migrating.md
 msgid "Migrating from 3.x"
@@ -1641,7 +1641,7 @@ msgstr "この機能を説明するため、まずは[オートタイルレシ�
 
 #: ui/minimap.md
 msgid "In `_ready()` we'll center the player's marker at the center of the grid. and calculate the scale factor. (**Note:** you'll need to connect the `resized` signal and do both of these things in the callback if you have a dynamically sized UI)."
-msgstr ""
+msgstr "`_ready()`では、プレイヤーのマーカーをグリッドの中心に配置し、スケールファクターを計算します。（**注：** UIのサイズが動的に変わる場合は、`resized`シグナルを接続し、これらの処理をコールバック内で行う必要があります）。"
 
 #: ui/floating_text.md
 msgid "### Floating text manager"
@@ -1676,8 +1676,8 @@ msgid ""
 "- [UI: Labels](/godot_recipes/.x/ui/labels/)\n"
 "- [UI: Object Healthbars](/godot_recipes/3.x/ui/unit_healthbar/) -->"
 msgstr ""
-"[UI: ラベル](/godot_recipes/.x/ui/labels/)\n"
-"[UI: ユニットHPバー](/godot_recipes/3.x/ui/unit_healthbar/) -->"
+"- [UI: ラベル](/godot_recipes/ja/4.x/ui/labels/)\n"
+"- [UI: ユニットHPバー](/godot_recipes/ja/4.x/ui/unit_healthbar/) -->"
 
 #: ui/floating_text.md
 msgid ""
@@ -1828,7 +1828,7 @@ msgstr "ハートの器 と 3つの方法"
 
 #: ui/heart_containers_3.md
 msgid "You need to display a heart container bar (or other icon-based bar)."
-msgstr "ハートの器のようなバー（または他のアイコンベースのバー）を表示したい。"
+msgstr "ハートの器のようなバー（または他のアイコンを基調としたバー）を表示したい。"
 
 #: ui/heart_containers_3.md
 msgid "Calling `update_health()` on the bar will cause it to display the passed value, based on the selected mode."
@@ -1888,7 +1888,7 @@ msgstr ""
 
 #: ui/heart_containers_3.md
 msgid "Use this heart bar setup as a basis for your own HUD. This technique can be expanded to support a wide variety of information displays."
-msgstr "このハートバーの設定を独自のHUD作成の基礎として活用してください。この手法をさらに拡張すれば、多種多様な情報表示をサポートできます。"
+msgstr "このハートバーの設定を、独自のHUD作成の基礎として活用してください。この手法をさらに拡張すれば、多種多様な情報を表示できます。"
 
 #: ui/level_select.md
 msgid "### 2: Grid"
@@ -1896,7 +1896,7 @@ msgstr "### 2: グリッド表示"
 
 #: ui/level_select.md
 msgid "Once you have the box scene completed, add a new scene with a {{< gd-icon GridContainer >}}`GridContainer`. Add any number of `LevelBox` instances under it, making sure to set the **Columns** value. Here's one with 6 columns:"
-msgstr "ボックスシーンが完成したら、次に `{{< gd-icon GridContainer >}}`GridContainer` を使用して新規シーンを追加します。その上に任意の数の `LevelBox` インスタンスを配置し、**列数** 値を必ず設定してください。以下は6列に設定した例です："
+msgstr "ボックスシーンが完成したら、次に {{< gd-icon GridContainer >}}`GridContainer` を使用して新規シーンを追加します。その上に任意の数の `LevelBox` インスタンスを配置し、**列数** 値を必ず設定してください。以下は6列に設定した例です。"
 
 #: ui/level_select.md
 msgid "We'll create it with these nodes:"
@@ -1973,12 +1973,12 @@ msgstr ""
 "* {{< gd-icon Label >}} `Title`\n"
 "    * フォントスタイルはお好みでカスタマイズ可能\n"
 "* {{< gd-icon TextureButton >}} `BackButton` / `NextButton`\n"
-"    * **テクスチャサイズの無視**: `有効化`\n"
-"    * **伸縮モード**: `中央固定`\n"
-"    * **レイアウト/コンテナサイズ指定/水平方向/拡張**: `有効化`\n"
+"    * **Ignore Texture Size**: `有効化`\n"
+"    * **Stretch Mode**: `中央固定`\n"
+"    * **Layout/Container Sizing/Horizontal/Expand**: `有効化`\n"
 "* {{< gd-icon Control >}} `ClipControl`\n"
-"    * **レイアウト/内容クリッピング**: `有効化`\n"
-"    * **レイアウト/カスタム最小サイズ**: `(710, 350)` (`レベルグリッド`のサイズに相当)"
+"    * **Layout/Clip Contents**: `有効化`\n"
+"    * **Layout/Custom Minimum Size**: `(710, 350)` (`レベルグリッド`のサイズに相当)"
 
 #: ui/level_select.md
 msgid "Here's the basic layout we're going for:"
@@ -2109,11 +2109,11 @@ msgstr "能力ボタン用のシーンには以下のノードが必要です：
 
 #: ui/cooldown_button.md
 msgid "`Counter` is a container to hold and align the text. Set its layout to \"Bottom Wide\", and in its **Theme Overrides/Constants**, both **Margin Right** and **Margin Left** to `5`."
-msgstr "`カウンター`はテキストを保持・配置するためのコンテナです。レイアウトを「ボトムワイド」に設定し、［テーマのオーバーライド／定数］セクションでは両方の **マージン右** と **マージン左** を `5` に指定してください。"
+msgstr "`Counter`はテキストを保持・配置するためのコンテナです。レイアウトを\"Bottom Wide\"に設定し、**Theme Overrides/Constants** セクションでは両方の **Margin Right** と **Margin Left**  を `5` に指定してください。"
 
 #: ui/cooldown_button.md
 msgid "Finally, we make sure the sweep's value is at `0`, and set the node's processing to `false`. We'll do the animation in `_process()` so we don't need it running when we're not in cooldown mode."
-msgstr "最後に、スイープ値を 0 に設定し、ノードの処理フラグを false にします。アニメーションは _process() 内で処理するため、クールタイムモードではない時に実行される必要がないようにします。"
+msgstr "最後に、スイープ値を `0` に設定し、ノードの処理フラグを `false` にします。アニメーションは `_process()` 内で処理するため、クールタイムモードではない時に実行される必要がないようにします。"
 
 #: ui/cooldown_button.md
 msgid "The {{< gd-icon Timer >}}`Timer` node should be set to \"One Shot\"."
@@ -3189,7 +3189,7 @@ msgstr "対象物を滑らかに追従できる3Dカメラが必要です（補�
 
 #: 3D/spaceship.md
 msgid "I've chosen the \"Executioner\" ship model:"
-msgstr "私は「処刑人」級の艦船モデルを選択しました："
+msgstr "私は「処刑人」級の艦船モデルを選択しました。"
 
 #: 3D/spaceship.md
 msgid "### Rotation"
@@ -3467,7 +3467,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_bars04.png)"
 
 #: 3D/healthbars.md
 msgid "3D Unit Healthbars"
-msgstr "3D空間にHPバーを置く"
+msgstr "3D空間に浮かぶHPバー"
 
 #: 3D/healthbars.md
 msgid "![alt](/godot_recipes/4.x/img/barHorizontal_yellow_mid%20200.png)"
@@ -3556,7 +3556,7 @@ msgstr ""
 
 #: 2D/2d_shooting.md 3D/3d_shooting.md
 msgid "Shooting projectiles"
-msgstr "投射物を発射する"
+msgstr "投射物の発射"
 
 #: 2D/2d_shooting.md 3D/3d_shooting.md
 msgid "You want to shoot projectiles from your player/mob/etc.."
@@ -3874,7 +3874,7 @@ msgstr "使用する`TransitionType`を変更することで、キューブの�
 
 #: 3D/rolling_cube.md
 msgid "In preparing this recipe, I experimented with a few different solutions to this problem:"
-msgstr "このレシピを作成するにあたり、私はいくつかの異なる解決策を試しました："
+msgstr "このレシピを作成するにあたり、私はいくつかの異なる解決策を試しました。"
 
 #: 3D/rolling_cube.md
 msgid "![alt](/godot_recipes/4.x/img/cube_003.png)"
@@ -4956,7 +4956,7 @@ msgstr "これで、攻撃ノードの ▶ ボタンをクリックすると再�
 
 #: 3D/assets/character_animation.md
 msgid "In addition, we've left the transition from `IWR` to `Jump_Start` as \"Auto\". Instead of changing it to \"Enabled\", we've added a **Condition** of `jumping` to the transition:"
-msgstr "さらに、`IWR`から`Jump_Start`への遷移設定は「自動」のまま変更していません。「有効化」に差し替えるのではなく、この遷移に**条件**として`jumping`を追加しました："
+msgstr "さらに、`IWR`から`Jump_Start`への遷移設定は「自動」のまま変更していません。「有効化」に差し替えるのではなく、この遷移に**条件**として`jumping`を追加しました。"
 
 #: 3D/assets/character_animation.md
 msgid "### Prepping the character"
@@ -5255,7 +5255,7 @@ msgstr ""
 
 #: 3D/assets/importing_assets.md
 msgid "You've downloaded (or created) a set of 3D assets, including rigged and animated characters, and you want to import it into Godot."
-msgstr "以下の3Dアセットセットをダウンロード（または作成）しました：リギング済みでアニメーション化されたキャラクターを含むファイル群で、これをGodotにインポートしたいです。"
+msgstr "以下の3Dアセットセットをダウンロード（または作成）しました。リギング済みでアニメーション化されたキャラクターを含むファイル群で、これをGodotにインポートしたいです。"
 
 #: 3D/assets/character_controller.md
 msgid "In the spring arm's properties, set **Spring Length** to `5`, the **Margin** to `0.1`, and the **Position** to `(0, 2.5, 0)`."
@@ -6684,7 +6684,7 @@ msgid ""
 "- [Platform character](http://kidscancode.org/godot_recipes/2d/platform_character/)\n"
 "<!-- - [Controlling animation states](http://kidscancode.org/godot_recipes/animation/animation_state_machine/) -->"
 msgstr ""
-"- [プラットフォームキャラクタ制御](http://kidscancode.org/godot_recipes/2d/platform_character/)\n"
+"- [プラットフォームキャラクター](http://kidscancode.org/godot_recipes/2d/platform_character/)\n"
 " <!-- - [アニメーション状態のコントロール](http://kidscancancode.org/godot_recipes/animation/animation_state_machine/) -->"
 
 #: animation/spritesheet_animation.md
@@ -10375,7 +10375,7 @@ msgstr "したがって、`_integrate_forces()` に移動して以下のよう�
 
 #: kyn/rigidbody2d.md
 msgid "If you want to get collision information from a rigid body, you must set `contact_monitor` to `true`, which enables signals such as `body_entered`. You can also adjust `contacts_reported` to set the number of collisions that will be reported."
-msgstr "衝突情報を剛性体から取得する場合は、`contact_monitor` を `true` に設定が必要です。これを行うと、`body_entered` などのシグナルが有効になります。さらに、`contacts_reported` を調整することで、報告される衝突の数を指定することもできます。"
+msgstr "衝突情報をリジットボディから取得する場合は、`contact_monitor` を `true` に設定が必要です。これを行うと、`body_entered` などのシグナルが有効になります。さらに、`contacts_reported` を調整することで、報告される衝突の数を指定することもできます。"
 
 #: kyn/rigidbody2d.md
 msgid "Next, the `input()` function captures the keystates and sets the ship’s thrust on or off, and the rotation direction (`rotation_dir`) positive or negative. This function is called every frame in `_process()`."
@@ -10475,7 +10475,7 @@ msgstr "硬い物体をより直接的に制御する必要があるケースも
 
 #: kyn/rigidbody2d.md physics/Godot3_KYN_rigidbody1.md
 msgid "To add force to a rigid body, you have two functions to choose from:"
-msgstr "剛性体に力を加えるには、以下の2つの関数から選択できます。"
+msgstr "リジッドボディに力を加えるには、以下の2つの関数から選択できます。"
 
 #: kyn/rigidbody2d.md
 msgid "* `_integrate_forces()`"
@@ -11680,7 +11680,7 @@ msgstr "プロジェクトのサンプルコードはこちらからダウンロ
 
 #: 2D/coyote_time.md 2D/moving_platforms.md physics/character_vs_rigid.md
 msgid "- [Platform character](/godot_recipes/4.x/2d/platform_character/)"
-msgstr "- [プラットフォームキャラクタ](/godot_recipes/4.x/ja/2d/platform_character/)"
+msgstr "- [プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)"
 
 #: physics/character_vs_rigid.md
 msgid "You have two options when deciding how to interact with rigid bodies:"
@@ -11692,7 +11692,7 @@ msgstr "この設定には長所と短所があります。最大の利点は、
 
 #: physics/character_vs_rigid.md
 msgid "The collision normal points *out* of the rigid body, so we reverse it to point away from the character and apply the `push_force` factor. Now pushing works again, but it won't force the rigid bodies through walls:"
-msgstr "衝突正規ベクトルはリジッドボディの外側を指しているため、これを反転させてキャラクターから離れる方向に調整し、`push_force` 係数を適用します。これで再び押す動作が可能になりますが、壁越しにリジッドボディを移動させることはできません。："
+msgstr "衝突時の法線ベクトルはリジッドボディの外側を指しているため、これを反転させてキャラクターから離れる方向に調整し、`push_force` 係数を適用します。これで再び押す動作が可能になります。なお、壁越しにリジッドボディを移動させることはできません。"
 
 #: physics/character_vs_rigid.md physics/kinematic_to_rigidbody.md
 msgid "Experiment to find the settings that work for your particular game."
@@ -11708,11 +11708,11 @@ msgstr "ゲームを実行してみると、ボックスを自由に移動でき
 
 #: physics/character_vs_rigid.md
 msgid "### Applying impulses"
-msgstr "### 衝撃波の適用方法"
+msgstr "### インパルスの適用方法"
 
 #: physics/character_vs_rigid.md physics/kinematic_to_rigidbody.md
 msgid "To give the colliding body a \"push\" we'll need to apply an impulse. An impulse is an instantaneous \"kick\" - think of a bat hitting a ball. This is as opposed to a force, which is a continuous \"push\" on an object."
-msgstr "衝突する物体に「押し」を与えるには、インパルスを適用が必要です。インパルスとは瞬間的な「衝撃」のことで、野球でバットがボールを打つようなイメージです。これは、物体に対して連続的に力を加えるフォースとは異なります。"
+msgstr "衝突する物体に「押し」を与えるには、インパルスを適用が必要です。インパルスとは「瞬間的な衝撃的の力」のことで、野球でバットがボールを打つようなイメージです。これは、物体に対して連続的に力を加えるのとは異なります。"
 
 #: physics/character_vs_rigid.md
 msgid "![alt](/godot_recipes/4.x/img/char_push_inf.gif)"
@@ -11720,7 +11720,7 @@ msgstr "![alt](/godot_recipes/4.x/img/char_push_inf.gif)"
 
 #: physics/character_vs_rigid.md
 msgid "For some games, this will be fine. If you want to prevent the clipping, you'll need to go with option 2."
-msgstr "一部のゲームではこれで問題ありませんが、クリッピングを防ぎたい場合はオプション2を選択してください。"
+msgstr "一部のゲームではこれで問題ありませんが、オブジェクトのめり込み（クリッピング）を防ぎたい場合は次の方法を試してみてください。"
 
 #: physics/character_vs_rigid.md
 msgid "![alt](/godot_recipes/4.x/img/physics_layers_player.png)"
@@ -11748,7 +11748,7 @@ msgstr "![alt](/godot_recipes/4.x/img/2d_physics_layers_01.png)"
 
 #: physics/character_vs_rigid.md
 msgid "You'll need to adjust the `push_force` in relation to the mass of your rigid bodies. Too high a force will still cause clipping, while too low will prevent pushing at all."
-msgstr "剛性体の質量と関連させて `push_force` を調整が必要です。力が大きすぎると衝突が発生してしまいますし、小さすぎると全く押し込めなくなります。"
+msgstr "リジッドボディの質量と関連させて `push_force` を調整が必要です。力が大きすぎると衝突が発生してしまいますし、小さすぎると全く押し込めなくなります。"
 
 #: physics/character_vs_rigid.md
 msgid "![alt](/godot_recipes/4.x/img/char_push_default.gif)"
@@ -11769,7 +11769,7 @@ msgstr ""
 
 #: physics/character_vs_rigid.md
 msgid "Then, we've placed the player on the \"player\" layer (layer 2), and configured the mask to ignore the \"items\":"
-msgstr "次に、プレイヤーを「プレイヤー」レイヤー（レイヤー2）に配置し、マスクを設定して「アイテム」を無視するように構成しました："
+msgstr "次に、プレイヤーを「プレイヤー」レイヤー（レイヤー2）に配置し、マスクを設定して「アイテム」を無視するように構成しました。"
 
 #: physics/character_vs_rigid.md
 msgid "![alt](/godot_recipes/4.x/img/char_push_impulse.gif)"
@@ -11784,7 +11784,7 @@ msgid ""
 "1. You can just push them, ignoring physics. If you're familiar with Godot 3.x, this is equivalent to the \"infinite inertia\" option.\n"
 "1. You can give them a push based on the character's imagined \"mass\" and velocity. This will give you a \"realistic\" result - pushing heavy bodies a little, and lighter bodies a lot."
 msgstr ""
-"1. 物理を無視して直接押すこともできます。Godot 3.x に慣れている方なら、これは「無限慣性」オプションと同等の機能です。\n"
+"1. 物理を無視して直接押すこともできます。Godot 3.x に慣れている方なら、これは\"infinite inertia(無限慣性)\"オプションと同等の機能です。\n"
 "1. キャラクターの想定する「質量」と「速度」に基づいて押力を発揮させることもできます。これにより「リアルな」結果が得られます - 重い物体は少し、軽い物体は大きく押し出されるようになります。"
 
 #: physics/character_vs_rigid.md
@@ -12059,7 +12059,7 @@ msgid ""
 "To cause a rigid body to move, it must have some velocity. You can give the body\n"
 "an initial velocity using the `Linear -> Velocity` property. Try setting this\n"
 "to `(500, 0)`."
-msgstr "剛性体を動かすには、何らかの初速度が必要です。以下の方法で物体に初期速度を設定できます。「線形プロパティ」＞「速度」。試しにこれを `(500, 0)` に設定してみてください。"
+msgstr "リジッドボディを動かすには、何らかの初速度が必要です。以下の方法で物体に初期速度を設定できます。「線形プロパティ」＞「速度」。試しにこれを `(500, 0)` に設定してみてください。"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -12344,7 +12344,7 @@ msgid ""
 "movement can occur. Instead, we must apply forces which create an acceleration in a certain\n"
 "direction (also known as Newton's Second Law). Godot physics objects work in\n"
 "the same way."
-msgstr "Linear velocityをリセットして`(0, 0)`に設定します。では、ボールを投げて動かす場合は？剛性ボディの速度や位置は手動で直接設定するべきではありません - これらは「現実世界」の物理法則を再現するためのものです。現実の世界では、物体が突然別の場所へ移動したり、静止状態から高速に移動したりすることはありません。こうした操作を試みると、物理エンジンがそれを拒否し、予期しない動きが生じる原因となります。代わりに、特定の方向に加速度を発生させる力を適用が必要です（これはニュートンの第二法則としても知られています）。Godotの物理オブジェクトも全く同じ仕組みで動作します。"
+msgstr "Linear velocityをリセットして`(0, 0)`に設定します。では、ボールを投げて動かす場合は？リジッドボディの速度や位置は手動で直接設定するべきではありません - これらは「現実世界」の物理法則を再現するためのものです。現実の世界では、物体が突然別の場所へ移動したり、静止状態から高速に移動したりすることはありません。こうした操作を試みると、物理エンジンがそれを拒否し、予期しない動きが生じる原因となります。代わりに、特定の方向に加速度を発生させる力を適用が必要です（これはニュートンの第二法則としても知られています）。Godotの物理オブジェクトも全く同じ仕組みで動作します。"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "- `apply_impulse()`"
@@ -12457,7 +12457,7 @@ msgstr "![alt](/godot_recipes/4.x/img/inf_inertia2.gif)"
 
 #: physics/kinematic_to_rigidbody.md
 msgid "For this example, we'll use the 2D character described in the [Platform character](http://kidscancode.org/godot_recipes/ai/platform_character) recipe."
-msgstr "本例では、[プラットフォームキャラクターレシピ](http://kidscancode.org/godot_recipes/ai/platform_character) で説明されている2Dキャラクターを使用します。"
+msgstr "本例では、[プラットフォームキャラクター](http://kidscancode.org/godot_recipes/ai/platform_character) で説明されている2Dキャラクターを使用します。"
 
 #: physics/kinematic_to_rigidbody.md
 msgid "Now if you try to move, you'll see that the kinematic body just stops on collision. It can't push the rigid body at all."
@@ -12465,7 +12465,7 @@ msgstr "ここで移動を試みると、衝突時にキネマティックボデ
 
 #: physics/kinematic_to_rigidbody.md
 msgid "- [Platform character](http://kidscancode.org/godot_recipes/ai/platform_character)"
-msgstr "- [プラットフォームキャラクタ実装](http://kidscancode.org/godot_recipes/ai/platform_character)"
+msgstr "- [プラットフォームキャラクター](http://kidscancode.org/godot_recipes/ai/platform_character)"
 
 #: physics/top_down_friction.md
 msgid "Top-down Friction"
@@ -12477,7 +12477,7 @@ msgstr "トップダウン視点で操作するキャラクターに摩擦や加
 
 #: physics/smooth_rigid_move.md physics/smooth_rigid_rotate.md
 msgid "Using {{< gd-icon RigidBody2D >}}`RigidBody2D` can be tricky. Because it's controlled by Godot's physics engine, you need to apply forces rather than moving it directly. Before doing anything with rigid bodies, I highly recommend looking at the [RigidBody2D API doc](https://docs.godotengine.org/en/stable/classes/class_rigidbody2d.html)."
-msgstr "{{< gd-icon RigidBody2D >}}`RigidBody2D` の操作は少し複雑です。Godot の物理エンジンで制御されるため、直接移動させるのではなく、力を加える必要があります。剛性ボディを扱う前に、[RigidBody2D API ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) を読むことを強くオススメします。"
+msgstr "{{< gd-icon RigidBody2D >}}`RigidBody2D` の操作は少し複雑です。Godot の物理エンジンで制御されるため、直接移動させるのではなく、力を加える必要があります。リジッドボディを扱う前に、[RigidBody2D API ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) を読むことを強くオススメします。"
 
 #: physics/smooth_rigid_move.md
 msgid "RigidBody2D: Move to Target"
@@ -12507,7 +12507,7 @@ msgstr ""
 
 #: physics/smooth_rigid_move.md
 msgid "You want a rigid body to move to a target position."
-msgstr "rigidbodyを目標位置へ移動させたい。"
+msgstr "リジッドボディを目標位置へ移動させたい。"
 
 #: physics/asteroids_physics.md
 msgid "As you can see, the `_integrate_forces()` function includes a parameter called `state`. This object is the [PhysicsDirectBodyState2D](https://docs.godotengine.org/en/stable/classes/class_physicsdirectbodystate2d.html) of our body. It contains all of the current physics properties such as the forces, velocity, position, etc."
@@ -12595,7 +12595,7 @@ msgstr "以下の入力を「インプットマップ」で使用します。"
 
 #: physics/asteroids_physics.md
 msgid "Using {{< gd-icon RigidBody2D >}}`RigidBody2D` can be tricky. Because it's controlled by Godot's physics engine, you need to apply forces rather than moving it directly. Before doing anything with rigid bodies, I highly recommend looking at the [RigidBody2D API doc](https://docs.godotengine.org/en/stable/classes/class_rigidbody2d.html), and we'll refer to it as we work through this example."
-msgstr "{{< gd-icon RigidBody2D >}}`RigidBody2D` を使用する際には少し注意が必要です。Godotの物理エンジンによって制御されるため、直接移動させるのではなく力を加える必要があります。剛性ボディを扱う前に、[RigidBody2D APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html)を必ず確認することを強くオススメします。これからこの例を進めていく過程で、このドキュメントを参照しながら進めていきましょう。"
+msgstr "{{< gd-icon RigidBody2D >}}`RigidBody2D` を使用する際には少し注意が必要です。Godotの物理エンジンによって制御されるため、直接移動させるのではなく力を加える必要があります。リジッドボディを扱う前に、[RigidBody2D APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html)を必ず確認することを強くオススメします。これからこの例を進めていく過程で、このドキュメントを参照しながら進めていきましょう。"
 
 #: physics/asteroids_physics.md
 msgid "Let's get the screensize at the top of the script:"
@@ -12724,7 +12724,7 @@ msgid ""
 "| **Enemy** | 2 | 1 | Scans for the Player |\n"
 "| **Coin** | 3 | (None) | Doesn't need to scan anything |"
 msgstr ""
-"| ノード | 層 | マスク | 相互作用 |\n"
+"| ノード | レイヤー | マスク | 相互作用 |\n"
 "| :--- | :--- | :--- | :--- |\n"
 "| **プレイヤー** | 1 | 2, 3 | 敵とコインをスキャン |\n"
 "| **敵キャラ** | 2 | 1 | プレイヤーをスキャン |\n"
@@ -12732,7 +12732,7 @@ msgstr ""
 
 #: physics/collision_layers.md
 msgid "In Godot 4, you can name your layers in **Project Settings > Layer Names > 2D Physics**. This makes it much easier to manage in the Inspector."
-msgstr "Godot 4では、プロジェクト設定の［レイヤー名］＞［2D物理演算］でレイヤーに名前を付けられます。これにより、インスペクターでの管理が大幅に効率化されます。"
+msgstr "Godot 4では、プロジェクト設定の［レイヤー名］＞［2D物理］でレイヤーに名前を付けられます。これにより、インスペクターでの管理が大幅に効率化されます。"
 
 #: physics/collision_layers.md
 msgid ""
@@ -12758,7 +12758,7 @@ msgstr "### ノードの選択方法"
 #: physics/collision_layers.md
 #, fuzzy
 msgid "### Example Configuration"
-msgstr "### サンプルプロジェクト例"
+msgstr "### サンプルプロジェクトでの設定例"
 
 #: physics/collision_layers.md
 #, fuzzy
@@ -13337,7 +13337,7 @@ msgstr "物理ボディは、任意の数の {{< gd-icon CollisionShape2D >}}`Co
 
 #: physics/Godot3_kinematic2d.md
 msgid "You can also assign names to layers. In \"Project Settings\", look for the \"Layer Names -> 2D Physics\" section:"
-msgstr "また、レイヤーに名前を割り当てることもできます。「プロジェクト設定」内の「レイヤー名→2D物理演算」セクションをご確認ください。"
+msgstr "また、レイヤーに名前を割り当てることもできます。「プロジェクト設定」内の「レイヤー名→2D物理」セクションをご確認ください。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "A body that provides collision detection, but no physics. All movement must be implemented in code."
@@ -13583,7 +13583,7 @@ msgstr "停止時にわずかに上向きの運動量が生じるため、小さ
 
 #: physics/kinematicbody_slopes.md
 msgid "Checking the [`move_and_slide()` documentation](https://docs.godotengine.org/en/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide), we see there's a parameter called `stop_on_slope`, which defaults to `false`:"
-msgstr "「[move_and_slide() ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide) を確認すると、`stop_on_slope` というパラメータがあり、デフォルト値は `false` です:"
+msgstr "「[move_and_slide() ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide) を確認すると、`stop_on_slope` というパラメータがあり、デフォルト値は `false` です。"
 
 #: physics/kinematicbody_slopes.md
 msgid "But there is still a problem, which is easier to see if you use a low value for `gravity`:"
@@ -13615,7 +13615,7 @@ msgstr "運動体：坂での停止挙動"
 
 #: physics/kinematicbody_slopes.md
 msgid "Your {{< gd-icon KinematicBody3D >}}`KinematicBody` slides down slopes."
-msgstr " `<code class=\"language-plaintext\">{{< gd-icon KinematicBody3D >}}KinematicBody</code> は斜面を滑り降ります。"
+msgstr " {{< gd-icon KinematicBody3D >}}`KinematicBody` を使っているのですが、地面が斜面の時に滑ってしまします。"
 
 #: physics/kinematicbody_slopes.md
 msgid "In order to ensure we can still jump, we also need to disable snapping during a jump, or we'll remain \"snapped\" to the ground:"
@@ -13961,7 +13961,7 @@ msgstr "`drop`関数内では、`freeze`を再び`false`に設定した後、ボ
 
 #: physics/rigidbody_drag_drop.md
 msgid "Note the use of `get_last_mouse_velocity()` to pass the impulse to the object - be careful with this! You may find yourself launching the rigid bodies at high speeds, especially if the bodies have low `mass` values. It's probably a good idea to scale this to a reasonable value and `clamp()` it to some maximum. Experiment to find out what works for you."
-msgstr "物体に衝撃力を適用するために `get_last_mouse_velocity()` を使用している点に注意 - 取り扱いには注意が必要です! 特に質量値が小さい場合、剛性体は高速で発射される可能性があります。適切なスケールに調整し、最大値にクランプすることをオススメします。最適な設定を見つけるには実験が必要です。"
+msgstr "物体に衝撃力を適用するために `get_last_mouse_velocity()` を使用している点に注意 - 取り扱いには注意が必要です! 特に質量値が小さい場合、リジッドボディは高速で発射される可能性があります。適切なスケールに調整し、最大値にクランプすることをオススメします。最適な設定を見つけるには実験が必要です。"
 
 #: physics/rigidbody_drag_drop.md
 msgid "If the body is being dragged, we update its position to follow the mouse."
@@ -14039,7 +14039,7 @@ msgstr ""
 
 #: 2D/2d_align_surface.md
 msgid "We'll start with a basic kinematic platform character. See the [Platform character](/godot_recipes/4.x/2d/platform_character/) recipe for details."
-msgstr "まずは基本的なキネマティックプラットフォームキャラクタから始めましょう。詳細は[プラットフォームキャラクターレシピ](/godot_recipes/4.x/ja/2d/platform_char/)を参照してください。"
+msgstr "まずは基本的なキネマティックプラットフォームキャラクターから始めましょう。詳細は[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_char/)を参照してください。"
 
 #: 2D/2d_align_surface.md
 msgid "<video controls src=\"/godot_recipes/4.x/img/2d_align_06.webm\"></video>"
@@ -14163,7 +14163,7 @@ msgstr "![alt](/godot_recipes/4.x/img/2d_tank_03.png)"
 
 #: 2D/2d_draw_trajectory.md
 msgid "To improve the line's appearance, we've set the **Width** to `15` and all of the **Capping** options to \"Round\". We've also added a `Gradient` in the **Fill** section:"
-msgstr "ラインの見た目を改善するため、**幅**を「15」に設定し、すべての**角処理**オプションを「丸み」に変更しました。さらに、**塗りつぶし**セクションにグラデーションを追加しました："
+msgstr "ラインの見た目を改善するため、**幅**を「15」に設定し、すべての**角処理**オプションを「丸み」に変更しました。さらに、**塗りつぶし**セクションにグラデーションを追加しました。"
 
 #: 2D/2d_draw_trajectory.md
 msgid "### Drawing the line"
@@ -14777,7 +14777,7 @@ msgid ""
 "- [Platform character](http://kidscancode.org/godot_recipes/ai/platform_character)"
 msgstr ""
 "- [ノイズジェネレーター](/godot_recipes/3.x/math/noise/)\n"
-"     - [プラットフォームキャラクター実装](http://kidscancode.org/godot_recipes/ai/platform_character)"
+"- [プラットフォームキャラクター実装](http://kidscancode.org/godot_recipes/ai/platform_character)"
 
 #: 2D/screen_shake.md
 msgid "![alt](/godot_recipes/4.x/img/shake_rand01.gif)"
@@ -14875,7 +14875,7 @@ msgstr "### TileMapでのAnimatedTextureの使用について"
 
 #: 2D/tilemap_animation.md
 msgid "TileMap: animated tiles"
-msgstr "タイルマップ：アニメーション付きタイル"
+msgstr "アニメーションタイル(タイルマップ)"
 
 #: 2D/tilemap_animation.md
 msgid ""
@@ -14911,7 +14911,7 @@ msgstr "これで`TileMap`内のタイルを選択して、他の通常のタイ
 
 #: 2D/tilemap_animation.md
 msgid "You'd like to use animated tiles in your TileMap."
-msgstr "您希望在 TileMap 中使用动画化的瓷碟。"
+msgstr "タイルマップでアニメーションタイルを使用したい。"
 
 #: 2D/tilemap_animation.md
 msgid "![alt](/godot_recipes/4.x/img/anim_tiles.png)"
@@ -15387,7 +15387,7 @@ msgstr "この動作を実現する効果的な方法の一つが線形補間(le
 
 #: 2D/platform_character.md
 msgid "Platform character"
-msgstr "プラットフォームキャラクタ"
+msgstr "プラットフォームキャラクター"
 
 #: 2D/screen_wrap.md
 msgid "Note that this is using the node's `position`, which is usually the center of your sprite and/or body."
@@ -16513,7 +16513,7 @@ msgstr "プレイヤーがプラットフォームの端から離れた場合、
 
 #: 2D/coyote_time.md
 msgid "We're going to add this to an already existing platform character. See the [Platform character](/godot_recipes/4.x/2d/platform_character/) recipe for how to set one up."
-msgstr "この機能を既存のプラットフォームキャラクタに追加します。設定方法については[プラットフォームキャラクタレシピ](/godot_recipes/4.x/ja/2d/platform_character/)を参照してください。"
+msgstr "この機能を既存のプラットフォームキャラクターに追加します。設定方法については[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)を参照してください。"
 
 #: 2D/8_direction.md
 msgid "![alt](/godot_recipes/4.x/img/8_direction_02w.png)"
@@ -16613,7 +16613,7 @@ msgstr "{{< gd-icon SegmentShape2D >}}`SegmentShape2D` は線分衝突形状で�
 
 #: 2D/line_collision.md
 msgid "You want to have collisions with a {{< gd-icon Line2D >}}`Line2D`."
-msgstr "衝突検出を `{{<  gd-icon Line2D >}}Line2D` に対して行いたいとの。"
+msgstr "衝突検出を `{{<  gd-icon Line2D >}}Line2D` に対して行いたい。"
 
 #: 2D/line_collision.md
 msgid "Next, we need to add collision shapes to the body. We have two options:"
@@ -19427,7 +19427,7 @@ msgstr ""
 "* [FPSキャラクターのモデル](/godot_recipes/4.x/ja/3d/basic_fps/)\n"
 "* [RigidBody2D：ドラッグ＆ドロップ操作](/godot_recipes/4.x/ja/physics/rigidbody_drag_drop/)\n"
 "* [2D自動車のステアリング制御](/godot_recipes/4.x/ja/2d/car_steering/)\n"
-"* [3D空間にHPバーを置く](/godot_recipes/4.x/ja/3d/healthbars/)\n"
+"* [3D空間に浮かぶHPバー](/godot_recipes/4.x/ja/3d/healthbars/)\n"
 "* [グリッドベース移動機構](/godot_recipes/4.x/ja/2d/grid_movement)\n"
 "* [アーケードスタイル3D宇宙船モデル](/godot_recipes/4.x/ja/3d/spaceship)\n"
 "* [補間機能付きカメラシステム](/godot_recipes/4.x/ja/3d/interpolated_camera/)\n"

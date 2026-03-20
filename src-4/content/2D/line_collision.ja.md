@@ -6,7 +6,7 @@ draft: false
 
 ## 課題
 
-衝突検出を `{{<  gd-icon Line2D >}}Line2D` に対して行いたいとの。
+衝突検出を `{{<  gd-icon Line2D >}}Line2D` に対して行いたい。
 
 ## 解決策
 

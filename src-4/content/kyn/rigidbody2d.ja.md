@@ -13,7 +13,7 @@ tags: []
 Setting a {{< gd-icon RigidBody2D >}}`RigidBody2D`'s physical properties, such as `position` or `linear_velocity` directly will not work correctly. The physics engine controls these values.
 {{% /notice %}}
 
-The body’s behavior is also affected by the world, via the Project Settings -> Physics properties, or by entering an {{< gd-icon Area2D >}}`Area2D` that is overriding the global physics properties.
+The body’s behavior is also affected by the world, via the Project Settings -> 物理 properties, or by entering an {{< gd-icon Area2D >}}`Area2D` that is overriding the global physics properties.
 
 適切に使用すれば、リジッドボディはGodotツールキットの中でも強力な武器となります。しかし、多くのユーザーが誤った用途で使ったり、その仕組みを正確に理解していないためにトラブルに見舞われることがあります。
 
@@ -51,7 +51,7 @@ The body’s behavior is also affected by the world, via the Project Settings ->
 
 ### 便利な機能
 
-剛性体に力を加えるには、以下の2つの関数から選択できます。
+リジッドボディに力を加えるには、以下の2つの関数から選択できます。
 
 * `add_force()` / `add_central_force()`
 
@@ -68,7 +68,7 @@ The body’s behavior is also affected by the world, via the Project Settings ->
 
 デフォルトでは、`RigidBody2D` オブジェクトが他の空間内の物体と衝突・相互作用しても、その衝突は報告されません。
 
-衝突情報を剛性体から取得する場合は、`contact_monitor` を `true` に設定が必要です。これを行うと、`body_entered` などのシグナルが有効になります。さらに、`contacts_reported` を調整することで、報告される衝突の数を指定することもできます。
+衝突情報をリジットボディから取得する場合は、`contact_monitor` を `true` に設定が必要です。これを行うと、`body_entered` などのシグナルが有効になります。さらに、`contacts_reported` を調整することで、報告される衝突の数を指定することもできます。
 
 ### リジッドボディの制御について
 
@@ -148,7 +148,7 @@ func _physics_process(delta):
 
 > You should not change a RigidBody2D’s `position` or `linear_velocity` every frame or even very often. If you need to directly affect the body’s state, use `_integrate_forces`, which allows you to directly access the physics state.
 
- _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [Physics2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。
+ _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [物理2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。
  関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](http://docs.godotengine.org/ja/stable/classes/class_transform2d.html) に関する情報です。
 
 したがって、`_integrate_forces()` に移動して以下のようにコードを記述します。

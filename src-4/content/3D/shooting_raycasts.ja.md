@@ -30,7 +30,7 @@ We'll add an input check in the `_input()` function, which we're already using t
         shoot()
 ```
 
-次に、`shoot()` メソッドを定義します。この関数が呼び出されるたびに、以下の処理を実行する `PhysicsRayQueryParameters3D` オブジェクトを作成します。
+次に、`shoot()` メソッドを定義します。この関数が呼び出されるたびに、以下の処理を実行する `物理RayQueryParameters3D` オブジェクトを作成します。
 1. レイの始点（カメラ位置）を定義
 2. レイの終点（カメラから前方100メートル投影された位置）を定義
 

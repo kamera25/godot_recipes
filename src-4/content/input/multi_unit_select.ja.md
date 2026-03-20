@@ -64,7 +64,7 @@ func _draw():
 
 選択ボックスが作成できたら、その内部に位置するユニットを特定が必要です。ボタンを放してドラッグ操作が終了した際には、物理空間クエリを実行して対象のユニットを検索が必要です。なお、対象となるユニットは{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ですが、{{< gd-icon Area2D >}}`Area2D`やその他のボディタイプでも問題ありません。
 
-`PhysicsDirectSpaceState2D.intersect_shape()`を使用してユニットを検出します。これには形状（ここでは矩形）と変換行列（位置）が必要です。詳細は[Godotドキュメント](https://docs.godotengine.org/ja/4.x/classes/class_physicsdirectspacestate2d.html)を参照してください。
+`物理DirectSpaceState2D.intersect_shape()`を使用してユニットを検出します。これには形状（ここでは矩形）と変換行列（位置）が必要です。詳細は[Godotドキュメント](https://docs.godotengine.org/ja/4.x/classes/class_physicsdirectspacestate2d.html)を参照してください。
 
 ```gdscript
 elif dragging:
@@ -85,7 +85,7 @@ elif dragging:
     selected = space.intersect_shape(query)
 ```
 
-これで物理状態への参照を取得し、`PhysicsShapeQueryParameters2D`を使用して形状クエリを設定できます。ここでは対象の形状を指定するとともに、ドラッグ操作中のエリアの中心座標を基準にしてクエリの変換行列を定義します。`intersect_shape()`を呼び出した後の結果は、Dictonary 配列として返され、以下のような形式になります。
+これで物理状態への参照を取得し、`物理ShapeQueryParameters2D`を使用して形状クエリを設定できます。ここでは対象の形状を指定するとともに、ドラッグ操作中のエリアの中心座標を基準にしてクエリの変換行列を定義します。`intersect_shape()`を呼び出した後の結果は、Dictonary 配列として返され、以下のような形式になります。
 
 ```
 [{ "rid": RID(4093103833089), "collider_id": 32145147326, "collider": Unit2:<CharacterBody2D#32145147326>, "shape": 0 },

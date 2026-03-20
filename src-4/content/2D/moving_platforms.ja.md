@@ -13,7 +13,7 @@ draft: false
 この問題には複数のアプローチ方法があります。ここではプラットフォーム部分に `{{< gd-icon AnimatableBody2D >}}AnimatableBody2D` を使用し、`{{< gd-icon Tween >}}Tween` で移動させる手法を採用します。これにより、多様な動作パターンを実現しながら、必要なコード量を最小限に抑えることができます。
 
 {{% notice info %}}
-この移動プラットフォームの実装方法は、Tweenではなく {{< gd-icon AnimationPlayer >}}`AnimationPlayer` を使用することでもできます。基本的なセットアップ手順は同様ですが、代わりにTweenコードの代わりにボディの `position` プロパティをアニメーション化します。
+この移動プラットフォームの実装方法は、Tweenではなく {{< gd-icon アニメーションPlayer >}}`アニメーションPlayer` を使用することでもできます。基本的なセットアップ手順は同様ですが、代わりにTweenコードの代わりにボディの `position` プロパティをアニメーション化します。
 {{% /notice %}}
 
 ### セットアップ方法
@@ -67,7 +67,7 @@ func start_tween():
 
 ## 関連レシピ
 
-- [プラットフォームキャラクタ](/godot_recipes/4.x/ja/2d/platform_character/)
+- [プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)
 
 <!-- #### Videoが気に入ったら？ -->
 
