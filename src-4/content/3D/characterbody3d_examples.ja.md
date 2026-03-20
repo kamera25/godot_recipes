@@ -6,7 +6,7 @@ draft: false
 
 ## 課題
 
-プレイヤー操作可能な3Dキャラクターボディが必要です。
+プレイヤー操作可能な3Dキャラクターボディが必要となります。
 
 ## 解決策
 
@@ -20,7 +20,7 @@ draft: false
 
 画像: /godot_recipes/4.x/img/obj_as_scene.png
 
-モデルをシーンに追加することはできますが、以下の追加ノードが必要です：
+モデルをシーンに追加することはできますが、以下の追加ノードが必要となります：
 
 ![alt](/godot_recipes/4.x/img/mini_tank_nodes.png)
 

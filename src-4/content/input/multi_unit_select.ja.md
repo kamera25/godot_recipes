@@ -33,7 +33,7 @@ var drag_start = Vector2.ZERO  # Location where drag began.
 var select_rect = RectangleShape2D.new()  # Collision shape for drag box.
 ```
 
-※ボックスを描画した後は、その内部にどのユニットが位置しているかを確認する方法が必要です。 {{< gd-icon RectangleShape2D >}}`RectangleShape2D`を使用すると物理エンジンに問い合わせて、衝突した対象を確認できます。
+※ボックスを描画した後は、その内部にどのユニットが位置しているかを確認する方法が必要となります。 {{< gd-icon RectangleShape2D >}}`RectangleShape2D`を使用すると物理エンジンに問い合わせて、衝突した対象を確認できます。
 
 ### ボックスの描画方法
 
@@ -62,9 +62,9 @@ func _draw():
 
 ### ユニットの選択方法
 
-選択ボックスが作成できたら、その内部に位置するユニットを特定が必要です。ボタンを放してドラッグ操作が終了した際には、物理空間クエリを実行して対象のユニットを検索が必要です。なお、対象となるユニットは{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ですが、{{< gd-icon Area2D >}}`Area2D`やその他のボディタイプでも問題ありません。
+選択ボックスが作成できたら、その内部に位置するユニットを特定する必要があります。ボタンを放してドラッグ操作が終了した際には、物理空間クエリを実行して対象のユニットを検索する必要があります。なお、対象となるユニットは{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ですが、{{< gd-icon Area2D >}}`Area2D`やその他のボディタイプでも問題ありません。
 
-`物理DirectSpaceState2D.intersect_shape()`を使用してユニットを検出します。これには形状（ここでは矩形）と変換行列（位置）が必要です。詳細は[Godotドキュメント](https://docs.godotengine.org/ja/4.x/classes/class_physicsdirectspacestate2d.html)を参照してください。
+`物理DirectSpaceState2D.intersect_shape()`を使用してユニットを検出します。これには形状（ここでは矩形）と変換行列（位置）が必要となります。詳細は[Godotドキュメント](https://docs.godotengine.org/ja/4.x/classes/class_physicsdirectspacestate2d.html)を参照してください。
 
 ```gdscript
 elif dragging:

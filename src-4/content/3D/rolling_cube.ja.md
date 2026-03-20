@@ -1,5 +1,5 @@
 ---
-title: "キューブを回転する"
+title: "キューブを回転させる"
 weight: 6
 draft: false
 ghcommentid: 101
@@ -174,4 +174,4 @@ var tween = create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN)
 
 ## 関連レシピ
 
-- [変換処理](/godot_recipes/4.x/ja/math/transforms/)
+- [トランスフォーム](/godot_recipes/4.x/ja/math/transforms/)

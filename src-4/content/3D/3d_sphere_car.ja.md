@@ -12,7 +12,7 @@ draft: false
 
 ## 解決策
 
-ドライビングゲームを作成する方法は数多くあります。各ゲームに求められるリアリズムのレベルは異なります。軽量なアーケードスタイルのカーモデルを作りたい場合、Godotの{{< gd-icon VehicleBody3D >}}`VehicleBody3Ud`ノードが提供するすべての機能（サスペンションシステムや個別にモデリングされた車輪など）は必要ないかもしれません。
+ドライビングゲームを作成する方法は数多くあります。各ゲームに求められるリアリズムのレベルは異なります。軽量なアーケードスタイルのカーモデルを作りたい場合、Godotの{{< gd-icon VehicleBody3D >}}`VehicleBody3D`ノードが提供するすべての機能（サスペンションシステムや個別にモデリングされた車輪など）は必要ないかもしれません。
 
 その代わり、駆動物理処理は単一の {{< gd-icon RigidBody3D >}}`RigidBody3D` 球体で処理します。球体自体は視認できない状態にし、車のメッシュをこの球体の位置に配置することで、あたかも球体が車を動かしているかのような視覚効果を実現します。
 
@@ -22,10 +22,10 @@ draft: false
 
 制御用に、以下の4つの入力を［インプットマップ］に追加します。
 
-- `加速`
-- `ブレーキ`
-- `左折`
-- `右折`
+- `accelerate(加速)`
+- `brake(ブレーキ)`
+- `steer_left(左折)`
+- `steer_right(右折)`
 
 キーボード入力、ゲームパッド、または両方を使用できます。ただし、操作性を重視するなら、アナログスティックの使用をオススメします。
 
@@ -65,9 +65,9 @@ GLTFモデルを使用する場合、インポート設定で調整する必要�
 
 以下の方法でボディの設定を調整できます。
 
-- **Angular Damp: `10`** - this property will have a huge effect on the driving feel. A higher value will bring the car to a stop much faster.
-- **Gravity Scale: `5`** - Default gravity in Godot (`9.8`) feels a bit floaty, especially when going for an action feel. This will really matter if you plan to have jumps, hills, etc. in your world. You can set this globally in the **Project Settings** instead, if you prefer.
-- **物理 Material/Bounce: `0.1`** - Playing around with this value can be a lot of fun. Be careful going above 0.5, though!
+- **Angular Damp: `10`** - このプロパティはドライビングのフィーリングに大きな影響を与えます。値が大きいほど、車はより速く停止します。
+- **Gravity Scale: `5`** - Godotのデフォルトの重力（`9.8`）は、特にアクション性の高いゲームを目指す場合、少し浮遊感があるように感じられます。この設定は、ジャンプや坂道など、ワールド内の起伏を扱う場合に特に重要になります。必要であれば、**プロジェクト設定**でグローバルに設定することも可能です。
+- **物理 Material/Bounce: `0.1`** - この値を調整することは非常に楽しいですが、0.5を超える値には注意してください！
 
 デモ用にデバッグ用として、衝突形状に球状メッシュも追加しました。必須機能ではありませんが、ボールが転がる様子を視覚的に確認できるとトラブルシューティング時に便利です。
 
@@ -116,15 +116,7 @@ var turn_input = 0
 
 インスペクターからこれらを調整したい場合は、`@export` を指定できます。
 
-void _physics_process()
-{
-    // 車の向きに基づいて車体に力を加え、さらに車メッシュをボールの位置に固定します。
-    float3 force = vehicle->GetForwardVector() * kCarForceMagnitude;
-    vehicle->AddForceAtPosition(force, ballPosition);
-
-    // 車メッシュの位置をボールの位置に設定
-    meshComponent->SetLocalTranslation(ballPosition);
-}
+`_physics_process()`では、車が向いている方向に基づいてボディに力を加え、さらに車オブジェクトをボールの位置に配置し続けます。
 
 ```gdscript
 func _physics_process(delta):
@@ -160,7 +152,7 @@ if linear_velocity.length() > turn_stop_limit:
 ```
 
 {{% notice warning %}}
-浮動小数点演算の精度限界により、変換処理を繰り返し回転させると、最終的に歪みが生じる可能性があります。スケールが変動したり、軸方向が不整合になったりする場合があります。定期的に変換を回転させるスクリプトでは、`orthonormalized()` を使用して誤差が累積する前に補正を行うことが推奨されます。
+浮動小数点演算の精度限界により、数値変換を繰り返し回転させると、スケールが変動したり、軸方向が不整合となり歪みが生じる可能性があります。定期的に変換を回転させるスクリプトでは、`orthonormalized()` を使用して誤差が累積する前に補正を行うことが推奨されます。
 {{% /notice %}}
 
 この段階で再び試してみることをオススメします。車の制御や走行が可能になり、ほぼ期待通りに動くようになります。ただし、運転感覚をさらに向上させるために、いくつか追加すべき点があります。
@@ -169,7 +161,7 @@ if linear_velocity.length() > turn_stop_limit:
 
 #### 1. 斜面との整合性を確保
 
-**修正が必要です**
+**修正が必要な箇所**
 
 坂での走行を試したことがある方ならご存知でしょうが、車オブジェクトは傾斜が全くつかず、常に水平を保っています。これは不自然に見えるため、[KinematicBody: 表面と位置合わせ](/godot_recipes/3.x/3d/3d_align_surface/) セクションで説明されている方法を使って修正しましょう。
 
