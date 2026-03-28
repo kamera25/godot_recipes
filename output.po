@@ -7358,8 +7358,7 @@ msgid ""
 "Add another `CSGBox` as a child and set it to \"Subtract\". Size it to resemble\n"
 "a door. You can also use a cylinder shape to get an arched portal."
 msgstr ""
-"Add another `CSGBox` as a child and set it to \"Subtract\". Size it to resemble\n"
-"a door. You can also use a cylinder shape to get an arched portal."
+"子ノードとして別の`CSGBox`を追加し、それを「Subtract」に設定します。ドアのように見えるようにサイズを調整してください。円柱形状を使用してアーチ状のポータルを作成することもできます。"
 
 #: g101/3d/101_3d_06.md
 msgid ""
@@ -7397,7 +7396,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice tip %}}\n"
-"各オブジェクトに `CSGCombiner` を使用すると、それらの整理や複製が格段に容易になります。必ず［衝突判定を使用］を有効にしてください。\n"
+"各オブジェクトに `CSGCombiner` を使用すると、それらの整理や複製が格段に容易になります。必ず _Use Collision_ を有効にしてください。\n"
 "{{% /notice %}}"
 
 #: g101/3d/101_3d_06.md
@@ -7517,7 +7516,7 @@ msgstr "これまで、インポートしたモデルを使って3D環境を設�
 
 #: g101/3d/101_3d_06.md
 msgid "CSG stands for **Constructive Solid Geometry**. It allows you to combine primitive shapes to build complex geometry. Shapes can be combined with boolean operations such as _Union_, _Intersection_, and _Subtraction_."
-msgstr "CSGは**Constructive Solid Geometry**（構成的固体幾何学）の略です。これにより、基本的な形状を組み合わせて複雑な立体図形を構築できます。形状は、_ユニオン（結合）_、_インターセクション（交差）_、_サブトラクション（減算）_といった論理演算によって組み合わせることができます。"
+msgstr "CSGは**Constructive Solid Geometry**（空間領域構成法）の略です。これにより、基本的な形状を組み合わせて複雑な立体図形を構築できます。形状は、_ユニオン（結合）_、_インターセクション（交差）_、_サブトラクション（減算）_といった論理演算によって組み合わせることができます。"
 
 #: g101/3d/101_3d_02.md
 msgid "![alt](/godot_recipes/4.x/img/kenney_3d_platform_sample.png?width=100)"
@@ -7986,7 +7985,7 @@ msgstr ""
 
 #: g101/3d/101_3d_05.md
 msgid "In the next part: Using Constructed Solid Geometry (CSG)."
-msgstr "次のセクションでは：構築固体幾何学（CSG）を使用した方法について解説します。"
+msgstr "次のセクションでは：空間領域構成法（CSG）を使用した方法について解説します。"
 
 #: g101/3d/101_3d_05.md
 msgid ""
