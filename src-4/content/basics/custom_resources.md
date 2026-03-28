@@ -52,7 +52,7 @@ signal health_changed
 These are the properties we'll be using.
 
 ```gdscript
-export (int) var max_value
+@export var max_value: int
 
 var current_value = 0
 ```
@@ -89,7 +89,7 @@ class_name PlayerHealth
 signal health_empty
 signal health_changed
 
-export (int) var max_value
+@export var max_value: int
 
 var current_value = 0
 
@@ -123,7 +123,7 @@ Now you can set the desired `max_value` and save the new resource as a `.tres` f
 
 Once the resource has been created and saved, we're ready to use it. Once again, in this scenario we have the following objects:
 
-* Player - a {{< gd-icon KinematicBody2D >}}`KinematicBody2D`
+* Player - a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`
 * UI - contains a {{< gd-icon TextureProgressBar >}}`ProgressTexture` to display health
 * Heal zone - an {{< gd-icon Area2D >}}`Area2D` that heals anything that stands in it
 * Spikes - {{< gd-icon TileMap >}}`TileMap` tiles that cause damage if touched
@@ -133,7 +133,7 @@ We won't include all of the code for the game, just the parts that pertain to th
 On the player, we `export` a variable to attach the resource via the Inspector. As part of the player's movement code, it calls `hurt()` when the player runs into spikes.
 
 ```gdscript
-export (Resource) var health
+@export var health: Resource
 
 func _ready():
     health.reset()
@@ -155,7 +155,7 @@ func _physics_process(delta):
 Finally, for the UI to display the health, we attach the same health resource and connect to its `health_changed` signal:
 
 ```gdscript
-export (Resource) var player_health
+@export var player_health: Resource
 
 func _ready():
     if player_health:

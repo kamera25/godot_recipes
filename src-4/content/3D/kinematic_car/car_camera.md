@@ -24,7 +24,7 @@ The `ChaseCamera` will have a `target` - the thing it's following. We're also go
 ```gdscript
 extends Camera
 
-export var lerp_speed = 10.0
+@export var lerp_speed = 10.0
 
 var target = null
 
@@ -41,12 +41,12 @@ The only parameter to set here is the `lerp_speed`, which controls how quickly t
 
 ### Setting up the target(s)
 
-We want to be able to have a few different chase camera positions. One close and one far, for example, or perhaps one looking straight down. Add a {{< gd-icon Node3D >}}`Spatial` to the car and name it `CameraPositions`. Add a few {{< gd-icon Position3D >}}`Position3D`s to this - as many as you would like.
+We want to be able to have a few different chase camera positions. One close and one far, for example, or perhaps one looking straight down. Add a {{< gd-icon Node3D >}}`Node3D` to the car and name it `CameraPositions`. Add a few {{< gd-icon Marker3D >}}`Marker3D`s to this - as many as you would like.
 
-Move and orient each {{< gd-icon Position3D >}}`Position3D` in a different location of your choosing. The position's **-Z** axis should point at the car.
+Move and orient each {{< gd-icon Marker3D >}}`Marker3D` in a different location of your choosing. The position's **-Z** axis should point at the car.
 
 {{% notice tip %}}
-You may find it helpful to temporarily attach a {{< gd-icon Camera3D >}}`Camera` to the position and use its "Preview" mode to help aim the {{< gd-icon Position3D >}}`Position3D` so that it's pointing directly where you want (you can remove the camera once you're done).
+You may find it helpful to temporarily attach a {{< gd-icon Camera3D >}}`Camera` to the position and use its "Preview" mode to help aim the {{< gd-icon Marker3D >}}`Marker3D` so that it's pointing directly where you want (you can remove the camera once you're done).
 ![alt](/godot_recipes/3.x/img/3d_car_09.png)
 {{% /notice %}}
 
@@ -58,7 +58,7 @@ extends "res://cars/car_base.gd"
 signal change_camera
 
 var current_camera = 0
-onready var num_cameras = $CameraPositions.get_child_count()
+@onready var num_cameras = $CameraPositions.get_child_count()
 
 func _ready():
     emit_signal("change_camera", $CameraPositions.get_child(current_camera))
@@ -88,7 +88,7 @@ Run the game and press the camera change button to try it out:
 - [Kinematic Car: Base](/godot_recipes/3.x/3d/kinematic_car/car_base/)
 - [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)
 - [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)
-- [3D: KinematicBody Movement](/godot_recipes/3.x/3d/kinematic_body/)
+- [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)
 
 #### Like video?
 

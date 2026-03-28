@@ -164,7 +164,7 @@ You should try playing again at this point. You'll be able to control the car an
 
 **FIX THIS**
 
-If you've tried driving on a slope, you've seen that the car mesh doesn't tilt at all, it always remains level. That looks unnatural, so let's use the process described in [KinematicBody: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/) to fix that.
+If you've tried driving on a slope, you've seen that the car mesh doesn't tilt at all, it always remains level. That looks unnatural, so let's use the process described in [CharacterBody3D: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/) to fix that.
 
 Add this code after rotating the mesh in `_process()`:
 

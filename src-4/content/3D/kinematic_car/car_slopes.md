@@ -23,7 +23,7 @@ For both, set the **Cast To** to (0, -0.25, 0) and don't forget to check the "En
 
 ### Aligning a 3D object
 
-We're going to reuse the code from the [KinematicBody: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/) recipe. Add this to `car_base.gd`:
+We're going to reuse the code from the [CharacterBody3D: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/) recipe. Add this to `car_base.gd`:
 
 ```gdscript
 func align_with_y(xform, new_y):
@@ -61,7 +61,7 @@ If the ray is not hitting anything, then we'll assume a horizontal surface. That
 ## Related recipes
 
 - [Kinematic Car: Base](/godot_recipes/3.x/3d/kinematic_car/car_base/)
-- [KinematicBody: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/)
+- [CharacterBody3D: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/)
 
 #### Like video?
 

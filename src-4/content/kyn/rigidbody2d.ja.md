@@ -30,7 +30,7 @@ The body’s behavior is also affected by the world, via the Project Settings ->
 1. リジッド - これがデフォルトモードです。オブジェクトは物理的なリジッドボディとして動作し、衝突や外力の影響を受けます。
 1. 静的 - このモードでオブジェクトは静止状態を保ちます。{{< gd-icon StaticBody2D >}}`StaticBody2D`と同様の挙動をします。
 1. キャラクター - このモードではオブジェクトの動作は通常のリジッドモードと同じですが、回転はしません。
-1. キネマティック - このモードではオブジェクトは {{< gd-icon KinematicBody2D >}}`KinematicBody2D`と同様に、コードによる制御でのみ移動できます。**注記:** これは `move_and_slide()` といった {{< gd-icon KinematicBody2D >}}`KinematicBody2D`の補助関数を利用できるという意味ではありません。すべての移動と衝突応答は手動で実装が必要です。
+1. キネマティック - このモードではオブジェクトは {{< gd-icon CharacterBody2D >}}`CharacterBody2D`と同様に、コードによる制御でのみ移動できます。**注記:** これは `move_and_slide()` といった {{< gd-icon CharacterBody2D >}}`CharacterBody2D`の補助関数を利用できるという意味ではありません。すべての移動と衝突応答は手動で実装が必要です。
 
 * 重力スケール設定（`gravity_scale`）
 
@@ -83,8 +83,8 @@ The body’s behavior is also affected by the world, via the Project Settings ->
 ```gdscript
 extends RigidBody2D
 
-export var engine_thrust = 500
-export var spin_thrust = 15000
+@export var engine_thrust = 500
+@export var spin_thrust = 15000
 
 var thrust = Vector2()
 var rotation_dir = 0

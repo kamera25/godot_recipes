@@ -11,7 +11,7 @@ pre: "02. "
 
 メイン・ノードにさらにノードを追加しましょう。
 
-- **Position2D ("StartPosition")**
+- **Marker2D ("StartPosition")**
 
     このゲームの開始位置をマークします。画面中央下部付近に置いてください。
 
@@ -71,7 +71,7 @@ func _ready():
 ```gdscript
 func new_game():
     $Camera2D.position = $StartPosition.position
-    player = Jumper.instance()
+    player = Jumper.instantiate()
     player.position = $StartPosition.position
     add_child(player)
     player.connect("captured", self, "_on_Jumper_captured")
@@ -82,7 +82,7 @@ func new_game():
 
 ```gdscript
 func spawn_circle(_position=null):
-    var c = Circle.instance()
+    var c = Circle.instantiate()
     if !_position:
         var x = rand_range(-150, 150)
         var y = rand_range(-500, -400)
@@ -135,7 +135,7 @@ We're going to use this to make a trail that streams out behind the player. Late
 ジャンパのスクリプトに、以下を追加しましょう。
 
 ```gdscript
-onready var trail = $Trail/Points
+@onready var trail = $Trail/Points
 
 var trail_length = 25
 ```

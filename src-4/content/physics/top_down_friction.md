@@ -11,11 +11,11 @@ You want to add friction and acceleration to your top-down character, giving it 
 ## Solution
 
 ```gdscript
-extends KinematicBody2D
+extends CharacterBody2D
 
-export var speed = 200
-export var friction = 0.01
-export var acceleration = 0.1
+@export var speed = 200
+@export var friction = 0.01
+@export var acceleration = 0.1
 
 var velocity = Vector2()
 

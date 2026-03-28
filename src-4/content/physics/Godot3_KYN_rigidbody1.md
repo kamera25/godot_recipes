@@ -176,8 +176,8 @@ when we let go of the keys, so set the ship's `Angular -> Damp` to `5`.
 {{< highlight swift >}}
 extends RigidBody2D
 
-export (int) var engine_thrust
-export (int) var spin_thrust
+@export var engine_thrust: int
+@export var spin_thrust: int
 
 var thrust = Vector2()
 var rotation_dir = 0

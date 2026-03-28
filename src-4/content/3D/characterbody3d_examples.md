@@ -24,7 +24,7 @@ We can add the model to the scene, but we'll need a couple of additional nodes:
 
 ![alt](/godot_recipes/4.x/img/mini_tank_nodes.png)
 
-For the collision shape, we're just going to use a `BoxShape` aligned and sized with the tank's treads. `CamPos` is a {{< gd-icon Position3D >}}`Position3D` we'll use to place our following camera. It's placed behind and above the tank, angled down.
+For the collision shape, we're just going to use a `BoxShape` aligned and sized with the tank's treads. `CamPos` is a {{< gd-icon Marker3D >}}`Marker3D` we'll use to place our following camera. It's placed behind and above the tank, angled down.
 
 We've also rotated the individual {{< gd-icon MeshInstance3D >}}`MeshInstance` nodes `180` degrees around the **Y** axis. This is because they were modeled facing towards **+Z**, but **-Z** is the forward direction in Godot, and we don't want our tank to look like it's backwards.
 

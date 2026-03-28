@@ -14,7 +14,7 @@ ghcommentid: 18
 
 ### ゲーム設定
 
-ゲームワールドのセットアップに多くの時間をかける必要はありません。2人のプレイヤーは、シンプルな8方向移動を実装した{{< gd-icon KinematicBody2D >}}`KinematicBody2D`オブジェクトです。
+ゲームワールドのセットアップに多くの時間をかける必要はありません。2人のプレイヤーは、シンプルな8方向移動を実装した{{< gd-icon CharacterBody2D >}}`CharacterBody2D`オブジェクトです。
 
 {{% notice note %}}
 このパーツのセットアップでお困りの場合は、公式Godotドキュメントの以下のセクションをご覧ください: [2D移動概要](http://docs.godotengine.org/ja/stable/tutorials/2d/2d_movement.html)。
@@ -23,7 +23,7 @@ ghcommentid: 18
 各操作は、プロジェクト設定の[インプットマップ]セクションで個別に設定されています。「right_1」は右矢印キー、「right_2」はDキーなどです。このように命名することで、コード内で以下の構文を使用でき、開発効率を大幅に向上させられます。
 
 {{< highlight gdscript>}}
-export var id = 0
+@export var id = 0
 
 func get_input():
     velocity = Vector2()
@@ -51,7 +51,7 @@ func get_input():
 ルートノードとして使用するノードを作成します。私は通常、`Node`を使用します。このノードには独自のプロパティが何もないため（単にシーンの他の要素を保持するためのものです）、使い勝手が良いからです。
 
 By themselves, {{< gd-icon Viewport >}}`Viewport` nodes don't have position information (they don't
-inherit from {{< gd-icon Node3D >}}`Spatial` or {{< gd-icon Node2D >}}`Node2D`). We're going to use {{< gd-icon SubViewportContainer >}}`ViewportContainer`,
+inherit from {{< gd-icon Node3D >}}`Node3D` or {{< gd-icon Node2D >}}`Node2D`). We're going to use {{< gd-icon SubViewportContainer >}}`ViewportContainer`,
 a {{< gd-icon Control >}}`Control` node, to hold each viewport. To keep them arranged side-by-side, we'll
 use an {{< gd-icon HBoxContainer >}}`HBoxContainer`.
 
@@ -93,11 +93,11 @@ _サイズ_ プロパティを設定した場合、その値はコンテナに�
 {{< highlight gdscript>}}
 extends Node
 
-onready var viewport1 = $Viewports/ViewportContainer1/Viewport1
-onready var viewport2 = $Viewports/ViewportContainer2/Viewport2
-onready var camera1 = $Viewports/ViewportContainer1/Viewport1/Camera2D
-onready var camera2 = $Viewports/ViewportContainer2/Viewport2/Camera2D
-onready var world = $Viewports/ViewportContainer1/Viewport1/World
+@onready var viewport1 = $Viewports/ViewportContainer1/Viewport1
+@onready var viewport2 = $Viewports/ViewportContainer2/Viewport2
+@onready var camera1 = $Viewports/ViewportContainer1/Viewport1/Camera2D
+@onready var camera2 = $Viewports/ViewportContainer2/Viewport2/Camera2D
+@onready var world = $Viewports/ViewportContainer1/Viewport1/World
 
 viewport2.world_2d = viewport1.world_2d
 {{< /highlight >}}

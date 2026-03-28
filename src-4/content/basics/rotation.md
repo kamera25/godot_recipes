@@ -20,7 +20,7 @@ Place the orbiting sprite in a child node of the main sprite (we're calling it "
 ```gdscript
 extends Node2D
 
-export var rotation_speed = PI
+@export var rotation_speed = PI
 
 
 func _process(delta):
@@ -32,9 +32,9 @@ func _process(delta):
 This works just as well in 3D, too:
 
 ```gdscript
-extends Spatial
+extends Node3D
 
-export var rotation_speed = PI
+@export var rotation_speed = PI
 
 
 func _process(delta):

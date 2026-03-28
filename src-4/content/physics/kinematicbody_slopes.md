@@ -1,5 +1,5 @@
 ---
-title: "KinematicBody: Stopping on Slopes"
+title: "CharacterBody3D: Stopping on Slopes"
 weight: 3
 draft: false
 ghcommentid: 103
@@ -8,19 +8,19 @@ tags: []
 
 ## Problem
 
-Your {{< gd-icon KinematicBody3D >}}`KinematicBody` slides down slopes.
+Your {{< gd-icon KinematicBody3D >}}`CharacterBody3D` slides down slopes.
 
 ## Solution
 
-We've started with a no-frills {{< gd-icon KinematicBody3D >}}`KinematicBody`, using `move_and_slide()`, using the script below:
+We've started with a no-frills {{< gd-icon KinematicBody3D >}}`CharacterBody3D`, using `move_and_slide()`, using the script below:
 
 ```gdscript
-extends KinematicBody
+extends CharacterBody3D
 
-export var gravity = -10.0
-export var speed = 5.0
-export var rot_speed = 4.0
-export var jump_speed = 5.0
+@export var gravity = -10.0
+@export var speed = 5.0
+@export var rot_speed = 4.0
+@export var jump_speed = 5.0
 
 var velocity = Vector3.ZERO
 var jumping = false
@@ -105,7 +105,7 @@ velocity = move_and_slide_with_snap(velocity, snap, Vector3.UP,
 ## Related recipes
 
 - [Godot 101: Intro do 3D](/godot_recipes/3.x/g101/3d/)
-- [KinematicBody: Movement](/godot_recipes/3.x/3d/kinematic_body/)
+- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)
 
 #### Like video?
 

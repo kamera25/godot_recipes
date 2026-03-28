@@ -48,13 +48,13 @@ func _on_BallisticBullet_body_entered(body):
 現在の射撃オブジェクトでは、弾丸インスタンスを作成し、初期プロパティを設定できます。以下のいずれかの射撃処理関数／入力ハンドラに実装してください。
 
 ```gdscript
-export var muzzle_velocity = 350
-export var gravity = 250
+@export var muzzle_velocity = 350
+@export var gravity = 250
 
 func shoot():
-    var b = Bullet.instance()
+    var b = Bullet.instantiate()
     owner.add_child(b)
-    b.transform = $Barrel/Position2D.global_transform
+    b.transform = $Barrel/Marker2D.global_transform
     b.velocity = b.transform.x * muzzle_velocity
     b.gravity = gravity
 ```

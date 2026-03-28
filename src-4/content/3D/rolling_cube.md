@@ -27,7 +27,7 @@ In preparing this recipe, I experimented with a few different solutions to this 
 
 * Pure math - calculating and applying rotation transforms
 * AnimationPlayer - using animations to key the rotations and offsets
-* Helper nodes - using Spatial(s) as rotation helpers
+* Helper nodes - using Node3D(s) as rotation helpers
 
 They all worked fine, but I found the last option the most flexible and easiest to adapt, so that's what we'll do here.
 

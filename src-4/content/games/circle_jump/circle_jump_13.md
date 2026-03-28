@@ -48,7 +48,7 @@ Note that the `AdMob` node provides signals you can connect, notifying you when 
 Using the older plugin, we had handled initializing the plugin and showing/hiding ads in the `settings` singleton. We can now remove that code, because the `AdMob` node handles it. Instead, we can replace those calls in `Main` with calls to the `AdMob` node:
 
 ```gdscript
-onready var admob = $Admob
+@onready var admob = $Admob
 ```
 
 Anywhere we called `settings.hide_ad_banner()`, etc. we can replace with the new equivalent:

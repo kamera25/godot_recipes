@@ -15,7 +15,7 @@ You're looking to make a 3D driving or racing game and don't know where to start
 Even in 3D, cars tend to remain on the ground. For this reason, movement can (mostly) be treated as if it were 2D. Much of the car's movement code will be very much like the [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering). It's recommended that you review that recipe before proceeding with this one.
 {{% /notice %}}
 
-Godot does provide a {{< gd-icon VehicleBody3D >}}`VehicleBody` node, which is based on {{< gd-icon RigidBody3D >}}`RigidBody` and includes a complex simulation of engine, braking, suspension, etc. However, this introduces a lot of complexity and tends to be overkill for most casual racing/driving games. For that reason, we're going with a KinematicBody based solution here.
+Godot does provide a {{< gd-icon VehicleBody3D >}}`VehicleBody` node, which is based on {{< gd-icon RigidBody3D >}}`RigidBody` and includes a complex simulation of engine, braking, suspension, etc. However, this introduces a lot of complexity and tends to be overkill for most casual racing/driving games. For that reason, we're going with a CharacterBody3D based solution here.
 
 {{% notice info %}}
 If you're interested in how to work with {{< gd-icon VehicleBody3D >}}`VehicleBody`, I highly recommend [this series by Bastiaan Olij](https://youtu.be/B5vE-nNszxA).
@@ -38,17 +38,17 @@ You can find this and other car models in Kenney's "Car Kit", available here:
 
 To import the car, find the model in the `"Models/GLTF format"` folder. In our case, we want the `sedanSports.glb`. Drop this file in your new Godot project, preferably in a separate folder such as `res://assets/cars/`.
 
-Select the file in Godot and go to the "Import" tab. Change the _Root Type_ to "KinematicBody" and click "Reimport". Now we're ready to use this car.
+Select the file in Godot and go to the "Import" tab. Change the _Root Type_ to "CharacterBody3D" and click "Reimport". Now we're ready to use this car.
 
-#### Setting up the {{< gd-icon KinematicBody3D >}} KinematicBody
+#### Setting up the {{< gd-icon KinematicBody3D >}} CharacterBody3D
 
 Double-click on the `sedanSports.glb` file and choose "New Inherited". You'll have a new scene that looks like this:
 
 ![alt](/godot_recipes/3.x/img/3d_car_02.png)
 
-Note the individual meshes for each of the car's parts. There's also a stray "tmpParent" {{< gd-icon Node3D >}}`Spatial` node, but we can ignore that.
+Note the individual meshes for each of the car's parts. There's also a stray "tmpParent" {{< gd-icon Node3D >}}`Node3D` node, but we can ignore that.
 
-The {{< gd-icon KinematicBody3D >}}`KinematicBody` has a warning about missing collision shapes, so we'll need to fix that first. We're going to add 3 {{< gd-icon CollisionShape3D >}}`CollisionShape`s: a {{< gd-icon BoxShape3D >}}`BoxShape` for the car's body, and a {{< gd-icon CylinderShape3D >}}`CylinderShape` for each of the front and rear axles.
+The {{< gd-icon KinematicBody3D >}}`CharacterBody3D` has a warning about missing collision shapes, so we'll need to fix that first. We're going to add 3 {{< gd-icon CollisionShape3D >}}`CollisionShape`s: a {{< gd-icon BoxShape3D >}}`BoxShape` for the car's body, and a {{< gd-icon CylinderShape3D >}}`CylinderShape` for each of the front and rear axles.
 
 Once the shapes are set up they should look something like this:
 
@@ -65,17 +65,17 @@ We want to be able to make cars that can be driven by human or AI control. In ei
 Make a new script called `car_base.gd`. We'll start with our variables: some `export`s to allow for adjusting the car's behavior, and some others to track its state.
 
 ```gdscript
-extends KinematicBody
+extends CharacterBody3D
 
 # Car behavior parameters, adjust as needed
-export var gravity = -20.0
-export var wheel_base = 0.6  # distance between front/rear axles
-export var steering_limit = 10.0  # front wheel max turning angle (deg)
-export var engine_power = 6.0
-export var braking = -9.0
-export var friction = -2.0
-export var drag = -2.0
-export var max_speed_reverse = 3.0
+@export var gravity = -20.0
+@export var wheel_base = 0.6  # distance between front/rear axles
+@export var steering_limit = 10.0  # front wheel max turning angle (deg)
+@export var engine_power = 6.0
+@export var braking = -9.0
+@export var friction = -2.0
+@export var drag = -2.0
+@export var max_speed_reverse = 3.0
 
 # Car state properties
 var acceleration = Vector3.ZERO  # current acceleration
@@ -89,7 +89,7 @@ var steer_angle = 0.0  # current wheel angle
 
 * `drag` and `friction` are [explained here](/godot_recipes/3.x/2d/car_steering/#part-3-frictiondrag).
 
-The rest of the script will be very similar to the 2D version, which a few changes to work correctly with {{< gd-icon Node3D >}}`Spatial`s and `Transform`s.
+The rest of the script will be very similar to the 2D version, which a few changes to work correctly with {{< gd-icon Node3D >}}`Node3D`s and `Transform`s.
 
 We'll start with `_physics_process()`.
 
@@ -156,7 +156,7 @@ Now we're ready to add some player controls. Here's the InputMap setup:
 
 If you have a gamepad with an analog stick, it's highly recommended you use it. With keyboard controls, which can only be pressed or not, you can only turn the "steering wheel" to the maximum value. An analog stick allows for a much better experience. We'll make sure the code works with both.
 
-Here's the script to attach to the car {{< gd-icon KinematicBody3D >}} `KinematicBody`:
+Here's the script to attach to the car {{< gd-icon KinematicBody3D >}} `CharacterBody3D`:
 
 ```gdscript
 extends "res://cars/car_base.gd"
@@ -199,7 +199,7 @@ Download the project file here: [https://github.com/kidscancode/3d_car_tutorial/
 
 - [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)
 - [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)
-- [3D: KinematicBody Movement](/godot_recipes/3.x/3d/kinematic_body/)
+- [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)
 
 #### Like video?
 

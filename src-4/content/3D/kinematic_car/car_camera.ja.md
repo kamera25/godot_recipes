@@ -24,7 +24,7 @@ Godot には組み込みの `InterpolatedCamera` ノードが用意されてお�
 ```gdscript
 extends Camera
 
-export var lerp_speed = 10.0
+@export var lerp_speed = 10.0
 
 var target = null
 
@@ -41,12 +41,12 @@ func _on_change_camera(t):
 
 ### ターゲットの設定
 
-複数の異なる追跡カメラ位置を設定できるようにしたいです。例えば、近接視点と遠距離視点、あるいは真下を見下ろすアングルなどです。車両オブジェクトに {{< gd-icon Node3D >}}`Spatial`コンポーネントを追加し、名前を `CameraPositions` と名付けてください。このコンポーネントに追加の {{< gd-icon Position3D >}}`Position3D`コンポーネントを複数追加します - 必要な数だけ自由に設定できます。
+複数の異なる追跡カメラ位置を設定できるようにしたいです。例えば、近接視点と遠距離視点、あるいは真下を見下ろすアングルなどです。車両オブジェクトに {{< gd-icon Node3D >}}`Node3D`コンポーネントを追加し、名前を `CameraPositions` と名付けてください。このコンポーネントに追加の {{< gd-icon Marker3D >}}`Marker3D`コンポーネントを複数追加します - 必要な数だけ自由に設定できます。
 
-各 `Position3D` 要素を各自選択した異なる位置に移動・配置してください。位置の **-Z** 軸は車両方向を指すように設定します。
+各 `Marker3D` 要素を各自選択した異なる位置に移動・配置してください。位置の **-Z** 軸は車両方向を指すように設定します。
 
 {{% notice tip %}}
-You may find it helpful to temporarily attach a {{< gd-icon Camera3D >}}`Camera` to the position and use its "Preview" mode to help aim the {{< gd-icon Position3D >}}`Position3D` so that it's pointing directly where you want (you can remove the camera once you're done).
+You may find it helpful to temporarily attach a {{< gd-icon Camera3D >}}`Camera` to the position and use its "Preview" mode to help aim the {{< gd-icon Marker3D >}}`Marker3D` so that it's pointing directly where you want (you can remove the camera once you're done).
 ![alt](/godot_recipes/3.x/img/3d_car_09.png)
 {{% /notice %}}
 
@@ -58,7 +58,7 @@ extends "res://cars/car_base.gd"
 signal change_camera
 
 var current_camera = 0
-onready var num_cameras = $CameraPositions.get_child_count()
+@onready var num_cameras = $CameraPositions.get_child_count()
 
 func _ready():
     emit_signal("change_camera", $CameraPositions.get_child(current_camera))

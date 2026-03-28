@@ -34,7 +34,7 @@ pre: "04. "
 ```gdscript
 extends CanvasLayer
 
-onready var tween = $Tween
+@onready var tween = $Tween
 
 func appear():
     tween.interpolate_property(self, "offset:x", 500, 0,

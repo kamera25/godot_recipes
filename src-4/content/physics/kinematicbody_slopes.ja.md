@@ -8,19 +8,19 @@ tags: []
 
 ## 課題
 
- {{< gd-icon KinematicBody3D >}}`KinematicBody` を使っているのですが、地面が斜面の時に滑ってしまします。
+ {{< gd-icon KinematicBody3D >}}`CharacterBody3D` を使っているのですが、地面が斜面の時に滑ってしまします。
 
 ## 解決策
 
-まず、シンプルな {{< gd-icon KinematicBody3D >}}`KinematicBody` を使用し、`move_and_slide()` メソッドを実装しました。以下のスクリプトを使用しています。
+まず、シンプルな {{< gd-icon KinematicBody3D >}}`CharacterBody3D` を使用し、`move_and_slide()` メソッドを実装しました。以下のスクリプトを使用しています。
 
 ```gdscript
-extends KinematicBody
+extends CharacterBody3D
 
-export var gravity = -10.0
-export var speed = 5.0
-export var rot_speed = 4.0
-export var jump_speed = 5.0
+@export var gravity = -10.0
+@export var speed = 5.0
+@export var rot_speed = 4.0
+@export var jump_speed = 5.0
 
 var velocity = Vector3.ZERO
 var jumping = false

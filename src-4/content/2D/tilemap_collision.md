@@ -7,11 +7,11 @@ ghcommentid: 19
 
 ## Problem
 
-You have a {{< gd-icon KinematicBody2D >}}`KinematicBody2D` character colliding with a {{< gd-icon TileMap >}}`TileMap`, and you want to know which tile it collided with.
+You have a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` character colliding with a {{< gd-icon TileMap >}}`TileMap`, and you want to know which tile it collided with.
 
 ## Solution
 
-When a {{< gd-icon KinematicBody2D >}}`KinematicBody2D` collides, the collision data is returned in a `KinematicCollision2D` object. The {{< gd-icon TileMap >}}`TileMap` acts as a single collider, so if you reference the `collider` property, it will be the {{< gd-icon TileMap >}}`TileMap` node.
+When a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` collides, the collision data is returned in a `KinematicCollision2D` object. The {{< gd-icon TileMap >}}`TileMap` acts as a single collider, so if you reference the `collider` property, it will be the {{< gd-icon TileMap >}}`TileMap` node.
 
 You then need to find out which tile in the {{< gd-icon TileMap >}}`TileMap` is at the collision location.
 

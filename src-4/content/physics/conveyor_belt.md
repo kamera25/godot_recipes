@@ -47,7 +47,7 @@ Try adjusting the `x` of the *Region* property. You'll see the tiles shift. This
 ```gdscript
 extends StaticBody2D
 
-export var speed = 100
+@export var speed = 100
 
 func _ready():
     constant_linear_velocity.x = speed
@@ -77,5 +77,5 @@ However, you can use this technique if you change from "Bullet" to the "GodotPhy
 ## Related recipes
 
 - [Platform character](http://kidscancode.org/godot_recipes/2d/platform_character)
-- [Using KinematicBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/)
+- [Using CharacterBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/)
 - [Moving Platforms](/godot_recipes/3.x/2d/moving_platforms/)

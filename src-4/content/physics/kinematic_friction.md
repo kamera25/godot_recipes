@@ -15,7 +15,7 @@ For most games, we're not necessarily interested in a perfect physics simulation
 Below is the code for a no-frills kinematic platformer character:
 
 ```gdscript
-extends KinematicBody2D
+extends CharacterBody2D
 
 var speed = 1200
 var jump_speed = -1800

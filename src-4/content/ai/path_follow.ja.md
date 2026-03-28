@@ -30,10 +30,10 @@ ghcommentid: 72
 以下のタグを使用して経路に沿って自動移動させることができます。{{< gd-icon PathFollow2D >}}`PathFollow2D`。ただし、キネマティックボディを使用している場合、この方法は衝突判定に問題を引き起こす可能性があります。これはボディの移動メソッドを利用していないためです。このため、代わりに経路上の各点を「目標」として設定し、ボディがその方向へ移動するようにします。
 
 ```gdscript
-extends KinematicBody2D
+extends CharacterBody2D
 
 var move_speed = 100
-export (NodePath) var patrol_path
+@export var patrol_path: NodePath
 var patrol_points
 var patrol_index = 0
 var velocity = Vector2.ZERO

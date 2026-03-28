@@ -21,7 +21,7 @@ ghcommentid: 34
 
 ![alt](/godot_recipes/3.x/img/3d_kinematic_02.png)
 
-衝突形状については、戦車の履帯に合わせて整列・サイズ調整した `BoxShape` を使用します。`CamPos` は、後続カメラを配置するための {{< gd-icon Position3D >}}`Position3D` 変数です。タンクの後方かつ上部に位置するように配置し、下向きに角度が付けられています。
+衝突形状については、戦車の履帯に合わせて整列・サイズ調整した `BoxShape` を使用します。`CamPos` は、後続カメラを配置するための {{< gd-icon Marker3D >}}`Marker3D` 変数です。タンクの後方かつ上部に位置するように配置し、下向きに角度が付けられています。
 
 また、個別の {{< gd-icon MeshInstance3D >}}`MeshInstance` ノードを **Y** 軸を中心に `180` 度回転させました。これは元々 **+Z** 方向を向いてモデル化されていたためですが、Godot では **-Z** が前方方向となるため、戦車が逆向きに見えるようにはしたくないからです。
 
@@ -37,11 +37,11 @@ ghcommentid: 34
 それでは、必要な変数から始めつつ、スクリプトを追加しましょう。
 
 ```gdscript
-extends KinematicBody
+extends CharacterBody3D
 
-export var gravity = Vector3.DOWN * 10
-export var speed = 4
-export var rot_speed = 0.85
+@export var gravity = Vector3.DOWN * 10
+@export var speed = 4
+@export var rot_speed = 0.85
 
 var velocity = Vector3.ZERO
 ```
@@ -52,7 +52,7 @@ var velocity = Vector3.ZERO
 `export` を使ってプロパティを宣言すると、インスペクターで簡単に調整できるようになります。
 {{% /notice %}}
 
-Using the `KinematicBody.move_and_slide()` method makes our movement code quite simple:
+Using the `CharacterBody3D.move_and_slide()` method makes our movement code quite simple:
 
 ```gdscript
 func _physics_process(delta):

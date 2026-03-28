@@ -149,4 +149,4 @@ When using `move_and_slide()` you still need to apply `delta` to any other quant
 
 ## Related Recipes
 
-<!-- - [Using KinematicBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->
+<!-- - [Using CharacterBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->

@@ -12,7 +12,7 @@ the bulk of the game. Now we need to add the progression: a continuous series of
 
 Let's add some more nodes to Main:
 
-- **Position2D ("StartPosition")**
+- **Marker2D ("StartPosition")**
 
     This will mark the starting position for the game. Place it near the bottom-center of the screen.
 
@@ -72,7 +72,7 @@ This is temporary - later we'll have a UI with a start button to call the new ga
 ```gdscript
 func new_game():
     $Camera2D.position = $StartPosition.position
-    player = Jumper.instance()
+    player = Jumper.instantiate()
     player.position = $StartPosition.position
     add_child(player)
     player.connect("captured", self, "_on_Jumper_captured")
@@ -83,7 +83,7 @@ The `new_game()` function initializes the game - spawning a player and a circle 
 
 ```gdscript
 func spawn_circle(_position=null):
-    var c = Circle.instance()
+    var c = Circle.instantiate()
     if !_position:
         var x = rand_range(-150, 150)
         var y = rand_range(-500, -400)
@@ -137,7 +137,7 @@ We're going to use this to make a trail that streams out behind the player. Late
 Now in the jumper's script, let's add the following:
 
 ```gdscript
-onready var trail = $Trail/Points
+@onready var trail = $Trail/Points
 
 var trail_length = 25
 ```

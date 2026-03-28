@@ -36,7 +36,7 @@ The node setup and behavior of the missile is the same you would use for a "dumb
 ```gdscript
 extends Area2D
 
-export var speed = 350
+@export var speed = 350
 
 var velocity = Vector2.ZERO
 var acceleration = Vector2.ZERO
@@ -65,7 +65,7 @@ func _on_Lifetime_timeout():
 ターゲット捜索動作を変更するため、`acceleration`（加速度）を利用します。ただし、ミサイルが「一瞬で方向転換する」のは避けたいので、制御する「ステアリング力」を調整する変数を追加します。この設定により、異なる挙動に対応した旋回半径を調整できるようになります。また、ミサイルが追跡対象を把握するための`target`変数も必要です。これも`start()`関数内で適切に初期化します。
 
 ```gdscript
-export var steer_force = 50.0
+@export var steer_force = 50.0
 
 var target = null
 
@@ -111,8 +111,8 @@ func _physics_process(delta):
 ```gdscript
 extends Area2D
 
-export var speed = 350
-export var steer_force = 50.0
+@export var speed = 350
+@export var steer_force = 50.0
 
 var velocity = Vector2.ZERO
 var acceleration = Vector2.ZERO

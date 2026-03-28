@@ -18,7 +18,7 @@ ghcommentid: 36
 まず、インスタンス化可能な「弾丸」オブジェクトを設定します。使用するノードは以下の通りです。
 
 ```
-{{< gd-icon Area3D >}} Area: Bullet
+{{< gd-icon Area3D >}} Area3D: Bullet
     {{< gd-icon MeshInstance3D >}} MeshInstance
     {{< gd-icon CollisionShape3D >}} CollisionShape
 ```
@@ -34,18 +34,18 @@ ghcommentid: 36
 メッシュを `{{< gd-icon MeshInstance3D >}} MeshInstance` に追加し、衝突形状もそれに合わせてスケール調整してください。
 
 {{% notice warning %}}
-`MeshInstance` を `Area`ノードの前方方向（**-Z軸**）に合わせて整列させることを忘れないでください。そうしないと、弾丸が正しく飛んでいるように見えません！
+`MeshInstance` を `Area3D`ノードの前方方向（**-Z軸**）に合わせて整列させることを忘れないでください。そうしないと、弾丸が正しく飛んでいるように見えません！
 {{% /notice %}}
 
 スクリプトを追加し、{{< gd-icon Area3D >}}`Area3D`の`body_entered`シグナルに接続してください。
 
 ```gdscript
-extends Area
+extends Area3D
 
 signal exploded
 
-export var muzzle_velocity = 25
-export var g = Vector3.DOWN * 20
+@export var muzzle_velocity = 25
+@export var g = Vector3.DOWN * 20
 
 var velocity = Vector3.ZERO
 
@@ -69,21 +69,21 @@ Using `look_at()` each frame turns the bullet to point in its direction of trave
 
 ### 撮影について
 
-タンク（または射撃を行っているオブジェクト）内に、弾丸が出現する位置に `{{< gd-icon Position3D >}}`Position3D` 子要素を追加します。例として戦車の場合、砲身の先端に配置します。
+タンク（または射撃を行っているオブジェクト）内に、弾丸が出現する位置に `{{< gd-icon Marker3D >}}`Marker3D` 子要素を追加します。例として戦車の場合、砲身の先端に配置します。
 
 ![alt](/godot_recipes/3.x/img/3d_shoot_02.png)
 
 次に、インスタンス化する弾シーンを追加する方法です：
 
 ```gdscript
-export (PackedScene) var Bullet
+@export var Bullet: PackedScene
 ```
 
 そして、`_process()` または `_unhandled_input()`（入力をキャプチャしている箇所）に、以下のコードを追加して弾丸を生成してください。
 
 ```gdscript
 if Input.is_action_just_pressed("shoot"):
-    var b = Bullet.instance()
+    var b = Bullet.instantiate()
     owner.add_child(b)
     b.transform = $Cannon/Muzzle.global_transform
     b.velocity = -b.transform.basis.z * b.muzzle_velocity

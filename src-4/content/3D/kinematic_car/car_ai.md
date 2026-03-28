@@ -25,7 +25,7 @@ That's the bare-bones car controller. Feel free to use this as a starter for you
 - [Kinematic Car: Base](/godot_recipes/3.x/3d/kinematic_car/car_base/)
 - [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)
 - [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)
-- [3D: KinematicBody Movement](/godot_recipes/3.x/3d/kinematic_body/)
+- [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)
 
 #### Like video?
 

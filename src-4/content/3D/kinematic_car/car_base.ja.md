@@ -38,7 +38,7 @@ VehicleBody3D`車両ボディ`の操作方法について詳しく知りたい�
 
 車を読み込むには、`"Models/GLTF形式"`フォルダ内で該当モデルを探してください。今回は`sedanSports.glb`を使用します。このファイルを新規Godotプロジェクトにインポートし、できれば`res://assets/cars/`のような専用フォルダにまとめておくと良いでしょう。
 
-Godotでファイルを選択し、「インポート」タブに移動します。_ルートの型を「KinematicBody」に設定し、「再インポート」をクリックします。これでこの車を使用する準備が整いました。
+Godotでファイルを選択し、「インポート」タブに移動します。_ルートの型を「CharacterBody3D」に設定し、「再インポート」をクリックします。これでこの車を使用する準備が整いました。
 
 #### {{< gd-icon KinematicBody3D >}} キネマティックボディの設定
 
@@ -48,7 +48,7 @@ Godotでファイルを選択し、「インポート」タブに移動します
 
 注：各パーツごとに個別のメッシュが設定されています。また、不要な「tmpParent」{{< gd-icon Node3D >}}`空間ノード`も存在しますが、こちらは無視して構いません。
 
-{{< gd-icon KinematicBody3D >}} `KinematicBody`コンポーネントには衝突形状の未定義に関する警告が表示されています。この問題を、以下の3つの手順で解決します。の {{< gd-icon CollisionShape3D >}} を追加します。車両本体用の {{< gd-icon BoxShape3D >}} `BoxShape`と、前輪および後輪用の各1つずつの {{< gd-icon CylinderShape3D >}} `CylinderShape`です。
+{{< gd-icon KinematicBody3D >}} `CharacterBody3D`コンポーネントには衝突形状の未定義に関する警告が表示されています。この問題を、以下の3つの手順で解決します。の {{< gd-icon CollisionShape3D >}} を追加します。車両本体用の {{< gd-icon BoxShape3D >}} `BoxShape`と、前輪および後輪用の各1つずつの {{< gd-icon CylinderShape3D >}} `CylinderShape`です。
 
 形状設定が完了したら、以下のような表示になるはずです：
 
@@ -65,17 +65,17 @@ Godotでファイルを選択し、「インポート」タブに移動します
 新規スクリプト「car_base.gd」を作成します。まずは変数の定義から始めましょう。車の動作を調整するためのエクスポート変数と、状態を追跡するためのその他の変数を用意します。
 
 ```gdscript
-extends KinematicBody
+extends CharacterBody3D
 
 # Car behavior parameters, adjust as needed
-export var gravity = -20.0
-export var wheel_base = 0.6  # distance between front/rear axles
-export var steering_limit = 10.0  # front wheel max turning angle (deg)
-export var engine_power = 6.0
-export var braking = -9.0
-export var friction = -2.0
-export var drag = -2.0
-export var max_speed_reverse = 3.0
+@export var gravity = -20.0
+@export var wheel_base = 0.6  # distance between front/rear axles
+@export var steering_limit = 10.0  # front wheel max turning angle (deg)
+@export var engine_power = 6.0
+@export var braking = -9.0
+@export var friction = -2.0
+@export var drag = -2.0
+@export var max_speed_reverse = 3.0
 
 # Car state properties
 var acceleration = Vector3.ZERO  # current acceleration
@@ -156,7 +156,7 @@ func get_input():
 
 アナログスティック付きゲームパッドをお持ちの場合は、ぜひそれをご使用になることを強くオススメします。キーボード操作ではオン/オフしか制御できないため、「ハンドル」を最大限に回転させるしかありません。アナログスティックを使えば、はるかに快適な操作体験が得られます。いずれの操作方法でもコードが正しく動作するよう、しっかり対応いたします。
 
-以下が車両にアタッチするスクリプトです：{{< gd-icon KinematicBody3D >}} `KinematicBody`：
+以下が車両にアタッチするスクリプトです：{{< gd-icon KinematicBody3D >}} `CharacterBody3D`：
 
 ```gdscript
 extends "res://cars/car_base.gd"
@@ -199,7 +199,7 @@ func get_input():
 
 - [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)
 * [入力アクション](http://kidscancode.org/godot_recipes/input/input_actions/)
-- [3D: KinematicBody Movement](/godot_recipes/3.x/3d/kinematic_body/)
+- [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)
 
 #### この動画が気に入ったら？
 

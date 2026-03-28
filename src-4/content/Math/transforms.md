@@ -57,7 +57,7 @@ In this picture, the blue vector is the `transform.origin`. It is equal to the o
 
 ### Converting Between Local and Global Space
 
-You can convert coordinates from local to global by applying the transform. For convenience, `Node2D` and `Spatial` include helper functions for this: `to_local()` and `to_global()`:
+You can convert coordinates from local to global by applying the transform. For convenience, `Node2D` and `Node3D` include helper functions for this: `to_local()` and `to_global()`:
 
 ```gdscript
     var global_position = to_global(local_position)

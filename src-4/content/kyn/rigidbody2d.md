@@ -30,7 +30,7 @@ A rigid body can be in one of four *modes*, which affect its behavior:
 1. Rigid - This is the default mode. The body behaves like a solid physical object, colliding and responding to forces.
 1. Static - In this mode, the body does not move, similar to a {{< gd-icon StaticBody2D >}}`StaticBody2D`.
 1. Character - In this mode, the body acts the same as in *rigid* mode, but does not rotate.
-1. Kinematic - In this mode, the body behaves like a {{< gd-icon KinematicBody2D >}}`KinematicBody2D`, meaning it can only move via code. **NOTE:** This does *not* mean that it gains {{< gd-icon KinematicBody2D >}}`KinematicBody2D` helper functions such as `move_and_slide()`. All movement and collision response must be done manually.
+1. Kinematic - In this mode, the body behaves like a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`, meaning it can only move via code. **NOTE:** This does *not* mean that it gains {{< gd-icon CharacterBody2D >}}`CharacterBody2D` helper functions such as `move_and_slide()`. All movement and collision response must be done manually.
 
 * Gravity Scale (`gravity_scale`)
 
@@ -81,8 +81,8 @@ Here's the code:
 ```gdscript
 extends RigidBody2D
 
-export var engine_thrust = 500
-export var spin_thrust = 15000
+@export var engine_thrust = 500
+@export var spin_thrust = 15000
 
 var thrust = Vector2()
 var rotation_dir = 0

@@ -57,7 +57,7 @@ Add the `DebugOverlay` as an autoload and set it as a singleton. This way we can
 ```gdscript
 extends CanvasLayer
 
-onready var draw = $DebugDraw3D
+@onready var draw = $DebugDraw3D
 
 func _ready():
     if not InputMap.has_action("toggle_debug"):
