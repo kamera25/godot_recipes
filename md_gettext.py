@@ -29,6 +29,7 @@ def extract_md_blocks(content):
     
     # コードブロックを抽出対象から外す
     text_content = re.sub(r'```.*?```', '', text_content, flags=re.DOTALL)
+    text_content = re.sub(r'\{\{<\s*highlight.*?\{\{<\s*/highlight\s*>\}\}', '', text_content, flags=re.DOTALL)
     
     # 段落ごとに分割 (改行2つ以上)
     blocks = re.split(r'\n\n+', text_content)
@@ -159,8 +160,8 @@ def apply_translations(docs_dir, po_file):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Markdown Gettext Tool")
     parser.add_argument('mode', choices=['extract', 'apply'], help="'extract' to create PO, 'apply' to translate Markdown")
-    parser.add_argument('--dir', default='/Users/kamera25/godot_recipes/src-4/content', help='Markdown directory')
-    parser.add_argument('--po', default='/Users/kamera25/godot_recipes/content_extracted.po', help='PO file path')
+    parser.add_argument('--dir', default='/app/src-4/content', help='Markdown directory')
+    parser.add_argument('--po', default='/app/content_extracted.po', help='PO file path')
     
     args = parser.parse_args()
     
