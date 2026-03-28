@@ -46,6 +46,9 @@ def translate_content(content, translations):
     # Protect code blocks (```)
     content = re.sub(r'```.*?```', protect, content, flags=re.DOTALL)
     
+    # Protect Hugo highlight shortcode blocks
+    content = re.sub(r'\{\{<\s*highlight.*?\{\{<\s*/highlight\s*>\}\}', protect, content, flags=re.DOTALL)
+
     # Perform translation replacement on the masked content
     for msgid in sorted_keys:
         # Check if msgid is essentially just a preserved word
@@ -64,8 +67,8 @@ def translate_content(content, translations):
     return content
 
 def main():
-    po_file = '/Users/kamera25/godot_recipes/output.po'
-    content_dir = '/Users/kamera25/godot_recipes/src-4/content'
+    po_file = '/app/output.po'
+    content_dir = '/app/src-4/content'
     
     print(f"Loading translations from {po_file}...")
     translations = load_po(po_file)
