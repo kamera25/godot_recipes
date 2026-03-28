@@ -2950,7 +2950,7 @@ msgstr "これはかなり改善されましたが、タンクがエッジを越
 
 #: 3D/3d_align_surface.md
 msgid "Add a {{< gd-icon RayCast3D >}}`RayCast3D` child to the tank and set its **Target Position** to `(0, -1, 0)`."
-msgstr "タンクに `{{< gd-icon RayCast3D >}}`RayCast3D` 子要素を追加し、 **ターゲット位置** を `(0, -1, 0)` に設定してください。"
+msgstr "タンクに {{< gd-icon RayCast3D >}}`RayCast3D` 子要素を追加し、 **ターゲット位置** を `(0, -1, 0)` に設定してください。"
 
 #: 3D/3d_align_surface.md
 msgid "You can get even better results with two raycasts - one at the front and one at the back. Get the average normal from them:"
@@ -5910,7 +5910,7 @@ msgstr "レイが何も検出しない場合は、水平な面と仮定します
 
 #: 3D/kinematic_car/car_slopes.md
 msgid "To begin, we need to detect when the wheel isn't on the ground. Add two {{< gd-icon RayCast3D >}}`RayCast` nodes to the car and align them with the front and rear wheels like so:"
-msgstr "To begin, we need to detect when the wheel isn't on the ground. Add two {{< gd-icon RayCast3D >}}`RayCast` nodes to the car and align them with the front and rear wheels like so:"
+msgstr "まず、車輪が地面に接触していない状況を検出する必要があります。車に2つの {{< gd-icon RayCast3D >}}`RayCast` ノードを追加し、以下のように前輪と後輪にそれぞれ配置します。"
 
 #: 3D/kinematic_car/car_slopes.md
 msgid "Kinematic bodies don't automatically rotate on collision. When the wheels aren't both touching the ground, as in the image above, we'll need to align the car manually."
