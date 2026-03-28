@@ -6471,7 +6471,7 @@ msgstr "入力"
 
 #: input/_index.md
 msgid "Handling input - from keyboard and mouse to game controllers and touchscreens."
-msgstr "入力処理 - キーボード・マウスからゲームコントローラー、タッチスクリーンまで幅広く対応。"
+msgstr "入力処理 - キーボード・マウスからゲームコントローラー、タッチスクリーンまで幅広く対応させましょう。"
 
 #: input/_index.md
 msgid "# <i class='fas fa-gamepad'></i>&nbsp;Input"
@@ -7500,7 +7500,7 @@ msgstr "これまで、インポートしたモデルを使って3D環境を設�
 
 #: g101/3d/101_3d_06.md
 msgid "CSG stands for **Constructive Solid Geometry**. It allows you to combine primitive shapes to build complex geometry. Shapes can be combined with boolean operations such as _Union_, _Intersection_, and _Subtraction_."
-msgstr "CSGは**Constructive Solid Geometry**（空間領域構成法）の略です。これにより、基本的な形状を組み合わせて複雑な立体図形を構築できます。形状は、_ユニオン（結合）_、_インターセクション（交差）_、_サブトラクション（減算）_といった論理演算によって組み合わせることができます。"
+msgstr "CSGは**Constructive Solid Geometry**（空間領域構成法）の略です。これにより、基本的な形状を組み合わせて複雑な立体図形を構築できます。形状は、_ユニオン（結合）_、_インターセクション（交差）_、_サブトラクション（減算）_ といった論理演算によって組み合わせることができます。"
 
 #: g101/3d/101_3d_02.md
 msgid "![alt](/godot_recipes/4.x/img/kenney_3d_platform_sample.png?width=100)"
@@ -7774,7 +7774,7 @@ msgstr "現在の状況は以下の通りです："
 
 #: g101/3d/101_3d_05.md
 msgid "Our conditional statement is essentially this:"
-msgstr "Our conditional statement is essentially this:"
+msgstr "条件分岐のロジックは基本的に次のようなものです。"
 
 #: g101/3d/101_3d_05.md
 msgid ""
@@ -9688,7 +9688,7 @@ msgstr "まず、宇宙空間を漂流しているこの宇宙船について考
 
 #: Math/transforms.md
 msgid "In addition to the local axes, the transform also contains a component called the `origin`. The origin represents the _translation_, or change in position."
-msgstr "ローカル座標系に加えて、この変換には「原点」と呼ばれるコンポーネントも含まれています。原点は位置の_移動量_、すなわち変化した位置を表します。"
+msgstr "ローカル座標系に加えて、この変換には「原点」と呼ばれるコンポーネントも含まれています。原点は位置の _移動量_、すなわち変化した位置を表します。"
 
 #: Math/transforms.md
 msgid "These \"local\" axes are contained in the object's `transform`."
@@ -12616,7 +12616,7 @@ msgstr "本例では、以下のノード設定を使用します。"
 
 #: physics/asteroids_physics.md
 msgid "From the state, we grab the current transform, modify it to wrap around the screen using `wrapf()`, and then set it back to the current state."
-msgstr "州レベルでは、現在の変換行列を取得し、`wrapf()` 関数を使用して画面全体を覆うように変更した後、元の状態に復元します。"
+msgstr "状態から現在の変換行列を取得し、`wrapf()` 関数を使用して画面全体を覆うように変更した後、元の状態に復元します。"
 
 #: physics/smooth_rigid_rotate.md
 msgid "To rotate a body, we need to apply a rotational force - a *torque*. Once the body is rotating, we want the torque to get smaller as we get closer to the final rotation."
@@ -15728,10 +15728,8 @@ msgid ""
 "a {{< gd-icon Control >}}`Control` node, to hold each viewport. To keep them arranged side-by-side, we'll\n"
 "use an {{< gd-icon HBoxContainer >}}`HBoxContainer`."
 msgstr ""
-"By themselves, {{< gd-icon Viewport >}}`Viewport` nodes don't have position information (they don't\n"
-"inherit from {{< gd-icon Node3D >}}`Spatial` or {{< gd-icon Node2D >}}`Node2D`). We're going to use {{< gd-icon SubViewportContainer >}}`ViewportContainer`,\n"
-"a {{< gd-icon Control >}}`Control` node, to hold each viewport. To keep them arranged side-by-side, we'll\n"
-"use an {{< gd-icon HBoxContainer >}}`HBoxContainer`."
+"単独では、{{< gd-icon Viewport >}}`Viewport`ノードは位置情報を有していません（{{< gd-icon Node3D >}}`Spatial`や{{< gd-icon Node2D >}}`Node2D`から継承していません）。ここでは各ビューポートを保持するために{{< gd-icon SubViewportContainer >}}`ViewportContainer`を使用します\n"
+"また、それらを横に並べて配置するために、{{< gd-icon HBoxContainer >}}`HBoxContainer`を利用します。"
 
 #: 2D/splitscreen_demo.md
 msgid ""
@@ -17052,7 +17050,7 @@ msgstr ""
 
 #: games/first_2d/first_2d_01.md
 msgid "* Click the **Input Map** tab at the top of the **Project Settings** window. This is where we can set up the inputs we want to use in the game. In the \"Add New Action\" box, type the following, hitting `<enter>` after each to add it to the list of actions: `right`, `left`, `up`, `down`, `shoot`. To assign key(s) to each named input, click the **+** button to its right and press the key on your keyboard. When you're done, you should have something like this:"
-msgstr "* プロジェクト設定画面の上部にある「インプットマップ」タブをクリックしてください。ここではゲーム内で使用する入力設定を行います。「新規アクション追加」欄に以下を入力し、各入力項目を追加したら`<Enter>`キーを押してください。`右`、`左`、`上`、`下`、`射撃`。それぞれの入力にキーボードショートカットを割り当てるには、対応する**+**ボタンをクリックした後、キーボードでそのキーを押してください。作業が完了したら、以下のような設定になっているはずです："
+msgstr "* **プロジェクト設定** 画面の上部にある **インプットマップ** タブをクリックしてください。ここではゲーム内で使用する入力設定を行います。「新規アクション追加」欄に以下を入力し、各入力項目を追加したら`<Enter>`キーを押してください。`right(右)`、`left(左)`、`up(上)`、`down(下)`、`shoot(射撃)`。それぞれの入力にキーボードショートカットを割り当てるには、対応する **+** ボタンをクリックした後、キーボードでそのキーを押してください。作業が完了したら、以下のような設定になっているはずです。"
 
 #: games/first_2d/first_2d_01.md
 msgid ""
@@ -17084,7 +17082,7 @@ msgstr "次に必要なのは、プロジェクト全体の設定をセットア
 
 #: games/first_2d/first_2d_01.md
 msgid "These settings will ensure the game is the right size. Because we're using pixel art, the images themselves are very small, so an old-school resolution like `240x320` is perfect. However, on a modern monitor, that's a fairly small window, so the other settings let us scale that up proportionally. If you have a 1080p monitor, you can make the override values `720x960` instead. You'll also be able to resize the window when the game is running."
-msgstr "これらの設定により、ゲームが適切なサイズで表示されるようになります。ピクセルアートを使用しているため、画像自体は極端に小さく、古い機種向けの解像度である「240×320」でも問題なく表示されます。ただし現代のモニターではこのサイズは画面に対してかなり小さいため、他の設定で比例的に拡大表示できます。1080pモニターをお使いの場合は、オーバーライド値を「720×96ą」に変更することもできます。また、ゲーム実行中にウィンドウサイズを変更することもできるようになります。"
+msgstr "これらの設定により、ゲームが適切なサイズで表示されるようになります。ピクセルアートを使用しているため、画像自体は極端に小さく、古い機種向けの解像度である「240×320」でも問題なく表示されます。ただし現代のモニターではこのサイズは画面に対してかなり小さいため、他の設定で比例的に拡大表示できます。1080pモニターをお使いの場合は、オーバーライド値を「720×960」に変更することもできます。また、ゲーム実行中にウィンドウサイズを変更することもできるようになります。"
 
 #: games/first_2d/first_2d_01.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_02.png)"
