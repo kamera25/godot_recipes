@@ -16,7 +16,7 @@ draft: false
 この問題を3D環境で解決する方法については[以下を参照](#3d)ください。
 {{% /notice %}}
 
-以下に具体例を示します。{{< gd-icon StaticBody2D >}}`StaticBody2D`と{{< gd-icon RigidBody2D >}}`RigidBody2D`を使用しています。追加コードは一切ありません。静的ボディの*定数線形速度*は `(200, 0)` に設定されています。
+以下に具体例を示します。{{< gd-icon StaticBody2D >}}`StaticBody2D`と{{< gd-icon RigidBody2D >}}`RigidBody2D`を使用しています。追加コードは一切ありません。スタティックボディの*定数線形速度*は `(200, 0)` に設定されています。
 
 ![alt](/godot_recipes/3.x/img/conveyor_02.gif)
 
@@ -26,7 +26,7 @@ draft: false
 
 ![alt](/godot_recipes/3.x/img/tileGreen_03.png)
 
-静的ボディに `Sprite` (スプライト) `{{< gd-icon Sprite2D >}}`を追加し、[テクスチャ]セクションで「新規AtlasTexture」を選択してください。
+スタティックボディに {{< gd-icon Sprite2D >}}`Sprite` を追加し、 *テクスチャ* セクションで「新規AtlasTexture」を選択してください。
 
 ![alt](/godot_recipes/3.x/img/conveyor_04.png)
 

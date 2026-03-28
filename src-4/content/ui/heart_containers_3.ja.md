@@ -67,7 +67,7 @@ func update_health(value):
 入力値に対する境界チェックは行いません。ゲームで健康度を実装する方法には様々な方法があるため、これについては開発者の裁量に委ねられています。
 {{% /notice %}}
 
-まず、`update_simple()` メソッドについて説明します。この処理では、ハートコンテナを順にループしながら、各 `{{< gd-icon TextureRect >}}TextureRect` の表示状態を設定します。
+まず、`update_simple()` メソッドについて説明します。この処理では、ハートコンテナを順にループしながら、各 {{< gd-icon TextureRect >}}`TextureRect` の表示状態を設定します。
 
 ```gdscript
 func update_simple(value):

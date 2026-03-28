@@ -5,7 +5,7 @@ ghcommentid: 99
 tags: []
 ---
 
-## `{{< gd-icon RigidBody2D >}}`RigidBody2D`
+## {{< gd-icon RigidBody2D >}}`RigidBody2D`
 
 {{< gd-icon RigidBody2D >}}`RigidBody2D`はGodotが提供する物理シミュレーション用のボディコンポーネントです。これはつまり、ユーザーが直接{{< gd-icon RigidBody2D >}}`RigidBody2D`を操作するものではないということを意味します。代わりに、重力や衝撃力などの各種フォースを適用すると、Godot組み込みの物理エンジンが衝突検知・弾性挙動・回転運動などを含む最終的な移動計算を自動で行います。
 

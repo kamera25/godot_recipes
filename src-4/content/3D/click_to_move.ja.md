@@ -41,7 +41,7 @@ func _physics_process(delta):
     move_and_slide()
 ```
 
-また、シーンに「マーカー」という名前の `{{< icon MeshInstance3D >}}MeshInstance3D` を追加しました。このオブジェクトは、クリックされた位置を示すために移動します。
+また、シーンに「マーカー」という名前の {{< icon MeshInstance3D >}}`MeshInstance3D` を追加しました。このオブジェクトは、クリックされた位置を示すために移動します。
 
 ![alt](/godot_recipes/4.x/img/3d_click_03.png)
 

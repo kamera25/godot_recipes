@@ -97,7 +97,7 @@ func _physics_process(delta):
     move_and_slide()
 ```
 
-テスト方法：テストシーンにこの平面を追加してください（`{{< gd-icon Camera3D >}}` カメラの設定を忘れずに）。`"throttle_up"`入力を押すと、平面が前方へ加速する様子が確認できるはずです。
+テスト方法：テストシーンにこの平面を追加してください（{{< gd-icon Camera3D >}} `Camera`の設定を忘れずに）。`"throttle_up"`入力を押すと、平面が前方へ加速する様子が確認できるはずです。
 
 {{% notice tip %}}
 [補間カメラ機能](/godot_recipes/4.x/ja/3d/interpolated_camera/) をこのデモで実装しています。

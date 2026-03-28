@@ -16,6 +16,6 @@ Godotゲームエンジンの入門ガイドです。これまでゲームエン
 
 {{% children  sort="weight" depth="1" %}}
 
-## 関連項目
+#### 関連項目
 
 * [ゲームチュートリアル／初めての2Dゲーム開発](/godot_recipes/4.x/ja/games/first_2d)

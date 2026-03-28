@@ -19,7 +19,7 @@ Godot では3種類の物理ボディが提供されており、<a href="http://
 
 - {{< gd-icon StaticBody2D >}}`StaticBody2D`- {{< gd-icon StaticBody2D >}} `StaticBody2D`
 
-静的ボディとは、物理エンジンによって移動されないオブジェクトです。衝突検知には参加しますが、衝突に応じて移動することはありません。このタイプのボディは、環境の一部となるオブジェクトや、動的な挙動を必要としないオブジェクトに最もよく使用されます。
+スタティックボディとは、物理エンジンによって移動されないオブジェクトです。衝突検知には参加しますが、衝突に応じて移動することはありません。このタイプのボディは、環境の一部となるオブジェクトや、動的な挙動を必要としないオブジェクトに最もよく使用されます。
 
 - [`RigidBody2D`]({{< gd-icon RigidBody2D >}}) `RigidBody2D`
 
@@ -90,7 +90,7 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 
 href="http://docs.godotengine.org/ja/latest/classes/class_kinematiccollision2d.html" target="_blank">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と接触した物体のデータが含まれています。このデータを活用することで、適切な衝突応答を計算できます。
 
-### 移動とスライド処理
+#### 移動とスライド処理
 
 The `move_and_slide()` method is intended to simplify the collision response in the common case where you want one body to slide along the other. This is especially useful in platformers or top-down games, for example.
 
@@ -262,7 +262,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 もう一つ例を挙げてみましょう。これはよく質問される2Dプラットフォーマーについてです。`move_and_slide()`関数は、機能的なキャラクターコントローラーを迅速に実装するのに最適です。サンプルプロジェクトをダウンロードした場合、この機能は"Platformer.tscn"ファイル内で確認できます。
 
-本例では、静的ボディ（StaticBody2D）オブジェクトで構成されるレベルを想定しています。形状やサイズは任意のもので構いません。サンプルプロジェクトではタイルマップを使用してレベルを配置していますが、このデモの目的上、個々の静的ボディとして扱うことも同様にできます。
+本例では、スタティックボディ（StaticBody2D）オブジェクトで構成されるレベルを想定しています。形状やサイズは任意のもので構いません。サンプルプロジェクトではタイルマップを使用してレベルを配置していますが、このデモの目的上、個々のスタティックボディとして扱うことも同様にできます。
 
 また、かわいらしい[Ansimuz作『サニーランド』アートパック](https://opengameart.org/content/sunny-land-2d-pixel-art-pack)をアートワークとキャラクターアニメーションに採用しています。
 

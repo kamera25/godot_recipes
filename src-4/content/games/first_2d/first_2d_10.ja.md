@@ -49,7 +49,7 @@ func new_game():
 
 ## ゲーム終了方法
 
- `CenterContainer`の子として `{{< gd-icon TextureRect >}}`TextureRect` を追加し、ノード名を `GameOver` に設定します。画像には `GAME_OVER (72 x 8).png` を使用します。この画像はスタートボタンと重なりますが、問題ありません。ゲームでは一度に表示するのは一つだけだからです。
+ `CenterContainer`の子として {{< gd-icon TextureRect >}}`TextureRect` を追加し、ノード名を `GameOver` に設定します。画像には `GAME_OVER (72 x 8).png` を使用します。この画像はスタートボタンと重なりますが、問題ありません。ゲームでは一度に表示するのは一つだけだからです。
 
 スクリプトの上部に別の参照を追加：
 

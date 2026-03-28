@@ -20,7 +20,7 @@ draft: false
 
 
 
-ルートノードとして `{{< gd-icon TextureButton >}}TextureButton` を使用しています。これがメニューの開閉に使用するボタンです。
+ルートノードとして {{< gd-icon TextureButton >}}`TextureButton` を使用しています。これがメニューの開閉に使用するボタンです。
 
 `Buttons` {{< gd-icon Control >}}`Control`ノードは、必要に応じて任意の数のアイテムを配置できるコンテナとして機能します。このコントロールの**マウス/フィルター**プロパティを "Ignore" に設定することを忘れないでください。これによりマウスクリックが誤って捕捉されるのを防ぎます。
 

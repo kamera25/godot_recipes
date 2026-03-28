@@ -15,7 +15,7 @@ ghcommentid: 44
 
 運動体は衝突時に自動で回転しません。画像のように車輪が地面に接触していない場合、手動で車を整列させる必要があります。
 
-To begin, we need to detect when the wheel isn't on the ground. Add two {{< gd-icon RayCast3D >}}`RayCast` nodes to the car and align them with the front and rear wheels like so:
+まず、車輪が地面に接触していない状況を検出する必要があります。車に2つの {{< gd-icon RayCast3D >}}`RayCast` ノードを追加し、以下のように前輪と後輪にそれぞれ配置します。
 
 ![alt](/godot_recipes/3.x/img/3d_car_11.png)
 
@@ -60,11 +60,8 @@ if $FrontRay.is_colliding() or $RearRay.is_colliding():
 
 ## 関連レシピ
 
-## KinematicCar：ベースモデル
-[KinematicCar：基本モデル](/godot_recipes/3.x/3d/kinematic_car/car_base/)
-
-## KinematBody：表面との整列方法
-[KinematicBody：表面との整列テクニック](/godot_recipes/3.x/3d/3d_align_surface/)
+- [KinematicCar：基本モデル](/godot_recipes/3.x/3d/kinematic_car/car_base/)
+- [KinematicBody：表面との整列テクニック](/godot_recipes/3.x/3d/3d_align_surface/)
 
 #### この動画が気に入ったら？
 

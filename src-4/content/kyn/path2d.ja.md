@@ -30,7 +30,7 @@ ghcommentid: 94
 
 このメソッドは曲線上の点のリストを返します。これらの点は、曲率が高い経路部分に密集して配置されます。
 
-### 経路の描画方法
+## 経路の描画方法
 
 {{< gd-icon Path2D >}} `Path2D` ノードを選択すると、アイコンバーに以下の新しいアイコンが表示されます。
 
@@ -77,7 +77,7 @@ func _process(delta):
 
 "offset"を増やすと、ノードが経路に沿って移動します。
 
-注意: `PathFollow2D` ノードの *回転* プロパティ (`{{< gd-icon PathFollow2D >}}`) により、パスに沿って移動する際、ノード自体とその子ノードが常に経路に沿った方向に向くように維持されます。
+注意: {{< gd-icon PathFollow2D >}}`PathFollow2D` ノードの *回転* プロパティ により、パスに沿って移動する際、ノード自体とその子ノードが常に経路に沿った方向に向くように維持されます。
 
 ## 例
 
@@ -96,7 +96,7 @@ func get_path_direction(pos):
     return $Path2D/PathFollow2D.transform.x
 ```
 
-任意の経路上の位置において、`{{< gd-icon PathFollow2D >}}PathFollow2D` の前方方向 (`transform.x`) は常に経路に沿っています。
+任意の経路上の位置において、{{< gd-icon PathFollow2D >}} `PathFollow2D` の前方方向 (`transform.x`) は常に経路に沿っています。
 
 ## 関連レシピ
 

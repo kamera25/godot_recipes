@@ -31,7 +31,7 @@ ghcommentid: 36
 ここに掲載している弾丸モデルを使用したい場合は、[ケニーの『武器パック』](https://kenney.nl/assets/weapon-pack)から入手できます。
 {{% /notice %}}
 
-メッシュを `{{< gd-icon MeshInstance3D >}} MeshInstance` に追加し、衝突形状もそれに合わせてスケール調整してください。
+メッシュを {{< gd-icon MeshInstance3D >}}`MeshInstance` に追加し、衝突形状もそれに合わせてスケール調整してください。
 
 {{% notice warning %}}
 `MeshInstance` を `Area`ノードの前方方向（**-Z軸**）に合わせて整列させることを忘れないでください。そうしないと、弾丸が正しく飛んでいるように見えません！
@@ -69,7 +69,7 @@ Using `look_at()` each frame turns the bullet to point in its direction of trave
 
 ### 撮影について
 
-タンク（または射撃を行っているオブジェクト）内に、弾丸が出現する位置に `{{< gd-icon Position3D >}}`Position3D` 子要素を追加します。例として戦車の場合、砲身の先端に配置します。
+タンク（または射撃を行っているオブジェクト）内に、弾丸が出現する位置に {{< gd-icon Position3D >}}`Position3D` 子要素を追加します。例として戦車の場合、砲身の先端に配置します。
 
 ![alt](/godot_recipes/3.x/img/3d_shoot_02.png)
 

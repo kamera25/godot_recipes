@@ -22,7 +22,7 @@ We'll also assume you've already set up the character's animations using {{< gd-
 
 ### アニメーションツリー
 
-シーンに `{{< gd-icon アニメーションTree >}}`アニメーションTree` ノードを追加します。［ツリールート］プロパティで「新規アニメーションノードステートマシン」を選択してください。
+シーンに {{< gd-icon アニメーションTree >}}`アニメーションTree` ノードを追加します。［ツリールート］プロパティで「新規アニメーションノードステートマシン」を選択してください。
 
 ![alt](/godot_recipes/4.x/img/animation_tree_01.png)
 

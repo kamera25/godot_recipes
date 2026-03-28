@@ -41,6 +41,5 @@ func _physics_process(delta):
 
 ## 関連レシピ
 
-## 参考資料
 - [ベクトル演算：内積と外積の活用](/godot_recipes/4.x/ja/math/dot_cross_product/index.html)
 - [RigidBody2D：目標位置への移動方法](/godot_recipes/4.x/ja/physics/smooth_rigid_move/)
