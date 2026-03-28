@@ -24,7 +24,7 @@ var circles_per_level = 5
 
 ## サウンドの追加方法
 
-サウンドを再生するために、複数の`音声StreamPlayer`ノードを異なるシーンに追加します。
+サウンドを再生するために、複数の`オーディオStreamPlayer`ノードを異なるシーンに追加します。
 
 - 1. まず「メイン」シーンに「音楽」という名前を追加します。［ストリーム］プロパティには `res://assets/audio/Music_Light-Puzzles.ogg` を使用してください。
 

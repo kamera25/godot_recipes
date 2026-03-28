@@ -12,7 +12,7 @@ ghcommentid: 41
 ## 解決策
 
 {{% notice note %}}
-3D環境においても、車両は基本的に地面に留まる性質があります。このため、移動処理の多くは実質的に2Dと同様の扱いができます。車の動作コードの大部分は、[2D用カーステアリングレシピ](/godot_recipes/3.x/2d/car_steering)と非常に似た構造になります。このチュートリアルに進む前に、必ずそのレシピを確認しておくことをオススメします。
+3D環境においても、車両は基本的に地面に留まる性質があります。このため、移動処理の多くは実質的に2Dと同様の扱いができます。車の動作コードの大部分は、[2D用カーステアリングレシピ](/godot_recipes/4.x/ja/2d/car_steering)と非常に似た構造になります。このチュートリアルに進む前に、必ずそのレシピを確認しておくことをオススメします。
 {{% /notice %}}
 
 Godotには{{< gd-icon VehicleBody3D >}}`VehicleBody`ノードが用意されており、これは{{< gd-icon RigidBody3D >}}`RigidBody`を基盤としつつ、エンジン・ブレーキング・サスペンションなど複雑な物理演算シミュレーションを備えています。ただし、この機能は多くのカジュアルレーシング/ドライビングゲームにとっては過剰な性能であり、複雑さも伴います。そのため、ここではKinematicBodyベースのソリューションを採用することにします。
@@ -87,9 +87,9 @@ var steer_angle = 0.0  # current wheel angle
 
 * `engine_power` と `braking` は車の加速・減速時に適用されます。
 
-*  `drag` と `friction` については[こちらで詳しく説明しています](/godot_recipes/3.x/2d/car_steering/#part-3-frictiondrag)。
+*  `drag` と `friction` については[こちらで詳しく説明しています](/godot_recipes/4.x/ja/2d/car_steering/#part-3-frictiondrag)。
 
-スクリプトの残り部分は2Dバージョンと非常に類似しており、いくつかの変更を加えることで{{< gd-icon Node3D >}}`空間オブジェクト`と`変換`を正しく扱えるようになります。
+スクリプトの残り部分は2Dバージョンと非常に類似しており、変更をいくつか加えることで{{< gd-icon Node3D >}}`空間オブジェクト`と`変換`を正しく扱えるようになります。
 
 まず`_physics_process()`から見ていきましょう。
 
@@ -198,7 +198,7 @@ func get_input():
 ## 関連レシピ
 
 - [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)
-* [入力アクション](http://kidscancode.org/godot_recipes/input/input_actions/)
+* [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)
 - [3D: KinematicBody Movement](/godot_recipes/3.x/3d/kinematic_body/)
 
 #### この動画が気に入ったら？

@@ -8,28 +8,28 @@ draft: true
 本チュートリアルはGodotレシピ集が公開される前に執筆されたものです。今後、当サイトの他のドキュメントと同様にフォーマットを更新する予定です。
 {{% /notice %}}
 
-このチュートリアルでは、リジッドボディを使用するべきタイミング（および使用すべきでないタイミング）や、仕組みの解説、さらには思い通りに制御するための便利なテクニックをいくつかご紹介します。具体例ではRigidBody2Dを使用しますが、ここで学ぶ内容は3Dモデルにも同様に適用できます。
+このチュートリアルでは、リジッドボディを使用するべきタイミング（および使用すべきでないタイミング）や、仕組みの解説、さらには思い通りに制御するための便利なテクニックをいくつかご紹介します。具体例では\ RigidBody2Dを使用しますが、ここで学ぶ内容は3Dモデルにも同様に適用できます。
 
 ## 解決策
 
 <a href="http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html" target="_blank"><svg width="18" height="18" class="icon-icon_rigid_body_2d">
-<use xlink:href="/blog/img/symbol-defs.svg#icon-icon_rigid_body_2d"></svg> `RigidBody2D`</a> とは、Godot において物理シミュレーションを提供するオブジェクトです。これはつまり、直接 RigidBody2D を操作するわけではないということです。代わりに力（重力、衝撃など）を加えると、Godot の内蔵物理エンジンが衝突・反発・回転などの運動結果を計算してくれます。
+<use xlink:href="/blog/img/symbol-defs.svg#icon-icon_rigid_body_2d"></svg> `\ RigidBody2D`</a> とは、Godot において物理シミュレーションを提供するオブジェクトです。これはつまり、直接 \ RigidBody2D を操作するわけではないということです。代わりに力（重力、衝撃など）を加えると、Godot の内蔵物理エンジンが衝突・反発・回転などの運動結果を計算してくれます。
 
-RigidBody2Dの動作は「質量」「摩擦」「反発」などのプロパティを通じて変更できます。
-これらの設定はインスペクターから行えます。
+\ RigidBody2Dの動作は「質量」「摩擦」「反発」などのプロパティを通じて変更できます。
+これらの設定はインスペクタから行えます。
 
 ![alt](/godot_recipes/3.x/img/rigidbody_properties.png)
 
 The body's behavior is also affected by the world, via the _Project Settings -> 物理_
 properties, or by entering an <a href="http://docs.godotengine.org/ja/latest/classes/class_area2d.html"><svg width="18" height="18" class="icon-icon_area_2d" target="_blank"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_area_2d"></svg> `Area2D`</a> that is overriding the global physics properties.
 
-## RigidBody2Dを使う
+## \ RigidBody2Dを使う
 
-リジッドボディを使用する主な利点の一つは、コードを1行も書かなくても、多くの動作機能が「無料」で手に入る点です。例えば、落下ブロックを使った簡易的な『Angry Birds』風ゲームを作る場合を考えてみましょう。必要なのはブロックと発射体用にRigidBody2Dを作成し、各プロパティを設定するだけです。積み重なり、落下、跳ね返りといった物理演算処理はすべて自動的に物理エンジンが担当してくれます。
+リジッドボディを使用する主な利点の一つは、コードを1行も書かなくても、多くの動作機能が「無料」で手に入る点です。例えば、落下ブロックを使った簡易的な『Angry Birds』風ゲームを作る場合を考えてみましょう。必要なのはブロックと発射体用に\ RigidBody2Dを作成し、各プロパティを設定するだけです。積み重なり、落下、跳ね返りといった物理演算処理はすべて自動的に物理エンジンが担当してくれます。
 
 ### ブロックの積み重ね方
 
-Start by creating a RigidBody2D for the block and adding <a href="http://docs.godotengine.org/ja/latest/classes/class_sprite.html" target="_blank"><svg width="18" height="18" class="icon-icon_sprite"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_sprite"></svg>`Sprite`</a> and
+Start by creating a \ RigidBody2D for the block and adding <a href="http://docs.godotengine.org/ja/latest/classes/class_sprite.html" target="_blank"><svg width="18" height="18" class="icon-icon_sprite"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_sprite"></svg>`Sprite`</a> and
 <a href="http://docs.godotengine.org/ja/latest/classes/class_collisionshape2D.html" target="_blank"><svg width="18" height="18" class="icon-icon_collision_shape_2d"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_collision_shape_2d"></svg>`CollisionShape2D`</a>
 children:
 
@@ -39,7 +39,7 @@ children:
 
 > ※重要：本サンプルで使用しているテクスチャは、Kenney.nl の［物理アセットパック］（[物理 Asset](http://kenney.nl/assets/physics-assets)）を使用しています。このパッケージには、さまざまな形状・材質のブロックが多数収録されています。
 
-※「再生」を押すとブロックがゆっくりと下方に落ちていくのが確認できるでしょう。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクターで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。私は値を`3`に設定しています。
+※「再生」を押すとブロックがゆっくりと下方に落ちていくのが確認できるでしょう。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクタで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。私は値を`3`に設定しています。
 
 メインシーンを作成します（通常は<a href="http://docs.godotengine.org/ja/latest/classes/class_node.html" target="_blank"><svg width="18" height="18" class="icon-icon_node"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_node"></svg>Node</a>を使用します）。
 地面と壁として機能させるため、長方形の衝突形状を持つ<a href="http://docs.godotengine.org/ja/latest/classes/class_staticbody2d.html" target="_blank"><svg width="18" height="18" class="icon-icon_staticbody2d"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_static_body_2d"></svg>StaticBody2D</a>ノードをいくつか追加してください。
@@ -119,7 +119,7 @@ func _input(event):
 
 上記と同様に、以下のノード構造を用いて艦船用の新規シーンを作成してください。
 
-- `RigidBody2D`
+- `\ RigidBody2D`
     - `Sprite`
     - `CollisionShape2D`
 
@@ -165,7 +165,7 @@ func _physics_process(delta):
 
 {{< /highlight >}}
 
-このスクリプトの動作について説明しましょう。変数`engine_thrust`と`spin_thrust`は、宇宙船の加速速度と旋回性能を制御します。インスペクターではそれぞれ500、25000に設定してください（トルク単位のため数値が大きくなります）。
+このスクリプトの動作について説明しましょう。変数`engine_thrust`と`spin_thrust`は、宇宙船の加速速度と旋回性能を制御します。インスペクタではそれぞれ500、25000に設定してください（トルク単位のため数値が大きくなります）。
 変数`thrust`は宇宙船のエンジン状態を示します。走行中時は(0, 0)、動力がオンの場合は`engine_thrust`の長さを持つベクトルとなります。
 `rotation_dir`は宇宙船の旋回方向を表現します。`screensize`変数には画面サイズを保持し、後ほど使用します。
 
@@ -204,7 +204,7 @@ func _physics_process(delta):
 
 正確には違います。`_physics_process()` は物理時間ステップに同期されていますが、だからといってあらゆる処理に使えるわけではありません。ただし、解決策はドキュメントに記載されていますのでご安心ください。
 
-[RigidBody2Dドキュメント](http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#description)より引用すると：
+[\ RigidBody2Dドキュメント](http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#description)より引用すると：
 
 > リジッドボディの位置や直線速度をフレームごとに、あるいは頻繁に変更することは避けるべきです。状態に直接影響を与えたい場合は、物理演算の状態を直接操作できる `_integrate_forces` メソッドを使用してください。
 

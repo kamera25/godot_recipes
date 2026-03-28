@@ -1,5 +1,5 @@
 +++
-title = "音声"
+title = "オーディオ"
 weight = 7
 chapter = true
 pre = "<i class='fas fa-volume-up fa-fw'></i>&nbsp"

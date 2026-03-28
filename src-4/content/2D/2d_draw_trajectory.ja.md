@@ -15,7 +15,7 @@ ghcommentid: 32
 
 この例では、以下のレシピから「弾道弾丸」を使用します。
 
-* [弾道弾の実装方法](/godot_recipes/3.x/2d/ballistic_bullet/)
+* [弾道弾の実装方法](/godot_recipes/4.x/ja/2d/ballistic_bullet/)
 
 そしてこのように設定したタンクで、弾丸が生成される「銃口」位置を指定する{{< gd-icon Position2D >}}`Position2D`を設定します。
 
@@ -89,5 +89,5 @@ func _on_Bullet_exploded(pos):
 
 ## 関連レシピ
 
-[2Dシューティングゲームの作成レシピ](/godot_recipes/3.x/2d/2d_shooting/)
-[2D弾道式弾丸システム](/godot_recipes/3.x/2d/ballistic_bullet)
+[2Dシューティングゲームの作成レシピ](/godot_recipes/4.x/ja/2d/2d_shooting/)
+[2D弾道式弾丸システム](/godot_recipes/4.x/ja/2d/ballistic_bullet)

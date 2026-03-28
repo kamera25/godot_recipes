@@ -49,7 +49,7 @@ var velocity = Vector3.ZERO
 `speed` は戦車の移動速度（前進/後退）を、`rot_speed` は旋回速度をそれぞれ定義します。
 
 {{% notice tip %}}
-`export` を使ってプロパティを宣言すると、インスペクターで簡単に調整できるようになります。
+`export` を使ってプロパティを宣言すると、インスペクタで簡単に調整できるようになります。
 {{% /notice %}}
 
 Using the `KinematicBody.move_and_slide()` method makes our movement code quite simple:
@@ -98,13 +98,13 @@ func get_input(delta):
 これはあらゆる種類の運動学的キャラクターの動作基盤です。ここからジャンプ、射撃、AI挙動などを追加できます。このレシピを拡張した具体例については、関連するレシピを参照してください。
 
 <!-- {{% notice note %}}
-プロジェクトファイルはこちらからダウンロードできます。 [floating_text.zip](/godot_recipes/3.x/files/floating_text.zip)
+プロジェクトファイルはこちらからダウンロードできます。 [floating_text.zip](/godot_recipes/4.x/ja/files/floating_text.zip)
 {{% /notice %}} -->
 
 ## 関連レシピ
 
-- [3D入門](/godot_recipes/3.x/g101/3d/)
-- [入力アクション](/godot_recipes/3.x/input/input_actions/)
+- [3D入門](/godot_recipes/4.x/ja/g101/3d/)
+- [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)
 
 #### この動画が気に入ったら？
 

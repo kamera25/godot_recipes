@@ -13,11 +13,11 @@ draft: false
 {{% notice note %}}
 このレシピは2Dノードと3Dノードの両方に同様に適用できます。{{% /notice %}}
 
-デフォルトでは、 `move_and_slide()` または `move_and_collide()` で移動させた `CharacterBody2D` は、衝突する任意の `RigidBody2D` を押しません。リジッドボディは全く反応せず、単なる `StaticBody2D` と同じように振る舞います。
+デフォルトでは、 `move_and_slide()` または `move_and_collide()` で移動させた `\ CharacterBody2D` は、衝突する任意の `\ RigidBody2D` を押しません。リジッドボディは全く反応せず、単なる `StaticBody2D` と同じように振る舞います。
 
 ![alt](/godot_recipes/4.x/img/char_push_default.gif)
 
-場合によってはこれで十分なこともあります。ただし、ボディーを押し出したい場合は、いくつかの変更が必要です。
+場合によってはこれで十分なこともあります。ただし、ボディーを押し出したい場合は、変更がいくつか必要です。
 
 この例では、[プラットフォーマー用キャラクター](/godot_recipes/4.x/ja/2d/platform_character/) レシピで解説されている2Dキャラクターを使用します。この例ではキャラクター移動の最も一般的な方法である `move_and_slide()` を採用しています。もし代わりに `move_and_collide()` を使用している場合は、以下の実装を適切に変更してください。
 

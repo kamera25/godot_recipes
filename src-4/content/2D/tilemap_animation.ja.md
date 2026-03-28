@@ -19,7 +19,7 @@ ghcommentid: 27
 
 ![alt](/godot_recipes/3.x/img/anim_tiles.png)
 
-これらの画像をダウンロードしてください。[water.zip](/godot_recipes/3.x/files/water_tiles.zip)
+これらの画像をダウンロードしてください。[water.zip](/godot_recipes/4.x/ja/files/water_tiles.zip)
 
 画像ファイルをプロジェクトフォルダに解凍してください。
 インスペクタで「新しいリソースを作成」ボタンをクリックします。
@@ -52,4 +52,4 @@ ghcommentid: 27
 
 ## 関連するレシピ
 
-- [タイルマップ：オートタイルの活用](http://kidscancode.org/godot_recipes/autotile_intro)
+- [タイルマップ：オートタイルの活用](/godot_recipes/4.x/ja/autotile_intro)

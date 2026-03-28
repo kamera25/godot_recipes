@@ -1,16 +1,16 @@
 ---
-title: "RigidBody2D"
+title: "\ RigidBody2D"
 draft: true
 ghcommentid: 99
 tags: []
 ---
 
-## {{< gd-icon RigidBody2D >}}`RigidBody2D`
+## {{< gd-icon \ RigidBody2D >}}`\ RigidBody2D`
 
-{{< gd-icon RigidBody2D >}}`RigidBody2D`はGodotが提供する物理シミュレーション用のボディコンポーネントです。これはつまり、ユーザーが直接{{< gd-icon RigidBody2D >}}`RigidBody2D`を操作するものではないということを意味します。代わりに、重力や衝撃力などの各種フォースを適用すると、Godot組み込みの物理エンジンが衝突検知・弾性挙動・回転運動などを含む最終的な移動計算を自動で行います。
+{{< gd-icon \ RigidBody2D >}}`\ RigidBody2D`はGodotが提供する物理シミュレーション用のボディコンポーネントです。これはつまり、ユーザーが直接{{< gd-icon \ RigidBody2D >}}`\ RigidBody2D`を操作するものではないということを意味します。代わりに、重力や衝撃力などの各種フォースを適用すると、Godot組み込みの物理エンジンが衝突検知・弾性挙動・回転運動などを含む最終的な移動計算を自動で行います。
 
 {{% notice warning %}}
-Setting a {{< gd-icon RigidBody2D >}}`RigidBody2D`'s physical properties, such as `position` or `linear_velocity` directly will not work correctly. The physics engine controls these values.
+Setting a {{< gd-icon \ RigidBody2D >}}`\ RigidBody2D`'s physical properties, such as `position` or `linear_velocity` directly will not work correctly. The physics engine controls these values.
 {{% /notice %}}
 
 The body’s behavior is also affected by the world, via the Project Settings -> 物理 properties, or by entering an {{< gd-icon Area2D >}}`Area2D` that is overriding the global physics properties.
@@ -30,7 +30,7 @@ The body’s behavior is also affected by the world, via the Project Settings ->
 1. リジッド - これがデフォルトモードです。オブジェクトは物理的なリジッドボディとして動作し、衝突や外力の影響を受けます。
 1. 静的 - このモードでオブジェクトは静止状態を保ちます。{{< gd-icon StaticBody2D >}}`StaticBody2D`と同様の挙動をします。
 1. キャラクター - このモードではオブジェクトの動作は通常のリジッドモードと同じですが、回転はしません。
-1. キネマティック - このモードではオブジェクトは {{< gd-icon KinematicBody2D >}}`KinematicBody2D`と同様に、コードによる制御でのみ移動できます。**注記:** これは `move_and_slide()` といった {{< gd-icon KinematicBody2D >}}`KinematicBody2D`の補助関数を利用できるという意味ではありません。すべての移動と衝突応答は手動で実装が必要です。
+1. キネマティック - このモードではオブジェクトは {{< gd-icon \ KinematicBody2D >}}`\ KinematicBody2D`と同様に、コードによる制御でのみ移動できます。**注記:** これは `move_and_slide()` といった {{< gd-icon \ KinematicBody2D >}}`\ KinematicBody2D`の補助関数を利用できるという意味ではありません。すべての移動と衝突応答は手動で実装が必要です。
 
 * 重力スケール設定（`gravity_scale`）
 
@@ -66,7 +66,7 @@ The body’s behavior is also affected by the world, via the Project Settings ->
 
 ### 衝突検出機能
 
-デフォルトでは、`RigidBody2D` オブジェクトが他の空間内の物体と衝突・相互作用しても、その衝突は報告されません。
+デフォルトでは、`\ RigidBody2D` オブジェクトが他の空間内の物体と衝突・相互作用しても、その衝突は報告されません。
 
 衝突情報をリジットボディから取得する場合は、`contact_monitor` を `true` に設定が必要です。これを行うと、`body_entered` などのシグナルが有効になります。さらに、`contacts_reported` を調整することで、報告される衝突の数を指定することもできます。
 
@@ -74,7 +74,7 @@ The body’s behavior is also affected by the world, via the Project Settings ->
 
 硬い物体をより直接的に制御する必要があるケースもあります。例えば、クラシックゲーム『Asteroids』のリメイクを作ろうとしている場合を考えてみましょう。プレイヤーの宇宙船は左右矢印キーで回転させ、上矢印が押されたときに前進するようにしなければなりません。
 
-デフォルトでは、プロジェクト設定で設定した**減衰効果**がボディの速度と回転を抑制します。宇宙空間には摩擦がないため、本来はこのような減衰は存在しないはずです。ただし、「スペースインベーダー」風のゲーム体験を実現するためには、キーを離すと機体が徐々に停止し、回転も自然に止まるようにしたいところです。これを実現するため、インスペクター画面で以下の値を設定します。
+デフォルトでは、プロジェクト設定で設定した**減衰効果**がボディの速度と回転を抑制します。宇宙空間には摩擦がないため、本来はこのような減衰は存在しないはずです。ただし、「スペースインベーダー」風のゲーム体験を実現するためには、キーを離すと機体が徐々に停止し、回転も自然に止まるようにしたいところです。これを実現するため、インスペクタ画面で以下の値を設定します。
 - 角加速度減衰係数：`5`
 - 直線加速度減衰係数：`1`
 
@@ -144,9 +144,9 @@ func _physics_process(delta):
 
 ただし、画面の端に引っかかって動けなくなるという大失敗をしてしまいますよ。
 
-[RigidBody2D ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) から引用すると：
+[\ RigidBody2D ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) から引用すると：
 
-> You should not change a RigidBody2D’s `position` or `linear_velocity` every frame or even very often. If you need to directly affect the body’s state, use `_integrate_forces`, which allows you to directly access the physics state.
+> You should not change a \ RigidBody2D’s `position` or `linear_velocity` every frame or even very often. If you need to directly affect the body’s state, use `_integrate_forces`, which allows you to directly access the physics state.
 
  _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [物理2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。
  関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](http://docs.godotengine.org/ja/stable/classes/class_transform2d.html) に関する情報です。

@@ -47,7 +47,7 @@ var last_drag_distance = 0
 - `zoom_sensitivity` - ピンチ操作によるズーム感度を設定します - これは「ズーム動作」が開始されるために必要なピクセル単位の動きを指定します。
 - `zoom_speed` - ズーム操作をより滑らかに実行するためのパラメータです。
 
-以下のプロパティも `export` することで、インスペクターで調整できるようになります。
+以下のプロパティも `export` することで、インスペクタで調整できるようになります。
 
 その他の変数はカメラの状態を追跡します。`events` は辞書型変数で、アクティブなタッチスクリーンイベントを保持し、各イベントは`index`をキーとして管理されます。`last_drag_distance`は、ピンチジェスチャにおける2つのドラッグイベント間の移動距離を記録します。
 
@@ -130,7 +130,7 @@ if event is InputEventScreenDrag:
 
 ## まとめ
 
-これを底本にして、ニーズに合わせて活用できます。以下に、試せるいくつかの提案をご紹介します。
+これを底本にして、ニーズに合わせて活用できます。以下に、試せる提案をいくつかご紹介します。
 
 * ズーム動作を滑らかにするには`lerp()`を使用してください。
 * ズームは自動的にデフォルトレベルに戻ります。
@@ -181,13 +181,13 @@ func _unhandled_input(event):
 ```
 
 <!-- {{% notice note %}}
-プロジェクトファイルはこちらからダウンロードできます。 [2d_touch_camera.zip](/godot_recipes/3.x/files/2d_touch_camera.zip)
+プロジェクトファイルはこちらからダウンロードできます。 [2d_touch_camera.zip](/godot_recipes/4.x/ja/files/2d_touch_camera.zip)
 {{% /notice %}} -->
 
 ## 関連レシピ
 
-- [入力操作: 入力アクション](/godot_recipes/3.x/input/input_actions/)
-- [マウスドラッグでのユニットの選択](/godot_recipes/3.x/input/multi_unit_select/)
+- [入力操作: 入力アクション](/godot_recipes/4.x/ja/input/input_actions/)
+- [マウスドラッグでのユニットの選択](/godot_recipes/4.x/ja/input/multi_unit_select/)
 
 #### この動画が気に入ったら？
 

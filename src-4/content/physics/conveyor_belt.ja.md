@@ -16,7 +16,7 @@ draft: false
 この問題を3D環境で解決する方法については[以下を参照](#3d)ください。
 {{% /notice %}}
 
-以下に具体例を示します。{{< gd-icon StaticBody2D >}}`StaticBody2D`と{{< gd-icon RigidBody2D >}}`RigidBody2D`を使用しています。追加コードは一切ありません。スタティックボディの*定数線形速度*は `(200, 0)` に設定されています。
+以下に具体例を示します。{{< gd-icon StaticBody2D >}}`StaticBody2D`と{{< gd-icon \ RigidBody2D >}}`\ RigidBody2D`を使用しています。追加コードは一切ありません。スタティックボディの*定数線形速度*は `(200, 0)` に設定されています。
 
 ![alt](/godot_recipes/3.x/img/conveyor_02.gif)
 
@@ -60,7 +60,7 @@ func _process(delta):
 
 ![alt](/godot_recipes/3.x/img/conveyor_01.gif)
 
-This works perfectly well with kinematic bodies, too. Here's the same conveyor belt object added to our [プラットフォームキャラクター](http://kidscancode.org/godot_recipes/2d/platform_character) recipe:
+This works perfectly well with kinematic bodies, too. Here's the same conveyor belt object added to our [プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character) recipe:
 
 ![alt](/godot_recipes/3.x/img/conveyor_07.gif)
 
@@ -76,6 +76,6 @@ This works perfectly well with kinematic bodies, too. Here's the same conveyor b
 
 ## 関連レシピ
 
-- [プラットフォームキャラクターの実装](http://kidscancode.org/godot_recipes/2d/platform_character)
-- [KinematicBody2Dコンポーネントの使用方法](/godot_recipes/4.x/physics/godot3_kinematic2d/)
+- [プラットフォームキャラクターの実装](/godot_recipes/4.x/ja/2d/platform_character)
+- [\ KinematicBody2Dコンポーネントの使用方法](/godot_recipes/4.x/physics/godot3_kinematic2d/)
 - [プラットホームゲームの作成](/godot_recipes/4.x/2d/moving_platforms/)

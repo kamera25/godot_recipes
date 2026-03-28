@@ -11,7 +11,7 @@ ghcommentid: 36
 
 ## 解決策
 
-この例では、[『キネマティックボディ：移動』チュートリアル](/godot_recipes/3.x/3d/kinematic_body/) で作成した「ミニタンク」モデルを使用します。
+この例では、[『キネマティックボディ：移動』チュートリアル](/godot_recipes/4.x/ja/3d/kinematic_body/) で作成した「ミニタンク」モデルを使用します。
 
 ### 弾丸の設定
 
@@ -94,13 +94,13 @@ if Input.is_action_just_pressed("shoot"):
 <video controls src="/godot_recipes/3.x/img/3d_shoot_03.webm"></video>
 
 <!-- {{% notice note %}}
-プロジェクトファイルはこちらよりダウンロードできます。[3d_shooting.zip](/godot_recipes/3.x/files/3d_shooting.zip)
+プロジェクトファイルはこちらよりダウンロードできます。[3d_shooting.zip](/godot_recipes/4.x/ja/files/3d_shooting.zip)
 {{% /notice %}} -->
 
 ## 関連レシピ
 
-- [動力体システム：移動操作](/godot_recipes/3.x/3d/kinematic_body/)
-- [Godot入門編：3Dの基礎](/godot_recipes/3.x/g101/3d/)
+- [動力体システム：移動操作](/godot_recipes/4.x/ja/3d/kinematic_body/)
+- [Godot入門編：3Dの基礎](/godot_recipes/4.x/ja/g101/3d/)
 
 <!-- #### Videoが気に入ったら？ -->
 

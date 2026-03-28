@@ -43,7 +43,7 @@ ghcommentid: 23
 
 ### タイルセットの作成方法
 
-{{< gd-icon TileMap >}}`TileMap`のプロパティーにある「タイルセット」設定で「新規タイルセット」を選択し、クリックするとエディターパネルが開きます。
+{{< gd-icon TileMap >}}`TileMap`のプロパティにある「タイルセット」設定で「新規タイルセット」を選択し、クリックするとエディタパネルが開きます。
 
 ![alt](/godot_recipes/3.x/img/autotile_frame.png)
 
@@ -66,5 +66,5 @@ ghcommentid: 23
 また、自動タイルセットに衝突判定、移動経路、または遮蔽効果を追加することもできます。以下のサンプルプロジェクトをダウンロードすると、すべてのタイル上にポリゴンが定義された完全なタイルセットを入手できます。
 
 <!-- {{% notice note %}}
-プロジェクトファイルはこちらからダウンロードできます。 [autotile_intro.zip](/godot_recipes/3.x/files/autotile_intro.zip)
+プロジェクトファイルはこちらからダウンロードできます。 [autotile_intro.zip](/godot_recipes/4.x/ja/files/autotile_intro.zip)
 {{% /notice %}} -->

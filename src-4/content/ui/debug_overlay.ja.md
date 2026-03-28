@@ -119,4 +119,4 @@ DebugOverlay.stats.add_property(self, "transform:origin", "round")
 
 ## 関連レシピ
 
-[3D空間でのベクトル描画](/godot_recipes/3.x/3d/debug_overlay) -->
+[3D空間でのベクトル描画](/godot_recipes/4.x/ja/3d/debug_overlay) -->
