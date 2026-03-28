@@ -13,7 +13,7 @@ Godotでは、衝突判定と応答処理を提供するために複数のコリ
 
 ## 導入：物理ボディについて
 
-ゲーム開発において、ゲーム内空間内の二つのオブジェクトが交差するか接触するかどうかを判断する必要が生じる場面は頻繁に存在します。これは「衝突検知」と呼ばれる処理です。衝突が検出された場合、通常は何らかのアクションを発生させたいものです。この部分を総称して「衝突応答」と呼びます。
+In game development you often need to know when two objects in the game space intersect or come into contact. This is known as _collision detection_. When a collision is detected, you typically want something to happen. This is known as _collision response_.
 
 Godot では3種類の物理ボディが提供されており、<a href="http://docs.godotengine.org/ja/latest/classes/class_physicsbody2d.html" target="_blank">`物理Body2D`</a> タイプに分類されます。
 
@@ -41,14 +41,15 @@ Godot では3種類の物理ボディが提供されており、<a href="http://
 
 ### 衝突レイヤーとマスクについて
 
-Godotにおいて最も強力でありながらしばしば誤解されがちな衝突判定機能の一つが、「衝突レイヤーシステム」です。この仕組みを利用することで、多種多様なオブジェクト間で極めて複雑な相互作用を構築することが可能になります。核心となる概念は「レイヤー」と「マスク」です。各衝突オブジェクトは、32種類の異なる物理レイヤーと相互作用できるよう設計されています。
+One of the most powerful but frequently misunderstood collision features in Godot is the collision layer system. This system allows you to build up very complex interactions between a variety of objects. The key concepts are _layers_ and _masks_. Each collision object has 32 different physics layers it can interact with.
 
 各プロパティを順番に確認していきましょう。
 
--   **`衝突レイヤー`**
-  オブジェクトが表示される物理層を定義します。デフォルトでは、すべてのボディはレイヤー `1` に配置されます。
+-   **`collision_layer`**
+describes the layers that the object appears _in_. By default, all bodies are on layer `1`.
 
- -    `collision_mask` は衝突検知対象のレイヤーを定義します。指定したマスク層に含まれないオブジェクトは、ボディによって無視されます。デフォルトでは、すべてのボディがレイヤー 1 をスキャンします。
+-   **`collision_mask`**
+describes what layers the body will _scan_ for collisions. If an object isn't in one of the mask layers, the body will ignore it. By default, all bodies scan layer `1`.
 
 また、レイヤーに名前を割り当てることもできます。「プロジェクト設定」内の「レイヤー名→2D物理」セクションをご確認ください。
 
@@ -68,7 +69,7 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 |     **敵キャラ**   | `2` | `1`    |
 |     **コイン**     | `3` | `1`    |
 
-このシナリオでは、「プレイヤー」ノードは「敵」と「コイン」の両方と衝突を検出します（スキャン対象レイヤーに含まれているため）。ただし、「敵」と「コイン」は互いに衝突を検出しません。なぜなら、彼らはそれぞれが属していないレイヤーのみをスキャンするように設定されているからです。
+In this scenario, the `Player` node would detect collisions with both `Enemy` and `Coin` nodes (because they are in layers it scans). However, `Enemy` and `Coin` nodes would not detect each other, because they only scan layers they are _not_ in.
 
 ## キネマティックボディ
 
@@ -78,7 +79,7 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 
 ### 移動と衝突判定
 
-{{< gd-icon KinematicBody2D >}} クラスの `KinematicBody2D` を移動させる際、直接 `position` プロパティを設定する方法は推奨されません。代わりに `move_and_collide()` または `move_and_slide()` メソッドを使用が必要です。これらのメソッドは指定されたベクトルに沿ってオブジェクトを移動させ、他のボディと衝突すると即座に停止します。{{< gd-icon KinematicBody2D >}} クラスが衝突した後の _衝突応答処理_ は、必ず手動で実装が必要です。
+When moving a {{< gd-icon KinematicBody2D >}}`KinematicBody2D`, you should not set its `position` directly. Instead, you use the `move_and_collide()` or `move_and_slide()` methods. These methods move the body along a given vector and will instantly stop if a collision is detected with another body. After a {{< gd-icon KinematicBody2D >}}`KinematicBody2D` has collided, any _collision response_ must be coded manually.
 
 > **注意:** キネマティックボディの移動は `_physics_process()` コールバック内のみで行ってください。
 
@@ -94,7 +95,7 @@ href="http://docs.godotengine.org/ja/latest/classes/class_kinematiccollision2d.h
 
 The `move_and_slide()` method is intended to simplify the collision response in the common case where you want one body to slide along the other. This is especially useful in platformers or top-down games, for example.
 
-> **注意:** `move_and_slide()` 関数は内部で `delta` パラメータを使用してフレームベースの移動計算を自動的に行います。速度ベクトルに手動で `delta` を掛けたものを直接渡す必要はありません。
+> **NOTE:** `move_and_slide()` automatically calculates frame-based movement using `delta`. Do _not_ multiply your velocity vector by `delta` before passing it to `move_and_slide()`.
 
 速度ベクトルに加え、`move_and_slide` には複数のパラメータが用意されており、スライド動作を細かくカスタマイズできます。
 
@@ -149,19 +150,19 @@ Attach a script to the {{< gd-icon KinematicBody2D >}}`KinematicBody2D` and add 
 {{< highlight python >}}
 extends KinematicBody2D
 
-var 速度 = 250
-var 速度 = Vector2()
+var speed = 250
+var velocity = Vector2()
 
 func get_input():
 	# Detect up/down/left/right keystate and only move when pressed
 	velocity = Vector2()
-	if 入力.is_action_pressed('ui_right'):
+	if Input.is_action_pressed('ui_right'):
 		velocity.x += 1
-	if 入力.is_action_pressed('ui_left'):
+	if Input.is_action_pressed('ui_left'):
 		velocity.x -= 1
-	if 入力.is_action_pressed('ui_down'):
+	if Input.is_action_pressed('ui_down'):
 		velocity.y += 1
-	if 入力.is_action_pressed('ui_up'):
+	if Input.is_action_pressed('ui_up'):
 		velocity.y -= 1
 	velocity = velocity.normalized() * speed
 
@@ -176,7 +177,9 @@ sceneを再実行し、障害物に向かって移動してみてください。
 障害物を貫通できないことが確認できるでしょう。ただし、斜めに移動して障害物に接触してみると、
 障害物がまるで接着剤のように作用するのを感じるはずです。ボディが貼り付いたような感覚になります。
 
-これは、衝突時の応答処理が定義されていないためです。`move_and_collide()` は単に衝突が発生した時点で物体の動きを停止させます。衝突に対して実装したい特定の応答ロジックをコーディングが必要です。
+This happens because there is no _collision response_. `move_and_collide()` just stops
+the body's movement when a collision occurs. We need to code whatever response we
+want from the collision.
 
 以下の変更を試してみてください。`move_and_slide(velocity)`に変更して再度実行してください。なお、速度計算から`delta`を削除していますのでご注意ください。
 
@@ -195,19 +198,19 @@ sceneを再実行し、障害物に向かって移動してみてください。
 {{< highlight python >}}
 extends KinematicBody2D
 
-エクスポート (packedscene) 変数 Bullet
-エクスポート (int) 変数 speed
+export (PackedScene) var Bullet
+export (int) var speed
 
 var velocity = Vector2()
 
 func get_input():
-	# add these actions in Project Settings -> 入力 Map
+	# add these actions in Project Settings -> Input Map
 	velocity = Vector2()
-	if 入力.is_action_pressed('backward'):
+	if Input.is_action_pressed('backward'):
 		velocity = Vector2(-speed/3, 0).rotated(rotation)
-	if 入力.is_action_pressed('forward'):
+	if Input.is_action_pressed('forward'):
 		velocity = Vector2(speed, 0).rotated(rotation)
-	if 入力.is_action_just_pressed('mouse_click'):
+	if Input.is_action_just_pressed('mouse_click'):
 		shoot()
 
 func shoot():
@@ -271,17 +274,18 @@ func _on_VisibilityNotifier2D_screen_exited():
 {{< highlight python >}}
 extends KinematicBody2D
 
-輸出（整数）変数 run_speed
-輸出（整数）変数 jump_speed
-輸出（整数）変数 gravity
+export (int) var run_speed
+export (int) var jump_speed
+export (int) var gravity
 
-enum { IDLE, RUN, JUMP }
-var 速度 = Vector2()
-var 状態
-var アニメーション
-var 新規アニメ
+enum {IDLE, RUN, JUMP}
+var velocity = Vector2()
+var state
+var anim
+var new_anim
 
-funció _ready():
+func _ready():
+    change_state(IDLE)
 
 func change_state(new_state):
     state = new_state
@@ -295,38 +299,39 @@ func change_state(new_state):
 
 func get_input():
     velocity.x = 0
-    var right = 入力.is_action_pressed('ui_right')
-    var left = 入力.is_action_pressed('ui_left')
-    var jump = 入力.is_action_just_pressed('ui_select')
+    var right = Input.is_action_pressed('ui_right')
+    var left = Input.is_action_pressed('ui_left')
+    var jump = Input.is_action_just_pressed('ui_select')
 
-    if jump and sprite_is_on_the_floor():
-        set_state(JUMP)
+    if jump and is_on_floor():
+        change_state(JUMP)
         velocity.y = jump_speed
-    if moving_right:
-        set_state(RUN)
+    if right:
+        change_state(RUN)
         velocity.x += run_speed
-    if moving_left:
-        set_state(RUN)
+    if left:
+        change_state(RUN)
         velocity.x -= run_speed
     $Sprite.flip_h = velocity.x < 0
-    if not moving_right and not moving_left and state == RUN:
-        set_state(IDLE)
+    if !right and !left and state == RUN:
+        change_state(IDLE)
 
 func _process(delta):
     get_input()
     if new_anim != anim:
         anim = new_anim
-        $アニメーションPlayer.play(anim)
+        $AnimationPlayer.play(anim)
 
-velocity.y += gravity * delta
+func _physics_process(delta):
+    velocity.y += gravity * delta
     if state == JUMP:
         if is_on_floor():
             change_state(IDLE)
     velocity = move_and_slide(velocity, Vector2(0, -1))
 
-    もし position.y が 600 より大きい場合：
+    if position.y > 600:
         get_tree().reload_current_scene()
-    {{< /highlight >}}
+{{< /highlight >}}
 
 ![alt](/godot_recipes/3.x/img/k2d_platf_sample.gif?width=300)
 

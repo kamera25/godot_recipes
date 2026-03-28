@@ -43,11 +43,11 @@ func _process(delta):
 
 ![alt](/godot_recipes/4.x/img/delta_01.gif)
 
-このコードだと、コンピュータが他のタスクでリソースを消費している場合に問題が発生します。これは「ラグ」と呼ばれます。コード自体の問題や他の実行中アプリケーションに起因する可能性があります。この状況では、フレームの長さが増加になります。極端な例として、フレームレートが半減した場合を考えてみましょう。各フレームの処理時間が60分の1秒から30分の1秒になります。`2` ピクセル/フレームで移動しているスプライトの場合、画面端に到達するまでにこれまでの2倍の時間がかかることになります。
+Maybe. The trouble begins if there is something else occupying the computer's time. This is called _lag_ and can come from a variety of sources - the cause could be your code or even other applications running on your computer. If this happens, then the length of a frame might increase. As an extreme example, imagine that the frame rate is halved - each frame took 1/30 instead of 1/60 of a second. Moving at `2` px/frame, it's now going to take twice as long for the sprite to reach the edge.
 
 ![alt](/godot_recipes/4.x/img/delta_02.gif)
 
-たとえ微小なフレームレートの変動があったとしても、動きの速さが一定に保たれなければなりません。これが銃弾など高速で移動する物体であれば、速度が落ちるのを避けたいです。この移動動作を _フレームレートに依存しない_ ようにする必要があります。
+Even small frame rate fluctuations will result in inconsistent movement speed. If this were a bullet or other fast-moving object, we wouldn't want it slowing down like this. We need the movement to be _frame rate independent_.
 
 ### フレームレート問題の修正について
 
@@ -65,7 +65,7 @@ func _process(delta):
 120 pixels/second * 1/30 second/frame = 4 pixels/frame
 ```
 
-注：フレームレートが半分に低下した場合（すなわちフレーム時間が2倍になった場合）、速度を維持するには、フレームごとの移動量も2倍にする必要があります。
+Note that if the frame rate decreases by half (meaning the frame _time_ doubles), then our per-frame movement must also double to keep the desired speed.
 
 この計算を使用するようにコードを変更しましょう。
 
@@ -83,7 +83,7 @@ func _process(delta):
 
 ![alt](/godot_recipes/4.x/img/delta_03.gif)
 
-フレームレートが著しく低下した場合、動きは滑らかさを失いますが、時間間隔自体は維持されます。
+If the frame rate gets _very_ low, the movement is no longer smooth, but the _time_ remains the same.
 
 ![alt](/godot_recipes/4.x/img/delta_04.gif)
 
@@ -142,7 +142,7 @@ velocity += gravity * delta
 move_and_slide()
 ```
 
-加速を適用する際に `delta` を考慮しない場合、フレームレートの変動の影響を受けやすくなります。この影響は運動挙動に「より微妙な形」で現れます。発生した場合は辻褄が合わない動作となりますが、その原因を特定する微々たる影響のためとても困難です。
+加速を適用する際に `delta` を考慮しない場合、フレームレートの変動の影響を受けやすくなります。この影響は運動挙動に「より微妙な形」で現れます。動きが一貫しなくなりますが、影響が微細であるため、原因の特定は非常に困難になります。
 
 {{% notice tip %}}
 `move_and_slide()`関数を使用する場合でも、重力や摩擦などの他の物理量に対しても適切に`delta`を適用が必要です。

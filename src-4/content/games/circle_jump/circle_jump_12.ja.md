@@ -83,7 +83,7 @@ for button in buttons:
 
 「BaseScreen.tscn」を継承し、ここにテキスト編集エリアとホームボタン用のコンテナを追加しました。
 
-「テキストエディタ」設定で［_BBCode］を有効にし、［テキスト］プロパティに以下を入力します。
+In the `TextEdit`, set _BBCode_ enabled and put the following in the _Text_ property:
 
 ```text
 [center][u]Circle Jump[/u]

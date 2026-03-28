@@ -5,7 +5,7 @@ draft: false
 pre: "05. "
 ---
 
-「Bullet」シーンでは、プレイヤーが射撃するたびに再利用可能なオブジェクトを生成できます。
+The `Bullet` scene provides us with a reusable object we can _instantiate_ whenever the player shoots.
 
 ## プレイヤーへの追加方法
 

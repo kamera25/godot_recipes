@@ -33,11 +33,11 @@ Godotが自動的に画像を切り分けできるように、スプライトシ
   {{< gd-icon AnimationPlayer >}} AnimationPlayer
 ```
 
-{{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの _Texture_プロパティにスプライトシートテクスチャをドラッグ＆ドロップしてください。ビューポート内に完全なスプライトシートが表示されます。個別のフレームに分割するには、インスペクターの「アニメーション」セクションを拡大し、_Hframes_を `13`、_Vframes_を `8`に設定します。_Hframes_と_Vframes_は、それぞれ水平方向および垂直方向のフレーム数を指定するパラメータです。
+Drag the spritesheet texture into the _Texture_ property of the {{< gd-icon Sprite2D >}}`Sprite2D`. You'll see the entire spritesheet displayed in the viewport. To slice it up into individual frames, expand the "アニメーション" section in the Inspector and set the _Hframes_ to `13` and _Vframes_ to `8`. _Hframes_ and _Vframes_ are the number of horizontal and vertical frames in your spritesheet.
 
 ![alt](/godot_recipes/4.x/img/sprite_animation_01.png)
 
-_Frame_ プロパティを変更してみて、画像がどのように変化するか見てみましょう。これは後ほどアニメーション化するプロパティです。
+Try changing the _Frame_ property to see the image change. This is the property we’ll be animating.
 
 ### アニメーションの追加方法
 
@@ -49,7 +49,7 @@ _Frame_ プロパティを変更してみて、画像がどのように変化す
 4. アニメーションの長さを `2` に設定します。
 5. 「ループ」ボタンをクリックして、アニメーションが繰り返し再生されるようにします（詳細は以下を参照）。
 
-スクラバーが「0」時点で、{{< gd-icon Sprite2D >}}`Sprite2D`ノードを選択します。アニメーションのフレーム番号を「0」に設定し、値の隣にあるキーアイコンをクリックします。
+With the scrubber at time `0`, select the {{< gd-icon Sprite2D >}}`Sprite2D` node. Set its _Animation/Frame_ to `0`, then click the key icon next to the value.
 
 ![alt](/godot_recipes/4.x/img/sprite_animation_02.png)
 
@@ -57,7 +57,7 @@ _Frame_ プロパティを変更してみて、画像がどのように変化す
 
 ![alt](/godot_recipes/4.x/img/sprite_animation_03.png)
 
-この方法が有効なのは、フレームがすでに順序通りに並んでいることが前提です。そうでない場合は、タイムライン上で各 _Frame_ を個別にキーフレーム化が必要です。
+Note that this will only work for spritesheets where the frames are already in order. If they are not, you'll have to keyframe each _Frame_ seperately along the timeline.
 
 ![alt](/godot_recipes/4.x/img/sprite_animation_04.gif)
 

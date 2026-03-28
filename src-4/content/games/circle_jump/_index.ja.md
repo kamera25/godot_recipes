@@ -18,9 +18,9 @@ pre: "<i class='far fa-circle fa-fw'></i>&nbsp"
 
 このゲームは以下のプラットフォームで利用できます。
 
-* Android：[Google Playストア](https://play.google.com/store/apps/details?id=org.kidscancode.circlejump)にて配信中
-* iOS版は近日公開予定
-* Webブラウザ版：[今月のゲームページ](https://gotm.io/kidscancode/circlejump/)で利用可能
+* Android: [Google Play Store](https://play.google.com/store/apps/details?id=org.kidscancode.circlejump)
+* iOS: _coming soon_
+* Web: [Game of the Month](https://gotm.io/kidscancode/circlejump/)
 
 以下のサイトからデスクトップ版をダウンロードすることもできます。itch.io：
 

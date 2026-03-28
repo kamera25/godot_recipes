@@ -7,7 +7,7 @@ pre: "06. "
 
 ## 設定シングルトン
 
-まず、スクリプトタブで［ファイル］→［新規スクリプト］を選択して新しいスクリプトを追加します。スクリプト名は `settings.gd` とします。
+First, we'll add a new script by choosing _File -> New Script_ in the script tab. Name the script `settings.gd`.
 
 このスクリプトでは、ゲームの設定パラメータを配置します。
 
@@ -26,7 +26,7 @@ var circles_per_level = 5
 
 サウンドを再生するために、複数の`音声StreamPlayer`ノードを異なるシーンに追加します。
 
-- 1. まず「メイン」シーンに「音楽」という名前を追加します。［ストリーム］プロパティには `res://assets/audio/Music_Light-Puzzles.ogg` を使用してください。
+- First, add one to the `Main` scene and name it "Music". For its _Stream_ property use `res://assets/audio/Music_Light-Puzzles.ogg`.
 
 - 「スクリーン」シーンに新たに「クリック」という画面を追加します。ボタンをタップした際にこの画面が表示されるようにします。アセットフォルダから「menu_click.wav」を使用します。
 
@@ -63,7 +63,7 @@ if settings.enable_sound:
     $Beep.play()
 ```
 
-そして `Jumper.gd` に、次のようにサウンドを追加します。-- Jumper.gd ファイル内でサウンドを追加します:
+そして `Jumper.gd` に、次のようにサウンドを追加します:
 
 ```gdscript
 func jump():

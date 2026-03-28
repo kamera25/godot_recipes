@@ -11,7 +11,7 @@ pre: "03. "
 
 最終的には様々なモードを実装する予定ですが、まずは「制限モード」から始めましょう。このモードでは、円は特定回数の周回後に消滅します。まず、残りの周回数を表示する `Label` ノードを追加しましょう。テキストフィールドに数値（例：`1`）を入力して、表示方法を確認してみてください。
 
-[カスタムフォント] セクションで、新しい `DynamicFont` を追加し、アセットフォルダから _フォントデータ_ を読み込み、 _サイズ_ を `64` に設定します。ラベルの位置を中央配置するには、「レイアウト」メニューから「中央揃え」を選択します。
+In the _Custom Fonts_ section, add a new `DynamicFont`, load the _Font Data_ from the assets folder, and set the _Size_ to `64`. To align the label, in the "Layout" menu, choose "Center".
 
 以下の新しい変数を `Circle.gd` ファイルの先頭に追加してください。
 

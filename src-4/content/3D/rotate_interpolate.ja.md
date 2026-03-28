@@ -17,7 +17,7 @@ ghcommentid: 39
 オイラー角の背景や、ジンバルロックといった関連する問題についてさらに詳しく知りたい方には、[こちらの解説動画](https://www.youtube.com/watch?v=zc8b2Jo7mno)がオススメです
 {{% /notice %}}
 
-Godotではオブジェクトの`transform`プロパティを利用することで、3Dオイラー角を使用する必要を回避できます。このプロパティはオブジェクトの空間内における位置と向きを同時に表現します。これは数学的なマトリックス構造によって実現されていますが、実際に使用する際にはその背後にある数学的原理を理解する必要はありません。
+We can avoid using 3D Euler angles in Godot by using the object's `transform` property. This property represents the body's position *and* orientation in space. It uses a mathematical construct called a _matrix_ to do this, but you don't really need to understand the underlying math in order to make use of it.
 
 ### look_at()
 

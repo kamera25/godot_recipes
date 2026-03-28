@@ -158,7 +158,7 @@ func _input(event):
 
 ### ヒューリスティック選択について
 
-経路に大きく影響する要素は「ヒューリスティック手法」です。これは「最適な推測」を意味し、経路探索の文脈においては：目標地点へ向かう際に、まずどの方向を試すべきかを決定する方法を指します。
+A big factor that affects the resulting path is what _heuristic_ you choose to use. The term "heuristic" refers to a "best guess", and in the context of pathfinding just means: what direction should we try first when moving toward the goal?
 
 例えば、ユークリッド距離はピタゴラスの定理を用いて経路を推定します。
 

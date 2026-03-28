@@ -31,6 +31,9 @@ def extract_md_blocks(content):
     text_content = re.sub(r'```.*?```', '', text_content, flags=re.DOTALL)
     text_content = re.sub(r'\{\{<\s*highlight.*?\{\{<\s*/highlight\s*>\}\}', '', text_content, flags=re.DOTALL)
     
+    # アンダーバーで囲まれたテキストを抽出対象から外す
+    text_content = re.sub(r'(^|\s|[^a-zA-Z0-9_])(_[^_]+_)([^a-zA-Z0-9_]|\s|$)', r'\1\3', text_content)
+
     # 段落ごとに分割 (改行2つ以上)
     blocks = re.split(r'\n\n+', text_content)
     

@@ -16,7 +16,7 @@ pre: "01. "
 
 **GDScript は Python ですか？**
 
-「GDScriptはPythonをベースにしている」と説明されているのをよく目にするでしょう。これは一見誤解を招きやすい表現ですが、実際にはGDScriptはPythonに似た _構文_ を採用してはいるものの、Godotエンジン向けに最適化された完全に独立した言語です。とはいえ、すでにPythonをある程度知っている方なら、GDScriptは非常に親しみやすいものに感じられるはずです。
+You'll often read comments to the effect that "GDScript is based on Python". That's somewhat misleading; GDScript uses a _syntax_ that's modeled on Python's, but it's a distinct language that's optimized for and integrated into the Godot engine. That said, if you already know some Python, you'll find GDScript looks very familiar.
 
 {{% notice warning %}}
 多くのチュートリアル（およびGodot自体）では、ある程度のプログラミング経験があることを前提としています。これまで一度もコードを書いたことがない場合、Godotを学ぶのは困難に感じるかもしれません。ゲームエンジンを習得するだけでも大きな挑戦ですが、同時にコーディングも学ぶとなると、負担はさらに大きくなります。もしこのセクションのコードで苦戦しているなら、初心者向けプログラミング講座（Pythonがオススメです）を履修することで、基本的な概念をしっかりと理解できるはずです。

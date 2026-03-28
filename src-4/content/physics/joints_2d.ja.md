@@ -17,9 +17,9 @@ Godotの`Joint2D`ノードについて理解したい。
 
 これらのプロパティはすべての関節ノードに共通です：
 
-*  _Node A_ and _Node B_：割り当てられた物理ボディ
-*  _Bias_：両オブジェクトが離れる方向に関節が引き寄せる速度。デフォルト値は 0 です
-*  _Disable Collisions_：接続されたオブジェクト間の衝突を考慮しないようにできます。デフォルトは true（有効）です
+- _Node A_ and _Node B_: The assigned physics bodies.
+- _Bias_: The rate at which the joint pulls the two bodies back together if they move apart. Defaults to `0`.
+- _Disable Collisions_: Allows the connected bodies to ignore collisions between them. Defaults to `true`.
 
 以下の3種類の {{< gd-icon Joint2D >}} `Joint2D` が存在します。すべての例で、1つの {{< gd-icon RigidBody2D >}} `RigidBody2D` がジョイントを介して {{< gd-icon StaticBody2D >}} `StaticBody2D` に接続されています。画面画像では「可視衝突形状」が有効化されているため、ジョイントの表現を確認できます。
 
@@ -29,7 +29,7 @@ Godotの`Joint2D`ノードについて理解したい。
 
 ![alt](/godot_recipes/3.x/img/pinjoint_example.gif)
 
-ピン接合部の［柔軟性］プロパティにより、接続にある程度の「弾力」が与えられます。この値はデフォルト値の `0`（移動不可）から最大値 `16` まで設定できます。
+The pin joint's _Softness_ property gives some "springiness" to the connection. The value can range from `0` (the default) which allows no movement, to `16`.
 
 ![alt](/godot_recipes/3.x/img/pinjoint_example2.gif)
 
@@ -41,10 +41,10 @@ Godotの`Joint2D`ノードについて理解したい。
 
 以下のプロパティでスプリングの挙動を調整できます。
 
-*  _Length_ : 関節の最大許容長値
-*  _Rest Length_ : 外力や運動が作用していない状態における関節の長さ
-*  _Stiffness_ : ばねの「伸びにくさ」、すなわち外力に対する抵抗強度を表す指標
-*  _Damping_ : ばねが「反発動作」を停止する速度特性を示すパラメータ
+- _Length_: The joint's maximum length.
+- _Rest Length_:The joint's length when no forces or movement are applied.
+- _Stiffness_: The spring's "stretchiness", i.e. how much it resists forces pulling against it.
+- _Damping_: How quickly the spring stops "bouncing".
 
 ### {{< gd-icon GrooveJoint2D >}} GrooveJoint2D
 
@@ -56,8 +56,8 @@ Godotの`Joint2D`ノードについて理解したい。
 
 以下のプロパティは溝の動作を制御します。
 
-- _Length_：溝の全長。この最大距離を超える位置まで付属パーツは移動できません。
-- _Initial Offset_：溝に沿った起点となる「位置」です。
+- _Length_: The groove's length. The attached bodies can't move past this maximum distance.
+- _Initial Offset_: Starting "position" along the groove.
 
 <!-- You can download an example project to play with these joints here: [physics_joints.zip](/godot_recipes/3.x/files/physics_joints.zip) -->
 

@@ -38,7 +38,7 @@ VehicleBody3D`車両ボディ`の操作方法について詳しく知りたい�
 
 車を読み込むには、`"Models/GLTF形式"`フォルダ内で該当モデルを探してください。今回は`sedanSports.glb`を使用します。このファイルを新規Godotプロジェクトにインポートし、できれば`res://assets/cars/`のような専用フォルダにまとめておくと良いでしょう。
 
-Godotでファイルを選択し、「インポート」タブに移動します。_ルートの型を「KinematicBody」に設定し、「再インポート」をクリックします。これでこの車を使用する準備が整いました。
+Select the file in Godot and go to the "Import" tab. Change the _Root Type_ to "KinematicBody" and click "Reimport". Now we're ready to use this car.
 
 #### {{< gd-icon KinematicBody3D >}} キネマティックボディの設定
 

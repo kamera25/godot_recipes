@@ -45,11 +45,11 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 ### 2Dを3Dに変換
 
-{{< gd-icon Sprite3D >}}`Sprite3D`を使用することで、2D画像を3D空間で表示することが可能です。新しいシーンに追加し、「Healthbar3D」という名前を付けましょう。まず設定とサイズ調整を行いますので、 _テクスチャプロパティ_ に緑色のバー画像を設定してください。
+We can display a 2D image in 3D using a {{< gd-icon Sprite3D >}}`Sprite3D`. Add one to a new scene and name it "Healthbar3D". First, we'll get it configured and sized, so set the _Texture_ property to the green bar image.
 
 {{<  gd-icon Sprite3D >}}`Sprite3D`は通常の3Dオブジェクトと同様に動作します。カメラを移動させると、視点が変わるためです。ただし、HPバーは常にカメラの方を向くようにして、いつでも確認できるようにしたいです。
 
-インスペクターで、 _Flags_ セクションの _Billboard_ を「Enabled」に設定してください。
+In the Inspector, under _Flags_, set _Billboard_ to "Enabled".
 
 続いてカメラを動かして、テクスチャが常にプレイヤー側を向いているか確認してください。
 
@@ -63,9 +63,7 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 `Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}} `TextureProgressBar` を表示したいです。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現できます。
 
-以下の手順で操作してください。
-1. {{< gd-icon SubViewport >}} `SubViewport` を {{< gd-icon Sprite3D >}} `Sprite3D` の子要素として追加します。
-2. インスペクターウィンドウで、_Transparent BG_ 設定を **オン** に設定してください。
+Add a {{< gd-icon SubViewport >}}`SubViewport` as a child of the {{< gd-icon Sprite3D >}}`Sprite3D`. In the Inspector set _Transparent BG_ to **On**.
 
 さらに、HPバーテクスチャのサイズに合わせてビューポートのサイズを設定する必要があり、そのサイズは`(200, 26)`です。
 

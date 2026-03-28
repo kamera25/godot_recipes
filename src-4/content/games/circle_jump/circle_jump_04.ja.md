@@ -18,18 +18,15 @@ pre: "04. "
       * `HBoxContainer` ("ボタン領域")
   * `Tween`コンポーネント
 
-{
-  "title": "マージンコンテナの設定",
-  "content": "「マージンコンテナ」を使用すると、UI要素が画面端に近づきすぎるのを防止できます。4つのカスタム定数プロパティをすべて'20'に設定してください。"
-}
+The `MarginContainer` will ensure that none of our UI elements get too close to the edge of the screen. Set all four of its _Custom Constants_ properties to `20`.
 
-次に使用するのはメイン要素を整理するための`VBoxContainer`です。このコンテナの［カスタム定数／間隔］設定を`150`に設定してください。
+Next is a `VBoxContainer` to organize the main elements. Set its _Custom Constants/Separation_ to `150`.
 
-「ラベル」ノードは画面のタイトルを表示します。［テキスト］フィールドに「タイトル」と入力し、円と同じフォントリソースを読み込みます。
+The `Label` node displays the screen's title. Put "Title" in its _Text_ field and load the same font resource we used for the circles.
 
-最後に、「ボタン」という名前の `HBoxContainer` を追加します。このコンテナには、後でスクリーンに追加するボタンが格納されます。その _間隔_ を `75` に設定します。次にノードを複製して、もう1列分のボタンを作成します。
+Finally, add an `HBoxContainer` named "Buttons" which will hold the buttons we add to the screens. Set its _Separation_ to `75`. Then duplicate the node so that we have another row of buttons.
 
-スクリーンは画面外に表示開始されるので、ルートノードの _オフセット値_ を `(500, 0)` に設定してください。その後、シーンにスクリプトを追加します。
+The screen should start offscreen, so set the _Offset_ on the root node to `(500, 0)`. Then add a script to the scene:
 
 ```gdscript
 extends CanvasLayer
@@ -49,7 +46,7 @@ func disappear():
 
 このスクリプトでは、画面の表示／非表示を切り替えるためのアニメーション設定を行います。
 
-これで3つの継承されたシーンを作成できます。それぞれについて：ルートノードに名前を付け、ラベルテキストを変更し、「Buttons」コンテナーに「TextureButton」を追加してください。各ボタンのノーマルテクスチャには、アセットフォルダ内の画像を使用してください。各ボタンにはその機能に応じた名前を付けてください（例：「再生」「設定」など）。そしてこれらをすべてグループ「buttons」に追加します。
+Now we can make our three inherited scenes. For each, name the root node, change the Label text, and add `TextureButton`s to the "Buttons" containers. Use the images from the assets folder for each button's _Normal_ texture. Name each button for its function ("Play", "Settings", etc.) and add it to the group "buttons".
 
 以下は、指定されたボタン名を使用した3つのシーンの外観例です：
 

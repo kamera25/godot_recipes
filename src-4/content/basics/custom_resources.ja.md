@@ -32,7 +32,7 @@ Godot に標準で用意されているすべての `リソース`タイプに�
 
 まず最初に、新しいカスタムリソース「PlayerHealth」を定義する必要があります。このリソースは健康状態に関連するプロパティを管理する必要があります。さらに、HPの変化（回復やダメージを受けるなど）を処理するための機能とシグナルを提供します。
 
-スクリプトタブで、ファイル >新規スクリプト を選択します。「リソース」を継承するように設定し、ファイル名を "PlayerHealth.gd" とします。
+In the _Script_ tab, choose _File>New Script_. Make sure it inherits `Resource` and name it `PlayerHealth.gd`.
 
 これを部分ごとに分解して考えましょう。
 
@@ -64,7 +64,7 @@ func reset():
     current_value = max_value
 ```
 
-この機能はプレイヤーにダメージが与えられた際に毎回呼び出されるべきです。
+この関数はプレイヤーにダメージが与えられた際に毎回呼び出されるべきです。
 
 ```gdscript
 func take_damage(amount):
@@ -72,7 +72,7 @@ func take_damage(amount):
     emit_signal("health_changed", current_value)
 ```
 
-この機能はプレイヤーの回復が必要な時に随時呼び出されるべきです
+この関数はプレイヤーの回復が必要な時に随時呼び出されるべきです。
 
 ```gdscript
 func heal(amount):
@@ -124,7 +124,7 @@ func heal(amount):
 リソースの作成と保存が完了したら、いよいよ使用準備が整います。このシナリオでは、以下のオブジェクトが存在します。
 
 * プレイヤー： {{< gd-icon KinematicBody2D >}}`KinematicBody2D` 
-* UI要素：健康状態を表示する {{< gd-icon TextureProgressBar >}}`ProgressTexture` を含むコンポーネント
+* UI要素：HPを表示する {{< gd-icon TextureProgressBar >}}`ProgressTexture` を含むコンポーネント
 * 回復エリア：その範囲内に入った対象を回復する {{< gd-icon Area2D >}}`Area2D`
 * スパイクゾーン：接触するとダメージを与える {{< gd-icon TileMap >}}`TileMap` のタイルセット
 

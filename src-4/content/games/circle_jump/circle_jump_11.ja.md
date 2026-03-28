@@ -40,7 +40,7 @@ Godot はデフォルトでは広告サービスをサポートしていない�
 
 ## エクスポートの設定
 
-Godot エディタに戻って、エクスポート設定にいくつかの変更を加える必要があります。まず、_プロジェクト -> プロジェクト設定_ を開き、「Android」セクションを見つけてください。_モジュール_ プロパティには、コードで使用するモジュールをリストします。モジュール名は `godot-admob` ページに記載されています。"org/godotengine/godot/GodotAdMob"。使用するモジュールが複数ある場合は、カンマで区切ってください。
+Back in the Godot editor, we need to make some changes to the export configuration. First, open _Project -> Project Settings_ and find the "Android" section. In the _Modules_ property is where you list the module(s) you want to use in your code. The module name is listed on the `godot-admob` page: "org/godotengine/godot/GodotAdMob". If you have more than one module, separate them with commas.
 
 _プロジェクト設定 -> エクスポートメニューでは、ダウンロードしたカスタムテンプレートを使用するようにGodotに指示が必要です。これらは［カスタムパッケージ］セクションで設定します。フォルダアイコンをクリックして、テンプレートを解凍したディレクトリに移動してください。「デバッグ」と「リリース」両方のテンプレートを必ず追加してください。
 
@@ -62,7 +62,7 @@ var enable_ads = true
 
 これはモジュール用の設定変数です。`real_ads` を `false` に設定すると「テスト広告」モードになります。ゲームリリース準備が整うまでは、これを `true` に変更しないでください。`banner_top` は、バナー広告を画面上部に表示するか下部に表示するかを切り替えるトグルです。
 
-`ad_banner_id` および `ad_interstitial_id` には、AdMobアカウントから取得した広告ユニット値を設定が必要です。
+`ad_banner_id` and `ad_interstitial_id` should be filled with _your_ ad unit values from your AdMob account.
 
 モジュールの初期化が必要です：
 
@@ -138,7 +138,7 @@ func set_enable_ads(value):
 
 ボタンを追加するには、3行目のボタン列が必要になります。`BaseScreen`シーンを開き、最初のHBoxContainerを複製してください。
 
-[SettingsScreen]シーンに「Ads」という名前の「Button」を中央の行に追加します。テキストを「広告を無効にする」に設定し、カスタムフォント（サイズ48が適切です）を適用し、さらにカスタムスタイルをすべて「New StyleBoxEmpty」に設定してください。最後に、このボタンを「buttons」グループに追加することを忘れないでください。
+In the `SettingsScreen` scene add a `Button` called "Ads" to the middle row. Set its text to "Disable Ads", its _Custom Font_ (a size of 48 works well), and set its _Custom Styles_ all to "New StyleBoxEmpty". Don't forget to add the button to the "buttons" group.
 
 「Screens.gd」ファイル内で、ボタン処理用の「match」ステートメントに以下を追加してください。
 

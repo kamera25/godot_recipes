@@ -19,11 +19,11 @@ Godot ワークフローにおいて共通的な作業の一つにシーンの�
 
 その船には以下が必要です：
 
-* _2D空間での移動_ : これには基本的な{{< gd-icon Node2D >}}`Node2D`ノードで十分です。なぜならこのノードには`position`、`rotation`などの2D関連プロパティが備わっているからです。ただし、外観に関する要素はありません。
+* _Move in 2D space_. For this, a basic {{< gd-icon Node2D >}}`Node2D` would suffice, as that's the node that has `position`, `rotation`, and other 2D-related properties. However, it has no appearance.
 
-* _画像を表示_ : {{< gd-icon Sprite2D >}}`Sprite2D`はこの目的のためのノードです。これも{{< gd-icon Node2D >}}`Node2D`であるため、自由に移動させることができます。
+* _Display an image_. {{< gd-icon Sprite2D >}}`Sprite2D` is the node for this. Since it's also a {{< gd-icon Node2D >}}`Node2D`, we'd still be able to move it around.
 
-* _衝突検出機能_：画面内で敵キャラが射撃したり移動したりするため、自機がダメージを受けたタイミングを正確に把握する必要があります。固い物体同士の相互作用（跳ね返りや運動量伝達など）を考慮する必要はなく、単に接触を検知できれば十分です。この用途には{{< gd-icon Area2D >}}`Area2D`コンポーネントが最適です。他オブジェクトとの接触検出機能を備え、位置関連プロパティを持っていますが、独自の視覚表現は持ちません。
+* _Detect getting hit_. The enemies will be shooting and flying around on the screen, so we'll need to know when the ship is hit. We don't have a need for solid objects - they're not going to bounce off each other or transfer momentum - we just need to know when they touch. For this, an {{< gd-icon Area2D >}}`Area2D` would be perfect. It can detect touching other objects, has positional properties, but it has no appearance of its own.
 
 このリストを見ると、`Area2D`が主要な機能を提供していることがわかります。ここに`Sprite2D`をアタッチして宇宙船の画像を表示すれば、必要なものはすべて揃います。
 

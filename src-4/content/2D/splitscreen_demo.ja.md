@@ -20,14 +20,16 @@ ghcommentid: 18
 このパーツのセットアップでお困りの場合は、公式Godotドキュメントの以下のセクションをご覧ください: [2D移動概要](http://docs.godotengine.org/ja/stable/tutorials/2d/2d_movement.html)。
 {{% /notice %}}
 
-各操作は、プロジェクト設定の[インプットマップ]セクションで個別に設定されています。「right_1」は右矢印キー、「right_2」はDキーなどです。このように命名することで、コード内で以下の構文を使用でき、開発効率を大幅に向上させられます。
+Each player has its input actions set up in the _Project Settings -> Input Map_
+section: "right_1" to Right Arrow, "right_2" to D, etc. Note that by naming them
+this way, we can save time in the code by using:
 
 {{< highlight gdscript>}}
 export var id = 0
 
 func get_input():
     velocity = Vector2()
-    if 入力.is_action_pressed('right_%s' % id):
+    if Input.is_action_pressed('right_%s' % id):
         velocity.x += 1
     # etc.
 {{< /highlight >}}
@@ -55,14 +57,23 @@ inherit from {{< gd-icon Node3D >}}`Spatial` or {{< gd-icon Node2D >}}`Node2D`).
 a {{< gd-icon Control >}}`Control` node, to hold each viewport. To keep them arranged side-by-side, we'll
 use an {{< gd-icon HBoxContainer >}}`HBoxContainer`.
 
-{{< gd-icon HBoxContainer >}}`HBoxContainer`の配置を「中央」に設定し、2つのビューポート間に小さな隙間を設けるには、_カスタム定数/間隔_に `5` を設定してください。「レイアウト」メニューでは「フル矩形」を選択します。
+Set the {{< gd-icon HBoxContainer >}}`HBoxContainer`'s _Alignment_ to "Center" and to have a small
+gap between the two viewports, set _Custom Constants/Separation_ to `5`. In the
+"Layout" menu, choose "Full Rect".
 
-次に、2つの{{< gd-icon SubViewportContainer >}}`ViewportContainer`を子要素として追加し、それぞれに`2`と`1`という名前を付けます（これらは表示するプレイヤーに対応するためです）。両方のコンテナについて_サイズフラグ_を「画面いっぱいに拡張」に設定してください。これにより、各コンテナが画面の半分を埋めるように拡大されます。さらに、_伸縮指定_プロパティもチェックすることで、{{< gd-icon Viewport >}}`Viewport`が自動的にコンテナのサイズに合わせて調整されるようになります。
+Now add two {{< gd-icon SubViewportContainer >}}`ViewportContainer`s as children, naming them with a `2` and `1` (to
+match the player they'll display). Set the _Size Flags_ on both to "Fill, Expand"
+so that they will each expand to fill half of the screen. Also, check the _Stretch_
+property so that the {{< gd-icon Viewport >}}`Viewport` will automatically be set to the size of the
+container.
 
-各コンテナ内に、`{{< gd-icon Viewport >}}`Viewport` 要素を追加してください。なお、ビューポートの
-_サイズ_ プロパティを設定した場合、その値はコンテナによってリセットされますのでご注意ください。
+Inside each of these containers add a {{< gd-icon Viewport >}}`Viewport`. Note that if you set the viewport's
+_Size_ property, it will be reset by the container.
 
-{{< gd-icon Viewport >}}`ビューポート`に何らかのコンテンツを表示するには、{{< gd-icon Camera2D >}}`Camera2D`が必要です。このカメラは{{< gd-icon Viewport >}}`ビューポート`上にレンダリングを行います。各ビューポートに1つずつ追加してください。また、カメラを有効にするには_現在のプロパティを必ずチェックしてください_。さらに、各カメラのズーム値を`(0.75, 0.75)`に設定することで、プレイヤー周辺のエリアをより詳細に表示できるようになります。
+In order for a {{< gd-icon Viewport >}}`Viewport` to display anything, we'll need a {{< gd-icon Camera2D >}}`Camera2D` which will render
+onto the {{< gd-icon Viewport >}}`Viewport`. Add one to each viewport. Don't forget to check the _Current_
+property to activate the camera. We can also set each camera's _Zoom_ to `(0.75, 0.75)`
+to get a better view of the area around the player.
 
 ノードを以下のようにします。
 
@@ -99,7 +110,8 @@ onready var camera1 = $Viewports/ViewportContainer1/Viewport1/Camera2D
 onready var camera2 = $Viewports/ViewportContainer2/Viewport2/Camera2D
 onready var world = $Viewports/ViewportContainer1/Viewport1/World
 
-viewport2.world_2d = viewport1.world_2d
+func _ready():
+    viewport2.world_2d = viewport1.world_2d
 {{< /highlight >}}
 
 The `onready` node references are for convenience - we'll be using them as we progress forward. Remember that when you type "`$`", Godot will automatically suggest node paths so you don't need to type them. You can also drag a node directly from the scene tree into the script editor, and you'll get the node's path.
@@ -113,9 +125,10 @@ The `onready` node references are for convenience - we'll be using them as we pr
 {{< highlight gdscript>}}
 extends Camera2D
 
-var ターゲット = null;
+var target = null
 
-if target is not None:
+func _physics_process(delta):
+    if target:
         position = target.position
 {{< /highlight >}}
 
@@ -132,7 +145,7 @@ func _ready():
 現在シーンを実行すると、各プレイヤーは自分のビューポートの中央に配置され、分割画面の設定が正しく機能しています！
 
 {{% notice tip %}}
-カメラの［ドラッグ余白］プロパティを無効にすると、見た目が一番良くなると思います。
+I find it looks best if you disable the _Drag Margin_ properties of the cameras.
 {{% /notice %}}
 
 ### カメラの制限
@@ -154,16 +167,11 @@ func set_camera_limits():
 
 もう一つ便利な機能を追加しましょう。マップ全体を見渡せるミニマップです。プレイヤーが現在地を把握しやすくなります。
 
-{
-  "steps": [
-    {
-      "description": "新たに `ViewportContainer` 要素を作成が必要ですが、今回は `Main` の子要素として追加します。今回のケースでは**Stretchモードは使用しません**。以下の手順に従ってください。\
-- {{< gd-icon Viewport >}}`Viewport`要素を追加し、_Size_プロパティを `(340, 200)` に設定します\
-- 次に {{< gd-icon Camera2D >}}`Camera2D`要素を追加します。画面中央に配置するため、{{< gd-icon Viewport >}}`Camera2D`の _Position_ プロパティを `(512, 300)` に設定します\
-- ズームアウトするには、_Zoom_プロパティを `(9, 9)` に設定してください。忘れずにこのカメラでも**Currentモードを選択**することをお忘れなく"
-    }
-  ]
-}
+We'll need another {{< gd-icon ViewportContainer >}}`ViewportContainer`, this one a child of `Main`. This time, we
+*don't* want to use _Stretch_. Add a {{< gd-icon Viewport >}}`Viewport` and set its _Size_ to `(340, 200)`
+then add a {{< gd-icon Camera2D >}}`Camera2D`. We'll set the {{< gd-icon Viewport >}}`Camera2D`'s _Position_ to `(512, 300)` to center
+it on the screen. We'll zoom out by setting _Zoom_ to `(9, 9)`. Don't forget to
+click _Current_ on this camera as well.
 
 `_ready()`関数内では、ミニマップが他の2つのビューポートと同じワールドを使用するように設定します。
 
@@ -175,7 +183,10 @@ $Minimap/Viewport.world_2d = viewport1.world_2d
 
 ![alt](/godot_recipes/3.x/img/splitscreen_minimap1.png?width=400)
 
-エッジ周りのグレーゾーンを解消が必要です。正確なズームレベルを特定して希望のミニマップサイズに合わせることもできますが、代わりに{{< gd-icon Viewport >}}`Viewport`設定の_透過背景(Bg_をチェックします。これで非地図領域が見えなくなり、ミニマップがメインビューポートの上に直接浮かんで表示されるようになります。
+We need to get rid of that grey area around the edges. We could find the precise
+zoom level that matches our desired minimap size, but instead, we'll check the
+_Transparent Bg_ on the {{< gd-icon Viewport >}}`Viewport`. Now our non-map areas aren't visible and the
+minimap appears floating directly on top of the main viewports.
 
 ![alt](/godot_recipes/3.x/img/splitscreen_minimap2.png?width=400)
 

@@ -14,7 +14,7 @@ draft: false
 
 ### ボディ設定
 
-はじめに、リジッドボディオブジェクトを作成します。まず{{< gd-icon Sprite2D >}}`Sprite2D`と{{< gd-icon CollisionShape2D >}}`CollisionShape2D`を追加してください。さらに物理特性を設定したい場合は`物理Material`も追加できます。このマテリアルでは_Bounce_（反発係数）と_Friction_（摩擦係数）のプロパティを調整できます。
+We'll start with our rigid body object, adding a {{< gd-icon Sprite2D >}}`Sprite2D` and {{< gd-icon CollisionShape2D >}}`CollisionShape2D`. You can also add a `物理Material` if you want to set _Bounce_ and _Friction_ properties.
 
 物理演算エンジンの制御から一時的に解放するために、リジッドボディの「フリーズ」プロパティを使用します。ドラッグ操作中も移動可能にしておく必要があるため、デフォルト値である「静的モード」ではなく、**凍結モード**を「運動学的」に設定します。
 

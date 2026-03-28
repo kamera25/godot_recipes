@@ -20,8 +20,8 @@ RigidBody2Dの動作は「質量」「摩擦」「反発」などのプロパテ
 
 ![alt](/godot_recipes/3.x/img/rigidbody_properties.png)
 
-The body's behavior is also affected by the world, via the _Project Settings -> 物理_
-properties, or by entering an <a href="http://docs.godotengine.org/ja/latest/classes/class_area2d.html"><svg width="18" height="18" class="icon-icon_area_2d" target="_blank"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_area_2d"></svg> `Area2D`</a> that is overriding the global physics properties.
+The body's behavior is also affected by the world, via the _Project Settings -> Physics_
+properties, or by entering an <a href="http://docs.godotengine.org/en/latest/classes/class_area2d.html"><svg width="18" height="18" class="icon-icon_area_2d" target="_blank"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_area_2d"></svg> `Area2D`</a> that is overriding the global physics properties.
 
 ## RigidBody2Dを使う
 
@@ -35,11 +35,17 @@ children:
 
 ![alt](/godot_recipes/3.x/img/rigidbody_block_scene.png)
 
-スプライトにテクスチャを追加し、矩形の衝突形状を設定します。**重要** ： 衝突形状のスケールは__変更しないでください__。一般的にこれは推奨されない方法であり、予期しない衝突挙動を引き起こす原因となります。常に形状内のサイズハンドルを使用し、外側の`Node2D`由来のスケーリングハンドルは使わないようにしてください。
+Add a texture to the Sprite and a rectangular collision shape. **IMPORTANT**: Do _not_
+change the _Scale_ of the collision shape! In general this is a bad idea, and will
+result in unexpected collision behavior. Always use the shape's inner size handles and
+not the outer `Node2D`-derived scale handles.
 
 > ※重要：本サンプルで使用しているテクスチャは、Kenney.nl の［物理アセットパック］（[物理 Asset](http://kenney.nl/assets/physics-assets)）を使用しています。このパッケージには、さまざまな形状・材質のブロックが多数収録されています。
 
-※「再生」を押すとブロックがゆっくりと下方に落ちていくのが確認できるでしょう。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクターで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。私は値を`3`に設定しています。
+Press "Play" and you'll see the block fall slowly downward. This is due to the
+default global gravity. You can find this setting in "Project Settings" under
+_Physics -> 2d_. You can also try changing the Block's `Gravity Scale` property in the
+Inspector. I'm using a value of `3`.
 
 メインシーンを作成します（通常は<a href="http://docs.godotengine.org/ja/latest/classes/class_node.html" target="_blank"><svg width="18" height="18" class="icon-icon_node"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_node"></svg>Node</a>を使用します）。
 地面と壁として機能させるため、長方形の衝突形状を持つ<a href="http://docs.godotengine.org/ja/latest/classes/class_staticbody2d.html" target="_blank"><svg width="18" height="18" class="icon-icon_staticbody2d"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_static_body_2d"></svg>StaticBody2D</a>ノードをいくつか追加してください。
@@ -61,8 +67,9 @@ children:
 
 また、ボールの「摩擦力」と「反発係数」プロパティも調整できます。これらはどちらもゼロから1の範囲内で設定できます。個人的には「0.5」前後の反発係数が好みです。
 
-> 重要：物理ボディのスケール変更は絶対に行わないでください！試行した場合、警告が表示され、
-> シーンを実行すると、物理エンジンが自動的にスケールを初期値`(1, 1)`にリセットします。
+> **IMPORTANT:** _NEVER_ scale a physics body! If you try, a warning will appear,
+> and when the scene runs, the physics engine will automatically set the scale back
+> to `(1, 1)`.
 
 ### 力の作用
 
@@ -72,7 +79,9 @@ Linear velocityをリセットして`(0, 0)`に設定します。では、ボー
 
 - `add_force()`
 
-物体に連続的な力を加えます。ロケットの推進力のように、一定の力で加速を続ける様子を想像してください。なお、これは既存のすべての力に加算されるものです。除去されるまで、この力は継続的に作用し続けます。
+Adds a continuous force to the body. Imagine a rocket's thrust, steadily
+pushing it faster and faster. Note that this _adds_ to any already existing
+forces. The force continues to be applied until removed.
 
 - `apply_impulse()`
 
@@ -91,7 +100,8 @@ extends RigidBody2D
 var dragging
 var drag_start = Vector2()
 
-if event.is_action_pressed("click") and not dragging:
+func _input(event):
+    if event.is_action_pressed("click") and not dragging:
         dragging = true
         drag_start = get_global_mouse_position()
     if event.is_action_released("click") and dragging:
@@ -126,16 +136,16 @@ if event.is_action_pressed("click") and not dragging:
 > このため、`Sprite` に `Rotation` を 90度追加する必要があります。そうすることで
 > スプライトの向きが物体の方向と一致するようになります。
 
-デフォルトでは、物理設定により物体の速度と回転運動に適度な_減衰効果が付与されます_。
-宇宙空間には摩擦がないため、本来はいかなる種類の減衰も適用すべきではありません。
-しかし「スペースインベーダー」風のゲーム感を出すため、キーを離すと船が即座に停止するようにしたいので、
-船の`Angular -> Damp`パラメータを`5`に設定してください。
+By default, the physics settings provide some _damping_, which reduces a body's
+velocity and spin. In space, there's no friction, so there shouldn't be any
+damping at all. However, for the "Asteroids" feel, we want the ship to stop rotating
+when we let go of the keys, so set the ship's `Angular -> Damp` to `5`.
 
 {{< highlight swift >}}
 extends RigidBody2D
 
-エクスポート（int）変数：var engine_thrust
-エクスポート（int）変数：var spin_thrust
+export (int) var engine_thrust
+export (int) var spin_thrust
 
 var thrust = Vector2()
 var rotation_dir = 0
@@ -145,14 +155,14 @@ func _ready():
     screensize = get_viewport().get_visible_rect().size
 
 func get_input():
-    if 入力.is_action_pressed("ui_up"):
+    if Input.is_action_pressed("ui_up"):
         thrust = Vector2(engine_thrust, 0)
     else:
-        thrush = Vector2()
+        thrust = Vector2()
     rotation_dir = 0
-    if 入力.is_action_pressed("ui_right"):
+    if Input.is_action_pressed("ui_right"):
         rotation_dir += 1
-    if 入力.is_action_pressed("ui_left"):
+    if Input.is_action_pressed("ui_left"):
         rotation_dir -= 1
 
 func _process(delta):
@@ -201,7 +211,9 @@ func _physics_process(delta):
 
 これは見事に失敗し、プレイヤーを画面の端に閉じ込めてしまう（時折グリッチも発生）。なぜこれが機能しないのでしょうか？ドキュメントには `_physics_process()` は物理関連処理用だと書いてありますよね？
 
-正確には違います。`_physics_process()` は物理時間ステップに同期されていますが、だからといってあらゆる処理に使えるわけではありません。ただし、解決策はドキュメントに記載されていますのでご安心ください。
+Not exactly. `_physics_process()` is _synced_ to the physics timestep, but that
+doesn't make it OK to use for just anything. Hope is not lost, however, the answer
+is in the docs.
 
 [RigidBody2Dドキュメント](http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#description)より引用すると：
 

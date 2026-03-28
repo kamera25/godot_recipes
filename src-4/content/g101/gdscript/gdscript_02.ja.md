@@ -87,7 +87,7 @@ func _ready():
 * ランダムな角度で回転させたいので、`randf_range()`を使って`0`から`TAU`までの乱数を取得します。
 
     {{% expand title="About angles" %}}
-角度を扱う際、GDScript（ほとんどのプログラミング言語と同様）では度数法ではなくラジアンを使用します。ラジアンでは、1回転が正確に `2 * PI` に相当します（または `TAU` - これは約 `360` 度と同等です）。
+    When working with angles, rather than _degrees_, GDScript (like most programming languages) uses _radians_. In radians, a full rotation is equal to `2 * PI` (or `TAU`) - equivalent to `360` degrees.
     {{% /expand %}}
 
 1. 最後に、`velocity`にもう1つの乱数を乗算し、ランダムな速さを与えます。

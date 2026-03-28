@@ -12,7 +12,7 @@ draft: false
 
 以下の手順を試してみてください。`Camera3D`ノードを1つ取得し、**X軸**（ギズモ上の赤いリング）を中心にわずかに回転させた後、続いて**Z軸**（青いリング）を中心に少し回転させます。次に、**X軸**方向の回転を逆方向に反転させ、「プレビュー」ボタンをクリックしてください。カメラが斜めに傾いた状態になっていることが確認できるはずです。
 
-この問題を解決するには、カメラを_ジンバル・マウント_に取り付ける必要があります。これは、移動時も物体の水平を保つよう設計された装置です。2つの{{< gd-icon Node3D >}}`Node3D`ノードを使用することで、左右方向と上下方向の回転を個別に制御できる簡易ジンバルを作成できます。
+The solution to this problem is to place the camera on a _gimbal_ - a device designed to keep an object level during movement. We can create a gimbal using two {{< gd-icon Node3D >}}`Node3D` nodes, which will control the camera's left/right and up/down rotation respectively.
 
 ノードの設定は以下のようにしてください。
 
@@ -24,7 +24,7 @@ draft: false
 
 {{< gd-icon Camera3D >}}`Camera3D` の**変換/位置**を `(0, 0, 4)` に設定してください。
 
-以下にジンバルの仕組みを説明します。外側ノードは**Y軸方向のみ**回転可能で、内側ノードは**X軸方向のみ**回転できます。手動で試したい場合は、まず「ーカル空間を使用」（メニューバーのロックアイコン隣にあるキューブアイコン - ショートカットキーは「T」）に切り替えることを忘れないでください。必ず外側ノードの_緑色リング_のみを、内側ノードの_赤色リング_のみを操作してください。カメラノードには一切触れないよう注意してください。
+Here's how the gimbal works: the outer node can only be rotated in **Y**, while the inner one rotates only in **X**. You can test this out by rotating them manually, but make sure you change to "Local Space Mode" first (that's the cube icon next to the lock in the menu bar - the keyboard shortcut to toggle is "T"). Remember to only move the _green_ ring of the outer node and only the _red_ ring of the inner one. Don't touch the camera node at all.
 
 <video controls src="/godot_recipes/4.x/img/gimbal_01.webm"></video>
 

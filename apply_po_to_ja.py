@@ -49,6 +49,14 @@ def translate_content(content, translations):
     # Protect Hugo highlight shortcode blocks
     content = re.sub(r'\{\{<\s*highlight.*?\{\{<\s*/highlight\s*>\}\}', protect, content, flags=re.DOTALL)
 
+    # Protect text surrounded by underscores
+    def protect_underscore(match):
+        placeholder = f"__PROTECTED_BLOCK_{len(protected_blocks)}__"
+        protected_blocks.append(match.group(2))
+        return match.group(1) + placeholder + match.group(3)
+
+    content = re.sub(r'(^|\s|[^a-zA-Z0-9_])(_[^_]+_)([^a-zA-Z0-9_]|\s|$)', protect_underscore, content)
+
     # Perform translation replacement on the masked content
     for msgid in sorted_keys:
         # Check if msgid is essentially just a preserved word

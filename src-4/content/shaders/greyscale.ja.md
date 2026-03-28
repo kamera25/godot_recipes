@@ -11,7 +11,7 @@ ghcommentid: 78
 
 ## 解決策
 
-まずは `canvas_item`（2D）用シェーダーから始めましょう。グレースケールに変換しつつピクセルのコントラストを維持するには、画素値を**平均化**が必要です。カラーチャンネルをすべて加算し、3で割ることで実現できます。
+Let's start with a `canvas_item` (2D) shader. To convert to greyscale but also preserve pixel contrast, we need to _average_ the pixel's color value. Add the color channels together and divide by 3:
 
 ```glsl
 shader_type canvas_item;

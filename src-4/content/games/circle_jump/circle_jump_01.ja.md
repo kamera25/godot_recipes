@@ -19,13 +19,13 @@ pre: "01. "
 
 また、このプロジェクトを[<i class="fab fa-github"></i> GitHubでフォローする](https://github.com/kidscancode/circle_jump)こともできます。
 
-## 使い方の始め方
+## はじめに
 
 まず、プロジェクト設定から始めましょう。画面サイズと動作仕様を定義が必要です。モバイルゲームとして開発するので、縦向き表示が必須となり、さまざまな端末の画面解像度に対応できるようが必要です。スマートフォンには数多くの画面解像度が存在するためです。
 
-プロジェクト設定を開き、［表示／ウィンドウ］セクションに移動します。画面サイズを `(480, 854)` に、［携帯端末／向き］を「縦」に、［伸縮／モード］を「2D」に、そして［伸縮／アスペクト比］を「維持」にそれぞれ設定してください。
+Open Project Settings and find the _Display/Window_ section. Set the screen size to `(480, 854)`, the _Handheld/Orientation_ to "Portrait", the _Stretch/Mode_ to "2d", and the _Stretch/Aspect_ to "Keep".
 
-次に、［入力デバイス／ポインティング］セクションで「マウスからタッチ操作をエミュレート」を有効にしてください。これにより、画面のタッチイベントのみを使用してコードを入力できる上に、PCプラットフォームではマウスを使ったプレイも可能になります。
+Next, in _Input Devices/Pointing_ enable "Emulate Touch From Mouse". This will let us write the code only using screen touch events, but still play by using the mouse on PC platforms.
 
 ### プロジェクト管理体制
 
@@ -50,9 +50,9 @@ pre: "01. "
   * `CollisionPolygon2D`
   * `VisibilityNotifier2D`
 
-シーンを `res://objects/` に保存し、円の画像ファイル（`res://assets/images/jumper.png`）をスプライトのテクスチャ領域にドラッグします。すべてのゲーム画像は初期設定では白色になっていますので、後で動的に色付けする際に作業がしやすくなります。
+Save the scene in `res://objects/` and drag the circle image (`res://assets/images/jumper.png`) into the Sprite's _Texture_. Note that all the game images are flat white. This will make it easier for us to dynamically color them later.
 
-アートワークが上向きに描かれているため、`Sprite2D`の［回転］プロパティを`90`に設定してください。
+Since the art is drawn pointing upwards, set the `Sprite`'s _Rotation_ property to `90`.
 
 `CollisionPolygon2D` を選択し、ジャンパーの三角形形状をカバーするように3点を追加してください。
 
@@ -110,12 +110,7 @@ func _physics_process(delta):
 シェーダーを使い始める方法については、「[シェーダー]（/godot_recipes/3.x/shaders）」セクションを参照してください。
 {{% /notice %}}
 
-以下の手順で進めましょう。
-
-1. 「スプライト」にカスタムカラーを適用するため、小さなシェーダーを使用します
-2. まず「スプライト」を選択してから、[マテリアル]プロパティで新しい`ShaderMaterial`を追加します
-3. 追加したシェーダーをクリックし、[シェーダー]メニューで「新規シェーダー」を選択、さらにそれをクリックしてください
-4. シェーダーエディタパネルが画面下部に表示されます
+We're going to use a small shader to the `Sprite` so that we can customize its color. Select the `Sprite` and then in the _Material_ property add a new `ShaderMaterial`. Click on that, and in _Shader_ select "New Shader", then click on that. The shader editor panel will open at the bottom.
 
 ![alt](/godot_recipes/3.x/img/cj_01_02.gif)
 
@@ -132,11 +127,11 @@ void fragment() {
 }
 ```
 
-インスペクターに新たに「シェーダーパラメータ」セクションが表示され、カラー値を設定できるようになります。
+You'll now see a _Shader Params_ section in the Inspector where you can set a color value:
 
 ![alt](/godot_recipes/3.x/img/cj_01_03.gif)
 
-このシェーダーは他のシーンでも使用するため、［シェーダー］プロパティで「保存」を選択し、`res://objects/color.shader` として保存してください。
+We'll want to use this same shader elsewhere, so in the _Shader_ property, choose "Save" and save this as `res://objects/color.shader`.
 
 ### サークル（Circle）
 
@@ -182,7 +177,7 @@ In the `init()` function, we're setting up the size of the circle, based on the 
 
 テスト用に `radius` の値を変えてシーンを実行してみてください。（後で `_ready()` 内で `init()` を呼び出す処理は停止します）
 
-## 主要場面
+## メインシーン
 
 これで動作テストが可能になりました。
 

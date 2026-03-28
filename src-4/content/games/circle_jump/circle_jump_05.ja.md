@@ -15,18 +15,13 @@ Scene treeは以下のようになっている必要があります。
 
 ![alt](/godot_recipes/3.x/img/cj_05_01.png)
 
-以下の設定を行ってください。
-- `ScoreBox` のレイアウトを「下部ワイド」に設定
-- すべてのカスタム定数値を20に設定
-- `HBoxContainer` 子要素を追加し、その下に2つの `Label`ノードを配置
-- 2番目のラベルに「スコア」という名前を付け、_テキストプロパティ_に100を入力
-- `HBoxContainer` の _整列位置_ を「右端」に設定
+Set the layout of the `ScoreBox` to "Bottom Wide" and the _Custom Constants_ all to `20`. Add an `HBoxContainer` child and under that two `Label` nodes. Name the second label "Score" and put `100` in its _Text_ property. Set the `HBoxContainer`'s _Alignment_ to "End".
 
-同じ「DynamicFont」リソースを両方のラベルに追加しますが、最初のラベルでは「ユニークにする」を選択し、そのサイズを `32` に設定します。_Text_プロパティには「スコア」と入力してください。その _Size Flags/Vertical_ で「塗りつぶし」を設定します。レイアウトは以下のようになります。
+Add the same `DynamicFont` resource to both labels, but choose "Make Unique" on the first label and set its size to `32`. Set its _Text_ property to "Score". In its _Size Flags/Vertical, set "Fill". Your layout should look like this:
 
 ![alt](/godot_recipes/3.x/img/cj_05_02.png)
 
-次に、`Message`ノードの処理に移ります。まずフォントを読み込み、_Text_プロパティに「メッセージ」を設定します。こうすることで表示内容が確認できるようになります。さらに、フォントリソースで「ユニーク化」（Make Unique）を選択してください（この理由は次のセクションで説明します）。_Align_と_Valign_は「中央」に設定し、_Clip Text_は「オン」にしてください。レイアウトに関しては「ワイド・センタリング」を選択します。また、_Grow Direction/Vertical_を「両方」に設定します。
+Now for the `Message` node load the font and set _Text_ to "Message" so we'll have something to see. Also choose "Make Unique" on the font resource (you'll see why in the next section). Set _Align_ and _Valign_ to "Center" and _Clip Text_ to "On". For layout, choose "Center Wide". Also, set _Grow Direction/Vertical_ to "Both".
 
 ## メッセージアニメーション
 
@@ -34,13 +29,14 @@ Scene treeは以下のようになっている必要があります。
 
 以下の2つのアニメーションを作成します。初期値を設定するものと、メッセージ表示をアニメーションさせるものです。まず最初のアニメーション「init」を追加し、「ページ読み込み時に自動再生」ボタンをクリックします。持続時間は`0.1`に設定してください。
 
-時刻 `0` に _フォント/サイズ_ (`64`) のキーフレームを追加し、_表示_ を「オフ」に設定するキーフレームも追加してください。
+Add a keyframe at time `0` for the _Font/Size_ (`64`), and one for the _Visible_
+set to "Off".
 
-2番目のアニメーション「show_message」を追加します。長さを `0.75` に、キーフレームの透明度設定を『オン』に設定してください。
+Add the second animation, "show_message". Set its length to `0.75` and keyframe _Visibility_ to "On".
 
-次に、時刻「0」と「200」におけるフォントサイズを「64」からキーフレーム化します。トラックの更新モードを「連続」に設定してください。
+Next, we'll keyframe the _Font/Size_ from `64` at time `0` and `200` at the end. Set the track's _Update Mode_ to "Continuous".
 
-また、オブジェクトが成長するにつれて徐々に透明度が低下するようにしたいので、キーフレームを使用してアルファ値を「255」から「0」まで変化させます。
+We also want it to fade out as it grows, so keyframe the _Modulate_ alpha value from `255` to `0`.
 
 以下にアニメーション設定の例を示します。
 

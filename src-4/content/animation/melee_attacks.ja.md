@@ -23,7 +23,7 @@ ghcommentid: 53
 
 ![alt](/godot_recipes/3.x/img/melee_attack_01.png)
 
-アニメーションを最初のフレームに移動し、領域の [無効] プロパティを確認します。キーフレームアイコンをクリックしてアニメーションにトラックを追加します。次に、剣が伸びているフレームまでアニメーションを進め、[無効] を解除した状態でもう1つのキーフレームを追加します。最後に、スイングの終わりまで進み、再度 [無効] を有効にしてキーフレームを作成します。
+Move the animation to the first frame and check the _Disabled_ property of the area. Click the keyframe icon to add a track to the animation. Then advance the animation to the frame where the sword is extended, and add another keyframe with _Disabled_ unchecked. Finally, advance to the end of the swing and keyframe _Disabled_ on once more.
 
 ![alt](/godot_recipes/3.x/img/melee_attack_02.gif)
 
@@ -41,7 +41,7 @@ func _on_SwordHit_area_entered(area):
 
 ### ヒットボックスサイズの変更方法
 
-複数の攻撃アニメーションがある場合、ダメージ範囲の大きさが統一されていないことがあります。上記のアニメーション例では、最初の動きは広範囲をカバーする斜め上方向への振り下ろし攻撃です。この処理に対応するため、衝突形状の _Extents_ プロパティに対するアニメーショントラックも追加が必要です。この値を設定して各アニメーションの開始時にキーフレームとして登録してください。
+When you have more than one attack animation, the size of the affected area may not be the same. In the above attack animations, the first one is an upward sweeping attack that covers more area. To handle this, we also need to add an animation track for the collision shape's _Extents_ property. Set this and keyframe it at the start of each animation.
 
 ![alt](/godot_recipes/3.x/img/melee_attack_04.gif)
 

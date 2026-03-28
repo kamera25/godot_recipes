@@ -20,7 +20,7 @@ draft: false
 
 ### 入力値
 
-制御用に、以下の4つの入力を［インプットマップ］に追加します。
+For control, we're going to add four inputs to the _Input Map_:
 
 - `accelerate(加速)`
 - `brake(ブレーキ)`

@@ -19,7 +19,7 @@ pre: "02. "
 
     カメラはプレイヤーの動きに合わせて追従します。
 
-    カメラの設定も行いましょう。 _オフセット_ を `(0, -200)` に設定してください。これにより、前方の世界をより広く確認できるようになります。また、カレントモードは「オン」に設定してください。
+    Let's also configure the camera. Set its _Offset_ to `(0, -200)` - this will ensure we can see more of the world ahead of us. Also set _Current_ to "On".
 
 ## メインシーンのスクリプト化
 
@@ -103,7 +103,7 @@ func _on_Jumper_captured(object):
 
 試してみてください。円から円へジャンプできるはずです。いくつ成功しましたか？
 
-カメラが次のサークルに移動するときに「瞬間移動」してしまうのは不自然です。これは、カメラの「Smoothing」を有効にすることで改善できます。「Smoothing/Speed」は、新しい位置への補間の速さを制御します。`5`から`10`の間で試してみてください。
+One jarring thing is that the camera "teleports" when it moves to the next circle. We can improve this by enabling _Smoothing_ on the camera. The _Smoothing/Speed_ controls how quickly the camera interpolates to the new position. Try something between `5` and `10`.
 
 ### 調整項目
 
@@ -121,7 +121,7 @@ rotation_speed *= pow(-1, randi() % 2)
 
 この機能はランダムに回転速度の向きを正または負に切り替えるため、常に同じ方向に周回するわけではありません。
 
-## トレイルコース
+## トレイル
 
 これらのノードをジャンパに追加してください。
 
@@ -158,13 +158,13 @@ Circle ノードに `アニメーションPlayer` を追加します。
 
 ### 「インプロージョン」アニメーション
 
-新しいアニメーション「implode」を追加してください。長さを 0.4 に設定し、ルートノードである Area2D の 2 つのプロパティにキーフレームを設定してください。スケールは (1, 1) に、モジュレートはデフォルト値 (1, 1, 1, 1) に。その後、スクラブバーを最後まで移動させ、値として (0.1, 0.1) と (1, 1, 1, 0) を設定します（これは色のアルファ値です）。
+Add a new animation called "implode". Set the length to 0.4 and keyframe two properties of the root `Area2D` node: _Scale_ at `(1, 1)` and _Modulate_ at its default (`(1, 1, 1, 1)`). Then move the scrubber all the way to the end and key the values `(0.1, 0.1)` and `(1, 1, 1, 0)` (that's the "alpha" value of the color).
 
 ![alt](/godot_recipes/3.x/img/cj_02_02.png)
 
 ### アニメーションのキャプチャ
 
-キャプチャアニメーションはもう少し複雑です。スプライトを複製して「SpriteEffect」という名前に変更してください。その［表示］プロパティはオフに設定します。この二つ目のリングがメインサークルに向かってズームインするアニメーションを作成します。
+The capture animation is a little more complex. Duplicate the Sprite and call it `SpriteEffect`. Set its _Visible_ property off. We're going to animate this second ring zooming in on the main circle.
 
 ![alt](/godot_recipes/3.x/img/cj_02_03.png)
 ![alt](/godot_recipes/3.x/img/cj_02_04.gif)

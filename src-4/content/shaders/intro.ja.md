@@ -15,9 +15,9 @@ ghcommentid: 76
 
 シェーダープログラムの出力結果は、オブジェクトを構成するピクセル群の色情報です。シェーダーは2D環境（`canvas_item` 用シェーダー）および3D環境（`spatial` シェーダー）で利用できます。
 
-シェーダーに関して初心者が特に理解しにくいのは、これが**並列処理**で行われるという点です。シェーダーは画面全体のすべてのピクセルに対して同時に実行されます。この仕組みにより処理速度が大幅に向上しますが、一方でシェーダー内でアクセス可能な情報にも制限が生じます。
+The most difficult part for newcomers to understand about shaders is that they run in _parallel_. A shader runs simultaneously on *all* pixels. This allows for great speed, but also limits what information you have access to in the shader.
 
-オブジェクトにシェーダーを追加するには、まず対象のオブジェクトの［マテリアル］プロパティを見つけ、「新規シェーダーマテリアル」を選択します。新しく作成したマテリアルをクリックして開くと、「新規シェーダー」を選択する画面が表示されます。さらにクリックすると、画面下部にシェーダー編集画面が開きます。
+To add a shader to an object, find its _Material_ property and select "New ShaderMaterial". Click the new material to open it, and select "New Shader". Click that, and you'll see a shader editor open at the bottom of the screen.
 
 シェーダーの最初の行にはそのタイプを指定が必要です。接続されているノードが2Dノードの場合は：
 
@@ -33,7 +33,7 @@ shader_type spatial;
 
 これらの初期例では2Dに限定して進めましょう。まず`Sprite`ノードを追加し、上記の手順に従ってシェーダーを適用してください。テクスチャにはGodotのデフォルトアイコンを使用することもできます。
 
-ここで解説するシェーダーには主に2種類あります。 _頂点シェーダー_ と _フラグメントシェーダー_ です。
+There are two basic types of shader we'll discuss here: _vertex_ and _fragment_.
 
 ### フラグメントシェーダー
 
@@ -126,7 +126,7 @@ void fragment() {
 
 ### 頂点シェーダー
 
-頂点シェーダーはオブジェクトの頂点を操作し、変形や拡大縮小を可能にします。フラグメントシェーダーが各ピクセルごとに処理されるのと同様に、頂点シェーダーもオブジェクトの各__頂点__に対して実行されます。`canvas_item` シェーダーの場合、通常はテクスチャの4隅の頂点を指します。`spatial` シェーダーの場合は、メッシュの各頂点に対する処理となります。
+Vertex shaders alter the vertices of the object, allowing for deformations and scaling. Just as fragment shaders run on every pixel, vertex shaders run on every _vertex_ of an object. In a `canvas_item` shader, this typically means the four corners of the texture. In a `spatial` shader, it's each vertex of the mesh.
 
 例えば、以下の例でどうなるか観察してみましょう。
 
@@ -152,7 +152,7 @@ void vertex() {
 
 ## ユニフォーム
 
-シェーダーに値を渡すには、`_uniform_`キーワードで宣言された変数が必要です。この設定を行うと、インスペクターには`export`変数と似た形でその変数が表示されます。ただし注意点として、ユニフォーム変数の値はシェーダー内で*変更することはできません*！
+To pass a value to the shader, you need a variable declared with the _uniform_ keyword. Once you do this, the variable appears in the Inspector in much the same way an `export` variable. However, a uniform's value *can not* be changed in the shader!
 
 均一値（uniforms）はシェーダー全体でグローバルに使用可能であり、任意の関数からアクセスできます。
 

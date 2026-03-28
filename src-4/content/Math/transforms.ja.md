@@ -29,7 +29,7 @@ position += Vector2(10, 0)
 
 ![alt](/godot_recipes/4.x/img/0_2d_rocket2.png?width=250px)
 
-船を前方に移動させるにはどうすれば良いでしょうか？学校で三角関数を学んでいた方なら、角度やサイン・コサインの概念を思い出し、`position += Vector2(10 * cos(angle), 10 * sin(angle))`のような計算式を考えつくかもしれません。この方法でも実現できますが、より便利な方法があります。それは _トランスフォーム(Transform)_ です。
+How do we move the ship forward now? If you remember Trigonometry from school, you might be starting to think about angles, sine and cosine and doing something like `position += Vector2(10 * cos(angle), 10 * sin(angle))`. While this would work, there's a much more convenient way: the _Transform_.
 
 もう一度回転した船を見てみましょう。今回は、その船が独自の **X** 軸と **Y** 軸を持っており、それらは世界的な座標系とは独立して移動していることを想定します。
 
@@ -43,13 +43,13 @@ position += Vector2(10, 0)
     position += transform.x * 10
 ```
 
-このコードは「変換の x ベクトルに 10 を乗算した結果を追加する」という意味です。これを分解して説明しましょう。'transform' オブジェクトには 'x' と 'y' プロパティがあり、これらはローカル座標軸を表しています。これらは「単位ベクトル」であり、その長さは `1` です。単位ベクトルは別の言い方で「方向ベクトル」とも呼ばれます。これは船の **x** 軸が指し示す方向を示しています。この値に `10` を掛けることで、より長い距離に対応するようにスケール変換しています。
+This code says "Add the transform's x vector multiplied by 10." Let's break down what that means. The `transform` contains `x` and `y` properties that represent those local axes. They are _unit vectors_, which means their length is `1`. Another term for unit vector is _direction vector_. They tell us the direction the ship's **x** axis is pointing. We then multiply by `10` to scale it to a longer distance.
 
 {{% notice tip %}}
-ノードの `transform` プロパティは親ノードに対する相対値です。グローバル座標が必要な場合は、`global_transform` を参照してください。
+The `transform` property of a node is _relative_ to its parent node. If you need to get the global value, it's available in `global_transform`.
 {{% /notice %}}
 
-ローカル座標系に加えて、この変換には「原点」と呼ばれるコンポーネントも含まれています。原点は位置の_移動量_、すなわち変化した位置を表します。
+In addition to the local axes, the transform also contains a component called the `origin`. The origin represents the _translation_, or change in position.
 
 この画像では、青色のベクトルが `transform.origin` です。これはオブジェクトの `position` ベクトルと等しくなります。
 

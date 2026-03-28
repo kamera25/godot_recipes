@@ -10,7 +10,7 @@ draft: false
 
 ## 解決策
 
-アニメーション状態機械を作成するには {{< gd-icon アニメーションTree >}}`アニメーションTree` を使用してください。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御することが可能になります。
+Use an {{< gd-icon アニメーションTree >}}`アニメーションTree` to create an animation _state machine_. This will allow us to organize our animations and most importantly, control the transitions between them.
 
 ### はじめに
 
@@ -22,17 +22,17 @@ We'll also assume you've already set up the character's animations using {{< gd-
 
 ### アニメーションツリー
 
-シーンに `{{< gd-icon アニメーションTree >}}`アニメーションTree` ノードを追加します。［ツリールート］プロパティで「新規アニメーションノードステートマシン」を選択してください。
+Add an {{< gd-icon アニメーションTree >}}`アニメーションTree` node to the scene. In its _Tree Root_ property, choose "New アニメーションNodeStateMachine".
 
 ![alt](/godot_recipes/4.x/img/animation_tree_01.png)
 
-{{< gd-icon アニメーションTree >}}`アニメーションTree`で作成されたアニメーションを制御するノードです。既存のアニメーションにアクセスさせるには、_Anim Player_ プロパティ内の「割り当て」ボタンをクリックし、使用するアニメーションノードを選択してください。
+An {{< gd-icon アニメーションTree >}}`アニメーションTree` is a node that controls animations created in {{< gd-icon アニメーションPlayer >}}`アニメーションPlayer`. To let it access the existing animations, click "Assign" in the _Anim Player_ property and select your animation node.
 
 以下は、状態機械を `アニメーションTree` パネルに設定し始める方法です：
 
 ![alt](/godot_recipes/4.x/img/anim_tree_panel.png)
 
-警告に注意してください。インスペクターで 「_アクティブ」プロパティを「オン」に設定します。
+Note the warning. Set the _Active_ property to "On" in the Inspector.
 
 右クリックして「アニメーションを追加」を選択します。「待機」を選択すると、そのアニメーションを表す小さなボックスが表示されます。「再生」ボタンを押すとアニメーションが実行されるはずです。他のアニメーションを追加する場合も同じ手順で行ってください。
 

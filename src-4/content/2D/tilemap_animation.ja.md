@@ -26,17 +26,17 @@ ghcommentid: 27
 
 ![alt](/godot_recipes/3.x/img/create_new_resource.png)
 
-「AnimatedTexture」を選択し、［フレーム］プロパティを「5」に設定します。各フレームごとに、対応する画像を［テクスチャ］プロパティにドラッグしてください。
+Choose `AnimatedTexture` and set the _Frames_ property to `5`. For each frame, drag the corresponding image to its _Texture_ property.
 
 ![alt](/godot_recipes/3.x/img/anim_texture_add.png)
 
-アニメーション全体の速度は_Fps_プロパティで、各フレームごとの遅延時間は_Delay Sec_で個別に調整できます。
+You can adjust the overall animation's speed with the _Fps_ property, as well as each individual frame's _Delay Sec_.
 
 「保存」ボタンをクリックしてリソースを保存します。`water_anim.tres`のような名前を付けてください。
 
 ### タイルマップでのAnimatedTextureの使用について
 
-アニメーション付きテクスチャが保存されたので、これで`タイルセット`で使用できるようになります。新規または既存の{{< gd-icon TileMap >}}`タイルマップ`を開き、その［タイルセット］プロパティを選択します。新しいテクスチャを`タイルセット`に追加するには、ボタンをクリックしてください。
+Now that the `AnimatedTexture` is saved, it can be used in a `TileSet`. Open a new or existing {{< gd-icon TileMap >}}`TileMap` and select its _Tile Set_ property. Click the button to add a new texture to the `TileSet`:
 
 ![alt](/godot_recipes/3.x/img/anim_tile_add.png)
 
