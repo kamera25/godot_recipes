@@ -107,7 +107,7 @@ msgstr "ノードパスを理解しよう"
 
 #: basics/getting_nodes.md
 msgid "While the above examples work just fine, there are some things you should be aware of that may cause problems later. Imagine the following situation: the `Player` node has a `health` property, which you want to display in a `HealthBar` node somewhere in your UI. You might write something like this in the player's script:"
-msgstr "上記の例は問題なく動作しますが、後々問題を引き起こす可能性のあるいくつかの注意点があります。以下のような状況を想像してみてください。`Player`ノードには`health`プロパティがあり、これをUI内のどこかにある`HealthBar`ノードに表示したいとします。プレイヤースクリプトに次のように書いたとしましょう。"
+msgstr "上記の例は問題なく動作しますが、後々問題を引き起こす可能性のある注意点がいくつかあります。以下のような状況を想像してみてください。`Player`ノードには`health`プロパティがあり、これをUI内のどこかにある`HealthBar`ノードに表示したいとします。プレイヤースクリプトに次のように書いたとしましょう。"
 
 #: 2D/grid_movement.md 3D/healthbars.md basics/getting_nodes.md
 msgid "<!-- ## Related Recipes"
@@ -1272,7 +1272,7 @@ msgstr "上記の方法の欠点は移植性に乏しい点です。別プロジ
 
 #: basics/organizing.md
 msgid "There are as many solutions to this problem as there are game projects. A lot will depend on the nature of your game and resources it needs. However, there are a few common guidelines to follow."
-msgstr "このゲーム開発の問題には、ゲームプロジェクトの数だけ解決策が存在します。適切なアプローチは、制作するゲームの性質や必要なリソースによって大きく異なります。ただし、以下に挙げるいくつかの基本的なガイドラインは普遍的に適用できます。"
+msgstr "このゲーム開発の問題には、ゲームプロジェクトの数だけ解決策が存在します。適切なアプローチは、制作するゲームの性質や必要なリソースによって大きく異なります。ただし、以下に挙げる基本的なガイドラインのいくつかは普遍的に適用できます。"
 
 #: basics/organizing.md
 msgid ""
@@ -1520,7 +1520,7 @@ msgstr "のプロパティを使用することで、引き伸ばした場合も
 
 #: ui/minimap.md
 msgid "At this point, we have some decisions to make. How we approach populating the minimap with the objects in the world has a lot to do with how the game is set up. Since this is a very minimal demonstration project, we're going keep the process simple. In a larger game, you may need to use a more robust approach."
-msgstr "ここでいくつかの重要な判断が求められます。ミニマップに世界オブジェクトを配置する方法は、ゲームの設計方針に大きく依存します。このプロジェクトは非常に簡素なデモ版のため、プロセスはシンプルに保ちましょう。より大規模なゲームでは、より堅牢なアプローチが必要になる場合があります。"
+msgstr "ここで重要な判断がいくつか求められます。ミニマップに世界オブジェクトを配置する方法は、ゲームの設計方針に大きく依存します。このプロジェクトは非常に簡素なデモ版のため、プロセスはシンプルに保ちましょう。より大規模なゲームでは、より堅牢なアプローチが必要になる場合があります。"
 
 #: ui/minimap.md
 msgid "Add `signal removed` to any object that you've put in the \"minimap_objects\" group. Emit this signal when the object is destroyed (or collected), along with a reference to itself so the map can identify it:"
@@ -1544,7 +1544,7 @@ msgstr "これで`Minimap`にスクリプトを追加する準備が整いまし
 
 #: ui/minimap.md
 msgid "We'll also create markers for every game object (using the \"minimap_objects\" group) by duplicating the matching marker node and tying the marker to the object via the `markers` dictionary:"
-msgstr "これで`Minimap`にスクリプトを追加し始めることができます。まず第一に、メインシーンにミニマップが追加された際にインスペクタで割り当て可能な`player`リファレンスと、スケールを調整するための`zoom`プロパティが必要となります。これにより、ミニマップが「視認」できる範囲を設定できます。また、必要なノードにより簡単にアクセスできるよう、いくつかの`@onready`変数も追加しています。"
+msgstr "これで`Minimap`にスクリプトを追加し始めることができます。まず第一に、メインシーンにミニマップが追加された際にインスペクタで割り当て可能な`player`リファレンスと、スケールを調整するための`zoom`プロパティが必要となります。これにより、ミニマップが「視認」できる範囲を設定できます。また、必要なノードにより簡単にアクセスできるよう、`@onready`変数もいくつか追加しています。"
 
 #: ui/minimap.md
 msgid "If there is a `player`, we'll first rotate the player marker to match the player's heading. Since our `PlayerMarker` sprite points upwards rather than along the `x` axis, we must add 90 degrees:"
@@ -3217,7 +3217,7 @@ msgstr "以下に完全なスクリプトを示します。"
 
 #: 3D/spaceship.md
 msgid "That's it, now you can fly! This controller is a great start for whatever space-based game you might have in mind. Add some other ships, and a few effects, and you're ready go:"
-msgstr "これで準備完了！飛行できます！このコントローラーは、思い描く宇宙ゲームを始めるのに最適なスタート地点です。さらにいくつかの機体やエフェクトを追加すれば、いよいよ本番モードに突入できます。"
+msgstr "これで準備完了！飛行できます！このコントローラーは、思い描く宇宙ゲームを始めるのに最適なスタート地点です。さらに機体やエフェクトをいくつか追加すれば、いよいよ本番モードに突入できます。"
 
 #: 3D/spaceship.md
 msgid "[Ultimate Spaceships Pack by Quaternius](https://quaternius.com/packs/ultimatespaceships.html)"
@@ -3704,7 +3704,7 @@ msgstr "注：`look_at()` 関数は2つのパラメータを必要とします�
 
 #: 3D/rotate_interpolate.md
 msgid "When you first encounter this problem, you may find yourself thinking in terms of *Euler angles* - the three values representing the angles to the **x/y/z** axes. While Godot will allow you to see the object's Euler angles in the `rotation` property, it is not recommended to use them to work in 3D. There are a number of reasons why this the case, such as a problem called \"gimbal lock\", where you lose one degree of freedom when one of your rotations reaches 90 degrees."
-msgstr "この問題に初めて直面した時、おそらく**x軸/y軸/z軸**に対する角度を表す3つの値である「オイラー角」の概念が頭に浮かぶでしょう。Godotではオブジェクトのオイラー角を`rotation`プロパティで確認できますが、3D環境で作業する際にこれを直接使用するのは推奨されません。これにはいくつかの理由があります。例えば「ジンバルロック」という問題があり、これは回転のうち1つが90度に達すると、自由度が1つ失われてしまう現象です。"
+msgstr "この問題に初めて直面した時、おそらく**x軸/y軸/z軸**に対する角度を表す3つの値である「オイラー角」の概念が頭に浮かぶでしょう。Godotではオブジェクトのオイラー角を`rotation`プロパティで確認できますが、3D環境で作業する際にこれを直接使用するのは推奨されません。これには理由がいくつかあります。例えば「ジンバルロック」という問題があり、これは回転のうち1つが90度に達すると、自由度が1つ失われてしまう現象です。"
 
 #: 3D/kinematic_body.md
 msgid "<video controls src=\"/godot_recipes/4.x/img/3d_kinematic_03.webm\"></video>"
@@ -3862,7 +3862,7 @@ msgstr "使用する`TransitionType`を変更することで、キューブの�
 
 #: 3D/rolling_cube.md
 msgid "In preparing this recipe, I experimented with a few different solutions to this problem:"
-msgstr "このレシピを作成するにあたり、私はいくつかの異なる解決策を試しました。"
+msgstr "このレシピを作成するにあたり、私は異なる解決策をいくつか試しました。"
 
 #: 3D/rolling_cube.md
 msgid "![alt](/godot_recipes/4.x/img/cube_003.png)"
@@ -4161,7 +4161,7 @@ msgstr "デモ用にデバッグ用として、衝突形状に球状メッシュ
 
 #: 3D/3d_sphere_car.md
 msgid "You should try playing again at this point. You'll be able to control the car and drive around, and everything works pretty much as expected. However, there are a few more things to add that will improve the \"feel\" of the driving."
-msgstr "この段階で再び試してみることをオススメします。車の制御や走行が可能になり、ほぼ期待通りに動くようになります。ただし、運転感覚をさらに向上させるために、いくつか追加すべき点があります。"
+msgstr "この段階で再び試してみることをオススメします。車の制御や走行が可能になり、ほぼ期待通りに動くようになります。ただし、運転感覚をさらに向上させるために、追加すべき点がいくつかあります。"
 
 #: 3D/3d_sphere_car.md
 msgid "It looks nice if the front wheels turn when you steer. Add some references to the front wheel meshes at the top of the script:"
@@ -4659,7 +4659,7 @@ msgstr "## 3D空間におけるマウス操作制御"
 
 #: 3D/basic_fps.md
 msgid "Attach a script to the body and start by defining some properties:"
-msgstr "スクリプトをbodyにアタッチし、まずいくつかのプロパティを定義することから始めましょう。"
+msgstr "スクリプトをbodyにアタッチし、まずプロパティをいくつか定義することから始めましょう。"
 
 #: 3D/basic_fps.md
 msgid ""
@@ -4689,7 +4689,7 @@ msgstr "移動しようとすると、前後・左右に動けるものの、回
 
 #: 3D/basic_fps.md
 msgid "An FPS character typically has a 3D mesh of a weapon positioned in front. Setting this up can be easy with a couple of Godot editor tricks."
-msgstr "FPSキャラクターには通常、前面に位置した武器の3Dメッシュが用意されています。これをセットアップするのは、Godotエディタのいくつかの便利な機能を使えば簡単に行えます。"
+msgstr "FPSキャラクターには通常、前面に位置した武器の3Dメッシュが用意されています。これをセットアップするのは、Godotエディタの便利な機能をいくつか使えば簡単に行えます。"
 
 #: 3D/basic_fps.md
 msgid "![alt](/godot_recipes/4.x/img/fps_01.png)"
@@ -5455,7 +5455,7 @@ msgstr "プレイヤーを追従する3Dカメラの実装方法には様々な�
 
 #: 3D/assets/level_design.md
 msgid "We have several options to consider for designing our level:"
-msgstr "レベル設計には、以下のいくつかの選択肢を検討する必要があります。"
+msgstr "レベル設計には、以下の選択肢をいくつか検討する必要があります。"
 
 #: 3D/assets/level_design.md
 msgid ""
@@ -5742,7 +5742,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_car_02.png)"
 
 #: 3D/kinematic_car/car_base.md
 msgid "The rest of the script will be very similar to the 2D version, which a few changes to work correctly with {{< gd-icon Node3D >}}`Spatial`s and `Transform`s."
-msgstr "スクリプトの残り部分は2Dバージョンと非常に類似しており、いくつかの変更を加えることで{{< gd-icon Node3D >}}`空間オブジェクト`と`変換`を正しく扱えるようになります。"
+msgstr "スクリプトの残り部分は2Dバージョンと非常に類似しており、変更をいくつか加えることで{{< gd-icon Node3D >}}`空間オブジェクト`と`変換`を正しく扱えるようになります。"
 
 #: 3D/kinematic_car/car_base.md
 msgid "To import the car, find the model in the `\"Models/GLTF format\"` folder. In our case, we want the `sedanSports.glb`. Drop this file in your new Godot project, preferably in a separate folder such as `res://assets/cars/`."
@@ -6169,7 +6169,7 @@ msgstr "最終的に、画面上の任意の位置をクリックすることで
 
 #: input/multi_unit_select.md
 msgid "Processing the unit selection will happen in the world. We'll start with a {{< gd-icon Node2D >}}`Node2D` called \"World\" and add a few `Unit` instances in it. Attach a script to the World node and add the following variables:"
-msgstr "ユニット選択の処理はワールド内で行います。まず「World」という名前の{{< gd-icon Node2D >}}`Node2D`オブジェクトを作成し、その中にいくつかの`Unit`インスタンスを追加します。ワールドノードにスクリプトをアタッチし、以下の変数を設定してください。"
+msgstr "ユニット選択の処理はワールド内で行います。まず「World」という名前の{{< gd-icon Node2D >}}`Node2D`オブジェクトを作成し、その中に`Unit`インスタンスをいくつか追加します。ワールドノードにスクリプトをアタッチし、以下の変数を設定してください。"
 
 #: input/processing_inputs.md
 msgid "If the control wants to \"consume\" the event, it will call Control.accept_event() and the event will not spread any more"
@@ -6257,7 +6257,7 @@ msgstr "- [入力システム入門](/godot_recipes/3.x/input/input_intro/)"
 
 #: input/input_actions.md
 msgid "You'll see when you click on the tab there are already some default actions configured. They are all named \"ui_*\" to indicate that they are the default interface actions. \"Tab\" for next UI element, for example."
-msgstr "タブをクリックすると、すでにいくつかのデフォルトアクションが設定されていることがわかります。これらはすべて「ui_*」という名前になっており、これがデフォルトのインターフェース操作であることを示しています。例えば、次のUI要素に移動する「Tab」キーなどがあります。"
+msgstr "タブをクリックすると、すでにデフォルトアクションがいくつか設定されていることがわかります。これらはすべて「ui_*」という名前になっており、これがデフォルトのインターフェース操作であることを示しています。例えば、次のUI要素に移動する「Tab」キーなどがあります。"
 
 #: input/input_actions.md
 msgid "You can check for the action either by polling the `Input` singleton every frame:"
@@ -7036,7 +7036,7 @@ msgstr ""
 
 #: g101/3d/101_3d_03.md
 msgid "If you're curious how you would do this in first person, see the [Basic FPS Character](/godot_recipes/4.x/3d/basic_fps/index.html) recipe. You'll notice several similarities with the 3rd person script we wrote above."
-msgstr "ファーストパーソン視点での実装方法に興味がある場合は、[基本FPSキャラクタ作成](/godot_recipes/4.x/ja/3d/basic_fps/index.html)レシピを参照してください。先ほど書いたサードパーソン用スクリプトといくつかの共通点があることに気づくでしょう。"
+msgstr "ファーストパーソン視点での実装方法に興味がある場合は、[基本FPSキャラクタ作成](/godot_recipes/4.x/ja/3d/basic_fps/index.html)レシピを参照してください。先ほど書いたサードパーソン用スクリプトと共通点がいくつかあることに気づくでしょう。"
 
 #: g101/3d/101_3d_03.md
 msgid "### The Power of Transforms"
@@ -7320,7 +7320,7 @@ msgid ""
 "The area is featureless right now, but to make things more visually\n"
 "interesting, you can add individual lights in each room (more about lighting\n"
 "in a later tutorial). Here's an example of adding some `OmniLight` and `SpotLight` nodes to the scene:"
-msgstr "現在このエリアには特徴がありませんが、見た目をより印象的にするために、各部屋ごとに個別のライトを追加できます（ライティングに関する詳細は後日解説するチュートリアルで詳しく説明します）。以下に、シーンにいくつかの`OmniLight`と`SpotLight`ノードを追加する例を示しましょう。"
+msgstr "現在このエリアには特徴がありませんが、見た目をより印象的にするために、各部屋ごとに個別のライトを追加できます（ライティングに関する詳細は後日解説するチュートリアルで詳しく説明します）。以下に、シーンに`OmniLight`と`SpotLight`ノードをいくつか追加する例を示しましょう。"
 
 #: g101/3d/101_3d_06.md
 msgid ""
@@ -7336,7 +7336,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_06_06.png?width=300)"
 msgid ""
 "In this picture, we've created a ramp and added a couple of `CSGBox` shapes to\n"
 "make the ledge."
-msgstr "この画像では、スロープを作成し、エッジ部分を形成するためにいくつかの`CSGBox`形状を追加しました。"
+msgstr "この画像では、スロープを作成し、エッジ部分を形成するために`CSGBox`形状をいくつか追加しました。"
 
 #: g101/3d/101_3d_06.md
 msgid ""
@@ -8009,7 +8009,7 @@ msgid ""
 "and spike objects for our character to interact with. In this part, we'll look\n"
 "at a few small improvements: capturing the mouse, animating the coins, and\n"
 "detecting edges so our character doesn't fall."
-msgstr "このパートでは、物体間の接触を検出するためにAreaノードを使用する方法を学びました。コイン、弾丸、スパイクオブジェクトを作成し、これらの要素とキャラクターが相互作用できるようにしました。このセクションではいくつか小さな改良点を見ていきます。マウス入力の取得、コインアニメーションの実装、そしてエッジ検知機能を追加することで、キャラクターが落ちるのを防ぎます。"
+msgstr "このパートでは、物体間の接触を検出するためにAreaノードを使用する方法を学びました。コイン、弾丸、スパイクオブジェクトを作成し、これらの要素とキャラクターが相互作用できるようにしました。このセクションでは小さな改良点をいくつか見ていきます。マウス入力の取得、コインアニメーションの実装、そしてエッジ検知機能を追加することで、キャラクターが落ちるのを防ぎます。"
 
 #: g101/3d/101_3d_05.md
 msgid ""
@@ -8079,7 +8079,7 @@ msgid ""
 "RayCasts have a wide range of uses - we only touched on one here. The animation\n"
 "we added was very small, but a good start - we'll be using them for many things\n"
 "as we move forward."
-msgstr "このチュートリアルでは、ゲームにいくつかの小さな改良を加えました。マウス操作の実装は3Dゲーム全般（特に一人称視点など）で非常に有用であり、レイキャスティング手法も多岐にわたる応用ができます。ここでは一例を紹介したに過ぎません。追加したアニメーションは非常にシンプルなものですが、良いスタート地点となります。今後さらに多くの場面で活用していく予定です。"
+msgstr "このチュートリアルでは、ゲームに小さな改良をいくつか加えました。マウス操作の実装は3Dゲーム全般（特に一人称視点など）で非常に有用であり、レイキャスティング手法も多岐にわたる応用ができます。ここでは一例を紹介したに過ぎません。追加したアニメーションは非常にシンプルなものですが、良いスタート地点となります。今後さらに多くの場面で活用していく予定です。"
 
 #: g101/3d/101_3d_05.md
 msgid ""
@@ -8241,7 +8241,7 @@ msgid ""
 "applies equally well in 3D, there is also a whole new layer of complexity and\n"
 "capabilities. First, you'll find that there are some additional features\n"
 "available in the 3D editor window, so we'll start there:"
-msgstr "Godotの大きな強みの一つは、2Dゲームと3Dゲームの両方を開発できる点です。これまで2Dプロジェクトで習得した知識（ノード、シーン、シグナルなど）の多くは3D環境でも同様に適用できますが、同時に全く新しいレベルの複雑さと機能も追加されています。まず初めに、3Dエディタウィンドウで利用できるいくつかの新機能についてご紹介しましょう。"
+msgstr "Godotの大きな強みの一つは、2Dゲームと3Dゲームの両方を開発できる点です。これまで2Dプロジェクトで習得した知識（ノード、シーン、シグナルなど）の多くは3D環境でも同様に適用できますが、同時に全く新しいレベルの複雑さと機能も追加されています。まず初めに、3Dエディタウィンドウで利用できる新機能をいくつかご紹介しましょう。"
 
 #: g101/3d/101_3d_01.md
 msgid "## Global vs. Local Space"
@@ -8909,7 +8909,7 @@ msgstr "「GDScriptはPythonをベースにしている」と説明されてい�
 
 #: g101/gdscript/gdscript_01.md
 msgid "Now the script editor window opens up, and this is your new, empty sprite script. Godot has automatically included some lines of code, as well as some comments describing what they do."
-msgstr "スクリプトエディタウィンドウが開きます。ここに、新しく作成した空のスプライト用スクリプトが表示されます。Godotは自動的にいくつかのコード行と、各コードの機能を説明するコメントを自動生成しています。"
+msgstr "スクリプトエディタウィンドウが開きます。ここに、新しく作成した空のスプライト用スクリプトが表示されます。Godotは自動的に数行のコードと、各コードの機能を説明するコメントを自動生成しています。"
 
 #: g101/gdscript/gdscript_01.md
 msgid "## Structure of a script"
@@ -9365,7 +9365,7 @@ msgstr "## 場面設定"
 
 #: g101/start/101_02.md
 msgid "There are also some tabs across the top. We've been looking at the **General** tab. I'll also point out briefly, the **Input Map**. This is where you can define different input actions for keyboard control, gamepad, mouse, and so on.  In your game, you'll just worry about the action, not what individual key or button was pressed. This is a very powerful and flexible way of handling player input."
-msgstr "画面上部にはいくつかのタブもあります。これまで **一般** タブについて説明してきましたが、ここで簡単に **インプットマップ** についても触れておきます。この機能では、キーボード操作、ゲームパッド、マウスなど、さまざまな入力デバイスに対する個別のアクションを定義できます。実際のゲームプレイ時には、特定のキーやボタンが押されたかどうかを気にする必要はありません。これはプレイヤー入力を扱う上で非常に強力で柔軟な方法です。"
+msgstr "画面上部にはタブもいくつかあります。これまで **一般** タブについて説明してきましたが、ここで簡単に **インプットマップ** についても触れておきます。この機能では、キーボード操作、ゲームパッド、マウスなど、さまざまな入力デバイスに対する個別のアクションを定義できます。実際のゲームプレイ時には、特定のキーやボタンが押されたかどうかを気にする必要はありません。これはプレイヤー入力を扱う上で非常に強力で柔軟な方法です。"
 
 #: g101/start/101_02.md
 msgid "![alt](/godot_recipes/4.x/img/g4_101_05.png)"
@@ -10278,7 +10278,7 @@ msgstr "「ポイントを追加」を選択し、エディタウィンドウ内
 
 #: kyn/path2d.md
 msgid "The data of the path is held in this Resource object. It contains the mathematical representation of the curve, and provides some ways to interact with that data. The [API Documentation](https://docs.godotengine.org/en/stable/classes/class_curve2d.html) contains the details, but here are a few useful methods that you may want to use:"
-msgstr "パスのデータはこのリソースオブジェクトに保持されています。これには曲線の数学的表現が含まれており、そのデータと対話するためのいくつかの方法が提供されています。[APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_curve2d.html)に詳細が記載されていますが、ここでは特に役立ついくつかのメソッドを紹介します。"
+msgstr "パスのデータはこのリソースオブジェクトに保持されています。これには曲線の数学的表現が含まれており、そのデータと対話するための方法がいくつか提供されています。[APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_curve2d.html)に詳細が記載されていますが、ここでは特に役立つメソッドをいくつか紹介します。"
 
 #: kyn/path2d.md
 msgid "This is done by making the plane {{< gd-icon Sprite2D >}}`Sprite` a child of the {{< gd-icon PathFollow2D >}}`PathFollow2D` and adding the following to `_process()`:"
@@ -11671,7 +11671,7 @@ msgstr "実験を通じて、特定のゲームに最適な設定を見つけま
 
 #: physics/character_vs_rigid.md
 msgid "In some cases, this might be all you need. However, if you want to be able to push the bodies, you'll need to make some changes."
-msgstr "場合によってはこれで十分なこともあります。ただし、ボディーを押し出したい場合は、いくつかの変更が必要です。"
+msgstr "場合によってはこれで十分なこともあります。ただし、ボディーを押し出したい場合は、変更がいくつか必要です。"
 
 #: physics/character_vs_rigid.md
 msgid "Running the game, we now see we can push the boxes around. Note that the mass of the box doesn't matter - they'll all be pushed the same."
@@ -12893,7 +12893,7 @@ msgstr "### どちらを使用するべきか？"
 
 #: physics/Godot3_kinematic2d.md
 msgid "Next, we'll look at a few other examples."
-msgstr "次は、他のいくつかの具体例を見ていきましょう。"
+msgstr "次は、他の具体例をいくつか見ていきましょう。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "## Kinematic Bodies"
@@ -15144,7 +15144,7 @@ msgstr "次は、タッチ動作の後に発生するドラッグ操作につい
 
 #: 2D/touchscreen_camera.md
 msgid "You can use this camera as a basis for your own camera needs. Here are some suggestions you can try to make yourself:"
-msgstr "これを底本にして、ニーズに合わせて活用できます。以下に、試せるいくつかの提案をご紹介します。"
+msgstr "これを底本にして、ニーズに合わせて活用できます。以下に、試せる提案をいくつかご紹介します。"
 
 #: 2D/touchscreen_camera.md
 msgid "Touchscreen Camera"
@@ -18162,7 +18162,7 @@ msgstr "これはモジュール用の設定変数です。`real_ads` を `false
 
 #: games/circle_jump/circle_jump_11.md
 msgid "Back in the Godot editor, we need to make some changes to the export configuration. First, open _Project -> Project Settings_ and find the \"Android\" section. In the _Modules_ property is where you list the module(s) you want to use in your code. The module name is listed on the `godot-admob` page: \"org/godotengine/godot/GodotAdMob\". If you have more than one module, separate them with commas."
-msgstr "Godot エディタに戻って、エクスポート設定にいくつかの変更を加える必要があります。まず、_プロジェクト -> プロジェクト設定_ を開き、「Android」セクションを見つけてください。_モジュール_ プロパティには、コードで使用するモジュールをリストします。モジュール名は `godot-admob` ページに記載されています。\"org/godotengine/godot/GodotAdMob\"。使用するモジュールが複数ある場合は、カンマで区切ってください。"
+msgstr "Godot エディタに戻って、エクスポート設定に変更をいくつか加える必要があります。まず、_プロジェクト -> プロジェクト設定_ を開き、「Android」セクションを見つけてください。_モジュール_ プロパティには、コードで使用するモジュールをリストします。モジュール名は `godot-admob` ページに記載されています。\"org/godotengine/godot/GodotAdMob\"。使用するモジュールが複数ある場合は、カンマで区切ってください。"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "Compiling export templates is not difficult, but it does require setting up a build environment on your computer - downloading the required programs and libraries needed to build Godot. If you're new to this concept and interested in learning about it, see the [Compiling](https://docs.godotengine.org/en/latest/development/compiling/introduction_to_the_buildsystem.html) section of the official docs."
@@ -18340,7 +18340,7 @@ msgstr "![alt](/godot_recipes/4.x/img/cj_01_01.png?width=200)"
 
 #: games/circle_jump/circle_jump_01.md
 msgid "Where to start? Depending on the game, and how fleshed-out your idea is, the answer might be very different. In our case, I've cheated a little bit by making a prototype of the game already and working out a few of the ideas ahead of time. Still, it diverged a bit from my initial idea, and so might this series - time will tell."
-msgstr "どこから始めればよいでしょうか？ゲームの種類やアイデアの具体性によって、答えは大きく異なります。この場合、事前にプロトタイプを作成し、さらにいくつかアイデアを固めておいたため、若干有利でした。とはいえ、当初の構想からは多少逸脱してしまいましたし、この連載も同様になるかもしれません。結果は時が経ってみないと分かりません。"
+msgstr "どこから始めればよいでしょうか？ゲームの種類やアイデアの具体性によって、答えは大きく異なります。この場合、事前にプロトタイプを作成し、さらにアイデアをいくつか固めておいたため、若干有利でした。とはいえ、当初の構想からは多少逸脱してしまいましたし、この連載も同様になるかもしれません。結果は時が経ってみないと分かりません。"
 
 #: games/circle_jump/circle_jump_01.md
 msgid "Try running the scene with different values of `radius` to test. (Later we'll stop calling `init()` in `_ready()`)."
