@@ -67,8 +67,8 @@ def translate_content(content, translations):
     return content
 
 def main():
-    po_file = '/app/output.po'
-    content_dir = '/app/src-4/content'
+    po_file = './output.po'
+    content_dir = './src-4/content'
     
     print(f"Loading translations from {po_file}...")
     translations = load_po(po_file)

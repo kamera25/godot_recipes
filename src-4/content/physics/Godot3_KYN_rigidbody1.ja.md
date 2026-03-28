@@ -91,7 +91,8 @@ extends RigidBody2D
 var dragging
 var drag_start = Vector2()
 
-if event.is_action_pressed("click") and not dragging:
+func _input(event):
+    if event.is_action_pressed("click") and not dragging:
         dragging = true
         drag_start = get_global_mouse_position()
     if event.is_action_released("click") and dragging:
@@ -134,8 +135,8 @@ if event.is_action_pressed("click") and not dragging:
 {{< highlight swift >}}
 extends RigidBody2D
 
-エクスポート（int）変数：var engine_thrust
-エクスポート（int）変数：var spin_thrust
+export (int) var engine_thrust
+export (int) var spin_thrust
 
 var thrust = Vector2()
 var rotation_dir = 0
@@ -145,14 +146,14 @@ func _ready():
     screensize = get_viewport().get_visible_rect().size
 
 func get_input():
-    if 入力.is_action_pressed("ui_up"):
+    if Input.is_action_pressed("ui_up"):
         thrust = Vector2(engine_thrust, 0)
     else:
-        thrush = Vector2()
+        thrust = Vector2()
     rotation_dir = 0
-    if 入力.is_action_pressed("ui_right"):
+    if Input.is_action_pressed("ui_right"):
         rotation_dir += 1
-    if 入力.is_action_pressed("ui_left"):
+    if Input.is_action_pressed("ui_left"):
         rotation_dir -= 1
 
 func _process(delta):

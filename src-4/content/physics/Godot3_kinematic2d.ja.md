@@ -149,19 +149,19 @@ Attach a script to the {{< gd-icon KinematicBody2D >}}`KinematicBody2D` and add 
 {{< highlight python >}}
 extends KinematicBody2D
 
-var 速度 = 250
-var 速度 = Vector2()
+var speed = 250
+var velocity = Vector2()
 
 func get_input():
 	# Detect up/down/left/right keystate and only move when pressed
 	velocity = Vector2()
-	if 入力.is_action_pressed('ui_right'):
+	if Input.is_action_pressed('ui_right'):
 		velocity.x += 1
-	if 入力.is_action_pressed('ui_left'):
+	if Input.is_action_pressed('ui_left'):
 		velocity.x -= 1
-	if 入力.is_action_pressed('ui_down'):
+	if Input.is_action_pressed('ui_down'):
 		velocity.y += 1
-	if 入力.is_action_pressed('ui_up'):
+	if Input.is_action_pressed('ui_up'):
 		velocity.y -= 1
 	velocity = velocity.normalized() * speed
 
@@ -195,19 +195,19 @@ sceneを再実行し、障害物に向かって移動してみてください。
 {{< highlight python >}}
 extends KinematicBody2D
 
-エクスポート (packedscene) 変数 Bullet
-エクスポート (int) 変数 speed
+export (PackedScene) var Bullet
+export (int) var speed
 
 var velocity = Vector2()
 
 func get_input():
-	# add these actions in Project Settings -> 入力 Map
+	# add these actions in Project Settings -> Input Map
 	velocity = Vector2()
-	if 入力.is_action_pressed('backward'):
+	if Input.is_action_pressed('backward'):
 		velocity = Vector2(-speed/3, 0).rotated(rotation)
-	if 入力.is_action_pressed('forward'):
+	if Input.is_action_pressed('forward'):
 		velocity = Vector2(speed, 0).rotated(rotation)
-	if 入力.is_action_just_pressed('mouse_click'):
+	if Input.is_action_just_pressed('mouse_click'):
 		shoot()
 
 func shoot():
@@ -271,17 +271,18 @@ func _on_VisibilityNotifier2D_screen_exited():
 {{< highlight python >}}
 extends KinematicBody2D
 
-輸出（整数）変数 run_speed
-輸出（整数）変数 jump_speed
-輸出（整数）変数 gravity
+export (int) var run_speed
+export (int) var jump_speed
+export (int) var gravity
 
-enum { IDLE, RUN, JUMP }
-var 速度 = Vector2()
-var 状態
-var アニメーション
-var 新規アニメ
+enum {IDLE, RUN, JUMP}
+var velocity = Vector2()
+var state
+var anim
+var new_anim
 
-funció _ready():
+func _ready():
+    change_state(IDLE)
 
 func change_state(new_state):
     state = new_state
@@ -295,38 +296,39 @@ func change_state(new_state):
 
 func get_input():
     velocity.x = 0
-    var right = 入力.is_action_pressed('ui_right')
-    var left = 入力.is_action_pressed('ui_left')
-    var jump = 入力.is_action_just_pressed('ui_select')
+    var right = Input.is_action_pressed('ui_right')
+    var left = Input.is_action_pressed('ui_left')
+    var jump = Input.is_action_just_pressed('ui_select')
 
-    if jump and sprite_is_on_the_floor():
-        set_state(JUMP)
+    if jump and is_on_floor():
+        change_state(JUMP)
         velocity.y = jump_speed
-    if moving_right:
-        set_state(RUN)
+    if right:
+        change_state(RUN)
         velocity.x += run_speed
-    if moving_left:
-        set_state(RUN)
+    if left:
+        change_state(RUN)
         velocity.x -= run_speed
     $Sprite.flip_h = velocity.x < 0
-    if not moving_right and not moving_left and state == RUN:
-        set_state(IDLE)
+    if !right and !left and state == RUN:
+        change_state(IDLE)
 
 func _process(delta):
     get_input()
     if new_anim != anim:
         anim = new_anim
-        $アニメーションPlayer.play(anim)
+        $AnimationPlayer.play(anim)
 
-velocity.y += gravity * delta
+func _physics_process(delta):
+    velocity.y += gravity * delta
     if state == JUMP:
         if is_on_floor():
             change_state(IDLE)
     velocity = move_and_slide(velocity, Vector2(0, -1))
 
-    もし position.y が 600 より大きい場合：
+    if position.y > 600:
         get_tree().reload_current_scene()
-    {{< /highlight >}}
+{{< /highlight >}}
 
 ![alt](/godot_recipes/3.x/img/k2d_platf_sample.gif?width=300)
 

@@ -64,7 +64,7 @@ func reset():
     current_value = max_value
 ```
 
-この機能はプレイヤーにダメージが与えられた際に毎回呼び出されるべきです。
+この関数はプレイヤーにダメージが与えられた際に毎回呼び出されるべきです。
 
 ```gdscript
 func take_damage(amount):
@@ -72,7 +72,7 @@ func take_damage(amount):
     emit_signal("health_changed", current_value)
 ```
 
-この機能はプレイヤーの回復が必要な時に随時呼び出されるべきです
+この関数はプレイヤーの回復が必要な時に随時呼び出されるべきです。
 
 ```gdscript
 func heal(amount):
@@ -124,7 +124,7 @@ func heal(amount):
 リソースの作成と保存が完了したら、いよいよ使用準備が整います。このシナリオでは、以下のオブジェクトが存在します。
 
 * プレイヤー： {{< gd-icon KinematicBody2D >}}`KinematicBody2D` 
-* UI要素：健康状態を表示する {{< gd-icon TextureProgressBar >}}`ProgressTexture` を含むコンポーネント
+* UI要素：HPを表示する {{< gd-icon TextureProgressBar >}}`ProgressTexture` を含むコンポーネント
 * 回復エリア：その範囲内に入った対象を回復する {{< gd-icon Area2D >}}`Area2D`
 * スパイクゾーン：接触するとダメージを与える {{< gd-icon TileMap >}}`TileMap` のタイルセット
 

@@ -63,7 +63,7 @@ if settings.enable_sound:
     $Beep.play()
 ```
 
-そして `Jumper.gd` に、次のようにサウンドを追加します。-- Jumper.gd ファイル内でサウンドを追加します:
+そして `Jumper.gd` に、次のようにサウンドを追加します:
 
 ```gdscript
 func jump():

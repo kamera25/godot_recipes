@@ -27,7 +27,7 @@ export var id = 0
 
 func get_input():
     velocity = Vector2()
-    if 入力.is_action_pressed('right_%s' % id):
+    if Input.is_action_pressed('right_%s' % id):
         velocity.x += 1
     # etc.
 {{< /highlight >}}
@@ -99,7 +99,8 @@ onready var camera1 = $Viewports/ViewportContainer1/Viewport1/Camera2D
 onready var camera2 = $Viewports/ViewportContainer2/Viewport2/Camera2D
 onready var world = $Viewports/ViewportContainer1/Viewport1/World
 
-viewport2.world_2d = viewport1.world_2d
+func _ready():
+    viewport2.world_2d = viewport1.world_2d
 {{< /highlight >}}
 
 The `onready` node references are for convenience - we'll be using them as we progress forward. Remember that when you type "`$`", Godot will automatically suggest node paths so you don't need to type them. You can also drag a node directly from the scene tree into the script editor, and you'll get the node's path.
@@ -113,9 +114,10 @@ The `onready` node references are for convenience - we'll be using them as we pr
 {{< highlight gdscript>}}
 extends Camera2D
 
-var ターゲット = null;
+var target = null
 
-if target is not None:
+func _physics_process(delta):
+    if target:
         position = target.position
 {{< /highlight >}}
 

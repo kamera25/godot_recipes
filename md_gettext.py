@@ -160,8 +160,8 @@ def apply_translations(docs_dir, po_file):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Markdown Gettext Tool")
     parser.add_argument('mode', choices=['extract', 'apply'], help="'extract' to create PO, 'apply' to translate Markdown")
-    parser.add_argument('--dir', default='/app/src-4/content', help='Markdown directory')
-    parser.add_argument('--po', default='/app/content_extracted.po', help='PO file path')
+    parser.add_argument('--dir', default='./src-4/content', help='Markdown directory')
+    parser.add_argument('--po', default='./content_extracted.po', help='PO file path')
     
     args = parser.parse_args()
     
