@@ -44,7 +44,7 @@ msgstr "経験豊富な開発者の方や、他のゲームエンジンに精通
 
 #: _index.md
 msgid "Are you ready to learn game development? Whether it's as a hobby or working towards your dream career, there's never been a better time to get started. Modern programming languages and tools have made it easier than ever to build high-quality games and distribute them to the world. One of these tools is the Godot game engine. For beginners, it offers a friendly way to learn gamedev techniques. For experienced developers, it's a powerful, customizable and _open_ tool for bringing your visions to life."
-msgstr "ゲーム開発を学ぶ準備はできていますか？趣味として、あるいは夢のキャリアへの第一歩として、今ほど良いタイミングはありません。現代のプログラミング言語とツールを駆使すれば、高品質なゲームを簡単に作成し、世界中に向けて配信できます。その中の一つがGodotゲームエンジンです。初心者にもゲーム開発技術を楽しく、親しみやすい方法で学ぶことができます。一方、経験豊富な開発者にとっては、自らのビジョンを形にするための強力でカスタマイズ可能、かつオープンソースの強力なツールです。"
+msgstr "ゲーム開発を学ぶ準備はできていますか？趣味として、あるいは夢のキャリアへの第一歩として、今ほど良いタイミングはありません。現代のプログラミング言語とツールを駆使すれば、高品質なゲームを簡単に作成し、世界中に向けて配信できます。その中の一つがGodotゲームエンジンです。初心者でもゲーム開発技術を楽しく、親しみやすい方法で学ぶことができます。一方、経験豊富な開発者にとっては、自らのビジョンを形にするための強力でカスタマイズ可能、かつオープンソースの強力なツールです。"
 
 #: _index.md
 msgid "If you're new to Godot, start here: [What is Godot?](/godot_recipes/4.x/g101/start/101_01/)."
@@ -78,7 +78,7 @@ msgstr ""
 
 #: _index.md
 msgid "If you're new to game development, start with the [\"Godot 101: Basics\"](/godot_recipes/4.x/basics/) section. There you'll find an introduction to the Godot application, and a step-by-step guide to creating your first project. There is a lot of material to absorb here. Don't feel discouraged if you feel you don't get it at first. Repetition is the key to learning complex topics; the more you work with Godot's features, the more familiar and _easy_ they will start to feel."
-msgstr "ゲーム開発が初めての場合は、まず [はじめてのGodot(基礎編)](/godot_recipes/4.x/ja/basics/) のセクションから始めてください。ここではGodotアプリケーションの概要と、初めてのプロジェクト作成を段階的に作っていきましょう。学ぶべきことは多岐にわたりますが、最初はすべてを理解する必要はありません。複雑な概念なので、反復学習が不可欠です。Godotの各種機能を実際に操作すればするほど、その使い方に慣れ、次第に「簡単」だと感じられるようになります。"
+msgstr "ゲーム開発が初めての場合は、まず [はじめてのGodot(基礎編)](/godot_recipes/4.x/ja/basics/) のセクションから始めてください。ここではGodotアプリケーションの概要と、初めてのプロジェクトを段階的に作成していきましょう。学ぶべきことは多岐にわたりますが、最初はすべてを理解する必要はありません。複雑な概念なので、反復学習が不可欠です。Godotの各種機能を実際に操作すればするほど、その使い方に慣れ、次第に「簡単」だと感じられるようになります。"
 
 #: _index.md
 msgid "# <i class='fas fa-utensils'></i>&nbsp;Godot Recipes"
@@ -263,7 +263,7 @@ msgstr "リモートシーンツリーを使用して"
 
 #: basics/remote_tree.md
 msgid "### Visualizing the running game"
-msgstr "### ランニングゲームの可視化について"
+msgstr "### 実行中のゲームの可視化について"
 
 #: basics/node_communication.md
 msgid ""
@@ -369,7 +369,7 @@ msgstr "グループに関するよくある誤解として、「ノード参照
 
 #: basics/node_communication.md
 msgid "The script on the root `CenterContainer` has the following function, which we want to call whenever any button is pressed:"
-msgstr "Root要素の`CenterContainer`スクリプトには以下の機能が含まれており、任意のボタンが押されたときに呼び出したいです。"
+msgstr "Root要素の`CenterContainer`スクリプトには以下の関数が含まれており、任意のボタンが押されたときに呼び出したいです。"
 
 #: basics/node_communication.md
 msgid "The buttons here are instances of a `Button` scene, representing an object which may contain dynamic code that sets the button's text or other properties. Or perhaps you have buttons that are dynamically added/removed from the container depending on the game state. Regardless, all we need to connect the button's signal is the following:"
@@ -417,7 +417,7 @@ msgstr "複雑なUI設計では、コンテナやコントロールが階層的�
 
 #: basics/node_communication.md
 msgid "Let's consider a Galaga-style space shooter where you have a lots of enemies flying around. These enemies may have different types and behaviors. You'd like to add a \"smart bomb\" upgrade that, when activated, destroys all enemies on the screen. Using groups, you can implement this with a minimal amount of code."
-msgstr "ギャラガ風のスペースシューティングゲームを考えてみましょう。このゲームでは、画面に多数の敵機がランダムに出現します。これらの敵には種類や挙動が異なる場合があります。「スマートボム」機能を追加したいです、これを発動すると画面内のすべての敵を一度に破壊できるようにしたいとします。この場合、グループ機能を活用することで、最小限のコードで実装ができます。"
+msgstr "ギャラガ風のスペースシューティングゲームを考えてみましょう。このゲームでは、画面に多数の敵機がランダムに出現します。これらの敵には種類や挙動が異なる場合があります。「スマートボム」機能を追加し、これを発動すると画面内のすべての敵を一度に破壊できるようにしたいとします。この場合、グループ機能を活用することで、最小限のコードで実装ができます。"
 
 #: basics/node_communication.md
 msgid "If a node is calling a child (i.e. going \"down\" the tree), then `get_node()` is appropriate."
@@ -535,7 +535,7 @@ msgstr "基本的に、ノードはその子ノードを管理するべきです
 
 #: basics/node_communication.md
 msgid "Let's assume every enemy has an `explode()` function that handles what happens when it dies (playing an animation, spawning dropped items, etc). Now that every enemy is in the group, we can implement our smart bomb function like this:"
-msgstr "敵キャラ全員が死亡時に実行する処理（アニメーション再生、ドロップアイテムの生成など）を処理する「explode()」関数を持っていると仮定しましょう。これで全ての敵がグループに登録されたので、スマートボム機能を以下のように実装できます。"
+msgstr "敵キャラ全員が死亡時の処理（アニメーション再生、ドロップアイテムの生成など）を行う「explode()」関数を持っていると仮定しましょう。これで全ての敵がグループに登録されたので、スマートボム機能を以下のように実装できます。"
 
 #: 2D/2d_align_surface.md 2D/2d_draw_trajectory.md 2D/2d_shooting.md
 #: 2D/ballistic_bullet.md 2D/car_steering.md
@@ -560,7 +560,7 @@ msgstr "注：フレームレートが半分に低下した場合（すなわち
 
 #: basics/understanding_delta.md
 msgid "Maybe. The trouble begins if there is something else occupying the computer's time. This is called _lag_ and can come from a variety of sources - the cause could be your code or even other applications running on your computer. If this happens, then the length of a frame might increase. As an extreme example, imagine that the frame rate is halved - each frame took 1/30 instead of 1/60 of a second. Moving at `2` px/frame, it's now going to take twice as long for the sprite to reach the edge."
-msgstr "このコードだと、コンピュータが他のタスクでリソースを消費している場合に問題が発生します。これは「ラグ」と呼ばれます。コード自体の問題や他の実行中アプリケーションに起因する可能性があります。この状況では、フレームの長さが増加になります。極端な例として、フレームレートが半減した場合を考えてみましょう。各フレームの処理時間が60分の1秒から30分の1秒になります。`2` ピクセル/フレームで移動しているスプライトの場合、画面端に到達するまでにこれまでの2倍の時間がかかることになります。"
+msgstr "このコードだと、コンピュータが他のタスクでリソースを消費している場合に問題が発生します。これは「ラグ」と呼ばれます。コード自体の問題や他の実行中アプリケーションに起因する可能性があります。この状況では、フレームの長さが増加します。極端な例として、フレームレートが半減した場合を考えてみましょう。各フレームの処理時間が60分の1秒から30分の1秒になります。`2` ピクセル/フレームで移動しているスプライトの場合、画面端に到達するまでにこれまでの2倍の時間がかかることになります。"
 
 #: basics/understanding_delta.md
 msgid "With this information, we can stop thinking about how much to move each frame, and only consider our desired speed in pixels/second (`120` from the above calculation)."
@@ -621,7 +621,7 @@ msgstr ""
 
 #: basics/understanding_delta.md
 msgid "If you don't use `delta` when applying acceleration to your velocity, then your acceleration will be subject to fluctuations in frame rate. This can have a_much more subtle effect on movement - it will be inconsistent, but much more difficult to diagnose."
-msgstr "加速を適用する際に `delta` を考慮しない場合、フレームレートの変動の影響を受けやすくなります。この影響は運動挙動に「より微妙な形」で現れます。発生した場合は辻褄が合わない動作となりますが、その原因を特定する微々たる影響のためとても困難です。"
+msgstr "加速を適用する際に `delta` を考慮しない場合、フレームレートの変動の影響を受けやすくなります。この影響は運動挙動に「より微妙な形」で現れます。動きが一貫しなくなりますが、影響が微細であるため、原因の特定は非常に困難になります。"
 
 #: basics/understanding_delta.md
 msgid "When using the `_process()` function, it automatically includes a parameter called `delta` that's passed in from the engine (so does `_physics_process()`, which is used for physics-related code). This is a floating point value representing the length of time since the previous frame. Typically, this will be approximately 1/60 or `0.0167` seconds."
@@ -727,7 +727,7 @@ msgstr ""
 
 #: basics/custom_resources.md
 msgid "This function should be called whenever damage is dealt to the player."
-msgstr "この機能はプレイヤーにダメージが与えられた際に毎回呼び出されるべきです。"
+msgstr "この関数はプレイヤーにダメージが与えられた際に毎回呼び出されるべきです。"
 
 #: basics/custom_resources.md
 msgid "On the player, we `export` a variable to attach the resource via the Inspector. As part of the player's movement code, it calls `hurt()` when the player runs into spikes."
@@ -819,7 +819,7 @@ msgid ""
 "* Spikes - {{< gd-icon TileMap >}}`TileMap` tiles that cause damage if touched"
 msgstr ""
 "* プレイヤー： {{< gd-icon KinematicBody2D >}}`KinematicBody2D` \n"
-"* UI要素：健康状態を表示する {{< gd-icon TextureProgressBar >}}`ProgressTexture` を含むコンポーネント\n"
+"* UI要素：HPを表示する {{< gd-icon TextureProgressBar >}}`ProgressTexture` を含むコンポーネント\n"
 "* 回復エリア：その範囲内に入った対象を回復する {{< gd-icon Area2D >}}`Area2D`\n"
 "* スパイクゾーン：接触するとダメージを与える {{< gd-icon TileMap >}}`TileMap` のタイルセット"
 
@@ -861,7 +861,7 @@ msgstr ""
 
 #: basics/custom_resources.md
 msgid "This function should be called whenever the player needs to be healed."
-msgstr "この機能はプレイヤーの回復が必要な時に随時呼び出されるべきです"
+msgstr "この関数はプレイヤーの回復が必要な時に随時呼び出されるべきです。"
 
 #: basics/custom_resources.md
 msgid "![alt](/godot_recipes/4.x/img/custom_resource_03.png)"
@@ -933,7 +933,7 @@ msgstr "非常によくある質問です（すでに読者の方からも尋ね
 
 #: basics/file_io.md
 msgid "### Saving Resources"
-msgstr "### リソース節約について"
+msgstr "### リソースの保存について"
 
 #: basics/file_io.md
 msgid "Godot's file I/O (input/output) system is based around the `FileAccess` object. You open a file by calling `open()`."
@@ -18361,7 +18361,7 @@ msgstr "まず、プロジェクト設定から始めましょう。画面サイ
 
 #: games/circle_jump/circle_jump_01.md
 msgid "## Getting started"
-msgstr "## 使い方の始め方"
+msgstr "## はじめに"
 
 #: games/circle_jump/circle_jump_01.md
 msgid "Add a circle shape to the `CollisionShape2D` and attach a script to the root node."
@@ -18385,7 +18385,7 @@ msgstr "### プロジェクト管理体制"
 
 #: games/circle_jump/circle_jump_01.md
 msgid "## Main Scene"
-msgstr "## 主要場面"
+msgstr "## メインシーン"
 
 #: games/circle_jump/circle_jump_01.md
 msgid "### Jumper"
@@ -18959,7 +18959,7 @@ msgstr "次のパートでは、円に動きを追加します。"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "And in `Jumper.gd`, we add the sounds like so:"
-msgstr "そして `Jumper.gd` に、次のようにサウンドを追加します。-- Jumper.gd ファイル内でサウンドを追加します:"
+msgstr "そして `Jumper.gd` に、次のようにサウンドを追加します:"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "- Finally, on the Jumper, we need two sound effects: \"Jump\" and \"Capture\". Use `70.ogg` and `88.ogg`, respectively."
@@ -19290,7 +19290,7 @@ msgstr "新しいアニメーション「implode」を追加してください�
 
 #: games/circle_jump/circle_jump_02.md
 msgid "## Trail"
-msgstr "## トレイルコース"
+msgstr "## トレイル"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "Here's our `spawn_circle()` function. If it's passed a position, it'll use it, otherwise we pick a random one some distance away from the current target. These are temporary numbers - once we've got more of the gameplay up and running, we'll see how much they need to be adjusted."
