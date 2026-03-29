@@ -91,7 +91,7 @@ Here's the tank in action. We've made a test scene with a {{< gd-icon StaticBody
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトのサンプルコードをダウンロードする：[https://github.com/godotrecipes/characterbody3d_examples](https://github.jp/godotrecipes/characterbody3d_examples)
+プロジェクトのサンプルコードをダウンロードする：[https://github.com/godotrecipes/characterbody3d_examples](https://github.com/godotrecipes/characterbody3d_examples)
 
 <!-- {{% notice note %}}
 プロジェクトファイルはこちらからダウンロードできます。 [floating_text.zip](/godot_recipes/4.x/ja/files/floating_text.zip)

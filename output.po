@@ -2943,7 +2943,7 @@ msgstr "<video controls src=\"/godot_recipes/4.x/img/gimbal_01.webm\"></video>"
 
 #: 3D/3d_align_surface.md 3D/characterbody3d_examples.md
 msgid "Download the project's example code here: [https://github.com/godotrecipes/characterbody3d_examples](https://github.com/godotrecipes/characterbody3d_examples)"
-msgstr "プロジェクトのサンプルコードをダウンロードする：[https://github.com/godotrecipes/characterbody3d_examples](https://github.jp/godotrecipes/characterbody3d_examples)"
+msgstr "プロジェクトのサンプルコードをダウンロードする：[https://github.com/godotrecipes/characterbody3d_examples](https://github.com/godotrecipes/characterbody3d_examples)"
 
 #: 3D/3d_align_surface.md
 msgid "This is much better, but because we are instantly snapping to the new alignment every time the tank crosses an edge, it still looks a little jarring:"
@@ -5760,7 +5760,7 @@ msgstr "スクリプトの残り部分は2Dバージョンと非常に類似し�
 
 #: 3D/kinematic_car/car_base.md
 msgid "To import the car, find the model in the `\"Models/GLTF format\"` folder. In our case, we want the `sedanSports.glb`. Drop this file in your new Godot project, preferably in a separate folder such as `res://assets/cars/`."
-msgstr "車を読み込むには、`\"Models/GLTF形式\"`フォルダ内で該当モデルを探してください。今回は`sedanSports.glb`を使用します。このファイルを新規Godotプロジェクトにインポートし、できれば`res://assets/cars/`のような専用フォルダにまとめておくと良いでしょう。"
+msgstr "車を読み込むには、`\"Models/GLTF format\"`フォルダ内で該当モデルを探してください。今回は`sedanSports.glb`を使用します。このファイルを新規Godotプロジェクトにインポートし、できれば`res://assets/cars/`のような専用フォルダにまとめておくと良いでしょう。"
 
 #: 3D/kinematic_car/car_base.md
 msgid ""
