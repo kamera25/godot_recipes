@@ -27,7 +27,7 @@ VehicleBody3D`車両ボディ`の操作方法について詳しく知りたい�
 
 #### モデルのインポート方法
 
-以下はこのデモンストレーションで使用する車両モデルです：
+以下はこのデモンストレーションで使用する車両モデルです。
 
 ![alt](/godot_recipes/3.x/img/3d_car_01.png)
 
@@ -50,7 +50,7 @@ Note the individual meshes for each of the car's parts. There's also a stray "tm
 
 The {{< gd-icon KinematicBody3D >}}`CharacterBody3D` has a warning about missing collision shapes, so we'll need to fix that first. We're going to add 3 {{< gd-icon CollisionShape3D >}}`CollisionShape`s: a {{< gd-icon BoxShape3D >}}`BoxShape` for the car's body, and a {{< gd-icon CylinderShape3D >}}`CylinderShape` for each of the front and rear axles.
 
-形状設定が完了したら、以下のような表示になるはずです：
+形状設定が完了したら、以下のような表示になるはずです。
 
 ![alt](/godot_recipes/3.x/img/3d_car_03.png)
 
@@ -150,7 +150,7 @@ func get_input():
 
 ### プレイヤー操作
 
-これでプレイヤー操作を追加できるようになりました。以下が入力マッピングの設定です：
+これでプレイヤー操作を追加できるようになりました。以下が入力マッピングの設定です。
 
 ![alt](/godot_recipes/3.x/img/3d_car_04.png)
 

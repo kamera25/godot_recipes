@@ -43,7 +43,7 @@ The car is made with two main nodes: a {{< gd-icon RigidBody3D >}}`RigidBody3D` 
 
 #### カーメッシュ
 
-以下が使用する車種の詳細です：
+以下が使用する車種の詳細です。
 
 ![alt](/godot_recipes/4.x/img/3d_sphere_car_02.png)
 
@@ -53,7 +53,7 @@ The car is made with two main nodes: a {{< gd-icon RigidBody3D >}}`RigidBody3D` 
 
 GLTFモデルを使用する場合、インポート設定で調整する必要はありません。
 
-以下は「suv」モデルをインポートした際のノードツリーの表示例です：
+以下は「suv」モデルをインポートした際のノードツリーの表示例です。
 
 ![alt](/godot_recipes/4.x/img/3d_sphere_car_04a.png)
 
@@ -174,7 +174,7 @@ if ground_ray.is_colliding():
     car_mesh.global_transform = car_mesh.global_transform.interpolate_with(xform, 10.0 * delta)
 ```
 
-align関数（前回同様に`orthonormalized()`を使用している点に注目してください）：
+align関数（前回同様に`orthonormalized()`を使用している点に注目してください）。
 
 ```gdscript
 func align_with_y(xform, new_y):

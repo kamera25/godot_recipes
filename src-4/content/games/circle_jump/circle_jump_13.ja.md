@@ -11,7 +11,7 @@ pre: "13. "
 
 以前と同様に、[Shin-NiL Android AdMobプラグイン](https://github.com/Shin-NiL/Godot-Android-Admob-Plugin)を使用しています。「リリース」タブからzipファイルをダウンロードしてください。
 
-最初のステップは、プロジェクトにAndroidカスタムビルドテンプレートをインストールすることです：
+最初のステップは、プロジェクトにAndroidカスタムビルドテンプレートをインストールすることです。
 
 ![alt](/godot_recipes/3.x/img/admob_3.2_03.png)
 

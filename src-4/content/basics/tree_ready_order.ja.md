@@ -87,7 +87,7 @@ TestChild2 process
 
 ご覧の通り、これらのノードはすべてツリー順に従って上から下へ、ブランチを先に表示しています。ただし`_ready()`コードは例外です。
 
-以下は[ノードリファレンス](https://docs.godotengine.org/ja/4.x/classes/class_node.html)からの引用です：
+以下は[ノードリファレンス](https://docs.godotengine.org/ja/4.x/classes/class_node.html)からの引用です。
 
 > ノードが「準備完了」状態になった際に呼び出されます。すべての子ノードがシーンツリーに組み込まれた時点で自ノードがトリガーされます。子要素がある場合、まず子ノードの `_ready` コールバックが実行され、その後に親ノードへ通知されます。
 

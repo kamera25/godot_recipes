@@ -90,7 +90,7 @@ func _on_gui_input(event):
 
 これで最終的なメニューを作成できます。
 
-以下が基本レイアウトの概要です：
+以下が基本レイアウトの概要です。
 
 ![alt](/godot_recipes/4.x/img/level_select_04.png)
 

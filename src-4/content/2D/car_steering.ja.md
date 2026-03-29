@@ -26,7 +26,7 @@ ghcommentid: 22
 
 ### シーン設定
 
-以下が車シーンの設定内容です：
+以下が車シーンの設定内容です。
 
 ```
 {{< gd-icon CharacterBody2D >}} CharacterBody2D
@@ -186,7 +186,7 @@ func apply_friction(delta):
 
 ### パート4：リバース／ブレーキ操作
 
-以下の 2 つの設定変数も必要です：
+以下の 2 つの設定変数も必要です。
 
 ```gdscript
 var braking = -450

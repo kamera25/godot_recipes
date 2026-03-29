@@ -64,7 +64,7 @@ var enable_ads = true
 
 `ad_banner_id` および `ad_interstitial_id` には、AdMobアカウントから取得した広告ユニット値を設定が必要です。
 
-モジュールの初期化が必要です：
+モジュールの初期化が必要です。
 
 ```gdscript
 func _ready():
@@ -110,7 +110,7 @@ func _on_interstitial_close():
 - `new_game()`関数内で`settings.hide_ad_banner()`を追加してください
 - `_on_Jumper_died()`関数の最後に`settings.show_ad_interstitial()`を追加してください
 
-デバイスでゲームを起動すると、テスト広告が表示されるはずです：
+デバイスでゲームを起動すると、テスト広告が表示されるはずです。
 
 ![alt](/godot_recipes/3.x/img/cj_11_03.jpg)
 

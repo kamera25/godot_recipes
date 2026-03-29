@@ -28,7 +28,7 @@ For this example, we'll use the "Mini Tank" that we set up in [CharacterBody3D�
 ![alt](/godot_recipes/3.x/img/3d_shoot_01.png)
 
 {{% notice note %}}
-ここに掲載している弾丸モデルを使用したい場合は、[ケニーの『武器パック』](https://kenney.nl/assets/weapon-pack)から入手できます。
+ここに掲載している弾丸モデルを使用したい場合は、[Kenney's "Weapon Pack"](https://kenney.nl/assets/weapon-pack)から入手できます。
 {{% /notice %}}
 
 メッシュを {{< gd-icon MeshInstance3D >}}`MeshInstance` に追加し、衝突形状もそれに合わせてスケール調整してください。
@@ -73,7 +73,7 @@ Now in the tank (or whatever object you have doing the shooting), add a {{< gd-i
 
 ![alt](/godot_recipes/3.x/img/3d_shoot_02.png)
 
-次に、インスタンス化する弾シーンを追加する方法です：
+次に、インスタンス化する弾シーンを追加する方法です。
 
 ```gdscript
 @export var Bullet: PackedScene

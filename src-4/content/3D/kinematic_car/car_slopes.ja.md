@@ -7,7 +7,7 @@ ghcommentid: 44
 
 ## 課題
 
-[キネマティックカー](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/) は斜面を登れるようになりましたが、見た目が少し不自然です：
+[キネマティックカー](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/) は斜面を登れるようになりましたが、見た目が少し不自然です。
 
 ![alt](/godot_recipes/3.x/img/3d_car_10.png)
 

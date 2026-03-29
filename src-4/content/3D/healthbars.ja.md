@@ -69,7 +69,7 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 さらに、HPバーテクスチャのサイズに合わせてビューポートのサイズを設定する必要があり、そのサイズは`(200, 26)`です。
 
-インスタンス化する際に、`HealthBar2D` を {{< gd-icon Viewport >}}`Viewport` の子要素として配置してください。シーン構成は以下のようになるはずです：
+インスタンス化する際に、`HealthBar2D` を {{< gd-icon Viewport >}}`Viewport` の子要素として配置してください。シーン構成は以下のようになるはずです。
 
 ![alt](/godot_recipes/4.x/img/3d_bars_03a.png)
 

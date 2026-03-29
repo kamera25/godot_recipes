@@ -15,7 +15,7 @@ ghcommentid: 38
 
 ![alt](/godot_recipes/4.x/img/3d_click_01.png)
 
-このデモで使用するアクターは三角柱メッシュです：
+このデモで使用するアクターは三角柱メッシュです。
 
 ![alt](/godot_recipes/4.x/img/3d_click_02.png)
 

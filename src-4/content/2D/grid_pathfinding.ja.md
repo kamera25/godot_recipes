@@ -45,7 +45,7 @@ func initialize_grid():
 
 このコードでは、画面サイズを「セルサイズ」で割ることでグリッド全体の寸法を計算しています。これにより、`AStarGrid2D` オブジェクトの `size` プロパティを適切に設定できます。
 
-The `offset` property will come into play when we ask for a path between two points. Using `cell_size / 2` means the path will be calculated from the center of each cell rather than the corners.
+`offset`プロパティは、2点間のパスを取得する際に重要な役割を果たします。`cell_size / 2`を使用することで、パスはセルの角ではなく中心から計算されるようになります。
 
 最後に、`AStarGrid2D`のプロパティを設定または変更した後は必ず`update()`メソッドを呼び出す必要があります。
 
@@ -53,7 +53,7 @@ The `offset` property will come into play when we ask for a path between two poi
 
 本デモでは、グリッドの描画をプログラムコードで実装します。実際のゲームアプリケーションでは、通常 `TileMap` クラスやその他の視覚的表現を用いて世界を表現になります。
 
-以下は、グリッドを描画するためのコード例です：
+以下は、グリッドを描画するためのコード例です。
 
 ```gdscript
 func _draw():
@@ -99,11 +99,11 @@ func update_path():
     $Line2D.points = PackedVector2Array(astar_grid.get_point_path(start, end))
 ```
 
-以下が結果です：
+以下が結果です。
 
 ![alt](/godot_recipes/4.x/img/astar_grid_02.png)
 
-注：2点間に斜線が引かれています。これはデフォルト設定では経路に斜め移動が含まれるためです。この設定は`diagonal_mode`を変更することで変更可能です：
+注：2点間に斜線が引かれています。これはデフォルト設定では経路に斜め移動が含まれるためです。この設定は`diagonal_mode`を変更することで変更可能です。
 
 * `DIAGONAL_MODE_ALWAYS` - デフォルト値。対角移動を使用可能。
 * `DIAGOAL_MODE_NEVER` - すべての移動は直行移動のみ。
@@ -116,7 +116,7 @@ func update_path():
 astar_grid.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER
 ```
 
-現在可能な動きは直交移動のみです：
+現在可能な動きは直交移動のみです。
 
 ![alt](/godot_recipes/4.x/img/astar_grid_03.png)
 
@@ -164,7 +164,7 @@ func _input(event):
 
 ![alt](/godot_recipes/4.x/img/astar_grid_03.png)
 
-マンハッタン距離は南北または東西方向の距離のみを考慮しますが、以下の点に注意が必要です：
+マンハッタン距離は南北または東西方向の距離のみを考慮しますが、以下の点に注意が必要です。
 
 ![alt](/godot_recipes/4.x/img/astar_grid_manhattan.png)
 

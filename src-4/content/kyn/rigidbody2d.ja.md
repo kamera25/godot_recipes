@@ -78,7 +78,7 @@ The body’s behavior is also affected by the world, via the Project Settings ->
 - 角加速度減衰係数：`5`
 - 直線加速度減衰係数：`1`
 
-以下がコードです：
+以下がコードです。
 
 ```gdscript
 extends RigidBody2D
@@ -118,7 +118,7 @@ func _physics_process(delta):
 
 最終的に、物理関連の処理は`_physics_process()`関数内で呼び出されるべきです。この部分では、船が向いている方向に沿って推力を発生させるために`applied_force`を設定します。さらに、船を回転させるため`applied_torque`も適切に設定します。
 
-シーンを再生 - 自由に飛行できるはずです：
+シーンを再生 - 自由に飛行できるはずです。
 
 ![alt](/godot_recipes/3.x/img/rigidbody_ship1.gif)
 

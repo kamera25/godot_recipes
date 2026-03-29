@@ -24,7 +24,7 @@ var current_orbits = 0  # Number of orbits the jumper has completed
 var orbit_start = null  # Where the orbits started
 ```
 
-次に、モードを設定する方法が必要です：
+次に、モードを設定する方法が必要です。
 
 ```gdscript
 func set_mode(_mode):
