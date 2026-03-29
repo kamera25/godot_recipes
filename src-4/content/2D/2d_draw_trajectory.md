@@ -17,7 +17,7 @@ For this example, we're using the "Ballistic Bullet" from this recipe:
 
 * [Ballistic bullet](/godot_recipes/3.x/2d/ballistic_bullet/)
 
-and a tank set up like so, with a {{< gd-icon Position2D >}}`Position2D` designating the "muzzle" where the bullet will be spawned:
+and a tank set up like so, with a {{< gd-icon Marker2D >}}`Marker2D` designating the "muzzle" where the bullet will be spawned:
 
 ![alt](/godot_recipes/3.x/img/tank_01.png)
 
@@ -26,7 +26,7 @@ In the tank's script, we instance the bullet like so:
 ```gdscript
 func _unhandled_input(event):
     if event.is_action_released("shoot") and can_shoot:
-        var b = Bullet.instance()
+        var b = Bullet.instantiate()
         owner.add_child(b)
         b.transform = $Barrel/Muzzle.global_transform
         b.velocity = b.transform.x * muzzle_velocity
@@ -53,9 +53,9 @@ To improve the line's appearance, we've set the **Width** to `15` and all of the
 Now we're ready to draw the line. The goal will be to move along the projected trajectory and add points to the line as we go. Since we know the starting velocity and the gravity that the bullet is using, we can use the same calculation.
 
 ```gdscript
-onready var tank = $Tank
-onready var muzzle = $Tank/Barrel/Muzzle
-onready var line = $Line2D
+@onready var tank = $Tank
+@onready var muzzle = $Tank/Barrel/Muzzle
+@onready var line = $Line2D
 var max_points = 250
 
 func update_trajectory(delta):

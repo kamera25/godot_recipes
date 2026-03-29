@@ -30,10 +30,10 @@ Use the "Control points" mode to adjust the "curviness" of the line.
 You can use {{< gd-icon PathFollow2D >}}`PathFollow2D` to automatically move along a path. However, if you're using a kinematic body, this will cause problems with collisions, because you're not using the body's movement methods. For this reason, we'll instead use the path's points as "targets" for the body to move towards.
 
 ```gdscript
-extends KinematicBody2D
+extends CharacterBody2D
 
 var move_speed = 100
-export (NodePath) var patrol_path
+@export var patrol_path: NodePath
 var patrol_points
 var patrol_index = 0
 var velocity = Vector2.ZERO

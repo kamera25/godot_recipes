@@ -20,7 +20,7 @@ ghcommentid: 14
 ```gdscript
 extends Node2D
 
-export var rotation_speed = PI
+@export var rotation_speed = PI
 
 
 func _process(delta):
@@ -32,9 +32,9 @@ func _process(delta):
 この手法は3D空間でも同じように機能します。
 
 ```gdscript
-extends Spatial
+extends Node3D
 
-export var rotation_speed = PI
+@export var rotation_speed = PI
 
 
 func _process(delta):

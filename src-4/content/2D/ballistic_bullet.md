@@ -48,13 +48,13 @@ Using the [standard equations of motion](https://www.khanacademy.org/science/phy
 Now in your object that's doing the shooting, you can instance the bullet and set its initial properties. Put this in whatever function/input handles shooting:
 
 ```gdscript
-export var muzzle_velocity = 350
-export var gravity = 250
+@export var muzzle_velocity = 350
+@export var gravity = 250
 
 func shoot():
-    var b = Bullet.instance()
+    var b = Bullet.instantiate()
     owner.add_child(b)
-    b.transform = $Barrel/Position2D.global_transform
+    b.transform = $Barrel/Marker2D.global_transform
     b.velocity = b.transform.x * muzzle_velocity
     b.gravity = gravity
 ```

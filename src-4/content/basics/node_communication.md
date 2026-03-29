@@ -130,7 +130,7 @@ health_changed.emit(health)
 In the `UI` script we have:
 
 ```gdscript
-onready var label = $VBoxContainer/HBoxContainer/Label
+@onready var label = $VBoxContainer/HBoxContainer/Label
 
 func update_health(value):
     label.text = str(value)

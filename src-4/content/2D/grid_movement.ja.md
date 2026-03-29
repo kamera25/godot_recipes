@@ -72,7 +72,7 @@ func move(dir):
 移動先タイルへの進入が許可されているかどうかを判定するために、{{< gd-icon RayCast2D >}}`RayCast2D` 機能を使用します。
 
 ```gdscript
-onready var ray = $RayCast2D
+@onready var ray = $RayCast2D
 
 func move(dir):
     ray.target_position = inputs[dir] * tile_size

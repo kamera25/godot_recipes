@@ -43,7 +43,7 @@ We have two game objects to make: the player ("jumper") and the circle.
 
 ### Jumper
 
-For movement and collision, we're going to use a `Area2D`. To be fair, we could use `KinematicBody2D` here too, and it would work just as well. However, we don't really need collision in this game, we just need to know when the jumper contacts a circle. Let's add the following nodes:
+For movement and collision, we're going to use a `Area2D`. To be fair, we could use `CharacterBody2D` here too, and it would work just as well. However, we don't really need collision in this game, we just need to know when the jumper contacts a circle. Let's add the following nodes:
 
 * `Area2D` ("Jumper")
   * `Sprite`
@@ -143,7 +143,7 @@ Here's the starting node setup:
   * `Sprite`
   * `CollisionShape2D`
   * `Node2D` ("Pivot")
-      * `Position2D` ("OrbitPosition")
+      * `Marker2D` ("OrbitPosition")
 
 The "Pivot" node is how we'll make the player orbit the circle. The "OrbitPosition" will be offset by whatever the size of the circle is, and the player will follow it.
 
@@ -154,7 +154,7 @@ Add a circle shape to the `CollisionShape2D` and attach a script to the root nod
 ```gdscript
 extends Area2D
 
-onready var orbit_position = $Pivot/OrbitPosition
+@onready var orbit_position = $Pivot/OrbitPosition
 var radius = 100
 var rotation_speed = PI
 

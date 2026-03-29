@@ -19,7 +19,7 @@ In this example, we're going to use a method called "Context Behavior", which ai
 
 * [James Keats: AI Context Behaviors](https://jameskeats.com/portfolio/contextbhvr.html)
 
-For this demo, we'll use a generic "Agent" object. In your game, this might be a car driving around a track, a monster patrolling a dungeon, or some other kind of game entity. Our agent will use a {{< gd-icon KinematicBody2D >}}`KinematicBody2D`, but remember, you can use this technique with any kind of object - the algorithm is about the entity choosing a direction to move, how it moves is entirely separate.
+For this demo, we'll use a generic "Agent" object. In your game, this might be a car driving around a track, a monster patrolling a dungeon, or some other kind of game entity. Our agent will use a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`, but remember, you can use this technique with any kind of object - the algorithm is about the entity choosing a direction to move, how it moves is entirely separate.
 
 ### The Algorithm
 
@@ -74,12 +74,12 @@ Note that we've made the `num_rays` adjustable, so that you can find the number 
 
 
 ```gdscript
-extends KinematicBody2D
+extends CharacterBody2D
 
-export var max_speed = 350
-export var steer_force = 0.1
-export var look_ahead = 100
-export var num_rays = 8
+@export var max_speed = 350
+@export var steer_force = 0.1
+@export var look_ahead = 100
+@export var num_rays = 8
 
 # context array
 var ray_directions = []

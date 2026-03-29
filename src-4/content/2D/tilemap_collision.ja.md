@@ -7,11 +7,19 @@ ghcommentid: 19
 
 ## 課題
 
+<<<<<<< HEAD
  `\ KinematicBody2D` キャラクターが `TileMap` と衝突している状況にあり、どのタイルに衝突したのかを判定したいです。
 
 ## 解決策
 
 When a `\ KinematicBody2D` collides, the collision data is returned in a `KinematicCollision2D` object. The `TileMap` acts as a single collider, so if you access the `collider` property, it will be the `TileMap` node itself.
+=======
+ `CharacterBody2D` キャラクターが `TileMap` と衝突している状況にあり、どのタイルに衝突したのかを判定したいです。
+
+## 解決策
+
+When a `CharacterBody2D` collides, the collision data is returned in a `KinematicCollision2D` object. The `TileMap` acts as a single collider, so if you access the `collider` property, it will be the `TileMap` node itself.
+>>>>>>> update-godot3-to-4-syntax-15089405743024275934
 
 その後、衝突位置にある{{< gd-icon TileMap >}}`TileMap`のタイルを特定が必要です。
 

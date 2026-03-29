@@ -57,7 +57,7 @@ func draw_triangle(pos, dir, size, color):
 ```gdscript
 extends CanvasLayer
 
-onready var draw = $DebugDraw3D
+@onready var draw = $DebugDraw3D
 
 func _ready():
     if not InputMap.has_action("toggle_debug"):

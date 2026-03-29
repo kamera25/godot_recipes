@@ -102,7 +102,7 @@ At any given point along the path, the {{< gd-icon PathFollow2D >}}`PathFollow2D
 
 - [Interpolated Camera](/godot_recipes/3.x/3d/interpolated_camera/)
 - [Inputs: Introduction](/godot_recipes/3.x/input/input_intro/)
-- [KinematicBody: Movement](/godot_recipes/3.x/3d/kinematic_body/) -->
+- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/) -->
 
 <!-- #### Like video?
 

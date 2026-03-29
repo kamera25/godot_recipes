@@ -16,7 +16,7 @@ pre: "07. "
 ```gdscript
 extends CanvasLayer
 
-onready var tween = $Tween
+@onready var tween = $Tween
 
 func appear():
     get_tree().call_group("buttons", "set_disabled", false)
@@ -74,7 +74,7 @@ func set_score(value):
 シーン「Circle」を開き、「Tween」ノードを「MoveTween」という名前で追加してください。これをサークルスクリプトの先頭に追加します。
 
 ```gdscript
-onready var move_tween = $MoveTween
+@onready var move_tween = $MoveTween
 
 var move_range = 100  # Distance the circle moves.
 var move_speed = 1.0  # The circle's movement speed.

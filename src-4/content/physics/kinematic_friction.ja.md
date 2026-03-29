@@ -15,7 +15,7 @@ draft: false
 以下に、シンプルな運動力学に基づくプラットフォーマーキャラクター用のコードを示します。
 
 ```gdscript
-extends KinematicBody2D
+extends CharacterBody2D
 
 var speed = 1200
 var jump_speed = -1800

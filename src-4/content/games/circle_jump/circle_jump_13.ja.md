@@ -48,7 +48,7 @@ AdMobアプリケーションIDを`android:value=""/>`行に貼り付けてく�
 以前のプラグインを使用していた場合、`settings`シングルトン内でプラグインの初期化と広告の表示/非表示処理を実装していました。しかし、`AdMob`ノードがこの機能を管理できるようになったため、このコードは不要になりました。代わりに、`Main`内の該当呼び出し箇所を`AdMob`ノードへの呼び出しに置き換えます。
 
 ```gdscript
-onready var admob = $Admob
+@onready var admob = $Admob
 ```
 
 これまでsettings.hide_ad_banner()などを呼び出していた箇所は、すべて以下の新しい同等関数で置き換え可能です

@@ -106,4 +106,4 @@ Once you understand how to use node paths, you'll see how easy it is to referenc
 
 <!-- ## Related Recipes
 
-- [Using KinematicBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->
+- [Using CharacterBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->

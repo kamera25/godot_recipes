@@ -16,9 +16,9 @@ ghcommentid: 42
 以下の新しい変数を`car_base.gd`に追加してください。
 
 ```gdscript
-export var slip_speed = 9.0
-export var traction_slow = 0.75
-export var traction_fast = 0.02
+@export var slip_speed = 9.0
+@export var traction_slow = 0.75
+@export var traction_fast = 0.02
 
 var drifting = false
 ```

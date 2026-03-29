@@ -32,8 +32,8 @@ Now, let's look at the script for the button:
 extends TextureButton
 class_name RadialMenuButton
 
-export var radius = 120
-export var speed = 0.25
+@export var radius = 120
+@export var speed = 0.25
 
 var num
 var active = false

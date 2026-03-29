@@ -52,7 +52,7 @@ signal health_changed
 使用するプロパティです。
 
 ```gdscript
-export (int) var max_value
+@export var max_value: int
 
 var current_value = 0
 ```
@@ -89,7 +89,7 @@ class_name PlayerHealth
 signal health_empty
 signal health_changed
 
-export (int) var max_value
+@export var max_value: int
 
 var current_value = 0
 
@@ -123,8 +123,13 @@ func heal(amount):
 
 リソースの作成と保存が完了したら、いよいよ使用準備が整います。このシナリオでは、以下のオブジェクトが存在します。
 
+<<<<<<< HEAD
 * プレイヤー： {{< gd-icon \ KinematicBody2D >}}`\ KinematicBody2D`
 * UI要素：HPを表示する {{< gd-icon TextureProgressBar >}}`ProgressTexture` を含むコンポーネント
+=======
+* プレイヤー： {{< gd-icon CharacterBody2D >}}`CharacterBody2D`
+* UI要素：健康状態を表示する {{< gd-icon TextureProgressBar >}}`ProgressTexture` を含むコンポーネント
+>>>>>>> update-godot3-to-4-syntax-15089405743024275934
 * 回復エリア：その範囲内に入った対象を回復する {{< gd-icon Area2D >}}`Area2D`
 * スパイクゾーン：接触するとダメージを与える {{< gd-icon TileMap >}}`TileMap` のタイルセット
 
@@ -133,7 +138,7 @@ func heal(amount):
 プレイヤー側では、インスペクタ経由でリソースを割り当てるために変数を `エクスポート` しています。移動処理コードの一部として、プレイヤーがスパイクに接触した際には `hurt()` 関数を呼び出すようになっています。
 
 ```gdscript
-export (Resource) var health
+@export var health: Resource
 
 func _ready():
     health.reset()
@@ -155,7 +160,7 @@ func _physics_process(delta):
 最後に、UIにHPステータスを表示するために、同じHPリソースを接続し、その`health_changed`シグナルに接続します。
 
 ```gdscript
-export (Resource) var player_health
+@export var player_health: Resource
 
 func _ready():
     if player_health:

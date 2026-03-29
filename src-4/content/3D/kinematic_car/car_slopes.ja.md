@@ -60,8 +60,16 @@ if $FrontRay.is_colliding() or $RearRay.is_colliding():
 
 ## 関連レシピ
 
+<<<<<<< HEAD
 - [KinematicCar：基本モデル](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)
 - [KinematicBody：表面との整列テクニック](/godot_recipes/4.x/ja/3d/3d_align_surface/)
+=======
+## KinematicCar：ベースモデル
+[KinematicCar：基本モデル](/godot_recipes/3.x/3d/kinematic_car/car_base/)
+
+## KinematBody：表面との整列方法
+[CharacterBody3D：表面との整列テクニック](/godot_recipes/3.x/3d/3d_align_surface/)
+>>>>>>> update-godot3-to-4-syntax-15089405743024275934
 
 #### この動画が気に入ったら？
 

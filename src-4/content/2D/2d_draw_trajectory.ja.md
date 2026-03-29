@@ -17,7 +17,7 @@ ghcommentid: 32
 
 * [弾道弾の実装方法](/godot_recipes/4.x/ja/2d/ballistic_bullet/)
 
-そしてこのように設定したタンクで、弾丸が生成される「銃口」位置を指定する{{< gd-icon Position2D >}}`Position2D`を設定します。
+そしてこのように設定したタンクで、弾丸が生成される「銃口」位置を指定する{{< gd-icon Marker2D >}}`Marker2D`を設定します。
 
 ![alt](/godot_recipes/3.x/img/tank_01.png)
 
@@ -26,7 +26,7 @@ ghcommentid: 32
 ```gdscript
 func _unhandled_input(event):
     if event.is_action_released("shoot") and can_shoot:
-        var b = Bullet.instance()
+        var b = Bullet.instantiate()
         owner.add_child(b)
         b.transform = $Barrel/Muzzle.global_transform
         b.velocity = b.transform.x * muzzle_velocity
@@ -53,9 +53,9 @@ func _unhandled_input(event):
 これで線を引く準備が整いました。目標は、投影された軌道に沿って移動しながら、進行状況に応じて線に点を追加していくことです。発射時の初速度と弾丸が使用する重力がわかっているので、同じ計算式を適用できます。
 
 ```gdscript
-onready var tank = $Tank
-onready var muzzle = $Tank/Barrel/Muzzle
-onready var line = $Line2D
+@onready var tank = $Tank
+@onready var muzzle = $Tank/Barrel/Muzzle
+@onready var line = $Line2D
 var max_points = 250
 
 func update_trajectory(delta):

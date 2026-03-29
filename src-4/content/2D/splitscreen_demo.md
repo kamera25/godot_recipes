@@ -18,7 +18,7 @@ We'll also look at a quick way to set up a minimap display.
 ### Game setup
 
 We won't spend a lot of time on the setup of the game world. The two players
-are {{< gd-icon KinematicBody2D >}}`KinematicBody2D` objects using no-frills 8-way movement.
+are {{< gd-icon CharacterBody2D >}}`CharacterBody2D` objects using no-frills 8-way movement.
 
 {{% notice note %}}
 If you need help setting up this part, see the following section in the official Godot docs: [2D Movement Overview](http://docs.godotengine.org/en/stable/tutorials/2d/2d_movement.html).
@@ -29,7 +29,7 @@ section: "right_1" to Right Arrow, "right_2" to D, etc. Note that by naming them
 this way, we can save time in the code by using:
 
 {{< highlight gdscript>}}
-export var id = 0
+@export var id = 0
 
 func get_input():
     velocity = Vector2()
@@ -62,7 +62,7 @@ Create a node to serve as the root. I like to use `Node` since it has no propert
 of its own - it's just there to contain the rest of the scene.
 
 By themselves, {{< gd-icon Viewport >}}`Viewport` nodes don't have position information (they don't
-inherit from {{< gd-icon Node3D >}}`Spatial` or {{< gd-icon Node2D >}}`Node2D`). We're going to use {{< gd-icon SubViewportContainer >}}`ViewportContainer`,
+inherit from {{< gd-icon Node3D >}}`Node3D` or {{< gd-icon Node2D >}}`Node2D`). We're going to use {{< gd-icon SubViewportContainer >}}`ViewportContainer`,
 a {{< gd-icon Control >}}`Control` node, to hold each viewport. To keep them arranged side-by-side, we'll
 use an {{< gd-icon HBoxContainer >}}`HBoxContainer`.
 
@@ -119,11 +119,11 @@ We can handle this in code. Attach a script to `Main` and add the following:
 {{< highlight gdscript>}}
 extends Node
 
-onready var viewport1 = $Viewports/ViewportContainer1/Viewport1
-onready var viewport2 = $Viewports/ViewportContainer2/Viewport2
-onready var camera1 = $Viewports/ViewportContainer1/Viewport1/Camera2D
-onready var camera2 = $Viewports/ViewportContainer2/Viewport2/Camera2D
-onready var world = $Viewports/ViewportContainer1/Viewport1/World
+@onready var viewport1 = $Viewports/ViewportContainer1/Viewport1
+@onready var viewport2 = $Viewports/ViewportContainer2/Viewport2
+@onready var camera1 = $Viewports/ViewportContainer1/Viewport1/Camera2D
+@onready var camera2 = $Viewports/ViewportContainer2/Viewport2/Camera2D
+@onready var world = $Viewports/ViewportContainer1/Viewport1/World
 
 func _ready():
     viewport2.world_2d = viewport1.world_2d

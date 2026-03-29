@@ -73,7 +73,7 @@ Now we can add some obstacles. You can add {{< gd-icon StaticBody2D >}}`StaticBo
 We'll use the {{< gd-icon RayCast2D >}}`RayCast2D` to determine whether a move to the next tile is allowed.
 
 ```gdscript
-onready var ray = $RayCast2D
+@onready var ray = $RayCast2D
 
 func move(dir):
     ray.target_position = inputs[dir] * tile_size

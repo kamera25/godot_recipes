@@ -43,7 +43,11 @@ pre: "01. "
 
 ### ジャンパー（Jumper）
 
+<<<<<<< HEAD
 移動と衝突判定には `Area2D` を使用します。公平を期すために、ここでは `\ KinematicBody2D` も使用できますが、同等の機能を果たせます。ただし、このゲームでは正確な衝突検出は不要で、ジャンプキャラが円に接触したタイミングだけを把握できれば十分です。以下のノードを追加しましょう。
+=======
+移動と衝突判定には `Area2D` を使用します。公平を期すために、ここでは `CharacterBody2D` も使用できますが、同等の機能を果たせます。ただし、このゲームでは正確な衝突検出は不要で、ジャンプキャラが円に接触したタイミングだけを把握できれば十分です。以下のノードを追加しましょう。
+>>>>>>> update-godot3-to-4-syntax-15089405743024275934
 
 * `Area2D` ("Jumper")
   * `Sprite`
@@ -148,7 +152,7 @@ void fragment() {
     * `Sprite`
     * `CollisionShape2D`
     * `Node2D` ("Pivot": ピボットノード)
-      * `Position2D` ("OrbitPosition": 軌道位置)
+      * `Marker2D` ("OrbitPosition": 軌道位置)
 
 「ピボット」ノードを使って、プレイヤーが円軌道を描くようにします。「軌道位置」は円のサイズに応じてオフセットされ、プレイヤーはこの位置に追従します。
 
@@ -159,7 +163,7 @@ void fragment() {
 ```gdscript
 extends Area2D
 
-onready var orbit_position = $Pivot/OrbitPosition
+@onready var orbit_position = $Pivot/OrbitPosition
 var radius = 100
 var rotation_speed = PI
 

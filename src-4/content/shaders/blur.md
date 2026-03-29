@@ -34,7 +34,7 @@ extends Node
 # Add a ColorRect or other Control set to fill the screen
 # Place it lower in the tree and/or place in CanvasLayer
 # so it's on top of the rest of the scene.
-onready var blur = $Blur
+@onready var blur = $Blur
 var blur_amount = 0
 
 func _process(delta):

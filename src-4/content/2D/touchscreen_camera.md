@@ -25,7 +25,7 @@ Here are the variables we'll need:
 ```gdscript
 extends Camera2D
 
-export (NodePath) var target
+@export var target: NodePath
 
 # Optional: export these properties for convenient editing.
 var target_return_enabled = true
@@ -140,7 +140,7 @@ For completeness, here's the full `TouchCamera.gd` script:
 ```gdscript
 extends Camera2D
 
-export (NodePath) var target
+@export var target: NodePath
 
 var target_return_enabled = true
 var target_return_rate = 0.02

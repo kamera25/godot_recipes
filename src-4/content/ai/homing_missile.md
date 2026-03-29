@@ -36,7 +36,7 @@ Here's the starting script:
 ```gdscript
 extends Area2D
 
-export var speed = 350
+@export var speed = 350
 
 var velocity = Vector2.ZERO
 var acceleration = Vector2.ZERO
@@ -66,7 +66,7 @@ To change the behavior to seek a target, we'll use the `acceleration`. However,
 we don't want the missile to "turn on a dime", so we'll add a variable to control its "steering" force. This will give the missile a turning radius that can be adjusted for different behavior. We also need a `target` variable so that the missile knows what to chase. We'll set that in `start()` as well:
 
 ```gdscript
-export var steer_force = 50.0
+@export var steer_force = 50.0
 
 var target = null
 
@@ -112,8 +112,8 @@ Here's the full script, including the above effects. See [related recipes](#rela
 ```gdscript
 extends Area2D
 
-export var speed = 350
-export var steer_force = 50.0
+@export var speed = 350
+@export var steer_force = 50.0
 
 var velocity = Vector2.ZERO
 var acceleration = Vector2.ZERO

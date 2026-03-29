@@ -46,7 +46,7 @@ func _process(delta):
 
 You can also interpolate between vectors. Both `Vector2` and `Vector3` provide `linear_interpolate()` methods for this.
 
-For example, to find a vector that's halfway between a `Spatial` node's forward and left direction vectors:
+For example, to find a vector that's halfway between a `Node3D` node's forward and left direction vectors:
 
 ```gdscript
 var forward = -transform.basis.z

@@ -130,7 +130,7 @@ health_changed.emit(health)
 スクリプト「UI」には以下が含まれています。
 
 ```gdscript
-onready var label = $VBoxContainer/HBoxContainer/Label
+@onready var label = $VBoxContainer/HBoxContainer/Label
 
 func update_health(value):
     label.text = str(value)

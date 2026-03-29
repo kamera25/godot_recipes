@@ -30,10 +30,10 @@ ghcommentid: 28
 ```gdscript
 extends Camera2D
 
-export var decay = 0.8  # How quickly the shaking stops [0, 1].
-export var max_offset = Vector2(100, 75)  # Maximum hor/ver shake in pixels.
-export var max_roll = 0.1  # Maximum rotation in radians (use sparingly).
-export (NodePath) var target  # Assign the node this camera will follow.
+@export var decay = 0.8  # How quickly the shaking stops [0, 1].
+@export var max_offset = Vector2(100, 75)  # Maximum hor/ver shake in pixels.
+@export var max_roll = 0.1  # Maximum rotation in radians (use sparingly).
+@export var target: NodePath # Assign the node this camera will follow.
 
 var trauma = 0.0  # Current shake strength.
 var trauma_power = 2  # Trauma exponent. Use [2, 3].
@@ -84,13 +84,13 @@ func shake():
 
 このアプローチの欠点は、フレームごとにランダム値が大きく変化するため、操作感が不安定になりやすい点です。より「自然な」ランダム性を得るためには、「ノイズ」と呼ばれる概念を活用する方法があります。
 
-ノイズ（特に*勾配ノイズ*）とは、より自然な見た目の「ランダム」パターンを生成するための手法です。これを実現するためにGodotでは、[OpenSimplexNoise](https://docs.godotengine.org/ja/latest/classes/class_opensimplexnoise.html)クラスが提供されています。
+ノイズ（特に*勾配ノイズ*）とは、より自然な見た目の「ランダム」パターンを生成するための手法です。これを実現するためにGodotでは、[FastNoiseLite](https://docs.godotengine.org/ja/latest/classes/class_opensimplexnoise.html)クラスが提供されています。
 
 {{% notice info %}}
 最も広く知られているグラジエントノイズアルゴリズムは、[パーリンノイズ](https://ja.wikipedia.org/wiki/Perlinノイズ)と呼ばれています。このアルゴリズムとその後継である[シンプレックスノイズ](https://ja.wikipedia.org/wiki/Simplex_noise)は特許で保護されているため、Godotでは[OpenSimplex](https://en.wikipedia.org/wiki/OpenSimplex_noise)という別のアルゴリズムを使用してノイズを生成しています。
 {{% /notice %}}
 
-`OpenSimplexNoise` は、3D空間上に点の「雲」を生成することで動作します。各点には `-1` から `1` までの値が得られます。以下に、`OpenSimplexNoise` によって生成されたノイズの具体例を2つ示します。画像では、各ピクセルの白色値が対応する点におけるノイズ値にマッピングされています。
+`FastNoiseLite` は、3D空間上に点の「雲」を生成することで動作します。各点には `-1` から `1` までの値が得られます。以下に、`FastNoiseLite` によって生成されたノイズの具体例を2つ示します。画像では、各ピクセルの白色値が対応する点におけるノイズ値にマッピングされています。
 
 ![alt](/godot_recipes/3.x/img/2d_noise_example.png)
 
@@ -99,7 +99,7 @@ func shake():
 以下のコードをスクリプトの最上部に追加してください。
 
 ```gdscript
-onready var noise = OpenSimplexNoise.new()
+@onready var noise = FastNoiseLite.new()
 var noise_y = 0
 
 func _ready():

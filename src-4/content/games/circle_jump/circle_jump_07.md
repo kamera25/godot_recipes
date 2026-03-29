@@ -16,7 +16,7 @@ Here's the updated `BaseScreen.gd`:
 ```gdscript
 extends CanvasLayer
 
-onready var tween = $Tween
+@onready var tween = $Tween
 
 func appear():
     get_tree().call_group("buttons", "set_disabled", false)
@@ -74,7 +74,7 @@ Part of the level progression is going to be increased difficulty. One way we'll
 Open up the `Circle` scene and add a `Tween` node called "MoveTween". Add this to the top of the circle script:
 
 ```gdscript
-onready var move_tween = $MoveTween
+@onready var move_tween = $MoveTween
 
 var move_range = 100  # Distance the circle moves.
 var move_speed = 1.0  # The circle's movement speed.

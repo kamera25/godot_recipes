@@ -31,7 +31,7 @@ The screen should start offscreen, so set the _Offset_ on the root node to `(500
 ```gdscript
 extends CanvasLayer
 
-onready var tween = $Tween
+@onready var tween = $Tween
 
 func appear():
     tween.interpolate_property(self, "offset:x", 500, 0,
