@@ -5383,7 +5383,7 @@ msgstr "`velocity`はグローバル座標系で定義されていますが、�
 
 #: 3D/assets/character_controller.md
 msgid "You've imported a rigged, animated 3D character in Godot and set up its animations using {{< gd-icon AnimationTree >}}`AnimationTree`. Now you need to implement movement: you need a character controller."
-msgstr "Godot環境でリグ設定済みのアニメーション3Dキャラクターをインポートし、{{< gd-icon AnimationTree >}}`AnimationTree`を使ってそのアニメーションを設定したところですね。次は移動機能を実装が必要です。キャラクタコントローラが必要です。"
+msgstr "Godot環境でリグ設定済みのアニメーション3Dキャラクターをインポートし、{{< gd-icon AnimationTree >}}`AnimationTree`を使ってそのアニメーションを設定したところです。次は移動機能を実装が必要です。キャラクタコントローラが必要です。"
 
 #: 3D/assets/character_controller.md
 msgid "Add one as a child of the root node, and then add a {{< gd-icon Camera3D >}}`Camera3D` as a child of that."
@@ -5840,10 +5840,10 @@ msgstr "### 基本スクリプト"
 #: 3D/kinematic_car/car_ai.md 3D/kinematic_car/car_camera.md
 #: 3D/kinematic_car/car_traction.md
 msgid ""
-"- [Kinematic Car: Base](/godot_recipes/3.x/3d/kinematic_car/car_base/)\n"
-"- [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)\n"
+"- [Kinematic Car: Base](/godot_recipes/4.x/3d/kinematic_car/car_base/)\n"
+"- [2D: Car Steering recipe](/godot_recipes/4.x/2d/car_steering)\n"
 "- [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)\n"
-"- [3D: KinematicBody Movement](/godot_recipes/3.x/3d/kinematic_body/)"
+"- [3D: KinematicBody Movement](/godot_recipes/4.x/3d/kinematic_body/)"
 msgstr ""
 "- [キネマティックカー：基本モデル](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)\n"
 "- [2D: ステアリング操作レシピ](/godot_recipes/4.x/ja/2d/car_steering)\n"
@@ -5994,7 +5994,7 @@ msgstr "新しいシーンを{{< gd-icon Camera3D >}}`Camera3D`で追加しま�
 
 #: 3D/kinematic_car/car_camera.md
 msgid "You want a \"chase camera\" that can follow your car (or any other object)."
-msgstr "以下のような「追従カメラ」をお探しですね：車（またはその他の物体）を追跡できる機能。"
+msgstr "車（またはその他の物体）を追跡できる「追従カメラ」を実装したい。"
 
 #: 3D/kinematic_car/car_camera.md
 msgid "![alt](/godot_recipes/4.x/img/3d_car_07.png)"
@@ -6740,7 +6740,7 @@ msgstr "![alt](/godot_recipes/4.x/img/attack2.png)"
 
 #: animation/melee_attacks.md
 msgid "You want to implement a melee attack, such as a sword or punch."
-msgstr "剣やパンチなどの近接攻撃を実装したいという。"
+msgstr "剣やパンチなどの近接攻撃を実装したい。"
 
 #: animation/melee_attacks.md
 msgid "![alt](/godot_recipes/4.x/img/melee_attack_04.gif)"
@@ -12456,11 +12456,11 @@ msgstr "- [プラットフォームキャラクター](/godot_recipes/4.x/ja/ai/
 
 #: physics/top_down_friction.md
 msgid "Top-down Friction"
-msgstr "顶部到底部摩擦力"
+msgstr "見下ろし視点での摩擦"
 
 #: physics/top_down_friction.md
 msgid "You want to add friction and acceleration to your top-down character, giving it a smoother feel."
-msgstr "トップダウン視点で操作するキャラクターに摩擦や加速度を追加し、よりスムーズな操作性を実現したいという。"
+msgstr "見下ろし視点で操作するキャラクターに摩擦や加速度を追加し、よりスムーズな操作性を実現したい。"
 
 #: physics/smooth_rigid_move.md physics/smooth_rigid_rotate.md
 msgid "Using {{< gd-icon RigidBody2D >}}`RigidBody2D` can be tricky. Because it's controlled by Godot's physics engine, you need to apply forces rather than moving it directly. Before doing anything with rigid bodies, I highly recommend looking at the [RigidBody2D API doc](https://docs.godotengine.org/en/stable/classes/class_rigidbody2d.html)."
@@ -12862,7 +12862,7 @@ msgid ""
 "movement that remained after the slide collision occurred. Setting that value back\n"
 "to the character's `velocity` allows us to smoothly move up and down slopes. Try\n"
 "removing `velocity =` and see what happens if you don't do this."
-msgstr ""
+msgstr "`move_and_slide()`を使用する場合、この関数は衝突滑りが発生した後に残った移動ベクトルを返します。その値を再度キャラクターの`velocity`に設定することで、斜面をスムーズに上下に移動させることができます。この挙動が不要であれば`velocity=`を削除してください。"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -12923,7 +12923,11 @@ msgid ""
 "\tget_input()\n"
 "\tmove_and_collide(velocity * delta)\n"
 "{{< /highlight >}}"
-msgstr "{{< /highlight >}}"
+msgstr ""
+"func _physics_process(delta):\n"
+"\tget_input()\n"
+"\tmove_and_collide(velocity * delta)\n"
+"{{< /highlight >}}"
 
 #: physics/Godot3_kinematic2d.md
 msgid "Try changing the function to `move_and_slide(velocity)` and running again. Note that we removed `delta` from the velocity calculation."
@@ -12981,15 +12985,15 @@ msgstr ""
 
 #: physics/Godot3_kinematic2d.md
 msgid "Attach a script to the {{< gd-icon KinematicBody2D >}}`KinematicBody2D` and add the following code:"
-msgstr ""
+msgstr "{{< gd-icon KinematicBody2D >}}`KinematicBody2D`にスクリプトをアタッチし、以下のコードを追加してください。"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
 "var speed = 250\n"
 "var velocity = Vector2()"
 msgstr ""
-"var 速度 = 250\n"
-"var 速度 = Vector2()"
+"var speed = 250\n"
+"var velocity = Vector2()"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -12997,9 +13001,9 @@ msgid ""
 "        get_tree().reload_current_scene()\n"
 "{{< /highlight >}}"
 msgstr ""
-"もし position.y が 600 より大きい場合：\n"
+"if position.y > 600:\n"
 "        get_tree().reload_current_scene()\n"
-"    {{< /highlight >}}"
+"{{< /highlight >}}"
 
 #: physics/Godot3_kinematic2d.md
 msgid "> **Note:** A {{< gd-icon KinematicBody2D >}}`KinematicBody2D` can be affected by gravity and other forces, but you must calculate the movement in code. The physics engine will not move a {{< gd-icon KinematicBody2D >}}`KinematicBody2D`."
@@ -13102,8 +13106,8 @@ msgid ""
 "export (PackedScene) var Bullet\n"
 "export (int) var speed"
 msgstr ""
-"エクスポート (packedscene) 変数 Bullet\n"
-"エクスポート (int) 変数 speed"
+"export (PackedScene) var Bullet\n"
+"export (int) var speed"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -13172,7 +13176,7 @@ msgstr "このシーンを実行すると、`move_and_collide()`が想定通り�
 
 #: physics/Godot3_kinematic2d.md
 msgid "The `move_and_slide()` method is intended to simplify the collision response in the common case where you want one body to slide along the other. This is especially useful in platformers or top-down games, for example."
-msgstr ""
+msgstr "`move_and_slide()`メソッドは、一般的なケースにおいて1つのオブジェクトを別のオブジェクト上で滑らせる衝突応答処理を簡単にするために設計されています。特にプラットフォームゲームや見下ろし型ゲームなどで有用です。"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -13405,7 +13409,9 @@ msgstr "最も一般的な方法は、オブジェクトの子要素として {{
 msgid ""
 "func _ready():\n"
 "    change_state(IDLE)"
-msgstr "funció _ready():"
+msgstr ""
+"func _ready():\n"
+"    change_state(IDLE)"
 
 #: physics/Godot3_kinematic2d.md
 msgid "This method takes one parameter: a `Vector2` indicating the body's relative movement. Typically, this is your velocity vector multiplied by the frame timestep (`delta`). If the engine detects a collision anywhere along this vector, the body will immediately stop moving. If this happens, the method will return a `KinematicCollision2D` object."
@@ -14427,10 +14433,9 @@ msgid ""
 "1. Keep the camera's position centered at the midpoint of the targets.\n"
 "1. Adjust the camera's zoom to keep all targets on screen."
 msgstr ""
-"以下の機能を実装します。\n"
-"- ターゲットを任意の数だけ追加/削除可能\n"
-"- カメラの位置をターゲット群の中心点に固定表示\n"
-"- すべてのターゲットが画面内に収まるようズームレベルを調整"
+"1. ターゲットを任意の数だけ追加/削除可能\n"
+"2. カメラの位置をターゲット群の中心点に固定表示\n"
+"3. すべてのターゲットが画面内に収まるようズームレベルを調整"
 
 #: 2D/multi_target_camera.md
 msgid "## Full script"
@@ -14849,7 +14854,7 @@ msgstr "「AnimatedTexture」を選択し、［フレーム］プロパティを
 
 #: 2D/tilemap_animation.md
 msgid "![alt](/godot_recipes/4.x/img/anim_tile_select.png)"
-msgstr "​     ![alt](/godot_recipes/4.x/img/anim_tile_select.png)"
+msgstr "​![alt](/godot_recipes/4.x/img/anim_tile_select.png)"
 
 #: 2D/tilemap_animation.md
 msgid "Select the newly added texture and click \"New Single Tile\". Draw a box around the texture (use \"Enable Snap\" to make this easier)."
@@ -15208,7 +15213,7 @@ msgstr "もし「ターゲット」が設定されている場合、カメラは
 
 #: 2D/touchscreen_camera.md
 msgid "In the `_process()` function, we'll move the camera towards the target (if target return is enabled and there's no touch event active)."
-msgstr ""
+msgstr "`_process()`関数内では、ターゲットへの移動処理を行います（ターゲットリターンが有効で、タッチイベントが未発生の場合）。"
 
 #: 2D/touchscreen_camera.md
 msgid "If we get a drag event, we also add to the dictionary. Note that this will be *updating* the value - index `0` was already there from the first touch event, for example, and has now become a drag event."
@@ -18433,7 +18438,7 @@ msgstr ""
 
 #: games/circle_jump/circle_jump_01.md
 msgid "In the `init()` function, we're setting up the size of the circle, based on the given `radius`. We need to size the collision shape as well as scaling the texture to match."
-msgstr ""
+msgstr "`init()`関数では、与えられた `radius` に基づいて円のサイズを設定します。衝突形状のサイズも、テクスチャのサイズに合わせて調整する必要があります。"
 
 #: games/circle_jump/circle_jump_01.md
 msgid "![alt](/godot_recipes/4.x/img/cj_01_03.gif)"
@@ -18533,11 +18538,11 @@ msgid ""
 "  * `Node2D` (\"Pivot\")\n"
 "      * `Position2D` (\"OrbitPosition\")"
 msgstr ""
-"* `Area2D` (\"Circle\": 円形状エリア)\n"
-"    * `Sprite`\n"
-"    * `CollisionShape2D`\n"
-"    * `Node2D` (\"Pivot\": ピボットノード)\n"
-"      * `Position2D` (\"OrbitPosition\": 軌道位置)"
+"* `Area2D` (\"Circle\")\n"
+"  * `Sprite`\n"
+"  * `CollisionShape2D`\n"
+"  * `Node2D` (\"Pivot\")\n"
+"      * `Position2D` (\"OrbitPosition\")"
 
 #: games/circle_jump/circle_jump_01.md
 msgid ""
@@ -18622,12 +18627,12 @@ msgid ""
 "      * `HBoxContainer` (\"Buttons\")\n"
 "  * `Tween`"
 msgstr ""
-"* `CanvasLayer` (\"BaseScreen\"レイヤー)\n"
+"* `CanvasLayer` (\"BaseScreen\")\n"
 "  * `MarginContainer`\n"
 "    * `VBoxContainer`\n"
 "      * `Label`\n"
-"      * `HBoxContainer` (\"ボタン領域\")\n"
-"  * `Tween`コンポーネント"
+"      * `HBoxContainer` (\"Buttons\")\n"
+"  * `Tween`"
 
 #: games/circle_jump/circle_jump_04.md
 msgid "Here is what the three scenes should look like, using the indicated button names:"
@@ -18959,7 +18964,7 @@ msgstr "- 最後にジャンパー部では、「ジャンプ」と「キャプ�
 
 #: games/circle_jump/circle_jump_06.md
 msgid "Then in the `_draw()` function where we're filling in the limited circle, replace the red color with `settings.theme[\"circle_fill\"]`."
-msgstr ""
+msgstr "次に`_draw()`関数において、限定円の描画部分では、赤のカラー値を`settings.theme[\"circle_fill\"]`に置き換えてください"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "For the player, set the color in its `_ready()`:"
@@ -18979,7 +18984,7 @@ msgstr "## カラーテーマ設定"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "- In the `Circle` scene, add an audio player named \"Beep\" and use the `89.ogg` sound file."
-msgstr "* 「Circle」シーンに、名前を『Beep』としたオーディオプレイヤーを追加し、`89.ogg`サウンドファイルを使用します。"
+msgstr "- 「Circle」シーンに、名前を『Beep』としたオーディオプレイヤーを追加し、`89.ogg`サウンドファイルを使用します。"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "Now on each object, we need to set the colors based on the settings property."
@@ -19360,7 +19365,7 @@ msgstr "Circle ノードに `AnimationPlayer` を追加します。"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "And then in `Jumper.gd`, our jump function becomes:"
-msgstr ""
+msgstr "そして`Jumper.gd`内では、ジャンプ関数は以下のようになります。"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "Here are the functions to add to the circle script:"
@@ -19371,6 +19376,8 @@ msgid ""
 "![alt](/godot_recipes/4.x/img/cj_02_03.png)\n"
 "![alt](/godot_recipes/4.x/img/cj_02_04.gif)"
 msgstr ""
+"![alt](/godot_recipes/4.x/img/cj_02_03.png)\n"
+"![alt](/godot_recipes/4.x/img/cj_02_04.gif)"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "Add these nodes to the jumper:"

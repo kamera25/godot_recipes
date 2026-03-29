@@ -51,7 +51,7 @@ var last_drag_distance = 0
 
 その他の変数はカメラの状態を追跡します。`events` は辞書型変数で、アクティブなタッチスクリーンイベントを保持し、各イベントは`index`をキーとして管理されます。`last_drag_distance`は、ピンチジェスチャにおける2つのドラッグイベント間の移動距離を記録します。
 
-In the `_process()` function, we'll move the camera towards the target (if target return is enabled and there's no touch event active).
+`_process()`関数内では、ターゲットへの移動処理を行います（ターゲットリターンが有効で、タッチイベントが未発生の場合）。
 
 ```gdscript
 func _process(delta):

@@ -30,7 +30,7 @@ var circles_per_level = 5
 
 - 「スクリーン」シーンに新たに「クリック」という画面を追加します。ボタンをタップした際にこの画面が表示されるようにします。アセットフォルダから「menu_click.wav」を使用します。
 
-* 「Circle」シーンに、名前を『Beep』としたオーディオプレイヤーを追加し、`89.ogg`サウンドファイルを使用します。
+- 「Circle」シーンに、名前を『Beep』としたオーディオプレイヤーを追加し、`89.ogg`サウンドファイルを使用します。
 
 - 最後にジャンパー部では、「ジャンプ」と「キャプチャー」の2種類の効果音が必要です。それぞれ`70.ogg`と`88.ogg`を使用してください。
 
@@ -191,7 +191,7 @@ func set_mode(_mode):
     $Sprite.material.set_shader_param("color", color)
 ```
 
-Then in the `_draw()` function where we're filling in the limited circle, replace the red color with `settings.theme["circle_fill"]`.
+次に`_draw()`関数において、限定円の描画部分では、赤のカラー値を`settings.theme["circle_fill"]`に置き換えてください
 
 プレイヤーの設定では、`_ready()` 内で色を指定します。
 

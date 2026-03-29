@@ -178,7 +178,7 @@ func _process(delta):
     $Pivot.rotation += rotation_speed * delta
 ```
 
-In the `init()` function, we're setting up the size of the circle, based on the given `radius`. We need to size the collision shape as well as scaling the texture to match.
+`init()`関数では、与えられた `radius` に基づいて円のサイズを設定します。衝突形状のサイズも、テクスチャのサイズに合わせて調整する必要があります。
 
 テスト用に `radius` の値を変えてシーンを実行してみてください。（後で `_ready()` 内で `init()` を呼び出す処理は停止します）
 

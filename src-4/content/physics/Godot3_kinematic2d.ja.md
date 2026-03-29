@@ -92,7 +92,7 @@ When a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` detects a collision, God
 
 #### 移動とスライド処理
 
-The `move_and_slide()` method is intended to simplify the collision response in the common case where you want one body to slide along the other. This is especially useful in platformers or top-down games, for example.
+`move_and_slide()`メソッドは、一般的なケースにおいて1つのオブジェクトを別のオブジェクト上で滑らせる衝突応答処理を簡単にするために設計されています。特にプラットフォームゲームや見下ろし型ゲームなどで有用です。
 
 > **注意:** `move_and_slide()` 関数は内部で `delta` パラメータを使用してフレームベースの移動計算を自動的に行います。速度ベクトルに手動で `delta` を掛けたものを直接渡す必要はありません。
 
@@ -334,10 +334,7 @@ func _physics_process(delta):
 
 現在、キャラクターの待機状態・走行状態・ジャンプ状態間の遷移を管理するため、非常に基本的なステートマシンを使用しています。
 
-When using `move_and_slide()` the function returns a vector representing the
-movement that remained after the slide collision occurred. Setting that value back
-to the character's `velocity` allows us to smoothly move up and down slopes. Try
-removing `velocity =` and see what happens if you don't do this.
+`move_and_slide()`を使用する場合、この関数は衝突滑りが発生した後に残った移動ベクトルを返します。その値を再度キャラクターの`velocity`に設定することで、斜面をスムーズに上下に移動させることができます。この挙動が不要であれば`velocity=`を削除してください。
 
 また、床面の法線ベクトルとして `Vector2(0, -1)` を追加しました。このベクトルは真上を指しています。つまり、キャラクターがこの法線を持つ物体に衝突した場合、それは床と判定されることを意味します。
 

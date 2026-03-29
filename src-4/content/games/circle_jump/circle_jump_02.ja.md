@@ -182,7 +182,7 @@ func implode():
     queue_free()
 ```
 
-And then in `Jumper.gd`, our jump function becomes:
+そして`Jumper.gd`内では、ジャンプ関数は以下のようになります。
 
 ```gdscript
 func jump():

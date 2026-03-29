@@ -11,12 +11,12 @@ pre: "04. "
 
 3つの画面は共通のレイアウトと一部機能を共有するため、まずは全てがこのシーンを継承できる基本シーンから始めましょう。新しいシーンでは、まず `CanvasLayer` を作成し、名前を `BaseScreen` とします。作成したこのシーンは「UI」フォルダに保存してください。
 
-* `CanvasLayer` ("BaseScreen"レイヤー)
+* `CanvasLayer` ("BaseScreen")
   * `MarginContainer`
     * `VBoxContainer`
       * `Label`
-      * `HBoxContainer` ("ボタン領域")
-  * `Tween`コンポーネント
+      * `HBoxContainer` ("Buttons")
+  * `Tween`
 
 {
   "title": "マージンコンテナの設定",

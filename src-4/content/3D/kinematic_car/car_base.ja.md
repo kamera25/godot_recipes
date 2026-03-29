@@ -36,7 +36,7 @@ VehicleBody3D`車両ボディ`の操作方法について詳しく知りたい�
 [https://kenney.nl/assets/car-kit](https://kenney.nl/assets/car-kit)。キット全体をダウンロードすれば、後で他の車両も使用できます。
 {{% /notice %}}
 
-車を読み込むには、`"Models/GLTF形式"`フォルダ内で該当モデルを探してください。今回は`sedanSports.glb`を使用します。このファイルを新規Godotプロジェクトにインポートし、できれば`res://assets/cars/`のような専用フォルダにまとめておくと良いでしょう。
+車を読み込むには、`"Models/GLTF format"`フォルダ内で該当モデルを探してください。今回は`sedanSports.glb`を使用します。このファイルを新規Godotプロジェクトにインポートし、できれば`res://assets/cars/`のような専用フォルダにまとめておくと良いでしょう。
 
 Select the file in Godot and go to the "Import" tab. Change the _Root Type_ to "CharacterBody3D" and click "Reimport". Now we're ready to use this car.
 
