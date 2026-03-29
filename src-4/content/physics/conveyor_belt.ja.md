@@ -78,4 +78,4 @@ This works perfectly well with kinematic bodies, too. Here's the same conveyor b
 
 - [プラットフォームキャラクター](http://kidscancode.org/godot_recipes/2d/platform_character)
 - [Using CharacterBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/)
-- [移動式プラットフォーム](/godot_recipes/3.x/2d/moving_platforms/)
+- [動く床](/godot_recipes/3.x/2d/moving_platforms/)

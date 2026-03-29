@@ -14996,7 +14996,7 @@ msgstr ""
 
 #: 2D/moving_platforms.md
 msgid "Moving Platforms"
-msgstr "移動式プラットフォーム"
+msgstr "動く床"
 
 #: 2D/moving_platforms.md
 msgid ""
@@ -15028,7 +15028,7 @@ msgstr "翻訳された2つのプロパティを使用することで、プラ�
 
 #: 2D/moving_platforms.md
 msgid "You need moving platforms in your 2D platformer."
-msgstr "2Dプラットフォーマーゲームには移動プラットフォームが必要です。"
+msgstr "2Dプラットフォーマーゲームには動く床が必要です。"
 
 #: 2D/moving_platforms.md
 msgid "Add some platforms in your level/world and try them out:"
