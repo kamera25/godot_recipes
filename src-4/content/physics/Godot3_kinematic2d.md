@@ -124,12 +124,12 @@ and `move_and_collide()` is more general. For example, the following two code sn
 
 ![alt](/godot_recipes/3.x/img/k2d_compare.gif)
 
-{{< highlight python>}}
+{{< highlight gdscript>}}
 var collision = move_and_collide(velocity * delta)
 if collision:
 	velocity = velocity.slide(collision.normal)
 {{< /highlight >}}
-{{< highlight python>}}
+{{< highlight gdscript>}}
 velocity = move_and_slide(velocity)
 {{< /highlight >}}
 
@@ -150,7 +150,7 @@ For this example, Add a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` with tw
 
 Attach a script to the {{< gd-icon CharacterBody2D >}}`CharacterBody2D` and add the following code:
 
-{{< highlight python >}}
+{{< highlight gdscript >}}
 extends CharacterBody2D
 
 var speed = 250
@@ -208,7 +208,7 @@ and a Wall. The Bullet and Wall are separate scenes so that they can be instance
 The Player is controlled by W/S for forward/back and aims using the mouse. Here is
 the code for the Player, using `move_and_slide()`:
 
-{{< highlight python >}}
+{{< highlight gdscript >}}
 extends CharacterBody2D
 
 @export var Bullet: PackedScene
@@ -243,7 +243,7 @@ func _physics_process(delta):
 
 And the code for the Bullet:
 
-{{< highlight python>}}
+{{< highlight gdscript>}}
 extends CharacterBody2D
 
 var speed = 750
@@ -288,7 +288,7 @@ We're also using the adorable ["Sunny Land" art pack by Ansimuz](https://opengam
 
 Here's the code for the player body:
 
-{{< highlight python >}}
+{{< highlight gdscript >}}
 extends CharacterBody2D
 
 @export var run_speed: int

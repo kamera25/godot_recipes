@@ -121,12 +121,12 @@ The `move_and_slide()` method is intended to simplify the collision response in 
 
 ![alt](/godot_recipes/3.x/img/k2d_compare.gif)
 
-{{< highlight python>}}
+{{< highlight gdscript>}}
 var collision = move_and_collide(velocity * delta)
 if collision:
 	velocity = velocity.slide(collision.normal)
 {{< /highlight >}}
-{{< highlight python>}}
+{{< highlight gdscript>}}
 velocity = move_and_slide(velocity)
 {{< /highlight >}}
 
@@ -146,7 +146,7 @@ For this example, Add a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` with tw
 
 Attach a script to the {{< gd-icon CharacterBody2D >}}`CharacterBody2D` and add the following code:
 
-{{< highlight python >}}
+{{< highlight gdscript >}}
 extends CharacterBody2D
 
 var speed = 250
@@ -192,7 +192,7 @@ you'll find that the obstacle acts like glue - it feels like the body gets stuck
 
 プレイヤーはW/Sキーで前進・後退操作し、マウスを使って狙いを定めます。以下にPlayer用のコードを示します（`move_and_slide()`関数を使用しています）：
 
-{{< highlight python >}}
+{{< highlight gdscript >}}
 extends CharacterBody2D
 
 @export var Bullet: PackedScene
@@ -227,7 +227,7 @@ func _physics_process(delta):
 
 そして、弾丸のコード:
 
-{{< highlight python>}}
+{{< highlight gdscript>}}
 extends CharacterBody2D
 
 var speed = 750
@@ -268,7 +268,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 プレイヤーの本体のコードは次のとおりです:
 
-{{< highlight python >}}
+{{< highlight gdscript >}}
 extends CharacterBody2D
 
 @export var run_speed: int

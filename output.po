@@ -12816,21 +12816,21 @@ msgstr ""
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
-"{{< highlight python>}}\n"
+"{{< highlight gdscript>}}\n"
 "var collision = move_and_collide(velocity * delta)\n"
 "if collision:\n"
 "\tvelocity = velocity.slide(collision.normal)\n"
 "{{< /highlight >}}\n"
-"{{< highlight python>}}\n"
+"{{< highlight gdscript>}}\n"
 "velocity = move_and_slide(velocity)\n"
 "{{< /highlight >}}"
 msgstr ""
-"{{< highlight python>}}\n"
+"{{< highlight gdscript>}}\n"
 "var collision = move_and_collide(velocity * delta)\n"
 "if collision:\n"
 "\tvelocity = velocity.slide(collision.normal)\n"
 "{{< /highlight >}}\n"
-"{{< highlight python>}}\n"
+"{{< highlight gdscript>}}\n"
 "velocity = move_and_slide(velocity)\n"
 "{{< /highlight >}}"
 
@@ -13204,10 +13204,10 @@ msgstr ""
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
-"{{< highlight python >}}\n"
+"{{< highlight gdscript >}}\n"
 "extends KinematicBody2D"
 msgstr ""
-"{{< highlight python >}}\n"
+"{{< highlight gdscript >}}\n"
 "extends KinematicBody2D"
 
 #: physics/Godot3_kinematic2d.md
@@ -13471,10 +13471,10 @@ msgstr "### ムーブアンドスライドを使ったプラットフォーマ�
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
-"{{< highlight python>}}\n"
+"{{< highlight gdscript>}}\n"
 "extends KinematicBody2D"
 msgstr ""
-"{{< highlight python>}}\n"
+"{{< highlight gdscript>}}\n"
 "extends KinematicBody2D"
 
 #: physics/Godot3_kinematic2d.md
