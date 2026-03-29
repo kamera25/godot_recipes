@@ -278,7 +278,7 @@ msgstr ""
 
 #: basics/node_communication.md
 msgid "You can connect a signal in the editor (most often for nodes that exist before the game starts) or in code (for nodes that you're instancing at runtime). The syntax for connecting a signal is:"
-msgstr "シグナルの接続はエディタ内で行えます（通常はゲーム開始前に存在するノードに対して）、またはコード内で行うこともできます（実行時にインスタンス化するノードの場合）。シグナル接続の構文は以下の通りです。"
+msgstr "シグナルの接続はエディター内で行えます（通常はゲーム開始前に存在するノードに対して）、またはコード内で行うこともできます（実行時にインスタンス化するノードの場合）。シグナル接続の構文は以下の通りです。"
 
 #: basics/node_communication.md
 msgid "![alt](/godot_recipes/4.x/img/node_access_03.png)"
@@ -358,7 +358,7 @@ msgstr "シグナルの最も一般的な使用例は、UI（ユーザーイン�
 
 #: basics/node_communication.md
 msgid "First, add all enemies to an \"enemies\" group. You can do this in the editor using the \"Node\" tab:"
-msgstr "まず、すべての敵キャラを「enemies」グループに追加してください。これはエディタで「Node」タブを使用して行えます"
+msgstr "まず、すべての敵キャラを「enemies」グループに追加してください。これはエディターで「Node」タブを使用して行えます"
 
 #: basics/node_communication.md
 msgid "You can also add nodes to the group in your script:"
@@ -500,7 +500,7 @@ msgstr "### 「owner」の使用例"
 
 #: basics/node_communication.md
 msgid "With this method, you can assign the value of the variable directly in the Inspector by choosing the node."
-msgstr "この方法では、ノードを選択することで、インスペクタ上で変数の値を直接割り当てることができます。"
+msgstr "この方法では、ノードを選択することで、インスペクター上で変数の値を直接割り当てることができます。"
 
 #: basics/node_communication.md
 msgid "Here's our example setup:"
@@ -608,7 +608,7 @@ msgstr ""
 
 #: basics/understanding_delta.md
 msgid "The `delta` or \"delta time\" parameter is a frequently-misunderstood concept in game development. In this tutorial, we'll explain how it's used, the importance of frame-rate independent movement, and practical examples of its use in Godot."
-msgstr "この`delta`パラメータ（delta time）は、ゲーム開発において誤解されがちな概念です。本チュートリアルでは、どのように使用されるのか、フレームレートに依存しない移動の重要性、そしてGodotにおける実践的な使用例について解説します。"
+msgstr "この`delta`パラメーター（delta time）は、ゲーム開発において誤解されがちな概念です。本チュートリアルでは、どのように使用されるのか、フレームレートに依存しない移動の重要性、そしてGodotにおける実践的な使用例について解説します。"
 
 #: basics/understanding_delta.md
 msgid ""
@@ -626,7 +626,7 @@ msgstr "加速を適用する際に `delta` を考慮しない場合、フレー
 
 #: basics/understanding_delta.md
 msgid "When using the `_process()` function, it automatically includes a parameter called `delta` that's passed in from the engine (so does `_physics_process()`, which is used for physics-related code). This is a floating point value representing the length of time since the previous frame. Typically, this will be approximately 1/60 or `0.0167` seconds."
-msgstr "`_process()`関数を使用する場合、自動的にエンジンから渡されるパラメータとして`delta`が含まれます（これは`_physics_process()`と同様で、物理関連コード用に使用されます）。これは時間間隔を表す浮動小数点数値であり、直前のフレームから経過した時間の長さを示します。通常この値は1/60秒、つまり約0.0167秒に相当します。"
+msgstr "`_process()`関数を使用する場合、自動的にエンジンから渡されるパラメーターとして`delta`が含まれます（これは`_physics_process()`と同様で、物理関連コード用に使用されます）。これは時間間隔を表す浮動小数点数値であり、直前のフレームから経過した時間の長さを示します。通常この値は1/60秒、つまり約0.0167秒に相当します。"
 
 #: basics/understanding_delta.md
 msgid "Let's change the code to use this calculation:"
@@ -732,7 +732,7 @@ msgstr "この関数はプレイヤーにダメージが与えられた際に毎
 
 #: basics/custom_resources.md
 msgid "On the player, we `export` a variable to attach the resource via the Inspector. As part of the player's movement code, it calls `hurt()` when the player runs into spikes."
-msgstr "プレイヤー側では、インスペクタ経由でリソースを割り当てるために変数を `エクスポート` しています。移動処理コードの一部として、プレイヤーがスパイクに接触した際には `hurt()` 関数を呼び出すようになっています。"
+msgstr "プレイヤー側では、インスペクター経由でリソースを割り当てるために変数を `エクスポート` しています。移動処理コードの一部として、プレイヤーがスパイクに接触した際には `hurt()` 関数を呼び出すようになっています。"
 
 #: basics/custom_resources.md
 msgid "Here's an example of it in action:"
@@ -798,7 +798,7 @@ msgstr "#### 新規リソースの作成"
 
 #: basics/custom_resources.md
 msgid "Once the `PlayerHealth` class is defined, we can make a new instance of it. Click the \"New Resource\" button at the top of the Inspector:"
-msgstr "一度「PlayerHealth」クラスを定義すれば、新しいインスタンスを作成できます。インスペクタ上部の「新規リソース作成」ボタンをクリックしてください。"
+msgstr "一度「PlayerHealth」クラスを定義すれば、新しいインスタンスを作成できます。インスペクター上部の「新規リソース作成」ボタンをクリックしてください。"
 
 #: basics/custom_resources.md
 msgid "Let's break it down piece-by-piece:"
@@ -806,7 +806,7 @@ msgstr "これを部分ごとに分解して考えましょう。"
 
 #: basics/custom_resources.md
 msgid "At the top we have our `extends` line and the `class_name` we're assigning to the resource. This name will appear in various places in the editor."
-msgstr "上部には `extends` 行とリソースに割り当てる `class_name` があります。このページ名はエディタ内の様々な場所で表示されます。"
+msgstr "上部には `extends` 行とリソースに割り当てる `class_name` があります。このページ名はエディター内の様々な場所で表示されます。"
 
 #: basics/custom_resources.md
 msgid "Now you can set the desired `max_value` and save the new resource as a `.tres` file."
@@ -1045,7 +1045,7 @@ msgstr "## キャラクターボディ [2D/3D]"
 
 #: basics/migrating.md
 msgid "When casting rays in code, there's a new API. `PhysicsDirectSpaceState[2D|3D].intersect_ray()` now takes a special object as a parameter. This object specifies the ray properties. For example, to cast a ray in 3D:"
-msgstr "コード内でレイキャストを実行する際、新たなAPIが導入されました。`PhysicsDirectSpaceState[2D|3D].intersect_ray()`関数には、専用オブジェクトをパラメータとして指定します。これによりレイの特性を正確に定義できます。例えば3D空間でレイを描画する場合は："
+msgstr "コード内でレイキャストを実行する際、新たなAPIが導入されました。`PhysicsDirectSpaceState[2D|3D].intersect_ray()`関数には、専用オブジェクトをパラメーターとして指定します。これによりレイの特性を正確に定義できます。例えば3D空間でレイを描画する場合は："
 
 #: basics/migrating.md
 msgid "Working with signals is much more streamlined in 4.0. `Signal` is a native type now, so you'll be using fewer strings, meaning you get autocomplete and error checking. This applies to functions as well, which can now be directly referenced rather than using strings."
@@ -1137,7 +1137,7 @@ msgstr "Godot 4での最も大きな変化の一つは、ノード名、関数�
 
 #: basics/migrating.md
 msgid "The biggest change in this node is in using `move_and_slide()`. It no longer takes any parameters - they are all now built-in properties. This includes a native `velocity` property, so you no longer need to declare your own."
-msgstr "このノードにおける最大の変更点は `move_and_slide()` 関数の使用方法です。パラメータは一切不要となり、すべてが組み込みプロパティとして実装されました。ネイティブの `velocity`（速度）プロパティも含まれているため、独自に定義する必要はありません。"
+msgstr "このノードにおける最大の変更点は `move_and_slide()` 関数の使用方法です。パラメーターは一切不要となり、すべてが組み込みプロパティとして実装されました。ネイティブの `velocity`（速度）プロパティも含まれているため、独自に定義する必要はありません。"
 
 #: basics/migrating.md
 msgid "Our \"Using TileMaps\" guide is coming soon."
@@ -1549,11 +1549,11 @@ msgstr "## <i class=\"fas fa-code-branch\"></i> このプロジェクトをダ�
 
 #: ui/minimap.md
 msgid "Now we can begin adding a script to the `Minimap`. First, a `player` reference that can be assigned in the Inspector when the minimap is added to the main scene and a `zoom` property to calibrate the scale - how far the minimap can \"see\". We also have some `@onready` variables to make it more convenient to access the nodes we need."
-msgstr "これで`Minimap`にスクリプトを追加する準備が整いました。まず、メインシーンにミニマップが追加された時にインスペクタで割り当て可能なプレイヤー参照と、スケールを調整するズームプロパティを実装します。必要なノードへのアクセスを容易にするため、`@onready`変数も用意しました。"
+msgstr "これで`Minimap`にスクリプトを追加する準備が整いました。まず、メインシーンにミニマップが追加された時にインスペクターで割り当て可能なプレイヤー参照と、スケールを調整するズームプロパティを実装します。必要なノードへのアクセスを容易にするため、`@onready`変数も用意しました。"
 
 #: ui/minimap.md
 msgid "We'll also create markers for every game object (using the \"minimap_objects\" group) by duplicating the matching marker node and tying the marker to the object via the `markers` dictionary:"
-msgstr "これで`Minimap`にスクリプトを追加し始めることができます。まず第一に、メインシーンにミニマップが追加された際にインスペクタで割り当て可能な`player`リファレンスと、スケールを調整するための`zoom`プロパティが必要となります。これにより、ミニマップが「視認」できる範囲を設定できます。また、必要なノードにより簡単にアクセスできるよう、`@onready`変数もいくつか追加しています。"
+msgstr "これで`Minimap`にスクリプトを追加し始めることができます。まず第一に、メインシーンにミニマップが追加された際にインスペクターで割り当て可能な`player`リファレンスと、スケールを調整するための`zoom`プロパティが必要となります。これにより、ミニマップが「視認」できる範囲を設定できます。また、必要なノードにより簡単にアクセスできるよう、`@onready`変数もいくつか追加しています。"
 
 #: ui/minimap.md
 msgid "If there is a `player`, we'll first rotate the player marker to match the player's heading. Since our `PlayerMarker` sprite points upwards rather than along the `x` axis, we must add 90 degrees:"
@@ -1618,7 +1618,7 @@ msgstr ""
 
 #: ui/minimap.md
 msgid "On the `MiniMap` node, connect the `_gui_input` signal in the Inspector so we can process the scroll wheel events:"
-msgstr "ノード「MiniMap」で、インスペクタ内のシグナル `_gui_input` を接続して、スクロールホイールイベントを処理できるようにします。"
+msgstr "ノード「MiniMap」で、インスペクター内のシグナル `_gui_input` を接続して、スクロールホイールイベントを処理できるようにします。"
 
 #: ui/minimap.md
 msgid "If you've stuck with it this far, we have one more feature to add: adjustable zoom level. With this, scrolling the mouse wheel when hovering over the map will zoom its scale in and out."
@@ -1654,7 +1654,7 @@ msgstr "この問題に取り組む方法はいくつかあります。例えば
 
 #: ui/floating_text.md
 msgid "When we spawn the floating text, we'll call this function to set the parameters:"
-msgstr "浮動テキストを出現させる際に、この関数を呼び出してパラメータを設定します。"
+msgstr "浮動テキストを出現させる際に、この関数を呼び出してパラメーターを設定します。"
 
 #: ui/floating_text.md
 msgid "Next we'll crate a small node to manage placing and spawning the floating text. This node will be attached to the game entities that you want to display floating text effects."
@@ -1725,7 +1725,7 @@ msgstr "【最適化】多数の敵や弾が出現する場合、テキスト表
 
 #: ui/floating_text.md
 msgid "Here you can expose the settings to the Inspector for convenient changes. The `show_value()` method here spawns the floating labels and sets their properties."
-msgstr "以下の箇所では、設定内容をインスペクタに表示して簡単に変更できます。ここで定義されている`show_value()`メソッドは、フローティングラベルを生成し、そのプロパティを設定します。"
+msgstr "以下の箇所では、設定内容をインスペクターに表示して簡単に変更できます。ここで定義されている`show_value()`メソッドは、フローティングラベルを生成し、そのプロパティを設定します。"
 
 #: ui/floating_text.md
 msgid "Add a `LabelSettings` resource and use your favorite font. In this example, we're using \"Xolonium.ttf\" with a font size of `28` and a black outline of `4` pixels."
@@ -1925,7 +1925,7 @@ msgstr "上記の例で示したように、プレイヤーが自由に選択で
 
 #: ui/level_select.md
 msgid "We're using `@tool` here so that we can make changes to the properties in the inspector and see them right away, without running the scene. Go ahead and try clicking the **Locked** property and verify that you see the lock appear/disappear."
-msgstr "ここで `@tool` を使用しているのは、インスペクタでプロパティを変更した場合、その変更が即座に反映されるようにするためです。シーンを実行しなくても変化を確認できます。ぜひお試しください。**［ロック］** プロパティをクリックして、ロック表示が出たり消えたりするのを確認してください。"
+msgstr "ここで `@tool` を使用しているのは、インスペクターでプロパティを変更した場合、その変更が即座に反映されるようにするためです。シーンを実行しなくても変化を確認できます。ぜひお試しください。**［ロック］** プロパティをクリックして、ロック表示が出たり消えたりするのを確認してください。"
 
 #: ui/level_select.md
 msgid "![alt](/godot_recipes/4.x/img/level_select_05.png)"
@@ -2069,7 +2069,7 @@ msgstr "![alt](/godot_recipes/4.x/img/level_select_02.png)"
 
 #: ui/level_select.md
 msgid "Make sure to set the `LevelBox`'s **Custom Minimum Size** in the Inspector. We're using `(110, 110)` in the example, but it depends on what size layout you're going for."
-msgstr "インスペクタで `LevelBox` の**カスタム最小サイズ**を必ず設定してください。ここでは例として `(110, 110)` を使用していますが、実際のレイアウト要件に応じて調整が必要となります。"
+msgstr "インスペクターで `LevelBox` の**カスタム最小サイズ**を必ず設定してください。ここでは例として `(110, 110)` を使用していますが、実際のレイアウト要件に応じて調整が必要となります。"
 
 #: ui/level_select.md
 msgid "When you run the scene, try clicking the \"Next\" and \"Back\" buttons and verify that it's scrolling as expected. Clicking the individual level boxes should print to the console."
@@ -2377,7 +2377,7 @@ msgstr "### フォント操作について"
 
 #: ui/labels.md
 msgid "To add your font in the Inspector, scroll down to and expand the *Custom Fonts* section. In the empty *Font* property, choose \"New DynamicFont\" and then click the new `DynamicFont` to expand it."
-msgstr "フォントを追加するには：インスペクタで「カスタムフォント」セクションまでスクロールダウンし、展開してください。空の「フォント」プロパティで『新規ダイナミックフォント』を選択し、新しく表示された`DynamicFont`をクリックしてさらに展開します。"
+msgstr "フォントを追加するには：インスペクターで「カスタムフォント」セクションまでスクロールダウンし、展開してください。空の「フォント」プロパティで『新規ダイナミックフォント』を選択し、新しく表示された`DynamicFont`をクリックしてさらに展開します。"
 
 #: ui/labels.md
 msgid "Drag your font file (in this example we're using `Roboto-Medium.ttf`) into the *Font Data* property (or choose \"Load\" and navigate to the file). There are several properties to adjust but for now let's make *Size* a bit bigger."
@@ -2406,7 +2406,7 @@ msgstr "シーンに静的テキストのみが必要な場合、ここで完了
 
 #: ui/labels.md
 msgid "Add a new {{< gd-icon Label >}}`Label` node to your scene. In the Inspector, you'll see the node's properties, most of which are self-explanatory (hover them with the mouse to see a description):"
-msgstr "シーンに新しい {{< gd-icon Label >}}`Label`ノードを追加します。インスペクタでは、ほとんどのプロパティが自明な内容になっています（マウスカーソルを合わせると説明が表示されます）："
+msgstr "シーンに新しい {{< gd-icon Label >}}`Label`ノードを追加します。インスペクターでは、ほとんどのプロパティが自明な内容になっています（マウスカーソルを合わせると説明が表示されます）："
 
 #: ui/labels.md
 msgid "For example, if we had a {{< gd-icon Timer >}}`Timer` node in our scene, we could do the following:"
@@ -2899,7 +2899,7 @@ msgstr "### キーボード操作"
 
 #: 3D/camera_gimbal.md
 msgid "Instance the camera in your scene and use the Inspector to choose the node you want to follow."
-msgstr "シーン内のカメラを選択し、「インスペクタ」を使用して追跡したいノードを選択してください。"
+msgstr "シーン内のカメラを選択し、「インスペクター」を使用して追跡したいノードを選択してください。"
 
 #: 3D/camera_gimbal.md
 msgid "Here's the initial script. Note that we're making sure to rotate each {{< gd-icon Node3D >}}`Node3D` in its local space around the specific axis, as described above."
@@ -3444,11 +3444,11 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_bars_03a.png)"
 
 #: 3D/healthbars.md
 msgid "In the Inspector, under _Flags_, set _Billboard_ to \"Enabled\"."
-msgstr "インスペクタで、 _Flags_ セクションの _Billboard_ を「Enabled」に設定してください。"
+msgstr "インスペクターで、 _Flags_ セクションの _Billboard_ を「Enabled」に設定してください。"
 
 #: 3D/healthbars.md
 msgid "If the {{< gd-icon SubViewport >}}`SubViewport` were not a child of the {{< gd-icon Sprite3D >}}`Sprite3D`, we could set it as the sprite's texture directly in the Inspector. Since it's a child, it won't be ready at the right time, so we'll need to set it in a script attached to the {{< gd-icon Sprite3D >}}`Sprite3D`:"
-msgstr "もし `SubViewport` が `Sprite3D` の子要素でなかった場合、インスペクタ上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可能性があります。そのため、以下のように `Sprite3D` にアタッチされたスクリプト内で設定します。"
+msgstr "もし `SubViewport` が `Sprite3D` の子要素でなかった場合、インスペクター上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可能性があります。そのため、以下のように `Sprite3D` にアタッチされたスクリプト内で設定します。"
 
 #: 3D/healthbars.md
 msgid "For our example \"mob\", we'll start with a {{< gd-icon CharacterBody3D >}}`CharacterBody3D` node. It's programmed to spawn and travel in a straight line. It also has the following code to handle damage:"
@@ -3713,7 +3713,7 @@ msgstr "以下の例では、ミサイルや矢のような3Dオブジェクト�
 
 #: 3D/rotate_interpolate.md
 msgid "Note that `look_at()` requires 2 parameters: the target position, and an \"up vector\". Imagine an airplane pointing its nose towards a target - there are an infinite number of ways it could be oriented, because the plane could roll about its axis. This second parameter is how you define what you want the final orientation to be."
-msgstr "注：`look_at()` 関数は2つのパラメータを必要とします。ターゲット位置と「上方向ベクトル」です。飛行機が目標地点に向かって機首を向ける様子を想像してみてください。機体の向きには無数の方法が考えられます。これは、航空機がその軸を中心に回転できるためです。この第二パラメータによって、最終的な機体の向きをどのように定義するかを指定します。"
+msgstr "注：`look_at()` 関数は2つのパラメーターを必要とします。ターゲット位置と「上方向ベクトル」です。飛行機が目標地点に向かって機首を向ける様子を想像してみてください。機体の向きには無数の方法が考えられます。これは、航空機がその軸を中心に回転できるためです。この第二パラメーターによって、最終的な機体の向きをどのように定義するかを指定します。"
 
 #: 3D/rotate_interpolate.md
 msgid "When you first encounter this problem, you may find yourself thinking in terms of *Euler angles* - the three values representing the angles to the **x/y/z** axes. While Godot will allow you to see the object's Euler angles in the `rotation` property, it is not recommended to use them to work in 3D. There are a number of reasons why this the case, such as a problem called \"gimbal lock\", where you lose one degree of freedom when one of your rotations reaches 90 degrees."
@@ -3729,7 +3729,7 @@ msgstr "これはあらゆる種類の運動学的キャラクターの動作基
 
 #: 3D/kinematic_body.md
 msgid "With this code, we add the downward acceleration of gravity to the current velocity, get the user's input (more about that below), and call `move_and_slide()`. We pass the `velocity` and a direction vector of `(0, 1)` for the `up_direction` parameter."
-msgstr "このコードでは、重力による下方向への加速度を現在速度に加算し、ユーザー入力を取得し（詳細は後述）、move_and_slide()関数を呼び出しています。この時、velocity変数と上方向を示すベクトル(0, 1)をup_directionパラメータとして渡しています。"
+msgstr "このコードでは、重力による下方向への加速度を現在速度に加算し、ユーザー入力を取得し（詳細は後述）、move_and_slide()関数を呼び出しています。この時、velocity変数と上方向を示すベクトル(0, 1)をup_directionパラメーターとして渡しています。"
 
 #: 3D/characterbody3d_examples.md 3D/kinematic_body.md
 msgid ""
@@ -4122,7 +4122,7 @@ msgstr "坂での走行を試したことがある方ならご存知でしょう
 
 #: 3D/3d_sphere_car.md
 msgid "You can `@export` these if you'd like to adjust them from the Inspector."
-msgstr "インスペクタからこれらを調整したい場合は、`@export` を指定できます。"
+msgstr "インスペクターからこれらを調整したい場合は、`@export` を指定できます。"
 
 #: 3D/3d_sphere_car.md
 msgid "The next step is to get the inputs, but we'll also check if the ray is colliding with the ground first:"
@@ -4702,7 +4702,7 @@ msgstr "移動しようとすると、前後・左右に動けるものの、回
 
 #: 3D/basic_fps.md
 msgid "An FPS character typically has a 3D mesh of a weapon positioned in front. Setting this up can be easy with a couple of Godot editor tricks."
-msgstr "FPSキャラクターには通常、前面に位置した武器の3Dメッシュが用意されています。これをセットアップするのは、Godotエディタの便利な機能をいくつか使えば簡単に行えます。"
+msgstr "FPSキャラクターには通常、前面に位置した武器の3Dメッシュが用意されています。これをセットアップするのは、Godotエディターの便利な機能をいくつか使えば簡単に行えます。"
 
 #: 3D/basic_fps.md
 msgid "![alt](/godot_recipes/4.x/img/fps_01.png)"
@@ -4750,7 +4750,7 @@ msgstr "以下の手順で「ワールド」シーンにプレイヤーを追加
 
 #: 3D/basic_fps.md
 msgid "Add your weapon mesh as a child of the {{< gd-icon Camera3D >}}`Camera3D`. Then, in the editor view menu, choose \"2 Viewports\" and set one of them to preview the camera. Then, you can move around the weapon and easily see how it will look from the player's perspective."
-msgstr "武器モデルを{{< gd-icon Camera3D >}}`Camera3D`の子要素として追加します。その後、エディタビューメニューで「2つのビューポート」を選択し、そのうち1つをカメラプレビュー用に設定してください。これで、武器を自由に移動させながら、プレイヤー視点でどのように見えるかを容易に確認できるようになります。"
+msgstr "武器モデルを{{< gd-icon Camera3D >}}`Camera3D`の子要素として追加します。その後、エディタービューメニューで「2つのビューポート」を選択し、そのうち1つをカメラプレビュー用に設定してください。これで、武器を自由に移動させながら、プレイヤー視点でどのように見えるかを容易に確認できるようになります。"
 
 #: 3D/basic_fps.md
 msgid "To add a little personality, try using an {{< gd-icon AnimationPlayer >}}`AnimationPlayer` to animate the weapon's position from side-to-side as the player moves."
@@ -4924,7 +4924,7 @@ msgstr "![alt](/godot_recipes/4.x/img/animtree_settings.png)"
 
 #: 3D/assets/character_animation.md
 msgid "Add an {{< gd-icon AnimationTree >}}`AnimationTree` to the scene. In the **Inspector**, set **Tree Root** to a new `AnimationNodeStateMachine`, in **Anim Player** select the character's {{< gd-icon AnimationPlayer >}}`AnimationPlayer` node, and check the box next to **Active**."
-msgstr "シーンに `AnimationTree` コンポーネントを追加します。［インスペクタ］で［ツリールート］を新規作成された `AnimationNodeStateMachine` に設定し、［Animプレイヤー］ではキャラクターのアニメーションノードを選択します（{{< gd-icon AnimationPlayer >}}`AnimationPlayer`）。最後に［有効化］チェックボックスをオンにしてください。"
+msgstr "シーンに `AnimationTree` コンポーネントを追加します。［インスペクター］で［ツリールート］を新規作成された `AnimationNodeStateMachine` に設定し、［Animプレイヤー］ではキャラクターのアニメーションノードを選択します（{{< gd-icon AnimationPlayer >}}`AnimationPlayer`）。最後に［有効化］チェックボックスをオンにしてください。"
 
 #: 3D/assets/character_animation.md
 msgid "In the {{< gd-icon AnimationPlayer >}}`AnimationPlayer`, find the \"Idle\", \"Running_A\", \"Walking_Backwards\", and \"Running_Strafe_Left\"/\"Running_Strafe_Right\" animations. Make sure they're all set to loop - you can test them by pressing the \"Play\" button: (▶). If any of them are not, reimport the character after setting them (see [Importing Assets](/4.x/3d/assets/importing_assets/))."
@@ -5085,7 +5085,7 @@ msgstr "<video width=\"500\" controls src=\"/godot_recipes/4.x/img/blendtree_tes
 
 #: 3D/assets/character_animation.md
 msgid "To change the transition conditions, change to **Select** mode using the icon and then click on one of the connections. In the Inspector, you'll see the connection properties. For the connection from idle to attack, we want **Advance/Mode** to be \"Enabled\" (not \"Auto\"). This means it happens only when told to. Notice that the icon on the connection line changes color."
-msgstr "遷移条件を変更するには、アイコンを使用して**選択モード**に切り替えた後、いずれかの接続をクリックしてください。インスペクタウィンドウで接続プロパティを確認できます。アイドル状態からアタック状態への遷移では、**進行/モード** を「有効」（\"自動\" ではなく）に設定したいです。つまり、指示があった場合にのみ実行されるということです。接続ライン上のアイコンの色が変化することに注意してください。"
+msgstr "遷移条件を変更するには、アイコンを使用して**選択モード**に切り替えた後、いずれかの接続をクリックしてください。インスペクターウィンドウで接続プロパティを確認できます。アイドル状態からアタック状態への遷移では、**進行/モード** を「有効」（\"自動\" ではなく）に設定したいです。つまり、指示があった場合にのみ実行されるということです。接続ライン上のアイコンの色が変化することに注意してください。"
 
 #: 3D/assets/interacting.md
 msgid "Interactable Objects"
@@ -5299,7 +5299,7 @@ msgstr "そして最初の`if`文の後にこの`if`ステートメントがあ�
 
 #: 3D/assets/character_controller.md
 msgid "We'll use the `anim_tree` reference to set the blend position for the Idle/Walk/Run blendspace and the trigger conditions for jumping. Select the {{< gd-icon AnimationTree >}}`AnimationTree` and you can see these properties in the Inspector:"
-msgstr "ここでは`anim_tree`リファレンスを使用して、アイドル/歩行/ランニングブレンドスペースのブレンド位置と、ジャンプトリガー条件を設定します。まず{{< gd-icon AnimationTree >}}`AnimationTree`を選択し、これらのプロパティがインスペクタに表示されることを確認してください。"
+msgstr "ここでは`anim_tree`リファレンスを使用して、アイドル/歩行/ランニングブレンドスペースのブレンド位置と、ジャンプトリガー条件を設定します。まず{{< gd-icon AnimationTree >}}`AnimationTree`を選択し、これらのプロパティがインスペクターに表示されることを確認してください。"
 
 #: 3D/assets/character_controller.md g101/3d/101_3d_03.md
 msgid "### Jumping"
@@ -5351,7 +5351,7 @@ msgstr "### 衝突の追加"
 
 #: 3D/assets/character_controller.md
 msgid "Note that you can get that parameter path by looking at the Inspector for the {{< gd-icon AnimationTree >}}`AnimationTree` - you can even drag it into the script window to fill it in."
-msgstr "注意: このパラメータパスは、{{< gd-icon AnimationTree >}}`AnimationTree`インスペクタを確認することで取得できます。実際にスクリプトウィンドウにドラッグ＆ドロップして入力することもできます。"
+msgstr "注意: このパラメーターパスは、{{< gd-icon AnimationTree >}}`AnimationTree`インスペクターを確認することで取得できます。実際にスクリプトウィンドウにドラッグ＆ドロップして入力することもできます。"
 
 #: 3D/assets/character_controller.md
 msgid "### Camera Control"
@@ -5485,7 +5485,7 @@ msgstr "Godotの組み込み[Blenderサポート](https://docs.godotengine.org/j
 
 #: 3D/assets/level_design.md
 msgid "Alternatively, you can turn on grid snapping in the editor and just drag scenes directly from the **FileSystem** tab to place them. This has the advantage of being more flexible than `GridMap`, although a bit more manual in how you go about placing objects."
-msgstr "また、エディタでグリッドスナップを有効化し、直接 **ファイルシステム** タブからシーンをドラッグ＆ドロップして配置することもできます。この方法は `GridMap` よりも柔軟性に優れていますが、オブジェクトの配置手順がやや煩雑になるという側面があります。"
+msgstr "また、エディターでグリッドスナップを有効化し、直接 **ファイルシステム** タブからシーンをドラッグ＆ドロップして配置することもできます。この方法は `GridMap` よりも柔軟性に優れていますが、オブジェクトの配置手順がやや煩雑になるという側面があります。"
 
 #: 3D/assets/level_design.md
 msgid ""
@@ -5501,7 +5501,7 @@ msgstr "#### グリッドマップ"
 
 #: 3D/assets/level_design.md
 msgid "Using the built-in {{< gd-icon GridMap >}}`GridMap` node allows you to layout meshes in a grid in the editor. It's similar in concept to the 2D {{< gd-icon TileMap >}}`TileMap` node, though with less functionality."
-msgstr "組み込みの {{< gd-icon GridMap >}}GridMap` ノードを使用すると、エディタ上でメッシュをグリッド状に配置できます。この概念は2D用の {{< gd-icon TileMap >}}`TileMap` ノードと似ていますが、機能性はやや限られています。"
+msgstr "組み込みの {{< gd-icon GridMap >}}GridMap` ノードを使用すると、エディター上でメッシュをグリッド状に配置できます。この概念は2D用の {{< gd-icon TileMap >}}`TileMap` ノードと似ていますが、機能性はやや限られています。"
 
 #: 3D/assets/level_design.md
 msgid "Add an {{< gd-icon AnimationPlayer >}}`AnimationPlayer` node, which we'll use to animate the door opening. Your node tree should look like this:"
@@ -5940,7 +5940,7 @@ msgstr "3Dカーを`KinematicBody`を使用して作成しましょう。"
 
 #: 3D/kinematic_car/car_camera.md
 msgid "The only parameter to set here is the `lerp_speed`, which controls how quickly the camera updates its position. Set it low, and the camera will \"lag\" behind the car. Set it high, and it will remain locked on."
-msgstr "この設定で重要なのは「lerp_speed」パラメータのみです。これはカメラが位置を更新する速度を調整する値です。値を小さくするとカメラは車の動きに「遅れて」追従し、大きく設定すると常に車両に固定された状態になります。"
+msgstr "この設定で重要なのは「lerp_speed」パラメーターのみです。これはカメラが位置を更新する速度を調整する値です。値を小さくするとカメラは車の動きに「遅れて」追従し、大きく設定すると常に車両に固定された状態になります。"
 
 #: 3D/kinematic_car/car_camera.md
 msgid "### Connecting it together"
@@ -6046,7 +6046,7 @@ msgstr "さらに学びたい方のために、フォローアップレシピで
 
 #: 3D/kinematic_car/car_traction.md
 msgid "At this point, we have a large number of parameters to adjust, giving us a very wide range of behavior for the car. Depending on the style of driving you're going for, your number might be very different from the ones used here."
-msgstr "この段階では、車の挙動を幅広く調整できる多数のパラメータが存在します。求める運転スタイルによっては、ここで示した数値とは大きく異なる設定が必要になる場合もあります。"
+msgstr "この段階では、車の挙動を幅広く調整できる多数のパラメーターが存在します。求める運転スタイルによっては、ここで示した数値とは大きく異なる設定が必要になる場合もあります。"
 
 #: 3D/kinematic_car/car_traction.md
 msgid "![alt](/godot_recipes/4.x/img/3d_car_06.gif)"
@@ -6088,7 +6088,7 @@ msgstr "をこれに："
 
 #: 3D/kinematic_car/car_traction.md
 msgid "`slip_speed` is how fast the car needs to be going before losing traction. You'll need to adjust this based on the car's other parameters."
-msgstr "「slip_speed」は、車のトラクションが失われる前に到達すべき速度を指定します。この値は、車の他のパラメータに合わせて調整が必要となります。"
+msgstr "「slip_speed」は、車のトラクションが失われる前に到達すべき速度を指定します。この値は、車の他のパラメーターに合わせて調整が必要となります。"
 
 #: input/multi_unit_select.md
 msgid "Now we get a reference to the physics state and set up our shape query using `PhysicsShapeQueryParameters2D`, assigning it our shape, and using the center of the dragged area as the origin for the query's transform. Our result after calling `intersect_shape()` is an array of dictionaries, which looks like this:"
@@ -6470,7 +6470,7 @@ msgstr "カーソルのカスタマイズ"
 
 #: input/custom_mouse_cursor.md
 msgid "The second parameter sets which system cursor to replace. See the [Input docs](https://docs.godotengine.org/en/latest/classes/class_input.html#enum-input-cursorshape) for the full list."
-msgstr "第2パラメータはどのシステムカーソルを置き換えるかを指定します。完全なリストについては[入力ドキュメント](https://docs.godotengine.org/ja/latest/classes/class_input.html#enum-input-cursorshape)を参照してください。"
+msgstr "第2パラメーターはどのシステムカーソルを置き換えるかを指定します。完全なリストについては[入力ドキュメント](https://docs.godotengine.org/ja/latest/classes/class_input.html#enum-input-cursorshape)を参照してください。"
 
 #: input/custom_mouse_cursor.md
 msgid "You want to use a custom mouse cursor."
@@ -6506,7 +6506,7 @@ msgstr "`state_machine` は状態マシンへの参照を保持しており、�
 
 #: animation/using_animation_sm.md
 msgid "When you select an animation, the tree will follow the connected path from the current node to the destination. However, in the configuration above, if you play \"attack2\" you won't see \"attack1\" along the way. That's because the default \"switch mode\" for a connection is \"Immediate\". Click the \"Move/select\" button and then click on the connection between \"attack1\" and \"attack2\". In the Inspector, change **Switch Mode** to \"At End\". Do the same with \"attack2\" to \"idle\". The connection icon changes from <i class=\"fas fa-play\"></i> to <i class=\"fas fa-step-forward\"></i>."
-msgstr "アニメーションを選択すると、ツリーは現在のノードから目的地まで接続経路に沿って追従します。ただし、上記の設定では「attack2」を再生しても途中で「attack1」は表示されません。これは、接続におけるデフォルトの「スイッチモード」が「即時」に設定されているためです。まず「移動/選択」ボタンをクリックし、次に「attack1」と「attack2」間の接続ポイントをクリックします。インスペクタで「**スイッチモード**」を「終点時」に変更してください。同様の操作を「attack2」から「idle」に対しても行います。接続アイコンが <i class=\"fas fa-play\"></i> から <i class=\"fas fa-step-forward\"></i> へと変化します。"
+msgstr "アニメーションを選択すると、ツリーは現在のノードから目的地まで接続経路に沿って追従します。ただし、上記の設定では「attack2」を再生しても途中で「attack1」は表示されません。これは、接続におけるデフォルトの「スイッチモード」が「即時」に設定されているためです。まず「移動/選択」ボタンをクリックし、次に「attack1」と「attack2」間の接続ポイントをクリックします。インスペクターで「**スイッチモード**」を「終点時」に変更してください。同様の操作を「attack2」から「idle」に対しても行います。接続アイコンが <i class=\"fas fa-play\"></i> から <i class=\"fas fa-step-forward\"></i> へと変化します。"
 
 #: animation/using_animation_sm.md
 msgid ""
@@ -6612,7 +6612,7 @@ msgstr "アニメーションはトリガーされるたびに連続して再生
 
 #: animation/animation_state_machine.md animation/using_animation_sm.md
 msgid "Note the warning. Set the _Active_ property to \"On\" in the Inspector."
-msgstr "警告に注意してください。インスペクタで 「_アクティブ」プロパティを「オン」に設定します。"
+msgstr "警告に注意してください。インスペクターで 「_アクティブ」プロパティを「オン」に設定します。"
 
 #: animation/animation_state_machine.md animation/using_animation_sm.md
 msgid "Now let's set up the character to use these animations in a script."
@@ -6698,7 +6698,7 @@ msgstr "このアニメーション手法では、`Sprite2D`ノードを使用�
 
 #: animation/spritesheet_animation.md
 msgid "Drag the spritesheet texture into the _Texture_ property of the {{< gd-icon Sprite2D >}}`Sprite2D`. You'll see the entire spritesheet displayed in the viewport. To slice it up into individual frames, expand the \"Animation\" section in the Inspector and set the _Hframes_ to `13` and _Vframes_ to `8`. _Hframes_ and _Vframes_ are the number of horizontal and vertical frames in your spritesheet."
-msgstr "{{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの _Texture_プロパティにスプライトシートテクスチャをドラッグ＆ドロップしてください。ビューポート内に完全なスプライトシートが表示されます。個別のフレームに分割するには、インスペクタの「Animation」セクションを拡大し、_Hframes_を `13`、_Vframes_を `8`に設定します。_Hframes_と_Vframes_は、それぞれ水平方向および垂直方向のフレーム数を指定するパラメータです。"
+msgstr "{{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの _Texture_プロパティにスプライトシートテクスチャをドラッグ＆ドロップしてください。ビューポート内に完全なスプライトシートが表示されます。個別のフレームに分割するには、インスペクターの「Animation」セクションを拡大し、_Hframes_を `13`、_Vframes_を `8`に設定します。_Hframes_と_Vframes_は、それぞれ水平方向および垂直方向のフレーム数を指定するパラメーターです。"
 
 #: animation/spritesheet_animation.md
 msgid "![alt](/godot_recipes/4.x/img/sprite_animation_03.png)"
@@ -6828,7 +6828,7 @@ msgstr "これで接続を追加できるようになりました。「ノード
 
 #: animation/animation_state_machine.md
 msgid "When you select an animation, the tree will follow the connected path from the current node to the destination. However, in the configuration above, if you play \"attack2\" you won't see \"attack1\" along the way. That's because the default \"switch mode\" for a connection is \"Immediate\". Click the \"Move/select\" button and then click on the connection from \"attack1\" to \"attack2\". In the Inspector, change _Switch Mode_ to \"AtEnd\". Do the same with \"attack2\" to \"idle\". The connection icon changes from <i class=\"fas fa-play\"></i> to <i class=\"fas fa-step-forward\"></i>."
-msgstr "アニメーションを選択すると、ツリーは現在のノードから目的地まで接続経路に沿って移動します。ただし、上記の設定で「attack2」を再生すると、その途中に「attack1」が表示されることはありません。これは、デフォルトの接続「スイッチモード」が「即時」に設定されているためです。まず「Move/select」ボタンをクリックしてから、「attack1」から「attack2」への接続をクリックしてください。インスペクタで _Switch Mode_ を「AtEnd」に変更します。同様に、「attack2」から「idle」までについても同様の操作を行ってください。接続アイコンが <i class=\"fas fa-play\"></i> から <i class=\"fas fa-step-forward\"></i> に変わります。"
+msgstr "アニメーションを選択すると、ツリーは現在のノードから目的地まで接続経路に沿って移動します。ただし、上記の設定で「attack2」を再生すると、その途中に「attack1」が表示されることはありません。これは、デフォルトの接続「スイッチモード」が「即時」に設定されているためです。まず「Move/select」ボタンをクリックしてから、「attack1」から「attack2」への接続をクリックしてください。インスペクターで _Switch Mode_ を「AtEnd」に変更します。同様に、「attack2」から「idle」までについても同様の操作を行ってください。接続アイコンが <i class=\"fas fa-play\"></i> から <i class=\"fas fa-step-forward\"></i> に変わります。"
 
 #: animation/animation_state_machine.md
 msgid "But now the animation stops on \"attack2\". On its connection, set the _Auto Advance_ property to \"On\". This will make the tree go back to \"idle\" after playing both animations. Note that the connection icon turns green to show this."
@@ -7205,7 +7205,7 @@ msgstr "動作テストを行い、すべてが期待通りに機能している
 
 #: g101/3d/101_3d_07.md
 msgid "We're also setting `true` for the `stop_on_slope` parameter of `move_and_slide()`. This keeps us from sliding down the ramp if we stand on it."
-msgstr "「move_and_slide()」の「stop_on_slope」パラメータにも「true」を設定しています。これにより、スロープに立っても滑り落ちるのを防ぎます。"
+msgstr "「move_and_slide()」の「stop_on_slope」パラメーターにも「true」を設定しています。これにより、スロープに立っても滑り落ちるのを防ぎます。"
 
 #: g101/3d/101_3d_07.md
 msgid "![alt](/godot_recipes/4.x/img/3d_07_01.png)"
@@ -7501,7 +7501,7 @@ msgid ""
 "After adding the `CSGPolygon`, you can click the _Polygon_ property to adjust\n"
 "its number of points. After that, you can drag the three points to whatever\n"
 "location you like. To ensure everything lines up, you can type the coordinates into the Inspector:"
-msgstr "追加後、_ポリゴン_ プロパティをクリックして点の数を調整できます。その後、3つの点を任意の位置にドラッグして移動できます。すべてを正確に配置するには、インスペクタに座標を直接入力できます。"
+msgstr "追加後、_ポリゴン_ プロパティをクリックして点の数を調整できます。その後、3つの点を任意の位置にドラッグして移動できます。すべてを正確に配置するには、インスペクターに座標を直接入力できます。"
 
 #: g101/3d/101_3d_06.md
 msgid "![alt](/godot_recipes/4.x/img/3d_06_07.png?width=300)"
@@ -7598,7 +7598,7 @@ msgstr "ルートノードにスクリプトを追加し、以下の内容を追
 
 #: g101/3d/101_3d_02.md
 msgid "Why is the scene so dark? Because there's no light! By default, Godot doesn't add any lighting or environment to your scenes, like it does in the editor viewport. This is great when you want to set up your own specific lighting, but for a quick example scene like this, there's a shortcut."
-msgstr "シーンが暗く表示される理由は、ライティングが全く設定されていないからです。デフォルトでは、Godotはエディタのビューポートと同様に、シーンに任意のライティングや環境設定を追加しません。これは独自のライティングをカスタマイズしたい場合には便利ですが、このような簡易サンプルシーンの場合は、ショートカットが使えます。"
+msgstr "シーンが暗く表示される理由は、ライティングが全く設定されていないからです。デフォルトでは、Godotはエディターのビューポートと同様に、シーンに任意のライティングや環境設定を追加しません。これは独自のライティングをカスタマイズしたい場合には便利ですが、このような簡易サンプルシーンの場合は、ショートカットが使えます。"
 
 #: g101/3d/101_3d_02.md
 msgid ""
@@ -7612,7 +7612,7 @@ msgstr "次に「crate.glb」を右クリックし、**新しい継承シーン*
 
 #: g101/3d/101_3d_02.md
 msgid "There are multiple light nodes available in 3D, which you can use to create a variety of lighting effects. But we're going to start with {{< gd-icon DirectionalLight3D >}}`DirectionalLight3D`. However, instead of adding one manually, we're going to have Godot use the same one it's using in the editor window. At the top ove the viewport, there are two icons that control the *preview lighting* and *preview environment*. If you click the three dots next to them, you can see their settings."
-msgstr "3D環境には多種多様なライティング効果を作成可能なライトノードが複数用意されています。まずは{{< gd-icon DirectionalLight3D >}}`DirectionalLight3D`から解説を始めましょう。ただし手動で追加するのではなく、エディタウィンドウで使用されているのと同じライトを使用する方法を紹介します。ビューポート上部には、*プレビューライティング*と*プレビュー環境*を制御する2つのアイコンがあります。これらの横にある三点リーダーをクリックすると、その設定内容を確認できます。"
+msgstr "3D環境には多種多様なライティング効果を作成可能なライトノードが複数用意されています。まずは{{< gd-icon DirectionalLight3D >}}`DirectionalLight3D`から解説を始めましょう。ただし手動で追加するのではなく、エディターウィンドウで使用されているのと同じライトを使用する方法を紹介します。ビューポート上部には、*プレビューライティング*と*プレビュー環境*を制御する2つのアイコンがあります。これらの横にある三点リーダーをクリックすると、その設定内容を確認できます。"
 
 #: g101/3d/101_3d_02.md
 msgid "### Lighting"
@@ -8174,7 +8174,7 @@ msgstr "## カメラ設定"
 msgid ""
 "In this tutorial you learned how to use Godot's 3D editor, how to add 3D\n"
 "nodes such as {{< gd-icon Node3D >}}`Node3D`, {{< gd-icon MeshInstance3D >}}`MeshInstance3D`, and {{< gd-icon Camera3D >}}`Camera3D`, and how to use gizmos to place your objects. You also learned a bunch of new terminology. Hopefully you're not overwhelmed."
-msgstr "本チュートリアルでは、Godotの3Dエディタの使い方、以下のノードを追加する方法を学びました：{{< gd-icon Node3D >}}`Node3D`、{{< gd-icon MeshInstance3D >}}`MeshInstance3D`、および {{< gd-icon Camera3D >}}`Camera3D`、さらにギズモを使ってオブジェクトを配置する方法についてです。また、多くの新しい専門用語も学びました。圧倒されてしまわないよう、ご安心ください。"
+msgstr "本チュートリアルでは、Godotの3Dエディターの使い方、以下のノードを追加する方法を学びました：{{< gd-icon Node3D >}}`Node3D`、{{< gd-icon MeshInstance3D >}}`MeshInstance3D`、および {{< gd-icon Camera3D >}}`Camera3D`、さらにギズモを使ってオブジェクトを配置する方法についてです。また、多くの新しい専門用語も学びました。圧倒されてしまわないよう、ご安心ください。"
 
 #: g101/3d/101_3d_01.md
 msgid "## Adding 3D Objects"
@@ -8190,7 +8190,7 @@ msgstr "たとえば、キューブは8つの頂点、12本の辺、6つの面�
 
 #: g101/3d/101_3d_01.md
 msgid "Add a {{< gd-icon MeshInstance3D >}}`MeshInstance3D` node as a child of the {{< gd-icon Node3D >}}`Node3D` and in the Inspector, click its **Mesh** property:"
-msgstr "{{< gd-icon MeshInstance3D >}}`MeshInstance3D`ノードを {{< gd-icon Node3D >}}`Node3D`の子として追加し、インスペクタでその **メッシュ** プロパティをクリックします。"
+msgstr "{{< gd-icon MeshInstance3D >}}`MeshInstance3D`ノードを {{< gd-icon Node3D >}}`Node3D`の子として追加し、インスペクターでその **メッシュ** プロパティをクリックします。"
 
 #: g101/3d/101_3d_01.md
 msgid "![alt](/godot_recipes/4.x/img/3d_intro_perspective.png)"
@@ -8257,7 +8257,7 @@ msgid ""
 "applies equally well in 3D, there is also a whole new layer of complexity and\n"
 "capabilities. First, you'll find that there are some additional features\n"
 "available in the 3D editor window, so we'll start there:"
-msgstr "Godotの大きな強みの一つは、2Dゲームと3Dゲームの両方を開発できる点です。これまで2Dプロジェクトで習得した知識（ノード、シーン、シグナルなど）の多くは3D環境でも同様に適用できますが、同時に全く新しいレベルの複雑さと機能も追加されています。まず初めに、3Dエディタウィンドウで利用できる新機能をいくつかご紹介しましょう。"
+msgstr "Godotの大きな強みの一つは、2Dゲームと3Dゲームの両方を開発できる点です。これまで2Dプロジェクトで習得した知識（ノード、シーン、シグナルなど）の多くは3D環境でも同様に適用できますが、同時に全く新しいレベルの複雑さと機能も追加されています。まず初めに、3Dエディターウィンドウで利用できる新機能をいくつかご紹介しましょう。"
 
 #: g101/3d/101_3d_01.md
 msgid "## Global vs. Local Space"
@@ -8320,7 +8320,7 @@ msgstr ""
 
 #: g101/3d/101_3d_01.md
 msgid "Look at the Inspector for the {{< gd-icon Node3D >}}`Node3D` node. In the **Transform** section, you'll see properties for **Position**, **Rotation**, and **Scale**. Drag the object around with the gizmo and observe how these values change. Just like in 2D, these properties are *relative* to the node's parent."
-msgstr "{{< gd-icon Node3D >}} ノードのインスペクタを確認してください。「変換」セクションには、**位置**、**回転**、**スケール**に関するプロパティが表示されます。ギズモを使ってオブジェクトを移動させながら、これらの値が変化していく様子を観察してください。2Dと同様、これらのプロパティはノードの親要素に対する*相対値*として扱われます。"
+msgstr "{{< gd-icon Node3D >}} ノードのインスペクターを確認してください。「変換」セクションには、**位置**、**回転**、**スケール**に関するプロパティが表示されます。ギズモを使ってオブジェクトを移動させながら、これらの値が変化していく様子を観察してください。2Dと同様、これらのプロパティはノードの親要素に対する*相対値*として扱われます。"
 
 #: g101/3d/101_3d_01.md
 msgid ""
@@ -8401,7 +8401,7 @@ msgstr "## 3D空間での方向把握"
 
 #: g101/3d/101_3d_01.md
 msgid "The 3D Editor"
-msgstr "3Dエディタ"
+msgstr "3Dエディター"
 
 #: g101/3d/101_3d_01.md
 msgid ""
@@ -8569,7 +8569,7 @@ msgstr "Areasを使用しています"
 
 #: g101/3d/101_3d_04.md
 msgid "Create a new inherited scene from the `CoinGold.glb` object in the Kenney Platformer Kit (see [Part 2](/godot_recipes/4.x/g101/3d/101_3d_02/)). Right-click on the root node, choose \"Change Type\", and pick {{< gd-icon Area3D >}}`Area3D`. In the Inspector, set the collision mask and layer so that the coin is in \"pickups\" and scans \"player\"."
-msgstr "Kenney Platformer Kit の `CoinGold.glb` オブジェクトから新しい継承シーンを作成します（[パート2](/godot_recipes/4.x/ja/g101/3d/101_3d_02/) 参照）。ルートノードを右クリックし、「タイプを変更」を選択して {{< gd-icon Area3D >}}`Area3D` を選択します。インスペクタで、衝突マスクとレイヤーを設定して、コインが「ピックアップ」として認識され、「プレイヤー」を検出できるようにします。"
+msgstr "Kenney Platformer Kit の `CoinGold.glb` オブジェクトから新しい継承シーンを作成します（[パート2](/godot_recipes/4.x/ja/g101/3d/101_3d_02/) 参照）。ルートノードを右クリックし、「タイプを変更」を選択して {{< gd-icon Area3D >}}`Area3D` を選択します。インスペクターで、衝突マスクとレイヤーを設定して、コインが「ピックアップ」として認識され、「プレイヤー」を検出できるようにします。"
 
 #: g101/3d/101_3d_04.md
 msgid ""
@@ -8925,7 +8925,7 @@ msgstr "「GDScriptはPythonをベースにしている」と説明されてい�
 
 #: g101/gdscript/gdscript_01.md
 msgid "Now the script editor window opens up, and this is your new, empty sprite script. Godot has automatically included some lines of code, as well as some comments describing what they do."
-msgstr "スクリプトエディタウィンドウが開きます。ここに、新しく作成した空のスプライト用スクリプトが表示されます。Godotは自動的に数行のコードと、各コードの機能を説明するコメントを自動生成しています。"
+msgstr "スクリプトエディターウィンドウが開きます。ここに、新しく作成した空のスプライト用スクリプトが表示されます。Godotは自動的に数行のコードと、各コードの機能を説明するコメントを自動生成しています。"
 
 #: g101/gdscript/gdscript_01.md
 msgid "## Structure of a script"
@@ -8933,11 +8933,11 @@ msgstr "## スクリプトの構成要素"
 
 #: g101/gdscript/gdscript_01.md
 msgid "Open the editor and add a {{< gd-icon Sprite2D >}}`Sprite2D` node to empty scene. Right-click on the new node, and choose \"Attach Script\". You can also click the button next to the search box."
-msgstr "エディタを開き、空のシーンに {{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加します。新規追加したノードを右クリックし、「スクリプトをアタッチ」を選択します。または、検索ボックス横のボタンをクリックしてスクリプトをアタッチすることもできます。"
+msgstr "エディターを開き、空のシーンに {{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加します。新規追加したノードを右クリックし、「スクリプトをアタッチ」を選択します。または、検索ボックス横のボタンをクリックしてスクリプトをアタッチすることもできます。"
 
 #: g101/gdscript/gdscript_01.md
 msgid "You can think of it as the coding version of using the Inspector - GDScript knows all about Godot nodes and how to access them, plus it allows you to change them dynamically."
-msgstr "これはインスペクタを使用する場合と同様と考えてください。GDScriptはGodotノードに関するあらゆる知識を持ち、それらへのアクセス方法を知っているだけでなく、動的に変更することもできます。"
+msgstr "これはインスペクターを使用する場合と同様と考えてください。GDScriptはGodotノードに関するあらゆる知識を持ち、それらへのアクセス方法を知っているだけでなく、動的に変更することもできます。"
 
 #: g101/gdscript/gdscript_01.md
 msgid "In the rest of the script, you can define any number of variables (aka \"class properties\") and functions (aka \"class methods\")."
@@ -8979,7 +8979,7 @@ msgstr "入門"
 
 #: g101/gdscript/gdscript_01.md
 msgid "Notice how the editor is making suggestions as you type. Godot uses vectors for lots of things, and we'll talk more about them later. For now, let's type Vector2, and the hint tells us to put two floats for `x` and `y`."
-msgstr "エディタが入力に応じて即座に提案を表示しているのに注目してください。Godotは多くの場面でベクトルを使用しており、この点については後ほど詳しく説明します。まずは「Vector2」と入力してみましょう。ヒントが表示されるので、`x` と `y` には2つの浮動小数点数を指定する必要があることがわかります。"
+msgstr "エディターが入力に応じて即座に提案を表示しているのに注目してください。Godotは多くの場面でベクトルを使用しており、この点については後ほど詳しく説明します。まずは「Vector2」と入力してみましょう。ヒントが表示されるので、`x` と `y` には2つの浮動小数点数を指定する必要があることがわかります。"
 
 #: g101/gdscript/gdscript_01.md
 msgid ""
@@ -8997,7 +8997,7 @@ msgstr "最初のスクリプトを作成しましょう。覚えておくべき
 
 #: g101/gdscript/gdscript_01.md
 msgid "How do we set the property in code? One way to find the name of the property is by hovering over it in the Inspector."
-msgstr "コード内でプロパティを設定するには？1つの方法として、インスペクタでプロパティの上にマウスカーソルを合わせると、名前を確認できます。"
+msgstr "コード内でプロパティを設定するには？1つの方法として、インスペクターでプロパティの上にマウスカーソルを合わせると、名前を確認できます。"
 
 #: g101/gdscript/gdscript_01.md
 msgid "![alt](/godot_recipes/4.x/img/gds_01_02.png)"
@@ -9021,7 +9021,7 @@ msgstr "次に、スクリプトを保存する場所とファイル名を決定
 
 #: g101/gdscript/gdscript_01.md
 msgid "Let's say that when the game starts, we want to make sure the sprite goes to a particular location. In the Inspector, we want to set the **Position** property. Notice that it's in the section called \"Node2D\" - that means this is a property that *any* {{< gd-icon Node2D >}}`Node2D` type node will have, not just {{< gd-icon Sprite2D >}}`Sprite2D`s."
-msgstr "ゲーム開始時にスプライトを特定の位置に配置したいとしましょう。インスペクタでは「**位置**」プロパティを設定する必要があります。「Node2D」とラベル付けされたセクションにある点に注目してください。これは、これは任意の {{< gd-icon Node2D >}}`Node2D`タイプのノードが持つプロパティであり、{{< gd-icon Sprite2D >}}`Sprite2D`に限定されないことを示しています。"
+msgstr "ゲーム開始時にスプライトを特定の位置に配置したいとしましょう。インスペクターでは「**位置**」プロパティを設定する必要があります。「Node2D」とラベル付けされたセクションにある点に注目してください。これは、これは任意の {{< gd-icon Node2D >}}`Node2D`タイプのノードが持つプロパティであり、{{< gd-icon Sprite2D >}}`Sprite2D`に限定されないことを示しています。"
 
 #: g101/gdscript/gdscript_01.md
 msgid "## Creating a script"
@@ -9301,11 +9301,11 @@ msgstr "Godotノード"
 
 #: g101/start/101_03.md
 msgid "Now we have this {{< gd-icon Sprite2D >}}`Sprite2D` node in our **Scene** dock. Make sure it's selected, and then look at the Inspector dock on the right side. Over here, you'll see all the properties of whatever node you have selected. Notice that the properties are organized by where they come from. The {{< gd-icon Sprite2D >}}`Sprite2D` node inherits from {{< gd-icon Node2D >}}`Node2D`, which inherits from {{< gd-icon CanvasItem >}}`CanvasItem`, which inherits from the plain old {{< gd-icon Node >}}`Node`."
-msgstr "これでシーンドックにこの {{< gd-icon Sprite2D >}}`Sprite2D` ノードが追加されました。必ず選択状態にしてください。次に右側のインスペクタドックを見てみましょう。ここには現在選択されているノードのすべてのプロパティが表示されます。これらのプロパティは、それらがどのソースから来ているかによって整理されていることに注目してください。{{< gd-icon Sprite2D >}}`Sprite2D`ノードは {{< gd-icon Node2D >}}`Node2D`を継承しており、これはさらに{{< gd-icon CanvasItem >}}CanvasItemを継承し、さらにその根本には単純な{{< gd-icon Node >}}`Node`が存在します。"
+msgstr "これでシーンドックにこの {{< gd-icon Sprite2D >}}`Sprite2D` ノードが追加されました。必ず選択状態にしてください。次に右側のインスペクタードックを見てみましょう。ここには現在選択されているノードのすべてのプロパティが表示されます。これらのプロパティは、それらがどのソースから来ているかによって整理されていることに注目してください。{{< gd-icon Sprite2D >}}`Sprite2D`ノードは {{< gd-icon Node2D >}}`Node2D`を継承しており、これはさらに{{< gd-icon CanvasItem >}}CanvasItemを継承し、さらにその根本には単純な{{< gd-icon Node >}}`Node`が存在します。"
 
 #: g101/start/101_03.md
 msgid "Over in the viewport, the sprite doesn't look like much. A sprite's purpose is to display an image, or texture. As you can see in the Inspector, the **Texture** property is currently empty. Fortunately, every new Godot project comes with an image we can use: the Godot icon. Drag the icon from the Filesystem dock and drop it in the texture property."
-msgstr "ビューポート上で確認すると、スプライトの表示は期待通りではありません。スプライトの目的は画像（テクスチャ）を表示することだからです。インスペクタを見ると、**テクスチャ**プロパティが現在空になっているのがわかります。幸いなことに、新規プロジェクトには必ずGodotアイコンが付属しています。このアイコンをファイルシステムドックからドラッグし、テクスチャプロパティにドロップしてください。"
+msgstr "ビューポート上で確認すると、スプライトの表示は期待通りではありません。スプライトの目的は画像（テクスチャ）を表示することだからです。インスペクターを見ると、**テクスチャ**プロパティが現在空になっているのがわかります。幸いなことに、新規プロジェクトには必ずGodotアイコンが付属しています。このアイコンをファイルシステムドックからドラッグし、テクスチャプロパティにドロップしてください。"
 
 #: g101/start/101_03.md
 msgid "![alt](/godot_recipes/4.x/img/g4_101_11.png)"
@@ -9333,7 +9333,7 @@ msgstr "ビューポート内でスプライトをクリック＆ドラッグす
 
 #: g101/start/101_03.md
 msgid "In the Inspector, click to expand the \"Transform\" section, and type `(50, 50)` in the **Position** property."
-msgstr "インスペクタで「変換」セクションを展開するためにクリックし、**Position** プロパティに `(50, 50)` と入力してください。"
+msgstr "インスペクターで「変換」セクションを展開するためにクリックし、**Position** プロパティに `(50, 50)` と入力してください。"
 
 #: g101/start/101_03.md
 msgid "![alt](/godot_recipes/4.x/img/g4_101_08.png?width=500)"
@@ -9415,7 +9415,7 @@ msgstr ""
 
 #: g101/start/101_02.md
 msgid "The Godot Editor: Finding your way around"
-msgstr "Godot エディタ：操作方法の基本ガイド"
+msgstr "Godot エディター：操作方法の基本ガイド"
 
 #: g101/start/101_02.md
 msgid "![alt](/godot_recipes/4.x/img/g4_101_01.png)"
@@ -9431,7 +9431,7 @@ msgstr "## プロジェクト設定"
 
 #: g101/start/101_02.md
 msgid "Second, let's look at the **Display** section. This is where you set up your game's display.  `width` & `height` let you set the size of the game window. If, for example, you were making a mobile game, you'd want to set this to the resolution and proportions of your target device. There are also settings for scaling, stretching, fullscreen mode, and more. For now, we'll leave the default size - later on we'll talk about how to adjust these to get our game running on different devices."
-msgstr "次に、**表示設定**セクションを確認しましょう。ここではゲームの画面表示を設定します。`width` と `height` パラメータではゲームウィンドウのサイズを指定できます。例えばモバイル向けゲームを開発する場合、対象デバイスの解像度とアスペクト比に合わせて設定してください。その他にもスケーリング処理や縦横比変更、フルスクリーンモードなどの各種設定ができます。現時点ではデフォルトサイズのままにしておきますが、後ほど異なるデバイス環境で動作させるための調整方法について詳しく説明します。"
+msgstr "次に、**表示設定**セクションを確認しましょう。ここではゲームの画面表示を設定します。`width` と `height` パラメーターではゲームウィンドウのサイズを指定できます。例えばモバイル向けゲームを開発する場合、対象デバイスの解像度とアスペクト比に合わせて設定してください。その他にもスケーリング処理や縦横比変更、フルスクリーンモードなどの各種設定ができます。現時点ではデフォルトサイズのままにしておきますが、後ほど異なるデバイス環境で動作させるための調整方法について詳しく説明します。"
 
 #: g101/start/101_02.md
 msgid "We also have localization options, if you plan to support multiple languages. Autoloading, which we'll get to later, and plugins.  The Godot community has created a variety of useful plugins that you can download and add to supply more features, different tools, and so on."
@@ -9455,13 +9455,13 @@ msgstr "![alt](/godot_recipes/4.x/img/g4_101_04.png)"
 
 #: g101/start/101_02.md
 msgid "You're now looking at the Godot editor window. This is where you'll spend most of your time when working in Godot. The editor is divided into sections."
-msgstr "現在、Godotエディタウィンドウを開いています。これはGodotで作業する際に最も見る画面です。エディタはセクションに分かれて構成されています。"
+msgstr "現在、Godotエディターウィンドウを開いています。これはGodotで作業する際に最も見る画面です。エディターはセクションに分かれて構成されています。"
 
 #: g101/start/101_02.md
 msgid ""
 "In this window you can see a list of your Godot projects. You can choose an existing project and click \"Run\" to play the game or click \"Edit\" to work on it in the Godot editor. Since you probably don't have any projects yet, let's start by clicking the \"New Project\"\n"
 "button."
-msgstr "このウィンドウでは、Godotプロジェクトの一覧を確認できます。既存のプロジェクトを選択して「実行」をクリックすればゲームをプレイ可能、または「編集」をクリックしてGodotエディタで直接作業することもできます。まだプロジェクトを作成していない場合は、まず「＋作成」ボタンをクリックすることから始めましょう。"
+msgstr "このウィンドウでは、Godotプロジェクトの一覧を確認できます。既存のプロジェクトを選択して「実行」をクリックすればゲームをプレイ可能、または「編集」をクリックしてGodotエディターで直接作業することもできます。まだプロジェクトを作成していない場合は、まず「＋作成」ボタンをクリックすることから始めましょう。"
 
 #: g101/start/101_02.md
 msgid "In here, you can set your game's title, choose which scene is the \"main scene\" (more about that in a bit), and change the icon."
@@ -9688,7 +9688,7 @@ msgstr ""
 
 #: Math/transforms.md
 msgid "When you select a 3D node in the editor, the gizmo that appears allows you to manipulate the transform."
-msgstr "エディタで3Dノードを選択すると表示されるギズモを使用すると、変換操作を行えます。"
+msgstr "エディターで3Dノードを選択すると表示されるギズモを使用すると、変換操作を行えます。"
 
 #: Math/transforms.md
 msgid "In 3D space, the concept of transforms applies in the same way as in 2D. In fact, it becomes even more necessary, as using angles in 3D can lead to a variety of problems, as we'll see in a bit."
@@ -9883,11 +9883,11 @@ msgstr "このスクリプトをプロジェクト設定で 自動読み込み �
 
 #: audio/audio_manager.md
 msgid "Remember, you can drag sound files directly into the text editor to paste the file path."
-msgstr "覚えておくと便利ですが、サウンドファイルをテキストエディタに直接ドラッグ＆ドロップすることで、ファイルパスを簡単に貼り付けることができます。"
+msgstr "覚えておくと便利ですが、サウンドファイルをテキストエディターに直接ドラッグ＆ドロップすることで、ファイルパスを簡単に貼り付けることができます。"
 
 #: audio/audio_manager.md
 msgid "Create a new script in the script editor:"
-msgstr "スクリプトエディタで新しいスクリプトを作成します。"
+msgstr "スクリプトエディターで新しいスクリプトを作成します。"
 
 #: audio/audio_manager.md
 msgid "Anywhere in your project that you want to play a sound, use:"
@@ -9996,7 +9996,7 @@ msgstr "* `text` - このプロパティはラベルの表示内容を決定し�
 
 #: kyn/tween.md
 msgid "The `trans_type` parameter lets you select which *transition type* you'd like to use in your interpolation. This represents the mathematical formula used to calculate the property each frame. Different types result in different movement styles. Below, each icon's `position` is tweened over the same range and timeframe:"
-msgstr "trans_typeパラメータを使用することで、補間に使用する遷移タイプを選択できます。これは、各フレームにおけるプロパティ値を計算するための数学的公式を指定するものです。異なるタイプのトランジションは、それぞれ特徴的な移動パターンを生成します。以下に示すように、各アイコンの'position'値は同一の範囲と時間範囲でTween処理されます。"
+msgstr "trans_typeパラメーターを使用することで、補間に使用する遷移タイプを選択できます。これは、各フレームにおけるプロパティ値を計算するための数学的公式を指定するものです。異なるタイプのトランジションは、それぞれ特徴的な移動パターンを生成します。以下に示すように、各アイコンの'position'値は同一の範囲と時間範囲でTween処理されます。"
 
 #: kyn/tween.md
 msgid "![alt](/godot_recipes/4.x/img/tween_01.gif)"
@@ -10200,7 +10200,7 @@ msgstr "## ターゲットの追跡中"
 
 #: kyn/path2d.md
 msgid "A *path* is a sequence of points in 2D space, defined by a {{< gd-icon Curve2D >}}`Curve2D` resource. The {{< gd-icon Path2D >}}`Path2D` is a node that allows you to position a path in 2D space, and do create a new path in the editor."
-msgstr "*パス* とは 2D 空間における点の連続であり、{{< gd-icon Curve2D >}}`Curve2D` リソースによって定義されます。{{< gd-icon Path2D >}}`Path2D` ノードを使用すると、2D 空間でパスを配置できるほか、エディタ内で新規パスを作成することもできます。"
+msgstr "*パス* とは 2D 空間における点の連続であり、{{< gd-icon Curve2D >}}`Curve2D` リソースによって定義されます。{{< gd-icon Path2D >}}`Path2D` ノードを使用すると、2D 空間でパスを配置できるほか、エディター内で新規パスを作成することもできます。"
 
 #: kyn/path2d.md
 msgid "At any given point along the path, the {{< gd-icon PathFollow2D >}}`PathFollow2D`'s forward direction (`transform.x`) points along the path."
@@ -10290,7 +10290,7 @@ msgstr "このメソッドは、空間内の任意の点に最も近い経路上
 
 #: kyn/path2d.md
 msgid "Select \"Add Point\" and click in the editor window to create points."
-msgstr "「ポイントを追加」を選択し、エディタウィンドウ内でクリックしてポイントを作成します。"
+msgstr "「ポイントを追加」を選択し、エディターウィンドウ内でクリックしてポイントを作成します。"
 
 #: kyn/path2d.md
 msgid "The data of the path is held in this Resource object. It contains the mathematical representation of the curve, and provides some ways to interact with that data. The [API Documentation](https://docs.godotengine.org/en/stable/classes/class_curve2d.html) contains the details, but here are a few useful methods that you may want to use:"
@@ -10648,7 +10648,7 @@ msgstr "### 使用例"
 
 #: kyn/characterbody2d.md
 msgid "This method takes a parameter called `distance`. This is the vector you want the body to move in a given frame. Typically, you'll pass your `velocity` vector multiplied by `delta` (which is, of course, a distance)."
-msgstr "このメソッドには `distance` というパラメータが必要です。これは、指定されたフレーム内で対象物体を移動させたいベクトルを指定します。通常は `velocity` ベクトルに `delta` を掛けたものを渡します（もちろん `delta` は距離を表す値です）。"
+msgstr "このメソッドには `distance` というパラメーターが必要です。これは、指定されたフレーム内で対象物体を移動させたいベクトルを指定します。通常は `velocity` ベクトルに `delta` を掛けたものを渡します（もちろん `delta` は距離を表す値です）。"
 
 #: kyn/characterbody2d.md
 msgid "### Which movement method do I use?"
@@ -10753,7 +10753,7 @@ msgid ""
 "{{% notice note %}}\n"
 "`move_and_slide()` takes no parameters. Just set the built-in `velocity` property and it will apply `delta` and calculate the movement.\n"
 "{{% /notice %}}"
-msgstr "`move_and_slide()` はパラメータを受け取りません。組み込みの `velocity` プロパティを設定するだけで、自動的に `delta` を適用して移動量を計算します。"
+msgstr "`move_and_slide()` はパラメーターを受け取りません。組み込みの `velocity` プロパティを設定するだけで、自動的に `delta` を適用して移動量を計算します。"
 
 #: kyn/characterbody2d.md
 msgid "* `move_and_collide()`"
@@ -11195,7 +11195,7 @@ msgstr "最後に、コンテキスト配列を使用して方向を選択でき
 
 #: ai/context_map.md
 msgid "Here's the code for our agent. We start with the exported values: movement parameters and other values we want to be able to adjust easily. `look_ahead`, for example, is how far ahead the `danger` rays will detect obstacles."
-msgstr "以下にエージェントのコードを示します。まずはエクスポートした値から始めましょう。移動パラメータと、後で容易に調整できるようにしたいその他の値です。例えば `look_ahead` は、`danger` レイが障害物を検出する範囲を指定します。"
+msgstr "以下にエージェントのコードを示します。まずはエクスポートした値から始めましょう。移動パラメーターと、後で容易に調整できるようにしたいその他の値です。例えば `look_ahead` は、`danger` レイが障害物を検出する範囲を指定します。"
 
 #: ai/context_map.md
 msgid "You need an AI-controlled object in your game that can follow a path, avoid obstacles, and make other decisions about how to move around the world."
@@ -11299,7 +11299,7 @@ msgstr "{{< gd-icon Path2D >}}`Path2D`ノードを追加すると、ビューポ
 
 #: ai/path_follow.md
 msgid "Exporting the `patrol_path` lets us assign the path node directly in the Inspector. Then, if it's assigned, we can get the points that make up the line in `_ready()`."
-msgstr "`patrol_path`をエクスポートすることで、インスペクタ内で直接パスノードを割り当てることができます。その後、そのノードが割り当てられていれば、`_ready()`関数内でラインを構成するポイント情報を取得可能です。"
+msgstr "`patrol_path`をエクスポートすることで、インスペクター内で直接パスノードを割り当てることができます。その後、そのノードが割り当てられていれば、`_ready()`関数内でラインを構成するポイント情報を取得可能です。"
 
 #: ai/path_follow.md
 msgid "You can add the {{< gd-icon Path2D >}}`Path2D` as a child of your main scene, your map, or another location that makes sense. Don't make it a child of the patrolling entity, though - or the path will move along with the player!"
@@ -11311,7 +11311,7 @@ msgstr "「制御点」モードを使用して、線の「曲線度」を調整
 
 #: ai/path_follow.md
 msgid "There are many ways to approach this problem. In this solution, we'll use Godot's {{< gd-icon Path2D >}}`Path2D` node (or {{< gd-icon Path3D >}}`Path` for 3D) as a convenient way to draw paths in the editor."
-msgstr "この問題に対処する方法は複数あります。本ソリューションでは、エディタ内でパスを描画するための便利な方法として、Godotの{{< gd-icon Path2D >}} `Path2D`ノード（3Dの場合は{{< gd-icon Path3D >}} `Path`）を使用します。"
+msgstr "この問題に対処する方法は複数あります。本ソリューションでは、エディター内でパスを描画するための便利な方法として、Godotの{{< gd-icon Path2D >}} `Path2D`ノード（3Dの場合は{{< gd-icon Path3D >}} `Path`）を使用します。"
 
 #: ai/path_follow.md
 msgid "### Moving along the path"
@@ -11469,7 +11469,7 @@ msgstr "シェーダーでは、ピクセル座標は **UV** 表記で指定さ�
 
 #: shaders/intro.md
 msgid "You can also use optional *hints* to assist in setting the value in the Inspector."
-msgstr "インスペクタで値を設定する際に補助として使用できるオプションの *ヒント* も利用できます。"
+msgstr "インスペクターで値を設定する際に補助として使用できるオプションの *ヒント* も利用できます。"
 
 #: shaders/intro.md
 msgid "#### Varying with time"
@@ -11582,7 +11582,7 @@ msgstr "### フラグメントシェーダー"
 
 #: shaders/intro.md
 msgid "To pass a value to the shader, you need a variable declared with the _uniform_ keyword. Once you do this, the variable appears in the Inspector in much the same way an `export` variable. However, a uniform's value *can not* be changed in the shader!"
-msgstr "シェーダーに値を渡すには、`_uniform_`キーワードで宣言された変数が必要です。この設定を行うと、インスペクタには`export`変数と似た形でその変数が表示されます。ただし注意点として、ユニフォーム変数の値はシェーダー内で*変更することはできません*！"
+msgstr "シェーダーに値を渡すには、`_uniform_`キーワードで宣言された変数が必要です。この設定を行うと、インスペクターには`export`変数と似た形でその変数が表示されます。ただし注意点として、ユニフォーム変数の値はシェーダー内で*変更することはできません*！"
 
 #: shaders/intro.md
 msgid "The most difficult part for newcomers to understand about shaders is that they run in _parallel_. A shader runs simultaneously on *all* pixels. This allows for great speed, but also limits what information you have access to in the shader."
@@ -11887,7 +11887,7 @@ msgid ""
 "default global gravity. You can find this setting in \"Project Settings\" under\n"
 "_Physics -> 2d_. You can also try changing the Block's `Gravity Scale` property in the\n"
 "Inspector. I'm using a value of `3`."
-msgstr "※「再生」を押すとブロックがゆっくりと下方に落ちていくのが確認できるでしょう。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクタで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。私は値を`3`に設定しています。"
+msgstr "※「再生」を押すとブロックがゆっくりと下方に落ちていくのが確認できるでしょう。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクターで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。私は値を`3`に設定しています。"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -12390,7 +12390,7 @@ msgstr "![alt](/godot_recipes/4.x/img/inf_inertia3.gif)"
 
 #: physics/kinematic_to_rigidbody.md
 msgid "By default, a kinematic body moved with `move_and_slide()` or `move_and_collide()` will push any rigid bodies it collides with. This interaction ignores the rigid body's physics properties due to the kinematic move function's `infinite_inertia` parameter."
-msgstr "デフォルトでは、`move_and_slide()` または `move_and_collide()` で移動させた運動体は、衝突したリジッドボディすべてに影響を及ぼします。この相互作用は、運動体移動関数の `infinite_inertia`（無限慣性）パラメータのため、リジッドボディの物理特性を考慮しません。"
+msgstr "デフォルトでは、`move_and_slide()` または `move_and_collide()` で移動させた運動体は、衝突したリジッドボディすべてに影響を及ぼします。この相互作用は、運動体移動関数の `infinite_inertia`（無限慣性）パラメーターのため、リジッドボディの物理特性を考慮しません。"
 
 #: physics/kinematic_to_rigidbody.md
 msgid "![alt](/godot_recipes/4.x/img/inf_inertia1.gif)"
@@ -12416,7 +12416,7 @@ msgstr "また、衝撃力の大きさをキャラクターの速度に応じて
 
 #: physics/kinematic_to_rigidbody.md
 msgid "It's that last one that needs to be changed. Since GDScript doesn't have named parameters, this means we have to pass all of them, but we can keep them at their default values:"
-msgstr "最後の引数を変更が必要です。GDScriptには名前付きパラメータがないため、すべての引数を渡す必要がありますが、デフォルト値をそのまま保持できます。"
+msgstr "最後の引数を変更が必要です。GDScriptには名前付きパラメーターがないため、すべての引数を渡す必要がありますが、デフォルト値をそのまま保持できます。"
 
 #: physics/kinematic_to_rigidbody.md
 msgid "In some cases, this might be all you need. However, if you want to avoid \"glitches\" such as body overlap, tunneling, and other unrealistic behavior, you'll need to add some code for the interactions."
@@ -12432,7 +12432,7 @@ msgstr "衝突法線ベクトルはリジッドボディの外側を向いてい
 
 #: physics/kinematic_to_rigidbody.md
 msgid "This causes the body to move in the given direction and slide along obstacles when colliding, as well as using the `floor_normal` parameter to determine what surfaces should count as a \"floor\". `move_and_slide()` also contains additional parameters:"
-msgstr "これにより、ボディは指定された方向へ移動し、障害物に衝突した際にはその上を滑るように動きます。さらに、floor_normalパラメータを用いて、\"floor\"として認識すべき表面を決定できます。`move_and_slide()`関数には、他にも以下のような追加パラメータがあります。"
+msgstr "これにより、ボディは指定された方向へ移動し、障害物に衝突した際にはその上を滑るように動きます。さらに、floor_normalパラメーターを用いて、\"floor\"として認識すべき表面を決定できます。`move_and_slide()`関数には、他にも以下のような追加パラメータがあります。"
 
 #: physics/kinematic_to_rigidbody.md
 msgid "The most commonly used movement method for kinematic bodies is `move_and_slide()`. In the example code, the movement happens on this line:"
@@ -12498,7 +12498,7 @@ msgstr "リジッドボディを目標位置へ移動させたい。"
 
 #: physics/asteroids_physics.md
 msgid "As you can see, the `_integrate_forces()` function includes a parameter called `state`. This object is the [PhysicsDirectBodyState2D](https://docs.godotengine.org/en/stable/classes/class_physicsdirectbodystate2d.html) of our body. It contains all of the current physics properties such as the forces, velocity, position, etc."
-msgstr "ご覧の通り、`_integrate_forces()` 関数には `state` というパラメータが含まれています。このオブジェクトはボディの [PhysicsDirectBodyState2D](https://docs.godotengine.org/ja/stable/classes/class_physicsdirectbodystate2d.html) です。ここには、力、速度、位置など、現在の物理特性がすべて保持されています。"
+msgstr "ご覧の通り、`_integrate_forces()` 関数には `state` というパラメーターが含まれています。このオブジェクトはボディの [PhysicsDirectBodyState2D](https://docs.godotengine.org/ja/stable/classes/class_physicsdirectbodystate2d.html) です。ここには、力、速度、位置など、現在の物理特性がすべて保持されています。"
 
 #: physics/asteroids_physics.md
 msgid "Then add the new function:"
@@ -12718,7 +12718,7 @@ msgstr ""
 
 #: physics/collision_layers.md
 msgid "In Godot 4, you can name your layers in **Project Settings > Layer Names > 2D Physics**. This makes it much easier to manage in the Inspector."
-msgstr "Godot 4では、プロジェクト設定の［レイヤー名］＞［2D物理］でレイヤーに名前を付けられます。これにより、インスペクタでの管理が大幅に効率化されます。"
+msgstr "Godot 4では、プロジェクト設定の［レイヤー名］＞［2D物理］でレイヤーに名前を付けられます。これにより、インスペクターでの管理が大幅に効率化されます。"
 
 #: physics/collision_layers.md
 msgid ""
@@ -12899,7 +12899,7 @@ msgstr "> ※注意：衝突検出を行うには、対象オブジェクトに�
 
 #: physics/Godot3_kinematic2d.md
 msgid "This parameter allows you to define what surfaces the engine should consider to be the floor. Setting this lets you use the `is_on_floor()`, `is_on_wall()`, and `is_on_ceiling()` methods to detect what type of surface the body is in contact with. The default value means that all surfaces are considered walls."
-msgstr "このパラメータでは、エンジンが床面として認識すべき表面を指定できます。これを設定すると、`is_on_floor()`、`is_on_wall()`、および `is_on_ceiling()` メソッドを使用して、対象オブジェクトがどの種類の表面に接触しているかを検出できるようになります。デフォルト値はすべての表面が壁として扱われることを意味します。"
+msgstr "このパラメーターでは、エンジンが床面として認識すべき表面を指定できます。これを設定すると、`is_on_floor()`、`is_on_wall()`、および `is_on_ceiling()` メソッドを使用して、対象オブジェクトがどの種類の表面に接触しているかを検出できるようになります。デフォルト値はすべての表面が壁として扱われることを意味します。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "## Basic movement"
@@ -12949,7 +12949,7 @@ msgstr "##### KinematicCollision2D"
 
 #: physics/Godot3_kinematic2d.md
 msgid "A body's layer properties can be configured via code, or directly in the Inspector:"
-msgstr "身体のレイヤープロパティは、コードまたはインスペクタから直接設定できます。"
+msgstr "身体のレイヤープロパティは、コードまたはインスペクターから直接設定できます。"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -13011,7 +13011,7 @@ msgstr "Godotにおいて最も強力でありながらしばしば誤解され�
 
 #: physics/Godot3_kinematic2d.md
 msgid "> **NOTE:** `move_and_slide()` automatically calculates frame-based movement using `delta`. Do _not_ multiply your velocity vector by `delta` before passing it to `move_and_slide()`."
-msgstr "> **注意:** `move_and_slide()` 関数は内部で `delta` パラメータを使用してフレームベースの移動計算を自動的に行います。速度ベクトルに手動で `delta` を掛けたものを直接渡す必要はありません。"
+msgstr "> **注意:** `move_and_slide()` 関数は内部で `delta` パラメーターを使用してフレームベースの移動計算を自動的に行います。速度ベクトルに手動で `delta` を掛けたものを直接渡す必要はありません。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "For this example, we'll assume you have a level made of StaticBody2D objects. They can be any shape and size. In the sample project, we're using a TileMap to lay out the level, but for the purposes of this demo, they could just as well be individual static bodies."
@@ -13053,7 +13053,7 @@ msgstr "Godot では3種類の物理ボディが提供されており、<a href=
 
 #: physics/Godot3_kinematic2d.md
 msgid "> **Note:** Be careful to never scale your collision shapes in the editor. The `Scale` property in the Inspector should remain at `(1, 1)`. When changing the size of the collision shape, you should always use the shape's handles."
-msgstr "> **注意:** エディタで衝突形状のスケールを変更する際は注意が必要です。インスペクタの「Scale」プロパティは常に `(1, 1)` に設定しておく必要があります。衝突形状のサイズを変更する場合は、必ずシェイプのハンドルを使用してください。"
+msgstr "> **注意:** エディターで衝突形状のスケールを変更する際は注意が必要です。インスペクターの「Scale」プロパティは常に `(1, 1)` に設定しておく必要があります。衝突形状のサイズを変更する場合は、必ずシェイプのハンドルを使用してください。"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -13399,7 +13399,7 @@ msgstr "### 跳ね返り/反射と衝突判定について"
 
 #: physics/Godot3_kinematic2d.md
 msgid "The most common way to assign a shape is by adding a {{< gd-icon CollisionShape2D >}}`CollisionShape2D` or {{< gd-icon CollisionPolygon2D >}}`CollisionPolygon2D` as a child of the object. These nodes allow you to draw the shape directly in the editor workspace."
-msgstr "最も一般的な方法は、オブジェクトの子要素として {{< gd-icon CollisionShape2D >}}`CollisionShape2D` または {{< gd-icon CollisionPolygon2D >}}`CollisionPolygon2D` を追加することです。これらのノードを使用すると、エディタワークスペース上で直接形状を描画できます。"
+msgstr "最も一般的な方法は、オブジェクトの子要素として {{< gd-icon CollisionShape2D >}}`CollisionShape2D` または {{< gd-icon CollisionPolygon2D >}}`CollisionPolygon2D` を追加することです。これらのノードを使用すると、エディターワークスペース上で直接形状を描画できます。"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -13450,7 +13450,7 @@ msgstr ""
 
 #: physics/Godot3_kinematic2d.md
 msgid "In addition to the velocity vector, `move_and_slide` takes a number of other parameters allowing you to customize the slide behavior:"
-msgstr "速度ベクトルに加え、`move_and_slide` には複数のパラメータが用意されており、スライド動作を細かくカスタマイズできます。"
+msgstr "速度ベクトルに加え、`move_and_slide` には複数のパラメーターが用意されており、スライド動作を細かくカスタマイズできます。"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -13569,7 +13569,7 @@ msgstr "停止時にわずかに上向きの運動量が生じるため、小さ
 
 #: physics/kinematicbody_slopes.md
 msgid "Checking the [`move_and_slide()` documentation](https://docs.godotengine.org/en/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide), we see there's a parameter called `stop_on_slope`, which defaults to `false`:"
-msgstr "「[move_and_slide() ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide) を確認すると、`stop_on_slope` というパラメータがあり、デフォルト値は `false` です。"
+msgstr "「[move_and_slide() ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide) を確認すると、`stop_on_slope` というパラメーターがあり、デフォルト値は `false` です。"
 
 #: physics/kinematicbody_slopes.md
 msgid "But there is still a problem, which is easier to see if you use a low value for `gravity`:"
@@ -13593,7 +13593,7 @@ msgstr "これで斜面を滑り落ちるのを止められます！"
 
 #: physics/kinematicbody_slopes.md
 msgid "This is because the default value of the `floor_max_angle` parameter is 45°, and the slope shown is greater. Any angle above this value does not count as a floor. Increasing the value makes this slope behave like the others:"
-msgstr "これは、デフォルトの `floor_max_angle` パラメータ値が45度に設定されており、表示される傾斜角がこの値を超えているためです。この値を超える角度は床として認識されません。値を大きくすると、この傾斜も他の傾斜と同様に扱われるようになります。"
+msgstr "これは、デフォルトの `floor_max_angle` パラメーター値が45度に設定されており、表示される傾斜角がこの値を超えているためです。この値を超える角度は床として認識されません。値を大きくすると、この傾斜も他の傾斜と同様に扱われるようになります。"
 
 #: physics/kinematicbody_slopes.md
 msgid "KinematicBody: Stopping on Slopes"
@@ -14615,7 +14615,7 @@ msgstr ""
 
 #: 2D/autotile_intro.md
 msgid "In your {{< gd-icon TileMap >}}`TileMap`'s _Tile Set_ property, select \"New TileSet\" and click on it to open. You'll see the TileSet editor panel open:"
-msgstr "{{< gd-icon TileMap >}}`TileMap`のプロパティにある「タイルセット」設定で「新規タイルセット」を選択し、クリックするとエディタパネルが開きます。"
+msgstr "{{< gd-icon TileMap >}}`TileMap`のプロパティにある「タイルセット」設定で「新規タイルセット」を選択し、クリックするとエディターパネルが開きます。"
 
 #: 2D/autotile_intro.md
 msgid "You are using a {{< gd-icon TileMap >}} TileMap, and want to use autotiling to more quickly draw your levels."
@@ -14817,7 +14817,7 @@ msgstr "`get_noise_2d()` は指定された座標 `(x, y)` におけるノイズ
 
 #: 2D/screen_shake.md
 msgid "First, define the parameters that control the shake behavior:"
-msgstr "まず、シェイク動作を制御するパラメータを定義します。"
+msgstr "まず、シェイク動作を制御するパラメーターを定義します。"
 
 #: 2D/screen_shake.md
 msgid "The drawback with using `rand_range()` for the movement is that it can change greatly from frame to frame, making for a rather erratic feel. To get a more \"smooth\" randomness, we can turn to something called *noise*."
@@ -15220,7 +15220,7 @@ msgstr "モバイルデバイスから直接キャプチャした例をご紹介
 
 #: 2D/touchscreen_camera.md
 msgid "You can `export` these properties as well, if you'd like to be able to adjust them in the Inspector."
-msgstr "以下のプロパティも `export` することで、インスペクタで調整できるようになります。"
+msgstr "以下のプロパティも `export` することで、インスペクターで調整できるようになります。"
 
 #: 2D/touchscreen_camera.md
 msgid "<video controls src=\"/godot_recipes/4.x/img/touch_camera_01.webm\"></video>"
@@ -16936,7 +16936,7 @@ msgstr "定義した`start()`関数に注目してください。これにより
 
 #: games/first_2d/first_2d_04.md
 msgid "Now select the `Bullet` node and then click the **Node** tab next to the **Inspector**."
-msgstr "次に、`bullet`ノードを選択してから、**インスペクタ**の横にある**ノード**タブをクリックしてください。"
+msgstr "次に、`bullet`ノードを選択してから、**インスペクター**の横にある**ノード**タブをクリックしてください。"
 
 #: games/first_2d/first_2d_04.md
 msgid "This is a list of all the *signals* this node can *emit*. Signals are how Godot lets you know that something has happened. In this case, we can use the `area_entered` signal to tell us whenever this bullet touches another {{< gd-icon Area2D >}}`Area2D` node."
@@ -17011,7 +17011,7 @@ msgstr "この関数を呼び出せるのは、プレイヤーがキーを押し
 
 #: games/first_2d/first_2d_05.md
 msgid "The two `@export` variables let you configure them in the **Inspector** so that you can adjust the cooldown time. Set the `bullet_scene` by clicking the property and choosing the `bullet.tscn` file."
-msgstr "以下の2つの`@export`変数を使用すると、インスペクタで設定可能なため、クールタイムを調整できます。プロパティをクリックして`bullet.tscn`ファイルを選択する形で`bullet_scene`を設定してください。"
+msgstr "以下の2つの`@export`変数を使用すると、インスペクターで設定可能なため、クールタイムを調整できます。プロパティをクリックして`bullet.tscn`ファイルを選択する形で`bullet_scene`を設定してください。"
 
 #: games/first_2d/first_2d_05.md
 msgid "Let's head back to the `Player` script and add a few new variables:"
@@ -17089,7 +17089,7 @@ msgstr ""
 
 #: games/first_2d/first_2d_01.md
 msgid "This first game project will guide you through making your first Godot Engine game. While you don't need any previous experience, it's expected that you've at least read through the [Godot 101: Getting Started](/godot_recipes/4.x/g101/start/) section. There, you'll learn about the editor interface and how to get around the Godot UI."
-msgstr "この最初のゲームプロジェクトでは、初めてGodot Engineでゲームを作成する手順をご案内します。事前の経験は必要ありませんが、少なくとも[はじめてのGodot](/godot_recipes/4.x/ja/g1intr/start/)セクションに目を通していることが望ましいです。ここでは、エディタインターフェースやGodot UIの操作方法について学ぶことができます。"
+msgstr "この最初のゲームプロジェクトでは、初めてGodot Engineでゲームを作成する手順をご案内します。事前の経験は必要ありませんが、少なくとも[はじめてのGodot](/godot_recipes/4.x/ja/g1intr/start/)セクションに目を通していることが望ましいです。ここでは、エディターインターフェースやGodot UIの操作方法について学ぶことができます。"
 
 #: games/first_2d/first_2d_01.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_01.png)"
@@ -17214,11 +17214,11 @@ msgstr "メインシーンが完成し、敵キャラクターを追加する準
 
 #: games/first_2d/first_2d_06.md
 msgid "We can add keyframes to the animation by clicking the key icon that now appears next to every property in the **Inspector**. Make sure the scrubber (the blue indicator on the timeline) is at time `0`, then select the `Background` and click the key next to **Region/Rect**. You'll be asked if you want to create a new track and then you'll see the new track added to the animation panel, with a small dot representing the keyframe you've just added. Drag the scrubber to time `2` and then change the **y** value of the **Region/Rect** property to `64`. Click the key to add another keyframe."
-msgstr "アニメーションにキーフレームを追加するには、インスペクタの各プロパティ横に表示された鍵アイコンをクリックします。スライダ（タイムライン上の青いマーカー）が時間「0」に位置していることを確認したら、まず「背景」を選択し、**領域/矩形**の横にある鍵ボタンをクリックします。新規トラックを作成するか確認されるので、指示に従ってください。すると、追加されたキーフレームを表す小さなドットとともに、新しいトラックがアニメーションパネルに追加されます。スライダを時間「2」まで移動させ、最後に**領域/矩形**プロパティの **y** 値を「64」に設定します。別のキーフレームを追加するには、該当するキーをクリックします。"
+msgstr "アニメーションにキーフレームを追加するには、インスペクターの各プロパティ横に表示された鍵アイコンをクリックします。スライダ（タイムライン上の青いマーカー）が時間「0」に位置していることを確認したら、まず「背景」を選択し、**領域/矩形**の横にある鍵ボタンをクリックします。新規トラックを作成するか確認されるので、指示に従ってください。すると、追加されたキーフレームを表す小さなドットとともに、新しいトラックがアニメーションパネルに追加されます。スライダを時間「2」まで移動させ、最後に**領域/矩形**プロパティの **y** 値を「64」に設定します。別のキーフレームを追加するには、該当するキーをクリックします。"
 
 #: games/first_2d/first_2d_06.md
 msgid "At the bottom of the editor window, you'll see the **Animation** panel. There's a lot of information there, so let's look at how it's laid out:"
-msgstr "エディタウィンドウの下部には**アニメーション**パネルが表示されます。ここには多くの情報が配置されていますので、その構成を確認していきましょう。"
+msgstr "エディターウィンドウの下部には**アニメーション**パネルが表示されます。ここには多くの情報が配置されていますので、その構成を確認していきましょう。"
 
 #: games/first_2d/first_2d_06.md
 msgid "Start the scene with a {{< gd-icon Node2D >}}`Node2D` called \"Main\" and save it."
@@ -17266,7 +17266,7 @@ msgstr "プレイヤーシーンの設計"
 
 #: games/first_2d/first_2d_02.md
 msgid "In the **Inspector**, under the **Animation** section, you'll find a property called **Sprite Frames**, which is currently `<empty>`. Click it to create a `New SpriteFrames`, then click the `SpriteFrames` item to open the animation panel at the bottom of the editor window."
-msgstr "インスペクタの[アニメーション]セクションにある[スプライトフレーム]プロパティは現在空になっています。これをクリックすると新しい[スプライトフレーム]が作成されますので、その後でエディタウィンドウ下部のアニメーションパネルを開くために[スプライトフレーム]項目をクリックしてください。"
+msgstr "インスペクターの[アニメーション]セクションにある[スプライトフレーム]プロパティは現在空になっています。これをクリックすると新しい[スプライトフレーム]が作成されますので、その後でエディターウィンドウ下部のアニメーションパネルを開くために[スプライトフレーム]項目をクリックしてください。"
 
 #: games/first_2d/first_2d_02.md
 msgid "### Choosing nodes"
@@ -17333,7 +17333,7 @@ msgstr "このアニメーションにはフレームが2つしかありませ�
 
 #: games/first_2d/first_2d_02.md
 msgid "The first thing you'll notice is that there seem to be three ships! The image from the art pack also includes versions of the ship going to the left/right. We can use this - in the **Animation** section of the **Inspector**, set **Hframes** to `3`. Now, changing the **Frame** property will move between the three different versions. Leave it at `1` for now."
-msgstr "最初に気づくのは、どうやら船が3隻あるように見える点です！アートパックに含まれている画像には、左右へ移動するバージョンも含まれています。これを利用してみましょう - ［インスペクタ］の［アニメーション］セクションで、**Hフレーム数**を`3`に設定します。これで**フレーム**プロパティを変更すると、これら3つの異なるバージョン間を切り替えられるようになります。今のところは`1`のままにしておいてください。"
+msgstr "最初に気づくのは、どうやら船が3隻あるように見える点です！アートパックに含まれている画像には、左右へ移動するバージョンも含まれています。これを利用してみましょう - ［インスペクター］の［アニメーション］セクションで、**Hフレーム数**を`3`に設定します。これで**フレーム**プロパティを変更すると、これら3つの異なるバージョン間を切り替えられるようになります。今のところは`1`のままにしておいてください。"
 
 #: games/first_2d/first_2d_02.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_11.png)"
@@ -17397,7 +17397,7 @@ msgstr "処理が少し遅いので、フレームレートを「10 FPS」に変
 
 #: games/first_2d/first_2d_02.md
 msgid "From the **FileSystem** tab, drag the `Player_ship (16x16).png` file from the art pack and drop it in the **Texture** property of the **Inspector**."
-msgstr "**ファイルシステム** タブから、アートパック内の `Player_ship (16x16).png` ファイルをドラッグし、 **インスペクタ** の **テクスチャ** プロパティにドロップしてください。"
+msgstr "**ファイルシステム** タブから、アートパック内の `Player_ship (16x16).png` ファイルをドラッグし、 **インスペクター** の **テクスチャ** プロパティにドロップしてください。"
 
 #: games/first_2d/first_2d_02.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_08.png?width=800)"
@@ -17517,7 +17517,7 @@ msgstr ""
 
 #: games/first_2d/first_2d_03.md
 msgid "You don't need to change any of the options on the **Attach Node Script** window, so just click **Create** and you'll be taken to the script editor."
-msgstr "**ノードスクリプトのアタッチ** ウィンドウでオプションを変更する必要はありませんので、単に **作成** ボタンをクリックすると、スクリプトエディタに移動します。"
+msgstr "**ノードスクリプトのアタッチ** ウィンドウでオプションを変更する必要はありませんので、単に **作成** ボタンをクリックすると、スクリプトエディターに移動します。"
 
 #: games/first_2d/first_2d_03.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_15.png)"
@@ -17541,7 +17541,7 @@ msgstr "移動方向を判断するには、`input`ベクトルの`x`値を確�
 
 #: games/first_2d/first_2d_03.md
 msgid "* Adding `@export` in front of a variable allows you to adjust its value in the **Inspector**."
-msgstr "* 変数名の前に `@export` を付けると、**インスペクタ** でその値を調整できるようになります。"
+msgstr "* 変数名の前に `@export` を付けると、**インスペクター** でその値を調整できるようになります。"
 
 #: games/first_2d/first_2d_03.md
 msgid "Run the scene by clicking the **Run Current Scene** button, and try moving around."
@@ -17581,7 +17581,7 @@ msgstr "敵兵"
 
 #: games/first_2d/first_2d_07.md
 msgid "Select the area node and click the **Node** tab next to the **Inspector**. Under **Groups**, type \"enemies\" an click **Add**. Remember the code we wrote on the bullet? It looks for objects in the \"enemies\" group."
-msgstr "※「インスペクタ」横の **ノード** タブをクリックします。**グループ** セクションに「enemies」と入力し、**追加** をクリックしてください。弾丸コードで指定したように、これは「enemies」グループ内のオブジェクトを探します。"
+msgstr "※「インスペクター」横の **ノード** タブをクリックします。**グループ** セクションに「enemies」と入力し、**追加** をクリックしてください。弾丸コードで指定したように、これは「enemies」グループ内のオブジェクトを探します。"
 
 #: games/first_2d/first_2d_07.md
 msgid "When we spawn our enemies we'll call this function and pass it a position vector representing where on the screen the enemy should go. Note that we actually spawn it *above* the top of the screen (negative `y` value). This is so that we can animate it coming onto the screen using a tween. We also randomize the two timers so that all enemies won't be moving and shooting at the same time."
@@ -17817,7 +17817,7 @@ msgstr "これはなぜかというと、`Resource`オブジェクト（例え�
 
 #: games/first_2d/first_2d_09.md
 msgid "Finally, we need to connect the player's `shield_changed` signal to the function in the UI that updates the shield bar. You can do this in the Inspector by selecting the `Player` node in the Main scene. Under the Node tab, double-click the `shield_changed` signal to open the \"Connect a Signal\" window. In this window, select the `UI` node and type `update_shield` in the **Receiver Method** box."
-msgstr "最後に、プレイヤーノードの `shield_changed` シグナルをシールドバー表示用UI関数に接続が必要です。メインシーン内の `Player` ノードを選択してインスペクタから実行できます。［ノード］タブで `shield_change`dシグナルをダブルクリックすると、「シグナル接続」ウィンドウが開きます。この画面で、対象となる `UI` ノードを選択し、**受信メソッド** 欄に `update_shield` と入力してください。"
+msgstr "最後に、プレイヤーノードの `shield_changed` シグナルをシールドバー表示用UI関数に接続が必要です。メインシーン内の `Player` ノードを選択してインスペクターから実行できます。［ノード］タブで `shield_change`dシグナルをダブルクリックすると、「シグナル接続」ウィンドウが開きます。この画面で、対象となる `UI` ノードを選択し、**受信メソッド** 欄に `update_shield` と入力してください。"
 
 #: games/first_2d/first_2d_09.md
 msgid "In this container, we'll have a string of {{< gd-icon TextureRect >}}`TextureRect` nodes showing each digit. We'll start by adding one and then duplicating it."
@@ -17861,7 +17861,7 @@ msgstr "*コンテナノード* は{{< gd-icon Control >}}`Control`ノードの�
 
 #: games/first_2d/first_2d_09.md
 msgid "In the **Inspector** under **Theme Overrides/Constants** set all four **Margin** values to `10`. Then, in the menu bar at the top of the viewport, set the anchors to the **Top Wide** preset."
-msgstr "**インスペクタ**の**テーマオーバーライド/定数**セクションで、4つの**マージン**値をすべて `10` に設定します。その後、ビューポート上部のメニューバーで、アンカーを**トップワイド**プリセットに設定してください。"
+msgstr "**インスペクター**の**テーマオーバーライド/定数**セクションで、4つの**マージン**値をすべて `10` に設定します。その後、ビューポート上部のメニューバーで、アンカーを**トップワイド**プリセットに設定してください。"
 
 #: games/first_2d/first_2d_09.md
 msgid "The last main piece of our game is the *user interface* (UI). We need a way to show the player the score and other information. To do this, we'll use a variety of {{< gd-icon Control >}}`Control` nodes - the nodes Godot provides for building UIs."
@@ -18187,7 +18187,7 @@ msgstr "これはモジュール用の設定変数です。`real_ads` を `false
 
 #: games/circle_jump/circle_jump_11.md
 msgid "Back in the Godot editor, we need to make some changes to the export configuration. First, open _Project -> Project Settings_ and find the \"Android\" section. In the _Modules_ property is where you list the module(s) you want to use in your code. The module name is listed on the `godot-admob` page: \"org/godotengine/godot/GodotAdMob\". If you have more than one module, separate them with commas."
-msgstr "Godot エディタに戻って、エクスポート設定に変更をいくつか加える必要があります。まず、_プロジェクト -> プロジェクト設定_ を開き、「Android」セクションを見つけてください。_モジュール_ プロパティには、コードで使用するモジュールをリストします。モジュール名は `godot-admob` ページに記載されています。\"org/godotengine/godot/GodotAdMob\"。使用するモジュールが複数ある場合は、カンマで区切ってください。"
+msgstr "Godot エディターに戻って、エクスポート設定に変更をいくつか加える必要があります。まず、_プロジェクト -> プロジェクト設定_ を開き、「Android」セクションを見つけてください。_モジュール_ プロパティには、コードで使用するモジュールをリストします。モジュール名は `godot-admob` ページに記載されています。\"org/godotengine/godot/GodotAdMob\"。使用するモジュールが複数ある場合は、カンマで区切ってください。"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "Compiling export templates is not difficult, but it does require setting up a build environment on your computer - downloading the required programs and libraries needed to build Godot. If you're new to this concept and interested in learning about it, see the [Compiling](https://docs.godotengine.org/en/latest/development/compiling/introduction_to_the_buildsystem.html) section of the official docs."
@@ -18333,7 +18333,7 @@ msgstr "このゲームでは、プレイヤーは「キャラクター」を操
 
 #: games/circle_jump/circle_jump_01.md
 msgid "Here is the code for our color shader. It uses a `uniform` variable for the color, which allows us to choose a value from the Inspector or from our game script. Then it changes all the visible pixels of the texture into that color, preserving the alpha (transparency) value."
-msgstr "以下はカラーシェーダーのコードです。ここでは色を指定するために `uniform` 変数を使用しており、インスペクタから直接設定するか、ゲームスクリプトから値を割り当てることができます。その後、テクスチャ上のすべての表示ピクセルがその色に置き換えられ、アルファ（透明度）値は保持されます。"
+msgstr "以下はカラーシェーダーのコードです。ここでは色を指定するために `uniform` 変数を使用しており、インスペクターから直接設定するか、ゲームスクリプトから値を割り当てることができます。その後、テクスチャ上のすべての表示ピクセルがその色に置き換えられ、アルファ（透明度）値は保持されます。"
 
 #: games/circle_jump/circle_jump_01.md
 msgid "Try running. You should see the jumper get captured by the circle and start orbiting it. Clicking the mouse should then send the jumper flying off in whatever direction it's pointing."
@@ -18389,7 +18389,7 @@ msgstr "このシェーダーは他のシーンでも使用するため、［シ
 
 #: games/circle_jump/circle_jump_01.md
 msgid "You'll now see a _Shader Params_ section in the Inspector where you can set a color value:"
-msgstr "インスペクタに新たに「シェーダーパラメータ」セクションが表示され、カラー値を設定できるようになります。"
+msgstr "インスペクターに新たに「シェーダーパラメーター」セクションが表示され、カラー値を設定できるようになります。"
 
 #: games/circle_jump/circle_jump_01.md
 msgid "The \"Pivot\" node is how we'll make the player orbit the circle. The \"OrbitPosition\" will be offset by whatever the size of the circle is, and the player will follow it."
@@ -18575,7 +18575,7 @@ msgstr "その後、この新しい機能を追加してください。これに
 
 #: games/circle_jump/circle_jump_04.md
 msgid "This script connects up all our buttons by linking the `pressed` signal and passing along the button's name as a parameter. This lets our `_on_button_pressed()` method decide what each button should do."
-msgstr "このスクリプトでは、すべてのボタンを接続するために、`pressed`シグナルを結び付け、ボタンの名前をパラメータとして渡します。これにより、`_on_button_press()`メソッドがそれぞれのボタンに適切な動作を決定できるようになります。"
+msgstr "このスクリプトでは、すべてのボタンを接続するために、`pressed`シグナルを結び付け、ボタンの名前をパラメーターとして渡します。これにより、`_on_button_press()`メソッドがそれぞれのボタンに適切な動作を決定できるようになります。"
 
 #: games/circle_jump/circle_jump_04.md
 msgid "Make one more scene with a `Node` root named \"Screens\" and instance the three screens in it. Add the following script, which will handle scene transitions and state."
@@ -18991,7 +18991,7 @@ msgstr "現時点では、ボタンが押されている状態を適切に処理
 
 #: games/circle_jump/circle_jump_06.md
 msgid "In this script we'll place the configuration settings for the game."
-msgstr "このスクリプトでは、ゲームの設定パラメータを配置します。"
+msgstr "このスクリプトでは、ゲームの設定パラメーターを配置します。"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "- First, add one to the `Main` scene and name it \"Music\". For its _Stream_ property use `res://assets/audio/Music_Light-Puzzles.ogg`."
@@ -19151,7 +19151,7 @@ msgstr "## 設定の保存について"
 
 #: games/circle_jump/circle_jump_12.md
 msgid "In the `TextEdit`, set _BBCode_ enabled and put the following in the _Text_ property:"
-msgstr "「テキストエディタ」設定で［_BBCode］を有効にし、［テキスト］プロパティに以下を入力します。"
+msgstr "「テキストエディター」設定で［_BBCode］を有効にし、［テキスト］プロパティに以下を入力します。"
 
 #: games/circle_jump/circle_jump_12.md
 msgid "## About screen"
