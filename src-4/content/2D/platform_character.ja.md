@@ -102,4 +102,4 @@ func _physics_process(delta):
 
 ## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
-プロジェクトコードはこちらからダウンロードしてください。[https://github.com/godotrecipes/2d_platform_basic](https://github.jp/godotrecipes/2d_platform_basic)
+プロジェクトコードはこちらからダウンロードしてください。[https://github.com/godotrecipes/2d_platform_basic](https://github.com/godotrecipes/2d_platform_basic)

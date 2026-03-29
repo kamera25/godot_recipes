@@ -1,5 +1,5 @@
 ---
-title: "Interpolation(補間)"
+title: "補間"
 weight: 1
 draft: false
 ghcommentid: 64

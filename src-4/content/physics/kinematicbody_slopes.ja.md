@@ -61,7 +61,7 @@ func _physics_process(delta):
 
 重力によって生じる落下速度が、表面に沿って滑動しています。
 
-「[move_and_slide() ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide) を確認すると、`stop_on_slope` というパラメータがあり、デフォルト値は `false` です。
+「[move_and_slide() ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide) を確認すると、`stop_on_slope` というパラメーターがあり、デフォルト値は `false` です。
 
 > 設定値が `true` の場合、重力を考慮した線形速度を適用した状態でオブジェクトが静止している場合、傾斜面でも滑りません。
 
@@ -95,7 +95,7 @@ Jump 機能を確実に動作させるため、ジャンプ中のスナップ機
 
 ![alt](/godot_recipes/3.x/img/kbd_slopes_04.gif)
 
-これは、デフォルトの `floor_max_angle` パラメータ値が45度に設定されており、表示される傾斜角がこの値を超えているためです。この値を超える角度は床として認識されません。値を大きくすると、この傾斜も他の傾斜と同様に扱われるようになります。
+これは、デフォルトの `floor_max_angle` パラメーター値が45度に設定されており、表示される傾斜角がこの値を超えているためです。この値を超える角度は床として認識されません。値を大きくすると、この傾斜も他の傾斜と同様に扱われるようになります。
 
 ```gdscript
 velocity = move_and_slide_with_snap(velocity, snap, Vector3.UP,

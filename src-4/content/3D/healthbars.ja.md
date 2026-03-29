@@ -49,7 +49,7 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 {{<  gd-icon Sprite3D >}}`Sprite3D`は通常の3Dオブジェクトと同様に動作します。カメラを移動させると、視点が変わるためです。ただし、HPバーは常にカメラの方を向くようにして、いつでも確認できるようにしたいです。
 
-インスペクタで、 _Flags_ セクションの _Billboard_ を「Enabled」に設定してください。
+インスペクターで、 _Flags_ セクションの _Billboard_ を「Enabled」に設定してください。
 
 続いてカメラを動かして、テクスチャが常にプレイヤー側を向いているか確認してください。
 
@@ -73,7 +73,7 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 ![alt](/godot_recipes/4.x/img/3d_bars_03a.png)
 
-もし `SubViewport` が `Sprite3D` の子要素でなかった場合、インスペクタ上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可能性があります。そのため、以下のように `Sprite3D` にアタッチされたスクリプト内で設定します。
+もし `SubViewport` が `Sprite3D` の子要素でなかった場合、インスペクター上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可能性があります。そのため、以下のように `Sprite3D` にアタッチされたスクリプト内で設定します。
 
 ```gdscript
 extends Sprite3D

@@ -2176,7 +2176,7 @@ msgstr "ボタン用のアイコンが必要な場合、[Game-icons.net](https:/
 
 #: ui/cooldown_button.md
 msgid "We also want our cooldown \"radial wipe\" to darken the button, so set the **Modulate** property to a dark gray with some transparency:"
-msgstr "また、クールタイム時の「放射状スワイプ」でボタンを暗く表示させたいため、**[変調]** プロパティに透明度のある濃いグレーを設定してください。"
+msgstr "また、クールタイム時の「時計ワイプ」でボタンを暗く表示させたいため、**[変調]** プロパティに透明度のある濃いグレーを設定してください。"
 
 #: ui/cooldown_button.md
 msgid "Download the project's example code here: [https://github.com/godotrecipes/ui_cooldown_button](https://github.com/godotrecipes/ui_cooldown_button)"
@@ -2554,7 +2554,7 @@ msgstr "この関数では、各アイテム間に必要な角度（`spacing`）
 
 #: ui/radial_menu.md
 msgid "Here are our variables. `radius` represents the \"size\" of the menu: the radius of the circle. `speed` is for the animation - smaller numbers are faster."
-msgstr "以下が変数の定義です。`radius`はメニューの「大きさ」を表します - 円の直径です。`speed`はアニメーション用で、数値が小さいほど動作が速くなります。"
+msgstr "以下が変数の定義です。`radius`はメニューの「大きさ」を表します、つまり円の半径です。`speed`はアニメーション用で、数値が小さいほど動作が速くなります。"
 
 #: ui/radial_menu.md
 msgid "`num` keeps track of how many buttons there are, while `active` is a flag to track whether the menu is open or closed."
@@ -2598,7 +2598,7 @@ msgstr "メインボタンの`pressed`シグナルを接続します。"
 
 #: ui/radial_menu.md
 msgid "Radial menus are used in a variety of games to allow access to a selection of buttons. For example, clicking on an NPC in a game allows you to choose what action to take: talk, inspect, attack, etc."
-msgstr "放射型メニューは様々なゲームで使用されており、複数のボタンを選択するためのインターフェースとして機能します。例えば、ゲーム内のNPCをクリックすると、会話・調査・攻撃など、取るべき行動を選択できるようになります。"
+msgstr "リングコマンドは様々なゲームで使用されており、複数のボタンを選択するためのインターフェースとして機能します。例えば、ゲーム内のNPCをクリックすると、会話・調査・攻撃など、取るべき行動を選択できるようになります。"
 
 #: ui/radial_menu.md
 msgid "For this example, we're using 9 buttons from our [Cooldown Button](/godot_recipes/4.x/ui/cooldown_button/) recipe."
@@ -9532,7 +9532,7 @@ msgstr "## 数値補間処理"
 
 #: Math/interpolation.md
 msgid "Interpolation"
-msgstr "Interpolation(補間)"
+msgstr "補間"
 
 #: Math/interpolation.md
 msgid "You can animate a node's properties with `lerp()`. For example, if you divide the elapsed time by the desired duration, you'll get a value between zero and one you can use to alter a property smoothly over time. This script scales a sprite up to five times its starting size while fading it out (using `modulate.a`) over two seconds:"
@@ -10588,7 +10588,7 @@ msgstr "ノードの機能一覧は[APIドキュメント](https://docs.godoteng
 
 #: kyn/raycast2d.md
 msgid "*Raycasting* is a common technique in game development. \"Casting a ray\" means extending a line from a point until it collides with something or reaches its limit."
-msgstr "*レイキャスティング* はゲーム開発で広く用いられる手法です。「レイをキャストする」とは、ある点から直線を伸ばし、それが何かに衝突するか限界に達するまで移動させる操作を指します。"
+msgstr "*レイキャスティング* はゲーム開発で広く用いられる手法です。「レイを飛ばす(キャストする)」とは、ある点から直線を伸ばし、それが何かに衝突するか限界に達するまで移動させる操作を指します。"
 
 #: kyn/raycast2d.md
 msgid "![alt](/godot_recipes/4.x/img/kyn_raycast2d_01_4.png)"
@@ -15346,7 +15346,7 @@ msgstr ""
 
 #: 2D/platform_character.md
 msgid "Download the project code here: [https://github.com/godotrecipes/2d_platform_basic](https://github.com/godotrecipes/2d_platform_basic)"
-msgstr "プロジェクトコードはこちらからダウンロードしてください。[https://github.com/godotrecipes/2d_platform_basic](https://github.jp/godotrecipes/2d_platform_basic)"
+msgstr "プロジェクトコードはこちらからダウンロードしてください。[https://github.com/godotrecipes/2d_platform_basic](https://github.com/godotrecipes/2d_platform_basic)"
 
 #: 2D/platform_character.md
 msgid "Start with a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` node, and add a {{< gd-icon Sprite2D >}}`Sprite2D` and {{< gd-icon CollisionShape2D >}}`CollisionShape2D` to it."

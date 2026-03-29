@@ -13,7 +13,7 @@ ghcommentid: 80
 
 この問題を解決するため、SceneTreeのどこからでもアクセス可能なノードを使用します。このノードは一連の`オーディオStreamPlayer`ノードと、再生するサウンドストリームのキューを管理します。
 
-スクリプトエディタで新しいスクリプトを作成します。
+スクリプトエディターで新しいスクリプトを作成します。
 
 ```gdscript
 extends Node
@@ -62,7 +62,7 @@ func _process(delta):
 AudioManager.play("res://path/to/sound")
 ```
 
-覚えておくと便利ですが、サウンドファイルをテキストエディタに直接ドラッグ＆ドロップすることで、ファイルパスを簡単に貼り付けることができます。
+覚えておくと便利ですが、サウンドファイルをテキストエディターに直接ドラッグ＆ドロップすることで、ファイルパスを簡単に貼り付けることができます。
 
 {{% notice note %}}
 この音声マネージャーは、[SFXPlayer by TheDuriel](https://github.com/TheDuriel/DurielsGodotUtilities) の協力を得て適応されています

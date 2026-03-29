@@ -28,4 +28,4 @@ func _ready():
             Vector2(64, 64))
 ```
 
-第2パラメータはどのシステムカーソルを置き換えるかを指定します。完全なリストについては[入力ドキュメント](https://docs.godotengine.org/ja/latest/classes/class_input.html#enum-input-cursorshape)を参照してください。
+第2パラメーターはどのシステムカーソルを置き換えるかを指定します。完全なリストについては[入力ドキュメント](https://docs.godotengine.org/ja/latest/classes/class_input.html#enum-input-cursorshape)を参照してください。

@@ -43,7 +43,7 @@ ghcommentid: 23
 
 ### タイルセットの作成方法
 
-{{< gd-icon TileMap >}}`TileMap`のプロパティにある「タイルセット」設定で「新規タイルセット」を選択し、クリックするとエディタパネルが開きます。
+{{< gd-icon TileMap >}}`TileMap`のプロパティにある「タイルセット」設定で「新規タイルセット」を選択し、クリックするとエディターパネルが開きます。
 
 ![alt](/godot_recipes/3.x/img/autotile_frame.png)
 
