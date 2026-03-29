@@ -23,9 +23,6 @@ def extract_text_from_html(html):
         text = ' '.join(text.split())
         # Filter out empty or very short garbage
         if text and len(text) > 1 and not text.isnumeric():
-            # Exclude text entirely enclosed in backticks or underscores
-            if re.fullmatch(r'`[^`]*`', text) or re.fullmatch(r'_[^_]*_', text):
-                continue
             texts.add(text)
             
     return texts
