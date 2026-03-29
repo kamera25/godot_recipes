@@ -108,4 +108,4 @@ func take_damage(amount):
 
 <!-- ## 関連レシピ
 
-- [\ KinematicBody2Dの使用について](/godot_recipes/4.x/ja/physics/godot3_kinematic2d/) -->
+- [Using CharacterBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->

@@ -15,7 +15,7 @@ pre = "<i class='fas fa-newspaper fa-fw'></i>&nbsp"
 * [3.xからの移行ガイド](/godot_recipes/4.x/ja/basics/migrating/)
 * [レイキャストを使用した射撃システム](/godot_recipes/4.x/ja/3d/shooting_raycasts/)
 * [FPSキャラクターのモデル](/godot_recipes/4.x/ja/3d/basic_fps/)
-* [\ RigidBody2D：ドラッグ＆ドロップ操作](/godot_recipes/4.x/ja/physics/rigidbody_drag_drop/)
+* [RigidBody2D：ドラッグ＆ドロップ操作](/godot_recipes/4.x/ja/physics/rigidbody_drag_drop/)
 * [2D自動車のステアリング制御](/godot_recipes/4.x/ja/2d/car_steering/)
 * [3D空間に浮かぶHPバー](/godot_recipes/4.x/ja/3d/healthbars/)
 * [グリッドベース移動機構](/godot_recipes/4.x/ja/2d/grid_movement)

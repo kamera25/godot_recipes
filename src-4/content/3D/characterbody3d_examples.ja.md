@@ -24,7 +24,7 @@ draft: false
 
 ![alt](/godot_recipes/4.x/img/mini_tank_nodes.png)
 
-衝突形状については、戦車の履帯に合わせて整列・サイズ調整した `BoxShape` を使用します。`CamPos` は、後続カメラを配置するための {{< gd-icon Marker3D >}}`Marker3D` 変数です。タンクの後方かつ上部に位置するように配置し、下向きに角度が付けられています。
+For the collision shape, we're just going to use a `BoxShape` aligned and sized with the tank's treads. `CamPos` is a {{< gd-icon Marker3D >}}`Marker3D` we'll use to place our following camera. It's placed behind and above the tank, angled down.
 
 また、個別の {{< gd-icon MeshInstance3D >}}`MeshInstance` ノードを **Y** 軸を中心に `180` 度回転させました。これは元々 **+Z** 方向を向いてモデル化されていたためですが、Godot では **-Z** が前方方向となるため、戦車が逆向きに見えるようにはしたくないからです。
 

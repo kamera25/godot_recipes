@@ -100,9 +100,9 @@ func get_path_direction(pos):
 
 ## 関連レシピ
 
-* [補間カメラの使用方法](/godot_recipes/4.x/ja/3d/interpolated_camera/)
-* [入力操作入門](/godot_recipes/4.x/ja/input/input_intro/)
-* [キネマティックボディによる移動制御](/godot_recipes/4.x/ja/3d/kinematic_body/) →
+- [補間カメラ](/godot_recipes/3.x/3d/interpolated_camera/)
+- [入力システム入門](/godot_recipes/4.x/ja/input/input_intro/)
+- [CharacterBody3Dの移動](/godot_recipes/3.x/3d/kinematic_body/) -->
 
 <!-- #### Videoが気に入ったら？ -->
 

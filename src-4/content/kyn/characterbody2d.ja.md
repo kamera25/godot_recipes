@@ -1,10 +1,10 @@
 ---
-title: "\ CharacterBody2D"
+title: "CharacterBody2D"
 draft: true
 ghcommentid:
 ---
 
-## {{< gd-icon \ CharacterBody2D >}}\ CharacterBody2D
+## {{< gd-icon CharacterBody2D >}}CharacterBody2D
 
 Godot では、ゲーム開発で使用できる衝突判定関連の各種オブジェクトを提供しています。それぞれの動作原理を理解することで、作成するゲームオブジェクトに最適なものを選ぶ判断ができるようになります。
 

@@ -163,11 +163,7 @@ if linear_velocity.length() > turn_stop_limit:
 
 **修正が必要な箇所**
 
-<<<<<<< HEAD
-坂での走行を試したことがある方ならご存知でしょうが、車オブジェクトは傾斜が全くつかず、常に水平を保っています。これは不自然に見えるため、[KinematicBody: 表面と位置合わせ](/godot_recipes/4.x/ja/3d/3d_align_surface/) セクションで説明されている方法を使って修正しましょう。
-=======
-坂での走行を試したことがある方ならご存知でしょうが、車オブジェクトは傾斜が全くつかず、常に水平を保っています。これは不自然に見えるため、[CharacterBody3D: 表面と位置合わせ](/godot_recipes/3.x/3d/3d_align_surface/) セクションで説明されている方法を使って修正しましょう。
->>>>>>> update-godot3-to-4-syntax-15089405743024275934
+If you've tried driving on a slope, you've seen that the car mesh doesn't tilt at all, it always remains level. That looks unnatural, so let's use the process described in [CharacterBody3D: 表面に位置合わせ](/godot_recipes/3.x/3d/3d_align_surface/) to fix that.
 
 追加するコードは `_process()` 内でメッシュを回転させた後に配置してください。
 

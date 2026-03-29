@@ -25,9 +25,9 @@ ghcommentid: 101
 
 このレシピを作成するにあたり、私は異なる解決策をいくつか試しました。
 
-* 純粋数学 - 回転変換の計算と適用
-* アニメーションPlayer - アニメーションを使用して回転値とオフセットをキー設定
-* 補助ノード - 空間オブジェクトを回転ヘルパーとして使用
+* Pure math - calculating and applying rotation transforms
+* アニメーションPlayer - using animations to key the rotations and offsets
+* Helper nodes - using Node3D(s) as rotation helpers
 
 すべて正常に動作しましたが、最後のオプションが最も柔軟で設定しやすいと感じたので、ここではその方法を採用します。
 

@@ -3290,7 +3290,7 @@ msgstr "インポートする船舶の `gltf` ファイルを選択し、［イ�
 
 #: 3D/spaceship.md
 msgid "Make a test scene with a {{< gd-icon Camera3D >}} `Camera3D` to try it out. You can use a stationary camera or a [chase camera](/godot_recipes/4.x/3d/interpolated_camera/). Check that the ship accelerates and slows before moving on to the next step."
-msgstr "テスト用シーンを作成し、`Camera3D` コンポーネントを試してみましょう。固定カメラを使用するか、［フォローカメラ］(/godot_recipes/4.x/ja/3d/interpolated_camera/) を採用することもできます。宇宙船が加速と減速を適切に行うことを確認した上で、次のステップに進んでください。"
+msgstr "テスト用シーンを作成し、`Camera3D` コンポーネントを試してみましょう。固定カメラを使用するか、［フォローカメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/) を採用することもできます。宇宙船が加速と減速を適切に行うことを確認した上で、次のステップに進んでください。"
 
 #: 3D/spaceship.md
 msgid "![alt](/godot_recipes/4.x/img/3d_ship_03.gif)"
@@ -4340,19 +4340,19 @@ msgstr "キューブのスクリプトには、移動に関する以下のコー
 
 #: 3D/move_with_camera.md
 msgid "We can find this using the `Vector3.max_axis()` function. This returns which of the vector's components is the largest. Since they can be positive or negative, we'll use `abs()` first."
-msgstr ""
+msgstr "これは、`Vector3.max_axis()`関数を使用してみましょう。この関数は、ベクトルの成分のうち最も大きい値を返します。値は正または負になる可能性があるため、まず`abs()`を適用して絶対値に変換します。"
 
 #: 3D/move_with_camera.md
 msgid "The cube needs to only move in the 4 cardinal directions. This means we need to take the camera's forward vector and find which of the axes (**+X**, **-X**, **+Z**, or **-Z**) it's closest to."
-msgstr "キューブは4つの基本方向（前後・左右・上下）にのみ移動できます。このため、カメラの前方ベクトルを取得し、どの軸方向に最も近いかを確認する必要があります。**+X**、**-X**、**+Z**、または**-Z**のいずれかです。"
+msgstr "キューブは4つの基本方向（前後・左右・上下）にのみ移動できます。このため、カメラの前方ベクトルを取得し、どの軸方向に最も近いかを確認する必要があります。**+X**、**-X**、**+Z**、または **-Z** のいずれかです。"
 
 #: 3D/move_with_camera.md
 msgid ""
 "- [Rolling Cube](/godot_recipes/3.x/3d/rolling_cube/)\n"
 "- [Camera Gimbal](/godot_recipes/3.x/3d/camera_gimbal/)"
 msgstr ""
-"- ［転がるキューブ］(/godot_recipes/4.x/ja/3d/rolling_cube/)\n"
-"- ［カメラ・ジンバル］(/godot_recipes/4.x/ja/3d/camera_gimbal/)"
+"- [転がるキューブ](/godot_recipes/4.x/ja/3d/rolling_cube/)\n"
+"- [カメラ・ジンバル](/godot_recipes/4.x/ja/3d/camera_gimbal/)"
 
 #: 3D/move_with_camera.md
 msgid "When moving with WASD-style controls in 3D, it's easy to get disoriented if the camera rotates. Whose forward counts - the player's (ie the camera's) or the object in the game world?"
@@ -6062,7 +6062,7 @@ msgstr "`drifting` はドリフト状態を追跡するためのブール変数�
 
 #: 3D/kinematic_car/car_traction.md
 msgid "You've got a [kinematic car](/godot_recipes/3.x/3d/kinematic_car/car_base/), but you don't like the \"on rails\" feeling, especially at high speeds. You'd like to have some \"slip\" so that you can have drifting and loss of traction."
-msgstr "［キネマティックカー］(/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)を持っているものの、特に高速走行時に「レール上を走っている」ような感覚が気にいりません。ドリフトやトラクション損失を可能にするため、ある程度の「スリップ」特性が欲しい。"
+msgstr "［キネマティックカー](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)を持っているものの、特に高速走行時に「レール上を走っている」ような感覚が気にいりません。ドリフトやトラクション損失を可能にするため、ある程度の「スリップ」特性が欲しい。"
 
 #: 3D/kinematic_car/car_traction.md
 msgid "Next, add this code to the `calculate_steering()` function in `car_base.gd`, right after calculating the `new_heading`:"
@@ -10104,7 +10104,7 @@ msgstr "しかしながら、まだ解決すべき問題が残っています。
 
 #: kyn/ysort.md
 msgid "YSort"
-msgstr "\\ ``YSort``"
+msgstr "YSort"
 
 #: kyn/ysort.md
 msgid "The {{< gd-icon YSort >}}`YSort` node changes the draw order of its children to use each object's `y` coordinate. Lower values of `y` (ie higher on the screen) get rendered first."
@@ -10120,7 +10120,7 @@ msgstr "## {{< gd-icon KinematicBody2D >}}KinematicBody2D"
 
 #: kyn/kinematicbody2d.md
 msgid "KinematicBody2D"
-msgstr "\\ KinematicBody2D"
+msgstr "KinematicBody2D"
 
 #: kyn/path2d.md
 msgid "## {{< gd-icon Path2D >}}`Path2D & {{< gd-icon PathFollow2D >}} PathFollow2D`"
@@ -10508,7 +10508,7 @@ msgstr "以下がコードです："
 
 #: kyn/rigidbody2d.md
 msgid "RigidBody2D"
-msgstr "\\ RigidBody2D"
+msgstr "RigidBody2D"
 
 #: kyn/raycast2d.md kyn/rigidbody2d.md
 msgid "Here are the main properties you'll need to understand:"
@@ -10684,7 +10684,7 @@ msgstr "### 衝突検出について"
 
 #: kyn/characterbody2d.md
 msgid "CharacterBody2D"
-msgstr "\\ CharacterBody2D"
+msgstr "CharacterBody2D"
 
 #: kyn/characterbody2d.md
 msgid "Here are two code snippets showing what was collided with. In both, assume that `velocity` has been set previously."

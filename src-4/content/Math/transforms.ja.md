@@ -57,7 +57,7 @@ position += Vector2(10, 0)
 
 ### ローカル空間とグローバル空間での座標変換
 
-座標変換を適用してローカル座標系からグローバル座標系への変換ができます。利便性を考慮して、`Node2D` と `Node3D` にはこの処理を支援する関数が用意されています。それが `to_local()` と `to_global()` です。
+You can convert coordinates from local to global by applying the transform. For convenience, `Node2D` and `Node3D` include helper functions for this: `to_local()` and `to_global()`:
 
 ```gdscript
     var global_position = to_global(local_position)

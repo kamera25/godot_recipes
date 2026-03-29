@@ -15,7 +15,7 @@ ghcommentid: 41
 3D環境においても、車両は基本的に地面に留まる性質があります。このため、移動処理の多くは実質的に2Dと同様の扱いができます。車の動作コードの大部分は、[2D用カーステアリングレシピ](/godot_recipes/4.x/ja/2d/car_steering)と非常に似た構造になります。このチュートリアルに進む前に、必ずそのレシピを確認しておくことをオススメします。
 {{% /notice %}}
 
-Godotには{{< gd-icon VehicleBody3D >}}`VehicleBody`ノードが用意されており、これは{{< gd-icon RigidBody3D >}}`RigidBody`を基盤としつつ、エンジン・ブレーキング・サスペンションなど複雑な物理演算シミュレーションを備えています。ただし、この機能は多くのカジュアルレーシング/ドライビングゲームにとっては過剰な性能であり、複雑さも伴います。そのため、ここではKinematicBodyベースのソリューションを採用することにします。
+Godot does provide a {{< gd-icon VehicleBody3D >}}`VehicleBody` node, which is based on {{< gd-icon RigidBody3D >}}`RigidBody` and includes a complex simulation of engine, braking, suspension, etc. However, this introduces a lot of complexity and tends to be overkill for most casual racing/driving games. For that reason, we're going with a CharacterBody3D based solution here.
 
 {{% notice info %}}
 VehicleBody3D`車両ボディ`の操作方法について詳しく知りたい方には、[Bastiaan Olij氏によるこのシリーズ動画](https://youtu.be/B5vE-nNszxA)を強くオススメします。
@@ -38,17 +38,17 @@ VehicleBody3D`車両ボディ`の操作方法について詳しく知りたい�
 
 車を読み込むには、`"Models/GLTF形式"`フォルダ内で該当モデルを探してください。今回は`sedanSports.glb`を使用します。このファイルを新規Godotプロジェクトにインポートし、できれば`res://assets/cars/`のような専用フォルダにまとめておくと良いでしょう。
 
-Godotでファイルを選択し、「インポート」タブに移動します。_ルートの型を「CharacterBody3D」に設定し、「再インポート」をクリックします。これでこの車を使用する準備が整いました。
+Select the file in Godot and go to the "Import" tab. Change the _Root Type_ to "CharacterBody3D" and click "Reimport". Now we're ready to use this car.
 
-#### {{< gd-icon KinematicBody3D >}} キネマティックボディの設定
+#### セットアップ方法 the {{< gd-icon KinematicBody3D >}} CharacterBody3D
 
 `sedanSports.glb`ファイルをダブルクリックし、「新規継承」を選択してください。以下のように新しいシーンが作成されます。
 
 ![alt](/godot_recipes/3.x/img/3d_car_02.png)
 
-注：各パーツごとに個別のメッシュが設定されています。また、不要な「tmpParent」{{< gd-icon Node3D >}}`空間ノード`も存在しますが、こちらは無視して構いません。
+Note the individual meshes for each of the car's parts. There's also a stray "tmpParent" {{< gd-icon Node3D >}}`Node3D` node, but we can ignore that.
 
-{{< gd-icon KinematicBody3D >}} `CharacterBody3D`コンポーネントには衝突形状の未定義に関する警告が表示されています。この問題を、以下の3つの手順で解決します。の {{< gd-icon CollisionShape3D >}} を追加します。車両本体用の {{< gd-icon BoxShape3D >}} `BoxShape`と、前輪および後輪用の各1つずつの {{< gd-icon CylinderShape3D >}} `CylinderShape`です。
+The {{< gd-icon KinematicBody3D >}}`CharacterBody3D` has a warning about missing collision shapes, so we'll need to fix that first. We're going to add 3 {{< gd-icon CollisionShape3D >}}`CollisionShape`s: a {{< gd-icon BoxShape3D >}}`BoxShape` for the car's body, and a {{< gd-icon CylinderShape3D >}}`CylinderShape` for each of the front and rear axles.
 
 形状設定が完了したら、以下のような表示になるはずです：
 
@@ -89,7 +89,7 @@ var steer_angle = 0.0  # current wheel angle
 
 *  `drag` と `friction` については[こちらで詳しく説明しています](/godot_recipes/4.x/ja/2d/car_steering/#part-3-frictiondrag)。
 
-スクリプトの残り部分は2Dバージョンと非常に類似しており、変更をいくつか加えることで{{< gd-icon Node3D >}}`空間オブジェクト`と`変換`を正しく扱えるようになります。
+The rest of the script will be very similar to the 2D version, which a few changes to work correctly with {{< gd-icon Node3D >}}`Node3D`s and `Transform`s.
 
 まず`_physics_process()`から見ていきましょう。
 
@@ -156,7 +156,7 @@ func get_input():
 
 アナログスティック付きゲームパッドをお持ちの場合は、ぜひそれをご使用になることを強くオススメします。キーボード操作ではオン/オフしか制御できないため、「ハンドル」を最大限に回転させるしかありません。アナログスティックを使えば、はるかに快適な操作体験が得られます。いずれの操作方法でもコードが正しく動作するよう、しっかり対応いたします。
 
-以下が車両にアタッチするスクリプトです：{{< gd-icon KinematicBody3D >}} `CharacterBody3D`：
+Here's the script to attach to the car {{< gd-icon KinematicBody3D >}} `CharacterBody3D`:
 
 ```gdscript
 extends "res://cars/car_base.gd"
@@ -198,13 +198,8 @@ func get_input():
 ## 関連レシピ
 
 - [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)
-<<<<<<< HEAD
 * [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)
-- [3D: KinematicBody Movement](/godot_recipes/3.x/3d/kinematic_body/)
-=======
-* [入力アクション](http://kidscancode.org/godot_recipes/input/input_actions/)
 - [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)
->>>>>>> update-godot3-to-4-syntax-15089405743024275934
 
 #### この動画が気に入ったら？
 

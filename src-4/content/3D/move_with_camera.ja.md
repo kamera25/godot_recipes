@@ -41,9 +41,9 @@ var forward = -camera.transform.basis.z.normalized()
 
 ![alt](/godot_recipes/3.x/img/3d_move_camera_01.gif)
 
-キューブは4つの基本方向（前後・左右・上下）にのみ移動できます。このため、カメラの前方ベクトルを取得し、どの軸方向に最も近いかを確認する必要があります。**+X**、**-X**、**+Z**、または**-Z**のいずれかです。
+キューブは4つの基本方向（前後・左右・上下）にのみ移動できます。このため、カメラの前方ベクトルを取得し、どの軸方向に最も近いかを確認する必要があります。**+X**、**-X**、**+Z**、または **-Z** のいずれかです。
 
-We can find this using the `Vector3.max_axis()` function. This returns which of the vector's components is the largest. Since they can be positive or negative, we'll use `abs()` first.
+これは、`Vector3.max_axis()`関数を使用してみましょう。この関数は、ベクトルの成分のうち最も大きい値を返します。値は正または負になる可能性があるため、まず`abs()`を適用して絶対値に変換します。
 
 一旦最大の大きさの軸が特定されれば、以下のように `forward` ベクトルを調整できます。
 
@@ -72,8 +72,8 @@ func _physics_process(_delta):
 
 ## 関連レシピ
 
-- ［転がるキューブ］(/godot_recipes/4.x/ja/3d/rolling_cube/)
-- ［カメラ・ジンバル］(/godot_recipes/4.x/ja/3d/camera_gimbal/)
+- [転がるキューブ](/godot_recipes/4.x/ja/3d/rolling_cube/)
+- [カメラ・ジンバル](/godot_recipes/4.x/ja/3d/camera_gimbal/)
 
 #### この動画が気に入ったら？
 

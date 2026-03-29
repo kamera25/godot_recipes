@@ -1,5 +1,5 @@
 ---
-title: "\ RigidBody2D で対象物を見る"
+title: "RigidBody2D で対象物を見る"
 weight: 2
 draft: false
 ---
@@ -10,7 +10,7 @@ draft: false
 
 ## 解決策
 
-{{< gd-icon \ RigidBody2D >}}`\ RigidBody2D` の操作は少し複雑です。Godot の物理エンジンで制御されるため、直接移動させるのではなく、力を加える必要があります。リジッドボディを扱う前に、[\ RigidBody2D API ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) を読むことを強くオススメします。
+{{< gd-icon RigidBody2D >}}`RigidBody2D` の操作は少し複雑です。Godot の物理エンジンで制御されるため、直接移動させるのではなく、力を加える必要があります。リジッドボディを扱う前に、[RigidBody2D API ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) を読むことを強くオススメします。
 
 物体を回転させるには、回転力である**トルク**を加える必要があります。一度物体が回転し始めたら、最終回転に近づくにつれてトルクを小さくしていきたいものです。
 
@@ -42,4 +42,4 @@ func _physics_process(delta):
 ## 関連レシピ
 
 - [ベクトル演算：内積と外積の活用](/godot_recipes/4.x/ja/math/dot_cross_product/index.html)
-- [\ RigidBody2D：目標位置への移動方法](/godot_recipes/4.x/ja/physics/smooth_rigid_move/)
+- [RigidBody2D：目標位置への移動方法](/godot_recipes/4.x/ja/physics/smooth_rigid_move/)

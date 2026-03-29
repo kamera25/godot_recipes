@@ -19,11 +19,7 @@ ghcommentid: 75
 
 * [ジェームズ・キーツ：AIコンテキスト行動管理](https://jameskeats.com/portfolio/contextbhvr.html)
 
-<<<<<<< HEAD
-デモ用として、汎用的な「エージェント」オブジェクトを使用します。このゲームでは例えば、トラックを走る車、ダンジョンを巡回するモンスター、あるいはその他の種類のゲーム内エンティティなどが考えられます。エージェントは{{< gd-icon \ KinematicBody2D >}}`\ KinematicBody2D`コンポーネントを使用しますが、この手法はどのタイプのオブジェクトにも適用可能だということを覚えておいてください。アルゴリズムの核心は、対象が移動方向を選択する仕組みにあり、実際の移動方法は完全に別の問題となります。
-=======
-デモ用として、汎用的な「エージェント」オブジェクトを使用します。このゲームでは例えば、トラックを走る車、ダンジョンを巡回するモンスター、あるいはその他の種類のゲーム内エンティティなどが考えられます。エージェントは{{< gd-icon CharacterBody2D >}}`CharacterBody2D`コンポーネントを使用しますが、この手法はどのタイプのオブジェクトにも適用可能だということを覚えておいてください。アルゴリズムの核心は、対象が移動方向を選択する仕組みにあり、実際の移動方法は完全に別の問題となります。
->>>>>>> update-godot3-to-4-syntax-15089405743024275934
+For this demo, we'll use a generic "Agent" object. In your game, this might be a car driving around a track, a monster patrolling a dungeon, or some other kind of game entity. Our agent will use a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`, but remember, you can use this technique with any kind of object - the algorithm is about the entity choosing a direction to move, how it moves is entirely separate.
 
 ### アルゴリズムについて
 

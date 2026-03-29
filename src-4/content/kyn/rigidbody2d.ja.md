@@ -1,16 +1,16 @@
 ---
-title: "\ RigidBody2D"
+title: "RigidBody2D"
 draft: true
 ghcommentid: 99
 tags: []
 ---
 
-## {{< gd-icon \ RigidBody2D >}}`\ RigidBody2D`
+## {{< gd-icon RigidBody2D >}}`RigidBody2D`
 
-{{< gd-icon \ RigidBody2D >}}`\ RigidBody2D`はGodotが提供する物理シミュレーション用のボディコンポーネントです。これはつまり、ユーザーが直接{{< gd-icon \ RigidBody2D >}}`\ RigidBody2D`を操作するものではないということを意味します。代わりに、重力や衝撃力などの各種フォースを適用すると、Godot組み込みの物理エンジンが衝突検知・弾性挙動・回転運動などを含む最終的な移動計算を自動で行います。
+{{< gd-icon RigidBody2D >}}`RigidBody2D`はGodotが提供する物理シミュレーション用のボディコンポーネントです。これはつまり、ユーザーが直接{{< gd-icon RigidBody2D >}}`RigidBody2D`を操作するものではないということを意味します。代わりに、重力や衝撃力などの各種フォースを適用すると、Godot組み込みの物理エンジンが衝突検知・弾性挙動・回転運動などを含む最終的な移動計算を自動で行います。
 
 {{% notice warning %}}
-Setting a {{< gd-icon \ RigidBody2D >}}`\ RigidBody2D`'s physical properties, such as `position` or `linear_velocity` directly will not work correctly. The physics engine controls these values.
+Setting a {{< gd-icon RigidBody2D >}}`RigidBody2D`'s physical properties, such as `position` or `linear_velocity` directly will not work correctly. The physics engine controls these values.
 {{% /notice %}}
 
 The body’s behavior is also affected by the world, via the Project Settings -> 物理 properties, or by entering an {{< gd-icon Area2D >}}`Area2D` that is overriding the global physics properties.
@@ -27,14 +27,10 @@ The body’s behavior is also affected by the world, via the Project Settings ->
 
 リジッドボディには4つの異なるモードが存在し、それぞれその挙動に影響を与えます。
 
-1. リジッド - これがデフォルトモードです。オブジェクトは物理的なリジッドボディとして動作し、衝突や外力の影響を受けます。
-1. 静的 - このモードでオブジェクトは静止状態を保ちます。{{< gd-icon StaticBody2D >}}`StaticBody2D`と同様の挙動をします。
-1. キャラクター - このモードではオブジェクトの動作は通常のリジッドモードと同じですが、回転はしません。
-<<<<<<< HEAD
-1. キネマティック - このモードではオブジェクトは {{< gd-icon \ KinematicBody2D >}}`\ KinematicBody2D`と同様に、コードによる制御でのみ移動できます。**注記:** これは `move_and_slide()` といった {{< gd-icon \ KinematicBody2D >}}`\ KinematicBody2D`の補助関数を利用できるという意味ではありません。すべての移動と衝突応答は手動で実装が必要です。
-=======
-1. キネマティック - このモードではオブジェクトは {{< gd-icon CharacterBody2D >}}`CharacterBody2D`と同様に、コードによる制御でのみ移動できます。**注記:** これは `move_and_slide()` といった {{< gd-icon CharacterBody2D >}}`CharacterBody2D`の補助関数を利用できるという意味ではありません。すべての移動と衝突応答は手動で実装が必要です。
->>>>>>> update-godot3-to-4-syntax-15089405743024275934
+1. Rigid - This is the default mode. The body behaves like a solid physical object, colliding and responding to forces.
+1. Static - In this mode, the body does not move, similar to a {{< gd-icon StaticBody2D >}}`StaticBody2D`.
+1. Character - In this mode, the body acts the same as in *rigid* mode, but does not rotate.
+1. Kinematic - In this mode, the body behaves like a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`, meaning it can only move via code. **NOTE:** This does *not* mean that it gains {{< gd-icon CharacterBody2D >}}`CharacterBody2D` helper functions such as `move_and_slide()`. All movement and collision response must be done manually.
 
 * 重力スケール設定（`gravity_scale`）
 
@@ -70,7 +66,7 @@ The body’s behavior is also affected by the world, via the Project Settings ->
 
 ### 衝突検出機能
 
-デフォルトでは、`\ RigidBody2D` オブジェクトが他の空間内の物体と衝突・相互作用しても、その衝突は報告されません。
+デフォルトでは、`RigidBody2D` オブジェクトが他の空間内の物体と衝突・相互作用しても、その衝突は報告されません。
 
 衝突情報をリジットボディから取得する場合は、`contact_monitor` を `true` に設定が必要です。これを行うと、`body_entered` などのシグナルが有効になります。さらに、`contacts_reported` を調整することで、報告される衝突の数を指定することもできます。
 
@@ -148,9 +144,9 @@ func _physics_process(delta):
 
 ただし、画面の端に引っかかって動けなくなるという大失敗をしてしまいますよ。
 
-[\ RigidBody2D ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) から引用すると：
+[RigidBody2D ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) から引用すると：
 
-> You should not change a \ RigidBody2D’s `position` or `linear_velocity` every frame or even very often. If you need to directly affect the body’s state, use `_integrate_forces`, which allows you to directly access the physics state.
+> You should not change a RigidBody2D’s `position` or `linear_velocity` every frame or even very often. If you need to directly affect the body’s state, use `_integrate_forces`, which allows you to directly access the physics state.
 
  _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [物理2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。
  関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](http://docs.godotengine.org/ja/stable/classes/class_transform2d.html) に関する情報です。

@@ -8,14 +8,14 @@ draft: true
 本チュートリアルはGodotレシピ集が公開される前に執筆されたものです。今後、当サイトの他のドキュメントと同様にフォーマットを更新する予定です。
 {{% /notice %}}
 
-このチュートリアルでは、リジッドボディを使用するべきタイミング（および使用すべきでないタイミング）や、仕組みの解説、さらには思い通りに制御するための便利なテクニックをいくつかご紹介します。具体例では\ RigidBody2Dを使用しますが、ここで学ぶ内容は3Dモデルにも同様に適用できます。
+このチュートリアルでは、リジッドボディを使用するべきタイミング（および使用すべきでないタイミング）や、仕組みの解説、さらには思い通りに制御するための便利なテクニックをいくつかご紹介します。具体例ではRigidBody2Dを使用しますが、ここで学ぶ内容は3Dモデルにも同様に適用できます。
 
 ## 解決策
 
 <a href="http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html" target="_blank"><svg width="18" height="18" class="icon-icon_rigid_body_2d">
-<use xlink:href="/blog/img/symbol-defs.svg#icon-icon_rigid_body_2d"></svg> `\ RigidBody2D`</a> とは、Godot において物理シミュレーションを提供するオブジェクトです。これはつまり、直接 \ RigidBody2D を操作するわけではないということです。代わりに力（重力、衝撃など）を加えると、Godot の内蔵物理エンジンが衝突・反発・回転などの運動結果を計算してくれます。
+<use xlink:href="/blog/img/symbol-defs.svg#icon-icon_rigid_body_2d"></svg> `RigidBody2D`</a> とは、Godot において物理シミュレーションを提供するオブジェクトです。これはつまり、直接 RigidBody2D を操作するわけではないということです。代わりに力（重力、衝撃など）を加えると、Godot の内蔵物理エンジンが衝突・反発・回転などの運動結果を計算してくれます。
 
-\ RigidBody2Dの動作は「質量」「摩擦」「反発」などのプロパティを通じて変更できます。
+RigidBody2Dの動作は「質量」「摩擦」「反発」などのプロパティを通じて変更できます。
 これらの設定はインスペクタから行えます。
 
 ![alt](/godot_recipes/3.x/img/rigidbody_properties.png)
@@ -23,13 +23,13 @@ draft: true
 The body's behavior is also affected by the world, via the _Project Settings -> 物理_
 properties, or by entering an <a href="http://docs.godotengine.org/ja/latest/classes/class_area2d.html"><svg width="18" height="18" class="icon-icon_area_2d" target="_blank"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_area_2d"></svg> `Area2D`</a> that is overriding the global physics properties.
 
-## \ RigidBody2Dを使う
+## RigidBody2Dを使う
 
-リジッドボディを使用する主な利点の一つは、コードを1行も書かなくても、多くの動作機能が「無料」で手に入る点です。例えば、落下ブロックを使った簡易的な『Angry Birds』風ゲームを作る場合を考えてみましょう。必要なのはブロックと発射体用に\ RigidBody2Dを作成し、各プロパティを設定するだけです。積み重なり、落下、跳ね返りといった物理演算処理はすべて自動的に物理エンジンが担当してくれます。
+リジッドボディを使用する主な利点の一つは、コードを1行も書かなくても、多くの動作機能が「無料」で手に入る点です。例えば、落下ブロックを使った簡易的な『Angry Birds』風ゲームを作る場合を考えてみましょう。必要なのはブロックと発射体用にRigidBody2Dを作成し、各プロパティを設定するだけです。積み重なり、落下、跳ね返りといった物理演算処理はすべて自動的に物理エンジンが担当してくれます。
 
 ### ブロックの積み重ね方
 
-Start by creating a \ RigidBody2D for the block and adding <a href="http://docs.godotengine.org/ja/latest/classes/class_sprite.html" target="_blank"><svg width="18" height="18" class="icon-icon_sprite"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_sprite"></svg>`Sprite`</a> and
+Start by creating a RigidBody2D for the block and adding <a href="http://docs.godotengine.org/ja/latest/classes/class_sprite.html" target="_blank"><svg width="18" height="18" class="icon-icon_sprite"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_sprite"></svg>`Sprite`</a> and
 <a href="http://docs.godotengine.org/ja/latest/classes/class_collisionshape2D.html" target="_blank"><svg width="18" height="18" class="icon-icon_collision_shape_2d"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_collision_shape_2d"></svg>`CollisionShape2D`</a>
 children:
 
@@ -119,7 +119,7 @@ func _input(event):
 
 上記と同様に、以下のノード構造を用いて艦船用の新規シーンを作成してください。
 
-- `\ RigidBody2D`
+- `RigidBody2D`
     - `Sprite`
     - `CollisionShape2D`
 
@@ -135,8 +135,8 @@ func _input(event):
 {{< highlight swift >}}
 extends RigidBody2D
 
-export (int) var engine_thrust
-export (int) var spin_thrust
+@export var engine_thrust: int
+@export var spin_thrust: int
 
 var thrust = Vector2()
 var rotation_dir = 0
@@ -204,7 +204,7 @@ func _physics_process(delta):
 
 正確には違います。`_physics_process()` は物理時間ステップに同期されていますが、だからといってあらゆる処理に使えるわけではありません。ただし、解決策はドキュメントに記載されていますのでご安心ください。
 
-[\ RigidBody2Dドキュメント](http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#description)より引用すると：
+[RigidBody2Dドキュメント](http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#description)より引用すると：
 
 > リジッドボディの位置や直線速度をフレームごとに、あるいは頻繁に変更することは避けるべきです。状態に直接影響を与えたい場合は、物理演算の状態を直接操作できる `_integrate_forces` メソッドを使用してください。
 

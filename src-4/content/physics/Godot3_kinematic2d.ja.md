@@ -1,5 +1,5 @@
 ---
-title: "\ KinematicBody2Dをつかう"
+title: "Using CharacterBody2D"
 weight: 1
 draft: true
 ghcommentid: 68
@@ -9,11 +9,7 @@ ghcommentid: 68
 本チュートリアルはGodotレシピ集が公開される前に執筆されたものです。今後、当サイトの他のドキュメントと同様にフォーマットを更新する予定です。
 {{% /notice %}}
 
-<<<<<<< HEAD
-Godotでは、衝突判定と応答処理を提供するために複数のコリジョンオブジェクトを用意しています。プロジェクトに最適なものを選択するのは時に複雑ですが、各機能の仕組みとその長所・短所を理解しておけば、問題を回避しつつ開発を簡素化できます。このチュートリアルでは、`\ KinematicBody2D`ノードについて詳細に解説し、実際の使用例をご紹介します。
-=======
-Godotでは、衝突判定と応答処理を提供するために複数のコリジョンオブジェクトを用意しています。プロジェクトに最適なものを選択するのは時に複雑ですが、各機能の仕組みとその長所・短所を理解しておけば、問題を回避しつつ開発を簡素化できます。このチュートリアルでは、`CharacterBody2D`ノードについて詳細に解説し、実際の使用例をご紹介します。
->>>>>>> update-godot3-to-4-syntax-15089405743024275934
+Godot offers a number of collision objects to provide both collision detection and response. Trying to decide which one to use for your project can be confusing. You can avoid problems and simplify development if you understand how each each works and what their pros and cons are. In this tutorial, we'll look at the `CharacterBody2D` node and show some examples of how it can be used.
 
 ## 導入：物理ボディについて
 
@@ -25,15 +21,11 @@ Godot では3種類の物理ボディが提供されており、<a href="http://
 
 スタティックボディとは、物理エンジンによって移動されないオブジェクトです。衝突検知には参加しますが、衝突に応じて移動することはありません。このタイプのボディは、環境の一部となるオブジェクトや、動的な挙動を必要としないオブジェクトに最もよく使用されます。
 
-- [`\ RigidBody2D`]({{< gd-icon \ RigidBody2D >}}) `\ RigidBody2D`
+- [`RigidBody2D`]({{< gd-icon RigidBody2D >}}) `RigidBody2D`
 
 このノードはシミュレーションされた2D物理を実装しています。直接リジッドボディを操作するのではなく、重力やインパルスなどの力を適用することで、物理エンジンがその結果生じる移動量を計算します。詳細は[Godot 3.0: リジッドボディ](/blog/2017/12/godot3_kyn_rigidbody1/)の記事をご覧ください。
 
-<<<<<<< HEAD
-- {{< gd-icon \ KinematicBody2D >}}`\ KinematicBody2D`
-=======
 - {{< gd-icon CharacterBody2D >}}`CharacterBody2D`
->>>>>>> update-godot3-to-4-syntax-15089405743024275934
 
 衝突検知機能を提供しますが、物理演算はしません。すべての移動処理はプログラムコードで実装する必要です。
 
@@ -80,23 +72,13 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 
 ## キネマティックボディ
 
-<<<<<<< HEAD
-{{< gd-icon \ KinematicBody2D >}}`\ KinematicBody2D` は、コードによって制御されるボディを実装するためのものです。移動時に他のオブジェクトとの衝突を検出しますが、重力や摩擦といったエンジンの物理特性の影響を受けません。このため、その動作を生成するためにある程度のコーディングが必要となりますが、その一方で、動き方や反応をより精密にコントロールできるという利点があります。
+{{< gd-icon CharacterBody2D >}}`CharacterBody2D` is for implementing bodies that are to be controlled via code. They detect collisions with other bodies when moving, but are not affected by engine physics properties like gravity or friction. While this means that you have to write some code to create their behavior, it also means you have more precise control over how they move and react.
 
-> **重要:** 重力やその他の力の影響を受ける `\ KinematicBody2D` を作成する場合、移動計算はコード側で手動で行う必要があります。物理エンジンは自動的に `\ KinematicBody2D` を動かすことはありません。
-
-### 移動と衝突判定
-
-{{< gd-icon \ KinematicBody2D >}} クラスの `\ KinematicBody2D` を移動させる際、直接 `position` プロパティを設定する方法は推奨されません。代わりに `move_and_collide()` または `move_and_slide()` メソッドを使用が必要です。これらのメソッドは指定されたベクトルに沿ってオブジェクトを移動させ、他のボディと衝突すると即座に停止します。{{< gd-icon \ KinematicBody2D >}} クラスが衝突した後の _衝突応答処理_ は、必ず手動で実装が必要です。
-=======
-{{< gd-icon CharacterBody2D >}}`CharacterBody2D` は、コードによって制御されるボディを実装するためのものです。移動時に他のオブジェクトとの衝突を検出しますが、重力や摩擦といったエンジンの物理特性の影響を受けません。このため、その動作を生成するためにある程度のコーディングが必要となりますが、その一方で、動き方や反応をより精密にコントロールできるという利点があります。
-
-> **重要:** 重力やその他の力の影響を受ける `CharacterBody2D` を作成する場合、移動計算はコード側で手動で行う必要があります。物理エンジンは自動的に `CharacterBody2D` を動かすことはありません。
+> **Note:** A {{< gd-icon CharacterBody2D >}}`CharacterBody2D` can be affected by gravity and other forces, but you must calculate the movement in code. The physics engine will not move a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`.
 
 ### 移動と衝突判定
 
-{{< gd-icon CharacterBody2D >}} クラスの `CharacterBody2D` を移動させる際、直接 `position` プロパティを設定する方法は推奨されません。代わりに `move_and_collide()` または `move_and_slide()` メソッドを使用が必要です。これらのメソッドは指定されたベクトルに沿ってオブジェクトを移動させ、他のボディと衝突すると即座に停止します。{{< gd-icon CharacterBody2D >}} クラスが衝突した後の _衝突応答処理_ は、必ず手動で実装が必要です。
->>>>>>> update-godot3-to-4-syntax-15089405743024275934
+When moving a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`, you should not set its `position` directly. Instead, you use the `move_and_collide()` or `move_and_slide()` methods. These methods move the body along a given vector and will instantly stop if a collision is detected with another body. After a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` has collided, any _collision response_ must be coded manually.
 
 > **注意:** キネマティックボディの移動は `_physics_process()` コールバック内のみで行ってください。
 
@@ -106,7 +88,7 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 
 ##### KinematicCollision2D
 
-href="http://docs.godotengine.org/ja/latest/classes/class_kinematiccollision2d.html" target="_blank">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と接触した物体のデータが含まれています。このデータを活用することで、適切な衝突応答を計算できます。
+When a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` detects a collision, Godot provides a <a href="http://docs.godotengine.org/en/latest/classes/class_kinematiccollision2d.html" target="_blank">`KinematicCollision2D`</a> object. This object contains data about the collision and the colliding object. Using this data you can calculate your collision response.
 
 #### 移動とスライド処理
 
@@ -154,21 +136,15 @@ there are cases where `move_and_slide()` isn't the response you want.
 
 ## 使用例
 
-以下の例で使用する[サンプルプロジェクト](/blog/img/KYN3.0_\ KinematicBody2D.zip)をダウンロードしてください。
+以下の例で使用する[サンプルプロジェクト](/blog/img/KYN3.0_KinematicBody2D.zip)をダウンロードしてください。
 
 ## 基本動作
 
 サンプルプロジェクトをダウンロード済みの場合、この例は「BasicMovement.tscn」シーンに含まれています。
 
-<<<<<<< HEAD
-この例では、以下の構成で `\ KinematicBody2D` を作成します。親ノードとして `\ KinematicBody2D`、その子要素として `Sprite` と `CollisionShape2D` を配置します。多くのデモと同様に、テクスチャにはGodot標準の "icon.png" ファイルを使用します（ファイルシステムドックからドラッグして、`Sprite` プロパティの「テクスチャ」に設定）。`CollisionShape2D` の「形状」プロパティでは「新規 RectangleShape2D」を選択し、スプライト画像全体を覆うサイズに調整してください。
-
-Attach a script to the {{< gd-icon \ KinematicBody2D >}}`\ KinematicBody2D` and add the following code:
-=======
-この例では、以下の構成で `CharacterBody2D` を作成します。親ノードとして `CharacterBody2D`、その子要素として `Sprite` と `CollisionShape2D` を配置します。多くのデモと同様に、テクスチャにはGodot標準の "icon.png" ファイルを使用します（ファイルシステムドックからドラッグして、`Sprite` プロパティの「テクスチャ」に設定）。`CollisionShape2D` の「形状」プロパティでは「新規 RectangleShape2D」を選択し、スプライト画像全体を覆うサイズに調整してください。
+For this example, Add a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` with two children: a {{< gd-icon Sprite2D >}}`Sprite` and a {{< gd-icon CollisionShape2D >}}`CollisionShape2D`. As with many demos, we'll use the Godot "icon.png" as the {{< gd-icon Sprite2D >}}`Sprite`'s texture (drag it from the Filesystem dock to the "Texture" property of the `Sprite`). In the {{< gd-icon CollisionShape2D >}}`CollisionShape2D`'s "Shape" property, select "New RectangleShape2D" and size the rectangle to fit over the sprite image.
 
 Attach a script to the {{< gd-icon CharacterBody2D >}}`CharacterBody2D` and add the following code:
->>>>>>> update-godot3-to-4-syntax-15089405743024275934
 
 {{< highlight python >}}
 extends CharacterBody2D
@@ -196,13 +172,9 @@ func _physics_process(delta):
 
 このシーンを実行すると、`move_and_collide()`が想定通りに動作し、ボディが速度ベクトルに沿って移動することを確認できます。では、障害物を追加した場合にどうなるかを見てみましょう。矩形の衝突形状を持つ{{< gd-icon StaticBody2D >}}`StaticBody2D`オブジェクトを追加してください。視認性を高めるには、スプライトを使用するか、{{< gd-icon Polygon2D >}}`Polygon2D`を使用するか、あるいは「デバッグ」メニューから「可視衝突形状」を有効化する方法もあります。
 
-<<<<<<< HEAD
-sceneを再実行し、障害物に向かって移動してみてください。{{< gd-icon \ KinematicBody2D >}}`\ KinematicBody2D` が
-=======
-sceneを再実行し、障害物に向かって移動してみてください。{{< gd-icon CharacterBody2D >}}`CharacterBody2D` が
->>>>>>> update-godot3-to-4-syntax-15089405743024275934
-障害物を貫通できないことが確認できるでしょう。ただし、斜めに移動して障害物に接触してみると、
-障害物がまるで接着剤のように作用するのを感じるはずです。ボディが貼り付いたような感覚になります。
+Run the scene again and try moving into the obstacle. You'll see that the {{< gd-icon CharacterBody2D >}}`CharacterBody2D`
+can't penetrate the obstacle. However, try moving into the obstacle at an angle and
+you'll find that the obstacle acts like glue - it feels like the body gets stuck.
 
 これは、衝突時の応答処理が定義されていないためです。`move_and_collide()` は単に衝突が発生した時点で物体の動きを停止させます。衝突に対して実装したい特定の応答ロジックをコーディングが必要です。
 
@@ -223,8 +195,8 @@ sceneを再実行し、障害物に向かって移動してみてください。
 {{< highlight python >}}
 extends CharacterBody2D
 
-export (PackedScene) var Bullet
-export (int) var speed
+@export var Bullet: PackedScene
+@export var speed: int
 
 var velocity = Vector2()
 
@@ -299,9 +271,9 @@ func _on_VisibilityNotifier2D_screen_exited():
 {{< highlight python >}}
 extends CharacterBody2D
 
-export (int) var run_speed
-export (int) var jump_speed
-export (int) var gravity
+@export var run_speed: int
+@export var jump_speed: int
+@export var gravity: int
 
 enum {IDLE, RUN, JUMP}
 var velocity = Vector2()
@@ -376,13 +348,11 @@ removing `velocity =` and see what happens if you don't do this.
 
 ## 結論
 
-<<<<<<< HEAD
-この導入では {{< gd-icon \ KinematicBody2D >}}`\ KinematicBody2D` の機能のほんの一端を紹介したに過ぎません。
-=======
-この導入では {{< gd-icon CharacterBody2D >}}`CharacterBody2D` の機能のほんの一端を紹介したに過ぎません。
->>>>>>> update-godot3-to-4-syntax-15089405743024275934
-Godot のすべてのノードと同様、<a href="http://docs.godotengine.org/ja/latest/classes/class_kinematicbody2d.html" target="_blank">API ドキュメント</a> は心強い味方です。クラスメソッドを使いこなせるようになるまで、頻繁に参照してください。
+This introduction only scratches the surface of what's possible with {{< gd-icon CharacterBody2D >}}`CharacterBody2D`.
+As with all Godot nodes, <a href="http://docs.godotengine.org/en/latest/classes/class_kinematicbody2d.html" target="_blank">
+the API documentation</a> is your friend, so reference it frequently until you're
+comfortable with the class methods.
 
 運動体は非常に便利な仕組みなので、今後は『ノードの活用術』といった続編記事でさらに多くの活用法を探っていきたいと思います。その他に取り上げてほしい具体例やアイデアがあれば、ぜひコメント欄でご意見をお寄せください。
 
-### <a href="/blog/img/KYN3.0_\ KinematicBody2D.zip">サンプルプロジェクトをダウンロード</a>
+### <a href="/blog/img/KYN3.0_KinematicBody2D.zip">サンプルプロジェクトをダウンロード</a>

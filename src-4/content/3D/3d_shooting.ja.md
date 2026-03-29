@@ -11,7 +11,7 @@ ghcommentid: 36
 
 ## 解決策
 
-この例では、[『キネマティックボディ：移動』チュートリアル](/godot_recipes/4.x/ja/3d/kinematic_body/) で作成した「ミニタンク」モデルを使用します。
+For this example, we'll use the "Mini Tank" that we set up in [CharacterBody3Dの移動](/godot_recipes/3.x/3d/kinematic_body/).
 
 ### 弾丸の設定
 
@@ -34,10 +34,10 @@ ghcommentid: 36
 メッシュを {{< gd-icon MeshInstance3D >}}`MeshInstance` に追加し、衝突形状もそれに合わせてスケール調整してください。
 
 {{% notice warning %}}
-`MeshInstance` を `Area3D`ノードの前方方向（**-Z軸**）に合わせて整列させることを忘れないでください。そうしないと、弾丸が正しく飛んでいるように見えません！
+Remember to align your {{< gd-icon MeshInstance3D >}}`MeshInstance` with the forward direction (**-Z**) of the `Area3D` node, or your bullet won't look like it's flying the right way!
 {{% /notice %}}
 
-スクリプトを追加し、{{< gd-icon Area3D >}}`Area3D`の`body_entered`シグナルに接続してください。
+Add a script and connect the {{< gd-icon Area3D >}}`Area3D`'s `body_entered` signal.
 
 ```gdscript
 extends Area3D
@@ -69,11 +69,7 @@ Using `look_at()` each frame turns the bullet to point in its direction of trave
 
 ### 撮影について
 
-<<<<<<< HEAD
-タンク（または射撃を行っているオブジェクト）内に、弾丸が出現する位置に {{< gd-icon Position3D >}}`Position3D` 子要素を追加します。例として戦車の場合、砲身の先端に配置します。
-=======
-タンク（または射撃を行っているオブジェクト）内に、弾丸が出現する位置に `{{< gd-icon Marker3D >}}`Marker3D` 子要素を追加します。例として戦車の場合、砲身の先端に配置します。
->>>>>>> update-godot3-to-4-syntax-15089405743024275934
+Now in the tank (or whatever object you have doing the shooting), add a {{< gd-icon Marker3D >}}`Marker3D` child at the point where you want the bullets to appear. In the case of our tank, we're placing it at the end of the cannon barrel:
 
 ![alt](/godot_recipes/3.x/img/3d_shoot_02.png)
 
@@ -103,8 +99,8 @@ if Input.is_action_just_pressed("shoot"):
 
 ## 関連レシピ
 
-- [動力体システム：移動操作](/godot_recipes/4.x/ja/3d/kinematic_body/)
-- [Godot入門編：3Dの基礎](/godot_recipes/4.x/ja/g101/3d/)
+- [CharacterBody3Dの移動](/godot_recipes/3.x/3d/kinematic_body/)
+- [はじめてのGodot: 3D入門講座](/godot_recipes/3.x/g101/3d/)
 
 <!-- #### Videoが気に入ったら？ -->
 

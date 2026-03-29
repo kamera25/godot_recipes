@@ -14,11 +14,8 @@ ghcommentid: 18
 
 ### ゲーム設定
 
-<<<<<<< HEAD
-ゲームワールドのセットアップに多くの時間をかける必要はありません。2人のプレイヤーは、シンプルな8方向移動を実装した{{< gd-icon \ KinematicBody2D >}}`\ KinematicBody2D`オブジェクトです。
-=======
-ゲームワールドのセットアップに多くの時間をかける必要はありません。2人のプレイヤーは、シンプルな8方向移動を実装した{{< gd-icon CharacterBody2D >}}`CharacterBody2D`オブジェクトです。
->>>>>>> update-godot3-to-4-syntax-15089405743024275934
+We won't spend a lot of time on the setup of the game world. The two players
+are {{< gd-icon CharacterBody2D >}}`CharacterBody2D` objects using no-frills 8-way movement.
 
 {{% notice note %}}
 このパーツのセットアップでお困りの場合は、公式Godotドキュメントの以下のセクションをご覧ください: [2D移動概要](http://docs.godotengine.org/ja/stable/tutorials/2d/2d_movement.html)。
@@ -54,15 +51,10 @@ func get_input():
 まず、2つのビューポートを含む新しいシーンを作成します。
 ルートノードとして使用するノードを作成します。私は通常、`Node`を使用します。このノードには独自のプロパティが何もないため（単にシーンの他の要素を保持するためのものです）、使い勝手が良いからです。
 
-<<<<<<< HEAD
-単独では、{{< gd-icon Viewport >}}`Viewport`ノードは位置情報を有していません（{{< gd-icon Node3D >}}`Spatial`や{{< gd-icon Node2D >}}`Node2D`から継承していません）。ここでは各ビューポートを保持するために{{< gd-icon SubViewportContainer >}}`ViewportContainer`を使用します
-また、それらを横に並べて配置するために、{{< gd-icon HBoxContainer >}}`HBoxContainer`を利用します。
-=======
 By themselves, {{< gd-icon Viewport >}}`Viewport` nodes don't have position information (they don't
 inherit from {{< gd-icon Node3D >}}`Node3D` or {{< gd-icon Node2D >}}`Node2D`). We're going to use {{< gd-icon SubViewportContainer >}}`ViewportContainer`,
 a {{< gd-icon Control >}}`Control` node, to hold each viewport. To keep them arranged side-by-side, we'll
 use an {{< gd-icon HBoxContainer >}}`HBoxContainer`.
->>>>>>> update-godot3-to-4-syntax-15089405743024275934
 
 {{< gd-icon HBoxContainer >}}`HBoxContainer`の配置を「中央」に設定し、2つのビューポート間に小さな隙間を設けるには、_カスタム定数/間隔_に `5` を設定してください。「レイアウト」メニューでは「フル矩形」を選択します。
 

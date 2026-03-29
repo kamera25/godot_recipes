@@ -1,5 +1,5 @@
 ---
-title: "運動体：坂での停止挙動"
+title: "CharacterBody3D: Stopping on Slopes"
 weight: 3
 draft: false
 ghcommentid: 103
@@ -8,11 +8,11 @@ tags: []
 
 ## 課題
 
- {{< gd-icon KinematicBody3D >}}`CharacterBody3D` を使っているのですが、地面が斜面の時に滑ってしまします。
+Your {{< gd-icon KinematicBody3D >}}`CharacterBody3D` slides down slopes.
 
 ## 解決策
 
-まず、シンプルな {{< gd-icon KinematicBody3D >}}`CharacterBody3D` を使用し、`move_and_slide()` メソッドを実装しました。以下のスクリプトを使用しています。
+We've started with a no-frills {{< gd-icon KinematicBody3D >}}`CharacterBody3D`, using `move_and_slide()`, using the script below:
 
 ```gdscript
 extends CharacterBody3D
@@ -104,8 +104,8 @@ velocity = move_and_slide_with_snap(velocity, snap, Vector3.UP,
 
 ## 関連レシピ
 
-- [Godot入門：3Dの基礎編](/godot_recipes/4.x/ja/g101/3d/)
-- [キネマティックボディによる移動制御](/goadot_recipes/3.x/3d/kinematic_body/)
+- [はじめてのGodot: Intro do 3D](/godot_recipes/3.x/g101/3d/)
+- [CharacterBody3Dの移動](/godot_recipes/3.x/3d/kinematic_body/)
 
 #### この動画が気に入ったら？
 

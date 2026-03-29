@@ -123,15 +123,10 @@ func heal(amount):
 
 リソースの作成と保存が完了したら、いよいよ使用準備が整います。このシナリオでは、以下のオブジェクトが存在します。
 
-<<<<<<< HEAD
-* プレイヤー： {{< gd-icon \ KinematicBody2D >}}`\ KinematicBody2D`
-* UI要素：HPを表示する {{< gd-icon TextureProgressBar >}}`ProgressTexture` を含むコンポーネント
-=======
-* プレイヤー： {{< gd-icon CharacterBody2D >}}`CharacterBody2D`
-* UI要素：健康状態を表示する {{< gd-icon TextureProgressBar >}}`ProgressTexture` を含むコンポーネント
->>>>>>> update-godot3-to-4-syntax-15089405743024275934
-* 回復エリア：その範囲内に入った対象を回復する {{< gd-icon Area2D >}}`Area2D`
-* スパイクゾーン：接触するとダメージを与える {{< gd-icon TileMap >}}`TileMap` のタイルセット
+* Player - a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`
+* UI - contains a {{< gd-icon TextureProgressBar >}}`ProgressTexture` to display health
+* Heal zone - an {{< gd-icon Area2D >}}`Area2D` that heals anything that stands in it
+* Spikes - {{< gd-icon TileMap >}}`TileMap` tiles that cause damage if touched
 
 ゲームの全コードを掲載するのではなく、HPリソースに関連する部分だけを取り上げます。
 
