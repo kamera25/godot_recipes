@@ -1524,7 +1524,7 @@ msgstr "`Grid`の子要素として、名前を「PlayerMarker」とする`Sprit
 
 #: ui/minimap.md
 msgid "Using the {{< gd-icon NinePatchRect >}}`NinePatchRects`'s properties, we can ensure that the frame remains the same size when stretched. You can define these properties graphically in the \"TextureRegion\" panel, but it's sometimes easier to enter the values directly. Set all four properties in the **Patch Margin** section to `64` and change the node's name to \"Frame\"."
-msgstr "のプロパティを使用することで、引き伸ばした場合もフレームサイズが一定に保たれます。これらのプロパティは「テクスチャ領域」パネルでグラフィカルに定義できますが、直接数値を入力する方が簡単な場合もあります。**パッチ余白** セクションにある4つのプロパティをすべて `64` に設定し、ノード名を \"Frame\" に変更してください。"
+msgstr "{{< gd-icon NinePatchRect >}}`NinePatchRects`のプロパティを使用することで、引き伸ばした場合もフレームサイズが一定に保たれます。これらのプロパティは「テクスチャ領域」パネルでグラフィカルに定義できますが、直接数値を入力する方が簡単な場合もあります。**パッチ余白** セクションにある4つのプロパティをすべて `64` に設定し、ノード名を \"Frame\" に変更してください。"
 
 #: ui/minimap.md
 msgid "At this point, we have some decisions to make. How we approach populating the minimap with the objects in the world has a lot to do with how the game is set up. Since this is a very minimal demonstration project, we're going keep the process simple. In a larger game, you may need to use a more robust approach."
@@ -3282,7 +3282,7 @@ msgstr "次に、`get_input()` 関数に以下の行を追加して3軸入力を
 
 #: 3D/simple_airplane.md 3D/spaceship.md
 msgid "### Full script"
-msgstr "### 全文スクリプト"
+msgstr "### 全スクリプト"
 
 #: 3D/spaceship.md
 msgid "Select the `gltf` file of the ship you want, and click the *Import* tab. Change the *Root Type* to {{< gd-icon CharacterBody3D >}} `CharacterBody3D` and click \"Reimport\". Then double-click the `gltf` and you'll have a new inherited scene with a {{< gd-icon KinematicBody3D >}} `CharacterBody3D` root and a {{< gd-icon MeshInstance3D >}} `MeshInstance` child. Add a {{< gd-icon CollisionShape3D >}} `CollisionShape3D` to the body."
@@ -19169,7 +19169,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"BBCodeの書式設定に関する詳細な仕様については、[RichTextLabelにおけるBBCode](https://docs.godotengine.org/ja/latest/tutorials/gui/bbcode_in_richtextlabel.html)のドキュメントを参照してください。\n"
+"BBCodeの書式設定に関する詳細な仕様については、[RichTextLabelにおけるBBCode](https://docs.godotengine.org/ja/4.x/tutorials/ui/bbcode_in_richtextlabel.html)のドキュメントを参照してください。\n"
 "{{% /notice %}}"
 
 #: games/circle_jump/circle_jump_12.md

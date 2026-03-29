@@ -150,7 +150,7 @@ yaw_input = roll_input
 
 <video width="500" controls src="/godot_recipes/4.x/img/3d_ship_05.webm"></video>
 
-### 全文スクリプト
+### 全スクリプト
 
 以下に完全なスクリプトを示します。
 

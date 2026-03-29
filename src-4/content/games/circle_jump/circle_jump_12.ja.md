@@ -100,7 +100,7 @@ Copyright © 2019 KidsCanCode
 ```
 
 {{% notice note %}}
-BBCodeの書式設定に関する詳細な仕様については、[RichTextLabelにおけるBBCode](https://docs.godotengine.org/ja/latest/tutorials/gui/bbcode_in_richtextlabel.html)のドキュメントを参照してください。
+BBCodeの書式設定に関する詳細な仕様については、[RichTextLabelにおけるBBCode](https://docs.godotengine.org/ja/4.x/tutorials/ui/bbcode_in_richtextlabel.html)のドキュメントを参照してください。
 {{% /notice %}}
 
 URL をクリック可能にするには、`TextEdit` の `meta_clicked` シグナルを接続します。

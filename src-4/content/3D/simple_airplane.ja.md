@@ -197,7 +197,7 @@ func get_input(delta):
 
 ![alt](/godot_recipes/4.x/img/kb_plane_07.gif)
 
-### 全文スクリプト
+### 全スクリプト
 
 以下が完全なスクリプトです。
 
