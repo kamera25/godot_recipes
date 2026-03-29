@@ -24,7 +24,7 @@ msgstr ""
 "**Godot 4.0が正式リリースされました！**<br>\n"
 "Godot 4.0はエンジンの最新安定版バージョンです。<br>\n"
 "このサイトにはGodot 3向けの学習教材も充実しており、その多くは今でも十分に活用できます。右上のリボンをクリックするとGodot Recipesバージョンを切り替えられますし、以下のボタンからもアクセスできます。<br>\n"
-"{{% button href=\"/godot_recipes/3.x/\" style=\"primary\" icon=\"utensils\" %}}Godot 3レシピ集{{% /button %}}\n"
+"{{% button href=\"/godot_recipes/4.x/ja/\" style=\"primary\" icon=\"utensils\" %}}Godot 3レシピ集{{% /button %}}\n"
 "{{% /notice %}}"
 
 #: _index.md
@@ -115,7 +115,7 @@ msgstr "<!-- ## 関連レシピ"
 
 #: basics/getting_nodes.md
 msgid "- [Using KinematicBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->"
-msgstr "- [KinematicBody2Dの使用について](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->"
+msgstr "- [KinematicBody2Dの使用について](/godot_recipes/4.x/ja/physics/godot3_kinematic2d/) -->"
 
 #: basics/getting_nodes.md
 msgid "### Relative vs absolute paths"
@@ -149,7 +149,8 @@ msgstr ""
 msgid "The script for this scene is on the `Player` node. If the script needs to call `play()` on the `AnimatedSprite` node, it needs a reference to that node:"
 msgstr "このシーンのスクリプトは `Player` ノードに実装されています。もしスクリプトが `AnimatedSprite` ノードに対して `play()` メソッドを呼び出す必要がある場合、そのノードへの参照が必要となります："
 
-#: 2D/2d_align_surface.md 2D/2d_draw_trajectory.md 2D/2d_shooting.md 2D/8_direction.md 2D/autotile_intro.md
+#: 2D/2d_align_surface.md 2D/2d_draw_trajectory.md 2D/2d_shooting.md
+#: 2D/8_direction.md 2D/autotile_intro.md
 msgid "## Problem"
 msgstr "## 課題"
 
@@ -184,7 +185,8 @@ msgstr "`/root` は `get_tree().root` を介してもアクセスできますが
 msgid "The argument of the `get_node()` function is a string representing the *path* to the desired node. In this case, it's a child of the node the script is on. If the path you give it is invalid, you'll get the dreaded `null instance` error (as well as \"Node not found\")."
 msgstr "`get_node()` 関数の引数は、対象ノードへのパスを表す文字列です。ここではスクリプト実行中のノードの子要素を指定します。指定したパスが無効な場合、厄介な `null instance` エラーが発生するほか（さらに「ノードが見つかりませんでした」というメッセージも表示されます）。"
 
-#: 2D/2d_align_surface.md 2D/2d_draw_trajectory.md 2D/2d_shooting.md 2D/8_direction.md 2D/autotile_intro.md
+#: 2D/2d_align_surface.md 2D/2d_draw_trajectory.md 2D/2d_shooting.md
+#: 2D/8_direction.md 2D/autotile_intro.md
 msgid "## Solution"
 msgstr "## 解決策"
 
@@ -224,7 +226,9 @@ msgstr "この問題を回避するには、「ノードパス」の仕組みを
 msgid "What if the node you want to access is higher in the tree? You can use `get_parent()` or `\"..\"` to reference the parent node. In the above example tree, to get the `Player` node from the `ScoreLabel`:"
 msgstr "ノードへのアクセス先がツリー階層の上位にある場合はどうすればよいでしょうか？その場合は `get_parent()` 関数を使うか、パス指定に `\"../\"` を使用することで親ノードを参照できます。上記の例で、`ScoreLabel` から `Player` ノードを取得するには。"
 
-#: 2D/2d_align_surface.md 2D/touchscreen_camera.md 3D/assets/character_animation.md 3D/assets/character_controller.md 3D/assets/importing_assets.md
+#: 2D/2d_align_surface.md 2D/touchscreen_camera.md
+#: 3D/assets/character_animation.md 3D/assets/character_controller.md
+#: 3D/assets/importing_assets.md
 msgid "## Wrapping up"
 msgstr "## まとめ"
 
@@ -534,13 +538,14 @@ msgstr "基本的に、ノードはその子ノードを管理するべきです
 msgid "Let's assume every enemy has an `explode()` function that handles what happens when it dies (playing an animation, spawning dropped items, etc). Now that every enemy is in the group, we can implement our smart bomb function like this:"
 msgstr "敵キャラ全員が死亡時の処理（アニメーション再生、ドロップアイテムの生成など）を行う「explode()」関数を持っていると仮定しましょう。これで全ての敵がグループに登録されたので、スマートボム機能を以下のように実装できます。"
 
-#: 2D/2d_align_surface.md 2D/2d_draw_trajectory.md 2D/2d_shooting.md 2D/ballistic_bullet.md 2D/car_steering.md
+#: 2D/2d_align_surface.md 2D/2d_draw_trajectory.md 2D/2d_shooting.md
+#: 2D/ballistic_bullet.md 2D/car_steering.md
 msgid "## Related recipes"
 msgstr "## 関連レシピ"
 
 #: basics/understanding_delta.md
 msgid "<!-- - [Using KinematicBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->"
-msgstr "<!-- - [KinematicBody2Dの使用](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->"
+msgstr "<!-- - [KinematicBody2Dの使用](/godot_recipes/4.x/ja/physics/godot3_kinematic2d/) -->"
 
 #: basics/understanding_delta.md
 msgid "Try adjusting `delta` and `target_fps` in the following code to see the effect:"
@@ -582,7 +587,8 @@ msgstr "たとえ微小なフレームレートの変動があったとしても
 msgid "To illustrate the problem, let's consider a `Sprite` node moving across the screen. If our screen is `600` pixels wide and we want the sprite to take `5` seconds to cross the screen, we can use the following calculation to find the necessary speed:"
 msgstr "問題を具体的に説明するため、画面上を移動する「スプライト」ノードを考えてみましょう。画面幅が600ピクセルで、スプライトがこのスクリーン全体を横切るのに5秒かかる場合、必要な移動速度は以下の計算で求められます。"
 
-#: 2D/tilemap_animation.md basics/understanding_delta.md input/input_actions.md physics/joints_2d.md physics/kinematic_friction.md
+#: 2D/tilemap_animation.md basics/understanding_delta.md input/input_actions.md
+#: physics/joints_2d.md physics/kinematic_friction.md
 msgid "## Related Recipes"
 msgstr "## 関連するレシピ"
 
@@ -779,7 +785,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"プロジェクトファイルをこちらからダウンロードしてください: [custom_resources.zip](/godot_recipes/3.x/files/custom_resources.zip)\n"
+"プロジェクトファイルをこちらからダウンロードしてください: [custom_resources.zip](/godot_recipes/4.x/ja/files/custom_resources.zip)\n"
 "{{% /notice %}}"
 
 #: basics/custom_resources.md
@@ -966,7 +972,8 @@ msgstr "Godot 自体がシーンやリソースの保存にJSONを使用して�
 msgid "While Godot has [JSON support](https://docs.godotengine.org/en/latest/classes/class_json.html), saving game data is not what JSON is for. JSON is a data *interchange* format - its purpose is to allow systems using different data formats and/or languages to exchange data between each other."
 msgstr "Godotには[JSONサポート](https://docs.godotengine.org/ja/latest/classes/class_json.html)が組み込まれていますが、ゲームデータの保存用途としては設計されていません。JSONは「データ交換」形式であり、異なるデータフォーマットやプログラミング言語を使用するシステム間でデータを相互にやり取りできるようにすることを目的としています。"
 
-#: 3D/healthbars.md 3D/kinematic_car/car_ai.md 3D/kinematic_car/car_base.md 3D/kinematic_car/car_traction.md 3D/spaceship.md
+#: 3D/healthbars.md 3D/kinematic_car/car_ai.md 3D/kinematic_car/car_base.md
+#: 3D/kinematic_car/car_traction.md 3D/spaceship.md
 msgid "### Wrapping up"
 msgstr "### まとめ"
 
@@ -1238,7 +1245,8 @@ msgstr ""
 msgid "Basics"
 msgstr "基本編"
 
-#: 2D/_index.md 3D/_index.md 3D/assets/_index.md 3D/kinematic_car/_index.md Math/_index.md
+#: 2D/_index.md 3D/_index.md 3D/assets/_index.md 3D/kinematic_car/_index.md
+#: Math/_index.md
 msgid "#### In this section:"
 msgstr "#### 目次 ："
 
@@ -1534,7 +1542,8 @@ msgstr "心配しないでください。後で自動化します。"
 msgid "Try changing the size of your root node to see the effect:"
 msgstr "ルートノードのサイズを変更して効果を確認してください。"
 
-#: 2D/2d_shooting.md 2D/8_direction.md 2D/car_steering.md 2D/coyote_time.md 2D/grid_movement.md
+#: 2D/2d_shooting.md 2D/8_direction.md 2D/car_steering.md 2D/coyote_time.md
+#: 2D/grid_movement.md
 msgid "## <i class=\"fas fa-code-branch\"></i> Download This Project"
 msgstr "## <i class=\"fas fa-code-branch\"></i> このプロジェクトをダウンロードする"
 
@@ -1566,7 +1575,8 @@ msgstr "以下の 2 つの {{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加�
 msgid "Next, we'd like to fill in the inner part of the frame with the grid pattern `pattern_blueprintPaper.png`:"
 msgstr "次に、フレームの内側部分をグリッドパターン「pattern_blueprintPaper.png」で埋めたいと思います。"
 
-#: 2D/2d_shooting.md 2D/moving_platforms.md 3D/3d_shooting.md 3D/camera_gimbal.md 3D/spaceship.md
+#: 2D/2d_shooting.md 2D/moving_platforms.md 3D/3d_shooting.md
+#: 3D/camera_gimbal.md 3D/spaceship.md
 msgid "<!-- #### Like video?"
 msgstr "<!-- #### Videoが気に入ったら？ -->"
 
@@ -1700,7 +1710,8 @@ msgstr "クリティカルヒットの場合、色も変更してスケールア
 msgid "First, assign the value and randomize the movement based on the given spread (+/-90 degrees, for example). Since we may also be animating the scale, we set the `rect_pivot_offset` to the center of the control so that it will scale from the center."
 msgstr "まず、指定された値を設定し、与えられたスプレッド範囲（例：±90度）に基づいて移動をランダム化します。スケーリングもアニメーション化する可能性があるため、制御点の中心からスケールが開始されるよう `rect_pivot_offset` を中央に設定します。"
 
-#: 3D/camera_gimbal.md kyn/path2d.md kyn/raycast2d.md ui/cooldown_button.md ui/debug_overlay.md
+#: 3D/camera_gimbal.md kyn/path2d.md kyn/raycast2d.md ui/cooldown_button.md
+#: ui/debug_overlay.md
 msgid "<!-- ## Related recipes"
 msgstr "## 関連レシピ"
 
@@ -1760,7 +1771,7 @@ msgstr "### バーの設定手順"
 
 #: ui/heart_containers_3.md
 msgid "- [UI: Containers](/godot_recipes/3.x/ui/containers/) -->"
-msgstr "- [UI：コンテナ](/godot_recipes/3.x/ui/containers/) -->"
+msgstr "- [UI：コンテナ](/godot_recipes/4.x/ja/ui/containers/) -->"
 
 #: ui/heart_containers_3.md
 msgid "The heart images I'm using are 53x45. You can get them here:"
@@ -1873,7 +1884,7 @@ msgid ""
 "{{% /notice %}} -->"
 msgstr ""
 "<!-- {{% notice note %}}\n"
-"プロジェクトファイルはこちらからダウンロードできます。 [heart_bars.zip](/godot_recipes/3.x/files/heart_bars.zip)\n"
+"プロジェクトファイルはこちらからダウンロードできます。 [heart_bars.zip](/godot_recipes/4.x/ja/files/heart_bars.zip)\n"
 "{{% /notice %}} -->"
 
 #: ui/heart_containers_3.md
@@ -1929,8 +1940,8 @@ msgid ""
 "- [Containers](/godot_recipes/3.x/ui/containers/)\n"
 "- [Know Your Nodes: Label](/godot_recipes/3.x/kyn/label/) -->"
 msgstr ""
-"[コンテナ](/godot_recipes/3.x/ui/containers/)\n"
-"[ノードを知る：ラベル](/godot_recipes/3.x/kyn/label/) -->"
+"[コンテナ](/godot_recipes/4.x/ja/ui/containers/)\n"
+"[ノードを知る：ラベル](/godot_recipes/4.x/ja/kyn/label/) -->"
 
 #: ui/level_select.md
 msgid "{{< youtube C-Sn55e5wnk >}} -->"
@@ -2073,14 +2084,15 @@ msgid ""
 "- [UI: Labels](/godot_recipes/3.x/ui/labels/)\n"
 "- [UI: Object Healthbars](/godot_recipes/3.x/ui/unit_healthbar/) -->"
 msgstr ""
-"- [UI: ラベル](/godot_recipes/3.x/ui/labels/)\n"
-"   - [UI: ユニットHPバー](/godot_recipes/3.x/ui/unit_healthbar/) -->"
+"- [UI: ラベル](/godot_recipes/4.x/ja/ui/labels/)\n"
+"   - [UI: ユニットHPバー](/godot_recipes/4.x/ja/ui/unit_healthbar/) -->"
 
 #: ui/cooldown_button.md
 msgid "Cooldown Button"
 msgstr "クールタイムボタン"
 
-#: 2D/line_collision.md 3D/3d_sphere_car.md 3D/rolling_cube.md 3D/simple_airplane.md animation/spritesheet_animation.md
+#: 2D/line_collision.md 3D/3d_sphere_car.md 3D/rolling_cube.md
+#: 3D/simple_airplane.md animation/spritesheet_animation.md
 msgid "### Node setup"
 msgstr "### ノード設定"
 
@@ -2239,7 +2251,7 @@ msgid ""
 "{{% /notice %}} -->"
 msgstr ""
 "<!-- {{% notice note %}}\n"
-"Download the project file here: [tower_defense_demo.zip](/godot_recipes/3.x/files/tower_defense_demo.zip)\n"
+"Download the project file here: [tower_defense_demo.zip](/godot_recipes/4.x/ja/files/tower_defense_demo.zip)\n"
 "{{% /notice %}} -->"
 
 #: ui/unit_healthbar.md
@@ -2310,7 +2322,7 @@ msgid ""
 "{{% /notice %}} -->"
 msgstr ""
 "<!-- {{% notice note %}}\n"
-"プロジェクトファイルをこちらからダウンロードしてください: [screen_shake.zip](/godot_recipes/3.x/files/screen_shake.zip)\n"
+"プロジェクトファイルをこちらからダウンロードしてください: [screen_shake.zip](/godot_recipes/4.x/ja/files/screen_shake.zip)\n"
 "{{% /notice %}} -->"
 
 #: ui/labels.md
@@ -2324,7 +2336,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"この例では、人気のある無料フォント「Roboto」を使用します。このフォントは[Google Fonts](https://fonts.google.com/specimen/Roboto)で入手できます。こちらからもダウンロードできます。 [Roboto_font.zip](/godot_recipes/3.x/files/Roboto_font.zip)\n"
+"この例では、人気のある無料フォント「Roboto」を使用します。このフォントは[Google Fonts](https://fonts.google.com/specimen/Roboto)で入手できます。こちらからもダウンロードできます。 [Roboto_font.zip](/godot_recipes/4.x/ja/files/Roboto_font.zip)\n"
 "{{% /notice %}}"
 
 #: ui/labels.md
@@ -2357,7 +2369,7 @@ msgstr "はじめに、フォントファイルが必要になります。Godot�
 
 #: ui/labels.md
 msgid "<!-- - [Noise](/godot_recipes/3.x/math/noise/) -->"
-msgstr "<!-- - [ノイズ](/godot_recipes/3.x/math/noise/) -->"
+msgstr "<!-- - [ノイズ](/godot_recipes/4.x/ja/math/noise/) -->"
 
 #: ui/labels.md
 msgid "### Working with fonts"
@@ -2371,7 +2383,8 @@ msgstr "フォントを追加するには：インスペクタで「カスタム
 msgid "Drag your font file (in this example we're using `Roboto-Medium.ttf`) into the *Font Data* property (or choose \"Load\" and navigate to the file). There are several properties to adjust but for now let's make *Size* a bit bigger."
 msgstr "フォントファイル（この例では`Roboto-Medium.ttf`を使用しています）を*フォントデータ*プロパティにドラッグするか、「読み込み」を選択して直接ファイルを指定します。調整すべきプロパティは複数ありますが、まずは*サイズ*を少し大きくしてみましょう。"
 
-#: 2D/screen_shake.md 2D/tilemap_collision.md 2D/touchscreen_camera.md 3D/kinematic_body.md 3D/kinematic_car/car_ai.md
+#: 2D/screen_shake.md 2D/tilemap_collision.md 2D/touchscreen_camera.md
+#: 3D/kinematic_body.md 3D/kinematic_car/car_ai.md
 msgid "#### Like video?"
 msgstr "#### この動画が気に入ったら？"
 
@@ -2469,7 +2482,7 @@ msgstr "本例では、`mode` オプションの設定例として以下の2つ�
 
 #: ui/debug_overlay.md
 msgid "- [Drawing Vectors in 3D](/godot_recipes/3.x/3d/debug_overlay) -->"
-msgstr "[3D空間でのベクトル描画](/godot_recipes/3.x/3d/debug_overlay) -->"
+msgstr "[3D空間でのベクトル描画](/godot_recipes/4.x/ja/3d/debug_overlay) -->"
 
 #: ui/debug_overlay.md
 msgid "Start by adding a {{< gd-icon MarginContainer >}}`MarginContainer` named `DebugStats` with a {{< gd-icon VBoxContainer >}}`VBoxContainer` child. Set the margins to a comfortable value (I usually use `20`)."
@@ -2605,7 +2618,7 @@ msgstr "このコンテナは子要素をグリッド状に配置します。"
 
 #: ui/containers.md
 msgid "- [Labels](/godot_recipes/3.x/ui/labels)"
-msgstr "- [ラベル](/godot_recipes/3.x/ui/labels)"
+msgstr "- [ラベル](/godot_recipes/4.x/ja/ui/labels)"
 
 #: ui/containers.md
 msgid "When *Fill* is disabled and *Expand* is enabled, the control remains at the center of its area, rather than the beginning."
@@ -2786,8 +2799,8 @@ msgid ""
 "- [Capturing the Mouse](/godot_recipes/3.x/input/mouse_capture/)\n"
 "- [Intro to 3D](/godot_recipes/3.x/g101/3d/) -->"
 msgstr ""
-"[マウス操作のキャプチャ方法](/godot_recipes/3.x/input/mouse_capture/)\n"
-"[3D入門ガイド](/godot_recipes/3.x/g101/3d/) →"
+"[マウス操作のキャプチャ方法](/godot_recipes/4.x/ja/input/mouse_capture/)\n"
+"[3D入門ガイド](/godot_recipes/4.x/ja/g101/3d/) →"
 
 #: 3D/camera_gimbal.md
 msgid "The `-1.4` value lets it go *almost* to 90 degrees up, while setting a very small value for the minimum keeps the camera from clipping into the ground. Feel free to experiment with other values."
@@ -3539,7 +3552,7 @@ msgid ""
 "{{% /notice %}} -->"
 msgstr ""
 "<!-- {{% notice note %}}\n"
-"プロジェクトファイルはこちらよりダウンロードできます。[3d_shooting.zip](/godot_recipes/3.x/files/3d_shooting.zip)\n"
+"プロジェクトファイルはこちらよりダウンロードできます。[3d_shooting.zip](/godot_recipes/4.x/ja/files/3d_shooting.zip)\n"
 "{{% /notice %}} -->"
 
 #: 2D/2d_shooting.md 3D/3d_shooting.md
@@ -3563,8 +3576,8 @@ msgid ""
 "- [KinematicBody: Movement](/godot_recipes/3.x/3d/kinematic_body/)\n"
 "- [Godot 101: Intro to 3D](/godot_recipes/3.x/g101/3d/)"
 msgstr ""
-"- [動力体システム：移動操作](/godot_recipes/3.x/3d/kinematic_body/)\n"
-"- [Godot入門編：3Dの基礎](/godot_recipes/3.x/g101/3d/)"
+"- [動力体システム：移動操作](/godot_recipes/4.x/ja/3d/kinematic_body/)\n"
+"- [Godot入門編：3Dの基礎](/godot_recipes/4.x/ja/g101/3d/)"
 
 #: 2D/2d_shooting.md 3D/3d_shooting.md audio/audio_manager.md
 msgid "{{< youtube 7axJJYont6Y >}} -->"
@@ -3588,7 +3601,7 @@ msgstr "### 撮影について"
 
 #: 3D/3d_shooting.md
 msgid "For this example, we'll use the \"Mini Tank\" that we set up in [KinematicBody: Movement](/godot_recipes/3.x/3d/kinematic_body/)."
-msgstr "この例では、[『キネマティックボディ：移動』チュートリアル](/godot_recipes/3.x/3d/kinematic_body/) で作成した「ミニタンク」モデルを使用します。"
+msgstr "この例では、[『キネマティックボディ：移動』チュートリアル](/godot_recipes/4.x/ja/3d/kinematic_body/) で作成した「ミニタンク」モデルを使用します。"
 
 #: 3D/3d_shooting.md
 msgid ""
@@ -3725,7 +3738,7 @@ msgid ""
 "{{% /notice %}} -->"
 msgstr ""
 "<!-- {{% notice note %}}\n"
-"プロジェクトファイルはこちらからダウンロードできます。 [floating_text.zip](/godot_recipes/3.x/files/floating_text.zip)\n"
+"プロジェクトファイルはこちらからダウンロードできます。 [floating_text.zip](/godot_recipes/4.x/ja/files/floating_text.zip)\n"
 "{{% /notice %}} -->"
 
 #: 3D/kinematic_body.md
@@ -3807,8 +3820,8 @@ msgid ""
 "- [Intro to 3D](/godot_recipes/3.x/g101/3d/)\n"
 "- [Input Actions](/godot_recipes/3.x/input/input_actions/)"
 msgstr ""
-"- [3D入門](/godot_recipes/3.x/g101/3d/)\n"
-"- [入力アクション](/godot_recipes/3.x/input/input_actions/)"
+"- [3D入門](/godot_recipes/4.x/ja/g101/3d/)\n"
+"- [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)"
 
 #: 3D/characterbody3d_examples.md 3D/kinematic_body.md
 msgid "`speed` is the tank's movement speed (forward and back), while `rot_speed` defines how fast it can turn."
@@ -4066,7 +4079,7 @@ msgstr "GLTFモデルを使用する場合、インポート設定で調整す�
 
 #: 3D/3d_sphere_car.md
 msgid "- [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)"
-msgstr "* [入力アクション](http://kidscancode.org/godot_recipes/input/input_actions/)"
+msgstr "* [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)"
 
 #: 3D/3d_sphere_car.md
 msgid "![alt](/godot_recipes/4.x/img/3d_sphere_car_02.png)"
@@ -4105,7 +4118,7 @@ msgstr "違いを観察してください。"
 
 #: 3D/3d_sphere_car.md
 msgid "If you've tried driving on a slope, you've seen that the car mesh doesn't tilt at all, it always remains level. That looks unnatural, so let's use the process described in [KinematicBody: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/) to fix that."
-msgstr "坂での走行を試したことがある方ならご存知でしょうが、車オブジェクトは傾斜が全くつかず、常に水平を保っています。これは不自然に見えるため、[KinematicBody: 表面と位置合わせ](/godot_recipes/3.x/3d/3d_align_surface/) セクションで説明されている方法を使って修正しましょう。"
+msgstr "坂での走行を試したことがある方ならご存知でしょうが、車オブジェクトは傾斜が全くつかず、常に水平を保っています。これは不自然に見えるため、[KinematicBody: 表面と位置合わせ](/godot_recipes/4.x/ja/3d/3d_align_surface/) セクションで説明されている方法を使って修正しましょう。"
 
 #: 3D/3d_sphere_car.md
 msgid "You can `@export` these if you'd like to adjust them from the Inspector."
@@ -4319,7 +4332,7 @@ msgstr "ご覧のとおり、これはグローバル座標系の方向ベクト
 
 #: 3D/move_with_camera.md
 msgid "While this situation can apply to many possible scenarios, we'll use the [Rolling Cube recipe](/godot_recipes/3.x/3d/rolling_cube/) as our example."
-msgstr "このケースはさまざまなシナリオに適用できますが、ここでは[転がるキューブレシピ](/godot_recipes/3.x/3d/rolling_cube/)を具体例として説明します。"
+msgstr "このケースはさまざまなシナリオに適用できますが、ここでは[転がるキューブレシピ](/godot_recipes/4.x/ja/3d/rolling_cube/)を具体例として説明します。"
 
 #: 3D/move_with_camera.md
 msgid "In the script for the cube, we have the following code for movement:"
@@ -4338,8 +4351,8 @@ msgid ""
 "- [Rolling Cube](/godot_recipes/3.x/3d/rolling_cube/)\n"
 "- [Camera Gimbal](/godot_recipes/3.x/3d/camera_gimbal/)"
 msgstr ""
-"- ［転がるキューブ］(/godot_recipes/3.x/3d/rolling_cube/)\n"
-"- ［カメラ・ジンバル］(/godot_recipes/3.x/3d/camera_gimbal/)"
+"- ［転がるキューブ］(/godot_recipes/4.x/ja/3d/rolling_cube/)\n"
+"- ［カメラ・ジンバル］(/godot_recipes/4.x/ja/3d/camera_gimbal/)"
 
 #: 3D/move_with_camera.md
 msgid "When moving with WASD-style controls in 3D, it's easy to get disoriented if the camera rotates. Whose forward counts - the player's (ie the camera's) or the object in the game world?"
@@ -4375,7 +4388,7 @@ msgstr "これでゲーム内の任意のオブジェクトから、以下の方
 
 #: 3D/debug_overlay.md
 msgid "- [UI: Displaying debug data](/godot_recipes/3.x/ui/debug_overlay)"
-msgstr "- [UI：デバッグデータの表示](/godot_recipes/3.x/ui/debug_overlay)"
+msgstr "- [UI：デバッグデータの表示](/godot_recipes/4.x/ja/ui/debug_overlay)"
 
 #: 3D/debug_overlay.md
 msgid "For the display layer, add a {{< gd-icon CanvasLayer >}}`CanvasLayer` containing a {{< gd-icon Control >}}`Control` to your 3D scene and add a script to the `Control`."
@@ -4788,8 +4801,8 @@ msgid ""
 "<!-- - [UI: Labels](/godot_recipes/3.x/ui/labels/)\n"
 "- [UI: Object Healthbars](/godot_recipes/3.x/ui/unit_healthbar/) -->"
 msgstr ""
-"<!-- - [UI: ラベル](/godot_recipes/3.x/ui/labels/)\n"
-"- [UI: ユニットHPバー](/godot_recipes/3.x/ui/unit_healthbar/) -->"
+"<!-- - [UI: ラベル](/godot_recipes/4.x/ja/ui/labels/)\n"
+"- [UI: ユニットHPバー](/godot_recipes/4.x/ja/ui/unit_healthbar/) -->"
 
 #: 3D/click_to_move.md
 msgid "### Mouse -> 3D"
@@ -4837,7 +4850,7 @@ msgstr "# <i class='fas fa-cube'></i>&nbsp;3D"
 
 #: 3D/_index.md
 msgid "<!-- For a gentle introduction to working in 3D, see: [Intro to 3D](/godot_recipes/3.x/g101/3d/) -->"
-msgstr "<!-- 3D作業の基本を学ぶには、以下をご覧ください。 [3D入門ガイド](/godot_recipes/3.x/g101/3d/) -->"
+msgstr "<!-- 3D作業の基本を学ぶには、以下をご覧ください。 [3D入門ガイド](/godot_recipes/4.x/ja/g101/3d/) -->"
 
 #: 3D/assets/character_animation.md
 msgid "![alt](/godot_recipes/4.x/img/3dcharacter_default_pose.png)"
@@ -5061,7 +5074,8 @@ msgstr "![alt](/godot_recipes/4.x/img/3dcharacter_imported_scene.png)"
 msgid "The `IWR` looping animations can be thought of as the \"heart\" of the animation tree. The character will spend most of its time playing these animations. Any other animations will branch off from it (like we did earlier with the attack)."
 msgstr "アニメーションツリーの中核となるのが「IWR」ループアニメーションです。このアニメーションはキャラクターが最も多くの時間を過ごす場面で再生されます。他のあらゆるアニメーションは、この基本アニメーションから分岐する形で実装されます（先ほど攻撃動作で行ったように）。"
 
-#: 3D/assets/character_animation.md 3D/assets/character_controller.md 3D/assets/importing_assets.md
+#: 3D/assets/character_animation.md 3D/assets/character_controller.md
+#: 3D/assets/importing_assets.md
 msgid "#### Companion Video"
 msgstr "#### 関連動画"
 
@@ -5615,7 +5629,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"3D環境においても、車両は基本的に地面に留まる性質があります。このため、移動処理の多くは実質的に2Dと同様の扱いができます。車の動作コードの大部分は、[2D用カーステアリングレシピ](/godot_recipes/3.x/2d/car_steering)と非常に似た構造になります。このチュートリアルに進む前に、必ずそのレシピを確認しておくことをオススメします。\n"
+"3D環境においても、車両は基本的に地面に留まる性質があります。このため、移動処理の多くは実質的に2Dと同様の扱いができます。車の動作コードの大部分は、[2D用カーステアリングレシピ](/godot_recipes/4.x/ja/2d/car_steering)と非常に似た構造になります。このチュートリアルに進む前に、必ずそのレシピを確認しておくことをオススメします。\n"
 "{{% /notice %}}"
 
 #: 3D/kinematic_car/car_base.md
@@ -5760,7 +5774,7 @@ msgstr ""
 
 #: 3D/kinematic_car/car_base.md
 msgid "* `drag` and `friction` are [explained here](/godot_recipes/3.x/2d/car_steering/#part-3-frictiondrag)."
-msgstr "*  `drag` と `friction` については[こちらで詳しく説明しています](/godot_recipes/3.x/2d/car_steering/#part-3-frictiondrag)。"
+msgstr "*  `drag` と `friction` については[こちらで詳しく説明しています](/godot_recipes/4.x/ja/2d/car_steering/#part-3-frictiondrag)。"
 
 #: 3D/kinematic_car/car_base.md
 msgid "Here we check if the car is on the ground before applying controls - you can't steer in mid-air! Then we apply the standard movement equations."
@@ -5823,17 +5837,18 @@ msgstr "人間が操作する場合とAIが制御する場合の両方に対応�
 msgid "### Base script"
 msgstr "### 基本スクリプト"
 
-#: 3D/kinematic_car/car_ai.md 3D/kinematic_car/car_camera.md 3D/kinematic_car/car_traction.md
+#: 3D/kinematic_car/car_ai.md 3D/kinematic_car/car_camera.md
+#: 3D/kinematic_car/car_traction.md
 msgid ""
 "- [Kinematic Car: Base](/godot_recipes/3.x/3d/kinematic_car/car_base/)\n"
 "- [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)\n"
 "- [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)\n"
 "- [3D: KinematicBody Movement](/godot_recipes/3.x/3d/kinematic_body/)"
 msgstr ""
-"- [キネマティックカー：基本モデル](/godot_recipes/3.x/3d/kinematic_car/car_base/)\n"
-"- [2D: ステアリング操作レシピ](/godot_recipes/3.x/2d/car_steering)\n"
-"- [入力アクション設定](http://kidscancode.org/godot_recipes/input/input_actions/)\n"
-"- [3D: キネマティックボディの移動制御](/godot_recipes/3.x/3d/kinematic_body/)"
+"- [キネマティックカー：基本モデル](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)\n"
+"- [2D: ステアリング操作レシピ](/godot_recipes/4.x/ja/2d/car_steering)\n"
+"- [入力アクション設定](/godot_recipes/4.x/ja/input/input_actions/)\n"
+"- [3D: キネマティックボディの移動制御](/godot_recipes/4.x/ja/3d/kinematic_body/)"
 
 #: 3D/kinematic_car/car_ai.md
 msgid "3D Kinematic Car: AI Steering"
@@ -5857,15 +5872,15 @@ msgstr "両方の場合、［キャスト先］を（0、-0.25、0）に設定�
 
 #: 3D/kinematic_car/car_slopes.md
 msgid "Your [Kinematic Car](/godot_recipes/3.x/3d/kinematic_car/car_base/) climbs slopes, but it doesn't look quite right:"
-msgstr "[キネマティックカー](/godot_recipes/3.x/3d/kinematic_car/car_base/) は斜面を登れるようになりましたが、見た目が少し不自然です："
+msgstr "[キネマティックカー](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/) は斜面を登れるようになりましたが、見た目が少し不自然です："
 
 #: 3D/kinematic_car/car_slopes.md
 msgid ""
 "- [Kinematic Car: Base](/godot_recipes/3.x/3d/kinematic_car/car_base/)\n"
 "- [KinematicBody: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/)"
 msgstr ""
-"- [KinematicCar：基本モデル](/godot_recipes/3.x/3d/kinematic_car/car_base/)\n"
-"- [KinematicBody：表面との整列テクニック](/godot_recipes/3.x/3d/3d_align_surface/)"
+"- [KinematicCar：基本モデル](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)\n"
+"- [KinematicBody：表面との整列テクニック](/godot_recipes/4.x/ja/3d/3d_align_surface/)"
 
 #: 3D/kinematic_car/car_slopes.md
 msgid "When neither wheel is on the ground, we don't rotate the car at all."
@@ -6047,7 +6062,7 @@ msgstr "`drifting` はドリフト状態を追跡するためのブール変数�
 
 #: 3D/kinematic_car/car_traction.md
 msgid "You've got a [kinematic car](/godot_recipes/3.x/3d/kinematic_car/car_base/), but you don't like the \"on rails\" feeling, especially at high speeds. You'd like to have some \"slip\" so that you can have drifting and loss of traction."
-msgstr "［キネマティックカー］(/godot_recipes/3.x/3d/kinematic_car/car_base/)を持っているものの、特に高速走行時に「レール上を走っている」ような感覚が気にいりません。ドリフトやトラクション損失を可能にするため、ある程度の「スリップ」特性が欲しい。"
+msgstr "［キネマティックカー］(/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)を持っているものの、特に高速走行時に「レール上を走っている」ような感覚が気にいりません。ドリフトやトラクション損失を可能にするため、ある程度の「スリップ」特性が欲しい。"
 
 #: 3D/kinematic_car/car_traction.md
 msgid "Next, add this code to the `calculate_steering()` function in `car_base.gd`, right after calculating the `new_heading`:"
@@ -6253,7 +6268,7 @@ msgstr "- `is_action_pressed()`: この関数は現在アクションが「押�
 
 #: input/input_actions.md
 msgid "- [Inputs: Introduction](/godot_recipes/3.x/input/input_intro/)"
-msgstr "- [入力システム入門](/godot_recipes/3.x/input/input_intro/)"
+msgstr "- [入力システム入門](/godot_recipes/4.x/ja/input/input_intro/)"
 
 #: input/input_actions.md
 msgid "You'll see when you click on the tab there are already some default actions configured. They are all named \"ui_*\" to indicate that they are the default interface actions. \"Tab\" for next UI element, for example."
@@ -6658,7 +6673,7 @@ msgid ""
 "- [Platform character](http://kidscancode.org/godot_recipes/2d/platform_character/)\n"
 "<!-- - [Controlling animation states](http://kidscancode.org/godot_recipes/animation/animation_state_machine/) -->"
 msgstr ""
-"- [プラットフォームキャラクター](http://kidscancode.org/godot_recipes/2d/platform_character/)\n"
+"- [プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)\n"
 " <!-- - [アニメーション状態のコントロール](http://kidscancancode.org/godot_recipes/animation/animation_state_machine/) -->"
 
 #: animation/spritesheet_animation.md
@@ -6744,7 +6759,7 @@ msgid ""
 "- [Top-down character](http://kidscancode.org/godot_recipes/2d/topdown_movement/#option-1-8-way-movement)\n"
 "- [Controlling animation states](http://kidscancode.org/godot_recipes/animation/animation_state_machine/)"
 msgstr ""
-"[見下ろし型キャラクター制御](http://kidscancode.org/godot_recipes/2d/topdown_movement/#option-1-8-way-movement)\n"
+"[見下ろし型キャラクター制御](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)\n"
 "[アニメーション状態の管理方法](http://kidscancancode.org/godot_recipes/animation/animation_state_machine/)"
 
 #: animation/melee_attacks.md
@@ -6804,8 +6819,8 @@ msgid ""
 "- [Spritesheet animation](/godot_recipes/3.x/animation/spritesheet_animation/)\n"
 "- [Top-down character](/godot_recipes/3.x/2d/topdown_movement/#option-1-8-way-movement)"
 msgstr ""
-"- [スプライトシートアニメーション](/godot_recipes/3.x/animation/spritesheet_animation/)\n"
-"- [見下ろし型キャラクター操作](/godot_recipes/3.x/2d/topdown_movement/#option-1-8-way-movement)"
+"- [スプライトシートアニメーション](/godot_recipes/4.x/ja/animation/spritesheet_animation/)\n"
+"- [見下ろし型キャラクター操作](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)"
 
 #: animation/animation_state_machine.md
 msgid "Now we can add connections. Click the \"Connect nodes\" button and drag between nodes to connect them."
@@ -6966,7 +6981,8 @@ msgid ""
 "`transform.basis`."
 msgstr "ここで _トランスフォーム_ が登場します。トランスフォームとは、オブジェクトの位置・回転・スケール情報をすべて含む数学的な _行列_ です。Godotではこの情報は _トランスフォーム_ データ型に格納されます。位置情報は `transform.origin` と呼ばれ、向きの情報は `transform.basis` に含まれます。"
 
-#: g101/3d/101_3d_01.md g101/3d/101_3d_02.md g101/3d/101_3d_03.md g101/3d/101_3d_04.md g101/3d/101_3d_05.md
+#: g101/3d/101_3d_01.md g101/3d/101_3d_02.md g101/3d/101_3d_03.md
+#: g101/3d/101_3d_04.md g101/3d/101_3d_05.md
 msgid "## Wrapping Up"
 msgstr "## まとめ"
 
@@ -10161,9 +10177,9 @@ msgid ""
 "- [Inputs: Introduction](/godot_recipes/3.x/input/input_intro/)\n"
 "- [KinematicBody: Movement](/godot_recipes/3.x/3d/kinematic_body/) -->"
 msgstr ""
-"* [補間カメラの使用方法](/godot_recipes/3.x/3d/interpolated_camera/)\n"
-"* [入力操作入門](/godot_recipes/3.x/input/input_intro/)\n"
-"* [キネマティックボディによる移動制御](/godot_recipes/3.x/3d/kinematic_body/) →"
+"* [補間カメラの使用方法](/godot_recipes/4.x/ja/3d/interpolated_camera/)\n"
+"* [入力操作入門](/godot_recipes/4.x/ja/input/input_intro/)\n"
+"* [キネマティックボディによる移動制御](/godot_recipes/4.x/ja/3d/kinematic_body/) →"
 
 #: kyn/path2d.md
 msgid "When you select a {{< gd-icon Path2D >}}`Path2D` node, some new icons appear on the icon bar:"
@@ -11103,7 +11119,7 @@ msgstr "### 興味を見つける方法"
 
 #: ai/context_map.md
 msgid "- [Vectors: Using Dot and Cross Product](/godot_recipes/3.x/math/dot_cross_product/)"
-msgstr "- [ベクトル：内積と外積の活用](/godot_recipes/3.x/math/dot_cross_product/)"
+msgstr "- [ベクトル：内積と外積の活用](/godot_recipes/4.x/ja/math/dot_cross_product/)"
 
 #: ai/context_map.md
 msgid "In the script for this scene, we have a `get_path_direction()` function. Given a position, this function finds the closest point on the path and puts the `PathFollow2D` there in order to find the forward direction."
@@ -12278,7 +12294,8 @@ msgid ""
 "is in the docs."
 msgstr "正確には違います。`_physics_process()` は物理時間ステップに同期されていますが、だからといってあらゆる処理に使えるわけではありません。ただし、解決策はドキュメントに記載されていますのでご安心ください。"
 
-#: 2D/splitscreen_demo.md physics/Godot3_KYN_rigidbody1.md physics/collision_layers.md
+#: 2D/splitscreen_demo.md physics/Godot3_KYN_rigidbody1.md
+#: physics/collision_layers.md
 #, fuzzy
 msgid "## Introduction"
 msgstr "## 解決策"
@@ -12341,7 +12358,8 @@ msgid ""
 "it's launched."
 msgstr "このスクリプトでは、マウスボタンが押されたときに `dragging` を有効にし、クリック位置を記録します。ボタンを離すと、クリックポイントからリリースポイントまでのベクトルを求め、それを用いてインパルスを適用します（スケールを調整するために `5` で乗算）。 `apply_impulse()` は第1引数として `offset` も取ります。これにより、必要に応じてボディを中心以外の地点で「ヒット」させることができます。例えば、これを `Vector2(25, 0)` に設定すると、ボールを発射する際にスピンを加えることができます。"
 
-#: 2D/platform_character.md physics/Godot3_KYN_rigidbody1.md physics/Godot3_kinematic2d.md
+#: 2D/platform_character.md physics/Godot3_KYN_rigidbody1.md
+#: physics/Godot3_kinematic2d.md
 msgid "## Conclusion"
 msgstr "## 結論"
 
@@ -12389,7 +12407,7 @@ msgid ""
 "{{% /notice %}} -->"
 msgstr ""
 "<!-- {{% notice note %}}\n"
-"プロジェクトファイルはこちらからダウンロードできます [kinematic_vs_rigid.zip](/godot_recipes/3.x/files/kinematic_vs_rigid.zip)\n"
+"プロジェクトファイルはこちらからダウンロードできます [kinematic_vs_rigid.zip](/godot_recipes/4.x/ja/files/kinematic_vs_rigid.zip)\n"
 "{{% /notice %}} -->"
 
 #: physics/kinematic_to_rigidbody.md
@@ -12426,7 +12444,7 @@ msgstr "![alt](/godot_recipes/4.x/img/inf_inertia2.gif)"
 
 #: physics/kinematic_to_rigidbody.md
 msgid "For this example, we'll use the 2D character described in the [Platform character](http://kidscancode.org/godot_recipes/ai/platform_character) recipe."
-msgstr "本例では、[プラットフォームキャラクター](http://kidscancode.org/godot_recipes/ai/platform_character) で説明されている2Dキャラクターを使用します。"
+msgstr "本例では、[プラットフォームキャラクター](/godot_recipes/4.x/ja/ai/platform_character) で説明されている2Dキャラクターを使用します。"
 
 #: physics/kinematic_to_rigidbody.md
 msgid "Now if you try to move, you'll see that the kinematic body just stops on collision. It can't push the rigid body at all."
@@ -12434,7 +12452,7 @@ msgstr "ここで移動を試みると、衝突時にキネマティックボデ
 
 #: physics/kinematic_to_rigidbody.md
 msgid "- [Platform character](http://kidscancode.org/godot_recipes/ai/platform_character)"
-msgstr "- [プラットフォームキャラクター](http://kidscancode.org/godot_recipes/ai/platform_character)"
+msgstr "- [プラットフォームキャラクター](/godot_recipes/4.x/ja/ai/platform_character)"
 
 #: physics/top_down_friction.md
 msgid "Top-down Friction"
@@ -13538,7 +13556,7 @@ msgid ""
 "- [Godot 101: Intro do 3D](/godot_recipes/3.x/g101/3d/)\n"
 "- [KinematicBody: Movement](/godot_recipes/3.x/3d/kinematic_body/)"
 msgstr ""
-"- [Godot入門：3Dの基礎編](/godot_recipes/3.x/g101/3d/)\n"
+"- [Godot入門：3Dの基礎編](/godot_recipes/4.x/ja/g101/3d/)\n"
 "- [キネマティックボディによる移動制御](/goadot_recipes/3.x/3d/kinematic_body/)"
 
 #: physics/kinematicbody_slopes.md
@@ -13669,7 +13687,7 @@ msgstr "![alt](/godot_recipes/4.x/img/springjoint_example.gif)"
 
 #: physics/joints_2d.md
 msgid "<!-- You can download an example project to play with these joints here: [physics_joints.zip](/godot_recipes/3.x/files/physics_joints.zip) -->"
-msgstr "<!-- You can download an example project to play with these joints here: [physics_joints.zip](/godot_recipes/3.x/files/physics_joints.zip) -->"
+msgstr "<!-- You can download an example project to play with these joints here: [physics_joints.zip](/godot_recipes/4.x/ja/files/physics_joints.zip) -->"
 
 #: physics/joints_2d.md
 msgid "![alt](/godot_recipes/4.x/img/groovejoint_example.gif)"
@@ -13735,7 +13753,7 @@ msgstr "運動キャラクターに摩擦と加速度を加え、より自然な
 
 #: physics/kinematic_friction.md
 msgid "- [Platform Character](/godot_recipes/3.x/2d/platform_character/)"
-msgstr "- [プラットフォームキャラクター](/godot_recipes/3.x/2d/platform_character/)"
+msgstr "- [プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)"
 
 #: physics/kinematic_friction.md
 msgid "![alt](/godot_recipes/4.x/img/friction_platformer.gif)"
@@ -13755,7 +13773,7 @@ msgstr "以下のコードでは、`friction(摩擦係数)`はキャラクター
 
 #: physics/kinematic_friction.md
 msgid "`lerp()`, aka _linear interpolate_, finds a \"blended\" value between two given numbers.  See [Interpolation](/godot_recipes/3.x/math/interpolation/) for details."
-msgstr "`lerp()`（線形補間）は、2つの数値間で「ブレンドされた」値を求める関数です。詳細は[補間処理](/godot_recipes/3.x/math/interpolation/)を参照してください。"
+msgstr "`lerp()`（線形補間）は、2つの数値間で「ブレンドされた」値を求める関数です。詳細は[補間処理](/godot_recipes/4.x/ja/math/interpolation/)を参照してください。"
 
 #: physics/kinematic_friction.md
 msgid "Replace the `get_input()` code with the following:"
@@ -13779,7 +13797,7 @@ msgstr "### 解説"
 
 #: physics/conveyor_belt.md
 msgid "This works perfectly well with kinematic bodies, too. Here's the same conveyor belt object added to our [Platform character](http://kidscancode.org/godot_recipes/2d/platform_character) recipe:"
-msgstr "This works perfectly well with kinematic bodies, too. Here's the same conveyor belt object added to our [Platform character](http://kidscancode.org/godot_recipes/2d/platform_character) recipe:"
+msgstr "This works perfectly well with kinematic bodies, too. Here's the same conveyor belt object added to our [Platform character](/godot_recipes/4.x/ja/2d/platform_character) recipe:"
 
 #: physics/conveyor_belt.md
 msgid ""
@@ -13849,7 +13867,7 @@ msgid ""
 "- [Using KinematicBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/)\n"
 "- [Moving Platforms](/godot_recipes/3.x/2d/moving_platforms/)"
 msgstr ""
-"- [プラットフォームキャラクターの実装](http://kidscancode.org/godot_recipes/2d/platform_character)\n"
+"- [プラットフォームキャラクターの実装](/godot_recipes/4.x/ja/2d/platform_character)\n"
 "- [KinematicBody2Dコンポーネントの使用方法](/godot_recipes/4.x/physics/godot3_kinematic2d/)\n"
 "- [プラットホームゲームの作成](/godot_recipes/4.x/2d/moving_platforms/)"
 
@@ -14154,8 +14172,8 @@ msgid ""
 "- [2D shooting recipe](/godot_recipes/3.x/2d/2d_shooting/)\n"
 "- [2D ballistic bullet](/godot_recipes/3.x/2d/ballistic_bullet)"
 msgstr ""
-"[2Dシューティングゲームの作成レシピ](/godot_recipes/3.x/2d/2d_shooting/)\n"
-"[2D弾道式弾丸システム](/godot_recipes/3.x/2d/ballistic_bullet)"
+"[2Dシューティングゲームの作成レシピ](/godot_recipes/4.x/ja/2d/2d_shooting/)\n"
+"[2D弾道式弾丸システム](/godot_recipes/4.x/ja/2d/ballistic_bullet)"
 
 #: 2D/2d_draw_trajectory.md
 msgid "Now we're ready to draw the line. The goal will be to move along the projected trajectory and add points to the line as we go. Since we know the starting velocity and the gravity that the bullet is using, we can use the same calculation."
@@ -14167,7 +14185,7 @@ msgstr "軌跡を描画"
 
 #: 2D/2d_draw_trajectory.md
 msgid "* [Ballistic bullet](/godot_recipes/3.x/2d/ballistic_bullet/)"
-msgstr "* [弾道弾の実装方法](/godot_recipes/3.x/2d/ballistic_bullet/)"
+msgstr "* [弾道弾の実装方法](/godot_recipes/4.x/ja/2d/ballistic_bullet/)"
 
 #: 2D/2d_draw_trajectory.md
 msgid "`max_points` sets the maximum number of points you want to add to the line. In the `update_trajectory()` function, we get the bullet's starting position and velocity from the tank (remember, gravity is defined in the tank too, for this example). We then iterate through those points, moving the position each \"step\" by the same amount the bullet will move during one frame."
@@ -14268,8 +14286,8 @@ msgid ""
 "- [Input Actions](/godot_recipes/3.x/input/input_actions/)\n"
 "- [Interpolation](/godot_recipes/3.x/math/interpolation/) -->"
 msgstr ""
-"- [入力アクション設定](/godot_recipes/3.x/input/input_actions/)\n"
-"- [補間処理](/godot_recipes/3.x/math/interpolation/) -->"
+"- [入力アクション設定](/godot_recipes/4.x/ja/input/input_actions/)\n"
+"- [補間処理](/godot_recipes/4.x/ja/math/interpolation/) -->"
 
 #: 2D/grid_movement.md
 msgid "### Animating movement"
@@ -14317,7 +14335,7 @@ msgstr "弾道銃弾"
 
 #: 2D/ballistic_bullet.md
 msgid "However, as mentioned in the [2D shooting recipe](/godot_recipes/3.x/2d/2d_shooting/), {{< gd-icon Area2D >}}`Area2D` is a great choice for simple bullets and other projectiles - when you don't need collisions, bouncing, or other physics reactions. Ballistic motion is easy enough to calculate that we won't need the help of the physics engine."
-msgstr "ただし、[2Dシューティングゲームのレシピ](/godot_recipes/3.x/2d/2d_shooting/)で解説されているように、{{< gd-icon Area2D >}}`Area2D`は単純な弾丸やその他の投射物に非常に適しています。衝突判定やバウンド、その他の物理挙動を必要としない場合には特に便利です。弾道計算自体は難しくないため、物理エンジンの助けを借りるほどでもありません。"
+msgstr "ただし、[2Dシューティングゲームのレシピ](/godot_recipes/4.x/ja/2d/2d_shooting/)で解説されているように、{{< gd-icon Area2D >}}`Area2D`は単純な弾丸やその他の投射物に非常に適しています。衝突判定やバウンド、その他の物理挙動を必要としない場合には特に便利です。弾道計算自体は難しくないため、物理エンジンの助けを借りるほどでもありません。"
 
 #: 2D/ballistic_bullet.md
 msgid "Using the [standard equations of motion](https://www.khanacademy.org/science/physics/one-dimensional-motion/kinematic-formulas/a/what-are-the-kinematic-formulas) is all we need to do here. The initial value for `velocity` is just for testing. Run the bullet scene:"
@@ -14340,8 +14358,8 @@ msgid ""
 "- [2D shooting recipe](/godot_recipes/3.x/2d/2d_shooting/)\n"
 "- [2D: Draw trajectory](/godot_recipes/3.x/2d/2d_draw_trajectory/)"
 msgstr ""
-"- [2Dシューティングゲームの作成レシピ](/godot_recipes/3.x/2d/2d_shooting/)\n"
-"  - [2D：軌跡を描画する方法](/godot_recipes/3.x/2d/2d_draw_trajectory/)"
+"- [2Dシューティングゲームの作成レシピ](/godot_recipes/4.x/ja/2d/2d_shooting/)\n"
+"  - [2D：軌跡を描画する方法](/godot_recipes/4.x/ja/2d/2d_draw_trajectory/)"
 
 #: 2D/ballistic_bullet.md
 msgid "One approach to this problem would be to use a {{< gd-icon RigidBody2D >}}`RigidBody2D` - with its built-in physics, gravity would automatically pull it back to earth after firing it."
@@ -14592,7 +14610,7 @@ msgid ""
 "{{% /notice %}} -->"
 msgstr ""
 "<!-- {{% notice note %}}\n"
-"プロジェクトファイルはこちらからダウンロードできます。 [autotile_intro.zip](/godot_recipes/3.x/files/autotile_intro.zip)\n"
+"プロジェクトファイルはこちらからダウンロードできます。 [autotile_intro.zip](/godot_recipes/4.x/ja/files/autotile_intro.zip)\n"
 "{{% /notice %}} -->"
 
 #: 2D/autotile_intro.md
@@ -14708,7 +14726,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"プロジェクトファイルはこちらからダウンロードできます。[screen_shake.zip](/godot_recipes/3.x/files/screen_shake.zip)\n"
+"プロジェクトファイルはこちらからダウンロードできます。[screen_shake.zip](/godot_recipes/4.x/ja/files/screen_shake.zip)\n"
 "{{% /notice %}}"
 
 #: 2D/screen_shake.md
@@ -14744,8 +14762,8 @@ msgid ""
 "- [Noise](/godot_recipes/3.x/math/noise/)\n"
 "- [Platform character](http://kidscancode.org/godot_recipes/ai/platform_character)"
 msgstr ""
-"- [ノイズジェネレーター](/godot_recipes/3.x/math/noise/)\n"
-"- [プラットフォームキャラクター実装](http://kidscancode.org/godot_recipes/ai/platform_character)"
+"- [ノイズジェネレーター](/godot_recipes/4.x/ja/math/noise/)\n"
+"- [プラットフォームキャラクター実装](/godot_recipes/4.x/ja/ai/platform_character)"
 
 #: 2D/screen_shake.md
 msgid "![alt](/godot_recipes/4.x/img/shake_rand01.gif)"
@@ -14899,7 +14917,7 @@ msgstr "<translation></translation>"
 
 #: 2D/tilemap_animation.md
 msgid "- [TileMap: using autotile](http://kidscancode.org/godot_recipes/autotile_intro)"
-msgstr "- [タイルマップ：オートタイルの活用](http://kidscancode.org/godot_recipes/autotile_intro)"
+msgstr "- [タイルマップ：オートタイルの活用](/godot_recipes/4.x/ja/autotile_intro)"
 
 #: 2D/tilemap_animation.md
 msgid "Now that the `AnimatedTexture` is saved, it can be used in a `TileSet`. Open a new or existing {{< gd-icon TileMap >}}`TileMap` and select its _Tile Set_ property. Click the button to add a new texture to the `TileSet`:"
@@ -14907,7 +14925,7 @@ msgstr "アニメーション付きテクスチャが保存されたので、こ
 
 #: 2D/tilemap_animation.md
 msgid "Download these images: [water.zip](/godot_recipes/3.x/files/water_tiles.zip)"
-msgstr "これらの画像をダウンロードしてください。[water.zip](/godot_recipes/3.x/files/water_tiles.zip)"
+msgstr "これらの画像をダウンロードしてください。[water.zip](/godot_recipes/4.x/ja/files/water_tiles.zip)"
 
 #: 2D/tilemap_collision.md
 msgid "Assume you've obtained a `KinematicCollision2D` object stored in the variable `collision`:"
@@ -14922,8 +14940,8 @@ msgid ""
 "- [TileMap: using autotile](http://kidscancode.org/godot_recipes/2d/autotile_intro/)\n"
 "- [TileMap: animated tiles](http://kidscancode.org/godot_recipes/2d/tilemap_animation/)"
 msgstr ""
-"- [タイルマップ: オートタイルを利用する](http://kidscancode.org/godot_recipes/2d/autotile_intro/)\n"
-"- [タイルマップ: アニメーションタイル](http://kidscancode.org/godot_recipes/2d/tilemap_animation/)"
+"- [タイルマップ: オートタイルを利用する](/godot_recipes/4.x/ja/2d/autotile_intro/)\n"
+"- [タイルマップ: アニメーションタイル](/godot_recipes/4.x/ja/2d/tilemap_animation/)"
 
 #: 2D/tilemap_collision.md
 msgid "You have a {{< gd-icon KinematicBody2D >}}`KinematicBody2D` character colliding with a {{< gd-icon TileMap >}}`TileMap`, and you want to know which tile it collided with."
@@ -15131,7 +15149,7 @@ msgid ""
 "{{% /notice %}} -->"
 msgstr ""
 "<!-- {{% notice note %}}\n"
-"プロジェクトファイルはこちらからダウンロードできます。 [2d_touch_camera.zip](/godot_recipes/3.x/files/2d_touch_camera.zip)\n"
+"プロジェクトファイルはこちらからダウンロードできます。 [2d_touch_camera.zip](/godot_recipes/4.x/ja/files/2d_touch_camera.zip)\n"
 "{{% /notice %}} -->"
 
 #: 2D/touchscreen_camera.md
@@ -15230,8 +15248,8 @@ msgid ""
 "- [Input: Input Actions](/godot_recipes/3.x/input/input_actions/)\n"
 "- [Drag-select multiple units](/godot_recipes/3.x/input/multi_unit_select/)"
 msgstr ""
-"- [入力操作: Input Actions](/godot_recipes/3.x/input/input_actions/)\n"
-"- [マウスドラッグでのユニットの選択](/godot_recipes/3.x/input/multi_unit_select/)"
+"- [入力操作: Input Actions](/godot_recipes/4.x/ja/input/input_actions/)\n"
+"- [マウスドラッグでのユニットの選択](/godot_recipes/4.x/ja/input/multi_unit_select/)"
 
 #: 2D/touchscreen_camera.md
 msgid "<video controls src=\"/godot_recipes/4.x/img/touch_camera_02.webm\"></video>"
@@ -15346,8 +15364,8 @@ msgid ""
 "<!-- - [Input Intro](/godot_recipes/3.x/input/input_intro/)\n"
 "- [Kinematic Friction](/godot_recipes/3.x/physics/kinematic_friction/) -->"
 msgstr ""
-"<!-- - [入力入門](/godot_recipes/3.x/input/input_intro/)\n"
-"- [キネマティック摩擦](/godot_recipes/3.x/physics/kinematic_friction/) -->"
+"<!-- - [入力入門](/godot_recipes/4.x/ja/input/input_intro/)\n"
+"- [キネマティック摩擦](/godot_recipes/4.x/ja/physics/kinematic_friction/) -->"
 
 #: 2D/platform_character.md
 msgid "One way to add this behavior is to use linear interpolation (\"lerp\"). When moving, we will lerp between the current speed and the max speed and while stopping we'll lerp between the current speed and `0`. Adjusting the lerp amount will give us a variety of movement styles."
@@ -16966,7 +16984,8 @@ msgstr "「Bullet」シーンでは、プレイヤーが射撃するたびに再
 msgid "We'll also need to connect the `timeout` signal of `GunCooldown`."
 msgstr "さらに、`GunCooldown` の `timeout` シグナルも接続する必要があります。"
 
-#: games/first_2d/first_2d_01.md games/first_2d/first_2d_05.md games/first_2d/first_2d_06.md games/first_2d/first_2d_09.md
+#: games/first_2d/first_2d_01.md games/first_2d/first_2d_05.md
+#: games/first_2d/first_2d_06.md games/first_2d/first_2d_09.md
 msgid "## Next steps"
 msgstr "## 次のステップ"
 
@@ -17970,7 +17989,9 @@ msgstr "このシリーズでは、各エピソードごとにゲームの一部
 msgid "### Get started with Godot by building a 2D shooter."
 msgstr "### 2Dシューティングゲーム開発でGodotの基本を学ぼう。"
 
-#: games/circle_jump/circle_jump_02.md games/circle_jump/circle_jump_03.md games/circle_jump/circle_jump_04.md games/circle_jump/circle_jump_05.md games/circle_jump/circle_jump_06.md
+#: games/circle_jump/circle_jump_02.md games/circle_jump/circle_jump_03.md
+#: games/circle_jump/circle_jump_04.md games/circle_jump/circle_jump_05.md
+#: games/circle_jump/circle_jump_06.md
 msgid "#### Do you prefer video?"
 msgstr "#### 動画の方がお好みですか？"
 
@@ -18058,7 +18079,9 @@ msgstr "以下にアニメーション設定の例を示します。"
 msgid "We also want it to fade out as it grows, so keyframe the _Modulate_ alpha value from `255` to `0`."
 msgstr "また、オブジェクトが成長するにつれて徐々に透明度が低下するようにしたいので、キーフレームを使用してアルファ値を「255」から「0」まで変化させます。"
 
-#: games/circle_jump/circle_jump_01.md games/circle_jump/circle_jump_02.md games/circle_jump/circle_jump_03.md games/circle_jump/circle_jump_04.md games/circle_jump/circle_jump_05.md
+#: games/circle_jump/circle_jump_01.md games/circle_jump/circle_jump_02.md
+#: games/circle_jump/circle_jump_03.md games/circle_jump/circle_jump_04.md
+#: games/circle_jump/circle_jump_05.md
 msgid "#### Follow this project on Github:"
 msgstr "#### GitHubでプロジェクトをフォローしてください！"
 
@@ -18078,7 +18101,9 @@ msgstr "HUDとして使用する`CanvasLayer`をルートとする新しいシ�
 msgid "This message will show information during gameplay (level up, bonuses, etc). We want it to be animated - to appear and then fade out. Add an `AnimationPlayer` to the scene."
 msgstr "このゲーム中に表示されるメッセージです（レベルアップ時の通知やボーナス表示など）。アニメーション付きで表示させ、フェードアウト効果を加えたいと思います。シーンに `AnimationPlayer` を追加してください。"
 
-#: games/circle_jump/circle_jump_01.md games/circle_jump/circle_jump_02.md games/circle_jump/circle_jump_03.md games/circle_jump/circle_jump_04.md games/circle_jump/circle_jump_05.md
+#: games/circle_jump/circle_jump_01.md games/circle_jump/circle_jump_02.md
+#: games/circle_jump/circle_jump_03.md games/circle_jump/circle_jump_04.md
+#: games/circle_jump/circle_jump_05.md
 msgid "[https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)"
 msgstr "[https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)"
 
@@ -18090,7 +18115,9 @@ msgstr "![alt](/godot_recipes/4.x/img/cj_05_01.png)"
 msgid "Add the second animation, \"show_message\". Set its length to `0.75` and keyframe _Visibility_ to \"On\"."
 msgstr "2番目のアニメーション「show_message」を追加します。長さを `0.75` に、キーフレームの透明度設定を『オン』に設定してください。"
 
-#: games/circle_jump/circle_jump_01.md games/circle_jump/circle_jump_02.md games/circle_jump/circle_jump_03.md games/circle_jump/circle_jump_04.md games/circle_jump/circle_jump_05.md
+#: games/circle_jump/circle_jump_01.md games/circle_jump/circle_jump_02.md
+#: games/circle_jump/circle_jump_03.md games/circle_jump/circle_jump_04.md
+#: games/circle_jump/circle_jump_05.md
 msgid "----------"
 msgstr "----------"
 
@@ -18375,7 +18402,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"プロジェクトファイルをこちらからダウンロードしてください: [circle_jump_assets.zip](/godot_recipes/3.x/files/circle_jump_assets.zip)\n"
+"プロジェクトファイルをこちらからダウンロードしてください: [circle_jump_assets.zip](/godot_recipes/4.x/ja/files/circle_jump_assets.zip)\n"
 "{{% /notice %}}"
 
 #: games/circle_jump/circle_jump_01.md
@@ -18401,7 +18428,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice tip %}}\n"
-"シェーダーを使い始める方法については、「[シェーダー]（/godot_recipes/3.x/shaders）」セクションを参照してください。\n"
+"シェーダーを使い始める方法については、「[シェーダー]（/godot_recipes/4.x/ja/shaders）」セクションを参照してください。\n"
 "{{% /notice %}}"
 
 #: games/circle_jump/circle_jump_01.md
@@ -18676,7 +18703,7 @@ msgstr "プラグインを解凍し、`admob-plugin` フォルダを `res://andr
 
 #: games/circle_jump/circle_jump_13.md
 msgid "Since we set up mobile ads in [Part 11](/godot_recipes/3.x/games/circle_jump/circle_jump_11/), there have been significant updates to the way Godot handles Android plugins, as well as to the AdMob SDK. If your game is working, you probably don't need to change anything (yet). If you're building a new game, you should follow these steps."
-msgstr "[パート11](/godot_recipes/3.x/games/circle_jump/circle_jump_11/) でモバイル広告の設定を行って以降、GodotによるAndroidプラグイン処理とAdMob SDKには重要な更新が加えられています。もし現在ゲームが正常に動作している場合、現時点では特に変更を加える必要はないでしょう（まだ）。新規プロジェクトを開発中の場合は、以下の手順に従うことをオススメします。"
+msgstr "[パート11](/godot_recipes/4.x/ja/games/circle_jump/circle_jump_11/) でモバイル広告の設定を行って以降、GodotによるAndroidプラグイン処理とAdMob SDKには重要な更新が加えられています。もし現在ゲームが正常に動作している場合、現時点では特に変更を加える必要はないでしょう（まだ）。新規プロジェクトを開発中の場合は、以下の手順に従うことをオススメします。"
 
 #: games/circle_jump/circle_jump_13.md
 msgid "Using the older plugin, we had handled initializing the plugin and showing/hiding ads in the `settings` singleton. We can now remove that code, because the `AdMob` node handles it. Instead, we can replace those calls in `Main` with calls to the `AdMob` node:"

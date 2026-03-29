@@ -7,7 +7,7 @@ ghcommentid: 44
 
 ## 課題
 
-[キネマティックカー](/godot_recipes/3.x/3d/kinematic_car/car_base/) は斜面を登れるようになりましたが、見た目が少し不自然です：
+[キネマティックカー](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/) は斜面を登れるようになりましたが、見た目が少し不自然です：
 
 ![alt](/godot_recipes/3.x/img/3d_car_10.png)
 
@@ -60,8 +60,8 @@ if $FrontRay.is_colliding() or $RearRay.is_colliding():
 
 ## 関連レシピ
 
-- [KinematicCar：基本モデル](/godot_recipes/3.x/3d/kinematic_car/car_base/)
-- [KinematicBody：表面との整列テクニック](/godot_recipes/3.x/3d/3d_align_surface/)
+- [KinematicCar：基本モデル](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)
+- [KinematicBody：表面との整列テクニック](/godot_recipes/4.x/ja/3d/3d_align_surface/)
 
 #### この動画が気に入ったら？
 

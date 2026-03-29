@@ -157,7 +157,7 @@ func _process(delta):
         global_position = target.global_position
 ```
 
-シーン内のカメラを選択し、「インスペクター」を使用して追跡したいノードを選択してください。
+シーン内のカメラを選択し、「インスペクタ」を使用して追跡したいノードを選択してください。
 
 ## 最終スクリプト
 
@@ -222,8 +222,8 @@ func _process(delta):
 
 ## 関連レシピ
 
-[マウス操作のキャプチャ方法](/godot_recipes/3.x/input/mouse_capture/)
-[3D入門ガイド](/godot_recipes/3.x/g101/3d/) →
+[マウス操作のキャプチャ方法](/godot_recipes/4.x/ja/input/mouse_capture/)
+[3D入門ガイド](/godot_recipes/4.x/ja/g101/3d/) →
 
 <!-- #### Videoが気に入ったら？ -->
 

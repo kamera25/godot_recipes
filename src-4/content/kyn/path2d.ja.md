@@ -12,7 +12,7 @@ ghcommentid: 94
 
 ### `Curve2D`について【{{<  gd-icon Curve2D >}}】
 
-パスのデータはこのリソースオブジェクトに保持されています。これには曲線の数学的表現が含まれており、そのデータと対話するためのいくつかの方法が提供されています。[APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_curve2d.html)に詳細が記載されていますが、ここでは特に役立ついくつかのメソッドを紹介します。
+パスのデータはこのリソースオブジェクトに保持されています。これには曲線の数学的表現が含まれており、そのデータと対話するための方法がいくつか提供されています。[APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_curve2d.html)に詳細が記載されていますが、ここでは特に役立つメソッドをいくつか紹介します。
 
 *  `add_point()` / `remove_point()` / `clear_points()`
 
@@ -100,9 +100,9 @@ func get_path_direction(pos):
 
 ## 関連レシピ
 
-* [補間カメラの使用方法](/godot_recipes/3.x/3d/interpolated_camera/)
-* [入力操作入門](/godot_recipes/3.x/input/input_intro/)
-* [キネマティックボディによる移動制御](/godot_recipes/3.x/3d/kinematic_body/) →
+* [補間カメラの使用方法](/godot_recipes/4.x/ja/3d/interpolated_camera/)
+* [入力操作入門](/godot_recipes/4.x/ja/input/input_intro/)
+* [キネマティックボディによる移動制御](/godot_recipes/4.x/ja/3d/kinematic_body/) →
 
 <!-- #### Videoが気に入ったら？ -->
 

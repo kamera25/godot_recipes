@@ -49,7 +49,7 @@ extends CharacterBody3D
 `speed` は戦車の移動速度（前進/後退）を、`rot_speed` は旋回速度をそれぞれ定義します。
 
 {{% notice tip %}}
-`@export` でプロパティを宣言しておけば、インスペクターで簡単に調整できるようになります。
+`@export` でプロパティを宣言しておけば、インスペクタで簡単に調整できるようになります。
 {{% /notice %}}
 
 `move_and_slide()`メソッドを使用することで、移動コードが非常に簡潔になります。
@@ -94,7 +94,7 @@ Here's the tank in action. We've made a test scene with a {{< gd-icon StaticBody
 プロジェクトのサンプルコードをダウンロードする：[https://github.com/godotrecipes/characterbody3d_examples](https://github.jp/godotrecipes/characterbody3d_examples)
 
 <!-- {{% notice note %}}
-プロジェクトファイルはこちらからダウンロードできます。 [floating_text.zip](/godot_recipes/3.x/files/floating_text.zip)
+プロジェクトファイルはこちらからダウンロードできます。 [floating_text.zip](/godot_recipes/4.x/ja/files/floating_text.zip)
 {{% /notice %}} -->
 
 ## 関連レシピ

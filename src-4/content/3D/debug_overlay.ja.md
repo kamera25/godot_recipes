@@ -139,4 +139,4 @@ DebugOverlay.draw.add_vector(self, "velocity", 1, 4, Color(0,1,0, 0.5))
 
 ## 関連レシピ
 
-- [UI：デバッグデータの表示](/godot_recipes/3.x/ui/debug_overlay)
+- [UI：デバッグデータの表示](/godot_recipes/4.x/ja/ui/debug_overlay)

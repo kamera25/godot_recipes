@@ -68,8 +68,8 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 
 <!-- ## 関連レシピ -->
 
-<!-- - [UI: ラベル](/godot_recipes/3.x/ui/labels/)
-- [UI: ユニットHPバー](/godot_recipes/3.x/ui/unit_healthbar/) -->
+<!-- - [UI: ラベル](/godot_recipes/4.x/ja/ui/labels/)
+- [UI: ユニットHPバー](/godot_recipes/4.x/ja/ui/unit_healthbar/) -->
 
 <!-- #### この動画が気に入ったら？ -->
 

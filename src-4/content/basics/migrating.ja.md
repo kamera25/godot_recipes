@@ -10,11 +10,11 @@ draft: false
 
 Godot 4での最も大きな変化の一つは、ノード名、関数名、プロパティ名などの大量のリネームです。これらの多くは仕様の一貫性や可読性を向上させるために行われています。特に注意すべき主要な変更点をいくつかご紹介します。
 
-* 2D/3Dノードの命名規則 - Godot 3.x では2Dノードに「2D」サフィックスが付いていた一方、3Dノードには何も付加されていませんでした。この不整合が解消され、現在ではすべてのノードが「2D」または「3D」を明示するようになりました。具体例：{{< gd-icon RigidBody2D >}}`RigidBody2D` と {{< gd-icon RigidBody3D >}}`RigidBody3D`。
+* 2D/3Dノードの命名規則 - Godot 3.x では2Dノードに「2D」サフィックスが付いていた一方、3Dノードには何も付加されていませんでした。この不整合が解消され、現在ではすべてのノードが「2D」または「3D」を明示するようになりました。具体例：{{< gd-icon \ RigidBody2D >}}`\ RigidBody2D` と {{< gd-icon RigidBody3D >}}`RigidBody3D`。
 
 * 3Dカテゴリにおいて、`Spatial`ノードは名称を{{< gd-icon Node3D >}}`Node3D`に統一されています
 
-* 最も人気のあるノードの1つである `KinematicBody` が、{{< gd-icon CharacterBody2D >}}`CharacterBody2D`/{{< gd-icon CharacterBody3D >}}`CharacterBody3D` に名称変更されました。このノードに関するAPIの変更点については、以下をご覧ください。
+* 最も人気のあるノードの1つである `KinematicBody` が、{{< gd-icon \ CharacterBody2D >}}`\ CharacterBody2D`/{{< gd-icon CharacterBody3D >}}`CharacterBody3D` に名称変更されました。このノードに関するAPIの変更点については、以下をご覧ください。
 
 * {{< gd-icon PackedScene >}}`PackedScene` の `instance()` 関数は `instantiate()` に改名されました
 

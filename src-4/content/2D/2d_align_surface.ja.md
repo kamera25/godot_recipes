@@ -1,5 +1,5 @@
 ---
-title: "CharacterBody2D：表面と整列"
+title: "\ CharacterBody2D：表面と整列"
 weight: 5
 draft: true
 ---
@@ -103,6 +103,6 @@ func _physics_process(delta):
 ## 関連レシピ
 
 [プラットフォームキャラクタの実装](/godot_recipes/4.x/ja/2d/platform_character)
-[KinematicBody2Dの活用方法](/godot_recipes/4.x/ja/physics/godot3_kinematic2d/)
+[\ KinematicBody2Dの活用方法](/godot_recipes/4.x/ja/physics/godot3_kinematic2d/)
 
 <!-- #### この動画が気に入ったら？ -->

@@ -75,7 +75,7 @@ func update_simple(value):
         get_child(i).visible = value > i
 ```
 
-`update_empty()` は非常に似ていますが、アイコンを隠す代わりに、そのテクスチャを空のコンテナー用に変更します。
+`update_empty()` は非常に似ていますが、アイコンを隠す代わりに、そのテクスチャを空のコンテナ用に変更します。
 
 ```gdscript
 func update_empty(value):
@@ -112,9 +112,9 @@ func update_partial(value):
 プロジェクトのサンプルコードはこちらでダウンロードできます。 [https://github.com/godotrecipes/heart_bars](https://github.com/godotrecipes/heart_bars)
 
 <!-- {{% notice note %}}
-プロジェクトファイルはこちらからダウンロードできます。 [heart_bars.zip](/godot_recipes/3.x/files/heart_bars.zip)
+プロジェクトファイルはこちらからダウンロードできます。 [heart_bars.zip](/godot_recipes/4.x/ja/files/heart_bars.zip)
 {{% /notice %}} -->
 
 ## 関連レシピ
 
-- [UI：コンテナー](/godot_recipes/3.x/ui/containers/) -->
+- [UI：コンテナ](/godot_recipes/4.x/ja/ui/containers/) -->

@@ -87,7 +87,7 @@ get_node("/root/Main/Player")
 
 ### 注意事項
 
-上記の例は問題なく動作しますが、後々問題を引き起こす可能性のあるいくつかの注意点があります。以下のような状況を想像してみてください。`Player`ノードには`health`プロパティがあり、これをUI内のどこかにある`HealthBar`ノードに表示したいとします。プレイヤースクリプトに次のように書いたとしましょう。
+上記の例は問題なく動作しますが、後々問題を引き起こす可能性のある注意点がいくつかあります。以下のような状況を想像してみてください。`Player`ノードには`health`プロパティがあり、これをUI内のどこかにある`HealthBar`ノードに表示したいとします。プレイヤースクリプトに次のように書いたとしましょう。
 
 ```gdscript
 func take_damage(amount):
@@ -108,4 +108,4 @@ func take_damage(amount):
 
 <!-- ## 関連レシピ
 
-- [KinematicBody2Dの使用について](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->
+- [\ KinematicBody2Dの使用について](/godot_recipes/4.x/ja/physics/godot3_kinematic2d/) -->

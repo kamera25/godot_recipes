@@ -104,7 +104,7 @@ velocity = move_and_slide_with_snap(velocity, snap, Vector3.UP,
 
 ## 関連レシピ
 
-- [Godot入門：3Dの基礎編](/godot_recipes/3.x/g101/3d/)
+- [Godot入門：3Dの基礎編](/godot_recipes/4.x/ja/g101/3d/)
 - [キネマティックボディによる移動制御](/goadot_recipes/3.x/3d/kinematic_body/)
 
 #### この動画が気に入ったら？

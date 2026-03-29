@@ -123,13 +123,13 @@ offset.y = max_offset.y * amount * noise.get_noise_2d(noise.seed*3, noise_y)
 ![alt](/godot_recipes/3.x/img/shake_noise01.gif)
 
 {{% notice note %}}
-プロジェクトファイルはこちらからダウンロードできます。[screen_shake.zip](/godot_recipes/3.x/files/screen_shake.zip)
+プロジェクトファイルはこちらからダウンロードできます。[screen_shake.zip](/godot_recipes/4.x/ja/files/screen_shake.zip)
 {{% /notice %}}
 
 ## 関連レシピ
 
-- [ノイズジェネレーター](/godot_recipes/3.x/math/noise/)
-- [プラットフォームキャラクター実装](http://kidscancode.org/godot_recipes/ai/platform_character)
+- [ノイズジェネレーター](/godot_recipes/4.x/ja/math/noise/)
+- [プラットフォームキャラクター実装](/godot_recipes/4.x/ja/ai/platform_character)
 
 #### この動画が気に入ったら？
 

@@ -107,7 +107,7 @@ func heal(amount):
 
 #### 新規リソースの作成
 
-一度「PlayerHealth」クラスを定義すれば、新しいインスタンスを作成できます。インスペクター上部の「新規リソース作成」ボタンをクリックしてください。
+一度「PlayerHealth」クラスを定義すれば、新しいインスタンスを作成できます。インスペクタ上部の「新規リソース作成」ボタンをクリックしてください。
 
 ![alt](/godot_recipes/3.x/img/custom_resource_01.png)
 
@@ -123,14 +123,14 @@ func heal(amount):
 
 リソースの作成と保存が完了したら、いよいよ使用準備が整います。このシナリオでは、以下のオブジェクトが存在します。
 
-* プレイヤー： {{< gd-icon KinematicBody2D >}}`KinematicBody2D` 
+* プレイヤー： {{< gd-icon \ KinematicBody2D >}}`\ KinematicBody2D`
 * UI要素：HPを表示する {{< gd-icon TextureProgressBar >}}`ProgressTexture` を含むコンポーネント
 * 回復エリア：その範囲内に入った対象を回復する {{< gd-icon Area2D >}}`Area2D`
 * スパイクゾーン：接触するとダメージを与える {{< gd-icon TileMap >}}`TileMap` のタイルセット
 
 ゲームの全コードを掲載するのではなく、HPリソースに関連する部分だけを取り上げます。
 
-プレイヤー側では、インスペクター経由でリソースを割り当てるために変数を `エクスポート` しています。移動処理コードの一部として、プレイヤーがスパイクに接触した際には `hurt()` 関数を呼び出すようになっています。
+プレイヤー側では、インスペクタ経由でリソースを割り当てるために変数を `エクスポート` しています。移動処理コードの一部として、プレイヤーがスパイクに接触した際には `hurt()` 関数を呼び出すようになっています。
 
 ```gdscript
 export (Resource) var health
@@ -170,7 +170,7 @@ func _on_player_health_changed(value):
 ![alt](/godot_recipes/3.x/img/custom_resource_04.gif)
 
 {{% notice note %}}
-プロジェクトファイルをこちらからダウンロードしてください: [custom_resources.zip](/godot_recipes/3.x/files/custom_resources.zip)
+プロジェクトファイルをこちらからダウンロードしてください: [custom_resources.zip](/godot_recipes/4.x/ja/files/custom_resources.zip)
 {{% /notice %}}
 
 ## 関連レシピ

@@ -139,5 +139,5 @@ func move(dir):
 
 <!-- ## 関連レシピ
 
-- [入力アクション設定](/godot_recipes/3.x/input/input_actions/)
-- [補間処理](/godot_recipes/3.x/math/interpolation/) -->
+- [入力アクション設定](/godot_recipes/4.x/ja/input/input_actions/)
+- [補間処理](/godot_recipes/4.x/ja/math/interpolation/) -->

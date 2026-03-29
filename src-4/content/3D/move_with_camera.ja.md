@@ -11,7 +11,7 @@ ghcommentid: 102
 
 ## 解決策
 
-このケースはさまざまなシナリオに適用できますが、ここでは[転がるキューブレシピ](/godot_recipes/3.x/3d/rolling_cube/)を具体例として説明します。
+このケースはさまざまなシナリオに適用できますが、ここでは[転がるキューブレシピ](/godot_recipes/4.x/ja/3d/rolling_cube/)を具体例として説明します。
 
 キューブのスクリプトには、移動に関する以下のコードが含まれています。
 
@@ -72,8 +72,8 @@ func _physics_process(_delta):
 
 ## 関連レシピ
 
-- ［転がるキューブ］(/godot_recipes/3.x/3d/rolling_cube/)
-- ［カメラ・ジンバル］(/godot_recipes/3.x/3d/camera_gimbal/)
+- ［転がるキューブ］(/godot_recipes/4.x/ja/3d/rolling_cube/)
+- ［カメラ・ジンバル］(/godot_recipes/4.x/ja/3d/camera_gimbal/)
 
 #### この動画が気に入ったら？
 

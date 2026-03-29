@@ -1,16 +1,16 @@
 ---
-title: "アステロイド風物理演算（RigidBody2Dを使用）"
+title: "アステロイド風物理演算（\ RigidBody2Dを使用）"
 weight: 12
 draft: false
 ---
 
 ## 課題
 
-「Astroids」のような半リアルな宇宙船を作成するため、`RigidBody2D`を使いたい。
+「Astroids」のような半リアルな宇宙船を作成するため、`\ RigidBody2D`を使いたい。
 
 ## 解決策
 
-{{< gd-icon RigidBody2D >}}`RigidBody2D` を使用する際には少し注意が必要です。Godotの物理エンジンによって制御されるため、直接移動させるのではなく力を加える必要があります。リジッドボディを扱う前に、[RigidBody2D APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html)を必ず確認することを強くオススメします。これからこの例を進めていく過程で、このドキュメントを参照しながら進めていきましょう。
+{{< gd-icon \ RigidBody2D >}}`\ RigidBody2D` を使用する際には少し注意が必要です。Godotの物理エンジンによって制御されるため、直接移動させるのではなく力を加える必要があります。リジッドボディを扱う前に、[\ RigidBody2D APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html)を必ず確認することを強くオススメします。これからこの例を進めていく過程で、このドキュメントを参照しながら進めていきましょう。
 
 本例では、以下のノード設定を使用します。
 
@@ -32,7 +32,7 @@ draft: false
 |`rotate_right`| **d** または →|
 |`rotate_left`| **a** または ←|
 
-RigidBody2Dにスクリプトを追加し、変数を定義しましょう。
+\ RigidBody2Dにスクリプトを追加し、変数を定義しましょう。
 
 ```gdscript
 extends RigidBody2D
@@ -69,7 +69,7 @@ func _physics_process(_delta):
 
 動作はしますが、コントロールが非常に難しいのがお分かりでしょう。回転速度が速すぎて、画面外へ出る前に急激に加速してしまいます。ここで「実際の」宇宙物理の法則から脱却したい点があります。宇宙空間には摩擦がありませんが、弊社開発の『アステロイド』風宇宙船の場合、推力をかけていない時には自然に減速するようになれば、より簡単に操縦できるようになります。この制御には「減衰効果」が有効です。
 
-{{< gd-icon RigidBody2D >}}`RigidBody2D`プロパティ内では、**直線／減衰**と**角速度／減衰**の設定があります。これらをそれぞれ**1**と**2**に設定すると、移動/回転の動きが遅くなり、さらに停止させる効果も生じます。
+{{< gd-icon \ RigidBody2D >}}`\ RigidBody2D`プロパティ内では、**直線／減衰**と**角速度／減衰**の設定があります。これらをそれぞれ**1**と**2**に設定すると、移動/回転の動きが遅くなり、さらに停止させる効果も生じます。
 
 これらの値を自由に調整し、`engine_power` と `rotation_dir` との関係を試してみて下さい。
 
@@ -97,7 +97,7 @@ func _integrate_forces(state):
 
 ご覧の通り、`_integrate_forces()` 関数には `state` というパラメータが含まれています。このオブジェクトはボディの [物理DirectBodyState2D](https://docs.godotengine.org/ja/stable/classes/class_physicsdirectbodystate2d.html) です。ここには、力、速度、位置など、現在の物理特性がすべて保持されています。
 
-州レベルでは、現在の変換行列を取得し、`wrapf()` 関数を使用して画面全体を覆うように変更した後、元の状態に復元します。
+状態から現在の変換行列を取得し、`wrapf()` 関数を使用して画面全体を覆うように変更した後、元の状態に復元します。
 
 以下が実際の表示例です：
 

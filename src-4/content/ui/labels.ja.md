@@ -18,12 +18,12 @@ ghcommentid: 55
 はじめに、フォントファイルが必要になります。Godotのフォントサポートについては別のレシピで詳しく解説しますが、ここではTTFまたはOTF形式のフォントファイルを前提とします。ビットマップフォントを使用する場合は、関連するレシピを参照してください。
 
 {{% notice note %}}
-この例では、人気のある無料フォント「Roboto」を使用します。このフォントは[Google Fonts](https://fonts.google.com/specimen/Roboto)で入手できます。こちらからもダウンロードできます。 [Roboto_font.zip](/godot_recipes/3.x/files/Roboto_font.zip)
+この例では、人気のある無料フォント「Roboto」を使用します。このフォントは[Google Fonts](https://fonts.google.com/specimen/Roboto)で入手できます。こちらからもダウンロードできます。 [Roboto_font.zip](/godot_recipes/4.x/ja/files/Roboto_font.zip)
 {{% /notice %}}
 
 ### ラベルの追加方法
 
-シーンに新しい {{< gd-icon Label >}}`Label`ノードを追加します。インスペクターでは、ほとんどのプロパティが自明な内容になっています（マウスカーソルを合わせると説明が表示されます）：
+シーンに新しい {{< gd-icon Label >}}`Label`ノードを追加します。インスペクタでは、ほとんどのプロパティが自明な内容になっています（マウスカーソルを合わせると説明が表示されます）：
 
 ![alt](/godot_recipes/3.x/img/ui_label_properties.png)
 
@@ -31,7 +31,7 @@ ghcommentid: 55
 
 #### `DynamicFont`の追加方法
 
-フォントを追加するには：インスペクターで「カスタムフォント」セクションまでスクロールダウンし、展開してください。空の「フォント」プロパティで『新規ダイナミックフォント』を選択し、新しく表示された`DynamicFont`をクリックしてさらに展開します。
+フォントを追加するには：インスペクタで「カスタムフォント」セクションまでスクロールダウンし、展開してください。空の「フォント」プロパティで『新規ダイナミックフォント』を選択し、新しく表示された`DynamicFont`をクリックしてさらに展開します。
 
 ![alt](/godot_recipes/3.x/img/ui_label_font_properties.png)
 
@@ -69,12 +69,12 @@ func _on_Timer_timeout():
 ラベルの使用例やUIノードとの連携方法については、「関連レシピ」セクションをご覧ください。
 
 <!-- {{% notice note %}}
-プロジェクトファイルをこちらからダウンロードしてください: [screen_shake.zip](/godot_recipes/3.x/files/screen_shake.zip)
+プロジェクトファイルをこちらからダウンロードしてください: [screen_shake.zip](/godot_recipes/4.x/ja/files/screen_shake.zip)
 {{% /notice %}} -->
 
 ## 関連レシピ
 
-<!-- - [ノイズ](/godot_recipes/3.x/math/noise/) -->
+<!-- - [ノイズ](/godot_recipes/4.x/ja/math/noise/) -->
 
 
 #### この動画が気に入ったら？
