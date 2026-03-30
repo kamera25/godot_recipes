@@ -49,7 +49,7 @@ func _process(delta):
 
 コードを実行すると、スプライトが下方向に移動していくのが確認できるはずです。
 
-これをより扱いやすくするために、**変数**を使ってみましょう。
+これをより扱いやすくするために、**変数**を使ってみます。
 
 ```gdscript
 extends Sprite2D
@@ -69,7 +69,7 @@ func _process(delta):
 
 ## 移動のランダム化について
 
-これをシャッフルして、スプライトの移動方向をランダムに選んでみましょう。
+これをシャッフルして、スプライトの移動方向をランダムに選んでみます。
 
 ```gdscript
 func _ready():
@@ -78,7 +78,7 @@ func _ready():
     velocity = velocity * randf_range(100, 400)
 ```
 
-かなり多いですね。それでは、項目ごとに分解してみましょう。
+かなり多いですね。それでは、項目ごとに分解してみます。
 
 1. First, we're setting `velocity` to point to the right. `Vector2.RIGHT` is a built-in *constant* that represents the vector `(1, 0)`.
 

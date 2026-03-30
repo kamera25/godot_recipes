@@ -26,7 +26,7 @@ draft: false
 
 衝突判定用に円筒を使用し、機体のサイズに合わせて調整しています。これにより、デモで必要となる地面との接触検出が可能になります。
 
-スクリプトを実行する前に、航空機のプロパティを確認しましょう。
+スクリプトを実行する前に、航空機のプロパティを確認してください。
 
 ```gdscript
 extends CharacterBody3D
@@ -105,7 +105,7 @@ func _physics_process(delta):
 
 ![alt](/godot_recipes/4.x/img/kb_plane_03.gif)
 
-次に、飛行機のピッチ角度を変更する処理を追加しましょう。`_physics_process()` 内の `get_input()` 呼び出し直後に以下を追加してください。
+次に、飛行機のピッチ角度を変更する処理を追加してください。`_physics_process()` 内の `get_input()` 呼び出し直後に以下を追加してください。
 
 ```gdscript
 transform.basis = transform.basis.rotated(transform.basis.x, pitch_input * pitch_speed * delta)
@@ -123,7 +123,7 @@ transform.basis = transform.basis.rotated(Vector3.UP, turn_input * turn_speed * 
 
 ![alt](/godot_recipes/4.x/img/kb_plane_05.gif)
 
-注意してほしいのですが、機体が旋回する際に、その動きがやや不自然に見えます。航空機はターン時に「バンク」（傾き）しますので、メッシュの回転角度を変更することでこれをアニメーション化しましょう。
+注意してほしいのですが、機体が旋回する際に、その動きがやや不自然に見えます。航空機はターン時に「バンク」（傾き）しますので、メッシュの回転角度を変更することでこれをアニメーション化します。
 
 ```gdscript
 mesh.rotation.z = lerpf(mesh.rotation.z, -turn_input, level_speed * delta)

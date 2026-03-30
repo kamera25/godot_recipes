@@ -9,7 +9,7 @@ pre: "02. "
 
 ## メインシーンの拡張
 
-メイン・ノードにさらにノードを追加しましょう。
+メイン・ノードにさらにノードを追加してください。
 
 - **Marker2D ("StartPosition")**
 
@@ -19,7 +19,7 @@ pre: "02. "
 
     カメラはプレイヤーの動きに合わせて追従します。
 
-    カメラの設定も行いましょう。 _オフセット_ を `(0, -200)` に設定してください。これにより、前方の世界をより広く確認できるようになります。また、カレントモードは「オン」に設定してください。
+    カメラの設定も行います。 _オフセット_ を `(0, -200)` に設定してください。これにより、前方の世界をより広く確認できるようになります。また、カレントモードは「オン」に設定してください。
 
 ## メインシーンのスクリプト化
 
@@ -40,14 +40,14 @@ func _on_Jumper_area_entered(area):
     emit_signal("captured", area)
 ```
 
-また、円の `init()` 関数を修正して、位置も受け取れるようにしましょう。
+また、円の `init()` 関数を修正して、位置も受け取れるようにしてください。
 
 ```gdscript
 func init(_position, _radius=radius):
     position = _position
 ```
 
-それでは、「メイン」シーンにスクリプトを追加しましょう。
+それでは、「メイン」シーンにスクリプトを追加してください。
 
 ```gdscript
 extends Node
@@ -113,7 +113,7 @@ func _on_Jumper_captured(object):
 target.get_node("Pivot").rotation = (position - target.position).angle()
 ```
 
-Circleの`init()`メソッドにもこれを追加しておきましょう。
+Circleの`init()`メソッドにもこれを追加しておきます。
 
 ```gdscript
 rotation_speed *= pow(-1, randi() % 2)
@@ -132,7 +132,7 @@ We're going to use this to make a trail that streams out behind the player. Late
 
 ![alt](/godot_recipes/3.x/img/cj_02_01.png?width=200)
 
-ジャンパのスクリプトに、以下を追加しましょう。
+ジャンパのスクリプトに、以下を追加してください。
 
 ```gdscript
 @onready var trail = $Trail/Points

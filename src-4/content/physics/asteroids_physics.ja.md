@@ -10,7 +10,7 @@ draft: false
 
 ## 解決策
 
-{{< gd-icon RigidBody2D >}}`RigidBody2D` を使用する際には少し注意が必要です。Godotの物理エンジンによって制御されるため、直接移動させるのではなく力を加える必要があります。リジッドボディを扱う前に、[RigidBody2D APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html)を必ず確認することを強くオススメします。これからこの例を進めていく過程で、このドキュメントを参照しながら進めていきましょう。
+{{< gd-icon RigidBody2D >}}`RigidBody2D` を使用する際には少し注意が必要です。Godotの物理エンジンによって制御されるため、直接移動させるのではなく力を加える必要があります。リジッドボディを扱う前に、[RigidBody2D APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html)を必ず確認することを強くオススメします。これからこの例を進めていく過程で、このドキュメントを参照しながら進めていきます。
 
 本例では、以下のノード設定を使用します。
 
@@ -32,7 +32,7 @@ draft: false
 |`rotate_right`| **d** または →|
 |`rotate_left`| **a** または ←|
 
-RigidBody2Dにスクリプトを追加し、変数を定義しましょう。
+RigidBody2Dにスクリプトを追加し、変数を定義します。
 
 ```gdscript
 extends RigidBody2D
@@ -46,7 +46,7 @@ var rotation_dir = 0
 
 最初の2つの変数は、船の「操縦性」を制御する方法を決定します。`engine_power`は加速と最高速度に影響を与えます。`spin_power`は船が回転する速さを調整します。
 
-`thrust` と `rotation_dir` は入力操作によって設定されます。次にその方法を確認しましょう。
+`thrust` と `rotation_dir` は入力操作によって設定されます。次にその方法を確認してください。
 
 ```gdscript
 func get_input():
@@ -79,7 +79,7 @@ func _physics_process(_delta):
 
 この問題の解決策として、リジッドボディの `_integrate_forces()` コールバックを使用することが有効です。この関数内では、物理エンジンが行っている処理と干渉せずに、オブジェクトの物理特性を安全に更新できます。
 
-スクリプトの上部に画面サイズを設定しましょう。
+スクリプトの上部に画面サイズを設定してください。
 
 ```gdscript
 @onready var screensize = get_viewport_rect().size
@@ -105,7 +105,7 @@ func _integrate_forces(state):
 
 ### 歪み補正機能
 
-`_integrate_forces()`を使用して、問題なくボディの状態を変更できるもう一つの例を見てみましょう。『ワープ』機構を追加するとします。プレイヤーが`『ワープ』`入力を押すと、船が画面内のランダムな位置に瞬間移動するようにします。
+`_integrate_forces()`を使用して、問題なくボディの状態を変更できるもう一つの例を見てみてください。『ワープ』機構を追加するとします。プレイヤーが`『ワープ』`入力を押すと、船が画面内のランダムな位置に瞬間移動するようにします。
 
 まず、このために新規変数を追加します。
 

@@ -27,7 +27,7 @@ ghcommentid: 53
 
 ![alt](/godot_recipes/3.x/img/melee_attack_02.gif)
 
-新しいエリアの`area_entered`シグナル（またはゲームの設定によっては、`body_entered`）を接続します。このデモでは、ダメージを受け取れる任意のボディには{{< gd-icon Area2D >}}`Area2D`が定義され、「hurtbox」というグループ内に配置されているとしましょう。
+新しいエリアの`area_entered`シグナル（またはゲームの設定によっては、`body_entered`）を接続します。このデモでは、ダメージを受け取れる任意のボディには{{< gd-icon Area2D >}}`Area2D`が定義され、「hurtbox」というグループ内に配置されているとします。
 
 ```gdscript
 func _on_SwordHit_area_entered(area):

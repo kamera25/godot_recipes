@@ -97,7 +97,7 @@ func set_tween(object=null, key=null):
     move_tween.start()
 ```
 
-最後に、`init()` 関数の末尾に `set_tween()` を追加し、実際に動作を確認してみましょう。
+最後に、`init()` 関数の末尾に `set_tween()` を追加し、実際に動作を確認してみます。
 
 <video controls src="/godot_recipes/img/cj_07_01.webm"></video>
 

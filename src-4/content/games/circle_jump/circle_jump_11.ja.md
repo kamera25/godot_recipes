@@ -30,7 +30,7 @@ Godot はデフォルトでは広告サービスをサポートしていない�
 
 エクスポートテンプレートのコンパイルは難しくありませんが、コンピュータ上にビルド環境を設定する必要があります。これには、Godotをビルドするために必要なプログラムやライブラリをダウンロードすることが含まれます。この概念に慣れておらず詳しく知りたい場合は、公式ドキュメントの [コンパイル] セクションを参照してください [Compiling](https://docs.godotengine.org/ja/latest/development/compiling/introduction_to_the_buildsystem.html)。
 
-幸いなことに、カスタムエクスポートテンプレートの作成は既に完了しています。[godot-custom-mobile-templates](https://github.com/Shin-NiL/godot-custom-mobile-template) GitHubリポジトリに移動してください。「リリース」タブを開き、自分の使用しているGodotバージョンに対応したエクスポートテンプレートをダウンロードしましょう。
+幸いなことに、カスタムエクスポートテンプレートの作成は既に完了しています。[godot-custom-mobile-templates](https://github.com/Shin-NiL/godot-custom-mobile-template) GitHubリポジトリに移動してください。「リリース」タブを開き、自分の使用しているGodotバージョンに対応したエクスポートテンプレートをダウンロードします。
 
 {{% notice warning %}}
 エクスポートテンプレートのバージョンは**必ず**Godotエディタのバージョンと一致している必要があります。カスタムビルド版のエディタを使用している場合は、同じコードブランチからテンプレートも構築が必要です。

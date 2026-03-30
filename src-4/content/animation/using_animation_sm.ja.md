@@ -36,7 +36,7 @@ We'll also assume you've already set up the character's animations using {{< gd-
 
 右クリックして「アニメーションを追加」を選択します。「待機」を選択すると、そのアニメーションを表す小さなボックスが表示されます。「再生」ボタンを押すとアニメーションが実行されるはずです。他のアニメーションを追加する場合も同じ手順で行ってください。
 
-接続を追加できるようになりました。「ノードを接続」ボタンをクリックして、ノード間でドラッグして接続してください。例として、この2つの攻撃アニメーションを使いましょう。
+接続を追加できるようになりました。「ノードを接続」ボタンをクリックして、ノード間でドラッグして接続してください。例として、この2つの攻撃アニメーションを使います。
 
 ![alt](/godot_recipes/4.x/img/animation_tree_03.png)
 
@@ -56,7 +56,7 @@ We'll also assume you've already set up the character's animations using {{< gd-
 
 ![alt](/godot_recipes/4.x/img/anim_sm_final.png)
 
-それでは、これらのアニメーションをスクリプトで使用するキャラクターを設定していきましょう。
+それでは、これらのアニメーションをスクリプトで使用するキャラクターを設定していきます。
 
 ```gdscript
 extends CharacterBody2D

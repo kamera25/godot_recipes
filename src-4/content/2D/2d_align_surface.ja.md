@@ -10,7 +10,7 @@ draft: true
 
 ## 解決策
 
-まずは基本的なキネマティックプラットフォームキャラクターから始めましょう。詳細は[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_char/)を参照してください。
+まずは基本的なキネマティックプラットフォームキャラクターから始めてください。詳細は[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_char/)を参照してください。
 
 以下の移動コードがあります。
 
@@ -55,7 +55,7 @@ if is_on_floor():
 
 ![alt](/godot_recipes/4.x/img/2d_align_04.png)
 
-現在の実装では、移動時に速度ベクトルをローカル座標系のx軸（赤色矢印）に、重力/ジャンプ力をy軸（緑色矢印）に合わせる必要があります。入力処理コードはそのままで、常に「velocity」がローカル座標系で計算されると仮定できます。唯一の問題は「move_and_slide()」関数が速度ベクトルをグローバル座標系で受け取ることを期待している点です。この問題を解決するため、以下のように`move_and_slide_with_snap()`を調整しましょう。
+現在の実装では、移動時に速度ベクトルをローカル座標系のx軸（赤色矢印）に、重力/ジャンプ力をy軸（緑色矢印）に合わせる必要があります。入力処理コードはそのままで、常に「velocity」がローカル座標系で計算されると仮定できます。唯一の問題は「move_and_slide()」関数が速度ベクトルをグローバル座標系で受け取ることを期待している点です。この問題を解決するため、以下のように`move_and_slide_with_snap()`を調整します。
 
 ```gdscript
 snap = transform.y * 128 if !is_jumping else Vector2.ZERO
@@ -65,7 +65,7 @@ velocity = move_and_slide_with_snap(velocity.rotated(rotation),
 velocity = velocity.rotated(-rotation)
 ```
 
-ここで変更点がありますので、詳しく見ていきましょう。
+ここで変更点がありますので、詳しく見ていきます。
 
 * `snap`ベクトルは現在ローカルの下向きベクトルとなっており、斜面に対して常に垂直方向を指し示すようになります。
 * `floor_normal`パラメータもローカル上向き方向（`-transform.y`）に変更されます。

@@ -138,7 +138,7 @@ func _process(delta):
 ```
 
 {{% notice tip %}}
-この時点で実際に操作を試してみましょう。前進・後退は可能になるはずです（ただしまだステアリング操作はできません）。
+この時点で実際に操作を試してみます。前進・後退は可能になるはずです（ただしまだステアリング操作はできません）。
 {{% /notice %}}
 
 Next, still in the `_process()` function, we'll rotate the car mesh based on the rotation input. We'll use `slerp()` (spherical linear interpolation) to do this smoothly:
@@ -186,7 +186,7 @@ func align_with_y(xform, new_y):
 
 #### 2. 車輪を回転させる
 
-フロントホイールがハンドル操作に応じて動くようにすると、よりリアルに見えます。スクリプトの上部にフロントホイールメッシュに関する参照を追加しましょう。
+フロントホイールがハンドル操作に応じて動くようにすると、よりリアルに見えます。スクリプトの上部にフロントホイールメッシュに関する参照を追加してください。
 
 ```gdscript
 @onready var right_wheel = $CarMesh/suv2/wheel_frontRight

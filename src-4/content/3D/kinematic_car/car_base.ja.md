@@ -62,7 +62,7 @@ The {{< gd-icon KinematicBody3D >}}`CharacterBody3D` has a warning about missing
 
 人間が操作する場合とAIが制御する場合の両方に対応できる自動車システムを構築したいです。どちらのケースでも、動作コードの大部分は共通化可能です - 実際には入力方法が異なるだけです。このため、両者で共有可能な基本カースクリプトを活用できます。
 
-新規スクリプト「car_base.gd」を作成します。まずは変数の定義から始めましょう。車の動作を調整するためのエクスポート変数と、状態を追跡するためのその他の変数を用意します。
+新規スクリプト「car_base.gd」を作成します。まずは変数の定義から始めてください。車の動作を調整するためのエクスポート変数と、状態を追跡するためのその他の変数を用意します。
 
 ```gdscript
 extends CharacterBody3D
@@ -91,7 +91,7 @@ var steer_angle = 0.0  # current wheel angle
 
 The rest of the script will be very similar to the 2D version, which a few changes to work correctly with {{< gd-icon Node3D >}}`Node3D`s and `Transform`s.
 
-まず`_physics_process()`から見ていきましょう。
+まず`_physics_process()`から見ていきます。
 
 ここでは、コントロールを適用する前に車が地面に接地しているかを確認します。空中では操舵は不可能ですからね！その後、標準的な移動方程式を適用します。
 

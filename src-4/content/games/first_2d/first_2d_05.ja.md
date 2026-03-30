@@ -9,7 +9,7 @@ pre: "05. "
 
 ## プレイヤーへの追加方法
 
-以下のコードを「Player」スクリプトに追加しましょう。
+以下のコードを「Player」スクリプトに追加してください。
 
 ```gdscript
 @export var cooldown = 0.25

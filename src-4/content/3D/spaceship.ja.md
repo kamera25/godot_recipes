@@ -45,7 +45,7 @@ tags: []
 
 ### 移動
 
-スクリプトを起動するには、前進動作を処理しましょう。スロットルボタンを滑らかに押すと、速度が段階的に増減します。
+スクリプトを起動するには、前進動作を処理します。スロットルボタンを滑らかに押すと、速度が段階的に増減します。
 
 ```gdscript
 extends CharacterBody
@@ -67,7 +67,7 @@ func _physics_process(delta):
     move_and_collide(velocity * delta)
 ```
 
-テスト用シーンを作成し、`Camera3D` コンポーネントを試してみましょう。固定カメラを使用するか、［フォローカメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/) を採用することもできます。宇宙船が加速と減速を適切に行うことを確認した上で、次のステップに進んでください。
+テスト用シーンを作成し、`Camera3D` コンポーネントを試してみます。固定カメラを使用するか、［フォローカメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/) を採用することもできます。宇宙船が加速と減速を適切に行うことを確認した上で、次のステップに進んでください。
 
 ![alt](/godot_recipes/4.x/img/3d_ship_02.gif)
 

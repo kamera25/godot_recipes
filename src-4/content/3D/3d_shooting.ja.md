@@ -89,7 +89,7 @@ if Input.is_action_just_pressed("shoot"):
     b.velocity = -b.transform.basis.z * b.muzzle_velocity
 ```
 
-これで完了です。シーンを実行して実際に試してみましょう。
+これで完了です。シーンを実行して実際に試してみます。
 
 <video controls src="/godot_recipes/3.x/img/3d_shoot_03.webm"></video>
 
