@@ -842,7 +842,7 @@ msgstr "### 例：プレイヤーの移動"
 
 #: basics/custom_resources.md
 msgid "For this example, we'll take the concept of player health in a platformer game. A lot of game systems interact with the player's health. For example:"
-msgstr "この例では、プラットフォーマーゲームにおけるプレイヤーのHP管理を取り上げます。多くのゲームプレイシステムはプレイヤーの健康状態と連動しています。"
+msgstr "この例では、プラットフォーマーゲームにおけるプレイヤーのHP管理を取り上げます。多くのゲームプレイシステムはプレイヤーのHP・状態と連動しています。"
 
 #: 2D/2d_align_surface.md 3D/simple_airplane.md basics/custom_resources.md
 msgid "Here's the full script:"
@@ -870,7 +870,7 @@ msgstr "![alt](/godot_recipes/4.x/img/custom_resource_03.png)"
 
 #: basics/custom_resources.md
 msgid "First, we need to define our new custom resource, which we'll call `PlayerHealth`. This resource needs to keep track of properties related to health. It also provides some functionality and signals to handle the changing of the health amount (such as healing and taking damage)."
-msgstr "まず最初に、新しいカスタムリソース「PlayerHealth」を定義する必要があります。このリソースは健康状態に関連するプロパティを管理する必要があります。さらに、HPの変化（回復やダメージを受けるなど）を処理するための機能とシグナルを提供します。"
+msgstr "まず最初に、新しいカスタムリソース「PlayerHealth」を定義する必要があります。このリソースはHPに関連するプロパティを管理する必要があります。さらに、HPの変化（回復やダメージを受けるなど）を処理するための機能とシグナルを提供します。"
 
 #: basics/custom_resources.md
 msgid "Using Custom Resources"
@@ -1842,7 +1842,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"入力値に対する境界チェックは行いません。ゲームで健康度を実装する方法には様々な方法があるため、これについては開発者の裁量に委ねられています。\n"
+"入力値に対する境界チェックは行いません。ゲームでHPを実装する方法には様々な方法があるため、これについては開発者の裁量に委ねられています。\n"
 "{{% /notice %}}"
 
 #: ui/heart_containers_3.md
@@ -2192,7 +2192,7 @@ msgstr "以下に、このシステムを実際に使用した事例をご紹介
 
 #: ui/unit_healthbar.md
 msgid "Displaying the bar can be done with a {{< gd-icon TextureProgressBar >}}`TextureProgress` node. This is like the {{< gd-icon ProgressBar >}}`ProgressBar` node, but allows the use of textures for the bar itself. The length of the bar will indicate the health value, but we can also change the texture color. We'll use three colored bars for this:"
-msgstr "プログレスバーの表示には、`TextureProgress`ノードを使用できます（{{< gd-icon TextureProgressBar >}}）。これは、通常の`ProgressBar`ノードと似ていますが、プログレスバー自体にテクスチャを適用できる点が異なります。バーの長さは健康状態を示しますが、さらにテクスチャの色も変更できます。この機能を活用するために、3種類の異なる配色のバーを使用してみましょう。"
+msgstr "プログレスバーの表示には、`TextureProgress`ノードを使用できます（{{< gd-icon TextureProgressBar >}}）。これは、通常の`ProgressBar`ノードと似ていますが、プログレスバー自体にテクスチャを適用できる点が異なります。バーの長さはHPを示しますが、さらにテクスチャの色も変更できます。この機能を活用するために、3種類の異なる配色のバーを使用してみましょう。"
 
 #: ui/unit_healthbar.md
 msgid "When you attach this to a unit, the bar may appear too big. Set the _Scale_ property of the instanced `HealthDisplay` to adjust based on the size of your unit."
@@ -2622,7 +2622,7 @@ msgstr "- [ラベル](/godot_recipes/4.x/ja/ui/labels)"
 
 #: ui/containers.md
 msgid "When *Fill* is disabled and *Expand* is enabled, the control remains at the center of its area, rather than the beginning."
-msgstr "「* フィル」が無効で「* 拡張」が有効になっている場合、コントロールはエリアの先頭ではなく、中央に配置されたままになります。"
+msgstr "*Fill* が無効で *Expand* が有効になっている場合、コントロールはエリアの先頭ではなく、中央に配置されたままになります。"
 
 #: ui/containers.md
 msgid "This container places keeps its children centered."
@@ -8561,7 +8561,7 @@ msgid ""
 "haven't really built a health system, we're just going to \"bounce\" the\n"
 "character as if it got hurt. We need to add the following to the character\n"
 "script:"
-msgstr "現在は、キャラクターが「ダメージ」を受けた時の反応を定義する必要があります。健康システム自体はまだ構築していないため、怪我をしたかのように「弾き飛ばされる」動作を実装します。以下の内容をキャラクタースクリプトに追加します。"
+msgstr "現在は、キャラクターが「ダメージ」を受けた時の反応を定義する必要があります。状態システム自体はまだ構築していないため、怪我をしたかのように「弾き飛ばされる」動作を実装します。以下の内容をキャラクタースクリプトに追加します。"
 
 #: g101/3d/101_3d_04.md
 msgid "Using Areas"
