@@ -1,9 +1,6 @@
 import os
-import re
 import urllib.request
-import urllib.parse
 from html.parser import HTMLParser
-from concurrent.futures import ThreadPoolExecutor
 
 class LinkParser(HTMLParser):
     def __init__(self):
