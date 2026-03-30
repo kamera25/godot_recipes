@@ -2855,11 +2855,11 @@ msgstr "以下の機能を備えたカメラコントローラーが必要とな
 
 #: 3D/camera_gimbal.md
 msgid "You'll notice that holding the up/down control will cause the camera to rotate all the way around, eventually becoming upside-down. To prevent this, we can clamp the rotation."
-msgstr "アップ/ダウンコントロールを操作すると、カメラがぐるりと一回転してしまい、最終的には上下逆さまになってしまいます。これを防止するために、回転角度に上限を設定する「クランプ」機能が有効です。"
+msgstr "アップ/ダウンコントロールを操作すると、カメラがぐるりと一回転してしまい、最終的には上下逆さまになってしまいます。これを防止するために、回転角度に上限を設定しましょう。"
 
 #: 3D/camera_gimbal.md
 msgid "You may notice a problem with the up/down movement if you move the mouse too quickly. A large value for `event.relative.y` results in \"skipping\" to the opposite side of the clamped value. We can solve this by clamping the vertical mouse movement to a reasonable value. Change the above code for `y` to this:"
-msgstr "マウスを急激に動かすと、上下移動に問題が生じることに気付くかもしれません。`event.relative.y` の値が大きい場合、クランプされた値の反対側に「スキップ」する現象が発生します。この問題を解決するには、垂直方向のマウス移動を合理的な範囲に制限（クランプ）すればよいでしょう。上記コードの `y` 部分を以下のように変更してください。"
+msgstr "マウスを急激に動かすと、上下移動に問題が生じることに気付くかもしれません。`event.relative.y` の値が大きい場合、制限された値の反対側に「スキップ」する現象が発生します。この問題を解決するには、垂直方向のマウス移動を合理的な範囲に制限すればよいでしょう。上記コードの `y` 部分を以下のように変更してください。"
 
 #: 3D/camera_gimbal.md
 msgid "The solution to this problem is to place the camera on a _gimbal_ - a device designed to keep an object level during movement. We can create a gimbal using two {{< gd-icon Node3D >}}`Node3D` nodes, which will control the camera's left/right and up/down rotation respectively."
@@ -13953,7 +13953,7 @@ msgstr "`drop`関数内では、`freeze`を再び`false`に設定した後、ボ
 
 #: physics/rigidbody_drag_drop.md
 msgid "Note the use of `get_last_mouse_velocity()` to pass the impulse to the object - be careful with this! You may find yourself launching the rigid bodies at high speeds, especially if the bodies have low `mass` values. It's probably a good idea to scale this to a reasonable value and `clamp()` it to some maximum. Experiment to find out what works for you."
-msgstr "物体に衝撃力を適用するために `get_last_mouse_velocity()` を使用している点に注意 - 取り扱いには注意が必要です! 特に質量値が小さい場合、リジッドボディは高速で発射される可能性があります。適切なスケールに調整し、最大値にクランプすることをオススメします。最適な設定を見つけるには実験が必要です。"
+msgstr "物体に衝撃力を適用するために `get_last_mouse_velocity()` を使用している点には注意が必要です! 特に質量値が小さい場合、リジッドボディは高速で発射される可能性があります。適切なスケールに調整し、最大値に制限をかけることをオススメします。最適な設定を見つけるには実験が必要です。"
 
 #: physics/rigidbody_drag_drop.md
 msgid "If the body is being dragged, we update its position to follow the mouse."
@@ -14926,7 +14926,7 @@ msgstr "- [タイルマップ：オートタイルの活用](/godot_recipes/4.x/
 
 #: 2D/tilemap_animation.md
 msgid "Now that the `AnimatedTexture` is saved, it can be used in a `TileSet`. Open a new or existing {{< gd-icon TileMap >}}`TileMap` and select its _Tile Set_ property. Click the button to add a new texture to the `TileSet`:"
-msgstr "アニメーション付きテクスチャが保存されたので、これで`タイルセット`で使用できるようになります。新規または既存の{{< gd-icon TileMap >}}`タイルマップ`を開き、その［タイルセット］プロパティを選択します。新しいテクスチャを`タイルセット`に追加するには、ボタンをクリックしてください。"
+msgstr "アニメーション付きテクスチャが保存されたので、これで`タイルセット`で使用できるようになります。新規または既存の{{< gd-icon TileMap >}}`TileMap`を開き、その_Tile Set_プロパティを選択します。新しいテクスチャを`TileSet`に追加するには、ボタンをクリックしてください。"
 
 #: 2D/tilemap_animation.md
 msgid "Download these images: [water.zip](/godot_recipes/3.x/files/water_tiles.zip)"
@@ -15245,7 +15245,7 @@ msgstr ""
 "アクティブなドラッグイベントが2件ある場合の処理を記述\n"
 "\"drag_distance\" は各イベント間の距離を示し、前回計測した距離と比較して増減を確認可能\n"
 "\"zoom_speed\" は倍率係数で、ズームイン時は「1.05」倍、アウト時は「0.95」倍に調整する\n"
-"計算結果が指定された範囲を超えないようにクランプ処理を施し、新しい \"zoom\" 値を設定\n"
+"計算結果が指定された範囲を超えないように制限を施し、新しい \"zoom\" 値を設定\n"
 "最後に次回イベント用に \"last_drag_distance\" を更新"
 
 #: 2D/touchscreen_camera.md

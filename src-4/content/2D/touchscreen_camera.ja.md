@@ -123,7 +123,7 @@ if event is InputEventScreenDrag:
 アクティブなドラッグイベントが2件ある場合の処理を記述
 "drag_distance" は各イベント間の距離を示し、前回計測した距離と比較して増減を確認可能
 "zoom_speed" は倍率係数で、ズームイン時は「1.05」倍、アウト時は「0.95」倍に調整する
-計算結果が指定された範囲を超えないようにクランプ処理を施し、新しい "zoom" 値を設定
+計算結果が指定された範囲を超えないように制限を施し、新しい "zoom" 値を設定
 最後に次回イベント用に "last_drag_distance" を更新
 
 <video controls src="/godot_recipes/3.x/img/touch_camera_02.webm"></video>
