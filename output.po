@@ -6630,7 +6630,7 @@ msgstr "### トランスフォームの力"
 
 #: g101/3d/101_3d_03.md
 msgid "Let's also add a {{< gd-icon Camera3D >}}`Camera3D` to the scene, so it will follow the player around. Position the camera behind and above the character, angling it down a bit. Click the \"Preview\" button to check the camera's view."
-msgstr "シーンに {{< gd-icon Camera3D >}}`Camera3D` オブジェクトも追加してください。プレイヤーが移動すると追従するように設定します。キャラクターの後方かつ少し上方に配置し、わずかに下向きに角度を調整してください。「プレビュー」ボタンをクリックするとカメラアングルを確認できます。"
+msgstr "シーンに {{< gd-icon Camera3D >}}`Camera3D` オブジェクトも追加してください。プレイヤーが移動すると追従するように設定します。キャラクターの後方かつ少し上方に配置し、わずかに下向きに角度を調整してください。「プレビュー」ボタンをクリックするとカメラ視点で確認できます。"
 
 #: g101/3d/101_3d_03.md
 msgid "![alt](/godot_recipes/4.x/img/3d_move_02.gif)"
