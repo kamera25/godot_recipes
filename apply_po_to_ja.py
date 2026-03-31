@@ -7,9 +7,9 @@ def unescape_po_string(s):
     return s.replace('\\n', '\n').replace('\\"', '"').replace('\\\\', '\\')
 
 def load_po(file_path):
-    translations = {}
+    translations_by_file = {}
     if not os.path.exists(file_path):
-        return translations
+        return translations_by_file
         
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -28,8 +28,19 @@ def load_po(file_path):
             msgstr = "".join(re.findall(r'"((?:\\.|[^"\\])*)"', msgstr_raw))
             
             if msgid and msgstr:
-                translations[unescape_po_string(msgid)] = unescape_po_string(msgstr)
-    return translations
+                unescaped_msgid = unescape_po_string(msgid)
+                unescaped_msgstr = unescape_po_string(msgstr)
+
+                # Extract file references
+                ref_lines = re.findall(r'^#:\s*(.*)', entry, flags=re.MULTILINE)
+                for line in ref_lines:
+                    for ref in line.split():
+                        file_ref = ref.split(':')[0]
+                        if file_ref not in translations_by_file:
+                            translations_by_file[file_ref] = {}
+                        translations_by_file[file_ref][unescaped_msgid] = unescaped_msgstr
+
+    return translations_by_file
 
 def translate_content(content, translations):
     # Sort translations by length descending
@@ -71,8 +82,9 @@ def main():
     content_dir = './src-4/content'
     
     print(f"Loading translations from {po_file}...")
-    translations = load_po(po_file)
-    print(f"Loaded {len(translations)} entries.")
+    translations_by_file = load_po(po_file)
+    total_entries = sum(len(v) for v in translations_by_file.values())
+    print(f"Loaded {total_entries} translations across {len(translations_by_file)} files.")
     
     md_files = glob.glob(os.path.join(content_dir, '**', '*.md'), recursive=True)
     md_files = [f for f in md_files if not f.endswith('.ja.md')]
@@ -82,10 +94,24 @@ def main():
     
     for file_path in md_files:
         try:
+            rel_path = os.path.relpath(file_path, content_dir)
+            # Ensure forward slashes for matching with PO file keys
+            rel_path = rel_path.replace(os.sep, '/')
+
+            # Look up translations by matching the suffix of the reference
+            file_translations = {}
+            for po_ref, trans in translations_by_file.items():
+                if po_ref == rel_path or po_ref.endswith('/' + rel_path):
+                    # Merge dictionaries in case there are multiple matching refs
+                    file_translations.update(trans)
+
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
             
-            translated = translate_content(content, translations)
+            if file_translations:
+                translated = translate_content(content, file_translations)
+            else:
+                translated = content
             
             base, ext = os.path.splitext(file_path)
             ja_file_path = f"{base}.ja{ext}"
