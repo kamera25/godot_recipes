@@ -20,7 +20,7 @@ draft: false
 
 ![alt](/godot_recipes/4.x/img/obj_as_scene.png)
 
-モデルをシーンに追加することはできますが、以下の追加ノードが必要となります：
+モデルをシーンに追加することはできますが、以下の追加ノードが必要となります。
 
 ![alt](/godot_recipes/4.x/img/mini_tank_nodes.png)
 

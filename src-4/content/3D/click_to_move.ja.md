@@ -49,7 +49,7 @@ func _physics_process(delta):
 
 現在、マウスの位置を3D空間にマッピングする手段が必要となります。スクリーンを3D世界の窓と見立てると、マウスは画面ガラス上に固定されています。3D空間で何かを選択するには、カメラ（視点）から出発し、マウスの位置を通って現実世界へと伸びる光線を投影しなければなりません。
 
-これは手動で{{< gd-icon Camera3D >}}`Camera3D`の`project_ray`メソッドを使用して行うことも可能ですが、以下のように、`CollisionObject3D`ノードがこの処理を自動的に行う特性を活用することもできます：必要なのは、{{< gd-icon StaticBody3D >}}`StaticBody3D`グラウンドの`input_event`シグナルに接続することだけです。
+これは手動で{{< gd-icon Camera3D >}}`Camera3D`の`project_ray`メソッドを使用して行うことも可能ですが、以下のように、`CollisionObject3D`ノードがこの処理を自動的に行う特性を活用することもできます。必要なのは、{{< gd-icon StaticBody3D >}}`StaticBody3D`グラウンドの`input_event`シグナルに接続することだけです。
 
 ```gdscript
 func _on_StaticBody_input_event(camera, event, click_position, click_normal, shape_idx):

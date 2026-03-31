@@ -1,5 +1,5 @@
 ---
-title: "CharactèreCorp 3D : Arrêt sur les pentes"
+title: "CharacterBody3D : 坂道で停止する"
 weight: 3
 draft: false
 ghcommentid: 103
@@ -8,11 +8,11 @@ tags: []
 
 ## 課題
 
-あなたの {{< gd-icon KinematicBody3D >}}`キャラクターボディ 3D` は斜面を滑り降ります。
+{{< gd-icon KinematicBody3D >}}`CharacterBody3D` が坂道を滑り落ちてしまいます。
 
 ## 解決策
 
-まず、最小限の機能で構成された `{{< gd-icon KinematicBody3D >}}`CharacterBody3D` から始め、以下のスクリプトで `move_and_slide()` メソッドを使用しています：
+まず、最小限の機能で構成された {{< gd-icon KinematicBody3D >}}`CharacterBody3D` から始め、以下のスクリプトで `move_and_slide()` メソッドを使用しています。
 
 ```gdscript
 extends CharacterBody3D
@@ -82,7 +82,7 @@ velocity = move_and_slide(velocity, Vector3.UP, true)
 
 停止時にわずかに上向きの運動量が生じるため、小さな「ホップ」が発生します。この問題は、`move_and_slide_with_snap()` メソッドに切り替えることで解決できます。
 
-Jump 機能を確実に動作させるため、ジャンプ中のスナップ機能も無効にしてください。そうしないと、プレイヤーは地面にしっかりと「固定」されたままになってしまいます：
+Jump 機能を確実に動作させるため、ジャンプ中のスナップ機能も無効にしてください。そうしないと、プレイヤーは地面にしっかりと「固定」されたままになってしまいます。
 
 ```gdscript
     var snap = Vector3.DOWN if not jumping else Vector3.ZERO

@@ -142,7 +142,7 @@ msgstr ""
 
 #: basics/getting_nodes.md
 msgid "The script for this scene is on the `Player` node. If the script needs to call `play()` on the `AnimatedSprite` node, it needs a reference to that node:"
-msgstr "このシーンのスクリプトは `Player` ノードに実装されています。もしスクリプトが `AnimatedSprite` ノードに対して `play()` メソッドを呼び出す必要がある場合、そのノードへの参照が必要となります："
+msgstr "このシーンのスクリプトは `Player` ノードに実装されています。もしスクリプトが `AnimatedSprite` ノードに対して `play()` メソッドを呼び出す必要がある場合、そのノードへの参照が必要となります。"
 
 #: 2D/2d_align_surface.md 2D/2d_draw_trajectory.md 2D/2d_shooting.md
 #: 2D/8_direction.md 2D/autotile_intro.md 2D/ballistic_bullet.md
@@ -2153,7 +2153,7 @@ msgstr "RPG風のスキルボタンを作成したい。クールタイム効果
 
 #: ui/cooldown_button.md
 msgid "The scene for our ability button will need the following nodes:"
-msgstr "能力ボタン用のシーンには以下のノードが必要となります："
+msgstr "能力ボタン用のシーンには以下のノードが必要となります。"
 
 #: ui/cooldown_button.md
 msgid "`Counter` is a container to hold and align the text. Set its layout to \"Bottom Wide\", and in its **Theme Overrides/Constants**, both **Margin Right** and **Margin Left** to `5`."
@@ -2757,7 +2757,7 @@ msgstr "このプロジェクトでは、ゲームプレイ中にマウス入力
 
 #: 3D/camera_gimbal.md
 msgid "You need a camera controller, using mouse or keyboard, that remains level while rotating and following a target."
-msgstr "以下の機能を備えたカメラコントローラーが必要となります：マウスまたはキーボード操作で、回転中も水平を保ちつつ、ターゲットを追従できるもの。"
+msgstr "以下の機能を備えたカメラコントローラーが必要となります。マウスまたはキーボード操作で、回転中も水平を保ちつつ、ターゲットを追従できるもの。"
 
 #: 3D/camera_gimbal.md
 msgid "You'll notice that holding the up/down control will cause the camera to rotate all the way around, eventually becoming upside-down. To prevent this, we can clamp the rotation."
@@ -3655,7 +3655,7 @@ msgstr ""
 
 #: 3D/characterbody3d_examples.md
 msgid "We can add the model to the scene, but we'll need a couple of additional nodes:"
-msgstr "モデルをシーンに追加することはできますが、以下の追加ノードが必要となります："
+msgstr "モデルをシーンに追加することはできますが、以下の追加ノードが必要となります。"
 
 #: 3D/characterbody3d_examples.md
 msgid "Next we need to define `get_input()`, where we'll process and apply the input actions:"
@@ -4536,7 +4536,7 @@ msgstr "<!-- ## 関連レシピ -->"
 
 #: 3D/click_to_move.md
 msgid "While this can be done manually using the {{< gd-icon Camera3D >}}`Camera3D`'s `project_ray` methods, we can take advantage of the fact that {{< gd-icon CollisionObject3D >}}`CollisionObject3D` nodes do this automatically. All we need to do is connect our {{< gd-icon StaticBody3D >}}`StaticBody3D` ground's `input_event` signal:"
-msgstr "これは手動で{{< gd-icon Camera3D >}}`Camera3D`の`project_ray`メソッドを使用して行うことも可能ですが、以下のように、`CollisionObject3D`ノードがこの処理を自動的に行う特性を活用することもできます：必要なのは、{{< gd-icon StaticBody3D >}}`StaticBody3D`グラウンドの`input_event`シグナルに接続することだけです。"
+msgstr "これは手動で{{< gd-icon Camera3D >}}`Camera3D`の`project_ray`メソッドを使用して行うことも可能ですが、以下のように、`CollisionObject3D`ノードがこの処理を自動的に行う特性を活用することもできます。必要なのは、{{< gd-icon StaticBody3D >}}`StaticBody3D`グラウンドの`input_event`シグナルに接続することだけです。"
 
 #: 3D/click_to_move.md
 msgid "![alt](/godot_recipes/4.x/img/3d_click_04.gif)"
@@ -5700,7 +5700,7 @@ msgstr "`drifting` はドリフト状態を追跡するためのブール変数�
 
 #: 3D/kinematic_car/car_traction.md
 msgid "You've got a [kinematic car](/godot_recipes/3.x/3d/kinematic_car/car_base/), but you don't like the \"on rails\" feeling, especially at high speeds. You'd like to have some \"slip\" so that you can have drifting and loss of traction."
-msgstr "［キネマティックカー](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)を持っているものの、特に高速走行時に「レール上を走っている」ような感覚が気にいりません。ドリフトやトラクション損失を可能にするため、ある程度の「スリップ」特性が欲しい。"
+msgstr "[キネマティックカー](/godot_recipes/4.x/3d/kinematic_car/car_base/)で高速走行時に「レール上を走っている」ような感覚が気にいりません。ドリフトやトラクション損失を可能にするため、ある程度の「スリップ」特性が欲しいです。"
 
 #: 3D/kinematic_car/car_traction.md
 msgid "Next, add this code to the `calculate_steering()` function in `car_base.gd`, right after calculating the `new_heading`:"
@@ -7416,10 +7416,7 @@ msgstr "最後に、「自動再生」ボタンをクリックして、ゲーム
 msgid ""
 "Let's also ignore mouse motion when it's not captured. In the character script,\n"
 "change this line in `_unhandled_input()`:"
-msgstr ""
-"以下の手順に従って設定を進めてください。\n"
-"\n"
-"1. マウス操作がキャプチャされていない場合はその動きを無視するようにします。キャラクタースクリプト内で、`_unhandled_input()` 関数内の該当行を変更してください。"
+msgstr "マウス操作がキャプチャされていない場合はその動きを無視するようにします。キャラクタースクリプト内で、`_unhandled_input()` 関数内の該当行を変更してください。"
 
 #: g101/3d/101_3d_05.md
 msgid "Edge Detection & Mouse Capture"
@@ -8372,7 +8369,7 @@ msgstr "## Godot におけるスクリプティング"
 
 #: g101/start/101_04.md
 msgid "Scenes and Scripts"
-msgstr "场景与剧本"
+msgstr "シーン と スクリプト"
 
 #: g101/start/101_04.md
 msgid "Don't worry if you don't know what all those nodes are for just yet. The point here is that each one brings some type of functionality that you might want your player object to have."
@@ -8570,7 +8567,7 @@ msgstr "## プロジェクト設定"
 
 #: g101/start/101_02.md
 msgid "Second, let's look at the **Display** section. This is where you set up your game's display.  `width` & `height` let you set the size of the game window. If, for example, you were making a mobile game, you'd want to set this to the resolution and proportions of your target device. There are also settings for scaling, stretching, fullscreen mode, and more. For now, we'll leave the default size - later on we'll talk about how to adjust these to get our game running on different devices."
-msgstr "次に、**表示設定**セクションを確認してください。ここではゲームの画面表示を設定します。`width` と `height` パラメーターではゲームウィンドウのサイズを指定できます。例えばモバイル向けゲームを開発する場合、対象デバイスの解像度とアスペクト比に合わせて設定してください。その他にもスケーリング処理や縦横比変更、フルスクリーンモードなどの各種設定ができます。現時点ではデフォルトサイズのままにしておきますが、後ほど異なるデバイス環境で動作させるための調整方法について詳しく説明します。"
+msgstr "次に、**表示設定**セクションを確認してください。ここではゲームの画面表示を設定します。`幅` と `高さ` パラメーターではゲームウィンドウのサイズを指定できます。例えばモバイル向けゲームを開発する場合、対象デバイスの解像度とアスペクト比に合わせて設定してください。その他にもスケーリング処理や縦横比変更、フルスクリーンモードなどの各種設定ができます。現時点ではデフォルトサイズのままにしておきますが、後ほど異なるデバイス環境で動作させるための調整方法について詳しく説明します。"
 
 #: g101/start/101_02.md
 msgid "We also have localization options, if you plan to support multiple languages. Autoloading, which we'll get to later, and plugins.  The Godot community has created a variety of useful plugins that you can download and add to supply more features, different tools, and so on."
@@ -8624,7 +8621,7 @@ msgstr "プロジェクトに名前を付ける際は、その内容を適切に
 
 #: g101/start/101_02.md
 msgid "Now we've talked about the main parts of the Godot window and how they work, let's spend a little time talking about our Project settings. Usually one of the first tasks when starting a new project is make sure it's all set up correctly."
-msgstr "神風ウィンドウの主要コンポーネントとその機能について触れたところで、次はプロジェクト設定について少しお話しします。新規プロジェクトを開始する際、まずやるべきことは環境を正しくセットアップすることです。"
+msgstr "Godot のウィンドウの主要コンポーネントとその機能について触れたところで、次はプロジェクト設定について少しお話しします。新規プロジェクトを開始する際、まずやるべきことは環境を正しくセットアップすることです。"
 
 #: g101/start/101_02.md
 msgid ""
@@ -8808,9 +8805,9 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice style=\"note\" title=\"ローカル空間モード\" %}}\n"
-"エディタ内で「ローカル空間モード」ボタンをクリックすると、オブジェクトの局所的な向きを表示・操作できます。\n"
+"エディタ内で「ローカル空間を使用」ボタンをクリックすると、オブジェクトの局所的な向きを表示・操作できます。\n"
 "![alt](/godot_recipes/4.x/img/3d_intro_local_space.png)\n"
-"このモードでは、「Local Space Mode」が有効になっている間、3本の色分けされた軸線がオブジェクトの局所座標系の基底軸として表示されます。\n"
+"このモードでは、「ローカル空間モード」が有効になっている間、3本の色分けされた軸線がオブジェクトの局所座標系の基底軸として表示されます。\n"
 "{{% /notice %}}"
 
 #: Math/transforms.md
@@ -10204,7 +10201,7 @@ msgstr "### 実際の使用例"
 
 #: ai/context_map.md
 msgid "Of course, if they're all the same, then it can't move - it wants to go in all directions equally! So lets consider that it has a preference - it mostly wants to go forward:"
-msgstr "もちろん、全て同じ方向なら動けません。あらゆる方向に均等に移動したいはずです！そこで、特定の方向への優先性があると仮定します。主に前進したい場合を考えます："
+msgstr "もちろん、全て同じ方向なら動けません。あらゆる方向に均等に移動したいはずです！そこで、特定の方向への優先性があると仮定します。主に前進したい場合を考えます。"
 
 #: ai/context_map.md
 msgid "Note that we've made the `num_rays` adjustable, so that you can find the number that works best for your situation. We'll talk below about the tradeoffs and benefits of larger numbers of rays."
@@ -11806,7 +11803,7 @@ msgstr "これは、デフォルトの `floor_max_angle` パラメーター値�
 
 #: physics/kinematicbody_slopes.md
 msgid "In order to ensure we can still jump, we also need to disable snapping during a jump, or we'll remain \"snapped\" to the ground:"
-msgstr "Jump 機能を確実に動作させるため、ジャンプ中のスナップ機能も無効にしてください。そうしないと、プレイヤーは地面にしっかりと「固定」されたままになってしまいます："
+msgstr "Jump 機能を確実に動作させるため、ジャンプ中のスナップ機能も無効にしてください。そうしないと、プレイヤーは地面にしっかりと「固定」されたままになってしまいます。"
 
 #: physics/kinematicbody_slopes.md
 msgid "We see the problem if we stop moving on a slope:"
@@ -16631,7 +16628,7 @@ msgstr "まず最初に取り組むべきは、メニューシステムの不具
 
 #: games/circle_jump/circle_jump_07.md
 msgid "Do the same with the score change in `_on_Jumper_captured()`, and we'll move the HUD update into our new `set_score()` method:"
-msgstr "同じように`_on_Jumper_captured()`内のスコア変更処理も修正し、HUD更新ロジックを新規メソッド`set_score()`に移動させます："
+msgstr "同じように`_on_Jumper_captured()`内のスコア変更処理も修正し、HUD更新ロジックを新規メソッド`set_score()`に移動させます。"
 
 #: games/circle_jump/circle_jump_07.md
 msgid "## Fixing a bug"
@@ -17233,7 +17230,7 @@ msgstr "![alt](/godot_recipes/3.x/img/3d_shoot_02.png)"
 
 #: 3D/3d_shooting.md
 msgid "Now in the tank (or whatever object you have doing the shooting), add a {{< gd-icon Marker3D >}}`Marker3D` child at the point where you want the bullets to appear. In the case of our tank, we're placing it at the end of the cannon barrel:"
-msgstr "タンク内（または射撃を行うオブジェクト）の任意の位置に、弾丸が出現させたい場所に {{< gd-icon Marker3D >}}`Marker3D` 子要素を追加します。今回の戦車の場合、砲身の先端部分に配置します："
+msgstr "タンク内（または射撃を行うオブジェクト）の任意の位置に、弾丸が出現させたい場所に {{< gd-icon Marker3D >}}`Marker3D` 子要素を追加します。今回の戦車の場合、砲身の先端部分に配置します。"
 
 #: 3D/3d_shooting.md
 msgid "For this example, we'll use the \"Mini Tank\" that we set up in [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)."
@@ -17331,7 +17328,7 @@ msgstr "![alt](/godot_recipes/3.x/img/3d_car_05.gif)"
 msgid "The {{< gd-icon KinematicBody3D >}}`CharacterBody3D` has a warning about missing collision shapes, so we'll need to fix that first. We're going to add 3 {{< gd-icon CollisionShape3D >}}`CollisionShape`s: a {{< gd-icon BoxShape3D >}}`BoxShape` for the car's body, and a {{< gd-icon CylinderShape3D >}}`CylinderShape` for each of the front and rear axles."
 msgstr ""
 "{{< gd-icon KinematicBody3D >}}`CharacterBody3D` には衝突形状の欠落に関する警告メッセージが表示されています。まずはこの問題を修正する必要があります。\n"
-"* {{< gd-icon CollisionShape3D >}}`CollisionShape` を追加します：\n"
+"* {{< gd-icon CollisionShape3D >}}`CollisionShape` を追加します。\n"
 "* 車両本体用に {{< gd-icon BoxShape3D >}}`BoxShape` を設定します。\n"
 "* 前輪用と後輪用にそれぞれ1つずつ {{< gd-icon CylinderShape3D >}}`CylinderShape` をおきます。"
 
@@ -17438,7 +17435,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice tip %}}\n"
-"作業効率を上げるため、一時的に {{< gd-icon Camera3D >}}`カメラコンポーネント` を適切な位置に配置し、「プレビュー」モードを使用して、{{< gd-icon Marker3D >}}`マーカー3D` が正確に狙いたい方向を指すように調整する方法が有効です（作業完了後はカメラを削除してください）。\n"
+"作業効率を上げるため、一時的に {{< gd-icon Camera3D >}}`Camera` を適切な位置に配置し、「プレビュー」モードを使用して、{{< gd-icon Marker3D >}}`Marker3D` が正確に狙いたい方向を指すように調整する方法が有効です（作業完了後はカメラを削除してください）。\n"
 "![alt](/godot_recipes/3.x/img/3d_car_09.png)\n"
 "{{% /notice %}}"
 
@@ -17488,7 +17485,7 @@ msgstr "![alt](/godot_recipes/3.x/img/3d_07_02.png)"
 
 #: g101/3d/101_3d_07.md
 msgid "Start with a `CharacterBody3D`. To this we'll add two `CollisionShape` nodes (\"Body\" and \"Feet\"). We also want to have a `Camera`, but we need to be careful about how we handle rotation. The *character* should rotate in **Y**, but only the camera should rotate in **X** (for looking up and down). To make this work, add a `Node3D` node, which we'll call \"Pivot\", and add the `Camera` to that."
-msgstr "`CharacterBody3D` オブジェクトを用意します。このオブジェクトに以下の2つの `CollisionShape` ノードを追加します：「ボディ用」と「足用」です。また、カメラも必要ですが、回転処理には注意が必要です。*キャラクター*は**Y軸**に沿ってのみ回転し、一方でカメラのみが**X軸**方向に回転する必要があります（上下方向の視点移動のため）。これを実現するために、新たに `Node3D` オブジェクトを作成し、「ピボット」と呼ぶことにします。このピボットノードにカメラを追加してください。"
+msgstr "`CharacterBody3D` オブジェクトを用意します。このオブジェクトに以下の2つの `CollisionShape` ノードを追加します。「ボディ用」と「足用」です。また、カメラも必要ですが、回転処理には注意が必要です。*キャラクター*は**Y軸**に沿ってのみ回転し、一方でカメラのみが**X軸**方向に回転する必要があります（上下方向の視点移動のため）。これを実現するために、新たに `Node3D` オブジェクトを作成し、「ピボット」と呼ぶことにします。このピボットノードにカメラを追加してください。"
 
 #: g101/3d/101_3d_06.md
 msgid ""
@@ -17592,7 +17589,7 @@ msgid ""
 "the object to do something to the character:"
 msgstr ""
 "ついに、環境に危険要素を追加します。`spikes.glb`オブジェクトのインスタンスを作成し、コインと同様にArea3Dとして設定します。\n"
-"スクリプトを追加して`body_entered`シグナルを接続しますが、今回はオブジェクトがキャラクターに対して特定の動作を行うようにします："
+"スクリプトを追加して`body_entered`シグナルを接続しますが、今回はオブジェクトがキャラクターに対して特定の動作を行うようにします。"
 
 #: g101/3d/101_3d_04.md
 msgid ""
@@ -17609,7 +17606,7 @@ msgstr "前回の解説では、3Dグラフィックスにおいて非常に重�
 msgid ""
 "Add a script to the Area3D and connect its `body_entered` signal, which we'll use\n"
 "to remove the coin:"
-msgstr "スクリプトをArea3Dに追加し、`body_entered`シグナルに接続します。このシグナルを使ってコインを削除します："
+msgstr "スクリプトをArea3Dに追加し、`body_entered`シグナルに接続します。このシグナルを使ってコインを削除します。"
 
 #: Math/interpolation.md
 msgid "For example, to find a vector that's halfway between a `Node3D` node's forward and left direction vectors:"
@@ -17669,7 +17666,7 @@ msgstr ""
 
 #: Math/transforms.md
 msgid "You can convert coordinates from local to global by applying the transform. For convenience, `Node2D` and `Node3D` include helper functions for this: `to_local()` and `to_global()`:"
-msgstr "座標を局所座標系からグローバル座標系に変換するには、変換を適用します。利便性を考慮し、`Node2D` と `Node3D` にはこの処理を簡単に行う補助関数が用意されています：`to_local()` と `to_global()`。"
+msgstr "座標を局所座標系からグローバル座標系に変換するには、変換を適用します。利便性を考慮し、`Node2D` と `Node3D` にはこの処理を簡単に行う補助関数が用意されています。`to_local()` と `to_global()`。"
 
 #: kyn/tween.md
 msgid "![alt](/godot_recipes/3.x/img/tween_01.gif)"
@@ -17938,7 +17935,7 @@ msgstr "- {{< gd-icon CharacterBody2D >}}`CharacterBody2D`"
 
 #: physics/Godot3_kinematic2d.md
 msgid "For this example, Add a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` with two children: a {{< gd-icon Sprite2D >}}`Sprite` and a {{< gd-icon CollisionShape2D >}}`CollisionShape2D`. As with many demos, we'll use the Godot \"icon.png\" as the {{< gd-icon Sprite2D >}}`Sprite`'s texture (drag it from the Filesystem dock to the \"Texture\" property of the `Sprite`). In the {{< gd-icon CollisionShape2D >}}`CollisionShape2D`'s \"Shape\" property, select \"New RectangleShape2D\" and size the rectangle to fit over the sprite image."
-msgstr "このサンプルでは、`CharacterBody2D`コンポーネントを追加し、これに2つの子オブジェクトを配置します：`Sprite`と`CollisionShape2D`です。多くのデモと同様に、Godotのデフォルトアイコン画像\"icon.png\"を`Sprite`のテクスチャとして使用します（ファイルシステムドックからドラッグして、`Sprite`プロパティの「テクスチャ」欄に設定してください）。`CollisionShape2D`の「形状」プロパティでは「新規 RectangleShape2D」を選択し、その長方形サイズを調整してスプライト画像を覆うように配置します。"
+msgstr "このサンプルでは、`CharacterBody2D`コンポーネントを追加し、これに2つの子オブジェクトを配置します。`Sprite`と`CollisionShape2D`です。多くのデモと同様に、Godotのデフォルトアイコン画像\"icon.png\"を`Sprite`のテクスチャとして使用します（ファイルシステムドックからドラッグして、`Sprite`プロパティの「テクスチャ」欄に設定してください）。`CollisionShape2D`の「形状」プロパティでは「新規 RectangleShape2D」を選択し、その長方形サイズを調整してスプライト画像を覆うように配置します。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "Godot offers a number of collision objects to provide both collision detection and response. Trying to decide which one to use for your project can be confusing. You can avoid problems and simplify development if you understand how each each works and what their pros and cons are. In this tutorial, we'll look at the `CharacterBody2D` node and show some examples of how it can be used."
@@ -17950,17 +17947,19 @@ msgstr "![alt](/godot_recipes/3.x/img/kbd_slopes_02.gif)"
 
 #: physics/kinematicbody_slopes.md
 msgid "CharacterBody3D: Stopping on Slopes"
-msgstr "CharactèreCorp 3D : Arrêt sur les pentes"
+msgstr "CharacterBody3D : 坂道で停止する"
 
 #: physics/kinematicbody_slopes.md
 msgid ""
 "- [Godot 101: Intro do 3D](/godot_recipes/3.x/g101/3d/)\n"
 "- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)"
 msgstr ""
+"- [Godot 101: Intro do 3D](/godot_recipes/3.x/g101/3d/)\n"
+"- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)"
 
 #: physics/kinematicbody_slopes.md
 msgid "Your {{< gd-icon KinematicBody3D >}}`CharacterBody3D` slides down slopes."
-msgstr "あなたの {{< gd-icon KinematicBody3D >}}`キャラクターボディ 3D` は斜面を滑り降ります。"
+msgstr "{{< gd-icon KinematicBody3D >}}`CharacterBody3D` が坂道を滑り落ちてしまいます。"
 
 #: physics/kinematicbody_slopes.md
 msgid "![alt](/godot_recipes/3.x/img/kbd_slopes_04.gif)"
@@ -17968,7 +17967,7 @@ msgstr "![alt](/godot_recipes/3.x/img/kbd_slopes_04.gif)"
 
 #: physics/kinematicbody_slopes.md
 msgid "We've started with a no-frills {{< gd-icon KinematicBody3D >}}`CharacterBody3D`, using `move_and_slide()`, using the script below:"
-msgstr "まず、最小限の機能で構成された `{{< gd-icon KinematicBody3D >}}`CharacterBody3D` から始め、以下のスクリプトで `move_and_slide()` メソッドを使用しています："
+msgstr "まず、最小限の機能で構成された {{< gd-icon KinematicBody3D >}}`CharacterBody3D` から始め、以下のスクリプトで `move_and_slide()` メソッドを使用しています。"
 
 #: physics/kinematicbody_slopes.md
 msgid "![alt](/godot_recipes/3.x/img/kbd_slopes_03.gif)"

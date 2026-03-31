@@ -25,7 +25,7 @@ ghcommentid: 11
 
 ![alt](/godot_recipes/4.x/img/node_paths_01.png)
 
-このシーンのスクリプトは `Player` ノードに実装されています。もしスクリプトが `AnimatedSprite` ノードに対して `play()` メソッドを呼び出す必要がある場合、そのノードへの参照が必要となります：
+このシーンのスクリプトは `Player` ノードに実装されています。もしスクリプトが `AnimatedSprite` ノードに対して `play()` メソッドを呼び出す必要がある場合、そのノードへの参照が必要となります。
 
 ```gdscript
 get_node("AnimatedSprite").play()

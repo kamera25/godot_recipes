@@ -146,7 +146,7 @@ func _physics_process(delta):
 
 [RigidBody2D ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) から引用すると：
 
-> You should not change a RigidBody2D’s `position` or `linear_velocity` every frame or even very often. If you need to directly affect the body’s state, use `_integrate_forces`, which allows you to directly access the physics state.
+> RigidBody2D の `position` や `linear_velocity` を毎フレーム、あるいは頻繁に変更するべきではありません。もし直接ボディの状態を操作する必要がある場合は、物理演算状態に直接アクセスできる `_integrate_forces` を使用してください。
 
  _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [Physics2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。
  関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](http://docs.godotengine.org/ja/stable/classes/class_transform2d.html) に関する情報です。

@@ -11,7 +11,7 @@ ghcommentid: 36
 
 ## 解決策
 
-For this example, we'll use the "Mini Tank" that we set up in [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/).
+この例では、[CharacterBody3D：移動操作](/godot_recipes/3.x/3d/kinematic_body/) で設定した「ミニ戦車」を使用します。
 
 ### 弾丸の設定
 
@@ -69,7 +69,7 @@ Using `look_at()` each frame turns the bullet to point in its direction of trave
 
 ### 撮影について
 
-タンク内（または射撃を行うオブジェクト）の任意の位置に、弾丸が出現させたい場所に {{< gd-icon Marker3D >}}`Marker3D` 子要素を追加します。今回の戦車の場合、砲身の先端部分に配置します：
+タンク内（または射撃を行うオブジェクト）の任意の位置に、弾丸が出現させたい場所に {{< gd-icon Marker3D >}}`Marker3D` 子要素を追加します。今回の戦車の場合、砲身の先端部分に配置します。
 
 ![alt](/godot_recipes/3.x/img/3d_shoot_02.png)
 
@@ -99,8 +99,8 @@ if Input.is_action_just_pressed("shoot"):
 
 ## 関連レシピ
 
-- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)
-- [Godot 101: Intro to 3D](/godot_recipes/3.x/g101/3d/)
+- [CharacterBody3D: 移動方法](/godot_recipes/3.x/3d/kinematic_body/)
+- [初めてのGodot: 3D入門](/godot_recipes/3.x/g101/3d/)
 
 <!-- #### Videoが気に入ったら？ -->
 

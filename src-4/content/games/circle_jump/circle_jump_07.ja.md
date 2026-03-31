@@ -48,7 +48,7 @@ func new_game():
     level = 1
 ```
 
-同じように`_on_Jumper_captured()`内のスコア変更処理も修正し、HUD更新ロジックを新規メソッド`set_score()`に移動させます：
+同じように`_on_Jumper_captured()`内のスコア変更処理も修正し、HUD更新ロジックを新規メソッド`set_score()`に移動させます。
 
 ```gdscript
 func _on_Jumper_captured(object):
