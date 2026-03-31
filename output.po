@@ -3507,7 +3507,7 @@ msgstr "### ビューポートテクスチャ"
 
 #: 3D/healthbars.md
 msgid "We can display a 2D image in 3D using a {{< gd-icon Sprite3D >}}`Sprite3D`. Add one to a new scene and name it \"Healthbar3D\". First, we'll get it configured and sized, so set the _Texture_ property to the green bar image."
-msgstr "{{< gd-icon Sprite3D >}}`Sprite3D`を使用することで、2D画像を3D空間で表示することが可能です。新しいシーンに追加し、「Healthbar3D」という名前を付けます。まず設定とサイズ調整を行いますので、 _テクスチャプロパティ_ に緑色のバー画像を設定してください。"
+msgstr "{{< gd-icon Sprite3D >}}`Sprite3D`を使用することで、2D画像を3D空間で表示することが可能です。新しいシーンに追加し、「Healthbar3D」という名前を付けます。まず設定とサイズ調整を行いますので、 _Texture_ プロパティに緑色のバー画像を設定してください。"
 
 #: 3D/healthbars.md
 msgid "![alt](/godot_recipes/4.x/img/3d_bars01a.gif)"
@@ -8320,7 +8320,7 @@ msgstr ""
 
 #: g101/3d/101_3d_01.md
 msgid "Look at the Inspector for the {{< gd-icon Node3D >}}`Node3D` node. In the **Transform** section, you'll see properties for **Position**, **Rotation**, and **Scale**. Drag the object around with the gizmo and observe how these values change. Just like in 2D, these properties are *relative* to the node's parent."
-msgstr "{{< gd-icon Node3D >}} ノードのインスペクターを確認してください。「変換」セクションには、**位置**、**回転**、**スケール**に関するプロパティが表示されます。ギズモを使ってオブジェクトを移動させながら、これらの値が変化していく様子を観察してください。2Dと同様、これらのプロパティはノードの親要素に対する*相対値*として扱われます。"
+msgstr "{{< gd-icon Node3D >}} ノードのインスペクターを確認してください。「トランスフォーム」セクションには、**位置**、**回転**、**スケール**に関するプロパティが表示されます。ギズモを使ってオブジェクトを移動させながら、これらの値が変化していく様子を観察してください。2Dと同様、これらのプロパティはノードの親要素に対する*相対値*として扱われます。"
 
 #: g101/3d/101_3d_01.md
 msgid ""
@@ -9301,11 +9301,11 @@ msgstr "Godotノード"
 
 #: g101/start/101_03.md
 msgid "Now we have this {{< gd-icon Sprite2D >}}`Sprite2D` node in our **Scene** dock. Make sure it's selected, and then look at the Inspector dock on the right side. Over here, you'll see all the properties of whatever node you have selected. Notice that the properties are organized by where they come from. The {{< gd-icon Sprite2D >}}`Sprite2D` node inherits from {{< gd-icon Node2D >}}`Node2D`, which inherits from {{< gd-icon CanvasItem >}}`CanvasItem`, which inherits from the plain old {{< gd-icon Node >}}`Node`."
-msgstr "これでシーンドックにこの {{< gd-icon Sprite2D >}}`Sprite2D` ノードが追加されました。必ず選択状態にしてください。次に右側のインスペクタードックを見てみてください。ここには現在選択されているノードのすべてのプロパティが表示されます。これらのプロパティは、それらがどのソースから来ているかによって整理されていることに注目してください。{{< gd-icon Sprite2D >}}`Sprite2D`ノードは {{< gd-icon Node2D >}}`Node2D`を継承しており、これはさらに{{< gd-icon CanvasItem >}}CanvasItemを継承し、さらにその根本には単純な{{< gd-icon Node >}}`Node`が存在します。"
+msgstr "これでシーンドックにこの {{< gd-icon Sprite2D >}}`Sprite2D` ノードが追加されました。必ず選択状態にしてください。次に右側のインスペクタードックを見てみてください。ここには現在選択されているノードのすべてのプロパティが表示されます。これらのプロパティは、それらがどのソースから来ているかによって整理されていることに注目してください。{{< gd-icon Sprite2D >}}`Sprite2D`ノードは {{< gd-icon Node2D >}}`Node2D`を継承しており、これはさらに{{< gd-icon CanvasItem >}}`CanvasItem`を継承し、さらにその根本には単純な{{< gd-icon Node >}}`Node`が存在します。"
 
 #: g101/start/101_03.md
 msgid "Over in the viewport, the sprite doesn't look like much. A sprite's purpose is to display an image, or texture. As you can see in the Inspector, the **Texture** property is currently empty. Fortunately, every new Godot project comes with an image we can use: the Godot icon. Drag the icon from the Filesystem dock and drop it in the texture property."
-msgstr "ビューポート上で確認すると、スプライトの表示は期待通りではありません。スプライトの目的は画像（テクスチャ）を表示することだからです。インスペクターを見ると、**テクスチャ**プロパティが現在空になっているのがわかります。幸いなことに、新規プロジェクトには必ずGodotアイコンが付属しています。このアイコンをファイルシステムドックからドラッグし、テクスチャプロパティにドロップしてください。"
+msgstr "ビューポート上で確認すると、スプライトの表示は期待通りではありません。スプライトの目的は画像（テクスチャ）を表示することだからです。インスペクターを見ると、**Texture**プロパティが現在空になっているのがわかります。幸いなことに、新規プロジェクトには必ずGodotアイコンが付属しています。このアイコンをファイルシステムドックからドラッグし、テクスチャプロパティにドロップしてください。"
 
 #: g101/start/101_03.md
 msgid "![alt](/godot_recipes/4.x/img/g4_101_11.png)"
@@ -9333,7 +9333,7 @@ msgstr "ビューポート内でスプライトをクリック＆ドラッグす
 
 #: g101/start/101_03.md
 msgid "In the Inspector, click to expand the \"Transform\" section, and type `(50, 50)` in the **Position** property."
-msgstr "インスペクターで「変換」セクションを展開するためにクリックし、**Position** プロパティに `(50, 50)` と入力してください。"
+msgstr "インスペクターで「Transform」セクションを展開するためにクリックし、**Position** プロパティに `(50, 50)` と入力してください。"
 
 #: g101/start/101_03.md
 msgid "![alt](/godot_recipes/4.x/img/g4_101_08.png?width=500)"
@@ -9357,7 +9357,7 @@ msgstr "![alt](/godot_recipes/4.x/img/g101_01_spritemove.gif?width=250)"
 
 #: g101/start/101_03.md
 msgid "Notice that the **Position** of the parent is changing as you move it around. Now check the child: it's still `(50, 50)`. That's because its \"Transform\" properties are _relative_ to its parent."
-msgstr "親要素の位置を移動させると、**位置プロパティ**が変化していくのに注目してください。次に子要素を確認すると、依然として `(50, 50)` のままです。これはその子要素の「変換」プロパティが、親要素に対して相対的に設定されているためです。"
+msgstr "親要素の位置を移動させると、**位置プロパティ**が変化していくのに注目してください。次に子要素を確認すると、依然として `(50, 50)` のままです。これはその子要素の「トランスフォーム」プロパティが、親要素に対して相対的に設定されているためです。"
 
 #: g101/start/101_03.md
 msgid "![alt](/godot_recipes/4.x/img/g4_101_09.png)"
@@ -16133,7 +16133,7 @@ msgstr "各フレームでは、入力のチェックとステアリング計算
 
 #: 2D/car_steering.md
 msgid "### Part 4: Reverse/Brake"
-msgstr "### パート4：リバース／ブレーキ操作"
+msgstr "### その4：リバース／ブレーキ操作"
 
 #: 2D/car_steering.md
 msgid "Once we've got our acceleration, we can apply it to the velocity like so:"
@@ -16145,7 +16145,7 @@ msgstr "2つのベクトルの内積を利用することで、前進してい�
 
 #: 2D/car_steering.md
 msgid "### Part 3: Friction/drag"
-msgstr "### 第3部：摩擦・抗力について"
+msgstr "### その3：摩擦・抗力について"
 
 #: 2D/car_steering.md
 msgid "The first step is to code the movement based on the algorithm described above."
@@ -16161,7 +16161,7 @@ msgstr "<video controls src='/godot_recipes/4.x/img/car_reverse.webm'></video>"
 
 #: 2D/car_steering.md
 msgid "### Part 1: Movement"
-msgstr "### 第1部：動き"
+msgstr "### その1：動き"
 
 #: 2D/car_steering.md
 msgid "Change the input code to apply acceleration instead of directly changing the car's `velocity`."
@@ -16315,11 +16315,11 @@ msgstr "- [ゲーム数学：補間](/godot_recipes/4.x/ja/math/interpolation/)"
 
 #: 2D/car_steering.md
 msgid "### Part 5: Drift/slide"
-msgstr "### パート5：ドリフト/スライド操作"
+msgstr "### その5：ドリフト/スライド操作"
 
 #: 2D/car_steering.md
 msgid "### Part 2: Acceleration"
-msgstr "### パート2：加速について"
+msgstr "### その2：加速について"
 
 #: 2D/car_steering.md
 msgid ""
