@@ -104,6 +104,6 @@ func get_path_direction(pos):
 - [Inputs: Introduction](/godot_recipes/3.x/input/input_intro/)
 - [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/) -->
 
-<!-- #### Like video?
+<!-- #### Videoが気に入ったら？ -->
 
 {{< youtube Lx2d5cgMj5U >}} -->

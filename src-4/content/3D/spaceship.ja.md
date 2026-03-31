@@ -6,11 +6,11 @@ ghcommentid: 97
 tags: []
 ---
 
-## Problem
+## 課題
 
 アーケード／映画のようなスタイルで飛行する3D宇宙船を作りたい。リアルな物理演算は求めず、ドッグファイト主体の『スター・ウォーズ』風の宇宙戦闘スタイルで。
 
-## Solution
+## 解決策
 
 この機能を実現するため、船のモデルには {{< gd-icon CharacterBody3D >}} `CharacterBody3D` クラスを使用します。ピッチ（前後傾斜）、ロール（横転）、ヨー（回転）の3軸入力により、それぞれ対応する軸を中心にボディの基底ベクトルが回転します。移動方向は常に前方を指すようになっています。
 
@@ -201,7 +201,7 @@ func _physics_process(delta):
     {{% /notice %}} -->
 
 
-## Related recipes
+## 関連レシピ
 
 [補間カメラの実装](/godot_recipes/4.x/3d/interpolated_camera/)
 
@@ -210,6 +210,6 @@ func _physics_process(delta):
 
 {{< youtube 8oywBn_bLeU >}} -->
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらでダウンロードできます。[https://github.com/godotrecipes/3d_spaceship](https://github.com/godotrecipes/3d_spaceship)

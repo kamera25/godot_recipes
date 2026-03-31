@@ -171,6 +171,6 @@ func _integrate_forces(state):
 
 ![alt](/godot_recipes/3.x/img/rigidbody_ship2.gif)
 
-<!-- #### Like video?
+<!-- #### Videoが気に入ったら？ -->
 
 {{< youtube  >}} -->

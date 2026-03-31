@@ -4,11 +4,11 @@ weight: 5
 draft: false
 ---
 
-## Problem
+## 課題
 
 グリッドベースの環境があり、ナビゲーションを可能にする経路探索システムを構築したいです。
 
-## Solution
+## 解決策
 
 Godot は経路探索のための複数の手法を提供しています。今回のレシピでは「A*(エースター)」アルゴリズムを取り上げます。
 
@@ -182,6 +182,6 @@ astar_grid.default_estimate_heuristic = AStarGrid2D.HEURISTIC_OCTILE
 
 以下のサンプルプロジェクトをダウンロードして、この設定を実際に試してみます。壁を配置するだけでなく、右クリック／中クリックでエンドポイントとスタート地点を移動させることができます。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/grid_pathfinding](https://github.com/godotrecipes/grid_pathfinding)

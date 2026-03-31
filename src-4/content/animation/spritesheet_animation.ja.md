@@ -4,11 +4,11 @@ weight: 1
 draft: false
 ---
 
-## Problem
+## 課題
 
 2Dアニメーションを含むスプライトシートを使いたい。
 
-## Solution
+## 解決策
 
 スプライトシートは2Dアニメーションの一般的な配布形式です。単一の画像ファイルに全てのアニメーションフレームを集約した形式で、効率的なデータ管理ができます。
 
@@ -63,7 +63,7 @@ _Frame_ プロパティを変更してみて、画像がどのように変化す
 
 自由に他のアニメーションを追加してください。例えば「ジャンプ」アニメーションはフレーム 65～70 に設定されています。
 
-## Related recipes
+## 関連レシピ
 
 - [プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)
  <!-- - [アニメーション状態のコントロール](http://kidscancancode.org/godot_recipes/animation/animation_state_machine/) -->

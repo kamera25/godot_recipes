@@ -5,11 +5,11 @@ draft: false
 tags: []
 ---
 
-## Problem
+## 課題
 
 ファーストパーソン・シューティングゲーム（FPS）用のキャラクターを作成してください。
 
-## Solution
+## 解決策
 
 まず、`CharacterBody3D` ノードから始め、次に `CollisionShape3D` を追加します。この場合、最も一般的な選択肢は `CapsuleShape3D` 衝突形状です。ワールドの設定によっては、ここに他の形状も追加できますが、この例では基本に忠実に進めます。
 
@@ -94,11 +94,11 @@ FPSキャラクターには通常、前面に位置した武器の3Dメッシュ
 個性を加えるには、`AnimationPlayer` を使用して武器の位置をプレイヤーの移動に合わせて左右にアニメーションさせる方法がオススメです。
 
 
-## Related recipes
+## 関連レシピ
 
 - [入力：マウスキャプチャーの使用方法](/godot_recipes/4.x/ja/input/mouse_capture/)
 
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードしてください。[https://github.com/godotrecipes/basic_fps](https://github.com/godotrecipes/basic_fps)

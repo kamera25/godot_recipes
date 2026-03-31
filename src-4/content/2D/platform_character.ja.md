@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 16
 ---
 
-## Problem
+## 課題
 
 2Dプラットフォーマースタイルのキャラクターを作成したいです。
 
-## Solution
+## 解決策
 
 経験が少ない開発者は、プラットフォームキャラクターをプログラミングするのがいかに複雑かを知って驚くことがよくあります。Godotには組み込みツールが用意されているものの、ゲームごとに解決策が異なるため、万能な答えはありません。このチュートリアルでは、ダブルジャンプやしゃがみ動作、ウォールジャンプ、アニメーションといった機能について詳しく掘り下げることはしません。ここではプラットフォーマー移動の基本原理に焦点を当てます。他の課題については、残りのレシピを参照してください。
 
@@ -100,6 +100,6 @@ func _physics_process(delta):
 <!-- - [入力入門](/godot_recipes/4.x/ja/input/input_intro/)
 - [キネマティック摩擦](/godot_recipes/4.x/ja/physics/kinematic_friction/) -->
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードしてください。[https://github.com/godotrecipes/2d_platform_basic](https://github.com/godotrecipes/2d_platform_basic)

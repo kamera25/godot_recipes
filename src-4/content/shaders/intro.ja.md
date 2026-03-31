@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 76
 ---
 
-## Problem
+## 課題
 
 シェーダーのコーディングをやってみたい。
 
-## Solution
+## 解決策
 
 シェーダーとは、コンピュータのGPU（グラフィックスカード）上で動作する専用プログラムのことです。GPUは特定種類の演算処理を極めて効率的に実行できるよう最適化されています。このシェーダーコードをオブジェクトに適用することで、画面上でのレンダリング方法に影響を与えることができます。
 
@@ -166,8 +166,8 @@ uniform float radius : hint_range(0, 1);
 
 各種データ型に対応するヒントが用意されています。完全なリストについては [シェーダー言語リファレンス](https://docs.godotengine.org/ja/latest/tutorials/shading/shading_reference/shading_language.html#uniforms) を参照してください。
 
-### Wrapping up
+### まとめ
 
 これはシェーダーで実現できる機能のほんの一例に過ぎません。このセクションの他のレシピも参照して、プロジェクトで使えるテクニックを増やしていきます。
 
-## Related Recipes
+## 関連するレシピ

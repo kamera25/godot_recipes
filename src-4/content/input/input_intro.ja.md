@@ -4,9 +4,9 @@ weight: 1
 draft: true
 ---
 
-## Problem
+## 課題
 
 Godotの入力システムの仕組みを学びたいとのこと。
 
-## Solution
+## 解決策
 

@@ -4,11 +4,11 @@ weight: 10
 draft: false
 ---
 
-## Problem
+## 課題
 
 Godot環境でリグ設定済みのアニメーション3Dキャラクターをインポートし、{{< gd-icon AnimationTree >}}`AnimationTree`を使ってそのアニメーションを設定したところです。次は移動機能を実装が必要です。キャラクタコントローラが必要です。
 
-## Solution
+## 解決策
 
 このレシピでは、既にキャラクターモデルとアニメーションをインポートしており、アニメーションの遷移やブレンド処理用に {{< gd-icon AnimationTree >}}`AnimationTree` が適切に設定されていることを前提に進めます。まだ準備ができていない場合は、[アセットのインポート方法](/4.x/3d/assets/importing_assets/) および [キャラクターアニメーションについて](/4.ex/3d/assets/character_animation/) を参照してください。参考までに、ここでは [セクション説明](/godot_recipes/4.x/ja/3d/assets/) でリンクされているアートパックを使用しています。
 

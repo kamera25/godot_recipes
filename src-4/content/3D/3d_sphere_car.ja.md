@@ -4,13 +4,13 @@ weight: 12
 draft: false
 ---
 
-## Problem
+## 課題
 
 アーケードスタイルのカーゲームを作りたい場合、リアルな物理演算よりもシンプルさを重視するでしょう。このレシピでは、転がる球体を使って楽しく操作可能な車を作成する方法をご紹介します。
 
 <video width="500" controls src="/godot_recipes/4.x/img/3d_sphere_car_01.webm"></video>
 
-## Solution
+## 解決策
 
 ドライビングゲームを作成する方法は数多くあります。各ゲームに求められるリアリズムのレベルは異なります。軽量なアーケードスタイルのカーモデルを作りたい場合、Godotの{{< gd-icon VehicleBody3D >}}`VehicleBody3D`ノードが提供するすべての機能（サスペンションシステムや個別にモデリングされた車輪など）は必要ないかもしれません。
 
@@ -232,10 +232,10 @@ body_mesh.rotation.z = lerp(body_mesh.rotation.z, t, 10 * delta)
 > - コースデータ：Keith氏による[モジュール式レーシングカートトラック（起伏のある地形テーマ）](https://fertile-soil-productions.itch.io/modular-racekart-track-hilly-terrain-theme)、Fertile Soil Productions提供
 
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/3d_car_sphere](https://github.com/godotrecipes/3d_car_sphere)
 
-## Related recipes
+## 関連レシピ
 
 * [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)

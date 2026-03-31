@@ -4,14 +4,14 @@ weight: 12
 draft: false
 ---
 
-## Problem
+## 課題
 
 ゲームには「レベル選択」メニューが必要となります。ユーザーがグリッド形式のオプションから選べるようにしてください。
 
 ![alt](/godot_recipes/4.x/img/level_select_03.gif)
 
 
-## Solution
+## 解決策
 
 上記の例で示したように、プレイヤーが自由に選択できるレベル「ボックス」で構成されたスクロールグリッドを作成します。まず個々のレベルボックスから始めてください。
 
@@ -182,15 +182,15 @@ func _on_NextButton_pressed():
 
 ダウンロード可能なサンプルプロジェクトでは、スクロールアニメーション用のTween機能を含む完全な実装例を確認できます（Tweenを使えば、あらゆる動作がより洗練されたものになります）。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/ui_level_select](https://github.com/godotrecipes/ui_level_select)
 
-<!-- ## Related recipes
+## 関連レシピ
 
 [コンテナ](/godot_recipes/4.x/ja/ui/containers/)
 [ノードを知る：ラベル](/godot_recipes/4.x/ja/kyn/label/) -->
 
-<!-- #### Like video?
+<!-- #### Videoが気に入ったら？ -->
 
 {{< youtube C-Sn55e5wnk >}} -->

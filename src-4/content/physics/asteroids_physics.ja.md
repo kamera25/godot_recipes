@@ -4,11 +4,11 @@ weight: 12
 draft: false
 ---
 
-## Problem
+## 課題
 
 「Astroids」のような半リアルな宇宙船を作成するため、`RigidBody2D`を使いたい。
 
-## Solution
+## 解決策
 
 {{< gd-icon RigidBody2D >}}`RigidBody2D` を使用する際には少し注意が必要です。Godotの物理エンジンによって制御されるため、直接移動させるのではなく力を加える必要があります。リジッドボディを扱う前に、[RigidBody2D APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html)を必ず確認することを強くオススメします。これからこの例を進めていく過程で、このドキュメントを参照しながら進めていきます。
 
@@ -130,6 +130,6 @@ var teleport_pos = null
 
 ![alt](/godot_recipes/4.x/img/asteroids_warp.gif)
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/asteroids_support](https://github.com/godotrecipes/asteroids_support)

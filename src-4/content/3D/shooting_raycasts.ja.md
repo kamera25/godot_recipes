@@ -5,11 +5,11 @@ draft: false
 tags: []
 ---
 
-## Problem
+## 課題
 
 FPSゲームで射撃機能を実装しますが、個別の発射物を手動で動かすのは非現実的です。
 
-## Solution
+## 解決策
 
 ゲームの物理演算エンジンは、非常に高速で移動するオブジェクトを処理しようとすると破綻しがちです。解決策としては、射手の位置からレイキャストを行い、最初に衝突する物体を検出する方法が有効です。
 
@@ -23,7 +23,7 @@ Godotにおけるレイキャスティングには、主に2つの方法があ�
 
 ヒットした内容を確認するには、`FPSPlayer`シーンに{{<  gd-icon CanvasLayer >}}`CanvasLayer`ノードと{{<  gd-icon Label >}}`Label`ノードを追加してください。
 
-We'll add an input check in the `_input()` function, which we're already using to handle mouse input.
+マウス入力を処理するために既に使用している `_input()` 関数に、入力チェックを追加します。
 
 ```gdscript
     if event.is_action_pressed("shoot"):
@@ -49,10 +49,10 @@ func shoot():
 ```
 
 
-## Related recipes
+## 関連レシピ
 
 - [FPSキャラクターの作り方](/godot_recipes/4.x/ja/3d/basic_fps)
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらよりダウンロードできます。 [https://github.com/godotrecipes/3d_shoot_castrays](https://github.com/godotrecipes/3d_shoot_castrays)

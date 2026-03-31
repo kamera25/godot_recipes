@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 37
 ---
 
-## Problem
+## 課題
 
 3Dゲームで視覚的なデバッグ情報が欲しい：速度や位置などを表すベクトルを可視化する方法があれば便利だ
 
-## Solution
+## 解決策
 
 2Dでの描画デバッグは非常に便利です。{{< gd-icon CanvasItem2D >}}`CanvasItem`は`_draw()`コールバック内で使用できる多彩なプリミティブ描画メソッドを提供します。3Dの場合、状況はそれほど単純ではありません。一つの解決策として`ImmediateGeometry`を使って手動でメッシュを作成する方法がありますが、これは非常に手間がかかり、迅速なデバッグには不便です。
 
@@ -137,6 +137,6 @@ DebugOverlay.draw.add_vector(self, "velocity", 1, 4, Color(0,1,0, 0.5))
 
 ![alt](/godot_recipes/3.x/img/3d_debug_04.gif)
 
-## Related recipes
+## 関連レシピ
 
 - [UI：デバッグデータの表示](/godot_recipes/4.x/ja/ui/debug_overlay)

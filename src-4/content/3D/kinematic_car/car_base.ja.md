@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 41
 ---
 
-## Problem
+## 課題
 
 3Dドライビング/レーシングゲームを作りたいが、どこから手をつければいいかわからない。
 
-## Solution
+## 解決策
 
 {{% notice note %}}
 3D環境においても、車両は基本的に地面に留まる性質があります。このため、移動処理の多くは実質的に2Dと同様の扱いができます。車の動作コードの大部分は、[2D用カーステアリングレシピ](/godot_recipes/4.x/ja/2d/car_steering)と非常に似た構造になります。このチュートリアルに進む前に、必ずそのレシピを確認しておくことをオススメします。
@@ -195,13 +195,13 @@ func get_input():
 ダウンロードはこちら：[https://github.com/kidscancode/3d_car_tutorial/releases](https://github.com/kidscancode/3d_car_tutorial/releases)
 {{% /notice %}}
 
-## Related recipes
+## 関連レシピ
 
 - [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)
 - [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)
 - [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)
 
-#### Like video?
+#### この動画が気に入ったら？
 
 {{< youtube WhwSKyGjQq0 >}}
 

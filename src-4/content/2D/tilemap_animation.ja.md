@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 27
 ---
 
-## Problem
+## 課題
 
 タイルマップでアニメーションタイルを使用したい。
 
-## Solution
+## 解決策
 
 この問題に対処する最も直接的な方法は、`AnimatedTexture`リソースを使用することです。
 
@@ -36,7 +36,7 @@ ghcommentid: 27
 
 ### TileMapでのAnimatedTextureの使用について
 
-アニメーション付きテクスチャが保存されたので、これで`タイルセット`で使用できるようになります。新規または既存の{{< gd-icon TileMap >}}`TileMap`を開き、その_Tile Set_プロパティを選択します。新しいテクスチャを`TileSet`に追加するには、ボタンをクリックしてください。
+アニメーション付きテクスチャが保存されたので、これで`TileSet`で使用できるようになります。新規または既存の{{< gd-icon TileMap >}}`TileMap`を開き、その _Tile Set_ プロパティを選択します。新しいテクスチャを`TileSet`に追加するには、ボタンをクリックしてください。
 
 ![alt](/godot_recipes/3.x/img/anim_tile_add.png)
 

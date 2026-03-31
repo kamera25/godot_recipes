@@ -4,11 +4,11 @@ weight: 12
 draft: false
 ---
 
-## Problem
+## 課題
 
 プレイヤーの視界外にあるオブジェクトの位置を表示するためのミニマップまたはレーダー風UI要素が欲しいとの。
 
-## Solution
+## 解決策
 
 以下に、目指している実装例をご紹介します。
 <video controls src="/godot_recipes/4.x/img/minimap_01.webm"></video>
@@ -261,7 +261,7 @@ func _on_gui_input(event):
 
 ![alt](/godot_recipes/4.x/img/minimap_10.gif)
 
-## Wrapping up
+## まとめ
 
 このレシピはかなり規模が大きいですが、現在取り組んでいるプロジェクトにも柔軟に組み込めるよう配慮しています。
 
@@ -272,14 +272,14 @@ func _on_gui_input(event):
 * マーカーをクリックするとその詳細情報が表示されるように改良
 * グリッドの代わりにマップ画像をそのままミニマップ背景として使用可能に
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 以下からプロジェクトのサンプルコードをダウンロードできます。[https://github.com/godotrecipes/minimap](https://github.com/godotrecipes/minimap)
 
-## Related recipes
+## 関連レシピ
 
 - [見下ろし方式キャラクター移動](/godot_recipes/4.x/ja/2d/topdown_movement/)
 
-<!-- #### Like video?
+<!-- #### Videoが気に入ったら？ -->
 
 {{< youtube -R1rasEyuqY >}} -->

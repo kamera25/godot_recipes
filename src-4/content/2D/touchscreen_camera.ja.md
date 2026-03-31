@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 31
 ---
 
-## Problem
+## 課題
 
 モバイルゲームには、タッチ操作対応の2Dカメラが必要です。
 
-## Solution
+## 解決策
 
 このレシピでは、複数のタッチ操作に対応した汎用2Dカメラを作成します。
 
@@ -184,7 +184,7 @@ func _unhandled_input(event):
 プロジェクトファイルはこちらからダウンロードできます。 [2d_touch_camera.zip](/godot_recipes/4.x/ja/files/2d_touch_camera.zip)
 {{% /notice %}} -->
 
-## Related recipes
+## 関連レシピ
 
 - [入力操作: Input Actions](/godot_recipes/4.x/ja/input/input_actions/)
 - [マウスドラッグでのユニットの選択](/godot_recipes/4.x/ja/input/multi_unit_select/)

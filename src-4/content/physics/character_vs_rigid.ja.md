@@ -4,11 +4,11 @@ weight: 5
 draft: false
 ---
 
-## Problem
+## 課題
 
 キャラクターのボディをリジッドボディと相互作用させたい場合に使用します。
 
-## Solution
+## 解決策
 
 {{% notice note %}}
 このレシピは2Dノードと3Dノードの両方に同様に適用できます。{{% /notice %}}
@@ -74,11 +74,11 @@ func _physics_process(delta):
 
 実験を通じて、特定のゲームに最適な設定を見つけます。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/character_vs_rigid](https://github.org/godotrecipes/character_vs_rigid)
 
-## Related recipes
+## 関連レシピ
 
 - [プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)
 

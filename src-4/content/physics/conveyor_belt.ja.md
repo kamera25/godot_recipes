@@ -4,11 +4,11 @@ weight: 9
 draft: false
 ---
 
-## Problem
+## 課題
 
 キネマティックまたはリジッドボディを移動させるコンベアベルトオブジェクトを作成したい。
 
-## Solution
+## 解決策
 
 「constant_linear_velocity」プロパティを使用することで、{{< gd-icon StaticBody2D >}}`StaticBody2D`だけでコンベアベルトオブジェクトを作成できます。
 
@@ -74,7 +74,7 @@ This works perfectly well with kinematic bodies, too. Here's the same conveyor b
 
 ![alt](/godot_recipes/3.x/img/conveyor_3d.gif)
 
-## Related recipes
+## 関連レシピ
 
 - [Platform character](http://kidscancode.org/godot_recipes/2d/platform_character)
 - [Using CharacterBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/)

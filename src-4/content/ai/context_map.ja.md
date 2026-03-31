@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 75
 ---
 
-## Problem
+## 課題
 
 経路を追従し、障害物を避け、世界を移動する方法について他の判断もできるAI制御オブジェクトがほしい。
 
-## Solution
+## 解決策
 
 「ステアリング挙動」とは、この問題を解決するために使用可能な様々なアルゴリズムの総称です。どの手法を採用するかは、ゲームの特性、オブジェクトが存在する世界の種類、そして求める「知性」のレベルによって異なります。
 
@@ -192,7 +192,7 @@ func get_path_direction(pos):
 
 ![alt](/godot_recipes/3.x/img/ai_context_10.gif)
 
-### Wrapping up
+### まとめ
 
 この方法は非常に柔軟性が高く拡張性に優れており、以下のように複雑かつ多様な動作を生成できます。
 
@@ -206,10 +206,10 @@ func get_path_direction(pos):
 
 危険な要素が関心を打ち消すのではなく、逆方向への関心を*高める*ことも考えられます。
 
-## Related recipes
+## 関連レシピ
 
 - [ベクトル：内積と外積の活用](/godot_recipes/4.x/ja/math/dot_cross_product/)
 
-#### Like video?
+#### この動画が気に入ったら？
 
 {{< youtube dzqtF_CmX-I >}}

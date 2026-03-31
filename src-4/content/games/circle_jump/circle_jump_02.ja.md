@@ -58,7 +58,7 @@ var Jumper = preload("res://objects/Jumper.tscn")
 var player
 ```
 
-We need references to both objects so that we can instance them when needed.
+需要が発生した際にインスタンス化できるよう、両方のオブジェクトに対する参照が必要となります。
 
 ```gdscript
 func _ready():
@@ -128,7 +128,7 @@ rotation_speed *= pow(-1, randi() % 2)
 * `Node` ("Trail")
   * `Line2D` ("Points")
 
-We're going to use this to make a trail that streams out behind the player. Later we'll make it more visually appealing, but for now, let's stick with a simple gradient. In the _Fill_ add a new Gradient, and go from transparent to a color of your choosing:
+これを使って、プレイヤーの後ろに流れるトレイルを作成します。後でより視覚的に魅力的なものにしますが、今のところは単純なグラデーションで進めてください。「Fill」部分で新しいグラデーションを追加し、透明からお好みの色に変更してください。
 
 ![alt](/godot_recipes/3.x/img/cj_02_01.png?width=200)
 

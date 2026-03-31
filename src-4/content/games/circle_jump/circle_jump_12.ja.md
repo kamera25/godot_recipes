@@ -112,10 +112,10 @@ func _on_TextEdit_meta_clicked(meta):
 
 ----------
 
-#### Follow this project on Github:
+#### GitHubでプロジェクトをフォローしてください！
 
 [https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)
 
-#### Do you prefer video?
+#### 動画の方がお好みですか？
 
 {{< youtube h5987aIENqs >}}

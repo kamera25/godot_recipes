@@ -4,11 +4,11 @@ weight: 3
 draft: true
 ---
 
-## Problem
+## 課題
 
 見下ろし視点で操作するキャラクターに摩擦や加速度を追加し、よりスムーズな操作性を実現したい。
 
-## Solution
+## 解決策
 
 ```gdscript
 extends CharacterBody2D

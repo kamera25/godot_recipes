@@ -6,11 +6,11 @@ ghcommentid: 103
 tags: []
 ---
 
-## Problem
+## 課題
 
 Your {{< gd-icon KinematicBody3D >}}`CharacterBody3D` slides down slopes.
 
-## Solution
+## 解決策
 
 We've started with a no-frills {{< gd-icon KinematicBody3D >}}`CharacterBody3D`, using `move_and_slide()`, using the script below:
 
@@ -102,11 +102,11 @@ velocity = move_and_slide_with_snap(velocity, snap, Vector3.UP,
         true, 4, deg2rad(52))
 ```
 
-## Related recipes
+## 関連レシピ
 
 - [Godot 101: Intro do 3D](/godot_recipes/3.x/g101/3d/)
 - [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)
 
-#### Like video?
+#### この動画が気に入ったら？
 
 {{< youtube a0gxFMdhR7w >}}

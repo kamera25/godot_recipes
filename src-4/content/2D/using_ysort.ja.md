@@ -4,11 +4,11 @@ weight: 4
 draft: false
 ---
 
-## Problem
+## 課題
 
 多くの2Dゲームでは「3/4視点」と呼ばれるアングルが採用されており、カメラが少し斜め上から見下ろしているような構図になっています。これを実現するためには、より「奥」にあるオブジェクトを先に描画し、手前のオブジェクトの後ろに配置が必要です。実際には、これは「y軸ソート」（描画順序をオブジェクトの`y座標`に紐付けること）を意味します。画面上の高い位置にあるものほど遠くに位置するため、レンダリング順序もそれに応じて低く設定されることになります。
 
-Here's an example of the problem:
+以下のような問題が発生します。
 
 ![alt](/godot_recipes/4.x/img/ysort_01.png)
 
@@ -16,7 +16,7 @@ Here's an example of the problem:
 
 ![alt](/godot_recipes/4.x/img/ysort_06.png)
 
-## Solution
+## 解決策
 
 Godotにはレンダリング順序を変更する組み込みオプションが用意されています。任意の{{< gd-icon CanvasItem >}}`CanvasItem`ノード（{{< gd-icon Node2D >}}`Node2D`または{{< gd-icon Control >}}`Control`）に対して、**Y軸ソート有効化** プロパティを有効にできます。この機能が有効になると、すべての子ノードがY軸に沿って並べ替えられます。
 
@@ -32,10 +32,10 @@ Godotにはレンダリング順序を変更する組み込みオプションが
 
 ![alt](/godot_recipes/4.x/img/ysort_05.png)
 
-Now things look a lot better:
+だいぶ良くなりました。
 
 ![alt](/godot_recipes/4.x/img/ysort_02.gif)
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコード: [https://github.com/godotrecipes/using_ysort](https://github.com/godotrecipes/using_ysort)

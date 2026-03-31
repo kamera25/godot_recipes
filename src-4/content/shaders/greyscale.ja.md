@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 78
 ---
 
-## Problem
+## 課題
 
 画像のグレースケール変換に使用するシェーダーが必要です。
 
-## Solution
+## 解決策
 
 まずは `canvas_item`（2D）用シェーダーから始めてください。グレースケールに変換しつつピクセルのコントラストを維持するには、画素値を**平均化**が必要です。カラーチャンネルをすべて加算し、3で割ることで実現できます。
 
@@ -35,6 +35,6 @@ COLOR = texture(SCREEN_TEXTURE, SCREEN_UV);
 
 ![alt](/godot_recipes/3.x/img/shader_greyscale02.png)
 
-## Related Recipes
+## 関連するレシピ
 
 - [シェーダー入門](/godot_recipes/4.x/ja/shaders/intro/)

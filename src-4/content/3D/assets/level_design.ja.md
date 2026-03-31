@@ -4,9 +4,9 @@ weight: 15
 draft: true
 ---
 
-## Problem
+## 課題
 
-## Solution
+## 解決策
 
 レベル設計には、以下の選択肢をいくつか検討する必要があります。
 

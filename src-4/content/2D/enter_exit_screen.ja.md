@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 15
 ---
 
-## Problem
+## 課題
 
 オブジェクトが画面内に入ったり出たりするタイミングを検知したい場合。
 
-## Solution
+## 解決策
 
 この目的のためのノードが用意されています。{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`。このノードをオブジェクトにアタッチすれば、`screen_entered`シグナルと`screen_exited`シグナルを利用可能になります。
 #### 例 1

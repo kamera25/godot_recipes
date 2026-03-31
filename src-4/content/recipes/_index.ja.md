@@ -10,6 +10,6 @@ draft = true
 
 他のカテゴリーに当てはまらないその他のレシピ。
 
-#### In this section:
+#### 目次 ：
 
 {{% children  sort="weight" %}}

@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 47
 ---
 
-## Problem
+## 課題
 
 マウス入力を検出したい。
 
-## Solution
+## 解決策
 
 `InputEventMouse` はマウスイベントの基本クラスです。これには `position` および `global_position` プロパティが含まれています。このクラスを継承するサブクラスとして、`InputEventMouseButton` と `InputEventMouseMotion` の2つが存在します。
 

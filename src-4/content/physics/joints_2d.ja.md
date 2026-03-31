@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 70
 ---
 
-## Problem
+## 課題
 
 Godotの`Joint2D`ノードについて理解したい。
 
-## Solution
+## 解決策
 
 ジョイントは、接続された物理オブジェクトの動きを制限するために使います。任意のジョイントノードには、`PhysicsObject2D` から拡張される2つのボディを結合が必要です。
 

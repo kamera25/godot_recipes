@@ -4,11 +4,11 @@ weight: 5
 draft: false
 ---
 
-## Problem
+## 課題
 
 アニメーションの数が増えすぎて、シーン間の切り替え管理が困難になってきていませんか？コードが大量の `if` 文で埋め尽くされ、少し変更を加えるたびに全体が壊れてしまいそうになっていませんか？
 
-## Solution
+## 解決策
 
 アニメーション状態機械を作成するには {{< gd-icon AnimationTree >}}`AnimationTree` を使用してください。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御することが可能になります。
 
@@ -106,11 +106,11 @@ func get_input():
 
 AnimationTreeStateMachine を使用して以下の処理を管理できます。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/ai_behavior_demos](https://github.com/godotrecipes/ai_behavior_demos)
 
-## Related recipes
+## 関連レシピ
 
 - [スプライトシートアニメーション](/godot_recipes/4.x/ja/animation/spritesheet_animation/)
 - [見下ろし型キャラクター操作](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)

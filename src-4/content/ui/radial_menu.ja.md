@@ -4,11 +4,11 @@ weight: 13
 draft: false
 ---
 
-## Problem
+## 課題
 
 オプションを選択するため、「リングコマンド」を実装したい。
 
-## Solution
+## 解決策
 
 リングコマンドは様々なゲームで使用されており、複数のボタンを選択するためのインターフェースとして機能します。例えば、ゲーム内のNPCをクリックすると、会話・調査・攻撃など、取るべき行動を選択できるようになります。
 
@@ -110,10 +110,10 @@ func hide_menu():
 
 ![alt](/godot_recipes/4.x/img/ui_radial_menu_02.gif)
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらでダウンロードできます。[https://github.com/godotrecipes/ui_radial_menu](https://github.com/godotrecipes/ui_radial_menu)
 
-## Related recipes
+## 関連レシピ
 
 * [UI：クールタイムボタン](/godot_recipes/4.x/ja/ui/cooldown_button/)

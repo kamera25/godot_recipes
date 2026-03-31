@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 53
 ---
 
-## Problem
+## 課題
 
 剣やパンチなどの近接攻撃を実装したい。
 
-## Solution
+## 解決策
 
 本例では、既に攻撃アニメーションが設定されたキャラクターが存在すると仮定します。説明のために、以下の2種類の攻撃を使用する：
 
@@ -47,11 +47,11 @@ func _on_SwordHit_area_entered(area):
 
 ![alt](/godot_recipes/3.x/img/melee_attack_05.gif)
 
-## Related recipes
+## 関連レシピ
 
 [見下ろし型キャラクター制御](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)
 [アニメーション状態の管理方法](http://kidscancancode.org/godot_recipes/animation/animation_state_machine/)
 
-#### Like video?
+#### この動画が気に入ったら？
 
 {{< youtube AaJopFFkmNo >}}

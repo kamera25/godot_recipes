@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 80
 ---
 
-## Problem
+## 課題
 
 オブジェクトが破壊されたり収集された際に再生するために `AudioStreamPlayer` をモブ/コインなどに追加しました。ただ、対象のオブジェクトを削除すると、オーディオプレイヤーも同時に削除され、音が途切れる問題が発生します。より簡単に音声を管理できる方法を教えてください。
 
-## Solution
+## 解決策
 
 この問題を解決するため、SceneTreeのどこからでもアクセス可能なノードを使用します。このノードは一連の`AudioStreamPlayer`ノードと、再生するサウンドストリームのキューを管理します。
 
@@ -80,10 +80,10 @@ AudioManager.play("res://path/to/sound")
  -->
 
 
-<!-- #### Like video?
+<!-- #### Videoが気に入ったら？ -->
 
 {{< youtube 7axJJYont6Y >}} -->
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/audio_manager](https://github.com/godotrecipes/audio_manager)

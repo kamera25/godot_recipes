@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 22
 ---
 
-## Problem
+## 課題
 
 2D見下ろし方式カーコントローラーを作成したい。
 
-## Solution
+## 解決策
 
 この問題に取り組む際、初心者はしばしば実際の車とはかけ離れた挙動のゲームを作ってしまいがちです。アマチュアが作ったカーゲームでよく見られる典型的な失敗例をご紹介します。
 
@@ -193,7 +193,7 @@ var braking = -450
 var max_speed_reverse = 250
 ```
 
-add input to `get_input()`:
+`get_input()`で入力できるようにしましょう。
 
 ```gdscript
     if Input.is_action_pressed("brake"):

@@ -4,11 +4,11 @@ weight: 4
 draft: false
 ---
 
-## Problem
+## 課題
 
 必要になるのが「追跡ミサイル」です。これは移動する標的を自動で追尾する砲弾です。
 
-## Solution
+## 解決策
 
 この例では、プロジェクトイルとして {{< gd-icon Area2D >}}`Area2D` ノードを使用します。エリアは通常、衝突検出が必要な弾丸に適しています。もし跳ね返る/反射するタイプの弾丸も必要であれば、`PhysicsBody` 型のノードの方が適しているかもしれません。
 
@@ -153,7 +153,7 @@ func explode():
 ```
 
 
-## Related recipes
+## 関連レシピ
 
 - [スプライトシートアニメーション](/godot_recipes/4.x/ja/animation/spritesheet_animation/)
 - [見下ろし型キャラクター操作](/godot_recipes/4.x/ja/2d/topdown_movement/#option-2-rotate-and-move)

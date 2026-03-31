@@ -4,11 +4,11 @@ weight: 4
 draft: false
 ---
 
-## Problem
+## 課題
 
 マウスでリジッドボディを選択して移動させたい場合。
 
-## Solution
+## 解決策
 
 リジッドボディを扱う際には注意が必要です。Godotの物理演算エンジンがこれらの動きを制御しており、これに干渉すると予期しない結果を招くことがあります。重要なのは、オブジェクトの`mode`プロパティを活用する点です。これは2Dでも3Dでも同様に適用されます。
 
@@ -101,9 +101,9 @@ func _unhandled_input(event):
 
 <video controls src="/godot_recipes/4.x/img/rbody_drag.webm"></video>
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードできます。 [https://github.com/godotrecipes/rigidbody_drag_drop](https://github.com/godotrecipes/rigidbody_drag_drop)
 
-## Related recipes
+## 関連レシピ
 

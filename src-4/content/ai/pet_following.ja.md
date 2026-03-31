@@ -4,13 +4,13 @@ weight: 10
 draft: false
 ---
 
-## Problem
+## 課題
 
 ゲーム要素としてペットやミニオンを追加します。なので、キャラクターに追従させる必要があります。
 
 <video controls src='/godot_recipes/4.x/img/pet_follow.webm'></video>
 
-## Solution
+## 解決策
 
 まず、キャラクターに {{< gd-icon Marker2D >}}`Marker2D` を追加します。このマーカーは、ペットがプレイヤーの近くに「滞在したい」場所を示すものです。
 
@@ -58,6 +58,6 @@ func _physics_process(delta):
 
 ワールドによっては、ペットが障害物に引っかかってしまう場合があります。より堅牢な追従機能が必要な場合は、ナビゲーションシステムをご利用ください。具体的な実装例については[タイルマップナビゲーション](/godot_recipes/4.x/ja/ai/tilemap_navigation/)を参照してください。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/ai_behavior_demos](https://github.com/godotrecipes/ai_behavior_demos)

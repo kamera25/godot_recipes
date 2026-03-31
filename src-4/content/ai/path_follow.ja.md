@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 72
 ---
 
-## Problem
+## 課題
 
 以下のような事前に定義された経路を移動するキャラクターが必要です。警備員が巡回する場面や、車両が道路を走るシーンなど。
 
-## Solution
+## 解決策
 
 この問題に対処する方法は複数あります。本ソリューションでは、エディター内でパスを描画するための便利な方法として、Godotの{{< gd-icon Path2D >}} `Path2D`ノード（3Dの場合は{{< gd-icon Path3D >}} `Path`）を使用します。
 
@@ -59,5 +59,5 @@ func _physics_process():
     velocity = move_and_slide(velocity)
 ```
 
-## Related recipes
+## 関連レシピ
 

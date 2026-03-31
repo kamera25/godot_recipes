@@ -4,13 +4,13 @@ weight: 12
 draft: false
 ---
 
-## Problem
+## 課題
 
 ダメージを受けたとき、数字を浮かせながら表示(Floating Combat Text)させたい。
 
 ![alt](/godot_recipes/4.x/img/fct_demo.gif)
 
-## Solution
+## 解決策
 
 この問題に取り組む方法はいくつかあります。例えば、ビットマップフォントを使用し、各数字をその構成桁から画像として生成した上で、{{< gd-icon Sprite2D >}}`Sprite2D`ノードを使って表示・移動させるといった手法が考えられます。
 
@@ -102,7 +102,7 @@ func show_value(value, crit=false):
 $FCTManager.show_value(dmg, crit)
 ```
 
-## Wrapping up
+## まとめ
 
 【最適化】多数の敵や弾が出現する場合、テキスト表示オブジェクトの頻繁な生成と破棄によりパフォーマンスが低下する可能性があります。この場合は、マネージャ内で固定数のテキストオブジェクトを生成し、アニメーション終了時に破棄するのではなく、表示／非表示を切り替える方法が有効です。
 
@@ -111,13 +111,13 @@ $FCTManager.show_value(dmg, crit)
 本デモで使用しているアートワークは[Luis Zuno氏](https://www.patreon.com/ansimuz)による作品です。
 {{% /notice %}}
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 以下からプロジェクトのサンプルコードをダウンロードできます。[https://github.com/godotrecipes/floating_combat_text](https://github.com/godotrecipes/floating_combat_text)
 
 ![alt](/godot_recipes/4.x/img/fct_demo.png)
 
-<!-- ## Related recipes
+## 関連レシピ
 
 - [UI: ラベル](/godot_recipes/ja/4.x/ui/labels/)
 - [UI: ユニットHPバー](/godot_recipes/ja/4.x/ui/unit_healthbar/) -->

@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 42
 ---
 
-## Problem
+## 課題
 
 ［キネマティックカー](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)を持っているものの、特に高速走行時に「レール上を走っている」ような感覚が気にいりません。ドリフトやトラクション損失を可能にするため、ある程度の「スリップ」特性が欲しい。
 
-## Solution
+## 解決策
 
 車がドリフト走行している場合、進行方向（向いている向き）と速度ベクトル（移動方向）は必ずしも一致しません。ハンドルを切ると車は旋回しますが、速度ベクトルはすぐに追従してくれません。代わりに `lerp()` 関数を使用して、徐々に目標方向への速度を調整します。
 
@@ -66,12 +66,12 @@ velocity = lerp(velocity, new_heading * velocity.length(), traction)
 * AI／NPCの制御（ステアリング、障害物回避、走行ライン追従）
 * 斜面やスロープ地形への対応機能
 
-## Related recipes
+## 関連レシピ
 
 - [Kinematic Car: Base](/godot_recipes/3.x/3d/kinematic_car/car_base/)
 - [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)
 - [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)
 - [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)
 
-#### Like video?
+#### この動画が気に入ったら？
 

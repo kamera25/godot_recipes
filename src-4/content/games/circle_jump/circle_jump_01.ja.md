@@ -196,6 +196,6 @@ func _process(delta):
 
 [https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)
 
-#### Like video?
+#### この動画が気に入ったら？
 
 {{< youtube wU6otgwaNQg >}}

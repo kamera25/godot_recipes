@@ -9,6 +9,6 @@ pre = "<i class='fas fa-project-diagram fa-fw'></i>&nbsp"
 
 自律的なアクションと、知的なキャラクターの実装を。
 
-#### In this section:
+#### 目次 ：
 
 {{% children  sort="weight" %}}

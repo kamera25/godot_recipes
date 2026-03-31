@@ -12,7 +12,7 @@ pre = "<i class='fas fa-graduation-cap fa-fw'></i>&nbsp"
 
 Godotゲームエンジンの入門ガイドです。これまでゲームエンジンを使ったことがない方、あるいはGodotを初めて使う方にとって、最適なスタート地点となるでしょう。
 
-#### In this section:
+#### 目次 ：
 
 {{% children  sort="weight" depth="1" %}}
 

@@ -4,11 +4,11 @@ weight: 5
 draft: false
 ---
 
-## Problem
+## 課題
 
 2Dプラットフォーマーゲームには動く床が必要です。
 
-## Solution
+## 解決策
 
 この問題には複数のアプローチ方法があります。ここではプラットフォーム部分に {{< gd-icon AnimatableBody2D >}}`AnimatableBody2D` を使用し、{{< gd-icon Tween >}}`Tween` で移動させる手法を採用します。これにより、多様な動作パターンを実現しながら、必要なコード量を最小限に抑えることができます。
 
@@ -61,11 +61,11 @@ func start_tween():
 
 <video controls src="/godot_recipes/4.x/img/moving_platform4.webm" autoplay="true"></video>
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードできます。 [https://github.com/godotrecipes/2d_moving_platforms](https://github.com/godotrecipes/2d_moving_platforms)
 
-## Related recipes
+## 関連レシピ
 
 - [プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)
 

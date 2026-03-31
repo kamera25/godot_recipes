@@ -9,6 +9,6 @@ pre = "<i class='fas fa-toolbox fa-fw'></i>&nbsp"
 
 あらゆるプロジェクトに応用できるGodotの基本テクニックと便利なコツ
 
-#### In this section:
+#### 目次 ：
 
 {{% children  sort="weight" %}}

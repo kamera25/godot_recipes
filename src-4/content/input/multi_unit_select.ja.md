@@ -4,11 +4,11 @@ weight: 7
 draft: false
 ---
 
-## Problem
+## 課題
 
 RTS(リアルタイムストラテジー)のように、複数ユニットを選択するためにクリック＆ドラッグしたい。
 
-## Solution
+## 解決策
 
 リアルタイムストラテジー（RTS）ゲームでは、複数ユニットに同時に命令する事があります。一般的な操作手法として、対象ユニットをマウスでクリックしてドラッグすることで選択範囲を決定。またユニットを選択したら、マップ上をクリックすることで移動コマンドを実行させる事が多いです。
 
@@ -123,15 +123,15 @@ func _unhandled_input(event):
 
 ここでの `else` 条件は、`selected` が 0 より大きいときにマウスをクリックした場合にトリガーされます。各項目の `target` を設定した後、ユニットを選択解除することで、再度最初から開始できるようにしています。
 
-## Wrapping up
+## まとめ
 
 このテクニックはリアルタイムストラテジーゲーム（RTS）やその他のジャンルのゲームに応用できます。以下から完全版プロジェクトをダウンロードして、ゲームを作る際に活用してください。
 
-## <i class="fas fa-code-branch"></i> Download This Project
+## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
 
 プロジェクトコードはこちらからダウンロードできます。 [https://github.com/godotrecipes/multi_unit_support](https://github.com/godotrecipes/multi_unit_support)
 
 
-## Related recipes
+## 関連レシピ
 
 - [マウス入力](/godot_recipes/4.x/ja/input/mouse_input/)
