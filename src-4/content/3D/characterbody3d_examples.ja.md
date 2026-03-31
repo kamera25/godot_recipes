@@ -81,7 +81,7 @@ func get_input(delta):
 前方/後方移動にはキャラクターのローカル座標系の Z 軸を使用しています。
 これにより、身体の「ローカル」前方方向へ正しく移動します。
 
-Here's the tank in action. We've made a test scene with a {{< gd-icon StaticBody3D >}}`StaticBody3D` plane for the ground and an {{< gd-icon Camera3D >}}`Camera3D` using the [Interpolated Camera](/godot_recipes/4.x/3d/interpolated_camera/index.html) recipe.
+「これが動作中の戦車です。テスト用シーンとして、地面には {{< gd-icon StaticBody3D >}} 球体、カメラには [補間付きカメラ](/godot_recipes/4.x/3d/interpolated_camera/index.html) レシピを使用した `Camera3D` を配置しています。
 
 <video controls src="/godot_recipes/4.x/img/3d_kinematic_09.webm"></video>
 

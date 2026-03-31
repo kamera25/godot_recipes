@@ -4278,7 +4278,7 @@ msgstr "`move_and_slide()`メソッドを使用することで、移動コード
 
 #: 3D/characterbody3d_examples.md
 msgid "Here's the tank in action. We've made a test scene with a {{< gd-icon StaticBody3D >}}`StaticBody3D` plane for the ground and an {{< gd-icon Camera3D >}}`Camera3D` using the [Interpolated Camera](/godot_recipes/4.x/3d/interpolated_camera/index.html) recipe."
-msgstr "Here's the tank in action. We've made a test scene with a {{< gd-icon StaticBody3D >}}`StaticBody3D` plane for the ground and an {{< gd-icon Camera3D >}}`Camera3D` using the [Interpolated Camera](/godot_recipes/4.x/3d/interpolated_camera/index.html) recipe."
+msgstr "「これが動作中の戦車です。テスト用シーンとして、地面には {{< gd-icon StaticBody3D >}} 球体、カメラには [補間付きカメラ](/godot_recipes/4.x/3d/interpolated_camera/index.html) レシピを使用した `Camera3D` を配置しています。"
 
 #: 3D/characterbody3d_examples.md
 msgid "CharacterBody3D: Movement"
@@ -9327,7 +9327,7 @@ msgstr "パスのデータはこのリソースオブジェクトに保持され
 
 #: kyn/path2d.md
 msgid "This is done by making the plane {{< gd-icon Sprite2D >}}`Sprite` a child of the {{< gd-icon PathFollow2D >}}`PathFollow2D` and adding the following to `_process()`:"
-msgstr "This is done by making the plane {{< gd-icon Sprite2D >}}`Sprite` a child of the {{< gd-icon PathFollow2D >}}`PathFollow2D` and adding the following to `_process()`:"
+msgstr "これは、平面ノードを {{< gd-icon Sprite2D >}} スプライトとして {{< gd-icon PathFollow2D >}} 経路追従オブジェクトの子要素にし、以下の内容を `_process()` 関数に追加することで実現しています。"
 
 #: kyn/path2d.md
 msgid "Consider this example, from the [AI: Context-based Steering](/godot_recipes/3.x/ai/context_map/) recipe:"
@@ -17145,7 +17145,7 @@ msgstr "- [CharacterBody2Dの使用例](/godot_recipes/3.x/physics/godot3_kinema
 
 #: basics/understanding_delta.md
 msgid "<!-- - [Using CharacterBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->"
-msgstr ""
+msgstr "<!-- - [Using CharacterBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->"
 
 #: basics/custom_resources.md
 msgid "![alt](/godot_recipes/3.x/img/custom_resource_01.png)"
@@ -17237,7 +17237,7 @@ msgstr "タンク内（または射撃を行うオブジェクト）の任意の
 
 #: 3D/3d_shooting.md
 msgid "For this example, we'll use the \"Mini Tank\" that we set up in [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)."
-msgstr ""
+msgstr "この例では、[CharacterBody3D：移動操作](/godot_recipes/3.x/3d/kinematic_body/) で設定した「ミニ戦車」を使用します。"
 
 #: 3D/3d_shooting.md
 msgid "<video controls src=\"/godot_recipes/3.x/img/3d_shoot_03.webm\"></video>"
@@ -17266,6 +17266,8 @@ msgid ""
 "- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)\n"
 "- [Godot 101: Intro to 3D](/godot_recipes/3.x/g101/3d/)"
 msgstr ""
+"- [CharacterBody3D: 移動方法](/godot_recipes/3.x/3d/kinematic_body/)\n"
+"- [初めてのGodot: 3D入門](/godot_recipes/3.x/g101/3d/)"
 
 #: 3D/rolling_cube.md
 msgid ""
@@ -17486,7 +17488,7 @@ msgstr "![alt](/godot_recipes/3.x/img/3d_07_02.png)"
 
 #: g101/3d/101_3d_07.md
 msgid "Start with a `CharacterBody3D`. To this we'll add two `CollisionShape` nodes (\"Body\" and \"Feet\"). We also want to have a `Camera`, but we need to be careful about how we handle rotation. The *character* should rotate in **Y**, but only the camera should rotate in **X** (for looking up and down). To make this work, add a `Node3D` node, which we'll call \"Pivot\", and add the `Camera` to that."
-msgstr "まず `CharacterBody3D` オブジェクトを用意します。このオブジェクトに以下の2つの `CollisionShape` ノードを追加します：「ボディ用」と「足用」です。また、カメラも必要ですが、回転処理には注意が必要です。*キャラクター*は**Y軸**に沿ってのみ回転し、一方でカメラのみが**X軸**方向に回転する必要があります（上下方向の視点移動のため）。これを実現するために、新たに `Node3D` オブジェクトを作成し、「ピボット」と呼ぶことにします。このピボットノードにカメラを追加してください。"
+msgstr "`CharacterBody3D` オブジェクトを用意します。このオブジェクトに以下の2つの `CollisionShape` ノードを追加します：「ボディ用」と「足用」です。また、カメラも必要ですが、回転処理には注意が必要です。*キャラクター*は**Y軸**に沿ってのみ回転し、一方でカメラのみが**X軸**方向に回転する必要があります（上下方向の視点移動のため）。これを実現するために、新たに `Node3D` オブジェクトを作成し、「ピボット」と呼ぶことにします。このピボットノードにカメラを追加してください。"
 
 #: g101/3d/101_3d_06.md
 msgid ""
@@ -17695,6 +17697,9 @@ msgid ""
 "- [Inputs: Introduction](/godot_recipes/3.x/input/input_intro/)\n"
 "- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/) -->"
 msgstr ""
+"- [Interpolated Camera](/godot_recipes/3.x/3d/interpolated_camera/)\n"
+"- [Inputs: Introduction](/godot_recipes/3.x/input/input_intro/)\n"
+"- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/) -->"
 
 #: ai/context_map.md kyn/path2d.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_10.gif)"
@@ -17724,7 +17729,7 @@ msgstr "![alt](/godot_recipes/3.x/img/rigidbody_ship1.gif)"
 
 #: kyn/rigidbody2d.md
 msgid "> You should not change a RigidBody2D’s `position` or `linear_velocity` every frame or even very often. If you need to directly affect the body’s state, use `_integrate_forces`, which allows you to directly access the physics state."
-msgstr ""
+msgstr "> RigidBody2D の `position` や `linear_velocity` を毎フレーム、あるいは頻繁に変更するべきではありません。もし直接ボディの状態を操作する必要がある場合は、物理演算状態に直接アクセスできる `_integrate_forces` を使用してください。"
 
 #: kyn/rigidbody2d.md
 msgid ""
@@ -17740,10 +17745,7 @@ msgstr ""
 
 #: kyn/raycast2d.md
 msgid "Add a {{< gd-icon RayCast2D >}}`RayCast2D` node and take a look at the Inspector:"
-msgstr ""
-"以下の操作を行います：\n"
-"1. 「`RayCast2D`」ノードを追加する。\n"
-"2. インスペクターを確認する："
+msgstr "{{< gd-icon RayCast2D >}}`RayCast2D` ノードを追加して、インスペクターを確認します。"
 
 #: ai/homing_missile.md
 msgid "The node setup and behavior of the missile is the same you would use for a \"dumb\" bullet. If you're creating many bullet types, you can use inheritance to base all your projectiles on the same core setup."
@@ -18323,6 +18325,8 @@ msgid ""
 "![alt](/godot_recipes/3.x/img/cj_02_03.png)\n"
 "![alt](/godot_recipes/3.x/img/cj_02_04.gif)"
 msgstr ""
+"![alt](/godot_recipes/3.x/img/cj_02_03.png)\n"
+"![alt](/godot_recipes/3.x/img/cj_02_04.gif)"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "![alt](/godot_recipes/3.x/img/cj_02_01.png?width=200)"

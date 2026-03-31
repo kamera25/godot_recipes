@@ -68,7 +68,7 @@ ghcommentid: 94
 
 ![alt](/godot_recipes/3.x/img/kyn_path2d_04.gif)
 
-This is done by making the plane {{< gd-icon Sprite2D >}}`Sprite` a child of the {{< gd-icon PathFollow2D >}}`PathFollow2D` and adding the following to `_process()`:
+これは、平面ノードを {{< gd-icon Sprite2D >}} スプライトとして {{< gd-icon PathFollow2D >}} 経路追従オブジェクトの子要素にし、以下の内容を `_process()` 関数に追加することで実現しています。
 
 ```gdscript
 func _process(delta):
