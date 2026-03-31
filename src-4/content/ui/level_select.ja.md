@@ -28,7 +28,7 @@ LevelBox: {{< gd-icon PanelContainer >}} PanelContainer
 
 {{< gd-icon TextureRect >}} テクスチャレクトはロックアイコンの表示用、{{< gd-icon Label >}} ラベルはレベル番号の表示用に使います。一方が表示されている間は、もう一方は非表示になります。
 
-ご自由にスタイルを設定できます。例として：
+ご自由にスタイルを設定できます。例としては。
 
 ![alt](/godot_recipes/4.x/img/level_select_01.gif)
 

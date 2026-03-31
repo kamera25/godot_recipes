@@ -31,7 +31,7 @@ draft: false
 
 ### ノード設定
 
-The car is made with two main nodes: a {{< gd-icon RigidBody3D >}}`RigidBody3D` sphere for the physics, and a {{< gd-icon MeshInstance3D >}}`MeshInstance3D` to display the car body. Here's the scene layout:
+この車は主に 2 つのノードで構成されています。物理演算用の {{< gd-icon RigidBody3D >}}`RigidBody3D` 球体と、車体を表示するための {{< gd-icon MeshInstance3D >}}`MeshInstance3D` です。以下にシーンレイアウトを示します。
 
 ```
 {{< gd-icon RigidBody3D >}} RigidBody3D (Car)
@@ -141,7 +141,7 @@ func _process(delta):
 この時点で実際に操作を試してみます。前進・後退は可能になるはずです（ただしまだステアリング操作はできません）。
 {{% /notice %}}
 
-Next, still in the `_process()` function, we'll rotate the car mesh based on the rotation input. We'll use `slerp()` (spherical linear interpolation) to do this smoothly:
+次に、引き続き `_process()` 関数内で、回転入力に基づいて車のメッシュを回転させます。この処理は `slerp()`（球面線形補間）を使用して滑らかに行います。
 
 ```gdscript
 # rotate car mesh
@@ -203,9 +203,9 @@ func align_with_y(xform, new_y):
 
 ![alt](/godot_recipes/4.x/img/3d_sphere_car_05.gif)
 
-### 3. 体幹を傾ける
+### 3. 車体を傾ける
 
-このスクリプトでは視覚的な魅力を大幅に向上させます。ターン速度に基づいて車のボディを傾斜させる機能を追加します。スクリプト上部に変数を追加して：
+このスクリプトでは視覚的な魅力を大幅に向上させます。ターン速度に基づいて車のボディを傾斜させる機能を追加します。スクリプト上部に変数を追加しましょう。
 
 ```gdscript
 var body_tilt = 35

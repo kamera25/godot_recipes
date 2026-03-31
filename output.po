@@ -1405,7 +1405,7 @@ msgstr "サイズを変更するとどうなるか、次に見てみてくださ
 
 #: ui/minimap.md
 msgid "If our `Grid` size is currently `(150, 150)` (you can check this in its **Size** property), then its center will be `(75, 75)`. Put the `PlayerMarker`'s **Position** there:"
-msgstr "もし現在のグリッドサイズが (150, 150) であれば（これは［サイズ］プロパティで確認できます）、中心座標は (75, 75) になります。ここにプレイヤーマーカーの位置を設定して："
+msgstr "もし現在のグリッドサイズが (150, 150) であれば（これは［サイズ］プロパティで確認できます）、中心座標は (75, 75) になります。ここにプレイヤーマーカーの位置を設定しましょう。"
 
 #: ui/minimap.md
 msgid "Some other things you might want to add:"
@@ -2123,7 +2123,7 @@ msgstr "シーンを実行する際は、「次へ」ボタンと「戻る」ボ
 
 #: ui/level_select.md
 msgid "You can style these as you like, here's an example:"
-msgstr "ご自由にスタイルを設定できます。例として："
+msgstr "ご自由にスタイルを設定できます。例としては。"
 
 #: ui/cooldown_button.md
 msgid ""
@@ -3976,7 +3976,7 @@ msgstr "アーケードスタイルのカーゲーム"
 
 #: 3D/3d_sphere_car.md
 msgid "The car is made with two main nodes: a {{< gd-icon RigidBody3D >}}`RigidBody3D` sphere for the physics, and a {{< gd-icon MeshInstance3D >}}`MeshInstance3D` to display the car body. Here's the scene layout:"
-msgstr "The car is made with two main nodes: a {{< gd-icon RigidBody3D >}}`RigidBody3D` sphere for the physics, and a {{< gd-icon MeshInstance3D >}}`MeshInstance3D` to display the car body. Here's the scene layout:"
+msgstr "この車は主に 2 つのノードで構成されています。物理演算用の {{< gd-icon RigidBody3D >}}`RigidBody3D` 球体と、車体を表示するための {{< gd-icon MeshInstance3D >}}`MeshInstance3D` です。以下にシーンレイアウトを示します。"
 
 #: 3D/3d_sphere_car.md
 msgid "### Inputs"
@@ -4042,7 +4042,7 @@ msgstr "**修正が必要な箇所**"
 
 #: 3D/3d_sphere_car.md
 msgid "This one adds lots of visual appeal. We're going to tilt the car's body based on the speed of the turn. Add a variable at the top of the script:"
-msgstr "このスクリプトでは視覚的な魅力を大幅に向上させます。ターン速度に基づいて車のボディを傾斜させる機能を追加します。スクリプト上部に変数を追加して："
+msgstr "このスクリプトでは視覚的な魅力を大幅に向上させます。ターン速度に基づいて車のボディを傾斜させる機能を追加します。スクリプト上部に変数を追加しましょう。"
 
 #: 3D/3d_sphere_car.md
 msgid ""
@@ -4074,7 +4074,7 @@ msgstr ""
 
 #: 3D/3d_sphere_car.md
 msgid "Next, still in the `_process()` function, we'll rotate the car mesh based on the rotation input. We'll use `slerp()` (spherical linear interpolation) to do this smoothly:"
-msgstr "Next, still in the `_process()` function, we'll rotate the car mesh based on the rotation input. We'll use `slerp()` (spherical linear interpolation) to do this smoothly:"
+msgstr "次に、引き続き `_process()` 関数内で、回転入力に基づいて車のメッシュを回転させます。この処理は `slerp()`（球面線形補間）を使用して滑らかに行います。"
 
 #: 3D/3d_sphere_car.md
 msgid ""
@@ -4090,7 +4090,7 @@ msgstr ""
 
 #: 3D/3d_sphere_car.md
 msgid "#### 3. Tilt the body"
-msgstr "### 3. 体幹を傾ける"
+msgstr "### 3. 車体を傾ける"
 
 #: 3D/3d_sphere_car.md
 msgid "Next, some variables configuring the car's behavior. See the comments describing each one's purpose."
