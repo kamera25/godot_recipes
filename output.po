@@ -468,7 +468,7 @@ msgstr "2. 変更は簡単にはできません。ツリーの構造を変更す
 
 #: basics/node_communication.md
 msgid "If you do this, you'll soon find that node references like this break easily. As soon as you change one thing about your scene tree, none of those references may be valid anymore."
-msgstr "このようにノード参照を行うと、すぐに問題が発生することに気づくでしょう。シーンツリーの何かを変更すると、これらの参照がすべて無効になる可能性があるからです。"
+msgstr "このようにノード参照すると、すぐに問題が発生することに気づくでしょう。シーンツリーの何かを変更すると、これらの参照がすべて無効になる可能性があるからです。"
 
 #: basics/node_communication.md
 msgid "In the `UI` script we have:"
@@ -536,7 +536,7 @@ msgstr "基本的に、ノードはその子ノードを管理するべきです
 
 #: basics/node_communication.md
 msgid "Let's assume every enemy has an `explode()` function that handles what happens when it dies (playing an animation, spawning dropped items, etc). Now that every enemy is in the group, we can implement our smart bomb function like this:"
-msgstr "敵キャラ全員が死亡時の処理（アニメーション再生、ドロップアイテムの生成など）を行う「explode()」関数を持っていると仮定します。これで全ての敵がグループに登録されたので、スマートボム機能を以下のように実装できます。"
+msgstr "敵キャラ全員が死亡時の処理（アニメーション再生、ドロップアイテムの生成など）する「explode()」関数を持っていると仮定します。これで全ての敵がグループに登録されたので、スマートボム機能を以下のように実装できます。"
 
 #: 2D/2d_align_surface.md 2D/2d_draw_trajectory.md 2D/2d_shooting.md
 #: 2D/ballistic_bullet.md 2D/car_steering.md
@@ -626,7 +626,7 @@ msgstr "加速を適用する際に `delta` を考慮しない場合、フレー
 
 #: basics/understanding_delta.md
 msgid "When using the `_process()` function, it automatically includes a parameter called `delta` that's passed in from the engine (so does `_physics_process()`, which is used for physics-related code). This is a floating point value representing the length of time since the previous frame. Typically, this will be approximately 1/60 or `0.0167` seconds."
-msgstr "`_process()`関数を使用する場合、自動的にエンジンから渡されるパラメーターとして`delta`が含まれます（これは`_physics_process()`と同様で、物理関連コード用に使用されます）。これは時間間隔を表す浮動小数点数値であり、直前のフレームから経過した時間の長さを示します。通常この値は1/60秒、つまり約0.0167秒に相当します。"
+msgstr "`_process()`関数を使用する場合、自動的にエンジンから渡されるパラメーターとして`delta`が含まれます（これは`_physics_process()`と同様で、物理関連コード用に使います）。これは時間間隔を表す浮動小数点数値であり、直前のフレームから経過した時間の長さを示します。通常この値は1/60秒、つまり約0.0167秒に相当します。"
 
 #: basics/understanding_delta.md
 msgid "Let's change the code to use this calculation:"
@@ -1121,7 +1121,7 @@ msgstr "## シグナルと呼び出し可能オブジェクト"
 
 #: basics/migrating.md
 msgid "The biggest change that catches people who are familiar with the 3.x version of this node is that the `playing` property is gone. It's now much more consistent with {{< gd-icon AnimationPlayer >}}`AnimationPlayer`'s usage - to automatically play an animation, you can toggle autoplay in the **SpriteFrames** panel. In code, use `play()` and `stop()` to control playback."
-msgstr "3.x系バージョンに慣れているユーザーにとって最も大きな変化は、`playing`プロパティが廃止された点です。現在は{{< gd-icon AnimationPlayer >}}`AnimationPlayer`との整合性が大幅に改善されており、アニメーションを自動再生するには**SpriteFrames**パネルでオートプレイ機能を有効にするだけで済みます。コード側では`play()`メソッドと`stop()`メソッドを使用して、再生制御を行う形式に変更されました。"
+msgstr "3.x系バージョンに慣れているユーザーにとって最も大きな変化は、`playing`プロパティが廃止された点です。現在は{{< gd-icon AnimationPlayer >}}`AnimationPlayer`との整合性が大幅に改善されており、アニメーションを自動再生するには**SpriteFrames**パネルでオートプレイ機能を有効にするだけで済みます。コード側では`play()`メソッドと`stop()`メソッドを使用して、再生制御する形式に変更されました。"
 
 #: basics/migrating.md
 msgid "The {{< gd-icon TileMap >}}`TileMap` node is completely overhauled for 4.0. Just about everything, from how you create {{< gd-icon TileSet >}}`TileSet`s to how you draw and interact with tiles is 100% new."
@@ -1486,7 +1486,7 @@ msgstr "二点目は、視覚的な表現を変更する方法です。この場
 
 #: ui/minimap.md
 msgid "The `CanvasLayer` node is there to hold our UI, including the minimap/radar we're making in this recipe."
-msgstr "`CanvasLayer` ノードは、ミニマップ／レーダーなどのUIコンポーネントを保持するために使用されます。このレシピで作成するこれらの要素を収容するためのものです。"
+msgstr "`CanvasLayer` ノードは、ミニマップ／レーダーなどのUIコンポーネントを保持するために使います。このレシピで作成するこれらの要素を収容するためのものです。"
 
 #: ui/minimap.md
 msgid "### UI Layout"
@@ -1949,7 +1949,7 @@ msgstr "{{< youtube C-Sn55e5wnk >}} -->"
 
 #: ui/level_select.md
 msgid "The {{< gd-icon TextureRect >}} TextureRect is for displaying the lock icon, and the {{< gd-icon Label >}} Label for displaying the level number. When one is showing, the other is hidden."
-msgstr "{{< gd-icon TextureRect >}} テクスチャレクトはロックアイコンの表示用、{{< gd-icon Label >}} ラベルはレベル番号の表示用に使用されます。一方が表示されている間は、もう一方は非表示になります。"
+msgstr "{{< gd-icon TextureRect >}} テクスチャレクトはロックアイコンの表示用、{{< gd-icon Label >}} ラベルはレベル番号の表示用に使います。一方が表示されている間は、もう一方は非表示になります。"
 
 #: ui/level_select.md
 msgid ""
@@ -3007,7 +3007,7 @@ msgstr "<video controls src=\"/godot_recipes/4.x/img/3d_kinematic_07.webm\"></vi
 
 #: 3D/3d_align_surface.md
 msgid "The problem is that the tank's collision shape could be colliding with more than one of the terrain's faces. Also, `move_and_slide()` can result in more than one collision in a single frame. This leads to the jittering. We need to choose one face and stick with it."
-msgstr "問題は、タンクの衝突判定形状が地形面のうち複数箇所と干渉している可能性があることです。さらに、`move_and_slide()` 関数では1フレーム内で複数箇所で衝突が発生する場合があり、これが画面表示のカクつき（ジャダー）を引き起こしています。この問題を解決するためには、単一の面を選択し、一貫してその面で判定を行う必要があります。"
+msgstr "問題は、タンクの衝突判定形状が地形面のうち複数箇所と干渉している可能性があることです。さらに、`move_and_slide()` 関数では1フレーム内で複数箇所で衝突が発生する場合があり、これが画面表示のカクつき（ジャダー）を引き起こしています。この問題を解決するためには、単一の面を選択し、一貫してその面で判定する必要があります。"
 
 #: 3D/3d_align_surface.md
 msgid "In Godot, when a body collides, you can get the normal of the collision. This will be the colliding body's normal *at the point of contact*."
@@ -4261,7 +4261,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice warning %}}\n"
-"浮動小数点演算の精度限界により、数値変換を繰り返し回転させると、スケールが変動したり、軸方向が不整合となり歪みが生じる可能性があります。定期的に変換を回転させるスクリプトでは、`orthonormalized()` を使用して誤差が累積する前に補正を行うことが推奨されます。\n"
+"浮動小数点演算の精度限界により、数値変換を繰り返し回転させると、スケールが変動したり、軸方向が不整合となり歪みが生じる可能性があります。定期的に変換を回転させるスクリプトでは、`orthonormalized()` を使用して誤差が累積する前に補正することが推奨されます。\n"
 "{{% /notice %}}"
 
 #: 3D/3d_sphere_car.md
@@ -4863,7 +4863,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice style=\"note\" title=\"\" %}}\n"
-"{{< gd-icon AnimationTree >}} 「AnimationTree」がアクティブになっていると、 {{< gd-icon AnimationPlayer >}} 「AnimationPlayer」でアニメーションを選択できなくなることにご注意ください。変更を加えたりアニメーションをテストする必要がある場合は、作業を行う際にツリーの **有効** プロパティを必ずオフにしてください。\n"
+"{{< gd-icon AnimationTree >}} 「AnimationTree」がアクティブになっていると、 {{< gd-icon AnimationPlayer >}} 「AnimationPlayer」でアニメーションを選択できなくなることにご注意ください。変更を加えたりアニメーションをテストする必要がある場合は、作業する際にツリーの **有効** プロパティを必ずオフにしてください。\n"
 "{{% /notice %}}"
 
 #: 3D/assets/character_animation.md
@@ -6220,7 +6220,7 @@ msgstr "「+」をクリックして別の入力を追加してください。�
 
 #: input/input_actions.md
 msgid "Let's say you're making a top-down character and you write code using `InputActionKey` that uses the arrow keys for movement. You'll quickly find that many players prefer to use \"WASD\" style controls. You can go back into your code and add the additional key checks, but this would result in duplicated/redundant code."
-msgstr "例えば、見下ろし型キャラクターのゲームを開発していて、`InputActionKey`を使って矢印キーで移動操作を行うコードを書いたとします。するとすぐに、多くのプレイヤーが「WASD」スタイルの操作方法を好むことに気づくでしょう。後からコードに戻って追加のキーチェックを実装することもできますが、これでは重複した冗長なコードが生じてしまいます。"
+msgstr "例えば、見下ろし型キャラクターのゲームを開発していて、`InputActionKey`を使って矢印キーで移動操作するコードを書いたとします。するとすぐに、多くのプレイヤーが「WASD」スタイルの操作方法を好むことに気づくでしょう。後からコードに戻って追加のキーチェックを実装することもできますが、これでは重複した冗長なコードが生じてしまいます。"
 
 #: input/input_actions.md
 msgid "If instead you want to detect the action at the moment it occurs, you can use the `_input()` or `_unhandled_input()` callbacks:"
@@ -8665,7 +8665,7 @@ msgstr "### 箇条書き項目"
 
 #: g101/3d/101_3d_04.md
 msgid "{{< gd-icon Area3D >}}`Area3D` nodes are used for _detection_ and _influence_. They can detect when objects overlap, and when an object enters or exits a region. An {{< gd-icon Area3D >}}`Area3D` can also be used to override physics properties, such as gravity or damping, in a region."
-msgstr "{{< gd-icon Area3D >}} `Area3D` ノードは主に以下の目的で使用されます。_検出_ と _影響操作_。オブジェクト同士の重なりを検知したり、特定領域への進入・退出イベントをトリガーできます。また、`Area3D` は物理特性（重力や減衰など）を領域内で上書きするためにも利用できます。"
+msgstr "{{< gd-icon Area3D >}} `Area3D` ノードは主に以下の目的で使います。_検出_ と _影響操作_。オブジェクト同士の重なりを検知したり、特定領域への進入・退出イベントをトリガーできます。また、`Area3D` は物理特性（重力や減衰など）を領域内で上書きするためにも利用できます。"
 
 #: g101/3d/101_3d_04.md
 msgid ""
@@ -9259,7 +9259,7 @@ msgstr "前回のセクションで `Sprite2D` を追加したタブの名前が
 
 #: g101/start/101_04.md
 msgid "Scenes in Godot are typically used to create and organize the various game objects in your project."
-msgstr "Godotにおけるシーンは、主にプロジェクト内の各種ゲームオブジェクトを作成・管理するために使用されます。"
+msgstr "Godotにおけるシーンは、主にプロジェクト内の各種ゲームオブジェクトを作成・管理するために使います。"
 
 #: g101/start/101_04.md
 msgid "For example, a scene representing the player in your game might contain these nodes:"
@@ -9625,7 +9625,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"クロス積は両方のベクトルに垂直な値となるため、この計算を行うには3D空間で作業している必要があります。Godotを含むほとんどの2Dフレームワークでは、`Vector2.cross()` メソッドは結果の大きさを表すスカラー値を返します。\n"
+"クロス積は両方のベクトルに垂直な値となるため、この計算するには3D空間で作業している必要があります。Godotを含むほとんどの2Dフレームワークでは、`Vector2.cross()` メソッドは結果の大きさを表すスカラー値を返します。\n"
 "{{% /notice %}}"
 
 #: Math/dot_cross_product.md
@@ -10362,7 +10362,7 @@ msgstr "したがって、`_integrate_forces()` に移動して以下のよう�
 
 #: kyn/rigidbody2d.md
 msgid "If you want to get collision information from a rigid body, you must set `contact_monitor` to `true`, which enables signals such as `body_entered`. You can also adjust `contacts_reported` to set the number of collisions that will be reported."
-msgstr "衝突情報をリジットボディから取得する場合は、`contact_monitor` を `true` に設定が必要です。これを行うと、`body_entered` などのシグナルが有効になります。さらに、`contacts_reported` を調整することで、報告される衝突の数を指定することもできます。"
+msgstr "衝突情報をリジットボディから取得する場合は、`contact_monitor` を `true` に設定が必要です。これすると、`body_entered` などのシグナルが有効になります。さらに、`contacts_reported` を調整することで、報告される衝突の数を指定することもできます。"
 
 #: kyn/rigidbody2d.md
 msgid "Next, the `input()` function captures the keystates and sets the ship’s thrust on or off, and the rotation direction (`rotation_dir`) positive or negative. This function is called every frame in `_process()`."
@@ -10446,7 +10446,7 @@ msgstr "物体に連続的な力を加えます。ロケットの推進力をイ
 
 #: kyn/rigidbody2d.md
 msgid "If your fast-moving body is tunneling through objects, you might need to enable this. *Continuous collision detection* tries to predict collisions by moving the body continuously along its path, rather than moving and then checking for any collisions. It is more accurate but slower, so use with caution."
-msgstr "※高速移動する物体が障害物を貫通してしまう場合、この機能を有効にする必要があるかもしれません。「連続衝突判定」は、移動後に個別に衝突チェックを行うのではなく、経路に沿って継続的に物体を動かすことで衝突を事前に予測します。精度は向上しますが処理負荷も大きくなるため、使用には注意が必要です。"
+msgstr "※高速移動する物体が障害物を貫通してしまう場合、この機能を有効にする必要があるかもしれません。「連続衝突判定」は、移動後に個別に衝突チェックするのではなく、経路に沿って継続的に物体を動かすことで衝突を事前に予測します。精度は向上しますが処理負荷も大きくなるため、使用には注意が必要です。"
 
 #: kyn/rigidbody2d.md
 msgid "* You should not change a RigidBody2D’s `position` or `linear_velocity` every frame or even very often. If you need to directly affect the body’s state, use `_integrate_forces`, which allows you to directly access the physics state."
@@ -10532,7 +10532,7 @@ msgstr "## {{< gd-icon RayCast2D >}}RayCast2D"
 
 #: kyn/raycast2d.md
 msgid "Also, take note of the *Collide With* section. By default the ray will only detect bodies, so you'll need to go here if you want to detect areas as well or instead."
-msgstr "また、「衝突対象」セクションにも注意してください。初期設定ではレイはオブジェクトのみを検出するため、領域も検知したい場合や代わりに使用したい場合は、ここで設定を行う必要があります。"
+msgstr "また、「衝突対象」セクションにも注意してください。初期設定ではレイはオブジェクトのみを検出するため、領域も検知したい場合や代わりに使用したい場合は、ここで設定する必要があります。"
 
 #: kyn/raycast2d.md
 msgid "If the ray is colliding, this will return the position of the collision (in *global* coordinates)."
@@ -10714,7 +10714,7 @@ msgstr "この方法は、プラットフォーマーや見下ろし型ゲーム
 
 #: kyn/characterbody2d.md
 msgid "Comparing collide and slide (code to do the same thing)"
-msgstr "衝突とスライドの比較（同じ処理を行うコード）"
+msgstr "衝突とスライドの比較（同じ処理するコード）"
 
 #: kyn/characterbody2d.md
 msgid "See the [Platform character]](/godot_recipes/4.x/2d/platform_character/) recipe for more details."
@@ -10844,7 +10844,7 @@ msgstr "プレイヤーを追いかける敵が欲しい。"
 
 #: ai/chasing.md
 msgid "However, this would allow the enemy to chase the player from any distance, even if it's far away. To fix this, we can add an {{< gd-icon Area2D >}}`Area2D` to the enemy, and only chase the player when it's inside this \"detect radius\"."
-msgstr "しかし、これでは敵がプレイヤーから遠距離にいても追跡できてしまいます。これを修正するには、敵に `Area2D` を追加し、この「検出範囲」内にプレイヤーが入った場合にのみ追跡を行うようにすればよいでしょう。"
+msgstr "しかし、これでは敵がプレイヤーから遠距離にいても追跡できてしまいます。これを修正するには、敵に `Area2D` を追加し、この「検出範囲」内にプレイヤーが入った場合にのみ追跡するようにすればよいでしょう。"
 
 #: ai/chasing.md
 msgid ""
@@ -11582,7 +11582,7 @@ msgstr "### フラグメントシェーダー"
 
 #: shaders/intro.md
 msgid "To pass a value to the shader, you need a variable declared with the _uniform_ keyword. Once you do this, the variable appears in the Inspector in much the same way an `export` variable. However, a uniform's value *can not* be changed in the shader!"
-msgstr "シェーダーに値を渡すには、`_uniform_`キーワードで宣言された変数が必要です。この設定を行うと、インスペクターには`export`変数と似た形でその変数が表示されます。ただし注意点として、ユニフォーム変数の値はシェーダー内で*変更することはできません*！"
+msgstr "シェーダーに値を渡すには、`_uniform_`キーワードで宣言された変数が必要です。この設定すると、インスペクターには`export`変数と似た形でその変数が表示されます。ただし注意点として、ユニフォーム変数の値はシェーダー内で*変更することはできません*！"
 
 #: shaders/intro.md
 msgid "The most difficult part for newcomers to understand about shaders is that they run in _parallel_. A shader runs simultaneously on *all* pixels. This allows for great speed, but also limits what information you have access to in the shader."
@@ -12895,7 +12895,7 @@ msgstr "これは、物体の運動が停止するまでに発生する衝突の
 
 #: physics/Godot3_kinematic2d.md
 msgid "> **Note:** In order to detect collisions, at least one `Shape2D` must be assigned to the object."
-msgstr "> ※注意：衝突検出を行うには、対象オブジェクトに少なくとも1つの`Shape2D`が割り当てられている必要があります。"
+msgstr "> ※注意：衝突検出するには、対象オブジェクトに少なくとも1つの`Shape2D`が割り当てられている必要があります。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "This parameter allows you to define what surfaces the engine should consider to be the floor. Setting this lets you use the `is_on_floor()`, `is_on_wall()`, and `is_on_ceiling()` methods to detect what type of surface the body is in contact with. The default value means that all surfaces are considered walls."
@@ -13216,7 +13216,7 @@ msgstr ""
 
 #: physics/Godot3_kinematic2d.md
 msgid "A static body is one that is not moved by the physics engine. It participates in collision detection, but does not move in response to the collision. This type of body is most often used for objects that are part of the environment or that do not need to have any dynamic behavior."
-msgstr "スタティックボディとは、物理エンジンによって移動されないオブジェクトです。衝突検知には参加しますが、衝突に応じて移動することはありません。このタイプのボディは、環境の一部となるオブジェクトや、動的な挙動を必要としないオブジェクトに最もよく使用されます。"
+msgstr "スタティックボディとは、物理エンジンによって移動されないオブジェクトです。衝突検知には参加しますが、衝突に応じて移動することはありません。このタイプのボディは、環境の一部となるオブジェクトや、動的な挙動を必要としないオブジェクトに最もよく使います。"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -13323,7 +13323,7 @@ msgstr "### 移動と衝突判定"
 
 #: physics/Godot3_kinematic2d.md
 msgid "A physics body can hold any number of {{< gd-icon CollisionShape2D >}}`CollisionShape2D` objects as children. These shapes are used to define the object's collision bounds and to detect contact with other objects."
-msgstr "物理ボディは、任意の数の {{< gd-icon CollisionShape2D >}}`CollisionShape2D` オブジェクトを子要素として保持できます。これらの形状はオブジェクトの衝突判定範囲を定義し、他のオブジェクトとの接触検出に使用されます。"
+msgstr "物理ボディは、任意の数の {{< gd-icon CollisionShape2D >}}`CollisionShape2D` オブジェクトを子要素として保持できます。これらの形状はオブジェクトの衝突判定範囲を定義し、他のオブジェクトとの接触検出に使います。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "You can also assign names to layers. In \"Project Settings\", look for the \"Layer Names -> 2D Physics\" section:"
@@ -13659,7 +13659,7 @@ msgstr "デフォルトでは溝は垂直方向に配置されますが、溝ノ
 
 #: physics/joints_2d.md
 msgid "Joint are used to constrain the movement of attached physics objects. For any joint node, you need to attach two bodies, which must extend from `PhysicsObject2D`."
-msgstr "ジョイントは、接続された物理オブジェクトの動きを制限するために使用されます。任意のジョイントノードには、`PhysicsObject2D` から拡張される2つのボディを結合が必要です。"
+msgstr "ジョイントは、接続された物理オブジェクトの動きを制限するために使います。任意のジョイントノードには、`PhysicsObject2D` から拡張される2つのボディを結合が必要です。"
 
 #: physics/joints_2d.md
 msgid "These properties are common to all joint nodes:"
@@ -15191,7 +15191,7 @@ msgstr ""
 
 #: 2D/touchscreen_camera.md
 msgid "First we're checking for a touch event (`InputEventScreenTouch`). We add the event to the `events` dictionary. The event's `index` property is our dictionary's key. We also remove the event if it's not `pressed`, which means the touch has ended."
-msgstr "まず、タッチイベント（`InputEventScreenTouch`）をチェックしています。このイベントを`events`辞書に追加します。イベントの`index`プロパティが辞書のキーとして使用されます。また、このイベントが「押されていない」（つまりタッチが終了した場合）には削除します。"
+msgstr "まず、タッチイベント（`InputEventScreenTouch`）をチェックしています。このイベントを`events`辞書に追加します。イベントの`index`プロパティが辞書のキーとして使います。また、このイベントが「押されていない」（つまりタッチが終了した場合）には削除します。"
 
 #: 2D/touchscreen_camera.md
 msgid "This will allow us to pan the camera around and it will return to the player when we release the touch."
@@ -16734,7 +16734,7 @@ msgstr "[https://github.com/godotrecipes/8_direction_animation](https://github.c
 
 #: games/first_2d/first_2d_end.md
 msgid "* **Additional enemy types** - there is art for other enemies in the art pack. How do they move and shoot?"
-msgstr "* **追加の敵タイプについて** - アートパックには他種の敵用アートワークも含まれています。これらの敵はどのように移動し、攻撃を行うのでしょうか？"
+msgstr "* **追加の敵タイプについて** - アートパックには他種の敵用アートワークも含まれています。これらの敵はどのように移動し、攻撃するのでしょうか？"
 
 #: games/first_2d/first_2d_end.md
 msgid ""
@@ -17330,7 +17330,7 @@ msgstr "最後に設定する必要があるのは、プレイヤーの射撃速
 
 #: games/first_2d/first_2d_02.md
 msgid "You may also have noticed the yellow warning triangle on the {{< gd-icon Area2D >}}`Area2D` node. If you click it, you'll see the warning is telling us that the area doesn't have a shape. We need to define its shape, and we can do that by adding a {{< gd-icon CollisionShape2D >}}`CollisionShape2D` node as a child of the `Player`."
-msgstr "また、{{< gd-icon Area2D >}}`Area2D`ノードの横にある黄色の警告三角アイコンにもお気づきかもしれません。このアイコンをクリックすると、このエリアに形状が定義されていないという警告メッセージが表示されます。適切に対応するためには、`Player`ノードの下に{{< gd-icon CollisionShape2D >}}`CollisionShape2D`ノードを追加が必要です。これにより、オブジェクト同士が衝突判定を行うための正確な境界を設定できます。"
+msgstr "また、{{< gd-icon Area2D >}}`Area2D`ノードの横にある黄色の警告三角アイコンにもお気づきかもしれません。このアイコンをクリックすると、このエリアに形状が定義されていないという警告メッセージが表示されます。適切に対応するためには、`Player`ノードの下に{{< gd-icon CollisionShape2D >}}`CollisionShape2D`ノードを追加が必要です。これにより、オブジェクト同士が衝突判定するための正確な境界を設定できます。"
 
 #: games/first_2d/first_2d_02.md
 msgid "There are only two frames in this animation, but the grid isn't correct. Change the **Size** values to match the image sizes: `16 x 16`. Then, click both frames to select them and click the **Add 2 Frame(s)** button."
@@ -17538,7 +17538,7 @@ msgstr "これを行ごとに分解してみます。"
 
 #: games/first_2d/first_2d_03.md
 msgid "We'll start by making the ship move around the screen. Let's start with some code that does the following:"
-msgstr "まず、船を画面上で移動させる機能から作成してください。以下の動作を行うコードから始めてみます。"
+msgstr "まず、船を画面上で移動させる機能から作成してください。以下の動作するコードから始めてみます。"
 
 #: games/first_2d/first_2d_03.md
 msgid "To tell which direction we're moving, we can check the `x` value of the `input` vector. Depending on whether it's positive (right), negative (left), or zero (not moving), we can choose the `frame` value of the `Sprite2D` and the `animation` of the `AnimatedSprite2D`."
@@ -17602,7 +17602,7 @@ msgstr "シーンを再生すると、画面上部から敵の集団が次々と
 
 #: games/first_2d/first_2d_07.md
 msgid "We'll use an {{< gd-icon Area2D >}}`Area2D` for the enemy, since we need it to detect overlap - either with the player's bullets, or with the player itself."
-msgstr "敵キャラには `Area2D` を使用します。これは、プレイヤーの弾丸との重複判定や、直接衝突検出を行う必要があるためです。"
+msgstr "敵キャラには `Area2D` を使用します。これは、プレイヤーの弾丸との重複判定や、直接衝突検出する必要があるためです。"
 
 #: games/first_2d/first_2d_07.md
 msgid "Press the play button to see it in action. Feel free to adjust it if you'd like."
@@ -18010,7 +18010,7 @@ msgstr "同じ「DynamicFont」リソースを両方のラベルに追加しま�
 
 #: games/circle_jump/circle_jump_05.md
 msgid "In the last part, we added UI in the form of menus to start and configure the game. We also need a UI to display in-game information such as score."
-msgstr "最終部分では、ゲームの開始と設定を行うためのメニュー形式のUIを実装しました。また、スコアなどのゲーム内情報を表示するためのUIも必要です。"
+msgstr "最終部分では、ゲームの開始と設定するためのメニュー形式のUIを実装しました。また、スコアなどのゲーム内情報を表示するためのUIも必要です。"
 
 #: games/circle_jump/circle_jump_05.md
 msgid "## Message animation"
@@ -18136,7 +18136,7 @@ msgstr "![alt](/godot_recipes/4.x/img/cj_11_04.png)"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "## Set up Admob"
-msgstr "## AdMobの設定を行う"
+msgstr "## AdMobの設定する"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "## Code"
@@ -19291,7 +19291,7 @@ msgstr "## トレイル"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "Here's our `spawn_circle()` function. If it's passed a position, it'll use it, otherwise we pick a random one some distance away from the current target. These are temporary numbers - once we've got more of the gameplay up and running, we'll see how much they need to be adjusted."
-msgstr "こちらが`spawn_circle()`関数です。位置を指定すればその位置にオブジェクトを配置し、指定しない場合は現在のターゲットから一定距離離れた場所にランダム配置されます。これらの数値は暫定値であり、ゲームプレイシステムが完全に実装された後に微調整を行う予定です。"
+msgstr "こちらが`spawn_circle()`関数です。位置を指定すればその位置にオブジェクトを配置し、指定しない場合は現在のターゲットから一定距離離れた場所にランダム配置されます。これらの数値は暫定値であり、ゲームプレイシステムが完全に実装された後に微調整する予定です。"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "And then in the `_physics_process()`:"
