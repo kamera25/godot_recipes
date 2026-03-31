@@ -18130,6 +18130,7 @@ msgid ""
 "are {{< gd-icon CharacterBody2D >}}`CharacterBody2D` objects using no-frills 8-way movement."
 msgstr ""
 
+
 #: 2D/using_ysort.md
 msgid "Now things look a lot better:"
 msgstr "だいぶ良くなりました。"
@@ -18168,7 +18169,7 @@ msgstr ""
 
 #: games/circle_jump/circle_jump_11.md
 msgid "![alt](/godot_recipes/3.x/img/cj_11_04.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_11_04.png)"
 
 #: games/circle_jump/circle_jump_01.md
 msgid ""
@@ -18178,6 +18179,11 @@ msgid ""
 "  * `Node2D` (\"Pivot\")\n"
 "      * `Marker2D` (\"OrbitPosition\")"
 msgstr ""
+"* `Area2D` (\"Circle\")\n"
+"  * `Sprite`\n"
+"  * `CollisionShape2D`\n"
+"  * `Node2D` (\"Pivot\")\n"
+"      * `Marker2D` (\"OrbitPosition\")"
 
 #: games/circle_jump/circle_jump_01.md
 msgid "![alt](/godot_recipes/3.x/img/cj_01_01.png?width=200)"
@@ -18255,4 +18261,4 @@ msgstr ""
 
 #: games/circle_jump/circle_jump_02.md
 msgid "- **Marker2D (\"StartPosition\")**"
-msgstr ""
+msgstr "- **Marker2D (\"StartPosition\")**"
