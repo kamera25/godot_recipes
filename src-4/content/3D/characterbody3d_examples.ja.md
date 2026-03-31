@@ -18,13 +18,13 @@ draft: false
 
 このアセットの場合、ダウンロードには OBJファイルが含まれており、シーンとしてインポートした方が作業が効率的になります。
 
-画像: /godot_recipes/4.x/img/obj_as_scene.png
+![alt](/godot_recipes/4.x/img/obj_as_scene.png)
 
 モデルをシーンに追加することはできますが、以下の追加ノードが必要となります：
 
 ![alt](/godot_recipes/4.x/img/mini_tank_nodes.png)
 
-For the collision shape, we're just going to use a `BoxShape` aligned and sized with the tank's treads. `CamPos` is a {{< gd-icon Marker3D >}}`Marker3D` we'll use to place our following camera. It's placed behind and above the tank, angled down.
+衝突判定形状については、戦車の履帯と位置・サイズを合わせた `BoxShape` を使用します。`CamPos` は、後続カメラを配置するための {{< gd-icon Marker3D >}}`Marker3D` です。戦車の後方かつ上部、やや下向きに配置されます。
 
 また、個別の {{< gd-icon MeshInstance3D >}}`MeshInstance` ノードを **Y** 軸を中心に `180` 度回転させました。これは元々 **+Z** 方向を向いてモデル化されていたためですが、Godot では **-Z** が前方方向となるため、戦車が逆向きに見えるようにはしたくないからです。
 

@@ -10,10 +10,10 @@ tags: []
 {{< gd-icon RigidBody2D >}}`RigidBody2D`はGodotが提供する物理シミュレーション用のボディコンポーネントです。これはつまり、ユーザーが直接{{< gd-icon RigidBody2D >}}`RigidBody2D`を操作するものではないということを意味します。代わりに、重力や衝撃力などの各種フォースを適用すると、Godot組み込みの物理エンジンが衝突検知・弾性挙動・回転運動などを含む最終的な移動計算を自動で行います。
 
 {{% notice warning %}}
-Setting a {{< gd-icon RigidBody2D >}}`RigidBody2D`'s physical properties, such as `position` or `linear_velocity` directly will not work correctly. The physics engine controls these values.
+`RigidBody2D`の物理的特性（例：`position`や`linear_velocity`）を直接設定しようとしても正常に動作しません。これらの値は物理エンジンによって管理されています。
 {{% /notice %}}
 
-The body’s behavior is also affected by the world, via the Project Settings -> Physics properties, or by entering an {{< gd-icon Area2D >}}`Area2D` that is overriding the global physics properties.
+また、プロジェクト設定の［物理プロパティ］やグローバル物理プロパティを上書きする `Area2D` オブジェクトに入ることで、ボディの挙動は外部環境にも影響されます。
 
 適切に使用すれば、リジッドボディはGodotツールキットの中でも強力な武器となります。しかし、多くのユーザーが誤った用途で使ったり、その仕組みを正確に理解していないためにトラブルに見舞われることがあります。
 
@@ -27,10 +27,10 @@ The body’s behavior is also affected by the world, via the Project Settings ->
 
 リジッドボディには4つの異なるモードが存在し、それぞれその挙動に影響を与えます。
 
-1. Rigid - This is the default mode. The body behaves like a solid physical object, colliding and responding to forces.
-1. Static - In this mode, the body does not move, similar to a {{< gd-icon StaticBody2D >}}`StaticBody2D`.
-1. Character - In this mode, the body acts the same as in *rigid* mode, but does not rotate.
-1. Kinematic - In this mode, the body behaves like a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`, meaning it can only move via code. **NOTE:** This does *not* mean that it gains {{< gd-icon CharacterBody2D >}}`CharacterBody2D` helper functions such as `move_and_slide()`. All movement and collision response must be done manually.
+1. 剛性モード - これがデフォルト設定です。このモードでは物体は物理的な剛体として振る舞い、衝突や力の影響を受けます。
+1. 静的モード - このモードで指定したオブジェクトは移動せず、{{< gd-icon StaticBody2D >}}`StaticBody2D`と同様の動作をします。
+1. キャラクターモード - このモードでは、オブジェクトは*剛性*モードと同様に動作しますが、回転はしません。
+1. 動的モード - このモードではオブジェクトは{{< gd-icon CharacterBody2D >}}`CharacterBody2D`のように振る舞い、コードによってのみ移動させることができます。**注意:** これは必ずしも{{< gd-icon CharacterBody2D >}}`CharacterBody2D`の補助関数（例：`move_and_slide()`）が使えるという意味ではありません。すべての移動と衝突応答は手動で実装する必要があります。
 
 * 重力スケール設定（`gravity_scale`）
 

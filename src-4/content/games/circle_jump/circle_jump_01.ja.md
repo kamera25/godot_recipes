@@ -43,7 +43,7 @@ pre: "01. "
 
 ### ジャンパー（Jumper）
 
-For movement and collision, we're going to use a `Area2D`. To be fair, we could use `CharacterBody2D` here too, and it would work just as well. However, we don't really need collision in this game, we just need to know when the jumper contacts a circle. Let's add the following nodes:
+移動と衝突判定には、`Area2D`を使用することにします。公平を期すために言えば、ここでは`CharacterBody2D`を使用しても問題ありませんし、同様に機能します。ただし、このゲームでは厳密な衝突検出は必要なく、ジャンパーが円に接触したかどうかだけを把握できれば十分です。以下のノードを追加しましょう：
 
 * `Area2D` ("Jumper")
   * `Sprite`

@@ -22,10 +22,10 @@ ghcommentid: 45
 
 ## 関連レシピ
 
-- [Kinematic Car: Base](/godot_recipes/3.x/3d/kinematic_car/car_base/)
-- [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)
-- [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)
-- [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)
+- [運動車：基本モデル](/godot_recipes/3.x/3d/kinematic_car/car_base/)
+- [2D: 車両のステアリング制御レシピ](/godot_secrets/3.x/2d/car_steering)
+- [入力アクション設定](http://kidscancode.org/godot_recipes/input/input_actions/)
+- [3D: CharacterBody3Dの移動機能](/godot_recipes/3.x/3d/kinematic_body/)
 
 #### この動画が気に入ったら？
 

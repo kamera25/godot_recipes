@@ -1,5 +1,5 @@
 ---
-title: "CharacterBody3D: Stopping on Slopes"
+title: "CharactèreCorp 3D : Arrêt sur les pentes"
 weight: 3
 draft: false
 ghcommentid: 103
@@ -8,11 +8,11 @@ tags: []
 
 ## 課題
 
-Your {{< gd-icon KinematicBody3D >}}`CharacterBody3D` slides down slopes.
+あなたの {{< gd-icon KinematicBody3D >}}`キャラクターボディ 3D` は斜面を滑り降ります。
 
 ## 解決策
 
-We've started with a no-frills {{< gd-icon KinematicBody3D >}}`CharacterBody3D`, using `move_and_slide()`, using the script below:
+まず、最小限の機能で構成された `{{< gd-icon KinematicBody3D >}}`CharacterBody3D` から始め、以下のスクリプトで `move_and_slide()` メソッドを使用しています：
 
 ```gdscript
 extends CharacterBody3D

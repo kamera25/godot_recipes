@@ -1,5 +1,5 @@
 ---
-title: "Using CharacterBody2D"
+title: "CharacterBody2Dを使用"
 weight: 1
 draft: true
 ghcommentid: 68
@@ -9,7 +9,7 @@ ghcommentid: 68
 本チュートリアルはGodotレシピ集が公開される前に執筆されたものです。今後、当サイトの他のドキュメントと同様にフォーマットを更新する予定です。
 {{% /notice %}}
 
-Godot offers a number of collision objects to provide both collision detection and response. Trying to decide which one to use for your project can be confusing. You can avoid problems and simplify development if you understand how each each works and what their pros and cons are. In this tutorial, we'll look at the `CharacterBody2D` node and show some examples of how it can be used.
+Godotでは衝突検出と応答を提供するための様々なコリジョンオブジェクトが用意されています。プロジェクトに適したものを選択するのは最初戸惑うかもしれませんが、各オブジェクトの仕組みや長所・短所を理解しておけば、問題を回避し開発を効率化できます。このチュートリアルでは、`CharacterBody2D`ノードについて詳しく解説し、実際の使用例をいくつか紹介します。
 
 ## 導入：物理ボディについて
 
@@ -72,13 +72,13 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 
 ## キネマティックボディ
 
-{{< gd-icon CharacterBody2D >}}`CharacterBody2D` is for implementing bodies that are to be controlled via code. They detect collisions with other bodies when moving, but are not affected by engine physics properties like gravity or friction. While this means that you have to write some code to create their behavior, it also means you have more precise control over how they move and react.
+{{< gd-icon CharacterBody2D >}}`CharacterBody2D` は、コードによって制御されるボディを実装するためのコンポーネントです。移動中に他のオブジェクトと衝突を検出しますが、重力や摩擦といったエンジンの物理特性の影響を受けません。このため、動作を実現するためには多少のコーディングが必要となりますが、その分、動き方や反応をより精密にコントロールできるという利点があります。
 
-> **Note:** A {{< gd-icon CharacterBody2D >}}`CharacterBody2D` can be affected by gravity and other forces, but you must calculate the movement in code. The physics engine will not move a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`.
+> **注意:** `CharacterBody2D` は重力やその他の力の影響を受けますが、移動計算は必ずコード側で実装してください。物理エンジンでは `CharacterBody2D` を自動的に動かすことはできません。
 
 ### 移動と衝突判定
 
-When moving a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`, you should not set its `position` directly. Instead, you use the `move_and_collide()` or `move_and_slide()` methods. These methods move the body along a given vector and will instantly stop if a collision is detected with another body. After a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` has collided, any _collision response_ must be coded manually.
+{{< gd-icon CharacterBody2D >}}`CharacterBody2D` オブジェクトを移動する際、その `position` を直接設定してはいけません。代わりに、`move_and_collide()` または `move_and_slide()` メソッドを使用する必要があります。これらのメソッドは指定されたベクトルに沿ってボディを移動させ、他のボディと衝突した場合に即座に停止させます。{{< gd-icon CharacterBody2D >}}`CharacterBody2D` が衝突した後、どのような _衝突応答処理_ を行うかは、手動でコード化する必要があります。
 
 > **注意:** キネマティックボディの移動は `_physics_process()` コールバック内のみで行ってください。
 
@@ -88,7 +88,7 @@ When moving a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`, you should not s
 
 ##### KinematicCollision2D
 
-When a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` detects a collision, Godot provides a <a href="http://docs.godotengine.org/en/latest/classes/class_kinematiccollision2d.html" target="_blank">`KinematicCollision2D`</a> object. This object contains data about the collision and the colliding object. Using this data you can calculate your collision response.
+{{< gd-icon CharacterBody2D >}} `CharacterBody2D` が衝突を検知すると、Godotは<a href="http://docs.godotengine.org/en/latest/classes/class_kinematiccollision2d.html" target="_blank">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と衝突相手の物体データが含まれています。このデータを活用すれば、衝突に対する適切な応答計算が可能になります。
 
 #### 移動とスライド処理
 
@@ -130,9 +130,8 @@ if collision:
 velocity = move_and_slide(velocity)
 {{< /highlight >}}
 
-Anything you do with `move_and_slide()` can also be done with `move_and_collide()`,
-it just might take a little more code. However, as we'll see in the examples below,
-there are cases where `move_and_slide()` isn't the response you want.
+`move_and_slide()` で行う操作は、すべて `move_and_collide()` でも実行可能です。ただ、コード量が少し増えるかもしれません。ただし、以下の例でご覧いただけるように、
+状況によっては `move_and_slide()` では望ましい結果が得られない場合もあることにご注意ください。
 
 ## 使用例
 
@@ -142,9 +141,9 @@ there are cases where `move_and_slide()` isn't the response you want.
 
 サンプルプロジェクトをダウンロード済みの場合、この例は「BasicMovement.tscn」シーンに含まれています。
 
-For this example, Add a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` with two children: a {{< gd-icon Sprite2D >}}`Sprite` and a {{< gd-icon CollisionShape2D >}}`CollisionShape2D`. As with many demos, we'll use the Godot "icon.png" as the {{< gd-icon Sprite2D >}}`Sprite`'s texture (drag it from the Filesystem dock to the "Texture" property of the `Sprite`). In the {{< gd-icon CollisionShape2D >}}`CollisionShape2D`'s "Shape" property, select "New RectangleShape2D" and size the rectangle to fit over the sprite image.
+このサンプルでは、`CharacterBody2D`コンポーネントを追加し、これに2つの子オブジェクトを配置します：`Sprite`と`CollisionShape2D`です。多くのデモと同様に、Godotのデフォルトアイコン画像"icon.png"を`Sprite`のテクスチャとして使用します（ファイルシステムドックからドラッグして、`Sprite`プロパティの「テクスチャ」欄に設定してください）。`CollisionShape2D`の「形状」プロパティでは「新規 RectangleShape2D」を選択し、その長方形サイズを調整してスプライト画像を覆うように配置します。
 
-Attach a script to the {{< gd-icon CharacterBody2D >}}`CharacterBody2D` and add the following code:
+以下のコードを追加してください：
 
 {{< highlight gdscript >}}
 extends CharacterBody2D
@@ -172,9 +171,7 @@ func _physics_process(delta):
 
 このシーンを実行すると、`move_and_collide()`が想定通りに動作し、ボディが速度ベクトルに沿って移動することを確認できます。では、障害物を追加した場合にどうなるかを見てみてください。矩形の衝突形状を持つ{{< gd-icon StaticBody2D >}}`StaticBody2D`オブジェクトを追加してください。視認性を高めるには、スプライトを使用するか、{{< gd-icon Polygon2D >}}`Polygon2D`を使用するか、あるいは「デバッグ」メニューから「可視衝突形状」を有効化する方法もあります。
 
-Run the scene again and try moving into the obstacle. You'll see that the {{< gd-icon CharacterBody2D >}}`CharacterBody2D`
-can't penetrate the obstacle. However, try moving into the obstacle at an angle and
-you'll find that the obstacle acts like glue - it feels like the body gets stuck.
+シーンを再度実行し、障害物に向かって移動してみてください。{{< gd-icon CharacterBody2D >}}`CharacterBody2D` オブジェクトが障害物を通過できないことがわかります。ただし、角度をつけて障害物に接近してみると、障害物がまるで接着剤のように作用し、キャラクターボディが固定されたような感覚になることに気づくでしょう。
 
 これは、衝突時の応答処理が定義されていないためです。`move_and_collide()` は単に衝突が発生した時点で物体の動きを停止させます。衝突に対して実装したい特定の応答ロジックをコーディングが必要です。
 
@@ -345,10 +342,8 @@ func _physics_process(delta):
 
 ## 結論
 
-This introduction only scratches the surface of what's possible with {{< gd-icon CharacterBody2D >}}`CharacterBody2D`.
-As with all Godot nodes, <a href="http://docs.godotengine.org/en/latest/classes/class_kinematicbody2d.html" target="_blank">
-the API documentation</a> is your friend, so reference it frequently until you're
-comfortable with the class methods.
+この紹介では{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ノードの機能のほんの一端に触れたに過ぎません。
+他のGodotノードと同様、<a href="http://docs.godotengine.org/en/latest/classes/class_kinematicbody2d.html" target="_blank">APIドキュメント</a>は頼りになる情報源ですので、クラスメソッドに慣れてしまうまで頻繁に参照してください。
 
 運動体は非常に便利な仕組みなので、今後は『ノードの活用術』といった続編記事でさらに多くの活用法を探っていきたいと思います。その他に取り上げてほしい具体例やアイデアがあれば、ぜひコメント欄でご意見をお寄せください。
 

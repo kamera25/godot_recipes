@@ -25,7 +25,7 @@ Godot環境でリグ設定済みのアニメーション3Dキャラクターを�
 
 インポートしたリグは、足部分が「地面」に位置するように配置されています（つまり身体の中心位置に合わせた設定です）。この方法は後で便利になります。プレイヤーが中央に立つ場合、空中に浮いた状態ではなく、実際に地面に立っている状態で表示されるようになるからです。
 
-"If you're familiar with Godot's 3D orientation, you'll also notice that the character is facing the **+Z** direction, which is backwards. Select the {{< gd-icon Skeleton3D >}}`Skeleton3D` node and set its **Y** Rotation to `180` to correct this.",
+Godot の 3D 操作に慣れている方なら、キャラクターが画面後方の **+Z** 方向に向けていることにもお気づきでしょう。{{< gd-icon Skeleton3D >}} ノードを選択し、**Y軸回転**を `180` 度に変更して修正してください。
 
 ### 入力操作
 

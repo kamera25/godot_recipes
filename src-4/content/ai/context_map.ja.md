@@ -19,7 +19,7 @@ ghcommentid: 75
 
 * [ジェームズ・キーツ：AIコンテキスト行動管理](https://jameskeats.com/portfolio/contextbhvr.html)
 
-For this demo, we'll use a generic "Agent" object. In your game, this might be a car driving around a track, a monster patrolling a dungeon, or some other kind of game entity. Our agent will use a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`, but remember, you can use this technique with any kind of object - the algorithm is about the entity choosing a direction to move, how it moves is entirely separate.
+このデモでは、汎用的な「エージェント」オブジェクトを使用します。実際のゲームであれば、これはレースコースを走る車、ダンジョンを巡回するモンスター、あるいは他の種類のゲーム内エンティティなどに相当するでしょう。私たちのエージェントは `{{< gd-icon CharacterBody2D >}}CharacterBody2D` を使用しますが、覚えておいていただきたいのは、このテクニックはどんな種類のオブジェクトにも適用可能だということです。アルゴリズム自体は対象が移動する方向を選択する方法に関するものであり、実際の移動方法は完全に別個の問題です。
 
 ### アルゴリズムについて
 

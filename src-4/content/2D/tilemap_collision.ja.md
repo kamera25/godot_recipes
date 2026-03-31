@@ -7,11 +7,11 @@ ghcommentid: 19
 
 ## 課題
 
-You have a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` character colliding with a {{< gd-icon TileMap >}}`TileMap`, and you want to know which tile it collided with.
+{{< gd-icon CharacterBody2D >}}`CharacterBody2D`キャラクターが{{< gd-icon TileMap >}}`TileMap`と衝突しており、どのタイルに衝突したのかを確認したい場合。
 
 ## 解決策
 
-When a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` collides, the collision data is returned in a `KinematicCollision2D` object. The {{< gd-icon TileMap >}}`TileMap` acts as a single collider, so if you reference the `collider` property, it will be the {{< gd-icon TileMap >}}`TileMap` node.
+{{< gd-icon CharacterBody2D >}} オブジェクト同士が衝突した場合、衝突データは `KinematicCollision2D` オブジェクトとして取得されます。 {{< gd-icon TileMap >}}`TileMap` は単一のコリダーとして機能するため、`collider` プロパティを参照すると実際にはこの {{< gd-icon TileMap >}}`TileMap` ノードが返される点にご注意ください。
 
 その後、衝突位置にある{{< gd-icon TileMap >}}`TileMap`のタイルを特定が必要です。
 

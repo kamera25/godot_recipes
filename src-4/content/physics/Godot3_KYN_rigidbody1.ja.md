@@ -10,7 +10,7 @@ draft: true
 
 このチュートリアルでは、リジッドボディを使用するべきタイミング（および使用すべきでないタイミング）や、仕組みの解説、さらには思い通りに制御するための便利なテクニックをいくつかご紹介します。具体例ではRigidBody2Dを使用しますが、ここで学ぶ内容は3Dモデルにも同様に適用できます。
 
-## 解決策
+## Introduction
 
 <a href="http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html" target="_blank"><svg width="18" height="18" class="icon-icon_rigid_body_2d">
 <use xlink:href="/blog/img/symbol-defs.svg#icon-icon_rigid_body_2d"></svg> `RigidBody2D`</a> とは、Godot において物理シミュレーションを提供するオブジェクトです。これはつまり、直接 RigidBody2D を操作するわけではないということです。代わりに力（重力、衝撃など）を加えると、Godot の内蔵物理エンジンが衝突・反発・回転などの運動結果を計算してくれます。

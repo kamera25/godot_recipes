@@ -9,7 +9,7 @@ pre = "<i class='fas fa-car'></i>&nbsp"
 
 # <i class="fas fa-car"></i> &nbsp 3Dカーモデル
 
-Making a 3D car using `CharacterBody3D`.
+`CharacterBody3D`を使用して3Dカーを作成しています。
 
 #### 目次 ：
 

@@ -101,7 +101,7 @@ func _integrate_forces(state):
 
 以下が実際の表示例です。
 
-※訳注: 画像ファイルのパスは日本語版環境に合わせて修正が必要です
+![alt](/godot_recipes/4.x/img/asteroids_wrap.gif)
 
 ### 歪み補正機能
 

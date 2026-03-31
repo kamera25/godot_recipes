@@ -17,7 +17,7 @@ ghcommentid: 32
 
 * [弾道弾の実装方法](/godot_recipes/4.x/ja/2d/ballistic_bullet/)
 
-and a tank set up like so, with a {{< gd-icon Marker2D >}}`Marker2D` designating the "muzzle" where the bullet will be spawned:
+そして、以下のように設定されたタンクの配置です。ここでは弾丸が生成される箇所を示すために {{< gd-icon Marker2D >}} の `Marker2D` 要素を使用しています。
 
 ![alt](/godot_recipes/3.x/img/tank_01.png)
 

@@ -123,10 +123,10 @@ func heal(amount):
 
 リソースの作成と保存が完了したら、いよいよ使用準備が整います。このシナリオでは、以下のオブジェクトが存在します。
 
-* Player - a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`
-* UI - contains a {{< gd-icon TextureProgressBar >}}`ProgressTexture` to display health
-* Heal zone - an {{< gd-icon Area2D >}}`Area2D` that heals anything that stands in it
-* Spikes - {{< gd-icon TileMap >}}`TileMap` tiles that cause damage if touched
+※ プレイヤー： `CharacterBody2D` コンポーネントを搭載したキャラクターモデル
+※ UI： 体力ゲージを表示する `ProgressTexture` を含むインターフェースシステム
+※ 回復ゾーン： その上を通過する対象を回復する `Area2D` オブジェクト
+※ スパイクタイル： 接触時にダメージを与える `TileMap` 要素のタイルセット
 
 ゲームの全コードを掲載するのではなく、HPリソースに関連する部分だけを取り上げます。
 

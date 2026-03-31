@@ -46,7 +46,7 @@ func _process(delta):
 
 また、ベクトル間での補間もできます。`Vector2` および `Vector3` はどちらも `linear_interpolate()` メソッドを提供しています。
 
-For example, to find a vector that's halfway between a `Node3D` node's forward and left direction vectors:
+例：`Node3D`ノードの前方方向ベクトルと左方向ベクトルのちょうど中間に位置するベクターを取得するには：
 
 ```gdscript
 var forward = -transform.basis.z

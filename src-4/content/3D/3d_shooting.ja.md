@@ -34,10 +34,10 @@ For this example, we'll use the "Mini Tank" that we set up in [CharacterBody3D: 
 メッシュを {{< gd-icon MeshInstance3D >}}`MeshInstance` に追加し、衝突形状もそれに合わせてスケール調整してください。
 
 {{% notice warning %}}
-Remember to align your {{< gd-icon MeshInstance3D >}}`MeshInstance` with the forward direction (**-Z**) of the `Area3D` node, or your bullet won't look like it's flying the right way!
+必ず `MeshInstance` を `Area3D` ノードの前方方向（**-Z** 軸）と揃えてください。そうしないと、弾丸が正しく飛んでいるように見えませんよ！
 {{% /notice %}}
 
-Add a script and connect the {{< gd-icon Area3D >}}`Area3D`'s `body_entered` signal.
+スクリプトを追加し、{{< gd-icon Area3D >}}`Area3D`の`body_entered`シグナルを接続してください。
 
 ```gdscript
 extends Area3D
@@ -69,7 +69,7 @@ Using `look_at()` each frame turns the bullet to point in its direction of trave
 
 ### 撮影について
 
-Now in the tank (or whatever object you have doing the shooting), add a {{< gd-icon Marker3D >}}`Marker3D` child at the point where you want the bullets to appear. In the case of our tank, we're placing it at the end of the cannon barrel:
+タンク内（または射撃を行うオブジェクト）の任意の位置に、弾丸が出現させたい場所に {{< gd-icon Marker3D >}}`Marker3D` 子要素を追加します。今回の戦車の場合、砲身の先端部分に配置します：
 
 ![alt](/godot_recipes/3.x/img/3d_shoot_02.png)
 

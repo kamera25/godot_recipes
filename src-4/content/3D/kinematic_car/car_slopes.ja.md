@@ -23,7 +23,7 @@ ghcommentid: 44
 
 ### 3Dオブジェクトの整列方法
 
-We're going to reuse the code from the [CharacterBody3D: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/) recipe. Add this to `car_base.gd`:
+[CharacterBody3D: 表面に合わせる]レシピのコードを再利用します。これを`car_base.gd`に追加してください：
 
 ```gdscript
 func align_with_y(xform, new_y):
@@ -60,8 +60,8 @@ if $FrontRay.is_colliding() or $RearRay.is_colliding():
 
 ## 関連レシピ
 
-- [Kinematic Car: Base](/godot_recipes/3.x/3d/kinematic_car/car_base/)
-- [CharacterBody3D: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/)
+[運動力学カー：ベースモデル](/godot_recipes/3.x/3d/kinematic_car/car_base/)
+[CharacterBody3D：地面との整合性調整](/godot_recipes/3.x/3d/3d_align_surface/)
 
 #### この動画が気に入ったら？
 

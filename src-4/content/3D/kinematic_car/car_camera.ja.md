@@ -41,12 +41,12 @@ func _on_change_camera(t):
 
 ### ターゲットの設定
 
-We want to be able to have a few different chase camera positions. One close and one far, for example, or perhaps one looking straight down. Add a {{< gd-icon Node3D >}}`Node3D` to the car and name it `CameraPositions`. Add a few {{< gd-icon Marker3D >}}`Marker3D`s to this - as many as you would like.
+複数の異なるカメラポジションを設定したいと考えています。例えば、近距離用と遠距離用の2種類、あるいは真下を見下ろすアングルなどです。車オブジェクトに  `Node3D` を追加し、名前を 「CameraPositions」 とします。さらにこのオブジェクトに、必要な数だけ `Marker3D` を配置してください。
 
-Move and orient each {{< gd-icon Marker3D >}}`Marker3D` in a different location of your choosing. The position's **-Z** axis should point at the car.
+`Marker3D` をお好みの位置に移動・配置してください。位置の **-Z** 軸は車両に向けるようにしてください。
 
 {{% notice tip %}}
-You may find it helpful to temporarily attach a {{< gd-icon Camera3D >}}`Camera` to the position and use its "Preview" mode to help aim the {{< gd-icon Marker3D >}}`Marker3D` so that it's pointing directly where you want (you can remove the camera once you're done).
+作業効率を上げるため、一時的に {{< gd-icon Camera3D >}}`カメラコンポーネント` を適切な位置に配置し、「プレビュー」モードを使用して、{{< gd-icon Marker3D >}}`マーカー3D` が正確に狙いたい方向を指すように調整する方法が有効です（作業完了後はカメラを削除してください）。
 ![alt](/godot_recipes/3.x/img/3d_car_09.png)
 {{% /notice %}}
 
@@ -85,10 +85,10 @@ func _input(event):
 
 ## 関連レシピ
 
-- [Kinematic Car: Base](/godot_recipes/3.x/3d/kinematic_car/car_base/)
-- [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)
-- [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)
-- [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)
+- [運動車：基本モデル](/godot_recipes/3.x/3d/kinematic_car/car_base/)
+- [2D: 車両のステアリング制御レシピ](/godot_secrets/3.x/2d/car_steering)
+- [入力アクション設定](http://kidscancode.org/godot_recipes/input/input_actions/)
+- [3D: CharacterBody3Dの移動機能](/godot_recipes/3.x/3d/kinematic_body/)
 
 #### この動画が気に入ったら？
 

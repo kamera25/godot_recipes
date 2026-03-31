@@ -10,7 +10,9 @@ ghcommentid: 87
 
 ### ノードのプロパティ
 
-Add a {{< gd-icon RayCast2D >}}`RayCast2D` node and take a look at the Inspector:
+以下の操作を行います：
+1. 「`RayCast2D`」ノードを追加する。
+2. インスペクターを確認する：
 
 ![alt](/godot_recipes/4.x/img/kyn_raycast2d_01_4.png)
 

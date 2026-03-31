@@ -4,7 +4,7 @@ weight: 1
 draft: false
 ghcommentid: 18
 ---
-## 解決策
+## Introduction
 
 このデモでは、ローカルマルチプレイヤーゲーム――見下ろし型の迷路ゲームを例に挙げます。このゲームでは2人のプレイヤーが参加し、一方は矢印キー、もう一方はWASDキーで操作します。これは問題ありませんが、もしゲーム世界全体が1画面に収められる程度の大きさであれば、特に問題はありません。しかし、マップが非常に広い場合、両プレイヤーを個別に表示する「分割画面」ビューが必要になるでしょう。
 
@@ -14,8 +14,8 @@ ghcommentid: 18
 
 ### ゲーム設定
 
-We won't spend a lot of time on the setup of the game world. The two players
-are {{< gd-icon CharacterBody2D >}}`CharacterBody2D` objects using no-frills 8-way movement.
+ゲーム世界のセットアップに多くの時間をかけるつもりはありません。登場する2人のキャラクターは
+シンプルな8方向移動を実装した{{< gd-icon CharacterBody2D >}} `CharacterBody2D` オブジェクトです。
 
 {{% notice note %}}
 このパーツのセットアップでお困りの場合は、公式Godotドキュメントの以下のセクションをご覧ください: [2D移動概要](http://docs.godotengine.org/ja/stable/tutorials/2d/2d_movement.html)。
@@ -51,10 +51,7 @@ func get_input():
 まず、2つのビューポートを含む新しいシーンを作成します。
 ルートノードとして使用するノードを作成します。私は通常、`Node`を使用します。このノードには独自のプロパティが何もないため（単にシーンの他の要素を保持するためのものです）、使い勝手が良いからです。
 
-By themselves, {{< gd-icon Viewport >}}`Viewport` nodes don't have position information (they don't
-inherit from {{< gd-icon Node3D >}}`Node3D` or {{< gd-icon Node2D >}}`Node2D`). We're going to use {{< gd-icon SubViewportContainer >}}`ViewportContainer`,
-a {{< gd-icon Control >}}`Control` node, to hold each viewport. To keep them arranged side-by-side, we'll
-use an {{< gd-icon HBoxContainer >}}`HBoxContainer`.
+各ビューポートノード（{{< gd-icon Viewport >}}`Viewport`）には位置情報が含まれません（{{< gd-icon Node3D >}}`Node3D`や{{< gd-icon Node2D >}}`Node2D`を継承していません）。ここでは、各ビューポートを管理するために{{< gd-icon SubViewportContainer >}}`ViewportContainer`を使用します。このコンテナは{{< gd-icon Control >}}`Control`ノードの一種です。それらを横並びに配置するためには、{{< gd-icon HBoxContainer >}}`HBoxContainer`を使います。
 
 {{< gd-icon HBoxContainer >}}`HBoxContainer`の配置を「中央」に設定し、2つのビューポート間に小さな隙間を設けるには、_カスタム定数/間隔_に `5` を設定してください。「レイアウト」メニューでは「フル矩形」を選択します。
 
@@ -157,16 +154,10 @@ func set_camera_limits():
 
 もう一つ便利な機能を追加してください。マップ全体を見渡せるミニマップです。プレイヤーが現在地を把握しやすくなります。
 
-{
-  "steps": [
-    {
-      "description": "新たに `ViewportContainer` 要素を作成が必要ですが、今回は `Main` の子要素として追加します。今回のケースでは**Stretchモードは使用しません**。以下の手順に従ってください。\
-- {{< gd-icon Viewport >}}`Viewport`要素を追加し、_Size_プロパティを `(340, 200)` に設定します\
-- 次に {{< gd-icon Camera2D >}}`Camera2D`要素を追加します。画面中央に配置するため、{{< gd-icon Viewport >}}`Camera2D`の _Position_ プロパティを `(512, 300)` に設定します\
-- ズームアウトするには、_Zoom_プロパティを `(9, 9)` に設定してください。忘れずにこのカメラでも**Currentモードを選択**することをお忘れなく"
-    }
-  ]
-}
+さらにもう 1 つ {{< gd-icon ViewportContainer >}} の `ViewportContainer` が必要です。今回は `Main` の子要素として配置します。この場合、
+*ストレッチ機能は使用しません*。代わりに {{< gd-icon Viewport >}} の `Viewport` を追加し、サイズを `(340, 200)` に設定します
+その後、{{< gd-icon Camera2D >}} の `Camera2D` 要素を追加します。表示画面中央に配置するため、`Camera2D` の _位置_ を `(512, 300)` に設定しましょう。表示範囲を拡大するには、_ズーム倍率_ を `(9, 9)` に設定してください。このカメラについても忘れずに
+**現在使用中** を選択してください。
 
 `_ready()`関数内では、ミニマップが他の2つのビューポートと同じワールドを使用するように設定します。
 
