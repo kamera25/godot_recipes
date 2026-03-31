@@ -4255,7 +4255,7 @@ msgstr "![alt](/godot_recipes/4.x/img/mini_tank_nodes.png)"
 
 #: 3D/characterbody3d_examples.md
 msgid "![alt](/godot_recipes/4.x/img/obj_as_scene.png)"
-msgstr "画像: /godot_recipes/4.x/img/obj_as_scene.png"
+msgstr "![alt](/godot_recipes/4.x/img/obj_as_scene.png)"
 
 #: 3D/characterbody3d_examples.md
 msgid "With this code, we add the downward acceleration of gravity to the current velocity, get the user's input (more about that below), and call `move_and_slide()`."
@@ -8487,7 +8487,7 @@ msgstr "![alt](/godot_recipes/4.x/img/g4_101_07.png)"
 
 #: g101/start/101_03.md
 msgid "![alt](/godot_recipes/4.x/img/g4_101_06.png?width=500)"
-msgstr "![Alt text](/godot_recipes/4.x/img/g4_101_06.png?width=50angines)"
+msgstr "![alt](/godot_recipes/4.x/img/g4_101_06.png?width=500)"
 
 #: g101/start/101_03.md
 msgid "![alt](/godot_recipes/4.x/img/g101_01_spritemove.gif?width=250)"
@@ -11177,7 +11177,7 @@ msgstr "アステロイド風物理演算（RigidBody2Dを使用）"
 
 #: physics/asteroids_physics.md
 msgid "![alt](/godot_recipes/4.x/img/asteroids_wrap.gif)"
-msgstr "※訳注: 画像ファイルのパスは日本語版環境に合わせて修正が必要です"
+msgstr "![alt](/godot_recipes/4.x/img/asteroids_wrap.gif)"
 
 #: physics/asteroids_physics.md
 msgid "First, we'll add a new variable for this:"
@@ -17155,11 +17155,11 @@ msgstr ""
 
 #: basics/custom_resources.md
 msgid "![alt](/godot_recipes/3.x/img/custom_resource_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/custom_resource_01.png)"
 
 #: basics/custom_resources.md
 msgid "![alt](/godot_recipes/3.x/img/custom_resource_03.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/custom_resource_03.png)"
 
 #: basics/custom_resources.md
 msgid ""
@@ -17171,23 +17171,23 @@ msgstr ""
 
 #: basics/custom_resources.md
 msgid "![alt](/godot_recipes/3.x/img/custom_resource_02.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/custom_resource_02.png)"
 
 #: basics/custom_resources.md
 msgid "![alt](/godot_recipes/3.x/img/custom_resource_04.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/custom_resource_04.gif)"
 
 #: basics/rotation.md
 msgid "![alt](/godot_recipes/3.x/img/circle_motion_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/circle_motion_01.png)"
 
 #: basics/rotation.md
 msgid "![alt](/godot_recipes/3.x/img/circle_motion_03.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/circle_motion_03.gif)"
 
 #: basics/rotation.md
 msgid "![alt](/godot_recipes/3.x/img/circle_motion_02.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/circle_motion_02.gif)"
 
 #: basics/organizing.md
 msgid ""
@@ -17197,39 +17197,39 @@ msgstr ""
 
 #: basics/organizing.md
 msgid "![alt](/godot_recipes/3.x/img/organize_02.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/organize_02.png)"
 
 #: ui/labels.md
 msgid "![alt](/godot_recipes/3.x/img/ui_label_font_properties.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ui_label_font_properties.png)"
 
 #: ui/labels.md
 msgid "![alt](/godot_recipes/3.x/img/ui_label_font_colors.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ui_label_font_colors.png)"
 
 #: ui/labels.md
 msgid "![alt](/godot_recipes/3.x/img/ui_label_properties.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ui_label_properties.png)"
 
 #: ui/labels.md
 msgid "![alt](/godot_recipes/3.x/img/ui_label_font_filter.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ui_label_font_filter.png)"
 
 #: ui/containers.md
 msgid "![alt](/godot_recipes/3.x/img/ui_flags_example01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ui_flags_example01.png)"
 
 #: ui/containers.md
 msgid "![alt](/godot_recipes/3.x/img/ui_size_flags.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ui_size_flags.png)"
 
 #: ui/containers.md
 msgid "![alt](/godot_recipes/3.x/img/ui_flags_example02.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ui_flags_example02.gif)"
 
 #: 3D/3d_shooting.md
 msgid "![alt](/godot_recipes/3.x/img/3d_shoot_02.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_shoot_02.png)"
 
 #: 3D/3d_shooting.md
 msgid "Now in the tank (or whatever object you have doing the shooting), add a {{< gd-icon Marker3D >}}`Marker3D` child at the point where you want the bullets to appear. In the case of our tank, we're placing it at the end of the cannon barrel:"
@@ -17252,7 +17252,7 @@ msgstr ""
 
 #: 3D/3d_shooting.md
 msgid "![alt](/godot_recipes/3.x/img/3d_shoot_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_shoot_01.png)"
 
 #: 3D/3d_shooting.md
 msgid "Add a script and connect the {{< gd-icon Area3D >}}`Area3D`'s `body_entered` signal."
@@ -17277,27 +17277,27 @@ msgstr ""
 
 #: 3D/move_with_camera.md
 msgid "![alt](/godot_recipes/3.x/img/3d_move_camera_01.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_move_camera_01.gif)"
 
 #: 3D/move_with_camera.md
 msgid "![alt](/godot_recipes/3.x/img/3d_move_camera_02.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_move_camera_02.gif)"
 
 #: 3D/debug_overlay.md
 msgid "![alt](/godot_recipes/3.x/img/3d_debug_02.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_debug_02.png)"
 
 #: 3D/debug_overlay.md
 msgid "![alt](/godot_recipes/3.x/img/3d_debug_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_debug_01.png)"
 
 #: 3D/debug_overlay.md
 msgid "![alt](/godot_recipes/3.x/img/3d_debug_04.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_debug_04.gif)"
 
 #: 3D/debug_overlay.md
 msgid "![alt](/godot_recipes/3.x/img/3d_debug_03.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_debug_03.png)"
 
 #: 3D/characterbody3d_examples.md
 msgid "For the collision shape, we're just going to use a `BoxShape` aligned and sized with the tank's treads. `CamPos` is a {{< gd-icon Marker3D >}}`Marker3D` we'll use to place our following camera. It's placed behind and above the tank, angled down."
@@ -17305,19 +17305,19 @@ msgstr ""
 
 #: 3D/kinematic_car/car_base.md
 msgid "![alt](/godot_recipes/3.x/img/3d_car_03.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_car_03.png)"
 
 #: 3D/kinematic_car/car_base.md
 msgid "![alt](/godot_recipes/3.x/img/3d_car_04.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_car_04.png)"
 
 #: 3D/kinematic_car/car_base.md
 msgid "![alt](/godot_recipes/3.x/img/3d_car_02.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_car_02.png)"
 
 #: 3D/kinematic_car/car_base.md
 msgid "![alt](/godot_recipes/3.x/img/3d_car_05.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_car_05.gif)"
 
 #: 3D/kinematic_car/car_base.md
 msgid "The {{< gd-icon KinematicBody3D >}}`CharacterBody3D` has a warning about missing collision shapes, so we'll need to fix that first. We're going to add 3 {{< gd-icon CollisionShape3D >}}`CollisionShape`s: a {{< gd-icon BoxShape3D >}}`BoxShape` for the car's body, and a {{< gd-icon CylinderShape3D >}}`CylinderShape` for each of the front and rear axles."
@@ -17336,7 +17336,7 @@ msgstr ""
 
 #: 3D/kinematic_car/car_base.md
 msgid "![alt](/godot_recipes/3.x/img/3d_car_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_car_01.png)"
 
 #: 3D/kinematic_car/car_base.md
 msgid "#### Setting up the {{< gd-icon KinematicBody3D >}} CharacterBody3D"
@@ -17375,15 +17375,15 @@ msgstr ""
 
 #: 3D/kinematic_car/car_slopes.md
 msgid "![alt](/godot_recipes/3.x/img/3d_car_11.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_car_11.png)"
 
 #: 3D/kinematic_car/car_slopes.md
 msgid "![alt](/godot_recipes/3.x/img/3d_car_10.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_car_10.png)"
 
 #: 3D/kinematic_car/car_slopes.md
 msgid "![alt](/godot_recipes/3.x/img/3d_car_12.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_car_12.png)"
 
 #: 3D/kinematic_car/car_slopes.md
 msgid "We're going to reuse the code from the [CharacterBody3D: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/) recipe. Add this to `car_base.gd`:"
@@ -17399,7 +17399,7 @@ msgstr ""
 
 #: 3D/kinematic_car/car_camera.md
 msgid "![alt](/godot_recipes/3.x/img/3d_car_08.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_car_08.gif)"
 
 #: 3D/kinematic_car/car_camera.md
 msgid "We want to be able to have a few different chase camera positions. One close and one far, for example, or perhaps one looking straight down. Add a {{< gd-icon Node3D >}}`Node3D` to the car and name it `CameraPositions`. Add a few {{< gd-icon Marker3D >}}`Marker3D`s to this - as many as you would like."
@@ -17407,7 +17407,7 @@ msgstr ""
 
 #: 3D/kinematic_car/car_camera.md
 msgid "![alt](/godot_recipes/3.x/img/3d_car_07.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_car_07.png)"
 
 #: 3D/kinematic_car/car_camera.md
 msgid ""
@@ -17419,47 +17419,47 @@ msgstr ""
 
 #: 3D/kinematic_car/car_traction.md
 msgid "![alt](/godot_recipes/3.x/img/3d_car_06.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_car_06.gif)"
 
 #: input/custom_mouse_cursor.md
 msgid "![alt](/godot_recipes/3.x/img/crosshair137.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/crosshair137.png)"
 
 #: animation/melee_attacks.md
 msgid "![alt](/godot_recipes/3.x/img/melee_attack_05.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/melee_attack_05.gif)"
 
 #: animation/melee_attacks.md
 msgid "![alt](/godot_recipes/3.x/img/melee_attack_02.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/melee_attack_02.gif)"
 
 #: animation/melee_attacks.md
 msgid "![alt](/godot_recipes/3.x/img/melee_attack_03.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/melee_attack_03.gif)"
 
 #: animation/melee_attacks.md
 msgid "![alt](/godot_recipes/3.x/img/attack1.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/attack1.png)"
 
 #: animation/melee_attacks.md
 msgid "![alt](/godot_recipes/3.x/img/melee_attack_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/melee_attack_01.png)"
 
 #: animation/melee_attacks.md
 msgid "![alt](/godot_recipes/3.x/img/melee_attack_04.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/melee_attack_04.gif)"
 
 #: animation/melee_attacks.md
 msgid "![alt](/godot_recipes/3.x/img/attack2.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/attack2.png)"
 
 #: g101/3d/101_3d_07.md
 msgid "![alt](/godot_recipes/3.x/img/3d_07_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_07_01.png)"
 
 #: g101/3d/101_3d_07.md
 msgid "![alt](/godot_recipes/3.x/img/3d_07_02.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_07_02.png)"
 
 #: g101/3d/101_3d_07.md
 msgid "Start with a `CharacterBody3D`. To this we'll add two `CollisionShape` nodes (\"Body\" and \"Feet\"). We also want to have a `Camera`, but we need to be careful about how we handle rotation. The *character* should rotate in **Y**, but only the camera should rotate in **X** (for looking up and down). To make this work, add a `Node3D` node, which we'll call \"Pivot\", and add the `Camera` to that."
@@ -17473,35 +17473,35 @@ msgstr ""
 
 #: g101/3d/101_3d_06.md
 msgid "![alt](/godot_recipes/3.x/img/3d_06_08.png?width=300)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_06_08.png?width=300)"
 
 #: g101/3d/101_3d_06.md
 msgid "![alt](/godot_recipes/3.x/img/3d_06_13.png?width=300)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_06_13.png?width=300)"
 
 #: g101/3d/101_3d_06.md
 msgid "![alt](/godot_recipes/3.x/img/3d_06_10.gif?width=250)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_06_10.gif?width=250)"
 
 #: g101/3d/101_3d_06.md
 msgid "![alt](/godot_recipes/3.x/img/3d_06_02.png?width=200)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_06_02.png?width=200)"
 
 #: g101/3d/101_3d_06.md
 msgid "![alt](/godot_recipes/3.x/img/3d_06_04.gif?width=200)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_06_04.gif?width=200)"
 
 #: g101/3d/101_3d_06.md
 msgid "![alt](/godot_recipes/3.x/img/3d_06_11.gif?width=250)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_06_11.gif?width=250)"
 
 #: g101/3d/101_3d_06.md
 msgid "![alt](/godot_recipes/3.x/img/3d_06_07.png?width=300)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_06_07.png?width=300)"
 
 #: g101/3d/101_3d_06.md
 msgid "![alt](/godot_recipes/3.x/img/3d_06_05.gif?width=200)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_06_05.gif?width=200)"
 
 #: g101/3d/101_3d_06.md
 msgid ""
@@ -17511,27 +17511,27 @@ msgstr ""
 
 #: g101/3d/101_3d_06.md
 msgid "![alt](/godot_recipes/3.x/img/3d_06_03.png?width=200)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_06_03.png?width=200)"
 
 #: g101/3d/101_3d_06.md
 msgid "![alt](/godot_recipes/3.x/img/3d_06_12.png?width=500)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_06_12.png?width=500)"
 
 #: g101/3d/101_3d_06.md
 msgid "![alt](/godot_recipes/3.x/img/3d_06_06.png?width=300)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_06_06.png?width=300)"
 
 #: g101/3d/101_3d_06.md
 msgid "![alt](/godot_recipes/3.x/img/3d_06_01.png?width=400)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_06_01.png?width=400)"
 
 #: g101/3d/101_3d_05.md
 msgid "![alt](/godot_recipes/3.x/img/3d_05_02.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_05_02.png)"
 
 #: g101/3d/101_3d_05.md
 msgid "![alt](/godot_recipes/3.x/img/3d_05_01.png?width=250)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/3d_05_01.png?width=250)"
 
 #: g101/3d/101_3d_05.md
 msgid ""
@@ -17616,23 +17616,23 @@ msgstr ""
 
 #: kyn/tween.md
 msgid "![alt](/godot_recipes/3.x/img/tween_01.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/tween_01.gif)"
 
 #: kyn/path2d.md
 msgid "![alt](/godot_recipes/3.x/img/kyn_path2d_04.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/kyn_path2d_04.gif)"
 
 #: kyn/path2d.md
 msgid "![alt](/godot_recipes/3.x/img/kyn_path2d_03.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/kyn_path2d_03.png)"
 
 #: kyn/path2d.md
 msgid "![alt](/godot_recipes/3.x/img/kyn_path2d_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/kyn_path2d_01.png)"
 
 #: kyn/path2d.md
 msgid "![alt](/godot_recipes/3.x/img/kyn_path2d_02.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/kyn_path2d_02.png)"
 
 #: kyn/path2d.md kyn/raycast2d.md
 msgid ""
@@ -17643,7 +17643,7 @@ msgstr ""
 
 #: ai/context_map.md kyn/path2d.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_10.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ai_context_10.gif)"
 
 #: kyn/rigidbody2d.md
 msgid "The body’s behavior is also affected by the world, via the Project Settings -> Physics properties, or by entering an {{< gd-icon Area2D >}}`Area2D` that is overriding the global physics properties."
@@ -17658,11 +17658,11 @@ msgstr ""
 
 #: kyn/rigidbody2d.md physics/Godot3_KYN_rigidbody1.md
 msgid "![alt](/godot_recipes/3.x/img/rigidbody_ship2.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/rigidbody_ship2.gif)"
 
 #: kyn/rigidbody2d.md physics/Godot3_KYN_rigidbody1.md
 msgid "![alt](/godot_recipes/3.x/img/rigidbody_ship1.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/rigidbody_ship1.gif)"
 
 #: kyn/rigidbody2d.md
 msgid "> You should not change a RigidBody2D’s `position` or `linear_velocity` every frame or even very often. If you need to directly affect the body’s state, use `_integrate_forces`, which allows you to directly access the physics state."
@@ -17686,11 +17686,11 @@ msgstr ""
 
 #: ai/context_map.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_08.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ai_context_08.png)"
 
 #: ai/context_map.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_11.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ai_context_11.png)"
 
 #: ai/context_map.md
 msgid "For this demo, we'll use a generic \"Agent\" object. In your game, this might be a car driving around a track, a monster patrolling a dungeon, or some other kind of game entity. Our agent will use a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`, but remember, you can use this technique with any kind of object - the algorithm is about the entity choosing a direction to move, how it moves is entirely separate."
@@ -17698,35 +17698,35 @@ msgstr ""
 
 #: ai/context_map.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_03.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ai_context_03.png)"
 
 #: ai/context_map.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ai_context_01.png)"
 
 #: ai/context_map.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_07.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ai_context_07.png)"
 
 #: ai/context_map.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_09.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ai_context_09.png)"
 
 #: ai/context_map.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_04.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ai_context_04.png)"
 
 #: ai/context_map.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_05.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ai_context_05.png)"
 
 #: ai/context_map.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_06.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ai_context_06.png)"
 
 #: ai/path_follow.md
 msgid "![alt](/godot_recipes/3.x/img/path2d_buttons.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/path2d_buttons.png)"
 
 #: shaders/blur.md
 msgid "<video controls src='/godot_recipes/3.x/img/blur_shader3.webm'></video>"
@@ -17740,67 +17740,67 @@ msgstr ""
 
 #: shaders/greyscale.md
 msgid "![alt](/godot_recipes/3.x/img/shader_greyscale01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/shader_greyscale01.png)"
 
 #: shaders/greyscale.md
 msgid "![alt](/godot_recipes/3.x/img/shader_greyscale02.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/shader_greyscale02.png)"
 
 #: shaders/intro.md
 msgid "![alt](/godot_recipes/3.x/img/shader_intro_02.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/shader_intro_02.png)"
 
 #: shaders/intro.md
 msgid "![alt](/godot_recipes/3.x/img/shader_intro_07.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/shader_intro_07.gif)"
 
 #: shaders/intro.md
 msgid "![alt](/godot_recipes/3.x/img/shader_intro_05.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/shader_intro_05.gif)"
 
 #: shaders/intro.md
 msgid "![alt](/godot_recipes/3.x/img/shader_intro_04.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/shader_intro_04.gif)"
 
 #: shaders/intro.md
 msgid "![alt](/godot_recipes/3.x/img/shader_intro_03.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/shader_intro_03.png)"
 
 #: shaders/intro.md
 msgid "![alt](/godot_recipes/3.x/img/shader_intro_02a.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/shader_intro_02a.png)"
 
 #: shaders/intro.md
 msgid "![alt](/godot_recipes/3.x/img/shader_intro_06.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/shader_intro_06.png)"
 
 #: shaders/intro.md
 msgid "![alt](/godot_recipes/3.x/img/shader_intro_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/shader_intro_01.png)"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "![alt](/godot_recipes/3.x/img/rigidbody_vel.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/rigidbody_vel.gif)"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "![alt](/godot_recipes/3.x/img/rigidbody_properties.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/rigidbody_properties.png)"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "![alt](/godot_recipes/3.x/img/rigidbody_scene1.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/rigidbody_scene1.png)"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "![alt](/godot_recipes/3.x/img/ship_red.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/ship_red.png)"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "![alt](/godot_recipes/3.x/img/rigidbody_block_scene.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/rigidbody_block_scene.png)"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "![alt](/godot_recipes/3.x/img/rigidbody_impulse.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/rigidbody_impulse.gif)"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -17812,7 +17812,7 @@ msgstr ""
 
 #: physics/Godot3_kinematic2d.md
 msgid "![alt](/godot_recipes/3.x/img/k2d_compare.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/k2d_compare.gif)"
 
 #: physics/Godot3_kinematic2d.md
 msgid "Attach a script to the {{< gd-icon CharacterBody2D >}}`CharacterBody2D` and add the following code:"
@@ -17824,7 +17824,7 @@ msgstr ""
 
 #: physics/Godot3_kinematic2d.md
 msgid "![alt](/godot_recipes/3.x/img/k2d_bullet_bounce.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/k2d_bullet_bounce.gif)"
 
 #: physics/Godot3_kinematic2d.md
 msgid "> **Note:** A {{< gd-icon CharacterBody2D >}}`CharacterBody2D` can be affected by gravity and other forces, but you must calculate the movement in code. The physics engine will not move a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`."
@@ -17832,7 +17832,7 @@ msgstr ""
 
 #: physics/Godot3_kinematic2d.md
 msgid "![alt](/godot_recipes/3.x/img/k2d_layer_example.png?width=300)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/k2d_layer_example.png?width=300)"
 
 #: physics/Godot3_kinematic2d.md
 msgid "When moving a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`, you should not set its `position` directly. Instead, you use the `move_and_collide()` or `move_and_slide()` methods. These methods move the body along a given vector and will instantly stop if a collision is detected with another body. After a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` has collided, any _collision response_ must be coded manually."
@@ -17840,7 +17840,7 @@ msgstr ""
 
 #: physics/Godot3_kinematic2d.md
 msgid "![alt](/godot_recipes/3.x/img/k2d_platf_sample.gif?width=300)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/k2d_platf_sample.gif?width=300)"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -17851,7 +17851,7 @@ msgstr ""
 
 #: physics/Godot3_kinematic2d.md
 msgid "![alt](/godot_recipes/3.x/img/k2d_layer_names.png?width=300)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/k2d_layer_names.png?width=300)"
 
 #: physics/Godot3_kinematic2d.md
 msgid "{{< gd-icon CharacterBody2D >}}`CharacterBody2D` is for implementing bodies that are to be controlled via code. They detect collisions with other bodies when moving, but are not affected by engine physics properties like gravity or friction. While this means that you have to write some code to create their behavior, it also means you have more precise control over how they move and react."
@@ -17875,7 +17875,7 @@ msgstr ""
 
 #: physics/kinematicbody_slopes.md
 msgid "![alt](/godot_recipes/3.x/img/kbd_slopes_02.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/kbd_slopes_02.gif)"
 
 #: physics/kinematicbody_slopes.md
 msgid "CharacterBody3D: Stopping on Slopes"
@@ -17893,7 +17893,7 @@ msgstr ""
 
 #: physics/kinematicbody_slopes.md
 msgid "![alt](/godot_recipes/3.x/img/kbd_slopes_04.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/kbd_slopes_04.gif)"
 
 #: physics/kinematicbody_slopes.md
 msgid "We've started with a no-frills {{< gd-icon KinematicBody3D >}}`CharacterBody3D`, using `move_and_slide()`, using the script below:"
@@ -17901,55 +17901,55 @@ msgstr ""
 
 #: physics/kinematicbody_slopes.md
 msgid "![alt](/godot_recipes/3.x/img/kbd_slopes_03.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/kbd_slopes_03.gif)"
 
 #: physics/kinematicbody_slopes.md
 msgid "![alt](/godot_recipes/3.x/img/kbd_slopes_01.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/kbd_slopes_01.gif)"
 
 #: physics/joints_2d.md
 msgid "![alt](/godot_recipes/3.x/img/joints_demo.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/joints_demo.png)"
 
 #: physics/joints_2d.md
 msgid "![alt](/godot_recipes/3.x/img/groovejoint_example.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/groovejoint_example.gif)"
 
 #: physics/joints_2d.md
 msgid "![alt](/godot_recipes/3.x/img/pinjoint_example2.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/pinjoint_example2.gif)"
 
 #: physics/joints_2d.md
 msgid "![alt](/godot_recipes/3.x/img/pinjoint_example.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/pinjoint_example.gif)"
 
 #: physics/joints_2d.md
 msgid "![alt](/godot_recipes/3.x/img/springjoint_example.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/springjoint_example.gif)"
 
 #: physics/kinematic_friction.md
 msgid "![alt](/godot_recipes/3.x/img/friction_platformer.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/friction_platformer.gif)"
 
 #: physics/conveyor_belt.md
 msgid "![alt](/godot_recipes/3.x/img/conveyor_05.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/conveyor_05.png)"
 
 #: physics/conveyor_belt.md
 msgid "![alt](/godot_recipes/3.x/img/conveyor_06.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/conveyor_06.png)"
 
 #: physics/conveyor_belt.md
 msgid "![alt](/godot_recipes/3.x/img/conveyor_01.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/conveyor_01.gif)"
 
 #: physics/conveyor_belt.md
 msgid "![alt](/godot_recipes/3.x/img/conveyor_02.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/conveyor_02.gif)"
 
 #: physics/conveyor_belt.md
 msgid "![alt](/godot_recipes/3.x/img/tileGreen_03.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/tileGreen_03.png)"
 
 #: physics/conveyor_belt.md
 msgid ""
@@ -17960,19 +17960,19 @@ msgstr ""
 
 #: physics/conveyor_belt.md
 msgid "![alt](/godot_recipes/3.x/img/conveyor_3d.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/conveyor_3d.gif)"
 
 #: physics/conveyor_belt.md
 msgid "![alt](/godot_recipes/3.x/img/conveyor_04.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/conveyor_04.png)"
 
 #: physics/conveyor_belt.md
 msgid "![alt](/godot_recipes/3.x/img/conveyor_07.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/conveyor_07.gif)"
 
 #: physics/conveyor_belt.md
 msgid "![alt](/godot_recipes/3.x/img/conveyor_03.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/conveyor_03.png)"
 
 #: 2D/2d_align_surface.md
 msgid ""
@@ -17982,7 +17982,7 @@ msgstr ""
 
 #: 2D/2d_draw_trajectory.md
 msgid "![alt](/godot_recipes/3.x/img/2d_tank_03.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/2d_tank_03.png)"
 
 #: 2D/2d_draw_trajectory.md
 msgid "and a tank set up like so, with a {{< gd-icon Marker2D >}}`Marker2D` designating the \"muzzle\" where the bullet will be spawned:"
@@ -17990,55 +17990,55 @@ msgstr ""
 
 #: 2D/2d_draw_trajectory.md
 msgid "![alt](/godot_recipes/3.x/img/tank_02.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/tank_02.gif)"
 
 #: 2D/2d_draw_trajectory.md
 msgid "![alt](/godot_recipes/3.x/img/tank_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/tank_01.png)"
 
 #: 2D/2d_draw_trajectory.md
 msgid "![alt](/godot_recipes/3.x/img/tank_04.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/tank_04.gif)"
 
 #: 2D/ballistic_bullet.md
 msgid "![alt](/godot_recipes/3.x/img/2d_ballistic_02.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/2d_ballistic_02.gif)"
 
 #: 2D/ballistic_bullet.md
 msgid "![alt](/godot_recipes/3.x/img/2d_ballistic_01.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/2d_ballistic_01.gif)"
 
 #: 2D/autotile_intro.md
 msgid "![alt](/godot_recipes/3.x/img/autotile_frame.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/autotile_frame.png)"
 
 #: 2D/autotile_intro.md
 msgid "![alt](/godot_recipes/3.x/img/autotile_demo.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/autotile_demo.gif)"
 
 #: 2D/autotile_intro.md
 msgid "![alt](/godot_recipes/3.x/img/autotile_tileset.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/autotile_tileset.png)"
 
 #: 2D/autotile_intro.md
 msgid "![alt](/godot_recipes/3.x/img/autotile_create.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/autotile_create.png)"
 
 #: 2D/autotile_intro.md
 msgid "![alt](/godot_recipes/3.x/img/autotile_bitmask_tile2.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/autotile_bitmask_tile2.png)"
 
 #: 2D/autotile_intro.md
 msgid "![alt](/godot_recipes/3.x/img/autotile_bitmask_tile.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/autotile_bitmask_tile.png)"
 
 #: 2D/autotile_intro.md
 msgid "![alt](/godot_recipes/3.x/img/autotile_bitmask.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/autotile_bitmask.png)"
 
 #: 2D/screen_shake.md
 msgid "![alt](/godot_recipes/3.x/img/shake_rand01.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/shake_rand01.gif)"
 
 #: 2D/screen_shake.md
 msgid "Noise, or more specifically *gradient noise* is a method for generating more natural-looking \"random\" patterns. To do this, Godot provides the [FastNoiseLite](https://docs.godotengine.org/en/latest/classes/class_opensimplexnoise.html) class."
@@ -18050,7 +18050,7 @@ msgstr ""
 
 #: 2D/screen_shake.md
 msgid "![alt](/godot_recipes/3.x/img/2d_noise_example.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/2d_noise_example.png)"
 
 #: 2D/screen_shake.md
 msgid "As you can see, while \"noisy\", if you pick a particular pixel, adjacent pixels may vary unpredictably, but won't suddenly swing wildly from one extreme to another. The behavior can be adjusted to suit your needs, but we won't go into the details of configuring FastNoiseLite here. See the [related recipes](#related-recipes) section below for links to more information."
@@ -18058,31 +18058,31 @@ msgstr ""
 
 #: 2D/screen_shake.md
 msgid "![alt](/godot_recipes/3.x/img/shake_noise01.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/shake_noise01.gif)"
 
 #: 2D/tilemap_animation.md
 msgid "![alt](/godot_recipes/3.x/img/create_new_resource.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/create_new_resource.png)"
 
 #: 2D/tilemap_animation.md
 msgid "![alt](/godot_recipes/3.x/img/anim_texture_add.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/anim_texture_add.png)"
 
 #: 2D/tilemap_animation.md
 msgid "![alt](/godot_recipes/3.x/img/anim_tile_select.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/anim_tile_select.png)"
 
 #: 2D/tilemap_animation.md
 msgid "![alt](/godot_recipes/3.x/img/anim_tiles.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/anim_tiles.png)"
 
 #: 2D/tilemap_animation.md
 msgid "![alt](/godot_recipes/3.x/img/anim_tile_draw.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/anim_tile_draw.gif)"
 
 #: 2D/tilemap_animation.md
 msgid "![alt](/godot_recipes/3.x/img/anim_tile_add.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/anim_tile_add.png)"
 
 #: 2D/tilemap_collision.md
 msgid "When a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` collides, the collision data is returned in a `KinematicCollision2D` object. The {{< gd-icon TileMap >}}`TileMap` acts as a single collider, so if you reference the `collider` property, it will be the {{< gd-icon TileMap >}}`TileMap` node."
@@ -18102,11 +18102,11 @@ msgstr ""
 
 #: 2D/splitscreen_demo.md
 msgid "![alt](/godot_recipes/3.x/img/splitscreen2.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/splitscreen2.gif)"
 
 #: 2D/splitscreen_demo.md
 msgid "![alt](/godot_recipes/3.x/img/splitscreen_map.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/splitscreen_map.png)"
 
 #: 2D/splitscreen_demo.md
 msgid ""
@@ -18118,11 +18118,11 @@ msgstr ""
 
 #: 2D/splitscreen_demo.md
 msgid "![alt](/godot_recipes/3.x/img/splitscreen_minimap1.png?width=400)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/splitscreen_minimap1.png?width=400)"
 
 #: 2D/splitscreen_demo.md
 msgid "![alt](/godot_recipes/3.x/img/splitscreen_minimap2.png?width=400)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/splitscreen_minimap2.png?width=400)"
 
 #: 2D/splitscreen_demo.md
 msgid ""
@@ -18141,31 +18141,31 @@ msgstr "以下のような問題が発生します。"
 
 #: games/circle_jump/circle_jump_05.md
 msgid "![alt](/godot_recipes/3.x/img/cj_05_03.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_05_03.png)"
 
 #: games/circle_jump/circle_jump_05.md
 msgid "![alt](/godot_recipes/3.x/img/cj_05_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_05_01.png)"
 
 #: games/circle_jump/circle_jump_05.md
 msgid "![alt](/godot_recipes/3.x/img/cj_05_02.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_05_02.png)"
 
 #: games/circle_jump/circle_jump_05.md
 msgid "![alt](/godot_recipes/3.x/img/cj_05_04.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_05_04.gif)"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "![alt](/godot_recipes/3.x/img/cj_11_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_11_01.png)"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "![alt](/godot_recipes/3.x/img/cj_11_02.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_11_02.png)"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "![alt](/godot_recipes/3.x/img/cj_11_03.jpg)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_11_03.jpg)"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "![alt](/godot_recipes/3.x/img/cj_11_04.png)"
@@ -18187,7 +18187,7 @@ msgstr ""
 
 #: games/circle_jump/circle_jump_01.md
 msgid "![alt](/godot_recipes/3.x/img/cj_01_01.png?width=200)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_01_01.png?width=200)"
 
 #: games/circle_jump/circle_jump_01.md
 msgid "For movement and collision, we're going to use a `Area2D`. To be fair, we could use `CharacterBody2D` here too, and it would work just as well. However, we don't really need collision in this game, we just need to know when the jumper contacts a circle. Let's add the following nodes:"
@@ -18195,55 +18195,55 @@ msgstr ""
 
 #: games/circle_jump/circle_jump_01.md
 msgid "![alt](/godot_recipes/3.x/img/cj_01_02.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_01_02.gif)"
 
 #: games/circle_jump/circle_jump_01.md
 msgid "![alt](/godot_recipes/3.x/img/cj_01_03.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_01_03.gif)"
 
 #: games/circle_jump/circle_jump_04.md
 msgid "![alt](/godot_recipes/3.x/img/cj_04_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_04_01.png)"
 
 #: games/circle_jump/circle_jump_04.md
 msgid "![alt](/godot_recipes/3.x/img/cj_04_02.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_04_02.gif)"
 
 #: games/circle_jump/circle_jump_13.md
 msgid "![alt](/godot_recipes/3.x/img/admob_3.2_03.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/admob_3.2_03.png)"
 
 #: games/circle_jump/circle_jump_13.md
 msgid "![alt](/godot_recipes/3.x/img/admob_3.2_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/admob_3.2_01.png)"
 
 #: games/circle_jump/circle_jump_13.md
 msgid "![alt](/godot_recipes/3.x/img/admob_3.2_02.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/admob_3.2_02.png)"
 
 #: games/circle_jump/circle_jump_03.md
 msgid "![alt](/godot_recipes/3.x/img/cj_03_02.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_03_02.gif)"
 
 #: games/circle_jump/circle_jump_03.md
 msgid "![alt](/godot_recipes/3.x/img/cj_03_01.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_03_01.gif)"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "![alt](/godot_recipes/3.x/img/cj_06_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_06_01.png)"
 
 #: games/circle_jump/_index.md
 msgid "![alt](/godot_recipes/3.x/img/circle_jump.gif)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/circle_jump.gif)"
 
 #: games/circle_jump/circle_jump_12.md
 msgid "![alt](/godot_recipes/3.x/img/cj_12_01.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_12_01.png)"
 
 #: games/circle_jump/circle_jump_12.md
 msgid "![alt](/godot_recipes/3.x/img/cj_12_02.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_12_02.png)"
 
 #: games/circle_jump/circle_jump_02.md
 msgid ""
@@ -18253,11 +18253,11 @@ msgstr ""
 
 #: games/circle_jump/circle_jump_02.md
 msgid "![alt](/godot_recipes/3.x/img/cj_02_01.png?width=200)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_02_01.png?width=200)"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "![alt](/godot_recipes/3.x/img/cj_02_02.png)"
-msgstr ""
+msgstr "![alt](/godot_recipes/3.x/img/cj_02_02.png)"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "- **Marker2D (\"StartPosition\")**"
