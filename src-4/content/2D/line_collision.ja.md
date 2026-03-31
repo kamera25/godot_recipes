@@ -4,11 +4,11 @@ weight: 12
 draft: false
 ---
 
-## 課題
+## Problem
 
 衝突検出を {{<  gd-icon Line2D >}}`Line2D` に対して行いたい。
 
-## 解決策
+## Solution
 
 ### ノード設定
 
@@ -63,6 +63,6 @@ func _ready():
         new_shape.shape = rect
 ```
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/line2d_collision](https://github.com/godotrecipes/line2d_collision)

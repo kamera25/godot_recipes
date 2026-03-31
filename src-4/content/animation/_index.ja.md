@@ -9,6 +9,6 @@ pre = "<i class='fas fa-film fa-fw'></i>&nbsp"
 
 Godotのアニメーションシステムを使ってみよう。
 
-#### 目次 ：
+#### In this section:
 
 {{% children  sort="weight" %}}

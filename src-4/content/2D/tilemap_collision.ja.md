@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 19
 ---
 
-## 課題
+## Problem
 
 You have a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` character colliding with a {{< gd-icon TileMap >}}`TileMap`, and you want to know which tile it collided with.
 
-## 解決策
+## Solution
 
 When a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` collides, the collision data is returned in a `KinematicCollision2D` object. The {{< gd-icon TileMap >}}`TileMap` acts as a single collider, so if you reference the `collider` property, it will be the {{< gd-icon TileMap >}}`TileMap` node.
 
@@ -40,7 +40,7 @@ if collision.collider is TileMap:
     collision.collider.set_cellv(tile_pos, new_id)
 ```
 
-## 関連レシピ
+## Related recipes
 
 - [タイルマップ: オートタイルを利用する](/godot_recipes/4.x/ja/2d/autotile_intro/)
 - [タイルマップ: アニメーションタイル](/godot_recipes/4.x/ja/2d/tilemap_animation/)

@@ -4,17 +4,17 @@ weight: 4
 draft: false
 ---
 
-## 課題
+## Problem
 
 マウスでリジッドボディを選択して移動させたい場合。
 
-## 解決策
+## Solution
 
 リジッドボディを扱う際には注意が必要です。Godotの物理演算エンジンがこれらの動きを制御しており、これに干渉すると予期しない結果を招くことがあります。重要なのは、オブジェクトの`mode`プロパティを活用する点です。これは2Dでも3Dでも同様に適用されます。
 
 ### ボディ設定
 
-はじめに、リジッドボディオブジェクトを作成します。まず{{< gd-icon Sprite2D >}}`Sprite2D`と{{< gd-icon CollisionShape2D >}}`CollisionShape2D`を追加してください。さらに物理特性を設定したい場合は`物理Material`も追加できます。このマテリアルでは_Bounce_（反発係数）と_Friction_（摩擦係数）のプロパティを調整できます。
+はじめに、リジッドボディオブジェクトを作成します。まず{{< gd-icon Sprite2D >}}`Sprite2D`と{{< gd-icon CollisionShape2D >}}`CollisionShape2D`を追加してください。さらに物理特性を設定したい場合は`PhysicsMaterial`も追加できます。このマテリアルでは_Bounce_（反発係数）と_Friction_（摩擦係数）のプロパティを調整できます。
 
 物理演算エンジンの制御から一時的に解放するために、リジッドボディの「フリーズ」プロパティを使用します。ドラッグ操作中も移動可能にしておく必要があるため、デフォルト値である「静的モード」ではなく、**凍結モード**を「運動学的」に設定します。
 
@@ -101,9 +101,9 @@ func _unhandled_input(event):
 
 <video controls src="/godot_recipes/4.x/img/rbody_drag.webm"></video>
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトコードはこちらからダウンロードできます。 [https://github.com/godotrecipes/rigidbody_drag_drop](https://github.com/godotrecipes/rigidbody_drag_drop)
 
-## 関連レシピ
+## Related recipes
 

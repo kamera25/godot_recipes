@@ -4,11 +4,11 @@ weight: 15
 draft: false
 ---
 
-## 課題
+## Problem
 
 キャラクターの体は地面や地形と平行になるように調整が必要となります。
 
-## 解決策
+## Solution
 
 このレシピは[キャラクターボディ3D：移動制御](/godot_recipes/4.x/ja/3d/characterbody3d_examples/) レシピで解説されている基本の{{< gd-icon CharacterBody3D >}}`CharacterBody3D`コントローラーを拡張する内容となっています。まずはそちらを先にお読みください。
 
@@ -107,11 +107,11 @@ var n = ($FrontRay.get_collision_normal() + $RearRay.get_collision_normal()) / 2
 
 補間量は自由に調整してみてください。この環境で「12」が最適でしたが、環境によってはさらに高い値や低い値が適している場合もあります。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトのサンプルコードをダウンロードする：[https://github.com/godotrecipes/characterbody3d_examples](https://github.com/godotrecipes/characterbody3d_examples)
 
-## 関連レシピ
+## Related recipes
 
 * [CharacterBody3Dの移動](/godot_recipes/4.x/ja/3d/characterbody3d_examples/)
 * [ゲーム数学 補間](/godot_recipes/4.x/ja/math/interpolation/)

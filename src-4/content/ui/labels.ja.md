@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 55
 ---
 
-## 課題
+## Problem
 
 画面にテキストを表示したい。
 
-## 解決策
+## Solution
 
 スクリーンにテキストを表示する機会が増えるでしょう。例えば、タイトル表示やカウントダウンタイマー、スコアカウンターなどがその一例です。これらのほとんどは、Godotの {{< gd-icon Label >}} `Label` ノードを使えば簡単に実装できます。
 
@@ -72,11 +72,11 @@ func _on_Timer_timeout():
 プロジェクトファイルをこちらからダウンロードしてください: [screen_shake.zip](/godot_recipes/4.x/ja/files/screen_shake.zip)
 {{% /notice %}} -->
 
-## 関連レシピ
+## Related recipes
 
 <!-- - [ノイズ](/godot_recipes/4.x/ja/math/noise/) -->
 
 
-#### この動画が気に入ったら？
+#### Like video?
 
 <!-- {{< youtube C-Sn55e5wnk >}} -->

@@ -4,11 +4,11 @@ weight: 2
 draft: false
 ghcommentid: 88
 ---
-## 課題
+## Problem
 
 対象物を滑らかに追従できる3Dカメラが必要となります（補間機能が必要となります）。
 
-## 解決策
+## Solution
 
 {{% notice info %}}
 Godotに標準搭載されている`InterpolatedCamera`ノードは非推奨となっており、Godot 4.0リリース時に廃止される予定です。

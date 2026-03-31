@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 41
 ---
 
-## 課題
+## Problem
 
 3Dドライビング/レーシングゲームを作りたいが、どこから手をつければいいかわからない。
 
-## 解決策
+## Solution
 
 {{% notice note %}}
 3D環境においても、車両は基本的に地面に留まる性質があります。このため、移動処理の多くは実質的に2Dと同様の扱いができます。車の動作コードの大部分は、[2D用カーステアリングレシピ](/godot_recipes/4.x/ja/2d/car_steering)と非常に似た構造になります。このチュートリアルに進む前に、必ずそのレシピを確認しておくことをオススメします。
@@ -40,7 +40,7 @@ VehicleBody3D`車両ボディ`の操作方法について詳しく知りたい�
 
 Select the file in Godot and go to the "Import" tab. Change the _Root Type_ to "CharacterBody3D" and click "Reimport". Now we're ready to use this car.
 
-#### セットアップ方法 the {{< gd-icon KinematicBody3D >}} CharacterBody3D
+#### Setting up the {{< gd-icon KinematicBody3D >}} CharacterBody3D
 
 `sedanSports.glb`ファイルをダブルクリックし、「新規継承」を選択してください。以下のように新しいシーンが作成されます。
 
@@ -195,13 +195,13 @@ func get_input():
 ダウンロードはこちら：[https://github.com/kidscancode/3d_car_tutorial/releases](https://github.com/kidscancode/3d_car_tutorial/releases)
 {{% /notice %}}
 
-## 関連レシピ
+## Related recipes
 
 - [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)
-* [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)
+- [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)
 - [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)
 
-#### この動画が気に入ったら？
+#### Like video?
 
 {{< youtube WhwSKyGjQq0 >}}
 

@@ -5,11 +5,11 @@ draft: false
 tags: []
 ---
 
-## 課題
+## Problem
 
 FPSゲームで射撃機能を実装しますが、個別の発射物を手動で動かすのは非現実的です。
 
-## 解決策
+## Solution
 
 ゲームの物理演算エンジンは、非常に高速で移動するオブジェクトを処理しようとすると破綻しがちです。解決策としては、射手の位置からレイキャストを行い、最初に衝突する物体を検出する方法が有効です。
 
@@ -30,7 +30,7 @@ We'll add an input check in the `_input()` function, which we're already using t
         shoot()
 ```
 
-次に、`shoot()` メソッドを定義します。この関数が呼び出されるたびに、以下の処理を実行する `物理RayQueryParameters3D` オブジェクトを作成します。
+次に、`shoot()` メソッドを定義します。この関数が呼び出されるたびに、以下の処理を実行する `PhysicsRayQueryParameters3D` オブジェクトを作成します。
 1. レイの始点（カメラ位置）を定義
 2. レイの終点（カメラから前方100メートル投影された位置）を定義
 
@@ -49,10 +49,10 @@ func shoot():
 ```
 
 
-## 関連レシピ
+## Related recipes
 
 - [FPSキャラクターの作り方](/godot_recipes/4.x/ja/3d/basic_fps)
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトコードはこちらよりダウンロードできます。 [https://github.com/godotrecipes/3d_shoot_castrays](https://github.com/godotrecipes/3d_shoot_castrays)

@@ -5,19 +5,19 @@ draft: false
 ghcommentid: 47
 ---
 
-## 課題
+## Problem
 
 マウス入力を検出したい。
 
-## 解決策
+## Solution
 
-`入力EventMouse` はマウスイベントの基本クラスです。これには `position` および `global_position` プロパティが含まれています。このクラスを継承するサブクラスとして、`入力EventMouseButton` と `入力EventMouseMotion` の2つが存在します。
+`InputEventMouse` はマウスイベントの基本クラスです。これには `position` および `global_position` プロパティが含まれています。このクラスを継承するサブクラスとして、`InputEventMouseButton` と `InputEventMouseMotion` の2つが存在します。
 
 {{% notice note %}}
 インプットマップでマウスボタンイベントを割り当てられるので、`is_action_pressed()` 関数を使用してこれらを利用できます。
 {{% /notice %}}
 
-### `入力EventMouseButton`
+### `InputEventMouseButton`
 
 `@GlobalScope.ButtonList` には、各可能なボタンに対応する定数リスト（例：BUTTON_*）が格納されており、これらの値はイベントのbutton_indexプロパティで報告されます。なお、スクロールホイールも1つのボタンとしてカウントされます - 正確には2つのボタンがあり、それぞれ`BUTTON_WHEEL_UP`と`BUTTON_WHEEL_DOWN`という別々のイベントとして扱われます。
 
@@ -37,7 +37,7 @@ func _unhandled_input(event):
             print("Wheel down")
 ```
 
-### `入力EventMouseMotion`
+### `InputEventMouseMotion`
 
 これらのイベントはマウスが移動するたびに発生します。移動距離（画面座標単位）は「`relative`」プロパティで取得できます。
 

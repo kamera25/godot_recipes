@@ -15,7 +15,7 @@ Godot offers a number of collision objects to provide both collision detection a
 
 ゲーム開発において、ゲーム内空間内の二つのオブジェクトが交差するか接触するかどうかを判断する必要が生じる場面は頻繁に存在します。これは「衝突検知」と呼ばれる処理です。衝突が検出された場合、通常は何らかのアクションを発生させたいものです。この部分を総称して「衝突応答」と呼びます。
 
-Godot では3種類の物理ボディが提供されており、<a href="http://docs.godotengine.org/ja/latest/classes/class_physicsbody2d.html" target="_blank">`物理Body2D`</a> タイプに分類されます。
+Godot では3種類の物理ボディが提供されており、<a href="http://docs.godotengine.org/ja/latest/classes/class_physicsbody2d.html" target="_blank">`PhysicsBody2D`</a> タイプに分類されます。
 
 - {{< gd-icon StaticBody2D >}}`StaticBody2D`- {{< gd-icon StaticBody2D >}} `StaticBody2D`
 

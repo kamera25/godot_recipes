@@ -4,11 +4,11 @@ weight: 12
 draft: false
 ---
 
-## 課題
+## Problem
 
 「Astroids」のような半リアルな宇宙船を作成するため、`RigidBody2D`を使いたい。
 
-## 解決策
+## Solution
 
 {{< gd-icon RigidBody2D >}}`RigidBody2D` を使用する際には少し注意が必要です。Godotの物理エンジンによって制御されるため、直接移動させるのではなく力を加える必要があります。リジッドボディを扱う前に、[RigidBody2D APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html)を必ず確認することを強くオススメします。これからこの例を進めていく過程で、このドキュメントを参照しながら進めていきます。
 
@@ -95,7 +95,7 @@ func _integrate_forces(state):
     state.transform = xform
 ```
 
-ご覧の通り、`_integrate_forces()` 関数には `state` というパラメーターが含まれています。このオブジェクトはボディの [物理DirectBodyState2D](https://docs.godotengine.org/ja/stable/classes/class_physicsdirectbodystate2d.html) です。ここには、力、速度、位置など、現在の物理特性がすべて保持されています。
+ご覧の通り、`_integrate_forces()` 関数には `state` というパラメーターが含まれています。このオブジェクトはボディの [PhysicsDirectBodyState2D](https://docs.godotengine.org/ja/stable/classes/class_physicsdirectbodystate2d.html) です。ここには、力、速度、位置など、現在の物理特性がすべて保持されています。
 
 状態から現在の変換行列を取得し、`wrapf()` 関数を使用して画面全体を覆うように変更した後、元の状態に復元します。
 
@@ -130,6 +130,6 @@ var teleport_pos = null
 
 ![alt](/godot_recipes/4.x/img/asteroids_warp.gif)
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/asteroids_support](https://github.com/godotrecipes/asteroids_support)

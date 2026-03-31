@@ -4,15 +4,15 @@ weight: 5
 draft: true
 ---
 
-## 課題
+## Problem
 
 オブジェクトや画面をぼかすシェーダーが欲しい。
 
-## 解決策
+## Solution
 
 <video controls src='/godot_recipes/img/.webm'></video>
 
-## 関連するレシピ
+## Related Recipes
 
 - [シェーダー入門](/godot_recipes/4.x/ja/shaders/intro/)
 - [シェーダーとの連携](/godot_recipes/4.x/ja/shaders/interacting/)

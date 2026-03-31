@@ -4,11 +4,11 @@ weight: 7
 draft: false
 ---
 
-## 課題
+## Problem
 
 RTS(リアルタイムストラテジー)のように、複数ユニットを選択するためにクリック＆ドラッグしたい。
 
-## 解決策
+## Solution
 
 リアルタイムストラテジー（RTS）ゲームでは、複数ユニットに同時に命令する事があります。一般的な操作手法として、対象ユニットをマウスでクリックしてドラッグすることで選択範囲を決定。またユニットを選択したら、マップ上をクリックすることで移動コマンドを実行させる事が多いです。
 
@@ -64,7 +64,7 @@ func _draw():
 
 選択ボックスが作成できたら、その内部に位置するユニットを特定する必要があります。ボタンを放してドラッグ操作が終了した際には、物理空間クエリを実行して対象のユニットを検索する必要があります。なお、対象となるユニットは{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ですが、{{< gd-icon Area2D >}}`Area2D`やその他のボディタイプでも問題ありません。
 
-`物理DirectSpaceState2D.intersect_shape()`を使用してユニットを検出します。これには形状（ここでは矩形）と変換行列（位置）が必要となります。詳細は[Godotドキュメント](https://docs.godotengine.org/ja/4.x/classes/class_physicsdirectspacestate2d.html)を参照してください。
+`PhysicsDirectSpaceState2D.intersect_shape()`を使用してユニットを検出します。これには形状（ここでは矩形）と変換行列（位置）が必要となります。詳細は[Godotドキュメント](https://docs.godotengine.org/ja/4.x/classes/class_physicsdirectspacestate2d.html)を参照してください。
 
 ```gdscript
 elif dragging:
@@ -85,7 +85,7 @@ elif dragging:
     selected = space.intersect_shape(query)
 ```
 
-これで物理状態への参照を取得し、`物理ShapeQueryParameters2D`を使用して形状クエリを設定できます。ここでは対象の形状を指定するとともに、ドラッグ操作中のエリアの中心座標を基準にしてクエリの変換行列を定義します。`intersect_shape()`を呼び出した後の結果は、Dictonary 配列として返され、以下のような形式になります。
+これで物理状態への参照を取得し、`PhysicsShapeQueryParameters2D`を使用して形状クエリを設定できます。ここでは対象の形状を指定するとともに、ドラッグ操作中のエリアの中心座標を基準にしてクエリの変換行列を定義します。`intersect_shape()`を呼び出した後の結果は、Dictonary 配列として返され、以下のような形式になります。
 
 ```
 [{ "rid": RID(4093103833089), "collider_id": 32145147326, "collider": Unit2:<CharacterBody2D#32145147326>, "shape": 0 },
@@ -123,15 +123,15 @@ func _unhandled_input(event):
 
 ここでの `else` 条件は、`selected` が 0 より大きいときにマウスをクリックした場合にトリガーされます。各項目の `target` を設定した後、ユニットを選択解除することで、再度最初から開始できるようにしています。
 
-## まとめ
+## Wrapping up
 
 このテクニックはリアルタイムストラテジーゲーム（RTS）やその他のジャンルのゲームに応用できます。以下から完全版プロジェクトをダウンロードして、ゲームを作る際に活用してください。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトコードはこちらからダウンロードできます。 [https://github.com/godotrecipes/multi_unit_support](https://github.com/godotrecipes/multi_unit_support)
 
 
-## 関連レシピ
+## Related recipes
 
 - [マウス入力](/godot_recipes/4.x/ja/input/mouse_input/)

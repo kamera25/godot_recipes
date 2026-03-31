@@ -4,11 +4,11 @@ weight: 12
 draft: false
 ---
 
-## 課題
+## Problem
 
 3D空間で飛行機のコントローラーを作りたいが、完全なフライトシミュレーター機能は不要です。
 
-## 解決策
+## Solution
 
 このレシピでは、「簡素化された」航空機コントローラーを作成します。ここで言う「簡素化」とは、基本機能だけに絞り込むことを意味します。目指しているのは、飛行機の操縦感覚――特別な訓練なしですぐに飛び立て、最小限の操作体系で簡単に飛行を楽しめるような体験です。
 
@@ -289,10 +289,10 @@ func _physics_process(delta):
 
 {{% /expand%}}
 
-## まとめ
+## Wrapping up
 
-このテクニックは、様々なアーケードスタイルの飛行ゲームに応用できます。例えば、マウス操作の場合、`入力EventMouseMotion` の `relative`プロパティを使用してピッチとヨー入力を設定する方法が有効です。
+このテクニックは、様々なアーケードスタイルの飛行ゲームに応用できます。例えば、マウス操作の場合、`InputEventMouseMotion` の `relative`プロパティを使用してピッチとヨー入力を設定する方法が有効です。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/3d_airplane_demo](https://github.com/godotrecipes/3d_airplane_demo)

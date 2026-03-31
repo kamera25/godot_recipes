@@ -5,13 +5,13 @@ draft: false
 ghcommentid: 36
 ---
 
-## 課題
+## Problem
 
 プレイヤー／モブなどから投射物を発射させたい。
 
-## 解決策
+## Solution
 
-For this example, we'll use the "Mini Tank" that we set up in [CharacterBody3Dの移動](/godot_recipes/3.x/3d/kinematic_body/).
+For this example, we'll use the "Mini Tank" that we set up in [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/).
 
 ### 弾丸の設定
 
@@ -97,10 +97,10 @@ if Input.is_action_just_pressed("shoot"):
 プロジェクトファイルはこちらよりダウンロードできます。[3d_shooting.zip](/godot_recipes/4.x/ja/files/3d_shooting.zip)
 {{% /notice %}} -->
 
-## 関連レシピ
+## Related recipes
 
-- [CharacterBody3Dの移動](/godot_recipes/3.x/3d/kinematic_body/)
-- [はじめてのGodot: 3D入門講座](/godot_recipes/3.x/g101/3d/)
+- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)
+- [Godot 101: Intro to 3D](/godot_recipes/3.x/g101/3d/)
 
 <!-- #### Videoが気に入ったら？ -->
 

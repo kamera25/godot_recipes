@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 38
 ---
 
-## 課題
+## Problem
 
 クリックして指定した位置に3Dオブジェクトを移動させたい。
 
-## 解決策
+## Solution
 
 まず、世界として平面から始めてください。オブジェクトはこの平面上を移動します。
 
@@ -62,7 +62,7 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 
 ![alt](/godot_recipes/4.x/img/3d_click_04.gif)
 
-## まとめ
+## Wrapping up
 
 この手法を使えば、3Dワールド内の任意のオブジェクトに対するクリックを検出できます。
 

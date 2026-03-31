@@ -4,11 +4,11 @@ weight: 1
 draft: false
 ---
 
-## 課題
+## Problem
 
 プレイヤーを追いかける敵が欲しい。
 
-## 解決策
+## Solution
 
 敵をプレイヤー追跡モードに移行させる最初のステップは、敵が移動する必要のある方向を決定することです。ベクトル **A** から **B** への方向を求めるには、以下のように計算します。**B** - **A**。この結果を正規化すれば、方向ベクトルが得られます。
 
@@ -71,7 +71,7 @@ func _on_DetectRadius_body_exited(body):
 
 より高度な動作については、本書の他のレシピを参照してください。
 
-## 関連レシピ
+## Related recipes
 
 - [見下ろし型のキャラクター移動](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)
 - [追跡ミサイル](/godot_recipes/4.x/ja/ai/homing_missile/)

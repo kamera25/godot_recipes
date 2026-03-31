@@ -4,17 +4,17 @@ weight: 5
 draft: false
 ---
 
-## 課題
+## Problem
 
 RPG風のスキルボタンを作成したい。クールタイム効果も組み込みたい。
 
 ![alt](/godot_recipes/4.x/img/cooldown_01.gif)
 
-## 解決策
+## Solution
 
 ボタン用のアイコンが必要な場合、[Game-icons.net](https://game-icons.net/)では多種多様なデザイン性の高いボタン素材を提供しています。このレシピでもその一部を使用しています。
 
-### ノード設定
+### Node setup
 
 能力ボタン用のシーンには以下のノードが必要となります：
 
@@ -99,7 +99,7 @@ func _on_Timer_timeout():
 
 ![alt](/godot_recipes/4.x/img/cooldown_03.gif)
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。 [https://github.com/godotrecipes/ui_cooldown_button](https://github.com/godotrecipes/ui_cooldown_button)
 

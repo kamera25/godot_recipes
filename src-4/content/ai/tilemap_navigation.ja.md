@@ -4,9 +4,9 @@ weight: 11
 draft: true
 ---
 
-## 課題
+## Problem
 
 
 
-## 解決策
+## Solution
 

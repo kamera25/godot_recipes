@@ -25,10 +25,10 @@ trans_typeパラメーターを使用することで、補間に使用する遷�
 {{% notice note %}}
 {{% /notice %}}
 
-## 関連レシピ
+## Related recipes
 
 - []()
 
-<!-- #### Videoが気に入ったら？ -->
+<!-- #### Like video?
 
 {{< youtube  >}} -->

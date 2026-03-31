@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 85
 ---
 
-## 課題
+## Problem
 
 ゲーム内でデータを処理する方法や、柔軟なデータオブジェクトを作成する方法を探しています。
 
-## 解決策
+## Solution
 
 Godotの`Resource`クラスは、データを格納・操作するための強力なツールです。Godotで扱う最も一般的なオブジェクトの多くは[Resource](https://docs.godotengine.org/ja/stable/classes/class_resource.html#class-resource)タイプを拡張しています。アニメーション、衝突形状、画像など。リソースは単なるデータ保持だけでなく、そのデータを操作することもできます（Unityの *ScriptableObject* に似ています。）。
 
@@ -173,7 +173,7 @@ func _on_player_health_changed(value):
 プロジェクトファイルをこちらからダウンロードしてください: [custom_resources.zip](/godot_recipes/4.x/ja/files/custom_resources.zip)
 {{% /notice %}}
 
-## 関連レシピ
+## Related recipes
 
 - [プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)
 - [オブジェクトのHPバー](/godot_recipes/4.x/ja/ui/unit_healthbar/)

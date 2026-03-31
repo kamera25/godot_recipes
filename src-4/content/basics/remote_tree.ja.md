@@ -5,11 +5,11 @@ draft: true
 ghcommentid:
 ---
 
-## 課題
+## Problem
 
 
 
-## 解決策
+## Solution
 
 ### 実行中のゲームの可視化について
 

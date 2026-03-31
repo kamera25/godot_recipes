@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 27
 ---
 
-## 課題
+## Problem
 
 タイルマップでアニメーションタイルを使用したい。
 
-## 解決策
+## Solution
 
 この問題に対処する最も直接的な方法は、`AnimatedTexture`リソースを使用することです。
 
@@ -34,7 +34,7 @@ ghcommentid: 27
 
 「保存」ボタンをクリックしてリソースを保存します。`water_anim.tres`のような名前を付けてください。
 
-### タイルマップでのAnimatedTextureの使用について
+### TileMapでのAnimatedTextureの使用について
 
 アニメーション付きテクスチャが保存されたので、これで`タイルセット`で使用できるようになります。新規または既存の{{< gd-icon TileMap >}}`TileMap`を開き、その_Tile Set_プロパティを選択します。新しいテクスチャを`TileSet`に追加するには、ボタンをクリックしてください。
 

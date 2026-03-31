@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 31
 ---
 
-## 課題
+## Problem
 
 モバイルゲームには、タッチ操作対応の2Dカメラが必要です。
 
-## 解決策
+## Solution
 
 このレシピでは、複数のタッチ操作に対応した汎用2Dカメラを作成します。
 
@@ -67,7 +67,7 @@ func _process(delta):
 
 ※このジェスチャーは、プロジェクト設定の「入力デバイス」→「ポインティング」で「マウスからタッチをエミュレート」を有効化することでパソコンでテストできます。
 
-マウスイベントやキーボードイベントと同様、タッチイベントも`入力Event`を継承し、同じ入力優先度に従います。処理には`_unhandled_input()`関数を使用するため、他のノード（例：{{< gd-icon Control >}}`Control`ノード）が先にイベントを処理できます。
+マウスイベントやキーボードイベントと同様、タッチイベントも`InputEvent`を継承し、同じ入力優先度に従います。処理には`_unhandled_input()`関数を使用するため、他のノード（例：{{< gd-icon Control >}}`Control`ノード）が先にイベントを処理できます。
 
 ```gdscript
 func _unhandled_input(event):
@@ -78,7 +78,7 @@ func _unhandled_input(event):
             events.erase(event.index)
 ```
 
-まず、タッチイベント（`入力EventScreenTouch`）をチェックしています。このイベントを`events`辞書に追加します。イベントの`index`プロパティが辞書のキーとして使います。また、このイベントが「押されていない」（つまりタッチが終了した場合）には削除します。
+まず、タッチイベント（`InputEventScreenTouch`）をチェックしています。このイベントを`events`辞書に追加します。イベントの`index`プロパティが辞書のキーとして使います。また、このイベントが「押されていない」（つまりタッチが終了した場合）には削除します。
 
 次は、タッチ動作の後に発生するドラッグ操作について処理が必要です。
 
@@ -184,9 +184,9 @@ func _unhandled_input(event):
 プロジェクトファイルはこちらからダウンロードできます。 [2d_touch_camera.zip](/godot_recipes/4.x/ja/files/2d_touch_camera.zip)
 {{% /notice %}} -->
 
-## 関連レシピ
+## Related recipes
 
-- [入力操作: 入力アクション](/godot_recipes/4.x/ja/input/input_actions/)
+- [入力操作: Input Actions](/godot_recipes/4.x/ja/input/input_actions/)
 - [マウスドラッグでのユニットの選択](/godot_recipes/4.x/ja/input/multi_unit_select/)
 
 #### この動画が気に入ったら？

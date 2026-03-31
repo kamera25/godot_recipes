@@ -13,6 +13,6 @@ pre = "<i class='fas fa-chess-pawn fa-fw'></i>&nbsp"
 現在Godot 4.0向けの新規コンテンツを開発中です。それまでの間、初心者の方には豊富なリソースと学習教材が揃っているGodot 3.x版の使用をオススメします。
 {{% /notice %}} -->
 
-#### 目次 ：
+#### In this section:
 
 {{% children  sort="weight" %}}

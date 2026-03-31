@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 20
 ---
 
-## 課題
+## Problem
 
 2D見下ろし方式のゲームを開発しており、キャラクターの動きを制御が必要です。
 
-## 解決策
+## Solution
 
 このソリューションでは、以下の入力アクションが定義されているとします。
 
@@ -104,6 +104,6 @@ func _physics_process(delta):
 
 ターゲット位置に近づくと移動を停止します。これを行わないと、キャラクターは「ぐらぐら」動きながら、少しずつ目標を越えては戻り、再び越えて…という動作を繰り返します。オプションとして、`look_at()` を使って移動中の方向を向くようにすることもできます。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトコードをダウンロードするにはこちら：[https://github.com/godotrecipes/topdown_movement](https://github.com/godotrecipes/topdown_movement)

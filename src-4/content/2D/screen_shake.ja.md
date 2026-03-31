@@ -5,11 +5,11 @@ draft: true
 ghcommentid: 28
 ---
 
-## 課題
+## Problem
 
 「画面シェイク」エフェクトを作成したいとの。
 
-## 解決策
+## Solution
 
 「画面揺れ」効果は、ゲームに躍動感を加えるための効果的な手法です。適切に使えば非常に効果的ですが、使いすぎるとプレイヤーから反感を買うことになります。このゲームへの実装を検討する際には、この点をよく考慮し、慎重に使用するようにしてください。
 
@@ -126,7 +126,7 @@ offset.y = max_offset.y * amount * noise.get_noise_2d(noise.seed*3, noise_y)
 プロジェクトファイルはこちらからダウンロードできます。[screen_shake.zip](/godot_recipes/4.x/ja/files/screen_shake.zip)
 {{% /notice %}}
 
-## 関連レシピ
+## Related recipes
 
 - [ノイズジェネレーター](/godot_recipes/4.x/ja/math/noise/)
 - [プラットフォームキャラクター実装](/godot_recipes/4.x/ja/ai/platform_character)

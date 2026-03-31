@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 13
 ---
 
-## 課題
+## Problem
 
 ゲームセッション間でローカルデータを保存と読み込みたいです。
 
-## 解決策
+## Solution
 
 Godotのファイル入出力（IO）システムは `FileAccess` オブジェクトを基盤として構築されています。ファイルをオープンするには `open()` メソッドを呼び出します。
 
@@ -108,6 +108,6 @@ JSONにはゲームデータ保存時に不利となる制約があります。J
 
 Godot 自体がシーンやリソースの保存にJSONを使用していないのには理由があります。
 
-### まとめ
+### Wrapping up
 
 この記事で「`FileAccess`」の基本的な機能をざっとご紹介しました。利用可能な「`FileAccess`」メソッドの全一覧については、[公式ドキュメントのFileAccessページ](https://docs.godotengine.org/ja/stable/classes/class_fileaccess.html)をご覧ください。

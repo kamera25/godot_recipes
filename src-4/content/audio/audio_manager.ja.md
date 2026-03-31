@@ -5,13 +5,13 @@ draft: false
 ghcommentid: 80
 ---
 
-## 課題
+## Problem
 
-オブジェクトが破壊されたり収集された際に再生するために `オーディオStreamPlayer` をモブ/コインなどに追加しました。ただ、対象のオブジェクトを削除すると、オーディオプレイヤーも同時に削除され、音が途切れる問題が発生します。より簡単に音声を管理できる方法を教えてください。
+オブジェクトが破壊されたり収集された際に再生するために `AudioStreamPlayer` をモブ/コインなどに追加しました。ただ、対象のオブジェクトを削除すると、オーディオプレイヤーも同時に削除され、音が途切れる問題が発生します。より簡単に音声を管理できる方法を教えてください。
 
-## 解決策
+## Solution
 
-この問題を解決するため、SceneTreeのどこからでもアクセス可能なノードを使用します。このノードは一連の`オーディオStreamPlayer`ノードと、再生するサウンドストリームのキューを管理します。
+この問題を解決するため、SceneTreeのどこからでもアクセス可能なノードを使用します。このノードは一連の`AudioStreamPlayer`ノードと、再生するサウンドストリームのキューを管理します。
 
 スクリプトエディターで新しいスクリプトを作成します。
 
@@ -52,7 +52,7 @@ func _process(delta):
         available.pop_front()
 ```
 
-このスクリプトをプロジェクト設定で 自動読み込み に設定してください。「オーディオManager」のように、わかりやすく認識しやすい名前を付けてください。
+このスクリプトをプロジェクト設定で 自動読み込み に設定してください。「AudioManager」のように、わかりやすく認識しやすい名前を付けてください。
 
 ![alt](/godot_recipes/4.x/img/audio_mgr_01.png)
 
@@ -80,10 +80,10 @@ AudioManager.play("res://path/to/sound")
  -->
 
 
-<!-- #### Videoが気に入ったら？ -->
+<!-- #### Like video?
 
 {{< youtube 7axJJYont6Y >}} -->
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/audio_manager](https://github.com/godotrecipes/audio_manager)

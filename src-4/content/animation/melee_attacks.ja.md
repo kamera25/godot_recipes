@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 53
 ---
 
-## 課題
+## Problem
 
 剣やパンチなどの近接攻撃を実装したい。
 
-## 解決策
+## Solution
 
 本例では、既に攻撃アニメーションが設定されたキャラクターが存在すると仮定します。説明のために、以下の2種類の攻撃を使用する：
 
@@ -17,7 +17,7 @@ ghcommentid: 53
 
 ![alt](/godot_recipes/3.x/img/attack1.png)
 
-{{< gd-icon Area2D >}}`Area2D` を使用して剣がターゲットに命中したことを検出できますが、実際に有効化する必要があるのはスイング動作中のみです。アニメーションと同期させるためには、この活性化をアニメーションPlayerで制御します。
+{{< gd-icon Area2D >}}`Area2D` を使用して剣がターゲットに命中したことを検出できますが、実際に有効化する必要があるのはスイング動作中のみです。アニメーションと同期させるためには、この活性化をAnimationPlayerで制御します。
 
 シーンに `Area2D` と `CollisionShape2D` を追加します。ヒットボックスには矩形形状を使用し、剣が振り上げフレームで完全にカバーされるようにサイズを調整します。
 
@@ -47,11 +47,11 @@ func _on_SwordHit_area_entered(area):
 
 ![alt](/godot_recipes/3.x/img/melee_attack_05.gif)
 
-## 関連レシピ
+## Related recipes
 
 [見下ろし型キャラクター制御](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)
 [アニメーション状態の管理方法](http://kidscancancode.org/godot_recipes/animation/animation_state_machine/)
 
-#### この動画が気に入ったら？
+#### Like video?
 
 {{< youtube AaJopFFkmNo >}}

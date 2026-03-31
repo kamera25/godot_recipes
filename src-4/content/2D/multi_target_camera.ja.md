@@ -4,7 +4,7 @@ weight: 11
 draft: false
 ---
 
-## 課題
+## Problem
 
 複数のオブジェクトを同時に画面上に表示し続けるには、移動・ズーム機能を備えたダイナミックなカメラシステムが必要です。
 
@@ -12,7 +12,7 @@ draft: false
 
 ![alt](/godot_recipes/4.x/img/multi_cam_01.gif)
 
-## 解決策
+## Solution
 
 シングルプレイヤーモードでは、カメラをプレイヤーに追従させるのが一般的な手法です。しかし、ここでは2人以上のプレイヤーやその他の重要オブジェクトが常に画面に表示され続ける必要があるため、同様の方法は適用できません。
 
@@ -156,6 +156,6 @@ func remove_target(t):
         targets.remove(t)
 ```
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/multitarget_camera](https://github.com/godotrecipes/multitarget_camera)

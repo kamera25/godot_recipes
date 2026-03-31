@@ -9,6 +9,6 @@ pre = "<i class='fas fa-atom fa-fw'></i>&nbsp"
 
 Godot の物理ノードの使い方を学びます。
 
-#### 目次 ：
+#### In this section:
 
 {{% children  sort="weight" %}}

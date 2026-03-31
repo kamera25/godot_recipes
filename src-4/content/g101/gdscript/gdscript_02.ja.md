@@ -40,7 +40,7 @@ func _process(delta):
 
 ## ベクトルの使用法
 
-What if we want to move the sprite diagonally? That means we need to change the `x` and `y` coordinates at the same time. `position` is a **vector** - it contains both coordinates in one quantity. Vectors can be added, so let's change the code をこれに：
+What if we want to move the sprite diagonally? That means we need to change the `x` and `y` coordinates at the same time. `position` is a **vector** - it contains both coordinates in one quantity. Vectors can be added, so let's change the code to this:
 
 ```gdscript
 func _process(delta):

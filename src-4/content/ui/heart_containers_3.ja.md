@@ -4,11 +4,11 @@ weight: 5
 draft: false
 ---
 
-## 課題
+## Problem
 
 ハートの器のようなバー（または他のアイコンを基調としたバー）を表示したい。
 
-## 解決策
+## Solution
 
 プレイヤーのHPを表示する一般的な方法として、一連のアイコン（通常はハートマーク）を使用する手法があります。プレイヤーがダメージを受けると、これらが徐々に消失していきます。
 
@@ -103,11 +103,11 @@ func update_partial(value):
 
 ![alt](/godot_recipes/4.x/img/heart_bar_04.gif)
 
-## まとめ
+## Wrapping up
 
 このハートバーの設定を、独自のHUD作成の基礎として活用してください。この手法をさらに拡張すれば、多種多様な情報を表示できます。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトのサンプルコードはこちらでダウンロードできます。 [https://github.com/godotrecipes/heart_bars](https://github.com/godotrecipes/heart_bars)
 
@@ -115,6 +115,6 @@ func update_partial(value):
 プロジェクトファイルはこちらからダウンロードできます。 [heart_bars.zip](/godot_recipes/4.x/ja/files/heart_bars.zip)
 {{% /notice %}} -->
 
-## 関連レシピ
+<!-- ## Related recipes
 
 - [UI：コンテナ](/godot_recipes/4.x/ja/ui/containers/) -->

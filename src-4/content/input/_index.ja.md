@@ -9,6 +9,6 @@ pre = "<i class='fas fa-gamepad fa-fw'></i>&nbsp"
 
 入力処理 - キーボード・マウスからゲームコントローラー、タッチスクリーンまで幅広く対応させます。
 
-#### 目次 ：
+#### In this section:
 
 {{% children  sort="weight" %}}

@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 43
 ---
 
-## 課題
+## Problem
 
 車（またはその他の物体）を追跡できる「追従カメラ」を実装したい。
 
-## 解決策
+## Solution
 
 {{% notice note %}}
 Godot には組み込みの `InterpolatedCamera` ノードが用意されており、ここで説明している機能の大部分をすでに実装しています。ただし、このノードを使用しない理由は2つあります。第一に、キネマティックボディを追いかける際にカクツキが発生しやすい点、次に Godot 4.0 で廃止予定となっている点です。とはいえ、独自のセットアップは非常に簡単ですので、ご安心ください。<i class='far fa-smile-beam'></i>
@@ -83,12 +83,12 @@ func _input(event):
 
 ![alt](/godot_recipes/3.x/img/3d_car_08.gif)
 
-## 関連レシピ
+## Related recipes
 
 - [Kinematic Car: Base](/godot_recipes/3.x/3d/kinematic_car/car_base/)
 - [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)
-* [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)
+- [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)
 - [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)
 
-#### この動画が気に入ったら？
+#### Like video?
 

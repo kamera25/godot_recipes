@@ -13,7 +13,7 @@ tags: []
 Setting a {{< gd-icon RigidBody2D >}}`RigidBody2D`'s physical properties, such as `position` or `linear_velocity` directly will not work correctly. The physics engine controls these values.
 {{% /notice %}}
 
-The body’s behavior is also affected by the world, via the Project Settings -> 物理 properties, or by entering an {{< gd-icon Area2D >}}`Area2D` that is overriding the global physics properties.
+The body’s behavior is also affected by the world, via the Project Settings -> Physics properties, or by entering an {{< gd-icon Area2D >}}`Area2D` that is overriding the global physics properties.
 
 適切に使用すれば、リジッドボディはGodotツールキットの中でも強力な武器となります。しかし、多くのユーザーが誤った用途で使ったり、その仕組みを正確に理解していないためにトラブルに見舞われることがあります。
 
@@ -148,7 +148,7 @@ func _physics_process(delta):
 
 > You should not change a RigidBody2D’s `position` or `linear_velocity` every frame or even very often. If you need to directly affect the body’s state, use `_integrate_forces`, which allows you to directly access the physics state.
 
- _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [物理2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。
+ _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [Physics2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。
  関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](http://docs.godotengine.org/ja/stable/classes/class_transform2d.html) に関する情報です。
 
 したがって、`_integrate_forces()` に移動して以下のようにコードを記述します。
@@ -171,6 +171,6 @@ func _integrate_forces(state):
 
 ![alt](/godot_recipes/3.x/img/rigidbody_ship2.gif)
 
-<!-- #### Videoが気に入ったら？ -->
+<!-- #### Like video?
 
 {{< youtube  >}} -->

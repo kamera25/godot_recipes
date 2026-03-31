@@ -4,13 +4,13 @@ weight: 12
 draft: false
 ---
 
-## 課題
+## Problem
 
 アーケードスタイルのカーゲームを作りたい場合、リアルな物理演算よりもシンプルさを重視するでしょう。このレシピでは、転がる球体を使って楽しく操作可能な車を作成する方法をご紹介します。
 
 <video width="500" controls src="/godot_recipes/4.x/img/3d_sphere_car_01.webm"></video>
 
-## 解決策
+## Solution
 
 ドライビングゲームを作成する方法は数多くあります。各ゲームに求められるリアリズムのレベルは異なります。軽量なアーケードスタイルのカーモデルを作りたい場合、Godotの{{< gd-icon VehicleBody3D >}}`VehicleBody3D`ノードが提供するすべての機能（サスペンションシステムや個別にモデリングされた車輪など）は必要ないかもしれません。
 
@@ -67,7 +67,7 @@ GLTFモデルを使用する場合、インポート設定で調整する必要�
 
 - **Angular Damp: `10`** - このプロパティはドライビングのフィーリングに大きな影響を与えます。値が大きいほど、車はより速く停止します。
 - **Gravity Scale: `5`** - Godotのデフォルトの重力（`9.8`）は、特にアクション性の高いゲームを目指す場合、少し浮遊感があるように感じられます。この設定は、ジャンプや坂道など、ワールド内の起伏を扱う場合に特に重要になります。必要であれば、**プロジェクト設定**でグローバルに設定することも可能です。
-- **物理 Material/Bounce: `0.1`** - この値を調整することは非常に楽しいですが、0.5を超える値には注意してください！
+- **Physics Material/Bounce: `0.1`** - この値を調整することは非常に楽しいですが、0.5を超える値には注意してください！
 
 デモ用にデバッグ用として、衝突形状に球状メッシュも追加しました。必須機能ではありませんが、ボールが転がる様子を視覚的に確認できるとトラブルシューティング時に便利です。
 
@@ -163,7 +163,7 @@ if linear_velocity.length() > turn_stop_limit:
 
 **修正が必要な箇所**
 
-If you've tried driving on a slope, you've seen that the car mesh doesn't tilt at all, it always remains level. That looks unnatural, so let's use the process described in [CharacterBody3D: 表面に位置合わせ](/godot_recipes/3.x/3d/3d_align_surface/) to fix that.
+If you've tried driving on a slope, you've seen that the car mesh doesn't tilt at all, it always remains level. That looks unnatural, so let's use the process described in [CharacterBody3D: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/) to fix that.
 
 追加するコードは `_process()` 内でメッシュを回転させた後に配置してください。
 
@@ -232,10 +232,10 @@ body_mesh.rotation.z = lerp(body_mesh.rotation.z, t, 10 * delta)
 > - コースデータ：Keith氏による[モジュール式レーシングカートトラック（起伏のある地形テーマ）](https://fertile-soil-productions.itch.io/modular-racekart-track-hilly-terrain-theme)、Fertile Soil Productions提供
 
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/3d_car_sphere](https://github.com/godotrecipes/3d_car_sphere)
 
-## 関連レシピ
+## Related recipes
 
 * [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)

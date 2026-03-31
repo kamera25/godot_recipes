@@ -5,13 +5,13 @@ draft: false
 ghcommentid: 44
 ---
 
-## 課題
+## Problem
 
 [キネマティックカー](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/) は斜面を登れるようになりましたが、見た目が少し不自然です。
 
 ![alt](/godot_recipes/3.x/img/3d_car_10.png)
 
-## 解決策
+## Solution
 
 運動体は衝突時に自動で回転しません。画像のように車輪が地面に接触していない場合、手動で車を整列させる必要があります。
 
@@ -23,7 +23,7 @@ ghcommentid: 44
 
 ### 3Dオブジェクトの整列方法
 
-We're going to reuse the code from the [CharacterBody3D: 表面に位置合わせ](/godot_recipes/3.x/3d/3d_align_surface/) recipe. Add this to `car_base.gd`:
+We're going to reuse the code from the [CharacterBody3D: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/) recipe. Add this to `car_base.gd`:
 
 ```gdscript
 func align_with_y(xform, new_y):
@@ -58,10 +58,10 @@ if $FrontRay.is_colliding() or $RearRay.is_colliding():
 
 レイが何も検出しない場合は、水平な面と仮定します。これにより、一方のホイールが接触している場合にもう一方の車輪が下がります。
 
-## 関連レシピ
+## Related recipes
 
 - [Kinematic Car: Base](/godot_recipes/3.x/3d/kinematic_car/car_base/)
-- [CharacterBody3D: 表面に位置合わせ](/godot_recipes/3.x/3d/3d_align_surface/)
+- [CharacterBody3D: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/)
 
-#### この動画が気に入ったら？
+#### Like video?
 

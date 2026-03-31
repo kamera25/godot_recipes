@@ -4,11 +4,11 @@ weight: 4
 draft: false
 ---
 
-## 課題
+## Problem
 
 プレイヤー操作可能な3Dキャラクターボディが必要となります。
 
-## 解決策
+## Solution
 
 このレシピでは、こちらの可愛らしいタンクモデルを使用します。
 
@@ -81,15 +81,15 @@ func get_input(delta):
 前方/後方移動にはキャラクターのローカル座標系の Z 軸を使用しています。
 これにより、身体の「ローカル」前方方向へ正しく移動します。
 
-Here's the tank in action. We've made a test scene with a {{< gd-icon StaticBody3D >}}`StaticBody3D` plane for the ground and an {{< gd-icon Camera3D >}}`Camera3D` using the [補間カメラ](/godot_recipes/4.x/3d/interpolated_camera/index.html) recipe.
+Here's the tank in action. We've made a test scene with a {{< gd-icon StaticBody3D >}}`StaticBody3D` plane for the ground and an {{< gd-icon Camera3D >}}`Camera3D` using the [Interpolated Camera](/godot_recipes/4.x/3d/interpolated_camera/index.html) recipe.
 
 <video controls src="/godot_recipes/4.x/img/3d_kinematic_09.webm"></video>
 
-## まとめ
+## Wrapping up
 
 これはあらゆる種類の運動学的キャラクターの動作基盤です。ここからジャンプ、射撃、AI挙動などを追加できます。このレシピを拡張した具体例については、関連するレシピを参照してください。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトのサンプルコードをダウンロードする：[https://github.com/godotrecipes/characterbody3d_examples](https://github.com/godotrecipes/characterbody3d_examples)
 
@@ -97,7 +97,7 @@ Here's the tank in action. We've made a test scene with a {{< gd-icon StaticBody
 プロジェクトファイルはこちらからダウンロードできます。 [floating_text.zip](/godot_recipes/4.x/ja/files/floating_text.zip)
 {{% /notice %}} -->
 
-## 関連レシピ
+## Related recipes
 
 * [3D入門](/godot_recipes/4.x/ja/g101/3d/)
 * [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)

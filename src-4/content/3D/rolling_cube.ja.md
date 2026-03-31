@@ -5,13 +5,13 @@ draft: false
 ghcommentid: 101
 ---
 
-## 課題
+## Problem
 
 3Dで回転するキューブを作成したい。
 
 <video width="500" controls src="/godot_recipes/4.x/img/rolling_cube.webm"></video>
 
-## 解決策
+## Solution
 
 キューブを回転させるのは見た目より難しいです。単に中心軸を中心に回すだけではうまくいきません：
 
@@ -26,7 +26,7 @@ ghcommentid: 101
 このレシピを作成するにあたり、私は異なる解決策をいくつか試しました。
 
 * Pure math - calculating and applying rotation transforms
-* アニメーションPlayer - using animations to key the rotations and offsets
+* AnimationPlayer - using animations to key the rotations and offsets
 * Helper nodes - using Node3D(s) as rotation helpers
 
 すべて正常に動作しましたが、最後のオプションが最も柔軟で設定しやすいと感じたので、ここではその方法を採用します。
@@ -168,10 +168,10 @@ var tween = create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN)
 
 <!-- gif -->
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/rolling_cube](https://github.com/godotrecipes/rolling_cube)
 
-## 関連レシピ
+## Related recipes
 
 - [トランスフォーム](/godot_recipes/4.x/ja/math/transforms/)

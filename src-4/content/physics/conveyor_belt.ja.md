@@ -4,11 +4,11 @@ weight: 9
 draft: false
 ---
 
-## 課題
+## Problem
 
 キネマティックまたはリジッドボディを移動させるコンベアベルトオブジェクトを作成したい。
 
-## 解決策
+## Solution
 
 「constant_linear_velocity」プロパティを使用することで、{{< gd-icon StaticBody2D >}}`StaticBody2D`だけでコンベアベルトオブジェクトを作成できます。
 
@@ -60,7 +60,7 @@ func _process(delta):
 
 ![alt](/godot_recipes/3.x/img/conveyor_01.gif)
 
-This works perfectly well with kinematic bodies, too. Here's the same conveyor belt object added to our [プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character) recipe:
+This works perfectly well with kinematic bodies, too. Here's the same conveyor belt object added to our [Platform character](/godot_recipes/4.x/ja/2d/platform_character) recipe:
 
 ![alt](/godot_recipes/3.x/img/conveyor_07.gif)
 
@@ -68,14 +68,14 @@ This works perfectly well with kinematic bodies, too. Here's the same conveyor b
 
 執筆時点では、`constant_linear_velocity`は{{< gd-icon StaticBody3D >}}`StaticBody`を使用した3D環境で正しく動作しません。
 
-ただし、プロジェクト設定で「弾丸」から「Godot物理」エンジンに変更すれば、この手法を使用できます。
+ただし、プロジェクト設定で「弾丸」から「GodotPhysics」エンジンに変更すれば、この手法を使用できます。
 
 ![alt](/godot_recipes/3.x/img/conveyor_03.png)
 
 ![alt](/godot_recipes/3.x/img/conveyor_3d.gif)
 
-## 関連レシピ
+## Related recipes
 
-- [プラットフォームキャラクター](http://kidscancode.org/godot_recipes/2d/platform_character)
+- [Platform character](http://kidscancode.org/godot_recipes/2d/platform_character)
 - [Using CharacterBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/)
-- [動く床](/godot_recipes/3.x/2d/moving_platforms/)
+- [Moving Platforms](/godot_recipes/3.x/2d/moving_platforms/)

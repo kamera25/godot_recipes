@@ -4,6 +4,6 @@ weight: 20
 draft: true
 ---
 
-## 課題
+## Problem
 
-## 解決策
+## Solution

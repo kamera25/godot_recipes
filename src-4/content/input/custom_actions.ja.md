@@ -4,13 +4,13 @@ weight: 3
 draft: false
 ---
 
-## 課題
+## Problem
 
 実行時にインプットマップにアクションを追加が必要です。
 
-## 解決策
+## Solution
 
-通常、入力アクションは[プロジェクト設定]から追加します（詳細は[レシピ : 入力アクション](/godot_recipes/4.x/ja/input/input_actions/)参照）。ただし、スクリプト内で直接アクションを追加する必要がある場合もあります。このような場合には、[入力Mapシングルトン](https://docs.godotengine.org/ja/latest/classes/class_inputmap.html)が提供するメソッドが便利です。
+通常、入力アクションは[プロジェクト設定]から追加します（詳細は[レシピ : 入力アクション](/godot_recipes/4.x/ja/input/input_actions/)参照）。ただし、スクリプト内で直接アクションを追加する必要がある場合もあります。このような場合には、[InputMapシングルトン](https://docs.godotengine.org/ja/latest/classes/class_inputmap.html)が提供するメソッドが便利です。
 
 以下に、スペースキーを使用して「攻撃」という新しいアクションを追加する例を示します。
 
@@ -31,7 +31,7 @@ InputMap.action_add_event("attack", ev)
 ```
 
 {{% notice note %}}
-`入力Map.add_action()` メソッドは、同じアクションが既に存在する場合にエラーを発生させます。新しいアクションを追加する前に、まず `入力Map.has_action()` で確認することをオススメします。
+`InputMap.add_action()` メソッドは、同じアクションが既に存在する場合にエラーを発生させます。新しいアクションを追加する前に、まず `InputMap.has_action()` で確認することをオススメします。
 {{% /notice %}}
 
 ### 実際の使用例
@@ -59,7 +59,7 @@ func add_inputs():
             InputMap.action_add_event(action, ev)
 ```
 
-## 関連レシピ
+## Related recipes
 
 - [入力アクション設定](/godot_recipes/4.x/ja/input/input_actions/)
 - [プラットフォーマーキャラクタの作成](/godot_recipes/4.x/ja/2d/platform_character/)

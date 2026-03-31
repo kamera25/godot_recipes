@@ -4,13 +4,13 @@ weight: 5
 draft: false
 ---
 
-## 課題
+## Problem
 
 アニメーションの数が増えすぎて、シーン間の切り替え管理が困難になってきていませんか？コードが大量の `if` 文で埋め尽くされ、少し変更を加えるたびに全体が壊れてしまいそうになっていませんか？
 
-## 解決策
+## Solution
 
-アニメーション状態機械を作成するには {{< gd-icon アニメーションTree >}}`アニメーションTree` を使用してください。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御することが可能になります。
+アニメーション状態機械を作成するには {{< gd-icon AnimationTree >}}`AnimationTree` を使用してください。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御することが可能になります。
 
 ### はじめに
 
@@ -18,17 +18,17 @@ draft: false
 
 ![alt](/godot_recipes/4.x/img/adventurer_sprite_sheet_v1.1.png)
 
-We'll also assume you've already set up the character's animations using {{< gd-icon アニメーションPlayer >}}`アニメーションPlayer`. Using the above spritesheet, we have the following animations: "idle", "run", "attack1", "attack2", "hurt", and "die".
+We'll also assume you've already set up the character's animations using {{< gd-icon AnimationPlayer >}}`AnimationPlayer`. Using the above spritesheet, we have the following animations: "idle", "run", "attack1", "attack2", "hurt", and "die".
 
 ### アニメーションツリー
 
-シーンに {{< gd-icon アニメーションTree >}}`アニメーションTree` ノードを追加します。［ツリールート］プロパティで「新規アニメーションノードステートマシン」を選択してください。
+シーンに {{< gd-icon AnimationTree >}}`AnimationTree` ノードを追加します。［ツリールート］プロパティで「新規アニメーションノードステートマシン」を選択してください。
 
 ![alt](/godot_recipes/4.x/img/animation_tree_01.png)
 
-{{< gd-icon アニメーションTree >}}`アニメーションTree`で作成されたアニメーションを制御するノードです。既存のアニメーションにアクセスさせるには、_Anim Player_ プロパティ内の「割り当て」ボタンをクリックし、使用するアニメーションノードを選択してください。
+{{< gd-icon AnimationTree >}}`AnimationTree`で作成されたアニメーションを制御するノードです。既存のアニメーションにアクセスさせるには、_Anim Player_ プロパティ内の「割り当て」ボタンをクリックし、使用するアニメーションノードを選択してください。
 
-以下は、状態機械を `アニメーションTree` パネルに設定し始める方法です。
+以下は、状態機械を `AnimationTree` パネルに設定し始める方法です。
 
 ![alt](/godot_recipes/4.x/img/anim_tree_panel.png)
 
@@ -68,7 +68,7 @@ var attacks = ["attack1", "attack2"]
 @onready var state_machine = $AnimationTree["parameters/playback"]
 ```
 
-`state_machine` は状態マシンへの参照を保持しており、これは `アニメーションNodeStateMachinePlayback` 型です。特定のアニメーションを呼び出すには `travel()` メソッドを使用し、これにより指定されたアニメーションへの接続が辿られます。
+`state_machine` は状態マシンへの参照を保持しており、これは `AnimationNodeStateMachinePlayback` 型です。特定のアニメーションを呼び出すには `travel()` メソッドを使用し、これにより指定されたアニメーションへの接続が辿られます。
 
 ```gdscript
 func hurt():
@@ -104,13 +104,13 @@ func get_input():
 
 ![alt](/godot_recipes/4.x/img/animation_tree_07.gif)
 
-アニメーションTreeStateMachine を使用して以下の処理を管理できます。
+AnimationTreeStateMachine を使用して以下の処理を管理できます。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/ai_behavior_demos](https://github.com/godotrecipes/ai_behavior_demos)
 
-## 関連レシピ
+## Related recipes
 
 - [スプライトシートアニメーション](/godot_recipes/4.x/ja/animation/spritesheet_animation/)
 - [見下ろし型キャラクター操作](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)

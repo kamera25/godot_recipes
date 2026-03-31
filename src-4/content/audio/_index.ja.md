@@ -9,6 +9,6 @@ pre = "<i class='fas fa-volume-up fa-fw'></i>&nbsp"
 
 ゲームに効果音や音楽を追加するのに役立つレシピ集です。
 
-#### 目次 ：
+#### In this section:
 
 {{% children  sort="weight" %}}

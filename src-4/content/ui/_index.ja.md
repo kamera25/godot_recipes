@@ -9,6 +9,6 @@ pre = "<i class='far fa-window-maximize fa-fw'></i>&nbsp"
 
 ユーザーインターフェースを構築します。
 
-#### 目次 ：
+#### In this section:
 
 {{% children  sort="weight" %}}

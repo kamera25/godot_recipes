@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 35
 ---
 
-## 課題
+## Problem
 
 3Dゲームオブジェクト（敵キャラクター、プレイヤーキャラなど）用に、フローティング表示の「HPバー」をつけたい。
 
-## 解決策
+## Solution
 
 このソリューションでは、既存の {{< gd-icon TextureProgressBar >}}`TextureProgressBar` ノードをベースにした 2D HPバーを再利用します。すでにテクスチャが設定されており、値と色を更新するためのコードも実装済みです。既に同様のシステムをお持ちの場合は、それをそのまま使用していただいて構いません。サンプルではこのシーンを「Healthbar2D」と名付けます。
 
@@ -124,6 +124,6 @@ func update_health(_value, _max_value):
 
 - [オブジェクトのHPバー（2D）](/godot_recipes/4.x/ui/unit_healthbar/) -->
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> Download This Project
 
 プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/3d_object_healthbars](https://github.com/godotrecipes/3d_object_healthbars)

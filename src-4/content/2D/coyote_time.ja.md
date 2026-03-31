@@ -4,11 +4,11 @@ weight: 5
 draft: false
 ---
 
-## 課題
+## Problem
 
 プラットフォームゲームのジャンプ操作に違和感があります。プレイヤーはコントロールが取りづらく、場合によってはプラットフォームから正しく飛び降りられないことがあります。
 
-## 解決策
+## Solution
 
 この問題を解決するには、「コヨーテ・タイム」と呼ばれるテクニックが有効です。これはプレイヤーにより高い操作感覚と、プラットフォームの端を移動するプロセスにおいて若干の「余裕時間」を提供します。また、プレイヤーがより自然にジャンプ操作を行えるようになります。
 
@@ -80,6 +80,6 @@ func _on_coyote_timer_timeout():
 
 プロジェクトコードはこちらからダウンロードできます。 [https://github.com/godotrecipes/2d_moving_platforms](https://github.com/godotrecipes/2d_moving_platforms)
 
-## 関連レシピ
+## Related recipes
 
 - [プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)

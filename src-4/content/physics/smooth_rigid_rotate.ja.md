@@ -4,11 +4,11 @@ weight: 2
 draft: false
 ---
 
-## 課題
+## Problem
 
 対象物を観察するため、リジッドに滑らかな回転動作をしたい。
 
-## 解決策
+## Solution
 
 {{< gd-icon RigidBody2D >}}`RigidBody2D` の操作は少し複雑です。Godot の物理エンジンで制御されるため、直接移動させるのではなく、力を加える必要があります。リジッドボディを扱う前に、[RigidBody2D API ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) を読むことを強くオススメします。
 
@@ -39,7 +39,7 @@ func _physics_process(delta):
 
 多くの場合、これは有効な解決策となります。覚えておいてください。基底体の向きは、付属するスプライトと必ずしも揃える必要はないのです！
 
-## 関連レシピ
+## Related recipes
 
 - [ベクトル演算：内積と外積の活用](/godot_recipes/4.x/ja/math/dot_cross_product/index.html)
 - [RigidBody2D：目標位置への移動方法](/godot_recipes/4.x/ja/physics/smooth_rigid_move/)

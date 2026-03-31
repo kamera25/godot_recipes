@@ -5,11 +5,11 @@ draft: true
 ghcommentid: 45
 ---
 
-## 課題
+## Problem
 
 
 
-## 解決策
+## Solution
 
 ### まとめ
 
@@ -20,11 +20,11 @@ ghcommentid: 45
 * AI／NPCコントロール（ステアリング、障害物回避、コース追従）
 * 傾斜地やスロープの走行処理
 
-## 関連レシピ
+## Related recipes
 
 - [Kinematic Car: Base](/godot_recipes/3.x/3d/kinematic_car/car_base/)
 - [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)
-* [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)
+- [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)
 - [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)
 
 #### この動画が気に入ったら？

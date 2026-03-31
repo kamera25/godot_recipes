@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 102
 ---
 
-## 課題
+## Problem
 
 3D空間でWASD操作を使用している場合、カメラが回転すると方向感覚を失いやすくなります。プレイヤー視点（つまりカメラ）の前進方向と、ゲーム内ワールド内オブジェクトの前方方向、どちらを基準にすべきでしょうか？
 
-## 解決策
+## Solution
 
 このケースはさまざまなシナリオに適用できますが、ここでは[転がるキューブレシピ](/godot_recipes/4.x/ja/3d/rolling_cube/)を具体例として説明します。
 
@@ -70,11 +70,11 @@ func _physics_process(_delta):
 
 ![alt](/godot_recipes/3.x/img/3d_move_camera_02.gif)
 
-## 関連レシピ
+## Related recipes
 
 - [転がるキューブ](/godot_recipes/4.x/ja/3d/rolling_cube/)
 - [カメラ・ジンバル](/godot_recipes/4.x/ja/3d/camera_gimbal/)
 
-#### この動画が気に入ったら？
+#### Like video?
 
 {{< youtube GGTmK0R1tkc >}}
