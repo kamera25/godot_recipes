@@ -26,7 +26,7 @@ LevelBox: {{< gd-icon PanelContainer >}} PanelContainer
         {{< gd-icon TextureRect >}} TextureRect
 ```
 
-{{< gd-icon TextureRect >}} テクスチャレクトはロックアイコンの表示用、{{< gd-icon Label >}} ラベルはレベル番号の表示用に使用されます。一方が表示されている間は、もう一方は非表示になります。
+{{< gd-icon TextureRect >}} テクスチャレクトはロックアイコンの表示用、{{< gd-icon Label >}} ラベルはレベル番号の表示用に使います。一方が表示されている間は、もう一方は非表示になります。
 
 ご自由にスタイルを設定できます。例として：
 
