@@ -4,6 +4,8 @@ draft: false
 ghcommentid: 94
 ---
 
+この記事はGodot3からGodot4へ書き換え中です。
+
 ## {{< gd-icon Path2D >}}`Path2D と {{< gd-icon PathFollow2D >}} PathFollow2D`
 
 *パス* とは 2D 空間における点の連続であり、{{< gd-icon Curve2D >}}`Curve2D` リソースによって定義されます。{{< gd-icon Path2D >}}`Path2D` ノードを使用すると、2D 空間でパスを配置できるほか、エディター内で新規パスを作成することもできます。

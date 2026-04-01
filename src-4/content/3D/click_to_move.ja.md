@@ -5,6 +5,8 @@ draft: false
 ghcommentid: 38
 ---
 
+この記事はGodot3からGodot4へ書き換え中です。
+
 ## 課題
 
 クリックして指定した位置に3Dオブジェクトを移動させたい。

@@ -5,6 +5,8 @@ draft: false
 ghcommentid: 26
 ---
 
+この記事はGodot3からGodot4へ書き換え中です。
+
 ## 課題
 
 プレイヤー／モブなどから投射物を発射させたい。

@@ -5,6 +5,8 @@ draft: false
 ghcommentid: 27
 ---
 
+この記事はGodot3からGodot4へ書き換え中です。
+
 ## 課題
 
 タイルマップでアニメーションタイルを使用したい。

@@ -5,6 +5,8 @@ draft: false
 ghcommentid: 70
 ---
 
+この記事はGodot3からGodot4へ書き換え中です。
+
 ## 課題
 
 Godotの`Joint2D`ノードについて理解したい。

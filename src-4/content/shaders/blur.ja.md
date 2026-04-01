@@ -5,6 +5,8 @@ draft: false
 ghcommentid: 79
 ---
 
+この記事はGodot3からGodot4へ書き換え中です。
+
 ## 課題
 
 オブジェクトや画面をぼかすシェーダーが欲しい。

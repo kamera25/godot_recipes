@@ -5,6 +5,8 @@ draft: false
 ghcommentid: 44
 ---
 
+この記事はGodot3からGodot4へ書き換え中です。
+
 ## 課題
 
 [キネマティックカー](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/) は斜面を登れるようになりましたが、見た目が少し不自然です。
