@@ -2549,7 +2549,7 @@ msgstr "このコンテナは子要素を中央に配置します。"
 
 #: ui/containers.md
 msgid "* Fill"
-msgstr "* 充填"
+msgstr "* Fill"
 
 #: ui/containers.md
 msgid "* {{< gd-icon MarginContainer >}}`MarginContainer`"
@@ -2603,7 +2603,7 @@ msgstr "### ネストされたコンテナ"
 
 #: ui/containers.md
 msgid "* Stretch Ratio"
-msgstr "* 伸縮率"
+msgstr "* Stretch Ratio"
 
 #: ui/containers.md
 msgid "The solution is the {{< gd-icon Container >}}`Container`. Containers provide a lot of power in building your UI's layout."
@@ -2631,7 +2631,7 @@ msgstr "このオプションをチェックすると、コントロールはコ
 
 #: ui/containers.md
 msgid "* Shrink Center"
-msgstr "* 中心縮小"
+msgstr "* Shrink Center"
 
 #: ui/containers.md
 msgid "A good way to experiment with these settings is to set up a test scene like the following:"
@@ -2639,7 +2639,7 @@ msgstr "これらの設定を試すには、以下のようなテストシーン
 
 #: ui/containers.md
 msgid "* Shrink End"
-msgstr "*  エンドシール部の縮小"
+msgstr "*  Shrink End"
 
 #: 2D/2d_align_surface.md 3D/click_to_move.md ui/containers.md
 msgid "<!-- #### Like video? -->"
@@ -2655,7 +2655,7 @@ msgstr "以下によく使われる代表的なコンテナをいくつか紹介
 
 #: ui/containers.md
 msgid "* Expand"
-msgstr "* 展開"
+msgstr "* Expand"
 
 #: ui/containers.md
 msgid "* {{< gd-icon GridContainer >}}`GridContainer`"
