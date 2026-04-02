@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 14
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You want an object to "orbit" (move in a circle) around another object.

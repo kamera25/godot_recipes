@@ -4,6 +4,10 @@ weight: 1
 draft: true
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You're starting a new project. Soon, your project folder will be full of scenes, assets, scripts, and more. How do you keep it all organized?

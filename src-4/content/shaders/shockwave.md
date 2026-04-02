@@ -4,6 +4,10 @@ weight: 5
 draft: true
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You want a shader to blur an object or the screen.

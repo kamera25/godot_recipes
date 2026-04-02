@@ -5,6 +5,10 @@ draft: false
 pre: "03. "
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 In the first two parts, we got the basic gameplay working. Now we're going to start adding some different modes to the circles.
 
 ## Circle modes

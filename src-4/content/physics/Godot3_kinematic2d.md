@@ -5,6 +5,10 @@ draft: true
 ghcommentid: 68
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 {{% notice note %}}
 This tutorial was written prior to Godot Recipes. Its format will eventually be updated to match the rest of the docs on this site.
 {{% /notice %}}

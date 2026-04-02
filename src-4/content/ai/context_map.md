@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 75
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You need an AI-controlled object in your game that can follow a path, avoid obstacles, and make other decisions about how to move around the world.

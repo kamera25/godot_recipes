@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 70
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You'd like to understand Godot's `Joint2D` nodes.

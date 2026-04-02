@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 102
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 When moving with WASD-style controls in 3D, it's easy to get disoriented if the camera rotates. Whose forward counts - the player's (ie the camera's) or the object in the game world?

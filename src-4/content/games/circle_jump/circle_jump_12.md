@@ -5,6 +5,10 @@ draft: false
 pre: "12. "
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Saving settings
 
 We've added three toggle properties in the game - which works fine - but the settings aren't preserved when we quit. We need to save those settings so the next time you run the game, they persist.

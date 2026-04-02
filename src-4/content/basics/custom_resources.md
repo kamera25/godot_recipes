@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 85
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You're looking for a way to handle data and/or create flexible data objects in your game.

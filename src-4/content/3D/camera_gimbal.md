@@ -4,6 +4,10 @@ weight: 2
 draft: false
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You need a camera controller, using mouse or keyboard, that remains level while rotating and following a target.

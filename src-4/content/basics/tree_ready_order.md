@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 9
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You need to understand in what order Godot handles nodes in the scene tree.

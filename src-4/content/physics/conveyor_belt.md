@@ -4,6 +4,10 @@ weight: 9
 draft: false
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You want to make a conveyor belt object that will move bodies (kinematic or rigid).

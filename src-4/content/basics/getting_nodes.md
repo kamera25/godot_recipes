@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 11
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 It's probably the most common problem seen in the Godot help channels: an invalid node reference. Most often, it appears as the following error message:

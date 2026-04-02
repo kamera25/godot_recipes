@@ -4,6 +4,10 @@ draft: false
 ghcommentid: 94
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## {{< gd-icon Path2D >}}`Path2D & {{< gd-icon PathFollow2D >}} PathFollow2D`
 
 A *path* is a sequence of points in 2D space, defined by a {{< gd-icon Curve2D >}}`Curve2D` resource. The {{< gd-icon Path2D >}}`Path2D` is a node that allows you to position a path in 2D space, and do create a new path in the editor.

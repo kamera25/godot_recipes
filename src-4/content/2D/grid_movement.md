@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 21
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You need a 2D character that moves in a grid pattern.

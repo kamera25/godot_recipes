@@ -4,6 +4,10 @@ weight: 12
 draft: false
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You want units to display damage as floating numbers when hit.

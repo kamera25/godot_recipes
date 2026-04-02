@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 42
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You've got a [kinematic car](/godot_recipes/3.x/3d/kinematic_car/car_base/), but you don't like the "on rails" feeling, especially at high speeds. You'd like to have some "slip" so that you can have drifting and loss of traction.

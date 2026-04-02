@@ -6,6 +6,10 @@ ghcommentid:
 tags: []
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## {{< gd-icon Tween >}}`Tween`
 
 {{< gd-icon Tween >}}`Tween` is a useful node when you need to animate or interpolate a property over time. You may be familiar with the term "tween" from animation, where interpolating keyframes is called *in-betweening*.

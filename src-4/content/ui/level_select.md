@@ -4,6 +4,10 @@ weight: 12
 draft: false
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 Your game needs a "level select" menu, where the user can choose from a grid of options.

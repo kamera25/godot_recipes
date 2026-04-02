@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 77
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You want to interact with a Godot shader from GDScript.

@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 76
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You want to get started coding shaders.

@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 30
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You want a 2D bullet that travels in an arc, or ballistic curve.

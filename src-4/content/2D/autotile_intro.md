@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 23
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You are using a {{< gd-icon TileMap >}} TileMap, and want to use autotiling to more quickly draw your levels.

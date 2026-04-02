@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 56
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 Your UI has problem(s): it's become overcomplicated, it doesn't resize well, and/or you can't keep track of how everything fits together.

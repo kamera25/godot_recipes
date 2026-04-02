@@ -6,6 +6,10 @@ ghcommentid: 103
 tags: []
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 Your {{< gd-icon KinematicBody3D >}}`CharacterBody3D` slides down slopes.

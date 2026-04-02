@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 43
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You want a "chase camera" that can follow your car (or any other object).
