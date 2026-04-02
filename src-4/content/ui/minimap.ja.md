@@ -6,7 +6,7 @@ draft: false
 
 ## 課題
 
-プレイヤーの視界外にあるオブジェクトの位置を表示するためのミニマップまたはレーダー風UI要素が欲しいとの。
+プレイヤーの視界外にあるオブジェクトの位置を表示するためのミニマップまたはレーダー風UI要素が欲しい。
 
 ## 解決策
 
@@ -15,10 +15,10 @@ draft: false
 
 ### プロジェクト設定
 
-この機能を説明するため、まずは[オートタイルレシピ](/godot_recipes/4.x/ja/2d/autotile_intro/)を使用した簡素な見下ろし型ゲームと[見下ろしキャラクター操作レシピ](godot_recipes/2d/topdown_movement/#option-2-rotate-and-move)に基づくプレイヤーから始めてください。各コンポーネントの動作詳細については、リンク先のレシピを参照してください。
+この機能を説明するため、まずは[自動タイルのレシピ](/godot_recipes/4.x/ja/2d/autotile_intro/)を使用した簡素な見下ろし型ゲームと[見下ろしキャラクター操作レシピ](/godot_recipes/4.x/ja/2d/topdown_movement/)に基づくプレイヤーから始めてください。各コンポーネントの動作詳細については、リンク先のレシピを参照してください。
 
 {{% notice note %}}
-本プロジェクトのアートワークは[kenney.nl](https://kenney.nl)提供のものを使用しています。以下からダウンロードできます。[Minimap アセット](/godot_recipes/4.x/ja/files/minimap_assets.zip).
+本プロジェクトのアートワークは[kenney.nl](https://kenney.nl)提供のものを使用しています。以下からダウンロードできます。[Minimap アセット](/godot_recipes/4.x/files/minimap_assets.zip).
 {{% /notice %}}
 
 メインシーン設定は以下のように構成されています。
@@ -43,13 +43,13 @@ draft: false
 
 ![alt](/godot_recipes/4.x/img/minimap_03.gif)
 
-次に、フレームの内側部分をグリッドパターン「pattern_blueprintPaper.png」で埋めたいと思います。
+次に、フレームの内側部分をグリッドパターン `pattern_blueprintPaper.png` で埋めたいと思います。
 
 ![alt](/godot_recipes/4.x/img/pattern_blueprintPaper.png)
 
 ただし、フレームのサイズがどうあれ自動でタイル表示されるようにする必要があります。また、グリッドエリアはミニマップマーカーが表示される場所なので、枠線を超えて拡張しないようにしなければなりません。
 
-「MiniMap」の子要素（かつ「Frame」の兄弟要素）として、新たに {{< gd-icon MarginContainer >}}`MarginContainer` を追加します。**テーマオーバーライド/定数** で4つのマージンプロパティをすべて `20` に設定します。このノードの子要素として {{< gd-icon TextureRect >}}`TextureRect` を追加し、**テクスチャ** を上記の画像に割り当てます。**伸縮モード** は「タイル」に設定してください。このノードには「Grid」という名前を付けます。
+`MiniMap`の子要素（かつ`Frame`の兄弟要素）として、新たに {{< gd-icon MarginContainer >}}`MarginContainer` を追加します。**テーマオーバーライド/定数** で4つのマージンプロパティをすべて `20` に設定します。このノードの子要素として {{< gd-icon TextureRect >}}`TextureRect` を追加し、**Texture** を上記の画像に割り当てます。**Stretch Mode** は「Tile」に設定してください。このノードには「Grid」という名前を付けます。
 
 ルートノードのサイズを変更して効果を確認してください。
 
@@ -63,7 +63,7 @@ draft: false
 
 ### マップマーカー
 
-`Grid`の子要素として、名前を「PlayerMarker」とする`Sprite2D`ノードを追加します。また、minimapIcon_arrowA.pngテクスチャを適用します。スプライトのTransform/Positionプロパティに注意してください：(0, 0)となっており、これによりグリッドの左上隅に正確に配置されます。
+`Grid`の子要素として、名前を「PlayerMarker」とする`Sprite2D`ノードを追加します。また、 `minimapIcon_arrowA.png` テクスチャを適用します。スプライトの **Transform/Position** プロパティに注意してください。 `(0, 0)` となっており、これにより`Grid`の左上隅に正確に配置されます。
 
 ![alt](/godot_recipes/4.x/img/minimap_05.png)
 

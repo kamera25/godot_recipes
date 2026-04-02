@@ -11,7 +11,7 @@ ghcommentid: 47
 
 ## 解決策
 
-`InputEventMouse` はマウスイベントの基本クラスです。これには `position` および `global_position` プロパティが含まれています。このクラスを継承するサブクラスとして、`InputEventMouseButton` と `InputEventMouseMotion` の2つが存在します。
+`InputEventMouse` はマウスイベントの基本クラスです。これには `position` および `global_position` プロパティが含まれています。このクラスを継承するサブクラスとして、`InputEventMouseButton` と `InputEventMouseMotion` の2つがあります。
 
 {{% notice note %}}
 インプットマップでマウスボタンイベントを割り当てられるので、`is_action_pressed()` 関数を使用してこれらを利用できます。
@@ -22,7 +22,7 @@ ghcommentid: 47
 `@GlobalScope.ButtonList` には、各可能なボタンに対応する定数リスト（例：BUTTON_*）が格納されており、これらの値はイベントのbutton_indexプロパティで報告されます。なお、スクロールホイールも1つのボタンとしてカウントされます - 正確には2つのボタンがあり、それぞれ`BUTTON_WHEEL_UP`と`BUTTON_WHEEL_DOWN`という別々のイベントとして扱われます。
 
 {{% notice tip %}}
-通常のボタンとは異なり、マウスホイールクリックでは「押された」イベントのみが発生します。マウスホイールクリックが「離された」という概念は存在しません。
+通常のボタンとは異なり、マウスホイールクリックでは「押された」イベントのみが発生します。マウスホイールクリックが「離された」というイベントはありません。
 {{% /notice %}}
 
 ```gdscript

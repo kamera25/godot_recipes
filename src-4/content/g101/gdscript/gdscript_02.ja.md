@@ -1,5 +1,5 @@
 ---
-title: "スプライトを移動中"
+title: "スプライトの移動"
 weight: 1
 draft: true
 ghcommentid: 90

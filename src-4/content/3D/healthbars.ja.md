@@ -61,7 +61,7 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 ### ビューポートテクスチャ
 
-`Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}} `TextureProgressBar` を表示したいです。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現できます。
+{{< gd-icon Sprite3D >}}`Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}} `TextureProgressBar` を表示したいです。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現できます。
 
 以下の手順で操作してください。
 1. {{< gd-icon SubViewport >}} `SubViewport` を {{< gd-icon Sprite3D >}} `Sprite3D` の子要素として追加します。
@@ -82,7 +82,7 @@ func _ready():
     texture = $SubViewport.get_texture()
 ```
 
-### 全体を統合して接続する方法
+### 作ったものを統合しよう
 
 モブの `_on_input_event()` メソッド内で、HPを減少させた後に以下を追加してください。
 

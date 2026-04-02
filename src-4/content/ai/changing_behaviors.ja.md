@@ -1,5 +1,5 @@
 ---
-title: "動作の変更中"
+title: "動作の変更"
 weight: 5
 draft: true
 ---

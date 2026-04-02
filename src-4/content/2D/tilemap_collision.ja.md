@@ -1,5 +1,5 @@
 ---
-title: "タイルマップ：タイルを検出中"
+title: "タイルマップ：タイルを検出する"
 weight: 1
 draft: false
 ghcommentid: 19

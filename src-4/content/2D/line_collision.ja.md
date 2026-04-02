@@ -46,7 +46,7 @@ func _ready():
 
 ### その2：{{< gd-icon RectangleShape2D >}}`RectangleShape2D`を使用する場合
 
-: SegmentShape2D`セグメント形状2Dは幅成分を持たないため、線の衝突判定に厚みが必要な場合には、代わりに矩形の衝突判定を使用することをオススメします。
+{{< gd-icon SegmentShape2D >}}`SegmentShape2D` は幅成分を持たないため、線の衝突判定に厚みが必要な場合には、代わりに矩形の衝突判定を使用することをオススメします。
 
 ```gdscript
 extends Line2D

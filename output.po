@@ -791,7 +791,7 @@ msgstr "次に、ゲームオブジェクトがプレイヤーのHP変化を監�
 
 #: basics/custom_resources.md
 msgid "Once the resource has been created and saved, we're ready to use it. Once again, in this scenario we have the following objects:"
-msgstr "リソースの作成と保存が完了したら、いよいよ使用準備が整います。このシナリオでは、以下のオブジェクトが存在します。"
+msgstr "リソースの作成と保存が完了したら、いよいよ使用準備が整います。このシナリオでは、以下のオブジェクトがあります。"
 
 #: basics/custom_resources.md
 msgid ""
@@ -1115,7 +1115,7 @@ msgstr "以下はGDScriptの組み込み乱数生成関数に対する変更点�
 
 #: basics/migrating.md
 msgid "{{< gd-icon Tween >}}`Tween` is no longer a node. Instead, you create one-off tween animation objects whenever you need them. Once you get used to it, it's a lot more powerful and easier to use than the old method."
-msgstr "{{< gd-icon Tween >}}`Tween`はもはやノードとして存在しません。代わりに、必要な時に都度1回限りのTweenアニメーションオブジェクトを作成する方式に変更されました。一度慣れてしまえば、従来の方法よりもはるかに強力で使いやすいものとなっています。"
+msgstr "{{< gd-icon Tween >}}`Tween`はもはやノードとしてありません。代わりに、必要な時に都度1回限りのTweenアニメーションオブジェクトを作成する方式に変更されました。一度慣れてしまえば、従来の方法よりもはるかに強力で使いやすいものとなっています。"
 
 #: basics/migrating.md
 msgid "If you started using `SceneTreeTween` in Godot 3.5, then you'll be familiar with Godot 4.0's {{< gd-icon Tween >}}`Tween` usage."
@@ -1321,7 +1321,7 @@ msgstr "上記の方法の欠点は移植性に乏しい点です。別プロジ
 
 #: basics/organizing.md
 msgid "There are as many solutions to this problem as there are game projects. A lot will depend on the nature of your game and resources it needs. However, there are a few common guidelines to follow."
-msgstr "このゲーム開発の問題には、ゲームプロジェクトの数だけ解決策が存在します。適切なアプローチは、制作するゲームの性質や必要なリソースによって大きく異なります。ただし、以下に挙げる基本的なガイドラインのいくつかは普遍的に適用できます。"
+msgstr "このゲーム開発の問題には、ゲームプロジェクトの数だけ解決策があります。適切なアプローチは、制作するゲームの性質や必要なリソースによって大きく異なります。ただし、以下に挙げる基本的なガイドラインのいくつかは普遍的に適用できます。"
 
 #: basics/organizing.md
 msgid ""
@@ -1369,7 +1369,7 @@ msgstr ""
 
 #: ui/minimap.md
 msgid "As a child of the `MiniMap` (and a sibling of the `Frame`), add another {{< gd-icon MarginContainer >}}`MarginContainer`. Set all four margin properties in **Theme Overrides/Constants** to `20`. As a child of this node, add a {{< gd-icon TextureRect >}}`TextureRect` and assign its **Texture** to the above image. Set its **Stretch Mode** to \"Tile\". Name this node \"Grid\"."
-msgstr "「MiniMap」の子要素（かつ「Frame」の兄弟要素）として、新たに {{< gd-icon MarginContainer >}}`MarginContainer` を追加します。**テーマオーバーライド/定数** で4つのマージンプロパティをすべて `20` に設定します。このノードの子要素として {{< gd-icon TextureRect >}}`TextureRect` を追加し、**テクスチャ** を上記の画像に割り当てます。**伸縮モード** は「タイル」に設定してください。このノードには「Grid」という名前を付けます。"
+msgstr "`MiniMap`の子要素（かつ`Frame`の兄弟要素）として、新たに {{< gd-icon MarginContainer >}}`MarginContainer` を追加します。**テーマオーバーライド/定数** で4つのマージンプロパティをすべて `20` に設定します。このノードの子要素として {{< gd-icon TextureRect >}}`TextureRect` を追加し、**Texture** を上記の画像に割り当てます。**Stretch Mode** は「Tile」に設定してください。このノードには「Grid」という名前を付けます。"
 
 #: ui/minimap.md
 msgid "![alt](/godot_recipes/4.x/img/minimap_02.gif)"
@@ -1486,7 +1486,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"本プロジェクトのアートワークは[kenney.nl](https://kenney.nl)提供のものを使用しています。以下からダウンロードできます。[Minimap アセット](/godot_recipes/4.x/ja/files/minimap_assets.zip).\n"
+"本プロジェクトのアートワークは[kenney.nl](https://kenney.nl)提供のものを使用しています。以下からダウンロードできます。[Minimap アセット](/godot_recipes/4.x/files/minimap_assets.zip).\n"
 "{{% /notice %}}"
 
 #: ui/minimap.md
@@ -1553,7 +1553,7 @@ msgstr "次に、各オブジェクトの位置をプレイヤー座標系で計
 
 #: ui/minimap.md
 msgid "As a child of `Grid`, add a {{< gd-icon Sprite2D >}}`Sprite2D` node named \"PlayerMarker\" and give it the `minimapIcon_arrowA.png` texture. Note the sprite's **Transform/Position** property: `(0, 0)`, which places it exactly in the top-left corner of the `Grid`:"
-msgstr "`Grid`の子要素として、名前を「PlayerMarker」とする`Sprite2D`ノードを追加します。また、minimapIcon_arrowA.pngテクスチャを適用します。スプライトのTransform/Positionプロパティに注意してください：(0, 0)となっており、これによりグリッドの左上隅に正確に配置されます。"
+msgstr "`Grid`の子要素として、名前を「PlayerMarker」とする`Sprite2D`ノードを追加します。また、 `minimapIcon_arrowA.png` テクスチャを適用します。スプライトの **Transform/Position** プロパティに注意してください。 `(0, 0)` となっており、これにより`Grid`の左上隅に正確に配置されます。"
 
 #: ui/minimap.md
 msgid "Using the {{< gd-icon NinePatchRect >}}`NinePatchRects`'s properties, we can ensure that the frame remains the same size when stretched. You can define these properties graphically in the \"TextureRegion\" panel, but it's sometimes easier to enter the values directly. Set all four properties in the **Patch Margin** section to `64` and change the node's name to \"Frame\"."
@@ -1616,7 +1616,7 @@ msgstr "以下の 2 つの {{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加�
 
 #: ui/minimap.md
 msgid "Next, we'd like to fill in the inner part of the frame with the grid pattern `pattern_blueprintPaper.png`:"
-msgstr "次に、フレームの内側部分をグリッドパターン「pattern_blueprintPaper.png」で埋めたいと思います。"
+msgstr "次に、フレームの内側部分をグリッドパターン `pattern_blueprintPaper.png` で埋めたいと思います。"
 
 #: 2D/2d_shooting.md 2D/moving_platforms.md 3D/3d_shooting.md
 #: 3D/camera_gimbal.md 3D/spaceship.md audio/audio_manager.md kyn/path2d.md
@@ -1627,7 +1627,7 @@ msgstr "<!-- #### Videoが気に入ったら？ -->"
 
 #: ui/minimap.md
 msgid "You want a minimap or radar-style UI item showing the locations of objects outside of the player's view."
-msgstr "プレイヤーの視界外にあるオブジェクトの位置を表示するためのミニマップまたはレーダー風UI要素が欲しいとの。"
+msgstr "プレイヤーの視界外にあるオブジェクトの位置を表示するためのミニマップまたはレーダー風UI要素が欲しい。"
 
 #: ui/minimap.md
 msgid "![alt](/godot_recipes/4.x/img/minimap_08.png)"
@@ -1683,7 +1683,7 @@ msgstr "![alt](/godot_recipes/4.x/img/minimap_03.gif)"
 
 #: ui/minimap.md
 msgid "To illustrate this feature, we'll start with a simplified top-down game using the [Autotile recipe](/godot_recipes/4.x/2d/autotile_intro/) and a player based on the [Top-down character recipe](godot_recipes/2d/topdown_movement/#option-2-rotate-and-move). See the linked recipes for details on how these parts work."
-msgstr "この機能を説明するため、まずは[オートタイルレシピ](/godot_recipes/4.x/ja/2d/autotile_intro/)を使用した簡素な見下ろし型ゲームと[見下ろしキャラクター操作レシピ](godot_recipes/2d/topdown_movement/#option-2-rotate-and-move)に基づくプレイヤーから始めてください。各コンポーネントの動作詳細については、リンク先のレシピを参照してください。"
+msgstr "この機能を説明するため、まずは[自動タイルのレシピ](/godot_recipes/4.x/ja/2d/autotile_intro/)を使用した簡素な見下ろし型ゲームと[見下ろしキャラクター操作レシピ](/godot_recipes/4.x/ja/2d/topdown_movement/)に基づくプレイヤーから始めてください。各コンポーネントの動作詳細については、リンク先のレシピを参照してください。"
 
 #: ui/minimap.md
 msgid "In `_ready()` we'll center the player's marker at the center of the grid. and calculate the scale factor. (**Note:** you'll need to connect the `resized` signal and do both of these things in the callback if you have a dynamically sized UI)."
@@ -2690,7 +2690,7 @@ msgstr "# <i class='far fa-window-maximize'></i>&nbsp;UI"
 
 #: 3D/camera_gimbal.md
 msgid "### Following a target"
-msgstr "### ターゲットの追跡中"
+msgstr "### ターゲットの追跡"
 
 #: 3D/camera_gimbal.md
 msgid "We'll start with the keyboard controls, then add an option to use the mouse as well. Here are the required actions and their assigned inputs:"
@@ -3294,7 +3294,7 @@ msgstr "続いてカメラを動かして、テクスチャが常にプレイヤ
 
 #: 3D/healthbars.md
 msgid "### Connecting it all together"
-msgstr "### 全体を統合して接続する方法"
+msgstr "### 作ったものを統合しよう"
 
 #: 3D/healthbars.md
 msgid "Click on the mobs to see the health bars change."
@@ -3390,7 +3390,7 @@ msgstr "インスタンス化する際に、`HealthBar2D` を {{< gd-icon Viewpo
 
 #: 3D/healthbars.md
 msgid "We don't want the {{< gd-icon Sprite3D >}}`Sprite3D` to show a static texture - we want it to display the 2D {{< gd-icon TextureProgressBar >}}`TextureProgressBar`. We can do that using a {{< gd-icon SubViewport >}}`SubViewport` node, which can export a texture."
-msgstr "`Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}} `TextureProgressBar` を表示したいです。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現できます。"
+msgstr "{{< gd-icon Sprite3D >}}`Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}} `TextureProgressBar` を表示したいです。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現できます。"
 
 #: 3D/healthbars.md
 msgid "Add a {{< gd-icon SubViewport >}}`SubViewport` as a child of the {{< gd-icon Sprite3D >}}`Sprite3D`. In the Inspector set _Transparent BG_ to **On**."
@@ -3797,7 +3797,7 @@ msgstr ""
 
 #: 3D/rolling_cube.md
 msgid "### Checking for collisions"
-msgstr "### 衝突チェック中"
+msgstr "### 衝突のチェック"
 
 #: 3D/rolling_cube.md
 msgid "Instead, the cube needs to be rotated around its bottom edge."
@@ -4520,7 +4520,7 @@ msgstr "武器モデルを{{< gd-icon Camera3D >}}`Camera3D`の子要素とし�
 
 #: 3D/basic_fps.md
 msgid "To add a little personality, try using an {{< gd-icon AnimationPlayer >}}`AnimationPlayer` to animate the weapon's position from side-to-side as the player moves."
-msgstr "個性を加えるには、`AnimationPlayer` を使用して武器の位置をプレイヤーの移動に合わせて左右にアニメーションさせる方法がオススメです。"
+msgstr "個性を加えるには、{{< gd-icon AnimationPlayer >}}`AnimationPlayer` を使用して武器の位置をプレイヤーの移動に合わせて左右にアニメーションさせる方法がオススメです。"
 
 #: 3D/basic_fps.md
 msgid "Try the code again, and you'll see that you can now rotate with the mouse. However, you may find your mouse running outside the game window. This is the perfect time to add some code to capture your mouse. See [Input: Capturing the Mouse](/godot_recipes/4.x/input/mouse_capture/) for details."
@@ -4975,7 +4975,7 @@ msgstr "特定タイプのノードすべてに適用可能な*インポート�
 
 #: 3D/assets/importing_assets.md
 msgid "Before copying the files into your Godot project, notice that there are multiple versions of the assets in different file formats: OBJ, FBX, and GLTF. There are also some extra files such as examples and separate textures in case you want to modify them. We don't need all of that, and GLTF is the preferred import format for Godot. So make sure you're only dragging the `gltf` folder or `.gltf` files (or `.glb`, which is the binary version of the same) into your project folder."
-msgstr "プロジェクトにファイルをコピーする前に、以下の点に注意してください。アセットにはOBJ、FBX、GLTFといった複数の異なるファイル形式が存在します。また、変更を希望する場合に備えてサンプルや個別テクスチャなどの追加ファイルも用意されています。これらすべては不要であり、GodotではGLTF形式が最も推奨されるインポートフォーマットです。したがって、必ず`gltf`フォルダまたは`.gltf`ファイル（もしくは同等のバイナリ形式である`.glb`）のみをプロジェクトディレクトリにドラッグ＆ドロップしてください。"
+msgstr "プロジェクトにファイルをコピーする前に、以下の点に注意してください。アセットにはOBJ、FBX、GLTFといった複数の異なるファイル形式があります。また、変更を希望する場合に備えてサンプルや個別テクスチャなどの追加ファイルも用意されています。これらすべては不要であり、GodotではGLTF形式が最も推奨されるインポートフォーマットです。したがって、必ず`gltf`フォルダまたは`.gltf`ファイル（もしくは同等のバイナリ形式である`.glb`）のみをプロジェクトディレクトリにドラッグ＆ドロップしてください。"
 
 #: 3D/assets/importing_assets.md
 msgid "Select the `knight.glb` file in the FileSystem tab, then click the **Import** tab at the top left."
@@ -5267,7 +5267,7 @@ msgstr "#### グリッドマップ"
 
 #: 3D/assets/level_design.md
 msgid "Using the built-in {{< gd-icon GridMap >}}`GridMap` node allows you to layout meshes in a grid in the editor. It's similar in concept to the 2D {{< gd-icon TileMap >}}`TileMap` node, though with less functionality."
-msgstr "組み込みの {{< gd-icon GridMap >}}GridMap` ノードを使用すると、エディター上でメッシュをグリッド状に配置できます。この概念は2D用の {{< gd-icon TileMap >}}`TileMap` ノードと似ていますが、機能性はやや限られています。"
+msgstr "組み込みの {{< gd-icon GridMap >}}GridMap` ノードを使用すると、エディター上でメッシュをグリッド状に配置できます。これは2D用の {{< gd-icon TileMap >}}`TileMap` ノードと似ていますが、機能性はやや限られています。"
 
 #: 3D/assets/level_design.md
 msgid "Add an {{< gd-icon AnimationPlayer >}}`AnimationPlayer` node, which we'll use to animate the door opening. Your node tree should look like this:"
@@ -5688,7 +5688,7 @@ msgstr "さらに学びたい方のために、フォローアップレシピで
 
 #: 3D/kinematic_car/car_traction.md
 msgid "At this point, we have a large number of parameters to adjust, giving us a very wide range of behavior for the car. Depending on the style of driving you're going for, your number might be very different from the ones used here."
-msgstr "この段階では、車の挙動を幅広く調整できる多数のパラメーターが存在します。求める運転スタイルによっては、ここで示した数値とは大きく異なる設定が必要になる場合もあります。"
+msgstr "この段階では、車の挙動を幅広く調整できる多数のパラメーターがあります。求める運転スタイルによっては、ここで示した数値とは大きく異なる設定が必要になる場合もあります。"
 
 #: 3D/kinematic_car/car_traction.md
 msgid "`traction_slow` and `traction_fast` represent the traction when below or above the `slip_speed`, ranging from `0` - `1`. Smaller numbers mean the car will feel more \"slippery\". Setting them to `1` will be \"on rails\" with no sliding at all."
@@ -5810,7 +5810,7 @@ msgstr "マウスドラッグでユニットを選択"
 
 #: input/multi_unit_select.md
 msgid "### Commanding the units"
-msgstr "### 部隊指揮について"
+msgstr "### ユニットへの指揮"
 
 #: input/multi_unit_select.md
 msgid "![alt](/godot_recipes/4.x/img/multi_unit_03.gif)"
@@ -6040,7 +6040,7 @@ msgstr "マウスのキャプチャ"
 
 #: input/mouse_input.md
 msgid "`InputEventMouse` is the base class for mouse events. It contains `position` and `global_position` properties. Inheriting from it are two classes: `InputEventMouseButton` and `InputEventMouseMotion`."
-msgstr "`InputEventMouse` はマウスイベントの基本クラスです。これには `position` および `global_position` プロパティが含まれています。このクラスを継承するサブクラスとして、`InputEventMouseButton` と `InputEventMouseMotion` の2つが存在します。"
+msgstr "`InputEventMouse` はマウスイベントの基本クラスです。これには `position` および `global_position` プロパティが含まれています。このクラスを継承するサブクラスとして、`InputEventMouseButton` と `InputEventMouseMotion` の2つがあります。"
 
 #: input/mouse_input.md
 msgid "These events occur whenever the mouse moves. You can find the distance moved (in screen coordinates) with the `relative` property."
@@ -6061,7 +6061,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice tip %}}\n"
-"通常のボタンとは異なり、マウスホイールクリックでは「押された」イベントのみが発生します。マウスホイールクリックが「離された」という概念は存在しません。\n"
+"通常のボタンとは異なり、マウスホイールクリックでは「押された」イベントのみが発生します。マウスホイールクリックが「離された」というイベントはありません。\n"
 "{{% /notice %}}"
 
 #: input/mouse_input.md
@@ -6332,7 +6332,7 @@ msgstr "このアニメーション手法では、`Sprite2D`ノードを使用�
 
 #: animation/spritesheet_animation.md
 msgid "Drag the spritesheet texture into the _Texture_ property of the {{< gd-icon Sprite2D >}}`Sprite2D`. You'll see the entire spritesheet displayed in the viewport. To slice it up into individual frames, expand the \"Animation\" section in the Inspector and set the _Hframes_ to `13` and _Vframes_ to `8`. _Hframes_ and _Vframes_ are the number of horizontal and vertical frames in your spritesheet."
-msgstr "{{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの _Texture_プロパティにスプライトシートテクスチャをドラッグ＆ドロップしてください。ビューポート内に完全なスプライトシートが表示されます。個別のフレームに分割するには、インスペクターの「Animation」セクションを拡大し、_Hframes_を `13`、_Vframes_を `8`に設定します。_Hframes_と_Vframes_は、それぞれ水平方向および垂直方向のフレーム数を指定するパラメーターです。"
+msgstr "{{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの _Texture_プロパティにスプライトシートテクスチャをドラッグ＆ドロップしてください。ビューポート内に完全なスプライトシートが表示されます。個別のフレームに分割するには、インスペクターの「Animation」セクションを展開し、 _Hframes_ を `13`、 _Vframes_ を `8`に設定します。_Hframes_ と _Vframes_ は、それぞれ水平方向および垂直方向のフレーム数を指定するパラメーターです。"
 
 #: animation/spritesheet_animation.md
 msgid "![alt](/godot_recipes/4.x/img/sprite_animation_03.png)"
@@ -7051,7 +7051,7 @@ msgid ""
 "own models to use in your game. If not, there are many sources where you can\n"
 "download objects or even collections of objects for particular game types. One\n"
 "of our favorite makers of free game art is [Kenney.nl](https://kenney.nl/)."
-msgstr "Blenderなどの3Dモデリングソフトに慣れている方なら、ゲーム用のモデルを作成することもできます。そうでない場合でも、特定のゲームタイプ向けに作られたオブジェクトや、複数のオブジェクトがセットになったコレクションをダウンロードできるリソースは数多く存在します。個人的にオススメするフリーゲームアートの制作者の一つに[Kenney.nl](https://kenney.nl/)があります。"
+msgstr "Blenderなどの3Dモデリングソフトに慣れている方なら、ゲーム用のモデルを作成することもできます。そうでない場合でも、特定のゲームタイプ向けに作られたオブジェクトや、複数のオブジェクトがセットになったコレクションをダウンロードできるリソースは数多くあります。個人的にオススメするフリーゲームアートの制作者の一つに[Kenney.nl](https://kenney.nl/)があります。"
 
 #: g101/3d/101_3d_02.md
 msgid ""
@@ -7066,7 +7066,7 @@ msgstr ""
 "自分でモデルを作成する場合も、外部でダウンロードしたデータを使用する場合も、それがGodot環境で正しく読み込める形式で保存されている必要があります。Godotは以下の主要な3Dファイル形式をサポートしています。\n"
 "* **glTF** - `.gltf`（テキスト形式）と`.glb`（バイナリ形式）の両方に対応\n"
 "* **DAE (Collada)** - 古いフォーマットながら現在もサポート継続中\n"
-"* **OBJ (Wavefront)** - こちらも旧式フォーマットですが、現代的な代替手段に比べると機能に制限があります\n"
+"* **OBJ (Wavefront)** - こちらも旧式フォーマットですが、現代の他のフォーマットに比べると使える機能に制限があります\n"
 "* **FBX** - 商用フォーマットであり、限定的な互換性しか備えていません"
 
 #: g101/3d/101_3d_02.md
@@ -7133,7 +7133,7 @@ msgstr "シーン内でカメラをゆっくりと回転させながら周回さ
 
 #: g101/3d/101_3d_02.md
 msgid "In the last part, we started a 3D project and looked at how to navigate and create 3D objects. In this part, you'll learn how to import existing 3D objects that you've made or downloaded and how to use more of Godot's 3D nodes."
-msgstr "最終パートでは、3Dプロジェクトを開始し、3D空間のナビゲーション方法とオブジェクト作成について学びました。このセクションでは、自分で作成したまたはダウンロードした既存の3Dオブジェクトのインポート方法と、Godotのより高度な3Dノード機能の使い方をマスターしていただきます。"
+msgstr "最終パートでは、3Dプロジェクトを開始し、3D空間のナビゲーション方法とオブジェクト作成について学びました。このセクションでは、自分で作成したまたはダウンロードした既存の3Dオブジェクトのインポート方法と、Godotのより高度な3Dノード機能の使い方をマスターしましょう。"
 
 #: g101/3d/101_3d_02.md
 msgid ""
@@ -7141,7 +7141,7 @@ msgid ""
 "in a variety of different formats. Godot is able to use several of these, but\n"
 "since GLTF is available in this pack, it's preferred over the others. Drop the\n"
 "`GLTF format` folder into your Godot project's folder and rename it to \"platformer_kit\"."
-msgstr "ダウンロードしたキットを開くと、内部にはさまざまな形式のオブジェクトが含まれています。Godotは複数のフォーマットを使用できますが、このパックではGLTFが利用可能であるため、他の形式よりも推奨されます。`GLTFフォーマット`フォルダをそのままGodotプロジェクトフォルダにコピーし、ファイル名を「platformer_kit」にリネームしてください。"
+msgstr "ダウンロードしたキットを開くと、内部にはさまざまな形式のオブジェクトが含まれています。Godotは複数のフォーマットを使用できますが、このパックではGLTFが利用可能であるため、他の形式よりも推奨されます。`GLTF format`フォルダをそのままGodotプロジェクトフォルダにコピーし、ファイル名を「platformer_kit」にリネームしてください。"
 
 #: g101/3d/101_3d_02.md
 msgid ""
@@ -7603,7 +7603,7 @@ msgid ""
 "development process. This tutorial will assume you have completed at least\n"
 "an introductory Godot 2D project, such as the one in the [official Godot tutorial]\n"
 "(https://docs.godotengine.org/en/stable/getting_started/step_by_step/your_first_game.html)."
-msgstr "注意点として、3D開発は2D制作と比べて格段に複雑になる場合があります。ノードの操作やスクリプト記述、ロジック／データ管理など、多くの基本原則は同じですが、3Dではその他にも考慮すべき要素が数多く存在します。そのため、最初の数プロジェクトは2Dで進めることをオススメし、ゲーム開発プロセスをしっかり理解した上で3Dに移行すると良いでしょう。このチュートリアルでは、[公式Godotチュートリアル](https://docs.godotengine.org/ja/4.x/getting_started/step_by_step/index.html)にあるような初心者向けGodot 2Dプロジェクトを既に作ったことがあることを前提としています。"
+msgstr "注意点として、3D開発は2D制作と比べて格段に複雑になる場合があります。ノードの操作やスクリプト記述、ロジック／データ管理など、多くの基本原則は同じですが、3Dではその他にも考慮すべき要素が数多くあります。そのため、最初の数プロジェクトは2Dで進めることをオススメし、ゲーム開発プロセスをしっかり理解した上で3Dに移行すると良いでしょう。このチュートリアルでは、[公式Godotチュートリアル](https://docs.godotengine.org/ja/4.x/getting_started/step_by_step/index.html)にあるような初心者向けGodot 2Dプロジェクトを既に作ったことがあることを前提としています。"
 
 #: g101/3d/101_3d_01.md
 msgid ""
@@ -8021,7 +8021,7 @@ msgstr ""
 
 #: g101/gdscript/gdscript_02.md
 msgid "Moving sprites"
-msgstr "スプライトを移動中"
+msgstr "スプライトの移動"
 
 #: g101/gdscript/gdscript_01.md
 msgid ""
@@ -8307,7 +8307,7 @@ msgid ""
 "it that to create it all over again for every game. This is where game engines\n"
 "come in."
 msgstr ""
-"さらに、あらゆるゲームに共通して必要となる機能が数多く存在します。例えば：\n"
+"さらに、あらゆるゲームに共通して必要となる機能が数多くあります。例えば：\n"
 "どのような種類のゲームであっても、画面上への描画処理は必ず必要になります。\n"
 "もしその実装コードがすでに存在する場合は、一から書き直すよりも再利用した方が合理的です。これはまさにゲームエンジンが活躍する場面です。"
 
@@ -8437,7 +8437,7 @@ msgstr "Godotノード"
 
 #: g101/start/101_03.md
 msgid "Now we have this {{< gd-icon Sprite2D >}}`Sprite2D` node in our **Scene** dock. Make sure it's selected, and then look at the Inspector dock on the right side. Over here, you'll see all the properties of whatever node you have selected. Notice that the properties are organized by where they come from. The {{< gd-icon Sprite2D >}}`Sprite2D` node inherits from {{< gd-icon Node2D >}}`Node2D`, which inherits from {{< gd-icon CanvasItem >}}`CanvasItem`, which inherits from the plain old {{< gd-icon Node >}}`Node`."
-msgstr "これでシーンドックにこの {{< gd-icon Sprite2D >}}`Sprite2D` ノードが追加されました。必ず選択状態にしてください。次に右側のインスペクタードックを見てみてください。ここには現在選択されているノードのすべてのプロパティが表示されます。これらのプロパティは、それらがどのソースから来ているかによって整理されていることに注目してください。{{< gd-icon Sprite2D >}}`Sprite2D`ノードは {{< gd-icon Node2D >}}`Node2D`を継承しており、これはさらに{{< gd-icon CanvasItem >}}`CanvasItem`を継承し、さらにその根本には単純な{{< gd-icon Node >}}`Node`が存在します。"
+msgstr "これでシーンドックにこの {{< gd-icon Sprite2D >}}`Sprite2D` ノードが追加されました。必ず選択状態にしてください。次に右側のインスペクタードックを見てみてください。ここには現在選択されているノードのすべてのプロパティが表示されます。これらのプロパティは、それらがどのソースから来ているかによって整理されていることに注目してください。{{< gd-icon Sprite2D >}}`Sprite2D`ノードは {{< gd-icon Node2D >}}`Node2D`を継承しており、これはさらに{{< gd-icon CanvasItem >}}`CanvasItem`を継承し、さらにその根本には単純な{{< gd-icon Node >}}`Node`があります。"
 
 #: g101/start/101_03.md
 msgid "Over in the viewport, the sprite doesn't look like much. A sprite's purpose is to display an image, or texture. As you can see in the Inspector, the **Texture** property is currently empty. Fortunately, every new Godot project comes with an image we can use: the Godot icon. Drag the icon from the Filesystem dock and drop it in the texture property."
@@ -8816,7 +8816,7 @@ msgstr "エディターで3Dノードを選択すると表示されるギズモ�
 
 #: Math/transforms.md
 msgid "In 3D space, the concept of transforms applies in the same way as in 2D. In fact, it becomes even more necessary, as using angles in 3D can lead to a variety of problems, as we'll see in a bit."
-msgstr "3D空間において、変換の概念は2D空間で適用される場合と全く同様に機能します。実際、3次元で角度を扱う場合には様々な問題が生じる可能性があるため、この重要性はさらに高まります。これについては後ほど詳しく説明します。"
+msgstr "3D空間において、変換方法の捉え方は2D空間で適用される場合と全く同様です。実際、3次元で角度を扱う場合には様々な問題が生じる可能性があるため、この重要性はさらに高まります。これについては後ほど詳しく説明します。"
 
 #: Math/transforms.md
 msgid "This code says \"Add the transform's x vector multiplied by 10.\" Let's break down what that means. The `transform` contains `x` and `y` properties that represent those local axes. They are _unit vectors_, which means their length is `1`. Another term for unit vector is _direction vector_. They tell us the direction the ship's **x** axis is pointing. We then multiply by `10` to scale it to a longer distance."
@@ -9230,7 +9230,7 @@ msgstr "この例では、AIエージェントは壁や他のエージェント�
 #: kyn/path2d.md
 #, fuzzy
 msgid "## Following a path"
-msgstr "## ターゲットの追跡中"
+msgstr "## 経路の追跡"
 
 #: kyn/path2d.md
 msgid "A *path* is a sequence of points in 2D space, defined by a {{< gd-icon Curve2D >}}`Curve2D` resource. The {{< gd-icon Path2D >}}`Path2D` is a node that allows you to position a path in 2D space, and do create a new path in the editor."
@@ -9783,7 +9783,7 @@ msgstr "たとえば、ゲームがサイドスクロール形式であったり
 
 #: ai/chasing.md
 msgid "This concept can be extended to other types of games as well. The key is to find the direction vector from the enemy to the player:"
-msgstr "この概念は他の種類のゲームにも応用できます。重要なのは、敵からプレイヤーへの方向ベクトルを求めることです。"
+msgstr "この手法は他の種類のゲームにも応用できます。重要なのは、敵からプレイヤーへの方向ベクトルを求めることです。"
 
 #: ai/chasing.md
 msgid "Chasing the player"
@@ -9881,7 +9881,7 @@ msgstr "それでは敵のスクリプトを確認してみます。"
 
 #: ai/changing_behaviors.md
 msgid "Changing Behaviors"
-msgstr "動作の変更中"
+msgstr "動作の変更"
 
 #: ai/changing_behaviors.md
 msgid ""
@@ -10700,7 +10700,7 @@ msgstr ""
 msgid ""
 "You can also tinker with the ball's `Friction` and `Bounce` properties. Both of\n"
 "these properties can range from zero to one. I like a bounce of around `0.5`."
-msgstr "また、ボールの「摩擦力」と「反発係数」プロパティも調整できます。これらはどちらもゼロから1の範囲内で設定できます。個人的には「0.5」前後の反発係数が好みです。"
+msgstr "また、ボールの `Friction（摩擦力）`と `Bounce（反発係数）`プロパティも調整できます。これらはどちらもゼロから1の範囲内で設定できます。個人的には「0.5」前後の反発係数が好みです。"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "### Forces"
@@ -11146,7 +11146,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice style=\"tip\" title=\"Spriteの向き\" %}}\n"
-"必ずスプライトを正しく配置してください。回転していないオブジェクトは **+X軸** 方向に向くようにしてください（つまり右方向を向いている状態）。スプライトのアートワークが別の方向を向いて描かれている場合は、`Sprite2D`（親ボディではなく）を適切に整列させるために回転させてください。\n"
+"必ずスプライトを正しく配置してください。回転していないオブジェクトは **+X軸** 方向に向くようにしてください（つまり右方向を向いている状態）。スプライトのアートワークが別の方向を向いて描かれている場合は、 {{< gd-icon Sprite2D >}}`Sprite2D`（親ボディではなく）を適切に整列させるために回転させてください。\n"
 "{{% /notice %}}"
 
 #: physics/asteroids_physics.md
@@ -11221,7 +11221,7 @@ msgstr "スクリプトの上部に画面サイズを設定してください。
 
 #: physics/asteroids_physics.md
 msgid "Let's look at one more example of using `_integrate_forces()` to alter the body's state without issues. Let's add a \"warp\" mechanic - when the player presses the `\"warp\"` input, the ship will teleport to a random spot on the screen."
-msgstr "`_integrate_forces()`を使用して、問題なくボディの状態を変更できるもう一つの例を見てみてください。『ワープ』機構を追加するとします。プレイヤーが`『ワープ』`入力を押すと、船が画面内のランダムな位置に瞬間移動するようにします。"
+msgstr "`_integrate_forces()`を使用して、問題なくボディの状態を変更できるもう一つの例を見てみてください。『ワープ』機構を追加するとします。プレイヤーが`\"warp\"`がアサインされた入力を押すと、船が画面内のランダムな位置に瞬間移動するようにします。"
 
 #: physics/asteroids_physics.md
 msgid "It works, but you'll notice that it's very hard to control. The rotation is too fast, and it accelerates to a high speed before going offscreen. This is where we want to break from \"real\" space physics. In space, there's no friction, but our Asteroids-style ship will be a lot easier to control if it coasted to a stop when we're not thrusting. We can control this with *damping*."
@@ -11399,7 +11399,7 @@ msgstr "これは、衝突時の応答処理が定義されていないためで
 
 #: physics/Godot3_kinematic2d.md
 msgid "In game development you often need to know when two objects in the game space intersect or come into contact. This is known as _collision detection_. When a collision is detected, you typically want something to happen. This is known as _collision response_."
-msgstr "ゲーム開発において、ゲーム内空間内の二つのオブジェクトが交差するか接触するかどうかを判断する必要が生じる場面は頻繁に存在します。これは「衝突検知」と呼ばれる処理です。衝突が検出された場合、通常は何らかのアクションを発生させたいものです。この部分を総称して「衝突応答」と呼びます。"
+msgstr "ゲーム開発において、ゲーム内空間内の二つのオブジェクトが交差するか接触するかどうかを判断する必要が生じる場面は頻繁にあります。これは「衝突検知」と呼ばれる処理です。衝突が検出された場合、通常は何らかのアクションを発生させたいものです。この部分を総称して「衝突応答」と呼びます。"
 
 #: physics/Godot3_kinematic2d.md
 msgid ""
@@ -11496,7 +11496,7 @@ msgstr "身体のレイヤープロパティは、コードまたはインスペ
 
 #: physics/Godot3_kinematic2d.md
 msgid "One of the most powerful but frequently misunderstood collision features in Godot is the collision layer system. This system allows you to build up very complex interactions between a variety of objects. The key concepts are _layers_ and _masks_. Each collision object has 32 different physics layers it can interact with."
-msgstr "Godotにおいて最も強力でありながらしばしば誤解されがちな衝突判定機能の一つが、「衝突レイヤーシステム」です。この仕組みを利用することで、多種多様なオブジェクト間で極めて複雑な相互作用を構築することが可能になります。核心となる概念は「レイヤー」と「マスク」です。各衝突オブジェクトは、32種類の異なる物理レイヤーと相互作用できるよう設計されています。"
+msgstr "Godotにおいて最も強力でありながらしばしば誤解されがちな衝突判定機能の一つが、「衝突レイヤーシステム」です。この仕組みを利用することで、多種多様なオブジェクト間で極めて複雑な相互作用を構築することが可能になります。核心となるのは「レイヤー」と「マスク」です。各衝突オブジェクトは、32種類の異なる物理レイヤーと相互作用できるよう設計されています。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "> **NOTE:** `move_and_slide()` automatically calculates frame-based movement using `delta`. Do _not_ multiply your velocity vector by `delta` before passing it to `move_and_slide()`."
@@ -11905,7 +11905,7 @@ msgstr "「ピン接合」は、2つの部材を1点で接続し、自由に回�
 
 #: physics/joints_2d.md
 msgid "There are three types of {{< gd-icon Joint2D >}}`Joint2D`. In all of the following examples, there is one {{< gd-icon RigidBody2D >}}`RigidBody2D` connected via a joint to a {{< gd-icon StaticBody2D >}}`StaticBody2D`. \"Visible Collision Shapes\" is enabled in the screen images below so you can see a representation of the joint."
-msgstr "以下の3種類の {{< gd-icon Joint2D >}} `Joint2D` が存在します。すべての例で、1つの {{< gd-icon RigidBody2D >}} `RigidBody2D` がジョイントを介して {{< gd-icon StaticBody2D >}} `StaticBody2D` に接続されています。画面画像では「可視衝突形状」が有効化されているため、ジョイントの表現を確認できます。"
+msgstr "以下の3種類の {{< gd-icon Joint2D >}} `Joint2D` があります。すべての例で、1つの {{< gd-icon RigidBody2D >}} `RigidBody2D` がジョイントを介して {{< gd-icon StaticBody2D >}} `StaticBody2D` に接続されています。画面画像では「可視衝突形状」が有効化されているため、ジョイントの表現を確認できます。"
 
 #: physics/kinematic_friction.md
 msgid ""
@@ -12035,7 +12035,7 @@ msgstr "「880」を選択すれば、幅が正確に10タイルのコンベア�
 
 #: physics/conveyor_belt.md
 msgid "You can make a conveyor belt object using nothing but a {{< gd-icon StaticBody2D >}}`StaticBody2D` by using its `constant_linear_velocity` property."
-msgstr "「constant_linear_velocity」プロパティを使用することで、{{< gd-icon StaticBody2D >}}`StaticBody2D`だけでコンベアベルトオブジェクトを作成できます。"
+msgstr "`constant_linear_velocity` プロパティを使用することで、{{< gd-icon StaticBody2D >}}`StaticBody2D`だけでコンベアベルトオブジェクトを作成できます。"
 
 #: physics/conveyor_belt.md
 msgid "Try adjusting the `x` of the *Region* property. You'll see the tiles shift. This is what we need to animate the belt. You can do this with an {{< gd-icon AnimationPlayer >}}`AnimationPlayer` or in code. We'll do the latter for this example:"
@@ -12047,7 +12047,7 @@ msgstr "### 3D"
 
 #: physics/rigidbody_drag_drop.md
 msgid "We'll start with our rigid body object, adding a {{< gd-icon Sprite2D >}}`Sprite2D` and {{< gd-icon CollisionShape2D >}}`CollisionShape2D`. You can also add a `PhysicsMaterial` if you want to set _Bounce_ and _Friction_ properties."
-msgstr "はじめに、リジッドボディオブジェクトを作成します。まず{{< gd-icon Sprite2D >}}`Sprite2D`と{{< gd-icon CollisionShape2D >}}`CollisionShape2D`を追加してください。さらに物理特性を設定したい場合は`PhysicsMaterial`も追加できます。このマテリアルでは_Bounce_（反発係数）と_Friction_（摩擦係数）のプロパティを調整できます。"
+msgstr "はじめに、リジッドボディオブジェクトを作成します。まず{{< gd-icon Sprite2D >}}`Sprite2D`と{{< gd-icon CollisionShape2D >}}`CollisionShape2D`を追加してください。さらに物理特性を設定したい場合は`PhysicsMaterial`も追加できます。このマテリアルでは _Bounce（反発係数）_ と _Friction（摩擦係数）_ のプロパティを調整できます。"
 
 #: physics/rigidbody_drag_drop.md
 msgid "You want to pick up and move rigid bodies with the mouse."
@@ -12835,7 +12835,7 @@ msgstr ""
 
 #: 2D/screen_shake.md
 msgid "You want to create a \"screen shake\" effect."
-msgstr "「画面シェイク」エフェクトを作成したいとの。"
+msgstr "「画面シェイク」エフェクトを作成したい。"
 
 #: 2D/screen_shake.md
 msgid "Add the following code at the top of the script:"
@@ -12963,7 +12963,7 @@ msgstr "その後、衝突位置にある{{< gd-icon TileMap >}}`TileMap`のタ�
 
 #: 2D/tilemap_collision.md
 msgid "TileMap: detecting tiles"
-msgstr "タイルマップ：タイルを検出中"
+msgstr "タイルマップ：タイルを検出する"
 
 #: 2D/tilemap_collision.md
 msgid "Once you have the `tile_id`, you can get the tile properties from the `TileSet` resource, found in the {{< gd-icon TileMap >}}`TileMap`'s `tile_set` property. For example, to get the name of the tile:"
@@ -14119,7 +14119,7 @@ msgstr "ここではユーザー入力を確認し、移動速度を設定しま
 
 #: 2D/car_steering.md
 msgid "At this point, we have a large number of settings that control the car's behavior. Adjusting them can drastically change how the car drives. To make experimenting with different values easier, download the project for this recipe below. When you run the game, you'll see a set of sliders you can use to change the car's behavior as you drive (press `<Tab>` to show/hide the slider panel)."
-msgstr "この時点で、車両の挙動を制御する多数の設定項目が存在します。これらを調整することで、車の運転特性を大きく変更できます。さまざまな値を試す作業をより簡単にするため、以下にレシピ用プロジェクトをダウンロードしてください。ゲームを起動すると、走行中に車の挙動を変更可能なスライダーパネルが表示されます（`<Tab>`キーでスライダーパネルの表示/非表示を切り替え可能）。"
+msgstr "この時点で、車両の挙動を制御する多数の設定項目があります。これらを調整することで、車の運転特性を大きく変更できます。さまざまな値を試す作業をより簡単にするため、以下にレシピ用プロジェクトをダウンロードしてください。ゲームを起動すると、走行中に車の挙動を変更可能なスライダーパネルが表示されます（`<Tab>`キーでスライダーパネルの表示/非表示を切り替え可能）。"
 
 #: 2D/car_steering.md
 msgid "We'll need another setting variable and one to track the car's overall acceleration:"
@@ -16127,7 +16127,7 @@ msgstr "まず、シグナルと変数について："
 
 #: games/circle_jump/circle_jump_01.md
 msgid "Save the scene in `res://objects/` and drag the circle image (`res://assets/images/jumper.png`) into the Sprite's _Texture_. Note that all the game images are flat white. This will make it easier for us to dynamically color them later."
-msgstr "シーンを `res://objects/` に保存し、円の画像ファイル（`res://assets/images/jumper.png`）をスプライトのテクスチャ領域にドラッグします。すべてのゲーム画像は初期設定では白色になっていますので、後で動的に色付けする際に作業がしやすくなります。"
+msgstr "シーンを `res://objects/` に保存し、円の画像ファイル（`res://assets/images/jumper.png`）をスプライトの _Texture_ にドラッグします。すべてのゲーム画像は初期設定では白色になっていますので、後で動的に色付けする際に作業がしやすくなります。"
 
 #: games/circle_jump/circle_jump_01.md
 msgid "### Circle"

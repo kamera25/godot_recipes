@@ -10,7 +10,7 @@ draft: false
 
 ## 解決策
 
-「constant_linear_velocity」プロパティを使用することで、{{< gd-icon StaticBody2D >}}`StaticBody2D`だけでコンベアベルトオブジェクトを作成できます。
+`constant_linear_velocity` プロパティを使用することで、{{< gd-icon StaticBody2D >}}`StaticBody2D`だけでコンベアベルトオブジェクトを作成できます。
 
 {{% notice note %}}
 この問題を3D環境で解決する方法については[以下を参照](#3d)ください。
