@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 85
 ---
 
+{{% notice style="tips" title="ℹ️ 留意事項"%}}
+この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+{{% /notice %}}
+
 ## 課題
 
 ゲーム内でデータを処理する方法や、柔軟なデータオブジェクトを作成する方法を探しています。

@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 37
 ---
 
+{{% notice style="tips" title="ℹ️ 留意事項"%}}
+この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+{{% /notice %}}
+
 ## 課題
 
 3Dゲームで視覚的なデバッグ情報が欲しい：速度や位置などを表すベクトルを可視化する方法があれば便利だ

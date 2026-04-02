@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 9
 ---
 
+{{% notice style="tips" title="ℹ️ 留意事項"%}}
+この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+{{% /notice %}}
+
 ## 課題
 
 Godotがシーンツリー内のノードをどのように処理するかを理解しておく必要があります。

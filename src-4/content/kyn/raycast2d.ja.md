@@ -4,6 +4,10 @@ draft: false
 ghcommentid: 87
 ---
 
+{{% notice style="tips" title="ℹ️ 留意事項"%}}
+この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+{{% /notice %}}
+
 ## {{< gd-icon RayCast2D >}}RayCast2D
 
 *レイキャスティング* はゲーム開発で広く用いられる手法です。「レイを飛ばす(キャストする)」とは、ある点から直線を伸ばし、それが何かに衝突するか限界に達するまで移動させる操作を指します。

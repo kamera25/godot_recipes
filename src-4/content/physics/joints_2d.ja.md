@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 70
 ---
 
+{{% notice style="tips" title="ℹ️ 留意事項"%}}
+この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+{{% /notice %}}
+
 ## 課題
 
 Godotの`Joint2D`ノードについて理解したい。

@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 23
 ---
 
+{{% notice style="tips" title="ℹ️ 留意事項"%}}
+この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+{{% /notice %}}
+
 ## 課題
 
 {{< gd-icon TileMap >}} タイルマップを使用し、自動タイル機能を活用してレベル作成を効率化したいです。

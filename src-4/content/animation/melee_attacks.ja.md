@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 53
 ---
 
+{{% notice style="tips" title="ℹ️ 留意事項"%}}
+この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+{{% /notice %}}
+
 ## 課題
 
 剣やパンチなどの近接攻撃を実装したい。

@@ -5,6 +5,10 @@ draft: true
 pre: "13. "
 ---
 
+{{% notice style="tips" title="ℹ️ 留意事項"%}}
+この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+{{% /notice %}}
+
 ## Installation
 
 [パート11](/godot_recipes/4.x/ja/games/circle_jump/circle_jump_11/) でモバイル広告の設定を行って以降、GodotによるAndroidプラグイン処理とAdMob SDKには重要な更新が加えられています。もし現在ゲームが正常に動作している場合、現時点では特に変更を加える必要はないでしょう（まだ）。新規プロジェクトを開発中の場合は、以下の手順に従うことをオススメします。

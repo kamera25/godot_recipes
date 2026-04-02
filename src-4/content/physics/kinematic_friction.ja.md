@@ -4,6 +4,10 @@ weight: 3
 draft: false
 ---
 
+{{% notice style="tips" title="ℹ️ 留意事項"%}}
+この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+{{% /notice %}}
+
 ## 課題
 
 運動キャラクターに摩擦と加速度を加え、より自然な動きを実現したい。

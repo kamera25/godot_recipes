@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 75
 ---
 
+{{% notice style="tips" title="ℹ️ 留意事項"%}}
+この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+{{% /notice %}}
+
 ## 課題
 
 経路を追従し、障害物を避け、世界を移動する方法について他の判断もできるAI制御オブジェクトがほしい。

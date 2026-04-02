@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 30
 ---
 
+{{% notice style="tips" title="ℹ️ 留意事項"%}}
+この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+{{% /notice %}}
+
 ## 課題
 
 ご希望の2D弾は弧を描くように移動したり、弾道曲線を描いたりする仕様でしょうか？

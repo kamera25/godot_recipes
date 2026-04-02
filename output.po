@@ -1,3 +1,4 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Recipes Content\n"
@@ -3463,7 +3464,7 @@ msgstr "プレイヤー／モブなどから投射物を発射させたい。"
 msgid "We're using a custom gravity vector, `g` so that we can control how the shell flies from the tank's cannon, giving it a nice arc effect. If you'd rather your projectiles move in a straight line, you can remove the line that applies it in `_physics_process()`."
 msgstr "カスタムの重力ベクトル `g` を使用することで、戦車の砲弾が綺麗な弧を描くように、大砲からどのように飛ぶかを制御できます。もし、飛び道具を直線的に移動させたい場合は、`_physics_process()` で重力を適用している行を削除してください。"
 
-#: 2D/2d_shooting.md 3D/3d_shooting.md
+#: 2D/2d_shooting.md 3D/3d_shooting.md audio/audio_manager.md
 msgid "{{< youtube 7axJJYont6Y >}} -->"
 msgstr "{{< youtube 7axJJYont6Y >}} -->"
 
@@ -18341,3 +18342,41 @@ msgstr "![alt](/godot_recipes/3.x/img/cj_02_02.png)"
 #: games/circle_jump/circle_jump_02.md
 msgid "- **Marker2D (\"StartPosition\")**"
 msgstr "- **Marker2D (\"StartPosition\")**"
+
+#: 2D/2d_draw_trajectory.md 2D/2d_shooting.md 2D/autotile_intro.md
+#: 2D/ballistic_bullet.md 2D/grid_movement.md 2D/platform_character.md
+#: 2D/screen_shake.md 2D/splitscreen_demo.md 2D/tilemap_animation.md
+#: 2D/touchscreen_camera.md 3D/3d_shooting.md 3D/3d_sphere_car.md
+#: 3D/camera_gimbal.md 3D/characterbody3d_examples.md 3D/click_to_move.md
+#: 3D/debug_overlay.md 3D/kinematic_car/car_ai.md 3D/kinematic_car/car_base.md
+#: 3D/kinematic_car/car_camera.md 3D/kinematic_car/car_slopes.md
+#: 3D/kinematic_car/car_traction.md 3D/move_with_camera.md ai/context_map.md
+#: ai/path_follow.md animation/melee_attacks.md basics/custom_resources.md
+#: basics/getting_nodes.md basics/organizing.md basics/rotation.md
+#: basics/tree_ready_order.md basics/understanding_delta.md
+#: g101/3d/101_3d_06.md g101/3d/101_3d_07.md
+#: games/circle_jump/circle_jump_01.md games/circle_jump/circle_jump_02.md
+#: games/circle_jump/circle_jump_03.md games/circle_jump/circle_jump_04.md
+#: games/circle_jump/circle_jump_05.md games/circle_jump/circle_jump_06.md
+#: games/circle_jump/circle_jump_11.md games/circle_jump/circle_jump_12.md
+#: games/circle_jump/circle_jump_13.md input/custom_mouse_cursor.md
+#: input/input_actions.md kyn/path2d.md kyn/raycast2d.md kyn/rigidbody2d.md
+#: kyn/tween.md physics/Godot3_KYN_rigidbody1.md physics/Godot3_kinematic2d.md
+#: physics/conveyor_belt.md physics/joints_2d.md physics/kinematic_friction.md
+#: physics/kinematicbody_slopes.md shaders/blur.md shaders/greyscale.md
+#: shaders/interacting.md shaders/intro.md shaders/shockwave.md
+#: ui/containers.md ui/cooldown_button.md ui/debug_overlay.md
+#: ui/floating_text.md ui/heart_containers_3.md ui/labels.md ui/level_select.md
+msgid ""
+"{{% notice style=\"tip\" %}}\n"
+"This article is being updated from Godot 3 to Godot 4.\n"
+"{{% /notice %}}"
+msgstr ""
+"{{% notice style=\"tips\" title=\"ℹ️ 留意事項\"%}}\n"
+"この記事は Godot 3から Godot 4 へ内容の書き換え中です。\n"
+"{{% /notice %}}"
+
+#: 2D/splitscreen_demo.md physics/Godot3_KYN_rigidbody1.md
+#: physics/collision_layers.md
+msgid "## Introduction"
+msgstr "## はじめに"

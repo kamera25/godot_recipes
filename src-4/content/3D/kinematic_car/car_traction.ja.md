@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 42
 ---
 
+{{% notice style="tips" title="ℹ️ 留意事項"%}}
+この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+{{% /notice %}}
+
 ## 課題
 
 [キネマティックカー](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)で高速走行時に「レール上を走っている」ような感覚が気にいりません。ドリフトやトラクション損失を可能にするため、ある程度の「スリップ」特性が欲しいです。

@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 43
 ---
 
+{{% notice style="tips" title="ℹ️ 留意事項"%}}
+この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+{{% /notice %}}
+
 ## 課題
 
 車（またはその他の物体）を追跡できる「追従カメラ」を実装したい。
