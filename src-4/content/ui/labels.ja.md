@@ -5,8 +5,6 @@ draft: false
 ghcommentid: 55
 ---
 
-この記事はGodot3からGodot4へ書き換え中です。
-
 ## 課題
 
 画面にテキストを表示したい。

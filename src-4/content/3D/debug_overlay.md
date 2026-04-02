@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 37
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You'd like visual debug information in your 3D game: a way to see vectors representing velocity, position, etc.

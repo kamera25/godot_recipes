@@ -5,6 +5,10 @@ draft: false
 pre: "11. "
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## About ads
 
 When building a free-to-play mobile game, you have two choices when it comes to monetization: in-app purchases and advertisement. In this part, we'll look at how to integrate a mobile ad platform (Admob) into your game.

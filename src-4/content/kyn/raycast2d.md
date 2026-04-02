@@ -4,6 +4,10 @@ draft: false
 ghcommentid: 87
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## {{< gd-icon RayCast2D >}}RayCast2D
 
 *Raycasting* is a common technique in game development. "Casting a ray" means extending a line from a point until it collides with something or reaches its limit.

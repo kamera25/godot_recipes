@@ -5,6 +5,10 @@ draft: false
 pre: "01. "
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 Where to start? Depending on the game, and how fleshed-out your idea is, the answer might be very different. In our case, I've cheated a little bit by making a prototype of the game already and working out a few of the ideas ahead of time. Still, it diverged a bit from my initial idea, and so might this series - time will tell.
 
 In a bigger project, you might start with **design document**, which could be as simple as a page of notes or as complex as a 500-page treatise laying out every detail of your game's world, plot, and mechanics. We've no need of anything so involved here, so let's just go over the gameplan.

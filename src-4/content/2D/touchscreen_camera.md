@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 31
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You need a touch-controlled 2D camera for your mobile game.

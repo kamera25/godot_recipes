@@ -5,6 +5,10 @@ ghcommentid: 99
 tags: []
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## {{< gd-icon RigidBody2D >}}`RigidBody2D`
 
 {{< gd-icon RigidBody2D >}}`RigidBody2D` is the physics body in Godot that provides simulated physics. This means that you don’t control a {{< gd-icon RigidBody2D >}}`RigidBody2D`directly. Instead you apply forces to it (gravity, impulses, etc.) and Godot’s built-in physics engine calculates the resulting movement, including collisions, bouncing, rotating, etc.

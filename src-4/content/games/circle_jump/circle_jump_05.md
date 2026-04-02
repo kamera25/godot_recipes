@@ -5,6 +5,10 @@ draft: false
 pre: "05. "
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 In the last part, we added UI in the form of menus to start and configure the game. We also need a UI to display in-game information such as score.
 
 ## HUD scene

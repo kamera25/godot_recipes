@@ -5,8 +5,6 @@ draft: false
 ghcommentid: 31
 ---
 
-この記事はGodot3からGodot4へ書き換え中です。
-
 ## 課題
 
 モバイルゲームには、タッチ操作対応の2Dカメラが必要です。

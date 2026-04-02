@@ -5,6 +5,10 @@ draft: true
 pre: "13. "
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Installing
 
 Since we set up mobile ads in [Part 11](/godot_recipes/3.x/games/circle_jump/circle_jump_11/), there have been significant updates to the way Godot handles Android plugins, as well as to the AdMob SDK. If your game is working, you probably don't need to change anything (yet). If you're building a new game, you should follow these steps.

@@ -5,8 +5,6 @@ draft: false
 ghcommentid: 16
 ---
 
-この記事はGodot3からGodot4へ書き換え中です。
-
 ## 課題
 
 2Dプラットフォーマースタイルのキャラクターを作成したいです。

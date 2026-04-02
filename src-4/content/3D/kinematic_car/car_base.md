@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 41
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You're looking to make a 3D driving or racing game and don't know where to start.

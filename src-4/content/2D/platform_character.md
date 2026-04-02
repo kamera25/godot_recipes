@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 16
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You need to make a 2D platform-style character.

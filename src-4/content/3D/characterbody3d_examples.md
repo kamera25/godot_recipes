@@ -4,6 +4,10 @@ weight: 4
 draft: false
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You need a player-controlled 3D character body.

@@ -4,6 +4,11 @@ weight: 1
 draft: false
 ghcommentid: 18
 ---
+
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Introduction
 
 In this demo, we'll consider a local multiplayer game - a topdown-style maze game with

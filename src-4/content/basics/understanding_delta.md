@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 12
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 The `delta` or "delta time" parameter is a frequently-misunderstood concept in game development. In this tutorial, we'll explain how it's used, the importance of frame-rate independent movement, and practical examples of its use in Godot.

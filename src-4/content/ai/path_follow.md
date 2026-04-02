@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 72
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You want a character to follow a pre-defined path, such as a guard patrolling or a car following the road.

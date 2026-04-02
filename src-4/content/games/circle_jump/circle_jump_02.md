@@ -5,6 +5,10 @@ draft: false
 pre: "02. "
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 In the previous part, we created the `Jumper` and `Circle` object that make up
 the bulk of the game. Now we need to add the progression: a continuous series of spawned circles as long as the player doesn't miss.
 

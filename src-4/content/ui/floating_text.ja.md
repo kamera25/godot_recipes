@@ -4,8 +4,6 @@ weight: 12
 draft: false
 ---
 
-この記事はGodot3からGodot4へ書き換え中です。
-
 ## 課題
 
 ダメージを受けたとき、数字を浮かせながら表示(Floating Combat Text)させたい。

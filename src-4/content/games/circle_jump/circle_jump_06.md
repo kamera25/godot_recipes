@@ -5,6 +5,10 @@ draft: false
 pre: "06. "
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Settings singleton
 
 First, we'll add a new script by choosing _File -> New Script_ in the script tab. Name the script `settings.gd`.

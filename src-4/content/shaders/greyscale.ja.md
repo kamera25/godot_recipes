@@ -5,8 +5,6 @@ draft: false
 ghcommentid: 78
 ---
 
-この記事はGodot3からGodot4へ書き換え中です。
-
 ## 課題
 
 画像のグレースケール変換に使用するシェーダーが必要です。

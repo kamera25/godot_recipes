@@ -4,6 +4,10 @@ weight: 12
 draft: false
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You want to make an arcade-style car game, so you're looking for simplicity over realistic physics. In this recipe, you'll learn how to make a fun, driveable car using a rolling sphere.

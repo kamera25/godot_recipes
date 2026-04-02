@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 36
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You want to shoot projectiles from your player/mob/etc..

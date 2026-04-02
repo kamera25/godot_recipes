@@ -5,8 +5,6 @@ draft: false
 ghcommentid: 46
 ---
 
-この記事はGodot3からGodot4へ書き換え中です。
-
 ## 課題
 
 Godotの「入力アクション」システムについて理解を深めたい。

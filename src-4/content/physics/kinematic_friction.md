@@ -4,6 +4,10 @@ weight: 3
 draft: false
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 You want to add friction and acceleration to your kinematic character, giving it a smoother feel.

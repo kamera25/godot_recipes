@@ -5,8 +5,6 @@ draft: false
 ghcommentid: 9
 ---
 
-この記事はGodot3からGodot4へ書き換え中です。
-
 ## 課題
 
 Godotがシーンツリー内のノードをどのように処理するかを理解しておく必要があります。

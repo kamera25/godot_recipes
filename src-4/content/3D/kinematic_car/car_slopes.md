@@ -5,6 +5,10 @@ draft: false
 ghcommentid: 44
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 ## Problem
 
 Your [Kinematic Car](/godot_recipes/3.x/3d/kinematic_car/car_base/) climbs slopes, but it doesn't look quite right:

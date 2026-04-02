@@ -5,8 +5,6 @@ draft: false
 ghcommentid: 21
 ---
 
-この記事はGodot3からGodot4へ書き換え中です。
-
 ## 課題
 
 グリッド状に移動する2Dキャラクターが必要です。

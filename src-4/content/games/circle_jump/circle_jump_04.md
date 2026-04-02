@@ -5,6 +5,10 @@ draft: false
 pre: "04. "
 ---
 
+{{% notice style="tip" %}}
+この記事はGodot3からGodot4へ書き換え中です。
+{{% /notice %}}
+
 Now that we've got the basic gameplay, it's time to start working on the UI. We're going to need menu screens for the title, settings, and game over.
 
 ## Menu screens
