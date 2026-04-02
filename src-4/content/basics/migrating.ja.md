@@ -75,7 +75,7 @@ Godot 3.5 で `SceneTreeTween` を使い始めた場合、Godot 4.0 の {{< gd-i
 
 ## レイキャスティング
 
-コード内でレイキャストを実行する際、新たなAPIが導入されました。`PhysicsDirectSpaceState[2D|3D].intersect_ray()`関数には、専用オブジェクトをパラメーターとして指定します。これによりレイの特性を正確に定義できます。例えば3D空間でレイを描画する場合は：
+コード内でレイキャストを実行するために、新たなAPIが導入されました。`PhysicsDirectSpaceState[2D|3D].intersect_ray()`関数には、専用オブジェクトをパラメーターとして指定します。これによりレイの特性を正確に定義できます。例えば3D空間でレイを描画する場合は。
 
 ```gdscript
 var space = get_world_3d().direct_space_state

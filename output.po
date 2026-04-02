@@ -1087,7 +1087,7 @@ msgstr "## キャラクターボディ [2D/3D]"
 
 #: basics/migrating.md
 msgid "When casting rays in code, there's a new API. `PhysicsDirectSpaceState[2D|3D].intersect_ray()` now takes a special object as a parameter. This object specifies the ray properties. For example, to cast a ray in 3D:"
-msgstr "コード内でレイキャストを実行する際、新たなAPIが導入されました。`PhysicsDirectSpaceState[2D|3D].intersect_ray()`関数には、専用オブジェクトをパラメーターとして指定します。これによりレイの特性を正確に定義できます。例えば3D空間でレイを描画する場合は："
+msgstr "コード内でレイキャストを実行するために、新たなAPIが導入されました。`PhysicsDirectSpaceState[2D|3D].intersect_ray()`関数には、専用オブジェクトをパラメーターとして指定します。これによりレイの特性を正確に定義できます。例えば3D空間でレイを描画する場合は。"
 
 #: basics/migrating.md
 msgid "Working with signals is much more streamlined in 4.0. `Signal` is a native type now, so you'll be using fewer strings, meaning you get autocomplete and error checking. This applies to functions as well, which can now be directly referenced rather than using strings."
@@ -3463,7 +3463,7 @@ msgstr "プレイヤー／モブなどから投射物を発射させたい。"
 msgid "We're using a custom gravity vector, `g` so that we can control how the shell flies from the tank's cannon, giving it a nice arc effect. If you'd rather your projectiles move in a straight line, you can remove the line that applies it in `_physics_process()`."
 msgstr "カスタムの重力ベクトル `g` を使用することで、戦車の砲弾が綺麗な弧を描くように、大砲からどのように飛ぶかを制御できます。もし、飛び道具を直線的に移動させたい場合は、`_physics_process()` で重力を適用している行を削除してください。"
 
-#: 2D/2d_shooting.md 3D/3d_shooting.md audio/audio_manager.md
+#: 2D/2d_shooting.md 3D/3d_shooting.md
 msgid "{{< youtube 7axJJYont6Y >}} -->"
 msgstr "{{< youtube 7axJJYont6Y >}} -->"
 
@@ -4446,8 +4446,8 @@ msgid ""
 "For this example, we'll leave the character \"bodyless\" - meaning we're not adding a mesh to display for the player's body. Depending on your setup, you may or may not need to see the player's body.\n"
 "{{% /notice %}}"
 msgstr ""
-"{{% notice style=\"note\" title=\"キャラクターのボディはどこにある？\" %}}\n"
-"この例では、「ボディーレス」な状態、つまりプレイヤー用の表示メッシュを追加しないケースを考えます。環境によっては、プレイヤーの身体を表示する必要があるかどうかは異なるでしょう。\n"
+"{{% notice style=\"note\" title=\"キャラクターの身体はどこにある？\" %}}\n"
+"この例では、「身体がない」状態、つまりプレイヤー用の表示メッシュを追加しないケースを考えます。環境によっては、プレイヤーの身体を表示する必要があるかどうかは異なるでしょう。\n"
 "{{% /notice %}}"
 
 #: 3D/basic_fps.md
@@ -4512,7 +4512,7 @@ msgstr "入力マッピングに「W」「A」「S」「D」（標準設定）�
 
 #: 3D/basic_fps.md
 msgid "Add the player to a \"World\" scene where you've created some {{< gd-icon StaticBody3D >}}`StaticBody3D` nodes for the floor and some walls."
-msgstr "以下の手順で「ワールド」シーンにプレイヤーを追加してください。床用に`StaticBody3D`ノードを、壁用に複数のノードを作成済みとします。"
+msgstr "以下の手順で「World」シーンにプレイヤーを追加してください。床に{{< gd-icon StaticBody3D >}}`StaticBody3D`ノードを、壁用に複数のノードを作成済みとします。"
 
 #: 3D/basic_fps.md
 msgid "Add your weapon mesh as a child of the {{< gd-icon Camera3D >}}`Camera3D`. Then, in the editor view menu, choose \"2 Viewports\" and set one of them to preview the camera. Then, you can move around the weapon and easily see how it will look from the player's perspective."
@@ -4524,7 +4524,7 @@ msgstr "個性を加えるには、{{< gd-icon AnimationPlayer >}}`AnimationPlay
 
 #: 3D/basic_fps.md
 msgid "Try the code again, and you'll see that you can now rotate with the mouse. However, you may find your mouse running outside the game window. This is the perfect time to add some code to capture your mouse. See [Input: Capturing the Mouse](/godot_recipes/4.x/input/mouse_capture/) for details."
-msgstr "コードをもう一度実行してみると、マウスで回転操作ができるようになっていることが確認できるはずです。ただし、マウスカーソルがゲームウィンドウの外にはみ出してしまう場合があります。このタイミングで、マウスをキャプチャするコードを追加すると良いでしょう。詳細については[入力：マウスのキャプチャ](/godot_recipes/4.x/input/mouse_capture/)をご覧ください。"
+msgstr "コードをもう一度実行してみると、マウスで回転操作ができるようになっていることが確認できるはずです。ただし、マウスカーソルがゲームウィンドウの外にはみ出してしまう場合があります。このタイミングで、マウスをキャプチャするコードを追加すると良いでしょう。詳細については[入力：マウスのキャプチャ](/godot_recipes/4.x/ja/input/mouse_capture/)をご覧ください。"
 
 #: 3D/basic_fps.md
 msgid "Our updated code then becomes"
@@ -5134,10 +5134,10 @@ msgstr "実際に操作してみると、「前進」を押すとキャラクタ
 #: 3D/assets/character_controller.md
 msgid "We've chosen {{< gd-icon CharacterBody3D >}}`CharacterBody3D` as the root node of the imported scene, and it's complaining about a missing collision shape, so let's fix that first. Add a {{< gd-icon CollisionShape3D >}}`CollisionShape3D` child and choose {{< gd-icon CapsuleShape3D >}}`CapsuleShape3D` as its **Shape** property."
 msgstr ""
-"インポートしたシーンのルートノードとして `CharacterBody3D` を選択しましたが、衝突形状が欠けているとエラーが出ています。まずはこれを修正します。以下の手順に従ってください。\n"
+"インポートしたシーンのルートノードとして {{< gd-icon CharacterBody3D >}}`CharacterBody3D` を選択しましたが、衝突形状が欠けているとエラーが出ています。まずはこれを修正します。以下の手順に従ってください。\n"
 "\n"
-"1. `CollisionShape3D` 子要素を追加します\n"
-"2. その **[プロパティ]** で「Capsule Shape」(カプセル型) を選択します"
+"1. {{< gd-icon CollisionShape3D >}}`CollisionShape3D` 子要素を追加します\n"
+"2. その **[プロパティ]** で {{< gd-icon CapsuleShape3D >}}`CapsuleShape3D` を選択します"
 
 #: 3D/assets/character_controller.md
 msgid "Then, in `_unhandled_input()`, pick a random animation from the list when the action is pressed:"
@@ -5149,7 +5149,7 @@ msgstr "`velocity`はグローバル座標系で定義されていますが、�
 
 #: 3D/assets/character_controller.md
 msgid "You've imported a rigged, animated 3D character in Godot and set up its animations using {{< gd-icon AnimationTree >}}`AnimationTree`. Now you need to implement movement: you need a character controller."
-msgstr "Godot環境でリグ設定済みのアニメーション3Dキャラクターをインポートし、{{< gd-icon AnimationTree >}}`AnimationTree`を使ってそのアニメーションを設定したところです。次は移動機能を実装が必要です。キャラクタコントローラが必要です。"
+msgstr "Godot環境でリグ設定済みのアニメーション3Dキャラクターをインポートし、{{< gd-icon AnimationTree >}}`AnimationTree`を使ってそのアニメーションを設定したところです。次は移動機能を実装が必要です。キャラクターコントローラーが必要です。"
 
 #: 3D/assets/character_controller.md
 msgid "Add one as a child of the root node, and then add a {{< gd-icon Camera3D >}}`Camera3D` as a child of that."
@@ -5179,7 +5179,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3dchar_animtree_properties.png)"
 
 #: 3D/assets/character_controller.md
 msgid "Using `lerp_angle()` ensures we'll always rotate the shortest direction to the new angle (rather than going the long way around from a 359° rotation to a 1° rotation, for example)."
-msgstr "Using `lerp_angle()` ensures we'll always rotate the shortest direction to the new angle (rather than going the long way around from a 359° rotation to a 1° rotation, for example)."
+msgstr "`lerp_angle()` を使用することで、常に最短方向に新しい角度に回転できるようになります（例えば、359度から1度に回す場合のように、遠回りせずに済みます）。"
 
 #: 3D/assets/character_controller.md
 msgid "Since we have 3 separate attacks in the {{< gd-icon AnimationTree >}}`AnimationTree`, we'll make a list of them:"
@@ -5207,7 +5207,7 @@ msgstr "### カメラ機能"
 
 #: 3D/assets/character_controller.md
 msgid "In `get_move_input()`, we're setting the player's velocity. Just after that, we can set the blend position:"
-msgstr "In `get_move_input()`, we're setting the player's velocity. Just after that, we can set the blend position:"
+msgstr "`get_move_input()` では、プレイヤーの移動速度を設定しています。その直後にブレンド位置を指定できます。"
 
 #: 3D/assets/character_controller.md
 msgid "In the **Input Map**, we're using the following inputs: `forward`, `back`, `left`, `right`, and `jump`. Assign them to whatever keys/buttons you prefer."
@@ -5966,7 +5966,7 @@ msgstr ""
 
 #: input/custom_actions.md
 msgid "If you also wanted to add the left mouse button to the same action:"
-msgstr "左マウスボタンも同じ操作に追加したい場合は："
+msgstr "左マウスボタンも同じ操作に追加したい場合は。"
 
 #: input/custom_actions.md
 msgid ""
@@ -6328,11 +6328,11 @@ msgstr "以下のノードをシーンに追加してください。"
 
 #: animation/spritesheet_animation.md
 msgid "This animation technique uses a {{< gd-icon Sprite2D >}}`Sprite2D` node to display the texture, and then we animate the changing frames with {{< gd-icon AnimationPlayer >}}`AnimationPlayer`. This can work with any 2D node, but for this demo, we'll use a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`."
-msgstr "このアニメーション手法では、`Sprite2D`ノードを使用してテクスチャを表示し、その後`AnimationPlayer`でフレームの切り替えをアニメーション化します。これはあらゆる2Dノードで使用できますが、ここではデモンストレーション用に`CharacterBody2D`ノードを使用しています。"
+msgstr "このアニメーション手法では、{{< gd-icon Sprite2D >}}`Sprite2D`ノードを使用してテクスチャを表示し、その後{{< gd-icon AnimationPlayer >}}`AnimationPlayer`でフレームの切り替えをアニメーション化します。これはあらゆる2Dノードで使用できますが、ここではデモンストレーション用に{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ノードを使用しています。"
 
 #: animation/spritesheet_animation.md
 msgid "Drag the spritesheet texture into the _Texture_ property of the {{< gd-icon Sprite2D >}}`Sprite2D`. You'll see the entire spritesheet displayed in the viewport. To slice it up into individual frames, expand the \"Animation\" section in the Inspector and set the _Hframes_ to `13` and _Vframes_ to `8`. _Hframes_ and _Vframes_ are the number of horizontal and vertical frames in your spritesheet."
-msgstr "{{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの _Texture_プロパティにスプライトシートテクスチャをドラッグ＆ドロップしてください。ビューポート内に完全なスプライトシートが表示されます。個別のフレームに分割するには、インスペクターの「Animation」セクションを展開し、 _Hframes_ を `13`、 _Vframes_ を `8`に設定します。_Hframes_ と _Vframes_ は、それぞれ水平方向および垂直方向のフレーム数を指定するパラメーターです。"
+msgstr "{{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの _Texture_ プロパティにスプライトシートテクスチャをドラッグ＆ドロップしてください。ビューポート内に完全なスプライトシートが表示されます。個別のフレームに分割するには、インスペクターの「Animation」セクションを展開し、 _Hframes_ を `13`、 _Vframes_ を `8`に設定します。_Hframes_ と _Vframes_ は、それぞれ水平方向および垂直方向のフレーム数を指定するパラメーターです。"
 
 #: animation/spritesheet_animation.md
 msgid "![alt](/godot_recipes/4.x/img/sprite_animation_03.png)"
@@ -8316,8 +8316,8 @@ msgid ""
 "[![alt](/godot_recipes/4.x/img/godot3_logo.png?width=250)](https://godotengine.org/)\n"
 "[Click here to download Godot](https://godotengine.org/)"
 msgstr ""
-"[![alt](/godot_recipes/4.x/img/godot3_logo.png?width=250)](https://godotengine.org/)\n"
-"[Godotをダウンロードするにはこちらをクリック](https://godotengine.org/)"
+"[![alt](/godot_recipes/4.x/img/godot3_logo.png?width=250)](https://godotengine.org/ja/)\n"
+"[Godotをダウンロードするにはこちらをクリック](https://godotengine.org/ja/)"
 
 #: g101/start/101_01.md
 msgid "* Physics"
@@ -8544,7 +8544,7 @@ msgid ""
 "* **Bottom Panel:** Here, you'll see context-specific information for various tools. The most important one to note first is the **Output** panel, where you'll see any error or informational messages when your game is running."
 msgstr ""
 "* **ビューポート:** 開発中のゲーム画面が表示される領域です。\n"
-"* **ワークスペース切り替え:** 上部中央に配置されており、2D/3D/スクリプト各作業環境を簡単に切り替えられます。初期状態では3Dモードが選択されています。\n"
+"* **ワークスペース:** 上部中央に配置されており、2D/3D/スクリプト各作業環境を簡単に切り替えられます。初期状態では3Dモードが選択されています。\n"
 "* **プレイテストボタン:** このボタンを使用すると、開発中のゲームを起動して操作しながらデバッグできます。\n"
 "* **ドック/タブパネル:** 左右両側にある複数のドックエリアでは、ゲーム内アイテムを表示し、各種プロパティを設定できます。\n"
 "* **ボトムパネル:** ここには各ツールに関連したコンテキスト固有情報が表示されます。特に重要なのは**出力**パネルで、ゲーム実行時にエラーメッセージや動作状況を確認できます。"
@@ -10049,7 +10049,7 @@ msgstr "ゲーム要素としてペットやミニオンを追加します。な
 
 #: ai/pet_following.md
 msgid "The `parent` variable holds a reference to the character the pet should follow. We then get the `FollowPoint` node from that so we can get its position in `_physics_process()`:"
-msgstr "`parent`変数には、ペットが追従すべきキャラクターへの参照情報が格納されています。その後、そのノードから`FollowPoint`を取得し、`_physics_process()`関数内でその位置情報を取得できるようにしています。"
+msgstr "`parent`変数には、ペットが追従すべきキャラクターへの参照情報が格納されています。その後、そのノードから`FollowPoint`を取得し、`_physics_process()`関数内でその位置情報を取得します。"
 
 #: ai/pet_following.md
 msgid "### Navigating obstacles"
@@ -10468,7 +10468,7 @@ msgstr "またはこちら："
 
 #: shaders/intro.md
 msgid "The first line of the shader must specify its type. If the node it's attached to is a 2D node:"
-msgstr "シェーダーの最初の行にはそのタイプを指定が必要です。接続されているノードが2Dノードの場合は："
+msgstr "シェーダーの最初の行にはそのタイプを指定が必要です。接続されているノードが2Dノードの場合は。"
 
 #: shaders/intro.md
 msgid "Every pixel is red. `COLOR` is the output of the fragment shader and is applied to every pixel simultaneously. But what if we want some variation?"
@@ -14328,7 +14328,7 @@ msgstr "フレーム単位で時間を設定しているため、`_ready()`内�
 
 #: 2D/coyote_time.md
 msgid "If the player walks off the edge of a platform, for a few frames afterward, we still allow them to jump as if they were still on the ground."
-msgstr "プレイヤーがプラットフォームの端から離れた場合、数フレームの間は依然として地面にいるかのようにジャンプできるようにしています。"
+msgstr "プレイヤーがプラットフォームの端から離れた場合、数フレームの間は依然として地面にいるかのようにジャンプできます。"
 
 #: 2D/coyote_time.md
 msgid "We're going to add this to an already existing platform character. See the [Platform character](/godot_recipes/4.x/2d/platform_character/) recipe for how to set one up."

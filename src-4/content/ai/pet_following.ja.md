@@ -32,7 +32,7 @@ var speed = 25
 @onready var follow_point = parent.get_node("Sprite2D/FollowPoint")
 ```
 
-`parent`変数には、ペットが追従すべきキャラクターへの参照情報が格納されています。その後、そのノードから`FollowPoint`を取得し、`_physics_process()`関数内でその位置情報を取得できるようにしています。
+`parent`変数には、ペットが追従すべきキャラクターへの参照情報が格納されています。その後、そのノードから`FollowPoint`を取得し、`_physics_process()`関数内でその位置情報を取得します。
 
 ```gdscript
 func _physics_process(delta):

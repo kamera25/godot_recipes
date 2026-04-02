@@ -22,7 +22,7 @@ func _ready():
     InputMap.action_add_event("attack", ev)
 ```
 
-左マウスボタンも同じ操作に追加したい場合は：
+左マウスボタンも同じ操作に追加したい場合は。
 
 ```gdscript
 ev = InputEventMouseButton.new()

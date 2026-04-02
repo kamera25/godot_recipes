@@ -6,7 +6,7 @@ draft: false
 
 ## 課題
 
-Godot環境でリグ設定済みのアニメーション3Dキャラクターをインポートし、{{< gd-icon AnimationTree >}}`AnimationTree`を使ってそのアニメーションを設定したところです。次は移動機能を実装が必要です。キャラクタコントローラが必要です。
+Godot環境でリグ設定済みのアニメーション3Dキャラクターをインポートし、{{< gd-icon AnimationTree >}}`AnimationTree`を使ってそのアニメーションを設定したところです。次は移動機能を実装が必要です。キャラクターコントローラーが必要です。
 
 ## 解決策
 
@@ -14,10 +14,10 @@ Godot環境でリグ設定済みのアニメーション3Dキャラクターを�
 
 ### 衝突の追加
 
-インポートしたシーンのルートノードとして `CharacterBody3D` を選択しましたが、衝突形状が欠けているとエラーが出ています。まずはこれを修正します。以下の手順に従ってください。
+インポートしたシーンのルートノードとして {{< gd-icon CharacterBody3D >}}`CharacterBody3D` を選択しましたが、衝突形状が欠けているとエラーが出ています。まずはこれを修正します。以下の手順に従ってください。
 
-1. `CollisionShape3D` 子要素を追加します
-2. その **[プロパティ]** で「Capsule Shape」(カプセル型) を選択します
+1. {{< gd-icon CollisionShape3D >}}`CollisionShape3D` 子要素を追加します
+2. その **[プロパティ]** で {{< gd-icon CapsuleShape3D >}}`CapsuleShape3D` を選択します
 
 カプセルのサイズと位置を調整し、キャラクターの全身を覆うようにします。参考までに、私が使用した数値は以下の通りです。
 
@@ -141,13 +141,13 @@ func _unhandled_input(event):
         model.rotation.y = lerp_angle(model.rotation.y, spring_arm.rotation.y, rotation_speed * delta)
 ```
 
-Using `lerp_angle()` ensures we'll always rotate the shortest direction to the new angle (rather than going the long way around from a 359° rotation to a 1° rotation, for example).
+`lerp_angle()` を使用することで、常に最短方向に新しい角度に回転できるようになります（例えば、359度から1度に回す場合のように、遠回りせずに済みます）。
 
 ### アイダブルアールアニメーション作品
 
 移動と回転が実装できたところで、次はアニメーションの選択に進みます。基本的な考え方は、キャラクターの水平速度（*x/z軸方向の動き*）を取得し、それを使って作成した`IWR`ブレンドスペース内のブレンド位置を設定することです。
 
-In `get_move_input()`, we're setting the player's velocity. Just after that, we can set the blend position:
+`get_move_input()` では、プレイヤーの移動速度を設定しています。その直後にブレンド位置を指定できます。
 
 ```gdscript
     velocity = lerp(velocity, dir * speed, acceleration * delta)

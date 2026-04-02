@@ -22,7 +22,7 @@ Godotが自動的に画像を切り分けできるように、スプライトシ
 
 ### ノード設定
 
-このアニメーション手法では、`Sprite2D`ノードを使用してテクスチャを表示し、その後`AnimationPlayer`でフレームの切り替えをアニメーション化します。これはあらゆる2Dノードで使用できますが、ここではデモンストレーション用に`CharacterBody2D`ノードを使用しています。
+このアニメーション手法では、{{< gd-icon Sprite2D >}}`Sprite2D`ノードを使用してテクスチャを表示し、その後{{< gd-icon AnimationPlayer >}}`AnimationPlayer`でフレームの切り替えをアニメーション化します。これはあらゆる2Dノードで使用できますが、ここではデモンストレーション用に{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ノードを使用しています。
 
 以下のノードをシーンに追加してください。
 
@@ -33,7 +33,7 @@ Godotが自動的に画像を切り分けできるように、スプライトシ
   {{< gd-icon AnimationPlayer >}} AnimationPlayer
 ```
 
-{{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの _Texture_プロパティにスプライトシートテクスチャをドラッグ＆ドロップしてください。ビューポート内に完全なスプライトシートが表示されます。個別のフレームに分割するには、インスペクターの「Animation」セクションを展開し、 _Hframes_ を `13`、 _Vframes_ を `8`に設定します。_Hframes_ と _Vframes_ は、それぞれ水平方向および垂直方向のフレーム数を指定するパラメーターです。
+{{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの _Texture_ プロパティにスプライトシートテクスチャをドラッグ＆ドロップしてください。ビューポート内に完全なスプライトシートが表示されます。個別のフレームに分割するには、インスペクターの「Animation」セクションを展開し、 _Hframes_ を `13`、 _Vframes_ を `8`に設定します。_Hframes_ と _Vframes_ は、それぞれ水平方向および垂直方向のフレーム数を指定するパラメーターです。
 
 ![alt](/godot_recipes/4.x/img/sprite_animation_01.png)
 

@@ -6,7 +6,7 @@ pre: "01. "
 ---
 
 {{% notice style="tip" %}}
-この記事はGodot3からGodot4へ書き換え中です。
+This article is being updated from Godot 3 to Godot 4.
 {{% /notice %}}
 
 Where to start? Depending on the game, and how fleshed-out your idea is, the answer might be very different. In our case, I've cheated a little bit by making a prototype of the game already and working out a few of the ideas ahead of time. Still, it diverged a bit from my initial idea, and so might this series - time will tell.

@@ -6,7 +6,7 @@ ghcommentid: 16
 ---
 
 {{% notice style="tip" %}}
-この記事はGodot3からGodot4へ書き換え中です。
+This article is being updated from Godot 3 to Godot 4.
 {{% /notice %}}
 
 ## Problem

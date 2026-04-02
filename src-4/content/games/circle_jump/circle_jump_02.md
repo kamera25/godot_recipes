@@ -6,7 +6,7 @@ pre: "02. "
 ---
 
 {{% notice style="tip" %}}
-この記事はGodot3からGodot4へ書き換え中です。
+This article is being updated from Godot 3 to Godot 4.
 {{% /notice %}}
 
 In the previous part, we created the `Jumper` and `Circle` object that make up
