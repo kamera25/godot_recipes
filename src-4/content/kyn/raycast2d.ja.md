@@ -44,7 +44,7 @@ ghcommentid: 87
 
 *  `get_collision_point()`
 
-光線が衝突している場合、この関数は衝突位置をグローバル座標系で返します。
+レイが衝突している場合、この関数は衝突位置をグローバル座標系で返します。
 
 * `get_collider()`
 
@@ -66,7 +66,7 @@ ghcommentid: 87
 
 ![alt](/godot_recipes/4.x/img/kyn_raycast2d_02.png)
 
-プレイヤーが射撃した際、光線が何かに衝突しているかどうかを判定します。
+プレイヤーが射撃した際、レイが何かに衝突しているかどうかを判定します。
 
 ```gdscript
 func _input(event):

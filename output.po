@@ -2986,7 +2986,7 @@ msgstr ""
 
 #: 3D/shooting_raycasts.md
 msgid "There are two ways to approach raycasting in Godot: the {{< gd-icon RayCast3D >}}`RayCast3D` node, or directly casting a ray in space using the physics engine. While they can both accomplish the same thing, each has its uses. The node method tends to be best for situations where you continuously want to check for collisions - a downward-facing ray to check if you're on the floor, for example."
-msgstr "Godotにおけるレイキャスティングには、主に2つの方法があります。{{< gd-icon RayCast3D >}}`RayCast3D`ノードを使用する方法と、物理エンジンを直接操作して空間内に直線状の光線（レイ）を投射する方法です。どちらも同じ目的を達成できますが、それぞれに異なる利点があります。ノードベースのアプローチは、継続的な衝突検出が必要な場合に特に有効です - 例えば、床に触れているかどうかを確認するための下向きのレイを継続的にチェックする場合などに最適です。"
+msgstr "Godotにおけるレイキャスティングには、主に2つの方法があります。{{< gd-icon RayCast3D >}}`RayCast3D`ノードを使用する方法と、物理エンジンを直接操作して空間内に直線状の レイ を投射する方法です。どちらも同じ目的を達成できますが、それぞれに異なる利点があります。ノードベースのアプローチは、継続的な衝突検出が必要な場合に特に有効です - 例えば、床に触れているかどうかを確認するための下向きのレイを継続的にチェックする場合などに最適です。"
 
 #: 3D/shooting_raycasts.md
 msgid "Download the project code here: [https://github.com/godotrecipes/3d_shoot_raycasts](https://github.com/godotrecipes/3d_shoot_raycasts)"
@@ -3917,7 +3917,7 @@ msgstr "インスペクターからこれらを調整したい場合は、`@expo
 
 #: 3D/3d_sphere_car.md
 msgid "The next step is to get the inputs, but we'll also check if the ray is colliding with the ground first:"
-msgstr "次の手順は入力値を取得することですが、その前に光線が地面と衝突しているかどうかも確認します。"
+msgstr "次の手順は入力値を取得することですが、その前にレイが地面と衝突しているかどうかも確認します。"
 
 #: 3D/3d_sphere_car.md
 msgid "![alt](/godot_recipes/4.x/img/3d_sphere_car_05.gif)"
@@ -4557,7 +4557,7 @@ msgstr "このデモで使用するアクターは三角柱メッシュです。
 
 #: 3D/click_to_move.md
 msgid "Now we need a way to map mouse position into our 3D world. If you imagine the screen as a window into the 3D world, the mouse is trapped on the glass. To select something in 3D, we must project a ray from our eye (the camera), through the mouse's position and into the world."
-msgstr "現在、マウスの位置を3D空間にマッピングする手段が必要となります。スクリーンを3D世界の窓と見立てると、マウスは画面ガラス上に固定されています。3D空間で何かを選択するには、カメラ（視点）から出発し、マウスの位置を通って現実世界へと伸びる光線を投影しなければなりません。"
+msgstr "現在、マウスの位置を3D空間にマッピングする手段が必要となります。スクリーンを3D世界の窓と見立てると、マウスは画面ガラス上に固定されています。3D空間で何かを選択するには、カメラ（視点）から出発し、マウスの位置を通って現実世界へと伸びるレイを投影しなければなりません。"
 
 #: 3D/click_to_move.md
 msgid "We set the position of the marker and the Player's target to the clicked position:"
@@ -9535,7 +9535,7 @@ msgstr "また、「衝突対象」セクションにも注意してください
 
 #: kyn/raycast2d.md
 msgid "If the ray is colliding, this will return the position of the collision (in *global* coordinates)."
-msgstr "光線が衝突している場合、この関数は衝突位置をグローバル座標系で返します。"
+msgstr "レイが衝突している場合、この関数は衝突位置をグローバル座標系で返します。"
 
 #: kyn/raycast2d.md
 msgid "This property causes the ray to ignore collisions with the parent object. Enabled by default."
@@ -9551,7 +9551,7 @@ msgstr "衝突が発生している場合、この関数は衝突中のオブジ
 
 #: kyn/raycast2d.md
 msgid "When the player shoots, you check to see if the ray is colliding with something:"
-msgstr "プレイヤーが射撃した際、光線が何かに衝突しているかどうかを判定します。"
+msgstr "プレイヤーが射撃した際、レイが何かに衝突しているかどうかを判定します。"
 
 #: kyn/raycast2d.md
 msgid "* `get_collider()`"
@@ -10074,7 +10074,7 @@ msgstr "要約すると："
 
 #: ai/context_map.md
 msgid "For example, with 32 rays, the `interest` would look like this:"
-msgstr "例えば、使用する光線が32本の場合、`interest`は以下のようになります。"
+msgstr "例えば、使用するレイが32本の場合、`interest`は以下のようになります。"
 
 #: ai/context_map.md
 msgid "In our agent's script, we'll store an array called `interest`, tracking in which directions the agent wants to go."
@@ -10090,7 +10090,7 @@ msgstr "最も強い願望は前進することですが、左前方や右前方
 
 #: ai/context_map.md
 msgid "To begin, let's imagine our agent has a number of rays extending in all directions (we'll talk about how many to use later - for now let's use 8)."
-msgstr "まず、エージェントがすべての方向に放射線状に広がる複数の光線を持っていると仮定します（使用する本数については後で説明します。とりあえずここでは8本を使用してください）"
+msgstr "まず、エージェントがすべての方向に放射線状に広がる複数のレイを持っていると仮定します（使用する本数については後で説明します。とりあえずここでは8本を使用してください）"
 
 #: ai/context_map.md
 msgid "### The Algorithm"
@@ -10194,7 +10194,7 @@ msgstr "* 危険度レベル"
 
 #: ai/context_map.md
 msgid "Using each ray direction, we take the *dot product* with the given path direction. Recall that the dot product of two aligned vectors is `1` and for two perpendicular vectors it's `0`. We ignore negative values - 0 means we don't want to go that way."
-msgstr "各光線の方向に対して、与えられた経路方向との *内積* を計算します。二つの平行なベクトルの内積は 1、直交するベクトルの場合は 0 となることを思い出してください。負の値は無視します - 値が 0 の場合は、その方向へ進む必要がないことを意味します。"
+msgstr "各レイの方向に対して、与えられた経路方向との *内積* を計算します。二つの平行なベクトルの内積は 1、直交するベクトルの場合は 0 となることを思い出してください。負の値は無視します - 値が 0 の場合は、その方向へ進む必要がないことを意味します。"
 
 #: ai/context_map.md
 msgid "### Example in Practice"
@@ -10206,7 +10206,7 @@ msgstr "もちろん、全て同じ方向なら動けません。あらゆる方
 
 #: ai/context_map.md
 msgid "Note that we've made the `num_rays` adjustable, so that you can find the number that works best for your situation. We'll talk below about the tradeoffs and benefits of larger numbers of rays."
-msgstr "※注：「光線数」は調整可能な設定となっています。これにより、お客様の用途に最適な数値を見つけることができます。以下では、光線数が多い場合のメリット・デメリットについて詳しく解説します。"
+msgstr "※注：`num_rays(レイの数)`は調整可能な設定となっています。これにより、用途に最適な数値を見つけることができます。以下では、レイの数が多い場合のメリット・デメリットについて詳しく解説します。"
 
 #: ai/context_map.md
 msgid "As a safety measure, if there's no owner to tell us a direction, we'll default to trying to go forward."

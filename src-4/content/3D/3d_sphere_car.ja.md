@@ -129,7 +129,7 @@ func _physics_process(delta):
         apply_central_force(-car_mesh.global_transform.basis.z * speed_input)
 ```
 
-次の手順は入力値を取得することですが、その前に光線が地面と衝突しているかどうかも確認します。
+次の手順は入力値を取得することですが、その前にレイが地面と衝突しているかどうかも確認します。
 
 ```gdscript
 func _process(delta):
