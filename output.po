@@ -22,7 +22,7 @@ msgstr ""
 "{{% notice style=\"tip\" title=\"Godot 4.0\"%}}\n"
 "**Godot 4.0が正式リリースされました！**<br>\n"
 "Godot 4.0はエンジンの最新安定版バージョンです。<br>\n"
-"このサイトにはGodot 3向けの学習教材も充実しており、その多くは今でも十分に活用できます。右上のリボンをクリックするとGodot Recipesバージョンを切り替えられますし、以下のボタンからもアクセスできます。<br>\n"
+"このサイト(注 : 原文サイトには。この非公式日本語版にはGodot 3の日本語訳はありません。)にはGodot 3向けの学習教材も充実しており、その多くは今でも十分に活用できます。右上のリボンをクリックするとGodot Recipesバージョンを切り替えられますし、以下のボタンからもアクセスできます。<br>\n"
 "{{% button href=\"/godot_recipes/4.x/ja/\" style=\"primary\" icon=\"utensils\" %}}Godot 3レシピ集{{% /button %}}\n"
 "{{% /notice %}}"
 
@@ -40,11 +40,11 @@ msgstr "このサイトでは、Godotゲームエンジンの初心者向けガ�
 
 #: _index.md
 msgid "If you're an experienced developer and/or you're familiar with other modern game engine(s), feel free to explore the menu on the left. You'll find a number of useful guides and tutorials to show you how to do things the \"Godot Way\". Code samples and example projects are available for all articles."
-msgstr "経験豊富な開発者の方や、他のゲームエンジンに精通されている方は、左側のメニューから興味ある分野をご覧ください。「Godot流(Godot Way)」の手法で各種タスクを実行する方法を詳細に解説した、有用なガイドやチュートリアルが多数用意されています。すべての記事について、コードサンプルと実践的なプロジェクト例も提供しています。"
+msgstr "経験豊富な開発者の方や、他のゲームエンジンに精通している方は、左側のメニューから興味ある分野をご覧ください。「Godot流(Godot Way)」の手法で各種タスクを実行する方法を詳細に解説しています。有用なガイドやチュートリアルを多数用意しています。すべての記事について、サンプルコードと実践的なプロジェクト例も提供しています。"
 
 #: _index.md
 msgid "Are you ready to learn game development? Whether it's as a hobby or working towards your dream career, there's never been a better time to get started. Modern programming languages and tools have made it easier than ever to build high-quality games and distribute them to the world. One of these tools is the Godot game engine. For beginners, it offers a friendly way to learn gamedev techniques. For experienced developers, it's a powerful, customizable and _open_ tool for bringing your visions to life."
-msgstr "ゲーム開発を学ぶ準備はできていますか？趣味として、あるいは夢のキャリアへの第一歩として、今ほど良いタイミングはありません。現代のプログラミング言語とツールを駆使すれば、高品質なゲームを簡単に作成し、世界中に向けて配信できます。その中の一つがGodotゲームエンジンです。初心者でもゲーム開発技術を楽しく、親しみやすい方法で学ぶことができます。一方、経験豊富な開発者にとっては、自らのビジョンを形にするための強力でカスタマイズ可能、かつオープンソースの強力なツールです。"
+msgstr "ゲーム開発を学ぶ準備はできていますか？趣味として、あるいは夢のキャリアへの第一歩として、今ほど良いタイミングはありません。現代のプログラミング言語とツールを駆使すれば、高品質なゲームを簡単に作成できます。また世界中に向けて配信できます。その中の一つがGodotゲームエンジンです。初心者でもゲーム開発技術を楽しく、親しみやすい方法で学ぶことができます。一方、経験豊富な開発者にとっては、自らのビジョンを形にするための強力なツールです。カスタマイズも可能で、オープンソースとして利用できます。"
 
 #: _index.md
 msgid "If you're new to Godot, start here: [What is Godot?](/godot_recipes/4.x/g101/start/101_01/)."
@@ -78,7 +78,7 @@ msgstr ""
 
 #: _index.md
 msgid "If you're new to game development, start with the [\"Godot 101: Basics\"](/godot_recipes/4.x/basics/) section. There you'll find an introduction to the Godot application, and a step-by-step guide to creating your first project. There is a lot of material to absorb here. Don't feel discouraged if you feel you don't get it at first. Repetition is the key to learning complex topics; the more you work with Godot's features, the more familiar and _easy_ they will start to feel."
-msgstr "ゲーム開発が初めての場合は、まず [はじめてのGodot(基礎編)](/godot_recipes/4.x/ja/basics/) のセクションから始めてください。ここではGodotアプリケーションの概要と、初めてのプロジェクトを段階的に作成していきます。学ぶべきことは多岐にわたりますが、最初はすべてを理解する必要はありません。複雑な概念なので、反復学習が不可欠です。Godotの各種機能を実際に操作すればするほど、その使い方に慣れ、次第に「簡単」だと感じられるようになります。"
+msgstr "ゲーム開発が初めての場合は、まず [はじめてのGodot(基礎編)](/godot_recipes/4.x/ja/basics/) のセクションから始めてください。ここではGodotアプリケーションの概要を学びます。次に、プロジェクトを段階的に作成していきます。学ぶべきことは多岐にわたりますが、最初はすべてを理解する必要はありません。複雑な概念なので、反復学習が不可欠です。Godotの各種機能を実際に操作すればするほど、その使い方に慣れ、次第に「簡単」だと感じられるようになります。"
 
 #: _index.md
 msgid "# <i class='fas fa-utensils'></i>&nbsp;Godot Recipes"
@@ -7846,7 +7846,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_04_02.png)"
 
 #: g101/3d/101_3d_04.md
 msgid "In the next part: a collection of small improvements."
-msgstr "次のパートでは：小さな改良点をまとめた内容をお届けします。"
+msgstr "次のパートでは、小さな改良点をまとめた内容をお届けします。"
 
 #: g101/3d/101_3d_04.md
 msgid "Add a few coins to your scene and see if you can pick them up:"
@@ -14420,7 +14420,7 @@ msgstr "2D"
 
 #: 2D/line_collision.md
 msgid "{{< gd-icon SegmentShape2D >}}`SegmentShape2D` does not have any width component, so if you need your line collision to have a thickness, you can use a rectangle collision instead."
-msgstr ": SegmentShape2D`セグメント形状2Dは幅成分を持たないため、線の衝突判定に厚みが必要な場合には、代わりに矩形の衝突判定を使用することをオススメします。"
+msgstr "{{< gd-icon SegmentShape2D >}}`SegmentShape2D` は幅成分を持たないため、線の衝突判定に厚みが必要な場合には、代わりに矩形の衝突判定を使用することをオススメします。"
 
 #: 2D/line_collision.md
 msgid "Line2D Collision"
