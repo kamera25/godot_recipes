@@ -10,7 +10,7 @@ Godot環境でリグ設定済みのアニメーション3Dキャラクターを�
 
 ## 解決策
 
-このレシピでは、既にキャラクターモデルとアニメーションをインポートしており、アニメーションの遷移やブレンド処理用に {{< gd-icon AnimationTree >}}`AnimationTree` が適切に設定されていることを前提に進めます。まだ準備ができていない場合は、[アセットのインポート方法](/4.x/3d/assets/importing_assets/) および [キャラクターアニメーションについて](/4.ex/3d/assets/character_animation/) を参照してください。参考までに、ここでは [セクション説明](/godot_recipes/4.x/ja/3d/assets/) でリンクされているアートパックを使用しています。
+このレシピでは、既にキャラクターモデルとアニメーションをインポートしており、アニメーションの遷移やブレンド処理用に {{< gd-icon AnimationTree >}}`AnimationTree` が適切に設定されていることを前提に進めます。まだ準備ができていない場合は、[アセットのインポート方法](/godot_recipes/4.x/ja/3d/assets/importing_assets/) および [キャラクターアニメーションについて](/4.ex/3d/assets/character_animation/) を参照してください。参考までに、ここでは [セクション説明](/godot_recipes/4.x/ja/3d/assets/) でリンクされているアートパックを使用しています。
 
 ### 衝突の追加
 
@@ -76,7 +76,7 @@ var jumping = false
 
 ![alt](/godot_recipes/4.x/img/3dchar_animtree_properties.png)
 
-`anim_state` はアニメーション状態マシンへの参照で、これを使用して異なるアニメーション間の遷移を呼び出すことができます。設定方法については、[キャラクターアニメーション](/4.x/3d/assets/character_animation/) レシピを参照してください。
+`anim_state` はアニメーション状態マシンへの参照で、これを使用して異なるアニメーション間の遷移を呼び出すことができます。設定方法については、[キャラクターアニメーション](/godot_recipes/4.x/ja/3d/assets/character_animation/) レシピを参照してください。
 
 移動処理は、プレイヤーの入力を取得して`move_and_slide()`関数を呼び出すことで実現されます。
 

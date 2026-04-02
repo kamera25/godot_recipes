@@ -2312,7 +2312,7 @@ msgstr "#### この動画が気に入ったら？"
 
 #: ui/labels.md
 msgid "See the \"related recipes\" section for more examples of using labels and working with UI nodes."
-msgstr "ラベルの使用例やUIノードとの連携方法については、「関連レシピ」セクションをご覧ください。"
+msgstr "ラベルの使用例やUIノードとの連携方法については、[関連レシピ](#関連レシピ)セクションをご覧ください。"
 
 #: ui/labels.md
 msgid "### Adding a Label"
@@ -3162,7 +3162,7 @@ msgstr "ロールとヨーの速度を調整することで、ゲームプレイ
 msgid ""
 "<!-- - [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/) -->\n"
 "- [Interpolated Camera](/godot_recipes/4.x/3d/interpolated_camera/)"
-msgstr "[補間カメラの実装](/godot_recipes/4.x/3d/interpolated_camera/)"
+msgstr "[補間カメラの実装](/godot_recipes/4.x/ja/3d/interpolated_camera/)"
 
 #: 3D/spaceship.md
 msgid "To accomplish this, we'll use a {{< gd-icon CharacterBody3D >}} `CharacterBody3D` for the ship. The three axis inputs (*pitch*, *roll*, and *yaw*) will rotate the body's `basis` around the corresponding axis. The direction of motion will always point forward."
@@ -3196,7 +3196,7 @@ msgstr "インポートする船舶の `gltf` ファイルを選択し、［イ�
 
 #: 3D/spaceship.md
 msgid "Make a test scene with a {{< gd-icon Camera3D >}} `Camera3D` to try it out. You can use a stationary camera or a [chase camera](/godot_recipes/4.x/3d/interpolated_camera/). Check that the ship accelerates and slows before moving on to the next step."
-msgstr "テスト用シーンを作成し、`Camera3D` コンポーネントを試してみます。固定カメラを使用するか、［フォローカメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/) を採用することもできます。宇宙船が加速と減速を適切に行うことを確認した上で、次のステップに進んでください。"
+msgstr "テスト用シーンを作成し、`Camera3D` コンポーネントを試してみます。固定カメラを使用するか、［追従カメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/) を採用することもできます。宇宙船が加速と減速を適切に行うことを確認した上で、次のステップに進んでください。"
 
 #: 3D/spaceship.md
 msgid "![alt](/godot_recipes/4.x/img/3d_ship_03.gif)"
@@ -4278,7 +4278,7 @@ msgstr "`move_and_slide()`メソッドを使用することで、移動コード
 
 #: 3D/characterbody3d_examples.md
 msgid "Here's the tank in action. We've made a test scene with a {{< gd-icon StaticBody3D >}}`StaticBody3D` plane for the ground and an {{< gd-icon Camera3D >}}`Camera3D` using the [Interpolated Camera](/godot_recipes/4.x/3d/interpolated_camera/index.html) recipe."
-msgstr "「これが動作中の戦車です。テスト用シーンとして、地面には {{< gd-icon StaticBody3D >}} 球体、カメラには [補間付きカメラ](/godot_recipes/4.x/3d/interpolated_camera/index.html) レシピを使用した `Camera3D` を配置しています。"
+msgstr "「これが動作中の戦車です。テスト用シーンとして、地面には {{< gd-icon StaticBody3D >}} 球体、カメラには [補間付きカメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/index.html) レシピを使用した `Camera3D` を配置しています。"
 
 #: 3D/characterbody3d_examples.md
 msgid "CharacterBody3D: Movement"
@@ -4629,7 +4629,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice style=\"note\" title=\"\" %}}\n"
-"{{< gd-icon AnimationTree >}} 「AnimationTree」がアクティブになっていると、 {{< gd-icon AnimationPlayer >}} 「AnimationPlayer」でアニメーションを選択できなくなることにご注意ください。変更を加えたりアニメーションをテストする必要がある場合は、作業する際にツリーの **有効** プロパティを必ずオフにしてください。\n"
+"{{< gd-icon AnimationTree >}}.  `AnimationTreeが有効になっていると、 {{< gd-icon AnimationPlayer >}} `AnimationTree` でアニメーションを選択できなくなることにご注意ください。変更を加えたりアニメーションをテストする必要がある場合は、作業する際にツリーの **有効** プロパティを必ずオフにしてください。\n"
 "{{% /notice %}}"
 
 #: 3D/assets/character_animation.md
@@ -4690,11 +4690,11 @@ msgstr "![alt](/godot_recipes/4.x/img/animtree_settings.png)"
 
 #: 3D/assets/character_animation.md
 msgid "Add an {{< gd-icon AnimationTree >}}`AnimationTree` to the scene. In the **Inspector**, set **Tree Root** to a new `AnimationNodeStateMachine`, in **Anim Player** select the character's {{< gd-icon AnimationPlayer >}}`AnimationPlayer` node, and check the box next to **Active**."
-msgstr "シーンに `AnimationTree` コンポーネントを追加します。［インスペクター］で［ツリールート］を新規作成された `AnimationNodeStateMachine` に設定し、［Animプレイヤー］ではキャラクターのアニメーションノードを選択します（{{< gd-icon AnimationPlayer >}}`AnimationPlayer`）。最後に［有効化］チェックボックスをオンにしてください。"
+msgstr "シーンに `AnimationTree` コンポーネントを追加します。［インスペクター］で［ツリールート］を新規作成された `AnimationNodeStateMachine` に設定し、［Anim Player］ではキャラクターの {{< gd-icon AnimationPlayer >}}`AnimationPlayer` を選択します。最後に［有効化］チェックボックスをオンにしてください。"
 
 #: 3D/assets/character_animation.md
 msgid "In the {{< gd-icon AnimationPlayer >}}`AnimationPlayer`, find the \"Idle\", \"Running_A\", \"Walking_Backwards\", and \"Running_Strafe_Left\"/\"Running_Strafe_Right\" animations. Make sure they're all set to loop - you can test them by pressing the \"Play\" button: (▶). If any of them are not, reimport the character after setting them (see [Importing Assets](/4.x/3d/assets/importing_assets/))."
-msgstr "{{< gd-icon AnimationPlayer >}}`AnimationPlayer`コンポーネントで、\"Idle\"（待機）、\"Running_A\"（前進ランニング）、\"Walking_Backwards\"（後方歩行）、および\"Running_Strafe_Left\"/\"Running_Strafe_Right\"（横移動左右ランニング）のアニメーションを設定してください。すべてループ再生に設定することを確認してください。「Play」ボタンを押してテストできます。(▶)。いずれかがループになっていない場合は、設定した後でキャラクターを再インポートしてください（[アセットのインポート方法](/4.x/3d/assets/importing_assets/)参照）。"
+msgstr "{{< gd-icon AnimationPlayer >}}`AnimationPlayer`コンポーネントで、\"Idle\"（待機）、\"Running_A\"（前進ランニング）、\"Walking_Backwards\"（後方歩行）、および\"Running_Strafe_Left\"/\"Running_Strafe_Right\"（横移動左右ランニング）のアニメーションを設定してください。すべてループ再生に設定することを確認してください。「Play」ボタンを押してテストできます。(▶)。いずれかがループになっていない場合は、設定した後でキャラクターを再インポートしてください（[アセットのインポート方法](/godot_recipes/4.x/ja/3d/assets/importing_assets/)参照）。"
 
 #: 3D/assets/character_animation.md
 msgid "The solution to these complex animation issues is to use the {{< gd-icon AnimationTree >}}`AnimationTree` node. This node is designed to control an {{< gd-icon AnimationPlayer >}}`AnimationPlayer` and has functionality to control how animations transition and blend together."
@@ -4726,7 +4726,7 @@ msgstr "例として、空きスペースを右クリックし、「アニメー
 
 #: 3D/assets/character_animation.md
 msgid "In this recipe, we'll assume you've already imported your character model and animations. If you haven't yet, see [Importing Assets](/4.x/3d/assets/importing_assets/) for details. As a reminder, we're using the art packs linked in the [section description](/godot_recipes/4.x/3d/assets/)."
-msgstr "このレシピでは、既にキャラクターモデルとアニメーションをインポート済みであることを前提としています。まだの方は、[アセットのインポート方法](/4.x/3d/assets/importing_assets/)を参照してください。参考までに、[セクション説明欄](/godot_recipes/4.x/ja/3d/assets/)でリンクされているアートパックを使用しています。"
+msgstr "このレシピでは、既にキャラクターモデルとアニメーションをインポート済みであることを前提としています。まだの方は、[アセットのインポート方法](/godot_recipes/4.x/ja/3d/assets/importing_assets/)を参照してください。参考までに、[セクション説明欄](/godot_recipes/4.x/ja/3d/assets/)でリンクされているアートパックを使用しています。"
 
 #: 3D/assets/character_animation.md
 msgid "With all of the animations we have available, it's going to quickly get very complicated to handle all of them in code. Think about how many `if` statement's we'd need to decide which animation to play at which time, depending on what the player is doing. While this is not bad if you only have a few animations, it quickly gets out of hand and becomes impractical."
@@ -4959,7 +4959,7 @@ msgstr "### アニメーション機能"
 
 #: 3D/assets/importing_assets.md
 msgid "In this scene you'll see all the models and the {{< gd-icon AnimationPlayer >}}`AnimationPlayer` where you can test out the animations."
-msgstr "このシーンではすべてのモデルと［アニメーションプレイヤー］{{< gd-icon AnimationPlayer >}} `AnimationPlayer` が表示され、ここではアニメーションを実際にテストできます。"
+msgstr "このシーンではすべてのモデルと{{< gd-icon AnimationPlayer >}} `AnimationPlayer` が表示され、ここではアニメーションを実際にテストできます。"
 
 #: 3D/assets/importing_assets.md
 msgid "![alt](/godot_recipes/4.x/img/3d_import_tab.png)"
@@ -5021,7 +5021,7 @@ msgstr "春季アームのプロパティで、**スプリング長**を `5`、*
 
 #: 3D/assets/character_controller.md
 msgid "`anim_state` is a reference to the animation state machine, which we can use to call transitions between animations. See the [Character Animation](/4.x/3d/assets/character_animation/) recipe for how we set these up."
-msgstr "`anim_state` はアニメーション状態マシンへの参照で、これを使用して異なるアニメーション間の遷移を呼び出すことができます。設定方法については、[キャラクターアニメーション](/4.x/3d/assets/character_animation/) レシピを参照してください。"
+msgstr "`anim_state` はアニメーション状態マシンへの参照で、これを使用して異なるアニメーション間の遷移を呼び出すことができます。設定方法については、[キャラクターアニメーション](/godot_recipes/4.x/ja/3d/assets/character_animation/) レシピを参照してください。"
 
 #: 3D/assets/character_controller.md
 msgid "### Attacks"
@@ -5081,7 +5081,7 @@ msgstr "カプセルのサイズと位置を調整し、キャラクターの全
 
 #: 3D/assets/character_controller.md
 msgid "In this recipe, we'll assume you've already imported your character model and animations, and that you're set up {{< gd-icon AnimationTree >}}`AnimationTree` to handle transitioning and blending the animations. If you haven't yet, see [Importing Assets](/4.x/3d/assets/importing_assets/) and [Character Animation](/4.x/3d/assets/character_animation/) for details. As a reminder, we're using the art packs linked in the [section description](/godot_recipes/4.x/3d/assets/)."
-msgstr "このレシピでは、既にキャラクターモデルとアニメーションをインポートしており、アニメーションの遷移やブレンド処理用に {{< gd-icon AnimationTree >}}`AnimationTree` が適切に設定されていることを前提に進めます。まだ準備ができていない場合は、[アセットのインポート方法](/4.x/3d/assets/importing_assets/) および [キャラクターアニメーションについて](/4.ex/3d/assets/character_animation/) を参照してください。参考までに、ここでは [セクション説明](/godot_recipes/4.x/ja/3d/assets/) でリンクされているアートパックを使用しています。"
+msgstr "このレシピでは、既にキャラクターモデルとアニメーションをインポートしており、アニメーションの遷移やブレンド処理用に {{< gd-icon AnimationTree >}}`AnimationTree` が適切に設定されていることを前提に進めます。まだ準備ができていない場合は、[アセットのインポート方法](/godot_recipes/4.x/ja/3d/assets/importing_assets/) および [キャラクターアニメーションについて](/4.ex/3d/assets/character_animation/) を参照してください。参考までに、ここでは [セクション説明](/godot_recipes/4.x/ja/3d/assets/) でリンクされているアートパックを使用しています。"
 
 #: 3D/assets/character_controller.md
 msgid "And then, some references to the nodes we'll need to access:"
@@ -5700,7 +5700,7 @@ msgstr "`drifting` はドリフト状態を追跡するためのブール変数�
 
 #: 3D/kinematic_car/car_traction.md
 msgid "You've got a [kinematic car](/godot_recipes/3.x/3d/kinematic_car/car_base/), but you don't like the \"on rails\" feeling, especially at high speeds. You'd like to have some \"slip\" so that you can have drifting and loss of traction."
-msgstr "[キネマティックカー](/godot_recipes/4.x/3d/kinematic_car/car_base/)で高速走行時に「レール上を走っている」ような感覚が気にいりません。ドリフトやトラクション損失を可能にするため、ある程度の「スリップ」特性が欲しいです。"
+msgstr "[キネマティックカー](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)で高速走行時に「レール上を走っている」ような感覚が気にいりません。ドリフトやトラクション損失を可能にするため、ある程度の「スリップ」特性が欲しいです。"
 
 #: 3D/kinematic_car/car_traction.md
 msgid "Next, add this code to the `calculate_steering()` function in `car_base.gd`, right after calculating the `new_heading`:"
@@ -9949,7 +9949,7 @@ msgstr "最後に、計算されたステアリング力は`_physics_process()`�
 
 #: ai/homing_missile.md
 msgid "Here's the full script, including the above effects. See [related recipes](#related-recipes) for details."
-msgstr "以下に完全なスクリプトを示します。上記のエフェクトも含まれています。詳細は[関連レシピ](#related-recipes)をご覧ください。"
+msgstr "以下に完全なスクリプトを示します。上記のエフェクトも含まれています。詳細は[関連レシピ](#関連レシピ)をご覧ください。"
 
 #: ai/homing_missile.md
 msgid "Add a script and connect the {{< gd-icon Area2d >}}`Area2D`'s `body_entered` signal and the {{< gd-icon Timer >}}`Timer`'s `timeout` signal."
@@ -9967,7 +9967,7 @@ msgstr "ターゲット捜索動作を変更するため、`acceleration`（加�
 
 #: ai/homing_missile.md
 msgid "See the [related recipes](#related-recipes) section below for more information."
-msgstr "詳細については以下の［関連するレシピ］セクション（#関連レシピ）をご覧ください。"
+msgstr "詳細については以下の [関連レシピ](#関連レシピ) セクションをご覧ください。"
 
 #: ai/homing_missile.md
 msgid "To change the missile's direction to move toward the target, it needs to accelerate in that direction (acceleration is change in velocity). The missile \"wants\" to move straight towards the target, but its current velocity is pointing in a different direction. Using a little vector math, we can find that difference:"
@@ -10974,7 +10974,7 @@ msgstr "## 位置問題"
 msgid ""
 "> **NOTE:** For the textures in this example, I'm using the [Physics Asset](http://kenney.nl/assets/physics-assets) pack from Kenney.nl. It contains a\n"
 "wide variety of blocks in different shapes and materials."
-msgstr "> ※重要：本サンプルで使用しているテクスチャは、Kenney.nl の［物理アセットパック］（[Physics Asset](http://kenney.nl/assets/physics-assets)）を使用しています。このパッケージには、さまざまな形状・材質のブロックが多数収録されています。"
+msgstr "> ※重要：本サンプルで使用しているテクスチャは、Kenney.nl の[物理アセットパック](http://kenney.nl/assets/physics-assets)を使用しています。このパッケージには、さまざまな形状・材質のブロックが多数収録されています。"
 
 #: physics/Godot3_KYN_rigidbody1.md physics/Godot3_kinematic2d.md
 msgid ""
@@ -12614,7 +12614,10 @@ msgid ""
 "<!-- - [Top-down character](/godot_recipes/3.x/2d/topdown_movement/) -->\n"
 "- [Gamedev Math: transforms](/godot_recipes/4.x/math/transforms/)\n"
 "<!-- - [AI: Homing missiles](/godot_recipes/3.x/ai/homing_missile/) -->"
-msgstr "- [ゲーム数学：トランスフォーム操作](/godot_recipes/4.x/math/transforms/)"
+msgstr ""
+"<!-- - [Top-down character](/godot_recipes/3.x/2d/topdown_movement/) -->\n"
+"- [ゲーム数学：トランスフォーム操作](/godot_recipes/4.x/math/transforms/)\n"
+"<!-- - [AI: Homing missiles](/godot_recipes/3.x/ai/homing_missile/) -->"
 
 #: 2D/2d_shooting.md
 msgid "Download the project code here: [https://github.com/godotrecipes/2d_shooting](https://github.com/godotrecipes/2d_shooting)"
@@ -18127,7 +18130,7 @@ msgstr "![alt](/godot_recipes/3.x/img/2d_noise_example.png)"
 
 #: 2D/screen_shake.md
 msgid "As you can see, while \"noisy\", if you pick a particular pixel, adjacent pixels may vary unpredictably, but won't suddenly swing wildly from one extreme to another. The behavior can be adjusted to suit your needs, but we won't go into the details of configuring FastNoiseLite here. See the [related recipes](#related-recipes) section below for links to more information."
-msgstr "ご覧のとおり、「ノイジー」な性質ではありますが、特定のピクセルを選択すると、その周辺ピクセルは予測不能に変動するものの、急激に極端な値から別の極端値へと飛び移るようなことはありません。動作特性は用途に応じて調整可能ですが、ここではFastNoiseLiteの詳細な設定方法については割愛します。より詳しい情報については、以下の[関連レシピ](#related-recipes)セクションをご覧ください。"
+msgstr "ご覧のとおり、「ノイジー」な性質ではありますが、特定のピクセルを選択すると、その周辺ピクセルは予測不能に変動するものの、急激に極端な値から別の極端値へと飛び移るようなことはありません。動作特性は用途に応じて調整可能ですが、ここではFastNoiseLiteの詳細な設定方法については割愛します。より詳しい情報については、以下の[関連レシピ](#関連レシピ)セクションをご覧ください。"
 
 #: 2D/screen_shake.md
 msgid "![alt](/godot_recipes/3.x/img/shake_noise01.gif)"

@@ -66,7 +66,7 @@ func _on_Timer_timeout():
     $Label.text = str(counter)
 ```
 
-ラベルの使用例やUIノードとの連携方法については、「関連レシピ」セクションをご覧ください。
+ラベルの使用例やUIノードとの連携方法については、[関連レシピ](#関連レシピ)セクションをご覧ください。
 
 <!-- {{% notice note %}}
 プロジェクトファイルをこちらからダウンロードしてください: [screen_shake.zip](/godot_recipes/4.x/ja/files/screen_shake.zip)

@@ -10,7 +10,7 @@ draft: false
 
 ## 解決策
 
-このレシピでは、既にキャラクターモデルとアニメーションをインポート済みであることを前提としています。まだの方は、[アセットのインポート方法](/4.x/3d/assets/importing_assets/)を参照してください。参考までに、[セクション説明欄](/godot_recipes/4.x/ja/3d/assets/)でリンクされているアートパックを使用しています。
+このレシピでは、既にキャラクターモデルとアニメーションをインポート済みであることを前提としています。まだの方は、[アセットのインポート方法](/godot_recipes/4.x/ja/3d/assets/importing_assets/)を参照してください。参考までに、[セクション説明欄](/godot_recipes/4.x/ja/3d/assets/)でリンクされているアートパックを使用しています。
 
 ### キャラクターの準備
 
@@ -30,19 +30,19 @@ draft: false
 
 これらの複雑なアニメーション問題を解決するには、`AnimationTree`ノードを使用が必要です。このノードは{{< gd-icon AnimationPlayer >}}`AnimationPlayer`を制御するために設計されており、アニメーションの遷移やブレンド方法を管理する機能を備えています。
 
-シーンに `AnimationTree` コンポーネントを追加します。［インスペクター］で［ツリールート］を新規作成された `AnimationNodeStateMachine` に設定し、［Animプレイヤー］ではキャラクターのアニメーションノードを選択します（{{< gd-icon AnimationPlayer >}}`AnimationPlayer`）。最後に［有効化］チェックボックスをオンにしてください。
+シーンに `AnimationTree` コンポーネントを追加します。［インスペクター］で［ツリールート］を新規作成された `AnimationNodeStateMachine` に設定し、［Anim Player］ではキャラクターの {{< gd-icon AnimationPlayer >}}`AnimationPlayer` を選択します。最後に［有効化］チェックボックスをオンにしてください。
 
 ![alt](/godot_recipes/4.x/img/animtree_settings.png)
 
 {{% notice style="note" title="" %}}
-{{< gd-icon AnimationTree >}} 「AnimationTree」がアクティブになっていると、 {{< gd-icon AnimationPlayer >}} 「AnimationPlayer」でアニメーションを選択できなくなることにご注意ください。変更を加えたりアニメーションをテストする必要がある場合は、作業する際にツリーの **有効** プロパティを必ずオフにしてください。
+{{< gd-icon AnimationTree >}}.  `AnimationTreeが有効になっていると、 {{< gd-icon AnimationPlayer >}} `AnimationTree` でアニメーションを選択できなくなることにご注意ください。変更を加えたりアニメーションをテストする必要がある場合は、作業する際にツリーの **有効** プロパティを必ずオフにしてください。
 {{% /notice %}}
 
 ### 待機/歩行/走行サイクルについて
 
 このモデルには数多くのアニメーションが同封されています。ここでは特に待機→歩行/走行の遷移、ジャンプ、攻撃モーションに焦点を当てます。他のアニメーションも必要に応じて同様の方法で扱えます。
 
-{{< gd-icon AnimationPlayer >}}`AnimationPlayer`コンポーネントで、"Idle"（待機）、"Running_A"（前進ランニング）、"Walking_Backwards"（後方歩行）、および"Running_Strafe_Left"/"Running_Strafe_Right"（横移動左右ランニング）のアニメーションを設定してください。すべてループ再生に設定することを確認してください。「Play」ボタンを押してテストできます。(▶)。いずれかがループになっていない場合は、設定した後でキャラクターを再インポートしてください（[アセットのインポート方法](/4.x/3d/assets/importing_assets/)参照）。
+{{< gd-icon AnimationPlayer >}}`AnimationPlayer`コンポーネントで、"Idle"（待機）、"Running_A"（前進ランニング）、"Walking_Backwards"（後方歩行）、および"Running_Strafe_Left"/"Running_Strafe_Right"（横移動左右ランニング）のアニメーションを設定してください。すべてループ再生に設定することを確認してください。「Play」ボタンを押してテストできます。(▶)。いずれかがループになっていない場合は、設定した後でキャラクターを再インポートしてください（[アセットのインポート方法](/godot_recipes/4.x/ja/3d/assets/importing_assets/)参照）。
 
 「AnimationTree」ノードを選択すると、ウィンドウ下部にパネルが開きます。
 

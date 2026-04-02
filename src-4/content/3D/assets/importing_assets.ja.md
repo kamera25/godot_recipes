@@ -48,7 +48,7 @@ draft: false
 
 ファイルシステム内の「knight.glb」を右クリックし、［新規継承シーン］を選択してください。
 
-このシーンではすべてのモデルと［アニメーションプレイヤー］{{< gd-icon AnimationPlayer >}} `AnimationPlayer` が表示され、ここではアニメーションを実際にテストできます。
+このシーンではすべてのモデルと{{< gd-icon AnimationPlayer >}} `AnimationPlayer` が表示され、ここではアニメーションを実際にテストできます。
 
 ## ワールドアイテムのインポート
 
