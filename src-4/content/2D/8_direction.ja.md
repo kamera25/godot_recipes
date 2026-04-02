@@ -70,6 +70,6 @@ func _process(delta):
 ```
 
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/8_direction_animation](https://github.com/godotrecipes/8_direction_animation)

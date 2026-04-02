@@ -182,6 +182,6 @@ astar_grid.default_estimate_heuristic = AStarGrid2D.HEURISTIC_OCTILE
 
 以下のサンプルプロジェクトをダウンロードして、この設定を実際に試してみます。壁を配置するだけでなく、右クリック／中クリックでエンドポイントとスタート地点を移動させることができます。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/grid_pathfinding](https://github.com/godotrecipes/grid_pathfinding)

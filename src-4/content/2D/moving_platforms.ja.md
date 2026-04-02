@@ -61,7 +61,7 @@ func start_tween():
 
 <video controls src="/godot_recipes/4.x/img/moving_platform4.webm" autoplay="true"></video>
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードはこちらからダウンロードできます。 [https://github.com/godotrecipes/2d_moving_platforms](https://github.com/godotrecipes/2d_moving_platforms)
 

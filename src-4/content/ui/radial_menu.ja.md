@@ -110,7 +110,7 @@ func hide_menu():
 
 ![alt](/godot_recipes/4.x/img/ui_radial_menu_02.gif)
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトのサンプルコードはこちらでダウンロードできます。[https://github.com/godotrecipes/ui_radial_menu](https://github.com/godotrecipes/ui_radial_menu)
 

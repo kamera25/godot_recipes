@@ -137,7 +137,7 @@ func move(dir):
 
 異なるトランジション効果を試してみます。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードはこちらよりダウンロードできます。[https://github.com/godotrecipes/2d_grid_movement/](https://github.com/godotrecipes/2d_grid_movement/)
 

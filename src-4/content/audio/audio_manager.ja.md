@@ -84,6 +84,6 @@ AudioManager.play("res://path/to/sound")
 
 {{< youtube 7axJJYont6Y >}} -->
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/audio_manager](https://github.com/godotrecipes/audio_manager)

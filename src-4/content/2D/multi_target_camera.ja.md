@@ -156,6 +156,6 @@ func remove_target(t):
         targets.remove(t)
 ```
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/multitarget_camera](https://github.com/godotrecipes/multitarget_camera)

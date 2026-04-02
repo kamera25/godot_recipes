@@ -111,7 +111,7 @@ func update_partial(value):
 
 このハートバーの設定を、独自のHUD作成の基礎として活用してください。この手法をさらに拡張すれば、多種多様な情報を表示できます。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトのサンプルコードはこちらでダウンロードできます。 [https://github.com/godotrecipes/heart_bars](https://github.com/godotrecipes/heart_bars)
 

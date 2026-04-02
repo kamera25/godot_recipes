@@ -36,6 +36,6 @@ Godotにはレンダリング順序を変更する組み込みオプションが
 
 ![alt](/godot_recipes/4.x/img/ysort_02.gif)
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトのサンプルコード: [https://github.com/godotrecipes/using_ysort](https://github.com/godotrecipes/using_ysort)

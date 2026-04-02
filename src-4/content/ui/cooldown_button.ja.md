@@ -103,7 +103,7 @@ func _on_Timer_timeout():
 
 ![alt](/godot_recipes/4.x/img/cooldown_03.gif)
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。 [https://github.com/godotrecipes/ui_cooldown_button](https://github.com/godotrecipes/ui_cooldown_button)
 

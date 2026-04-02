@@ -58,6 +58,6 @@ func _physics_process(delta):
 
 ワールドによっては、ペットが障害物に引っかかってしまう場合があります。より堅牢な追従機能が必要な場合は、ナビゲーションシステムをご利用ください。具体的な実装例については[タイルマップナビゲーション](/godot_recipes/4.x/ja/ai/tilemap_navigation/)を参照してください。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/ai_behavior_demos](https://github.com/godotrecipes/ai_behavior_demos)

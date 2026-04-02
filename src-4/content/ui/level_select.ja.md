@@ -186,7 +186,7 @@ func _on_NextButton_pressed():
 
 ダウンロード可能なサンプルプロジェクトでは、スクロールアニメーション用のTween機能を含む完全な実装例を確認できます（Tweenを使えば、あらゆる動作がより洗練されたものになります）。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/ui_level_select](https://github.com/godotrecipes/ui_level_select)
 

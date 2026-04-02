@@ -74,7 +74,7 @@ func _on_coyote_timer_timeout():
 この手順は3Dキャラクターにも同様の方法で適用できます。
 {{% /notice %}}
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 [動くプラットフォーム](/godot_recipes/4.x/ja/2d/moving_platforms) プロジェクト内のキャラクターにはコヨーテタイムが実装されています。
 

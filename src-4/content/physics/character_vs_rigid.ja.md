@@ -74,7 +74,7 @@ func _physics_process(delta):
 
 実験を通じて、特定のゲームに最適な設定を見つけます。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/character_vs_rigid](https://github.org/godotrecipes/character_vs_rigid)
 

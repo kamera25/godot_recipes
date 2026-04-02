@@ -99,6 +99,6 @@ FPSキャラクターには通常、前面に位置した武器の3Dメッシュ
 - [入力：マウスキャプチャーの使用方法](/godot_recipes/4.x/ja/input/mouse_capture/)
 
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードはこちらからダウンロードしてください。[https://github.com/godotrecipes/basic_fps](https://github.com/godotrecipes/basic_fps)

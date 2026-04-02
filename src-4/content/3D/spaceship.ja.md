@@ -210,6 +210,6 @@ func _physics_process(delta):
 
 {{< youtube 8oywBn_bLeU >}} -->
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードはこちらでダウンロードできます。[https://github.com/godotrecipes/3d_spaceship](https://github.com/godotrecipes/3d_spaceship)

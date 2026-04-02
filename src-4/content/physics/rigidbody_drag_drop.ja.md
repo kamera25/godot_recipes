@@ -101,7 +101,7 @@ func _unhandled_input(event):
 
 <video controls src="/godot_recipes/4.x/img/rbody_drag.webm"></video>
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードはこちらからダウンロードできます。 [https://github.com/godotrecipes/rigidbody_drag_drop](https://github.com/godotrecipes/rigidbody_drag_drop)
 

@@ -236,7 +236,7 @@ body_mesh.rotation.z = lerp(body_mesh.rotation.z, t, 10 * delta)
 > - コースデータ：Keith氏による[モジュール式レーシングカートトラック（起伏のある地形テーマ）](https://fertile-soil-productions.itch.io/modular-racekart-track-hilly-terrain-theme)、Fertile Soil Productions提供
 
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/3d_car_sphere](https://github.com/godotrecipes/3d_car_sphere)
 

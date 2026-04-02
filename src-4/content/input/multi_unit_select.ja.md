@@ -127,7 +127,7 @@ func _unhandled_input(event):
 
 このテクニックはリアルタイムストラテジーゲーム（RTS）やその他のジャンルのゲームに応用できます。以下から完全版プロジェクトをダウンロードして、ゲームを作る際に活用してください。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードはこちらからダウンロードできます。 [https://github.com/godotrecipes/multi_unit_support](https://github.com/godotrecipes/multi_unit_support)
 

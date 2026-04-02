@@ -168,7 +168,7 @@ var tween = create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN)
 
 <!-- gif -->
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/rolling_cube](https://github.com/godotrecipes/rolling_cube)
 

@@ -53,6 +53,6 @@ func shoot():
 
 - [FPSキャラクターの作り方](/godot_recipes/4.x/ja/3d/basic_fps)
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードはこちらよりダウンロードできます。 [https://github.com/godotrecipes/3d_shoot_castrays](https://github.com/godotrecipes/3d_shoot_castrays)

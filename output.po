@@ -24,7 +24,7 @@ msgstr ""
 "**Godot 4.0が正式リリースされました！**<br>\n"
 "Godot 4.0はエンジンの最新安定版バージョンです。<br>\n"
 "このサイト(注 : 原文サイトには。この非公式日本語版にはGodot 3の日本語訳はありません。)にはGodot 3向けの学習教材も充実しており、その多くは今でも十分に活用できます。右上のリボンをクリックするとGodot Recipesバージョンを切り替えられますし、以下のボタンからもアクセスできます。<br>\n"
-"{{% button href=\"/godot_recipes/4.x/ja/\" style=\"primary\" icon=\"utensils\" %}}Godot 3レシピ集{{% /button %}}\n"
+"{{% button href=\"https://kidscancode.org/godot_recipes/3.x/\" style=\"primary\" icon=\"utensils\" %}}Godot 3レシピ集 (原文・英語){{% /button %}}\n"
 "{{% /notice %}}"
 
 #: _index.md
@@ -1589,7 +1589,7 @@ msgstr "ルートノードのサイズを変更して効果を確認してくだ
 #: ui/cooldown_button.md ui/floating_text.md ui/heart_containers_3.md
 #: ui/level_select.md ui/minimap.md ui/radial_menu.md
 msgid "## <i class=\"fas fa-code-branch\"></i> Download This Project"
-msgstr "## <i class=\"fas fa-code-branch\"></i> このプロジェクトをダウンロードする"
+msgstr "## <i class=\"fas fa-code-branch\"></i> プロジェクトのダウンロード"
 
 #: ui/minimap.md
 msgid "Now we can begin adding a script to the `Minimap`. First, a `player` reference that can be assigned in the Inspector when the minimap is added to the main scene and a `zoom` property to calibrate the scale - how far the minimap can \"see\". We also have some `@onready` variables to make it more convenient to access the nodes we need."

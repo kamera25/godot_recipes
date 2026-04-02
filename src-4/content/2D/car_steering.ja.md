@@ -272,6 +272,6 @@ func calculate_steering(delta):
 
 - [ゲーム数学：補間](/godot_recipes/4.x/ja/math/interpolation/)
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/2d_car_estrada](https://github.com/godotrecipes/2d_car_estrada)

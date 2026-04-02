@@ -124,6 +124,6 @@ func update_health(_value, _max_value):
 
 - [オブジェクトのHPバー（2D）](/godot_recipes/4.x/ui/unit_healthbar/) -->
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/3d_object_healthbars](https://github.com/godotrecipes/3d_object_healthbars)

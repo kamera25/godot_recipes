@@ -63,6 +63,6 @@ func _ready():
         new_shape.shape = rect
 ```
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/line2d_collision](https://github.com/godotrecipes/line2d_collision)

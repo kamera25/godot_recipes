@@ -293,6 +293,6 @@ func _physics_process(delta):
 
 このテクニックは、様々なアーケードスタイルの飛行ゲームに応用できます。例えば、マウス操作の場合、`InputEventMouseMotion` の `relative`プロパティを使用してピッチとヨー入力を設定する方法が有効です。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/3d_airplane_demo](https://github.com/godotrecipes/3d_airplane_demo)

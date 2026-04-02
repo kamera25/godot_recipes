@@ -115,7 +115,7 @@ $FCTManager.show_value(dmg, crit)
 本デモで使用しているアートワークは[Luis Zuno氏](https://www.patreon.com/ansimuz)による作品です。
 {{% /notice %}}
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 以下からプロジェクトのサンプルコードをダウンロードできます。[https://github.com/godotrecipes/floating_combat_text](https://github.com/godotrecipes/floating_combat_text)
 

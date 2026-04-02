@@ -130,6 +130,6 @@ var teleport_pos = null
 
 ![alt](/godot_recipes/4.x/img/asteroids_warp.gif)
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトのサンプルコードはこちらからダウンロードできます。[https://github.com/godotrecipes/asteroids_support](https://github.com/godotrecipes/asteroids_support)

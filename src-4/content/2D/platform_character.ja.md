@@ -104,6 +104,6 @@ func _physics_process(delta):
 <!-- - [入力入門](/godot_recipes/4.x/ja/input/input_intro/)
 - [キネマティック摩擦](/godot_recipes/4.x/ja/physics/kinematic_friction/) -->
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードはこちらからダウンロードしてください。[https://github.com/godotrecipes/2d_platform_basic](https://github.com/godotrecipes/2d_platform_basic)

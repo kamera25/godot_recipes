@@ -104,6 +104,6 @@ func _physics_process(delta):
 
 ターゲット位置に近づくと移動を停止します。これを行わないと、キャラクターは「ぐらぐら」動きながら、少しずつ目標を越えては戻り、再び越えて…という動作を繰り返します。オプションとして、`look_at()` を使って移動中の方向を向くようにすることもできます。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードをダウンロードするにはこちら：[https://github.com/godotrecipes/topdown_movement](https://github.com/godotrecipes/topdown_movement)

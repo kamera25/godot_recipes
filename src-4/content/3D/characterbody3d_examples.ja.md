@@ -93,7 +93,7 @@ func get_input(delta):
 
 これはあらゆる種類の運動学的キャラクターの動作基盤です。ここからジャンプ、射撃、AI挙動などを追加できます。このレシピを拡張した具体例については、関連するレシピを参照してください。
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトのサンプルコードをダウンロードする：[https://github.com/godotrecipes/characterbody3d_examples](https://github.com/godotrecipes/characterbody3d_examples)
 

@@ -272,7 +272,7 @@ func _on_gui_input(event):
 * マーカーをクリックするとその詳細情報が表示されるように改良
 * グリッドの代わりにマップ画像をそのままミニマップ背景として使用可能に
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 以下からプロジェクトのサンプルコードをダウンロードできます。[https://github.com/godotrecipes/minimap](https://github.com/godotrecipes/minimap)
 

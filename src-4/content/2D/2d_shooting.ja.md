@@ -108,6 +108,6 @@ func shoot():
 
 {{< youtube 7axJJYont6Y >}} -->
 
-## <i class="fas fa-code-branch"></i> このプロジェクトをダウンロードする
+## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
 プロジェクトコードはこちらからダウンロードできます。[https://github.com/godotrecipes/2d_shooting](https://github.com/godotrecipes/2d_shooting)
