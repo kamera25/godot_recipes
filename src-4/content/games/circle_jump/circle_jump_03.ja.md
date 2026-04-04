@@ -103,7 +103,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 ### サークル効果
 
-このセクションの最後の作業として、軌道が尽きつつあることを示すために円に「塗り」効果を追加します。まず、[公式ドキュメント](https://docs.godotengine.org/ja/latest/tutorials/2d/custom_drawing_in_2d.html#arc-polygon-function)にある描画コードを使用します。
+このセクションの最後の作業として、軌道が尽きつつあることを示すために円に「塗り」効果を追加してください。まず、[公式ドキュメント](https://docs.godotengine.org/ja/latest/tutorials/2d/custom_drawing_in_2d.html#arc-polygon-function)にある描画コードを使用します。
 
 
 ```gdscript

@@ -23,7 +23,7 @@ Godotにおけるレイキャスティングには、主に2つの方法があ�
 
 ヒットした内容を確認するには、`FPSPlayer`シーンに{{< gd-icon CanvasLayer >}}`CanvasLayer`ノードと{{< gd-icon Label >}}`Label`ノードを追加してください。
 
-マウス入力を処理するために既に使用している `_input()` 関数に、入力チェックを追加します。
+マウス入力を処理するために既に使用している `_input()` 関数に、入力チェックを追加してください。
 
 ```gdscript
     if event.is_action_pressed("shoot"):

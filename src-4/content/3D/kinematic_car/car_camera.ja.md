@@ -21,7 +21,7 @@ Godot には組み込みの `InterpolatedCamera` ノードが用意されてお�
 
 ### カメラのセットアップ方法
 
-新しいシーンを{{< gd-icon Camera3D >}}`Camera3D`で追加します。名前は「ChaseCamera」とし、保存してからスクリプトを追加してください。
+新しいシーンを{{< gd-icon Camera3D >}}`Camera3D`で追加してください。名前は「ChaseCamera」とし、保存してからスクリプトを追加してください。
 
 「ChaseCamera」には追跡対象の「target」が設定されます。また、必要に応じてこのターゲットを変更する機能も実装します。
 
@@ -73,7 +73,7 @@ func _input(event):
         emit_signal("change_camera", $CameraPositions.get_child(current_camera))
 ```
 
-インプットマップにカメラ切り替え用のアクションを追加します。ここではTabキーと右ショルダーボタンを使用しています。
+インプットマップにカメラ切り替え用のアクションを追加してください。ここではTabキーと右ショルダーボタンを使用しています。
 
 ![alt](/godot_recipes/4.x/img/3d_car_07.png)
 

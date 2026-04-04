@@ -73,7 +73,7 @@ Using `look_at()` each frame turns the bullet to point in its direction of trave
 
 ### 射撃
 
-タンク内（または射撃を行うオブジェクト）の任意の位置に、弾丸が出現させたい場所に {{< gd-icon Marker3D >}}`Marker3D` 子要素を追加します。今回の戦車の場合、砲身の先端部分に配置します。
+タンク内（または射撃オブジェクト）の任意の位置に、弾丸が出現させたい場所に {{< gd-icon Marker3D >}}`Marker3D` 子要素を追加してください。今回の戦車の場合、砲身の先端部分に配置します。
 
 ![alt](/godot_recipes/4.x/img/3d_shoot_02.png)
 

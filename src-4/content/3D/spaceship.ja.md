@@ -24,7 +24,7 @@ tags: []
 
 [Quaternius製「究極の宇宙船パック」](https://quaternius.com/packs/ultimatespaceships.html)
 
-私は「処刑人」級の艦船モデルを選択しました。
+「処刑人」級の艦船モデルを選択しました。
 
 ![alt](/godot_recipes/4.x/img/3d_ship_01.png)
 

@@ -122,12 +122,12 @@ func _on_interstitial_close():
 
 多くのゲームでは、アプリ内課金や特定レベル到達などによって広告を非表示にできる機能が提供されています。今回の場合、「設定」画面に追加ボタンを設ける形で実装します。
 
-まず、`enable_ads`の値を変更できるように、セッター関数を追加します。
+まず、`enable_ads`の値を変更できるように、セッター関数を追加してください。
 
 ```gdscript
 var enable_ads = true setget set_enable_ads
 ```
-また、セッター関数を追加します。
+また、セッター関数を追加してください。
 
 ```gdscript
 func set_enable_ads(value):
@@ -142,7 +142,7 @@ func set_enable_ads(value):
 
 ボタンを追加するには、3行目のボタン列が必要になります。`BaseScreen`シーンを開き、最初のHBoxContainerを複製してください。
 
-[SettingsScreen]シーンに「Ads」という名前の「Button」を中央の行に追加します。テキストを「広告を無効にする」に設定し、カスタムフォント（サイズ48が適切です）を適用し、さらにカスタムスタイルをすべて「New StyleBoxEmpty」に設定してください。最後に、このボタンを「buttons」グループに追加することを忘れないでください。
+[SettingsScreen]シーンに「Ads」という名前の「Button」を中央の行に追加してください。テキストを「広告を無効にする」に設定し、カスタムフォント（サイズ48が適切です）を適用し、さらにカスタムスタイルをすべて「New StyleBoxEmpty」に設定してください。最後に、このボタンを「buttons」グループに追加することを忘れないでください。
 
 「Screens.gd」ファイル内で、ボタン処理用の「match」ステートメントに以下を追加してください。
 

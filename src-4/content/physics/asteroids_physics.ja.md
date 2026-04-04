@@ -85,7 +85,7 @@ func _physics_process(_delta):
 @onready var screensize = get_viewport_rect().size
 ```
 
-次に新しい機能を追加します。
+次に新しい機能を追加してください。
 
 ```gdscript
 func _integrate_forces(state):
@@ -107,7 +107,7 @@ func _integrate_forces(state):
 
 `_integrate_forces()`を使用して、問題なくボディの状態を変更できるもう一つの例を見てみてください。『ワープ』機構を追加するとします。プレイヤーが`"warp"`がアサインされた入力を押すと、船が画面内のランダムな位置に瞬間移動するようにします。
 
-まず、このために新規変数を追加します。
+まず、このために新規変数を追加してください。
 
 ```gdscript
 var teleport_pos = null

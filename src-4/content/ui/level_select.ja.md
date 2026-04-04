@@ -82,7 +82,7 @@ func _on_gui_input(event):
 
 ### 2: グリッド表示
 
-ボックスシーンが完成したら、次に {{< gd-icon GridContainer >}}`GridContainer` を使用して新規シーンを追加します。その上に任意の数の `LevelBox` インスタンスを配置し、**列数** 値を必ず設定してください。以下は6列に設定した例です。
+ボックスシーンが完成したら、次に {{< gd-icon GridContainer >}}`GridContainer` を使用して新規シーンを追加してください。その上に任意の数の `LevelBox` インスタンスを配置し、**列数** 値を必ず設定してください。以下は6列に設定した例です。
 
 ![alt](/godot_recipes/4.x/img/level_select_02.png)
 

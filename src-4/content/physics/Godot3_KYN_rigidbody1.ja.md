@@ -43,7 +43,7 @@ children:
 
 > ※重要：本サンプルで使用しているテクスチャは、Kenney.nl の[物理アセットパック](http://kenney.nl/assets/physics-assets)を使用しています。このパッケージには、さまざまな形状・材質のブロックが多数収録されています。
 
-※「再生」を押すとブロックがゆっくりと下方に落ちていくのが確認できるでしょう。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクターで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。私は値を`3`に設定しています。
+※「再生」を押すとブロックがゆっくりと下方に落ちていくのが確認できるでしょう。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクターで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。ここでは値を`3`に設定しています。
 
 メインシーンを作成します（通常は<a href="http://docs.godotengine.org/ja/latest/classes/class_node.html" target="_blank"><svg width="18" height="18" class="icon-icon_node"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_node"></svg>Node</a>を使用します）。
 地面と壁として機能させるため、長方形の衝突形状を持つ<a href="http://docs.godotengine.org/ja/latest/classes/class_staticbody2d.html" target="_blank"><svg width="18" height="18" class="icon-icon_staticbody2d"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_static_body_2d"></svg>StaticBody2D</a>ノードをいくつか追加してください。
@@ -84,7 +84,7 @@ Linear velocityをリセットして`(0, 0)`に設定します。では、ボー
 
 クリック、ドラッグ、マウスボタンを放した時にボールを蹴るように「apply_impulse()」を使用します。
 
-「プロジェクト設定」を開き、「インプット」タブで「クリック」という新しいアクションを追加します。
+「プロジェクト設定」を開き、「インプット」タブで「クリック」という新しいアクションを追加してください。
 これを左マウスボタンに接続してください。
 
 次に、ボールにスクリプトを追加し、以下のコードを記述します。
@@ -115,7 +115,7 @@ func _input(event):
 より直接的なリジッドボディ制御が必要になるケースがあります。例えば：
 古典的なゲーム『アステロイド』のリメイクを作ろうとしている場合を考えてみます。プレイヤーの宇宙船は、左右矢印キーで回転させ、上矢印キーを押すと前進するように設計が必要です。
 
-以下が私の船で使用している画像です。
+以下が船で使用している画像です。
 
 ![alt](/godot_recipes/4.x/img/ship_red.png)
 

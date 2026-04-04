@@ -63,7 +63,7 @@ Godot 3.5 で `SceneTreeTween` を使い始めた場合、Godot 4.0 の {{< gd-i
 
 4.0版では {{< gd-icon TileMap >}}`TileMap` ノードが全面的にリニューアルされました。{{< gd-icon TileSet >}}`TileSet`の作成方法からタイルの描画・操作方法まで、ほぼすべてが完全に刷新されています。
 
-私たちの「TileMap の使い方」ガイドが間もなく公開されます。
+「TileMap の使い方」ガイドが間もなく公開されます。
 
 ## 乱数生成
 

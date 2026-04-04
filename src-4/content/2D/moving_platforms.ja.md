@@ -31,7 +31,7 @@ draft: false
 
 {{< gd-icon Sprite2D >}}`Sprite2D`の**テクスチャ**と衝突形状を適切に設定してください。{{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`では、**物理演算同期** プロパティを「オン」に設定します。コードでボディを動かしているため、これにより物理演算ステップ時に正しく移動され、プレイヤーや他の物理オブジェクトと連動した動きを維持できます。
 
-次にルートノードにスクリプトを追加します。{{< gd-icon Node2D >}}`Node2D`:
+次にルートノードにスクリプトを追加してください。{{< gd-icon Node2D >}}`Node2D`:
 
 ```gdscript
 extends Node2D

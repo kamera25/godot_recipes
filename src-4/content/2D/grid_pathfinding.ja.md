@@ -90,7 +90,7 @@ var end = Vector2i(5, 5)
     draw_rect(Rect2(end * cell_size, cell_size), Color.ORANGE_RED)
 ```
 
-2点間の経路は`get_point_path()`メソッドを使用して取得できますが、これを可視化する必要もあります。ここでは{{< gd-icon Line2D >}}`Line2D`を使用できるので、シーンに追加します。
+2点間の経路は`get_point_path()`メソッドを使用して取得できますが、これを可視化する必要もあります。ここでは{{< gd-icon Line2D >}}`Line2D`を使用できるので、シーンに追加してください。
 
 以下の方法でパスを取得し、得られた点を {{< gd-icon Line2D >}}`Line2D` に追加する方法をご紹介します。
 

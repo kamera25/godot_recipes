@@ -31,9 +31,9 @@ draft: false
 
 まず最初に、ミニマップのレイアウトを作成してください。ゲーム内に存在する他のUI要素と連携させるためには、スムーズなリサイズが可能で、コンテナベースのレイアウトに適切に統合できるものでなければなりません。
 
-まず、{{< gd-icon MarginContainer >}}`MarginContainer`を追加します。次に、その［テーマ設定/定数］をすべて`5`に設定します。このコントロールは残りのノードを保持し、他の要素に影響を与えないようにする役割を果たします。名前は「ミニマップ」とし、シーンを保存してください。
+まず、{{< gd-icon MarginContainer >}}`MarginContainer`を追加してください。次に、その［テーマ設定/定数］をすべて`5`に設定します。このコントロールは残りのノードを保持し、他の要素に影響を与えないようにする役割を果たします。名前は「ミニマップ」とし、シーンを保存してください。
 
-次に、このプロジェクトに {{< gd-icon NinePatchRect >}}`NinePatchRect`ノードを追加します。このノードは `TextureRect`と似ていますが、角や端を引き伸ばさずにリサイズする点が異なります。アセットフォルダから **[テクスチャ]** プロパティに `panel_woodDetail_blank.png` 画像をドラッグ＆ドロップしてください。この画像は `128x128`ピクセルのもので、ルート {{< gd-icon MarginContainer >}}`MarginContainer`ノードを拡大すると、画像が伸びすぎて見栄えが悪くなります。
+次に、このプロジェクトに {{< gd-icon NinePatchRect >}}`NinePatchRect`ノードを追加してください。このノードは `TextureRect`と似ていますが、角や端を引き伸ばさずにリサイズする点が異なります。アセットフォルダから **[テクスチャ]** プロパティに `panel_woodDetail_blank.png` 画像をドラッグ＆ドロップしてください。この画像は `128x128`ピクセルのもので、ルート {{< gd-icon MarginContainer >}}`MarginContainer`ノードを拡大すると、画像が伸びすぎて見栄えが悪くなります。
 
 ![alt](/godot_recipes/4.x/img/minimap_02.gif)
 
@@ -49,7 +49,7 @@ draft: false
 
 ただし、フレームのサイズがどうあれ自動でタイル表示されるようにする必要があります。また、グリッドエリアはミニマップマーカーが表示される場所なので、枠線を超えて拡張しないようにしなければなりません。
 
-`MiniMap`の子要素（かつ`Frame`の兄弟要素）として、新たに {{< gd-icon MarginContainer >}}`MarginContainer` を追加します。**テーマオーバーライド/定数** で4つのマージンプロパティをすべて `20` に設定します。このノードの子要素として {{< gd-icon TextureRect >}}`TextureRect` を追加し、**Texture** を上記の画像に割り当てます。**Stretch Mode** は「Tile」に設定してください。このノードには「Grid」という名前を付けます。
+`MiniMap`の子要素（かつ`Frame`の兄弟要素）として、新たに {{< gd-icon MarginContainer >}}`MarginContainer` を追加してください。**テーマオーバーライド/定数** で4つのマージンプロパティをすべて `20` に設定します。このノードの子要素として {{< gd-icon TextureRect >}}`TextureRect` を追加し、**Texture** を上記の画像に割り当てます。**Stretch Mode** は「Tile」に設定してください。このノードには「Grid」という名前を付けます。
 
 ルートノードのサイズを変更して効果を確認してください。
 
@@ -63,7 +63,7 @@ draft: false
 
 ### マップマーカー
 
-`Grid`の子要素として、名前を「PlayerMarker」とする{{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加します。また、 `minimapIcon_arrowA.png` テクスチャを適用します。スプライトの **Transform/Position** プロパティに注意してください。 `(0, 0)` となっており、これにより`Grid`の左上隅に正確に配置されます。
+`Grid`の子要素として、名前を「PlayerMarker」とする{{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加してください。また、 `minimapIcon_arrowA.png` テクスチャを適用します。スプライトの **Transform/Position** プロパティに注意してください。 `(0, 0)` となっており、これにより`Grid`の左上隅に正確に配置されます。
 
 ![alt](/godot_recipes/4.x/img/minimap_05.png)
 
@@ -158,7 +158,7 @@ func _process(delta):
         return
 ```
 
-もし`player`が存在する場合、まずプレイヤーマーカーを回転させてプレイヤーの向きに合わせます。私たちの `PlayerMarker` スプライトは `x` 軸に沿ってではなく上方を向いているため、90度を追加する必要があります。
+もし`player`が存在する場合、まずプレイヤーマーカーを回転させてプレイヤーの向きに合わせます。 `PlayerMarker` スプライトは `x` 軸に沿ってではなく上方を向いているため、90度を追加する必要があります。
 
 ```gdscript
 player_marker.rotation = player.rotation + PI/2
@@ -233,9 +233,9 @@ func _on_object_removed(object):
 
 ### ズームの調整方法
 
-ここまでお読みいただいた方には、最後にもう一つの機能を追加します。この「調整可能なズームレベル」を使えば、地図の上にマウスカーソルを置いた状態でホイールを回すことで、表示の拡大・縮小が可能になります。
+ここまでお読みいただいた方には、最後にもう一つの機能を追加してください。この「調整可能なズームレベル」を使えば、地図の上にマウスカーソルを置いた状態でホイールを回すことで、表示の拡大・縮小が可能になります。
 
-まず、`zoom`プロパティにセッターを追加します。
+まず、`zoom`プロパティにセッターを追加してください。
 
 ```gdscript
 @export var zoom = 1.5:

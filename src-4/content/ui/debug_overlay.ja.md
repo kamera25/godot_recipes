@@ -21,7 +21,7 @@ ghcommentid: 59
 
 ![alt](/godot_recipes/4.x/img/debug_stats_01.png)
 
-まず最初に、名前を `DebugStats` とする {{< gd-icon MarginContainer >}}`MarginContainer` を追加し、その中に {{< gd-icon VBoxContainer >}}`VBoxContainer` の子要素を配置します。マージンは適切な値に設定してください（私は通常 `20` を使用しています）。
+まず最初に、名前を `DebugStats` とする {{< gd-icon MarginContainer >}}`MarginContainer` を追加し、その中に {{< gd-icon VBoxContainer >}}`VBoxContainer` の子要素を配置します。マージンは適切な値に設定してください（ここでは `20` を使用しています）。
 
 コードを見てみてください。
 
@@ -102,9 +102,9 @@ func remove_property(object, property):
 
 ### ゲームへの追加について
 
-ゲーム内でこの機能を使用するには、2D/3Dを問わず、デバッグ表示がゲーム画面の上に重ねて表示されるようが必要です。「DebugOverlay」というシーンをさらに1つ作成し、そのルートノードに{{< gd-icon CanvasLayer >}}`CanvasLayer`を設定してください。次に、このScene内に`DebugStats`シーンを子要素として追加します。
+ゲーム内でこの機能を使用するには、2D/3Dを問わず、デバッグ表示がゲーム画面の上に重ねて表示されるようが必要です。「DebugOverlay」というシーンをさらに1つ作成し、そのルートノードに{{< gd-icon CanvasLayer >}}`CanvasLayer`を設定してください。次に、このScene内に`DebugStats`シーンを子要素として追加してください。
 
-簡単に参照できるように、私はこれを `DebugOverlay` スクリプトに追加しています。
+簡単に参照できるように、これを `DebugOverlay` スクリプトに追加しています。
 
 ```gdscript
 @onready var stats = $DebugStats

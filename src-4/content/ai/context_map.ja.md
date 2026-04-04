@@ -19,11 +19,11 @@ ghcommentid: 75
 
 この例では、「状況に基づく振舞い(Context Behavior)」と呼ばれる手法を採用します。これは、オブジェクトが移動方法を選択するために十分なワールドの情報を得ることを目的とするものです。本テーマについてさらに詳しく知りたい方は、以下の関連リンクを参照してください。
 
-* [Andrew Fray: Context Behaviours Know How to Share](https://andrewfray.wordpress.com/2013/03/26/context-behaviours-know-how-to-share/)
+* [アンドリュー・フレイ: 状況に基づく振舞いがどのように共有されるべきか](https://andrewfray.wordpress.com/2013/03/26/context-behaviours-know-how-to-share/)
 
 * [ジェームズ・キーツ：AIコンテキスト行動管理](https://jameskeats.com/portfolio/contextbhvr.html)
 
-このデモでは、汎用的な「エージェント」オブジェクトを使用します。実際のゲームであれば、これはレースコースを走る車、ダンジョンを巡回するモンスター、あるいは他の種類のゲーム内エンティティなどに相当するでしょう。私たちのエージェントは `{{< gd-icon CharacterBody2D >}}CharacterBody2D` を使用しますが、覚えておいていただきたいのは、このテクニックはどんな種類のオブジェクトにも適用可能だということです。アルゴリズム自体は対象が移動する方向を選択する方法に関するものであり、実際の移動方法は完全に別個の問題です。
+このデモでは、汎用的な「エージェント」オブジェクトを使用します。実際のゲームであれば、これはレースコースを走る車、ダンジョンを巡回するモンスター、あるいは他の種類のゲーム内エンティティなどに相当するでしょう。エージェントは `{{< gd-icon CharacterBody2D >}}CharacterBody2D` を使用しますが、覚えておいていただきたいのは、このテクニックはどんな種類のオブジェクトにも適用可能だということです。アルゴリズム自体は対象が移動する方向を選択する方法に関するものであり、実際の移動方法は完全に別個の問題です。
 
 ### アルゴリズムについて
 
@@ -31,7 +31,7 @@ ghcommentid: 75
 
 ![alt](/godot_recipes/4.x/img/ai_context_01.png)
 
-エージェントのスクリプト内では、エージェントが移動したい方向を追跡するための配列「`interest`」を定義します。
+エージェントのスクリプト内では、エージェントが移動したい方向を追跡するための配列`interest`を定義します。
 
 ![alt](/godot_recipes/4.x/img/ai_context_04.png)
 
@@ -51,7 +51,7 @@ ghcommentid: 75
 
 ![alt](/godot_recipes/4.x/img/ai_context_07.png)
 
-これら2つの配列を組み合わせることで、`危険度`に含まれる`興味度`方向を除去することが可能です。残った`興味度`方向を合計すると、障害物から離れる新しい方向ベクトルが得られます。
+これら2つの配列を組み合わせることで、`danger(危険度)`に含まれる`interest(興味度)`方向を除去することが可能です。残った`interest`方向を合計すると、障害物から離れる新しい方向ベクトルが得られます。
 
 ![alt](/godot_recipes/4.x/img/ai_context_08.png)
 
@@ -107,7 +107,7 @@ func _ready():
         ray_directions[i] = Vector2.RIGHT.rotated(angle)
 ```
 
-In `_physics_process()` we'll populate the context arrays and execute the movement. Note we've broken the steps of the algorithm in to separate functions. Once we've found our chosen direction, we turn towards it as much as possible (based on `steer_force`) and move.
+`_physics_process()` 関数では、コンテキスト配列を埋め、移動処理を実行します。注目すべき点として、アルゴリズムの各ステップを別々の関数に分割しています。目的の方向を特定したら、可能な限りその方向へ向きを変え（`steer_force` に基づく）、その後移動を行います。
 
 ```gdscript
 func _physics_process(delta):
@@ -149,7 +149,7 @@ func set_default_interest():
         interest[i] = max(0, d)
 ```
 
-次に、`danger`配列を埋めます。`Physics2DDirectSpaceState`を使用して、各方向にレイをキャストします。衝突があった場合、その位置に`1`を追加します。
+次に、`danger`配列を埋めます。`Physics2DDirectSpaceState`を使用して、各方向にレイをキャストします。衝突があった場合、その位置に`1`を追加してください。
 
 ```gdscript
 func set_danger():

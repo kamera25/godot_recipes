@@ -5,13 +5,13 @@ draft: false
 pre: "10. "
 ---
 
-最後のステップとして、ゲームにスタートボタンと「ゲームオーバー」状態を追加します。
+最後のステップとして、ゲームにスタートボタンと「ゲームオーバー」状態を追加してください。
 
 ## ゲーム開始方法
 
 現在ゲームを実行するとすぐに開始されますが、起動用のボタンを追加してください。
 
-`Main`を`CanvasLayer`の子要素として追加し、そこに{{< gd-icon CenterContainer >}}`CenterContainer`を追加し、そのレイアウトを**フル矩形**に設定します。次に、{{< gd-icon TextureButton >}}`TextureButton`をその子要素として追加します。このボタンに「Start」という名前を付け、その**通常状態**のテクスチャとして`START (48 x 8).png`画像を設定します。
+`Main`を`CanvasLayer`の子要素として追加し、そこに{{< gd-icon CenterContainer >}}`CenterContainer`を追加し、そのレイアウトを**フル矩形**に設定します。次に、{{< gd-icon TextureButton >}}`TextureButton`をその子要素として追加してください。このボタンに「Start」という名前を付け、その**通常状態**のテクスチャとして`START (48 x 8).png`画像を設定します。
 
 スクリプトの上部に参照を追加：
 
@@ -35,7 +35,7 @@ func _ready():
 #	spawn_enemies()
 ```
 
-次に、`new_game()`関数を追加します。
+次に、`new_game()`関数を追加してください。
 
 ```gdscript
 func new_game():

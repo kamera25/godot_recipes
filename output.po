@@ -1184,7 +1184,7 @@ msgstr "このノードにおける最大の変更点は `move_and_slide()` 関�
 
 #: basics/migrating.md
 msgid "Our \"Using TileMaps\" guide is coming soon."
-msgstr "私たちの「TileMap の使い方」ガイドが間もなく公開されます。"
+msgstr "「TileMap の使い方」ガイドが間もなく公開されます。"
 
 #: basics/migrating.md
 msgid "* `rand_range()` is now replaced with either `randf_range()` (for floats) or `randi_range()` (for ints)."
@@ -1370,7 +1370,7 @@ msgstr ""
 
 #: ui/minimap.md
 msgid "As a child of the `MiniMap` (and a sibling of the `Frame`), add another {{< gd-icon MarginContainer >}}`MarginContainer`. Set all four margin properties in **Theme Overrides/Constants** to `20`. As a child of this node, add a {{< gd-icon TextureRect >}}`TextureRect` and assign its **Texture** to the above image. Set its **Stretch Mode** to \"Tile\". Name this node \"Grid\"."
-msgstr "`MiniMap`の子要素（かつ`Frame`の兄弟要素）として、新たに {{< gd-icon MarginContainer >}}`MarginContainer` を追加します。**テーマオーバーライド/定数** で4つのマージンプロパティをすべて `20` に設定します。このノードの子要素として {{< gd-icon TextureRect >}}`TextureRect` を追加し、**Texture** を上記の画像に割り当てます。**Stretch Mode** は「Tile」に設定してください。このノードには「Grid」という名前を付けます。"
+msgstr "`MiniMap`の子要素（かつ`Frame`の兄弟要素）として、新たに {{< gd-icon MarginContainer >}}`MarginContainer` を追加してください。**テーマオーバーライド/定数** で4つのマージンプロパティをすべて `20` に設定します。このノードの子要素として {{< gd-icon TextureRect >}}`TextureRect` を追加し、**Texture** を上記の画像に割り当てます。**Stretch Mode** は「Tile」に設定してください。このノードには「Grid」という名前を付けます。"
 
 #: ui/minimap.md
 msgid "![alt](/godot_recipes/4.x/img/minimap_02.gif)"
@@ -1462,7 +1462,7 @@ msgstr "- [見下ろし方式キャラクター移動](/godot_recipes/4.x/ja/2d/
 
 #: ui/minimap.md
 msgid "Add a {{< gd-icon MarginContainer >}}`MarginContainer` first. Set its **Theme Overrides/Constants** all to `5`. This control will hold the rest of the nodes and ensure it doesn't bleed over into any other elements. Name it \"Minimap\" and save the scene."
-msgstr "まず、{{< gd-icon MarginContainer >}}`MarginContainer`を追加します。次に、その［テーマ設定/定数］をすべて`5`に設定します。このコントロールは残りのノードを保持し、他の要素に影響を与えないようにする役割を果たします。名前は「ミニマップ」とし、シーンを保存してください。"
+msgstr "まず、{{< gd-icon MarginContainer >}}`MarginContainer`を追加してください。次に、その［テーマ設定/定数］をすべて`5`に設定します。このコントロールは残りのノードを保持し、他の要素に影響を与えないようにする役割を果たします。名前は「ミニマップ」とし、シーンを保存してください。"
 
 #: ui/minimap.md
 msgid "For this demo, we have two game objects: a `Mob`, which wanders around the map randomly, and a `Crate`, which the player can pick up. Many of these are scattered around the main scene. Each will need to be represented by one of the map markers we made."
@@ -1508,7 +1508,7 @@ msgstr "![alt](/godot_recipes/4.x/img/minimap_05.png)"
 
 #: ui/minimap.md
 msgid "First, add a setter to the `zoom` property:"
-msgstr "まず、`zoom`プロパティにセッターを追加します。"
+msgstr "まず、`zoom`プロパティにセッターを追加してください。"
 
 #: ui/minimap.md
 msgid "{{< youtube -R1rasEyuqY >}} -->"
@@ -1554,7 +1554,7 @@ msgstr "次に、各オブジェクトの位置をプレイヤー座標系で計
 
 #: ui/minimap.md
 msgid "As a child of `Grid`, add a {{< gd-icon Sprite2D >}}`Sprite2D` node named \"PlayerMarker\" and give it the `minimapIcon_arrowA.png` texture. Note the sprite's **Transform/Position** property: `(0, 0)`, which places it exactly in the top-left corner of the `Grid`:"
-msgstr "`Grid`の子要素として、名前を「PlayerMarker」とする{{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加します。また、 `minimapIcon_arrowA.png` テクスチャを適用します。スプライトの **Transform/Position** プロパティに注意してください。 `(0, 0)` となっており、これにより`Grid`の左上隅に正確に配置されます。"
+msgstr "`Grid`の子要素として、名前を「PlayerMarker」とする{{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加してください。また、 `minimapIcon_arrowA.png` テクスチャを適用します。スプライトの **Transform/Position** プロパティに注意してください。 `(0, 0)` となっており、これにより`Grid`の左上隅に正確に配置されます。"
 
 #: ui/minimap.md
 msgid "Using the {{< gd-icon NinePatchRect >}}`NinePatchRects`'s properties, we can ensure that the frame remains the same size when stretched. You can define these properties graphically in the \"TextureRegion\" panel, but it's sometimes easier to enter the values directly. Set all four properties in the **Patch Margin** section to `64` and change the node's name to \"Frame\"."
@@ -1601,7 +1601,7 @@ msgstr "これで`Minimap`にスクリプトを追加し始めることができ
 
 #: ui/minimap.md
 msgid "If there is a `player`, we'll first rotate the player marker to match the player's heading. Since our `PlayerMarker` sprite points upwards rather than along the `x` axis, we must add 90 degrees:"
-msgstr "もし`player`が存在する場合、まずプレイヤーマーカーを回転させてプレイヤーの向きに合わせます。私たちの `PlayerMarker` スプライトは `x` 軸に沿ってではなく上方を向いているため、90度を追加する必要があります。"
+msgstr "もし`player`が存在する場合、まずプレイヤーマーカーを回転させてプレイヤーの向きに合わせます。 `PlayerMarker` スプライトは `x` 軸に沿ってではなく上方を向いているため、90度を追加する必要があります。"
 
 #: ui/minimap.md
 msgid "To fix this, after calculating `obj_pos`, but before setting the marker's position, clamp it to the grid's rectangle:"
@@ -1609,7 +1609,7 @@ msgstr "この問題を解決するには、`obj_pos` を計算した後、マ�
 
 #: ui/minimap.md
 msgid "Next, add a {{< gd-icon NinePatchRect >}}`NinePatchRect` node. This node is similar to a `TextureRect` but handles resizing differently by not stretching the corners/edges. Drop the `panel_woodDetail_blank.png` image from the asset folder into the **Texture** property. This is a `128x128` image and if we scale the root {{< gd-icon MarginContainer >}}`MarginContainer`, the image becomes stretched and ugly:"
-msgstr "次に、このプロジェクトに {{< gd-icon NinePatchRect >}}`NinePatchRect`ノードを追加します。このノードは `TextureRect`と似ていますが、角や端を引き伸ばさずにリサイズする点が異なります。アセットフォルダから **[テクスチャ]** プロパティに `panel_woodDetail_blank.png` 画像をドラッグ＆ドロップしてください。この画像は `128x128`ピクセルのもので、ルート {{< gd-icon MarginContainer >}}`MarginContainer`ノードを拡大すると、画像が伸びすぎて見栄えが悪くなります。"
+msgstr "次に、このプロジェクトに {{< gd-icon NinePatchRect >}}`NinePatchRect`ノードを追加してください。このノードは `TextureRect`と似ていますが、角や端を引き伸ばさずにリサイズする点が異なります。アセットフォルダから **[テクスチャ]** プロパティに `panel_woodDetail_blank.png` 画像をドラッグ＆ドロップしてください。この画像は `128x128`ピクセルのもので、ルート {{< gd-icon MarginContainer >}}`MarginContainer`ノードを拡大すると、画像が伸びすぎて見栄えが悪くなります。"
 
 #: ui/minimap.md
 msgid "Add two more {{< gd-icon Sprite2D >}}`Sprite2D` nodes: \"MobMarker\" and \"AlertMarker\", using the `minimapIcon_jewelRed.png` and `minimapIcon_exclamationYellow.png` textures."
@@ -1668,7 +1668,7 @@ msgstr "ノード「MiniMap」で、インスペクター内のシグナル `_gu
 
 #: ui/minimap.md
 msgid "If you've stuck with it this far, we have one more feature to add: adjustable zoom level. With this, scrolling the mouse wheel when hovering over the map will zoom its scale in and out."
-msgstr "ここまでお読みいただいた方には、最後にもう一つの機能を追加します。この「調整可能なズームレベル」を使えば、地図の上にマウスカーソルを置いた状態でホイールを回すことで、表示の拡大・縮小が可能になります。"
+msgstr "ここまでお読みいただいた方には、最後にもう一つの機能を追加してください。この「調整可能なズームレベル」を使えば、地図の上にマウスカーソルを置いた状態でホイールを回すことで、表示の拡大・縮小が可能になります。"
 
 #: ui/minimap.md
 msgid "Next, we'll use a dictionary to map the `minimap_icon` tags we gave our units to the corresponding marker:"
@@ -1716,7 +1716,7 @@ msgstr "これは {{< gd-icon Node2D >}}`Node2D` クラスのノードで「FCTM
 
 #: ui/floating_text.md
 msgid "In your game unit, you'd attach an instance of this node, and position it wherever you want the text to appear. Then add something like the following to the unit's `take_damage()` method:"
-msgstr "ゲーム内ユニットでは、このノードのインスタンスを作成して、テキストを表示させたい任意の位置に配置します。その後、ユニットの `take_damage()` メソッドに以下のようなコードを追加します。"
+msgstr "ゲーム内ユニットでは、このノードのインスタンスを作成して、テキストを表示させたい任意の位置に配置します。その後、ユニットの `take_damage()` メソッドに以下のようなコードを追加してください。"
 
 #: ui/floating_text.md
 msgid ""
@@ -1746,7 +1746,7 @@ msgstr "ダメージを受けたとき、数字を浮かせながら表示(Float
 
 #: ui/floating_text.md
 msgid "Add a script to the label."
-msgstr "ラベルにスクリプトを追加します。"
+msgstr "ラベルにスクリプトを追加してください。"
 
 #: ui/floating_text.md
 msgid "If the hit is a critical, we'll also change the color and animate the scale for a bigger effect. Note, I've hardcoded this to be red, but you should probably make this a configurable value."
@@ -1906,7 +1906,7 @@ msgstr "以下のスクリプトは3種類すべてのバー構成に対応で�
 
 #: ui/heart_containers_3.md
 msgid "Add a {{< gd-icon TextureRect >}}`TextureRect` child. Drag your heart texture into the **Texture** property and set the **Stretch Mode** to \"Keep\". Name the node \"1\" and then press \"Ctrl-D\" to duplicate the node for as many hearts as you need (5 in this example). Your node setup should look like this:"
-msgstr "{{< gd-icon TextureRect >}}`TextureRect` 子要素を追加します。ハートテクスチャを **テクスチャ** プロパティにドラッグし、**[伸縮モード]** を「固定」に設定してください。ノード名を「1」に指定したら、\"Ctrl+D\"を押して必要な数（この例では5つ）のハート用に同じノードを複製します。最終的なノード構成は以下のようになります。"
+msgstr "{{< gd-icon TextureRect >}}`TextureRect` 子要素を追加してください。ハートテクスチャを **テクスチャ** プロパティにドラッグし、**[伸縮モード]** を「固定」に設定してください。ノード名を「1」に指定したら、\"Ctrl+D\"を押して必要な数（この例では5つ）のハート用に同じノードを複製します。最終的なノード構成は以下のようになります。"
 
 #: ui/heart_containers_3.md
 msgid "To begin, we're going to load the textures we need and define our three bar modes:"
@@ -1944,7 +1944,7 @@ msgstr "### 2: グリッド表示"
 
 #: ui/level_select.md
 msgid "Once you have the box scene completed, add a new scene with a {{< gd-icon GridContainer >}}`GridContainer`. Add any number of `LevelBox` instances under it, making sure to set the **Columns** value. Here's one with 6 columns:"
-msgstr "ボックスシーンが完成したら、次に {{< gd-icon GridContainer >}}`GridContainer` を使用して新規シーンを追加します。その上に任意の数の `LevelBox` インスタンスを配置し、**列数** 値を必ず設定してください。以下は6列に設定した例です。"
+msgstr "ボックスシーンが完成したら、次に {{< gd-icon GridContainer >}}`GridContainer` を使用して新規シーンを追加してください。その上に任意の数の `LevelBox` インスタンスを配置し、**列数** 値を必ず設定してください。以下は6列に設定した例です。"
 
 #: ui/level_select.md
 msgid "We'll create it with these nodes:"
@@ -2216,7 +2216,7 @@ msgstr "![alt](/godot_recipes/4.x/img/cooldown_01.gif)"
 
 #: ui/cooldown_button.md
 msgid "Finally, on the `Value` label, set **Horizontal Alignment** to \"Right\" and **Clip Text** to \"On\". Add a font to the **Theme Overrides/Font**. Put a value like `0.0` in the **Text** field to check how it works. Since our icon is black and white, it also helps to add a **Theme Overrides/Constants/Outline Size**_ of `1`."
-msgstr "最後に、［値］ラベルで［水平整列］を「右揃え」に設定し、［テキストクリッピング］を「有効」にしてください。**テーマオーバーライド／フォント**にフォントを追加します。動作確認のため、**テキスト**欄には `0.0` のような値を入力してください。アイコンが白黒の場合は、**テーマオーバーライド／定数／アウトラインサイズ**として `1` を設定すると効果的です。"
+msgstr "最後に、［値］ラベルで［水平整列］を「右揃え」に設定し、［テキストクリッピング］を「有効」にしてください。**テーマオーバーライド／フォント**にフォントを追加してください。動作確認のため、**テキスト**欄には `0.0` のような値を入力してください。アイコンが白黒の場合は、**テーマオーバーライド／定数／アウトラインサイズ**として `1` を設定すると効果的です。"
 
 #: ui/cooldown_button.md
 msgid "If you need art for your buttons, you can find a wide variety of well-designed buttons at [Game-icons.net](https://game-icons.net/). We'll be using a few from there for this recipe."
@@ -2325,7 +2325,7 @@ msgstr "シーンに静的テキストのみが必要な場合、ここで完了
 
 #: ui/labels.md
 msgid "Add a new {{< gd-icon Label >}}`Label` node to your scene. In the Inspector, you'll see the node's properties, most of which are self-explanatory (hover them with the mouse to see a description):"
-msgstr "シーンに新しい {{< gd-icon Label >}}`Label`ノードを追加します。インスペクターでは、ほとんどのプロパティが自明な内容になっています（マウスカーソルを合わせると説明が表示されます）："
+msgstr "シーンに新しい {{< gd-icon Label >}}`Label`ノードを追加してください。インスペクターでは、ほとんどのプロパティが自明な内容になっています（マウスカーソルを合わせると説明が表示されます）："
 
 #: ui/labels.md
 msgid "For example, if we had a {{< gd-icon Timer >}}`Timer` node in our scene, we could do the following:"
@@ -2353,7 +2353,7 @@ msgstr "### ゲームへの追加について"
 
 #: ui/debug_overlay.md
 msgid "To use it in game, you'll want the debug display to be rendered on top of your game, whether in 2D or 3D. Create one more scene called \"DebugOverlay\" and make its root node a {{< gd-icon CanvasLayer >}}`CanvasLayer`. Add the `DebugStats` scene as a child."
-msgstr "ゲーム内でこの機能を使用するには、2D/3Dを問わず、デバッグ表示がゲーム画面の上に重ねて表示されるようが必要です。「DebugOverlay」というシーンをさらに1つ作成し、そのルートノードに{{< gd-icon CanvasLayer >}}`CanvasLayer`を設定してください。次に、このScene内に`DebugStats`シーンを子要素として追加します。"
+msgstr "ゲーム内でこの機能を使用するには、2D/3Dを問わず、デバッグ表示がゲーム画面の上に重ねて表示されるようが必要です。「DebugOverlay」というシーンをさらに1つ作成し、そのルートノードに{{< gd-icon CanvasLayer >}}`CanvasLayer`を設定してください。次に、このScene内に`DebugStats`シーンを子要素として追加してください。"
 
 #: ui/debug_overlay.md
 msgid "![alt](/godot_recipes/4.x/img/debug_stats_01.png)"
@@ -2361,7 +2361,7 @@ msgstr "![alt](/godot_recipes/4.x/img/debug_stats_01.png)"
 
 #: ui/debug_overlay.md
 msgid "For easy reference, I like to add this in a script on `DebugOverlay`:"
-msgstr "簡単に参照できるように、私はこれを `DebugOverlay` スクリプトに追加しています。"
+msgstr "簡単に参照できるように、これを `DebugOverlay` スクリプトに追加しています。"
 
 #: ui/debug_overlay.md
 msgid "In the `update_label()` method we build up a string to display in the label's `text` property. We include the object's name and which property we're showing, plus the value modified by the `mode` option."
@@ -2405,7 +2405,7 @@ msgstr "[3D空間でのベクトル描画](/godot_recipes/4.x/ja/3d/debug_overla
 
 #: ui/debug_overlay.md
 msgid "Start by adding a {{< gd-icon MarginContainer >}}`MarginContainer` named `DebugStats` with a {{< gd-icon VBoxContainer >}}`VBoxContainer` child. Set the margins to a comfortable value (I usually use `20`)."
-msgstr "まず最初に、名前を `DebugStats` とする {{< gd-icon MarginContainer >}}`MarginContainer` を追加し、その中に {{< gd-icon VBoxContainer >}}`VBoxContainer` の子要素を配置します。マージンは適切な値に設定してください（私は通常 `20` を使用しています）。"
+msgstr "まず最初に、名前を `DebugStats` とする {{< gd-icon MarginContainer >}}`MarginContainer` を追加し、その中に {{< gd-icon VBoxContainer >}}`VBoxContainer` の子要素を配置します。マージンは適切な値に設定してください（ここでは `20` を使用しています）。"
 
 #: ui/debug_overlay.md
 msgid "Now add `DebugOverlay` in **Project Settings > Autoload**."
@@ -2695,7 +2695,7 @@ msgstr "### ターゲットの追跡"
 
 #: 3D/camera_gimbal.md
 msgid "We'll start with the keyboard controls, then add an option to use the mouse as well. Here are the required actions and their assigned inputs:"
-msgstr "キーボード操作から始めてください。その後、マウスを使用するオプションも追加します。必要な操作と割り当てられた入力は以下の通りです。"
+msgstr "キーボード操作から始めてください。その後、マウスを使用するオプションも追加してください。必要な操作と割り当てられた入力は以下の通りです。"
 
 #: 3D/camera_gimbal.md
 msgid "### Mouse control"
@@ -2842,7 +2842,7 @@ msgstr "{{< gd-icon Camera3D >}}`Camera3D` の**変換/位置**を `(0, 0, 4)` �
 
 #: 3D/camera_gimbal.md
 msgid "We'll add a flag called `mouse_control` to enable easy toggling of mouse/keyboard controls."
-msgstr "マウスとキーボードの制御を簡単に切り替えられるよう、「mouse_control」というフラグを追加します。"
+msgstr "マウスとキーボードの制御を簡単に切り替えられるよう、「mouse_control」というフラグを追加してください。"
 
 #: 3D/camera_gimbal.md
 msgid "<video controls src=\"/godot_recipes/4.x/img/gimbal_01.webm\"></video>"
@@ -2994,7 +2994,7 @@ msgstr "プロジェクトコードはこちらよりダウンロードできま
 
 #: 3D/shooting_raycasts.md
 msgid "We'll add an input check in the `_input()` function, which we're already using to handle mouse input."
-msgstr "マウス入力を処理するために既に使用している `_input()` 関数に、入力チェックを追加します。"
+msgstr "マウス入力を処理するために既に使用している `_input()` 関数に、入力チェックを追加してください。"
 
 #: 3D/shooting_raycasts.md
 msgid "You need to implement shooting in an FPS, but moving individual projectiles is impractical."
@@ -3097,7 +3097,7 @@ msgstr "対象物を滑らかに追従できる3Dカメラが必要となりま�
 
 #: 3D/spaceship.md
 msgid "I've chosen the \"Executioner\" ship model:"
-msgstr "私は「処刑人」級の艦船モデルを選択しました。"
+msgstr "「処刑人」級の艦船モデルを選択しました。"
 
 #: 3D/spaceship.md
 msgid "### Rotation"
@@ -3193,7 +3193,7 @@ msgstr "### 全スクリプト"
 
 #: 3D/spaceship.md
 msgid "Select the `gltf` file of the ship you want, and click the *Import* tab. Change the *Root Type* to {{< gd-icon CharacterBody3D >}} `CharacterBody3D` and click \"Reimport\". Then double-click the `gltf` and you'll have a new inherited scene with a {{< gd-icon CharacterBody3D >}} `CharacterBody3D` root and a {{< gd-icon MeshInstance3D >}} `MeshInstance` child. Add a {{< gd-icon CollisionShape3D >}} `CollisionShape3D` to the body."
-msgstr "インポートする船舶の `gltf` ファイルを選択し、［インポート］タブをクリックします。［ルートの型］を `CharacterBody3D`に変更し、「再インポート」を実行してください。その後、`gltf`ファイルをダブルクリックすると、新たに継承されたシーンが作成され、ルートとして {{< gd-icon CharacterBody3D >}}`CharacterBody3D`、子要素として {{< gd-icon MeshInstance3D >}} `MeshInstance`が含まれるようになります。このボディに {{< gd-icon CollisionShape3D >}}`CollisionShape3D`を追加します。"
+msgstr "インポートする船舶の `gltf` ファイルを選択し、［インポート］タブをクリックします。［ルートの型］を `CharacterBody3D`に変更し、「再インポート」を実行してください。その後、`gltf`ファイルをダブルクリックすると、新たに継承されたシーンが作成され、ルートとして {{< gd-icon CharacterBody3D >}}`CharacterBody3D`、子要素として {{< gd-icon MeshInstance3D >}} `MeshInstance`が含まれるようになります。このボディに {{< gd-icon CollisionShape3D >}}`CollisionShape3D`を追加してください。"
 
 #: 3D/spaceship.md
 msgid "Make a test scene with a {{< gd-icon Camera3D >}} `Camera3D` to try it out. You can use a stationary camera or a [chase camera](/godot_recipes/4.x/3d/interpolated_camera/). Check that the ship accelerates and slows before moving on to the next step."
@@ -3397,7 +3397,7 @@ msgstr "{{< gd-icon Sprite3D >}}`Sprite3D` ノードが静的なテクスチャ�
 msgid "Add a {{< gd-icon SubViewport >}}`SubViewport` as a child of the {{< gd-icon Sprite3D >}}`Sprite3D`. In the Inspector set _Transparent BG_ to **On**."
 msgstr ""
 "以下の手順で操作してください。\n"
-"1. {{< gd-icon SubViewport >}}`SubViewport` を {{< gd-icon Sprite3D >}}`Sprite3D` の子要素として追加します。\n"
+"1. {{< gd-icon SubViewport >}}`SubViewport` を {{< gd-icon Sprite3D >}}`Sprite3D` の子要素として追加してください。\n"
 "2. インスペクタウィンドウで、_Transparent BG_ 設定を **オン** に設定してください。"
 
 #: 3D/healthbars.md
@@ -3626,7 +3626,7 @@ msgstr ""
 
 #: 3D/characterbody3d_examples.md
 msgid "Let's examine this more closely. Player input should affect horizontal movement: forward/back along the ground, and rotation around the tank's center. Movement in the **Y** direction should only be affected by gravity, which means we don't want to set it to `0` every frame. This is why we're using the `vy` variable to temporarily hold that value while we assign a new velocity vector for the horizontal movement, then add it back in at the end."
-msgstr "これをもう少し詳しく見ていきます。プレイヤー入力は水平方向の移動に影響を与えるべきです。地面に沿った前後移動と、戦車の中心周りの回転です。**Y軸方向**の移動は、重力の影響を受けるべきものであり、つまり毎フレーム`0`に設定すべきではありません。これが、新しい速度ベクトルを水平移動用に割り当てる間、その値を一時的に保持するために`vy`変数を使用している理由です。そして最後に、この値を新たに追加します。"
+msgstr "これをもう少し詳しく見ていきます。プレイヤー入力は水平方向の移動に影響を与えるべきです。地面に沿った前後移動と、戦車の中心周りの回転です。**Y軸方向**の移動は、重力の影響を受けるべきものであり、つまり毎フレーム`0`に設定すべきではありません。これが、新しい速度ベクトルを水平移動用に割り当てる間、その値を一時的に保持するために`vy`変数を使用している理由です。そして最後に、この値を新たに追加してください。"
 
 #: 3D/characterbody3d_examples.md
 msgid "We've also rotated the individual {{< gd-icon MeshInstance3D >}}`MeshInstance` nodes `180` degrees around the **Y** axis. This is because they were modeled facing towards **+Z**, but **-Z** is the forward direction in Godot, and we don't want our tank to look like it's backwards."
@@ -3680,7 +3680,7 @@ msgstr "使用する`TransitionType`を変更することで、キューブの�
 
 #: 3D/rolling_cube.md
 msgid "In preparing this recipe, I experimented with a few different solutions to this problem:"
-msgstr "このレシピを作成するにあたり、私は異なる解決策をいくつか試しました。"
+msgstr "このレシピを作成するにあたり、異なる解決策をいくつか試しました。"
 
 #: 3D/rolling_cube.md
 msgid "![alt](/godot_recipes/4.x/img/cube_003.png)"
@@ -3768,7 +3768,7 @@ msgstr "ステップ1では："
 
 #: 3D/rolling_cube.md
 msgid "Add two lines to keep the mesh rotation after reset:"
-msgstr "Mesh の回転を保持するために 2 行追加します。"
+msgstr "Mesh の回転を保持するために 2 行追加してください。"
 
 #: 3D/rolling_cube.md
 msgid "If your cube's texture isn't symmetrical, you may notice that it's resetting after every roll. To preserve the rotation of the mesh, add the following:"
@@ -3840,7 +3840,7 @@ msgstr "### 仕上げ作業"
 
 #: 3D/3d_sphere_car.md
 msgid "For control, we're going to add four inputs to the _Input Map_:"
-msgstr "制御用に、以下の4つの入力を［インプットマップ］に追加します。"
+msgstr "制御用に、以下の4つの入力を［インプットマップ］に追加してください。"
 
 #: 3D/3d_sphere_car.md
 msgid "You want to make an arcade-style car game, so you're looking for simplicity over realistic physics. In this recipe, you'll learn how to make a fun, driveable car using a rolling sphere."
@@ -4015,7 +4015,7 @@ msgstr "#### 1. 斜面との整合性を確保"
 
 #: 3D/3d_sphere_car.md
 msgid "Finally, add a {{< gd-icon RayCast3D >}}`RayCast3D` node as a child of the {{< gd-icon MeshInstance3D >}}`CarMesh`. Set its **Target Position** to `(0, -1, 0)`."
-msgstr "最後に、{{< gd-icon RayCast3D >}}`RayCast3D`ノードを{{< gd-icon MeshInstance3D >}}`CarMesh`の子要素として追加します。**ターゲット位置**は`(0, -1, 0)`に設定してください。"
+msgstr "最後に、{{< gd-icon RayCast3D >}}`RayCast3D`ノードを{{< gd-icon MeshInstance3D >}}`CarMesh`の子要素として追加してください。**ターゲット位置**は`(0, -1, 0)`に設定してください。"
 
 #: 3D/3d_sphere_car.md
 msgid "Instead, we're going to use a single {{< gd-icon RigidBody3D >}}`RigidBody3D` sphere to handle the driving physics. The sphere will be invisible, and the car mesh will be placed at the sphere's location, making it look like it's the car that's driving."
@@ -4035,7 +4035,7 @@ msgstr "#### ボール"
 
 #: 3D/3d_sphere_car.md
 msgid "Add a sphere shape to the {{< gd-icon CollisionShape3D >}}`CollisionShape3D`. We're using a radius of `1` here, but you'll want to experiment with the size of the ball to get different driving behaviors."
-msgstr "{{< gd-icon CollisionShape3D >}}`CollisionShape3D` に球形状を追加します。ここでは半径を `1` に設定していますが、異なる走行挙動を得るには、ボールのサイズを調整して実験してみてください。"
+msgstr "{{< gd-icon CollisionShape3D >}}`CollisionShape3D` に球形状を追加してください。ここでは半径を `1` に設定していますが、異なる走行挙動を得るには、ボールのサイズを調整して実験してみてください。"
 
 #: 3D/3d_sphere_car.md
 msgid "**FIX THIS**"
@@ -4043,7 +4043,7 @@ msgstr "**修正が必要な箇所**"
 
 #: 3D/3d_sphere_car.md
 msgid "This one adds lots of visual appeal. We're going to tilt the car's body based on the speed of the turn. Add a variable at the top of the script:"
-msgstr "このスクリプトでは視覚的な魅力を大幅に向上させます。ターン速度に基づいて車のボディを傾斜させる機能を追加します。スクリプト上部に変数を追加しましょう。"
+msgstr "このスクリプトでは視覚的な魅力を大幅に向上させます。ターン速度に基づいて車のボディを傾斜させる機能を追加してください。スクリプト上部に変数を追加しましょう。"
 
 #: 3D/3d_sphere_car.md
 msgid ""
@@ -4209,7 +4209,7 @@ msgstr ""
 
 #: 3D/debug_overlay.md
 msgid "Add the `DebugOverlay` as an autoload and set it as a singleton. This way we can access it from any node. Add this script to it:"
-msgstr "以下の手順で「DebugOverlay」を自動読み込みとして追加し、シングルトンとして設定してください。これにより、どのノードからでもアクセス可能になります。このスクリプトに以下の内容を追加します。"
+msgstr "以下の手順で「DebugOverlay」を自動読み込みとして追加し、シングルトンとして設定してください。これにより、どのノードからでもアクセス可能になります。このスクリプトに以下の内容を追加してください。"
 
 #: 3D/debug_overlay.md
 msgid "We use `unproject_position()` to find the start and end points of the vector we want to draw. `draw_triangle()` is there to give us a nice pointed arrow appearance."
@@ -4481,7 +4481,7 @@ msgstr "FPSキャラクター"
 
 #: 3D/basic_fps.md
 msgid "Start with a {{< gd-icon CharacterBody3D >}}`CharacterBody3D` node, and add a {{< gd-icon CollisionShape3D >}}`CollisionShape3D` to it. The {{< gd-icon CapsuleShape3D >}}`CapsuleShape3D` collision shape is the most common choice. Depending on your world setup, you may want to add additional shapes here, but for the purposes of this example, we'll stick to the basics."
-msgstr "まず、{{< gd-icon CharacterBody3D >}}`CharacterBody3D` ノードから始め、次に {{< gd-icon CollisionShape3D >}}`CollisionShape3D` を追加します。この場合、最も一般的な選択肢は {{< gd-icon CapsuleShape3D >}}`CapsuleShape3D` 衝突形状です。ワールドの設定によっては、ここに他の形状も追加できますが、この例では基本に忠実に進めます。"
+msgstr "まず、{{< gd-icon CharacterBody3D >}}`CharacterBody3D` ノードから始め、次に {{< gd-icon CollisionShape3D >}}`CollisionShape3D` を追加してください。この場合、最も一般的な選択肢は {{< gd-icon CapsuleShape3D >}}`CapsuleShape3D` 衝突形状です。ワールドの設定によっては、ここに他の形状も追加できますが、この例では基本に忠実に進めます。"
 
 #: 3D/basic_fps.md
 msgid "First, we need the player to rotate left/right when we move the mouse the same way. Mouse input is represented in 2D, relative to the screen, so we need the `x` movement of the mouse to rotate the player's body around its `y` (vertical) axis. The `mouse_sensitivity` property we defined above lets us adjust how many pixels of mouse movement translate to a degree of rotation."
@@ -4517,7 +4517,7 @@ msgstr "以下の手順で「World」シーンにプレイヤーを追加して�
 
 #: 3D/basic_fps.md
 msgid "Add your weapon mesh as a child of the {{< gd-icon Camera3D >}}`Camera3D`. Then, in the editor view menu, choose \"2 Viewports\" and set one of them to preview the camera. Then, you can move around the weapon and easily see how it will look from the player's perspective."
-msgstr "武器モデルを{{< gd-icon Camera3D >}}`Camera3D`の子要素として追加します。その後、エディタービューメニューで「2つのビューポート」を選択し、そのうち1つをカメラプレビュー用に設定してください。これで、武器を自由に移動させながら、プレイヤー視点でどのように見えるかを容易に確認できるようになります。"
+msgstr "武器モデルを{{< gd-icon Camera3D >}}`Camera3D`の子要素として追加してください。その後、エディタービューメニューで「2つのビューポート」を選択し、そのうち1つをカメラプレビュー用に設定してください。これで、武器を自由に移動させながら、プレイヤー視点でどのように見えるかを容易に確認できるようになります。"
 
 #: 3D/basic_fps.md
 msgid "To add a little personality, try using an {{< gd-icon AnimationPlayer >}}`AnimationPlayer` to animate the weapon's position from side-to-side as the player moves."
@@ -4691,7 +4691,7 @@ msgstr "![alt](/godot_recipes/4.x/img/animtree_settings.png)"
 
 #: 3D/assets/character_animation.md
 msgid "Add an {{< gd-icon AnimationTree >}}`AnimationTree` to the scene. In the **Inspector**, set **Tree Root** to a new `AnimationNodeStateMachine`, in **Anim Player** select the character's {{< gd-icon AnimationPlayer >}}`AnimationPlayer` node, and check the box next to **Active**."
-msgstr "シーンに {{< gd-icon AnimationTree >}}`AnimationTree` コンポーネントを追加します。［インスペクター］で［ツリールート］を新規作成された `AnimationNodeStateMachine` に設定し、［Anim Player］ではキャラクターの {{< gd-icon AnimationPlayer >}}`AnimationPlayer` を選択します。最後に［有効化］チェックボックスをオンにしてください。"
+msgstr "シーンに {{< gd-icon AnimationTree >}}`AnimationTree` コンポーネントを追加してください。［インスペクター］で［ツリールート］を新規作成された `AnimationNodeStateMachine` に設定し、［Anim Player］ではキャラクターの {{< gd-icon AnimationPlayer >}}`AnimationPlayer` を選択します。最後に［有効化］チェックボックスをオンにしてください。"
 
 #: 3D/assets/character_animation.md
 msgid "In the {{< gd-icon AnimationPlayer >}}`AnimationPlayer`, find the \"Idle\", \"Running_A\", \"Walking_Backwards\", and \"Running_Strafe_Left\"/\"Running_Strafe_Right\" animations. Make sure they're all set to loop - you can test them by pressing the \"Play\" button: (▶). If any of them are not, reimport the character after setting them (see [Importing Assets](/4.x/3d/assets/importing_assets/))."
@@ -5038,7 +5038,7 @@ msgstr "移動と回転が実装できたところで、次はアニメーショ
 
 #: 3D/assets/character_controller.md
 msgid "We can handle attacks by first adding an input action called `\"attack\"`, which I've assigned to the left mouse button."
-msgstr "攻撃動作については、まず「攻撃」という入力アクションを追加します。このコマンドは左マウスボタンに割り当てています。"
+msgstr "攻撃動作については、まず「攻撃」という入力アクションを追加してください。このコマンドは左マウスボタンに割り当てています。"
 
 #: 3D/assets/character_controller.md
 msgid "Now we are ready to add a script to the player. We'll start with the variables we'll need:"
@@ -5078,7 +5078,7 @@ msgstr "移動処理は、プレイヤーの入力を取得して`move_and_slide
 
 #: 3D/assets/character_controller.md
 msgid "Size and position the capsule to enclose the character's body. For reference, here are the values I used:"
-msgstr "カプセルのサイズと位置を調整し、キャラクターの全身を覆うようにします。参考までに、私が使用した数値は以下の通りです。"
+msgstr "カプセルのサイズと位置を調整し、キャラクターの全身を覆うようにします。参考までに、使用した数値は以下の通りです。"
 
 #: 3D/assets/character_controller.md
 msgid "In this recipe, we'll assume you've already imported your character model and animations, and that you're set up {{< gd-icon AnimationTree >}}`AnimationTree` to handle transitioning and blending the animations. If you haven't yet, see [Importing Assets](/4.x/3d/assets/importing_assets/) and [Character Animation](/4.x/3d/assets/character_animation/) for details. As a reminder, we're using the art packs linked in the [section description](/godot_recipes/4.x/3d/assets/)."
@@ -5162,7 +5162,7 @@ msgstr "次に、地面に接地したタイミングを把握する必要があ
 
 #: 3D/assets/character_controller.md
 msgid "We'll add a variable for the rotation speed, so that we don't snap instantly to the new heading."
-msgstr "回転速度用の変数を追加します。これにより、新しい方位に瞬時にスナップするのを防ぎます。"
+msgstr "回転速度用の変数を追加してください。これにより、新しい方位に瞬時にスナップするのを防ぎます。"
 
 #: 3D/assets/character_controller.md
 msgid ""
@@ -5216,7 +5216,7 @@ msgstr "以下のキー操作を使用しています。`forward`、`back`、`le
 
 #: 3D/assets/character_controller.md
 msgid "Now let's get the camera working. We want to control the camera with mouse movement. We'll add a variable that lets us adjust the sensitivity."
-msgstr "それでは、カメラ機能を動作させます。マウス操作でカメラ制御ができるようにします。感度を調整できる変数を追加します。"
+msgstr "それでは、カメラ機能を動作させます。マウス操作でカメラ制御ができるようにします。感度を調整できる変数を追加してください。"
 
 #: 3D/assets/character_controller.md
 msgid "We've now got a functional, controllable character with a chase camera and multiple animations. What's next?"
@@ -5275,7 +5275,7 @@ msgid "Add an {{< gd-icon AnimationPlayer >}}`AnimationPlayer` node, which we'll
 msgstr ""
 "以下の手順で進めます。\n"
 "\n"
-"1. アニメーション用に「{{< gd-icon AnimationPlayer >}}AnimationPlayer」ノードを追加します。このノードを使ってドアの開閉アニメーションを実装します。最終的に以下のようなノードツリー構造になります。"
+"1. アニメーション用に「{{< gd-icon AnimationPlayer >}}AnimationPlayer」ノードを追加してください。このノードを使ってドアの開閉アニメーションを実装します。最終的に以下のようなノードツリー構造になります。"
 
 #: 3D/assets/level_design.md
 msgid "This option has a few drawbacks:"
@@ -5291,7 +5291,7 @@ msgstr "#### 外部ツール"
 
 #: 3D/assets/level_design.md
 msgid "Add the {{< gd-icon StaticBody3D >}}`StaticBody3D` child of the door to a group called \"interactable\". This is the object the player is going to detect. If it's in that group, the player will call `interact()` on it."
-msgstr "ドアの子要素である {{< gd-icon StaticBody3D >}}`StaticBody3D` を「インタラクタブル」というグループに追加します。これはプレイヤーが検出する対象となるオブジェクトです。このグループに属することで、プレイヤーは `interact()` メソッドを呼び出すことが可能になります。"
+msgstr "ドアの子要素である {{< gd-icon StaticBody3D >}}`StaticBody3D` を「インタラクタブル」というグループに追加してください。これはプレイヤーが検出する対象となるオブジェクトです。このグループに属することで、プレイヤーは `interact()` メソッドを呼び出すことが可能になります。"
 
 #: 3D/assets/level_design.md
 msgid "#### Directly placing models"
@@ -5623,7 +5623,7 @@ msgstr "### カメラのセットアップ方法"
 
 #: 3D/kinematic_car/car_camera.md
 msgid "Add an action in the InputMap for changing the camera. Here, we're using Tab and the right shoulder button:"
-msgstr "インプットマップにカメラ切り替え用のアクションを追加します。ここではTabキーと右ショルダーボタンを使用しています。"
+msgstr "インプットマップにカメラ切り替え用のアクションを追加してください。ここではTabキーと右ショルダーボタンを使用しています。"
 
 #: 3D/kinematic_car/car_camera.md
 msgid ""
@@ -5653,7 +5653,7 @@ msgstr "カメラと通信するために、位置変更が必要な時にシグ
 
 #: 3D/kinematic_car/car_camera.md
 msgid "Add a new scene with a {{< gd-icon Camera3D >}}`Camera`. Name it `ChaseCamera`, save it, and add a script."
-msgstr "新しいシーンを{{< gd-icon Camera3D >}}`Camera3D`で追加します。名前は「ChaseCamera」とし、保存してからスクリプトを追加してください。"
+msgstr "新しいシーンを{{< gd-icon Camera3D >}}`Camera3D`で追加してください。名前は「ChaseCamera」とし、保存してからスクリプトを追加してください。"
 
 #: 3D/kinematic_car/car_camera.md
 msgid "You want a \"chase camera\" that can follow your car (or any other object)."
@@ -5705,7 +5705,7 @@ msgstr "[キネマティックカー](/godot_recipes/4.x/ja/3d/kinematic_car/car
 
 #: 3D/kinematic_car/car_traction.md
 msgid "Next, add this code to the `calculate_steering()` function in `car_base.gd`, right after calculating the `new_heading`:"
-msgstr "次に、`car_base.gd` ファイルの `calculate_steering()` 関数内で、`new_heading` を計算した直後にこのコードを追加します。"
+msgstr "次に、`car_base.gd` ファイルの `calculate_steering()` 関数内で、`new_heading` を計算した直後にこのコードを追加してください。"
 
 #: 3D/kinematic_car/car_traction.md
 msgid "When the car is drifting, the heading of the car (the direction it's pointing) may not be the same as its velocity (the direction it's moving). Turning the wheel will make the car turn, but the velocity will not instantly \"catch up\" - instead, we'll use `lerp()` (linear interpolation) to gradually move the velocity to the desired direction."
@@ -5823,7 +5823,7 @@ msgstr "最終的に、画面上の任意の位置をクリックすることで
 
 #: input/multi_unit_select.md
 msgid "Processing the unit selection will happen in the world. We'll start with a {{< gd-icon Node2D >}}`Node2D` called \"World\" and add a few `Unit` instances in it. Attach a script to the World node and add the following variables:"
-msgstr "ユニット選択の処理はワールド内で行います。まず「World」という名前の{{< gd-icon Node2D >}}`Node2D`オブジェクトを作成し、その中に`Unit`インスタンスをいくつか追加します。Worldノードにスクリプトをアタッチし、以下の変数を設定してください。"
+msgstr "ユニット選択の処理はワールド内で行います。まず「World」という名前の{{< gd-icon Node2D >}}`Node2D`オブジェクトを作成し、その中に`Unit`インスタンスをいくつか追加してください。Worldノードにスクリプトをアタッチし、以下の変数を設定してください。"
 
 #: input/processing_inputs.md
 msgid "If the control wants to \"consume\" the event, it will call Control.accept_event() and the event will not spread any more"
@@ -6153,7 +6153,7 @@ msgstr ""
 
 #: animation/using_animation_sm.md
 msgid "Add an {{< gd-icon AnimationTree >}}`AnimationTree` node to the scene. In its _Tree Root_ property, choose \"New AnimationNodeStateMachine\"."
-msgstr "シーンに {{< gd-icon AnimationTree >}}`AnimationTree` ノードを追加します。［ツリールート］プロパティで「新規アニメーションノードステートマシン」を選択してください。"
+msgstr "シーンに {{< gd-icon AnimationTree >}}`AnimationTree` ノードを追加してください。［ツリールート］プロパティで「新規アニメーションノードステートマシン」を選択してください。"
 
 #: animation/using_animation_sm.md
 msgid "Now, with \"idle\" playing, if you click \"attack2\", you'll see the two attacks play in sequence."
@@ -6399,7 +6399,7 @@ msgstr "新しいエリアの`area_entered`シグナル（またはゲームの�
 
 #: animation/melee_attacks.md
 msgid "Move the animation to the first frame and check the _Disabled_ property of the area. Click the keyframe icon to add a track to the animation. Then advance the animation to the frame where the sword is extended, and add another keyframe with _Disabled_ unchecked. Finally, advance to the end of the swing and keyframe _Disabled_ on once more."
-msgstr "アニメーションを最初のフレームに移動し、領域の [無効] プロパティを確認します。キーフレームアイコンをクリックしてアニメーションにトラックを追加します。次に、剣が伸びているフレームまでアニメーションを進め、[無効] を解除した状態でもう1つのキーフレームを追加します。最後に、スイングの終わりまで進み、再度 [無効] を有効にしてキーフレームを作成します。"
+msgstr "アニメーションを最初のフレームに移動し、領域の [無効] プロパティを確認します。キーフレームアイコンをクリックしてアニメーションにトラックを追加してください。次に、剣が伸びているフレームまでアニメーションを進め、[無効] を解除した状態でもう1つのキーフレームを追加してください。最後に、スイングの終わりまで進み、再度 [無効] を有効にしてキーフレームを作成します。"
 
 #: animation/melee_attacks.md
 msgid "### Changing the hitbox size"
@@ -6411,7 +6411,7 @@ msgstr "複数の攻撃アニメーションがある場合、ダメージ範囲
 
 #: animation/melee_attacks.md
 msgid "Add an {{< gd-icon Area2D >}}`Area2D` and {{< gd-icon CollisionShape2D >}}`CollisionShape2D` to the scene. We'll use a rectangle shape for the hitbox and size it so that it covers the sword during the swing frame."
-msgstr "シーンに {{< gd-icon Area2D >}}`Area2D` と {{< gd-icon CollisionShape2D >}}`CollisionShape2D` を追加します。ヒットボックスには矩形形状を使用し、剣が振り上げフレームで完全にカバーされるようにサイズを調整します。"
+msgstr "シーンに {{< gd-icon Area2D >}}`Area2D` と {{< gd-icon CollisionShape2D >}}`CollisionShape2D` を追加してください。ヒットボックスには矩形形状を使用し、剣が振り上げフレームで完全にカバーされるようにサイズを調整します。"
 
 #: animation/_index.md
 msgid "# <i class='fas fa-film'></i>&nbsp;Animation"
@@ -6471,7 +6471,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_scene_01.png)"
 
 #: g101/3d/101_3d_03.md
 msgid "We're going to continue using the Kenney Platformer Kit we downloaded in [Part 2](/godot_recipes/4.x/g101/3d/101_3d_02/). Select all the `block*.glb` files and in the **Import** tab set their **Root Type** to {{< gd-icon StaticBody3D >}}`StaticBody3D`. Uncheck the **Root Name** property and click **Reimport**. Select `blockLarge.glb` and make a new inherited scene. Use the **Create Single Convex Collision Sibling** option on the mesh using the menu as you did in the last tutorial. Now you can save the scene - I recommend making a separate folder for this, as soon you're going to have a bunch of scenes representing the differently shaped platform parts."
-msgstr "引き続き、[パート2](/godot_recipes/4.x/ja/g101/3d/101_3d_02/)でダウンロードしたKenney Platformer Kitを使用します。すべての`block*.glb`ファイルを選択し、**インポート**タブでその**ルートの型**を{{< gd-icon StaticBody3D >}}`StaticBody3D`に設定してください。**ルート名**プロパティはチェックを外しておき、**再インポート**をクリックします。`blockLarge.glb`を選択して新しい継承シーンを作成します。前回のチュートリアルと同様に、メニューからメッシュに対して **「Collision Shape Placement」で兄弟** オプションを使いましょう。これでシーンを保存できます - 私は別にフォルダを作成することをオススメします。なぜなら、すぐに様々な形状のプラットフォームパーツを表すシーンが大量に出来上がるからです。"
+msgstr "引き続き、[パート2](/godot_recipes/4.x/ja/g101/3d/101_3d_02/)でダウンロードしたKenney Platformer Kitを使用します。すべての`block*.glb`ファイルを選択し、**インポート**タブでその**ルートの型**を{{< gd-icon StaticBody3D >}}`StaticBody3D`に設定してください。**ルート名**プロパティはチェックを外しておき、**再インポート**をクリックします。`blockLarge.glb`を選択して新しい継承シーンを作成します。前回のチュートリアルと同様に、メニューからメッシュに対して **「Collision Shape Placement」で兄弟** オプションを使いましょう。これでシーンを保存できます。また別にフォルダを作成することをオススメします。なぜなら、すぐに様々な形状のプラットフォームパーツを表すシーンが大量に出来上がるからです。"
 
 #: g101/3d/101_3d_03.md
 msgid "In its properties, set **Spring Length** to `5`, and set its **Position** to `(0, 1, 0)`, which is at the character's head. Note the yellow line indicating the **Spring Length**. The camera will move along this line - at its end whenever possible, but moving closer if an obstacle is there."
@@ -6605,7 +6605,7 @@ msgid ""
 "duplicate the block a few times and drag them to arrange."
 msgstr ""
 "前のステップで作成した「Ground」平面と木箱を含むシーンを開いてください。\n"
-"まず、木箱を削除し、大型ブロックのインスタンスを追加します。これらのブロックを整列させて配置できるようにしたいので、以下の手順を実行してください。\n"
+"まず、木箱を削除し、大型ブロックのインスタンスを追加してください。これらのブロックを整列させて配置できるようにしたいので、以下の手順を実行してください。\n"
 "ビューポート上部の「Transform」メニューから「スナップ設定」を選択します → _移動スナップ_ を `0.5` に設定します。\n"
 "次に、「スナップモード」ボタンをクリックするか（または **`Y`** キーを押す）ことでスナップモードを有効にします。これでブロックをいくつか複製し、ドラッグして配置できるようになります。"
 
@@ -6619,7 +6619,7 @@ msgid ""
 "Open a new scene and start with a {{< gd-icon CharacterBody3D >}}`CharacterBody3D` named \"Character\". This `PhysicsBody` node behaves very much like its 2D equivalent (you've already done the 2D tutorials, right?). It has a `move_and_slide()` method that we'll use to perform the movement and collision detection."
 msgstr ""
 "次に、プラットフォーム上を歩き回れるようにキャラクターを作成します。\n"
-"新しいシーンを開き、\"Character\"という名前の{{< gd-icon CharacterBody3D >}}`CharacterBody3D`コンポーネントを追加します。この`PhysicsBody`ノードは2D版とほぼ同じ動作をします（2Dチュートリアルはお済みですか？）。このコンポーネントには`move_and_slide()`メソッドが用意されており、これを使って移動と衝突検出を行います。"
+"新しいシーンを開き、\"Character\"という名前の{{< gd-icon CharacterBody3D >}}`CharacterBody3D`コンポーネントを追加してください。この`PhysicsBody`ノードは2D版とほぼ同じ動作をします（2Dチュートリアルはお済みですか？）。このコンポーネントには`move_and_slide()`メソッドが用意されており、これを使って移動と衝突検出を行います。"
 
 #: g101/3d/101_3d_03.md
 msgid "If you're curious how you would do this in first person, see the [Basic FPS Character](/godot_recipes/4.x/3d/basic_fps/index.html) recipe. You'll notice several similarities with the 3rd person script we wrote above."
@@ -6656,7 +6656,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_move_03.gif)"
 
 #: g101/3d/101_3d_03.md
 msgid "Add a capsule-shaped {{< gd-icon MeshInstance3D >}}`MeshInstance3D` and a matching {{< gd-icon CollionShape3D >}}`CollionShape3D`. Remember, you can add a `StandardMaterial3D` to the mesh and set its **Albedo/Color** property to change the color."
-msgstr "メッシュインスタンス3D用のカプセル型{{< gd-icon MeshInstance3D >}}`MeshInstance3D`と、それに対応させた衝突形状{{< gd-icon CollionShape3D >}}`CollionShape3D`を追加します。また、メッシュに`StandardMaterial3D`を追加して**アルベド/カラー**プロパティを設定すれば、色を変更できることも覚えておいてください。"
+msgstr "メッシュインスタンス3D用のカプセル型{{< gd-icon MeshInstance3D >}}`MeshInstance3D`と、それに対応させた衝突形状{{< gd-icon CollionShape3D >}}`CollionShape3D`を追加してください。また、メッシュに`StandardMaterial3D`を追加して**アルベド/カラー**プロパティを設定すれば、色を変更できることも覚えておいてください。"
 
 #: g101/3d/101_3d_03.md
 msgid "Let's add one more movement to the player: jumping."
@@ -6990,7 +6990,7 @@ msgid ""
 "You can enable snapping here to make it easier to align."
 msgstr ""
 "以下の手順で進めます。\n"
-"1. `CSGBox` オブジェクトを追加します。\n"
+"1. `CSGBox` オブジェクトを追加してください。\n"
 "2. その幅を `0.5`、高さを元の部屋と同じ `5` に設定します（この高さは元の部屋と一致させます）。\n"
 "3. 奥行きは部屋の大きさの約半分になるように調整してください。\n"
 "4. ここではスナップ機能を有効にしておくと、配置作業をより簡単に行えます。"
@@ -7093,7 +7093,7 @@ msgstr "次のパートでは、より複雑なシーンを構築する方法と
 
 #: g101/3d/101_3d_02.md
 msgid "Add a script to the root node and add the following:"
-msgstr "ルートノードにスクリプトを追加し、以下の内容を追加します。"
+msgstr "ルートノードにスクリプトを追加し、以下の内容を追加してください。"
 
 #: g101/3d/101_3d_02.md
 msgid "Why is the scene so dark? Because there's no light! By default, Godot doesn't add any lighting or environment to your scenes, like it does in the editor viewport. This is great when you want to set up your own specific lighting, but for a quick example scene like this, there's a shortcut."
@@ -7130,7 +7130,7 @@ msgid ""
 "Let's make the camera a little more dynamic by having it slowly orbit around the\n"
 "scene. Select the root node and add a {{< gd-icon Node3D >}}`Node3D`, which will be located at `(0, 0, 0)` and name it\n"
 "\"CameraHub\". In the scene tree, drag the camera to make it a child of this new node. Now, if the {{< gd-icon Node3D >}}`CameraHub` rotates around the **y** axis, it will drag the camera along with it."
-msgstr "シーン内でカメラをゆっくりと回転させながら周回させることで、よりダイナミックな動きを演出します。ルートノードを選択し、{{< gd-icon Node3D >}}`Node3D`コンポーネントを追加します。このコンポーネントは座標 `(0, 0, 0)` に配置され、「CameraHub」と命名してください。シーンツリーでカメラをドラッグし、この新しいノードの子オブジェクトとして設定します。これで、{{< gd-icon Node3D >}}`CameraHub`が **y** 軸を中心に回転すると、それに連動してカメラも一緒に移動するように動作します。"
+msgstr "シーン内でカメラをゆっくりと回転させながら周回させることで、よりダイナミックな動きを演出します。ルートノードを選択し、{{< gd-icon Node3D >}}`Node3D`コンポーネントを追加してください。このコンポーネントは座標 `(0, 0, 0)` に配置され、「CameraHub」と命名してください。シーンツリーでカメラをドラッグし、この新しいノードの子オブジェクトとして設定します。これで、{{< gd-icon Node3D >}}`CameraHub`が **y** 軸を中心に回転すると、それに連動してカメラも一緒に移動するように動作します。"
 
 #: g101/3d/101_3d_02.md
 msgid "In the last part, we started a 3D project and looked at how to navigate and create 3D objects. In this part, you'll learn how to import existing 3D objects that you've made or downloaded and how to use more of Godot's 3D nodes."
@@ -7152,7 +7152,7 @@ msgstr "{{% /notice %}}"
 
 #: g101/3d/101_3d_02.md
 msgid "Create a new scene with a {{< gd-icon Node3D >}}`Node3D` root. The first child we'll add is one to give us a \"ground\" to stack some crates on. Add a {{< gd-icon StaticBody3D >}}`StaticBody3D` called \"Ground\", and to that add a {{< gd-icon MeshInstance3D >}}`MeshInstance3D`. In the **Mesh** property, select \"New BoxMesh\" and then click it to open its properties. Set **Size** to `(10, 0.1, 10)` so that we have a nice large surface. However, it would look better if it weren't plain white."
-msgstr "{{< gd-icon Node3D >}}`Node3D`をルートとして新規シーンを作成します。最初に追加する子オブジェクトは、木箱を積み上げるための「地面」機能を提供するものです。\"Ground\"という名前の {{< gd-icon StaticBody3D >}}`StaticBody3D`を作成し、それに {{< gd-icon MeshInstance3D >}}`MeshInstance3D`を追加します。**メッシュ** プロパティから 新規で「BoxMesh」 を選択し、クリックしてそのプロパティを開きます。**サイズ** を `(10, 0.1, 10)` に設定することで、広々とした表面を確保できます。ただし、白色一色では見た目がやや単調になるため、もう少し工夫を加えます。"
+msgstr "{{< gd-icon Node3D >}}`Node3D`をルートとして新規シーンを作成します。最初に追加する子オブジェクトは、木箱を積み上げるための「地面」機能を提供するものです。\"Ground\"という名前の {{< gd-icon StaticBody3D >}}`StaticBody3D`を作成し、それに {{< gd-icon MeshInstance3D >}}`MeshInstance3D`を追加してください。**メッシュ** プロパティから 新規で「BoxMesh」 を選択し、クリックしてそのプロパティを開きます。**サイズ** を `(10, 0.1, 10)` に設定することで、広々とした表面を確保できます。ただし、白色一色では見た目がやや単調になるため、もう少し工夫を加えます。"
 
 #: g101/3d/101_3d_02.md
 msgid "Importing 3D Objects"
@@ -7160,7 +7160,7 @@ msgstr "3Dオブジェクトのインポート"
 
 #: g101/3d/101_3d_02.md
 msgid "Select the `crate2` mesh and you'll see a **Mesh** menu appear at the top of the viewport. Click it and select **Create Single Convex Collision Sibling**. Godot will automatically add a {{< gd-icon CollionShape3D >}}`CollionShape3D` with a collision shape that matches the mesh."
-msgstr "メッシュ `crate2` を選択すると、ビューポート上部に **Mesh** メニューが表示されます。クリックして「コリジョンシェイプを作成」から「Collision Shape Placement」で**兄弟** を選択してください。Godotは自動的にメッシュに対応した衝突形状の {{< gd-icon CollionShape3D >}}`CollionShape3D` を追加します。"
+msgstr "メッシュ `crate2` を選択すると、ビューポート上部に **Mesh** メニューが表示されます。クリックして「コリジョンシェイプを作成」から「Collision Shape Placement」で**兄弟** を選択してください。Godotは自動的にメッシュに対応した衝突形状の {{< gd-icon CollionShape3D >}}`CollionShape3D` を追加してください。"
 
 #: g101/3d/101_3d_02.md
 msgid ""
@@ -7211,7 +7211,7 @@ msgstr "メッシュのプロパティには、さらに**マテリアル**設�
 
 #: g101/3d/101_3d_02.md
 msgid "Click the **Add Sun to Scene** button, and Godot will add a {{< gd-icon DirectionalLight3D >}}`DirectionalLight3D` to your scene. Click **Add Environment to Scene** and it will do the same with the preview sky by adding a {{< gd-icon WorldEnvironment >}}`WorldEnvironment` node."
-msgstr " 「太陽をシーンに追加」ボタンをクリックしてください。Godotはシーンに {{< gd-icon DirectionalLight3D >}}`DirectionalLight3D` ノードを追加します。次に「環境をシーンに追加」をクリックすると、プレビュー用の空に対しても同様に処理が行われ、{{< gd-icon WorldEnvironment >}}`WorldEnvironment` ノードが追加されます。"
+msgstr " 「太陽をシーンに追加」ボタンをクリックしてください。Godotはシーンに {{< gd-icon DirectionalLight3D >}}`DirectionalLight3D` ノードを追加してください。次に「環境をシーンに追加」をクリックすると、プレビュー用の空に対しても同様に処理が行われ、{{< gd-icon WorldEnvironment >}}`WorldEnvironment` ノードが追加されます。"
 
 #: g101/3d/101_3d_05.md
 msgid ""
@@ -7286,7 +7286,7 @@ msgid ""
 msgstr ""
 "以下の手順で進めてください。\n"
 "\n"
-"まず、プレイヤーノードに`RayCast`ノードを追加します。これは細い青色の線として表示されます。デフォルトでは、_キャスト方向_ プロパティは `(0, -1, 0)` に設定されており、下向きを指しています。これは正しい設定ですが、さらに前方に移動させて、キャラクターの*前面*に向かって下向きを指すようが必要です。"
+"まず、プレイヤーノードに`RayCast`ノードを追加してください。これは細い青色の線として表示されます。デフォルトでは、_キャスト方向_ プロパティは `(0, -1, 0)` に設定されており、下向きを指しています。これは正しい設定ですが、さらに前方に移動させて、キャラクターの*前面*に向かって下向きを指すようが必要です。"
 
 #: g101/3d/101_3d_05.md
 msgid ""
@@ -7811,7 +7811,7 @@ msgid ""
 "haven't really built a health system, we're just going to \"bounce\" the\n"
 "character as if it got hurt. We need to add the following to the character\n"
 "script:"
-msgstr "現在は、キャラクターが「ダメージ」を受けた時の反応を定義する必要があります。状態システム自体はまだ構築していないため、怪我をしたかのように「弾き飛ばされる」動作を実装します。以下の内容をキャラクタースクリプトに追加します。"
+msgstr "現在は、キャラクターが「ダメージ」を受けた時の反応を定義する必要があります。状態システム自体はまだ構築していないため、怪我をしたかのように「弾き飛ばされる」動作を実装します。以下の内容をキャラクタースクリプトに追加してください。"
 
 #: g101/3d/101_3d_04.md
 msgid "Using Areas"
@@ -7874,7 +7874,7 @@ msgstr "{{< gd-icon Area3D >}}`Area3D` ノードは主に以下の目的で使�
 msgid ""
 "Add a script and connect the `Timer`'s `timeout` signal and the {{< gd-icon Area3D >}}`Area3D`'s\n"
 "`body_entered` signal. Then add the following:"
-msgstr "{{< gd-icon Area3D >}}以下を追加します。"
+msgstr "{{< gd-icon Area3D >}}以下を追加してください。"
 
 #: g101/3d/101_3d_04.md
 msgid "We're going to use {{< gd-icon Area3D >}}`Area3D` to create three types of objects:"
@@ -8070,7 +8070,7 @@ msgstr "## スクリプトの構成要素"
 
 #: g101/gdscript/gdscript_01.md
 msgid "Open the editor and add a {{< gd-icon Sprite2D >}}`Sprite2D` node to empty scene. Right-click on the new node, and choose \"Attach Script\". You can also click the button next to the search box."
-msgstr "エディターを開き、空のシーンに {{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加します。新規追加したノードを右クリックし、「スクリプトをアタッチ」を選択します。または、検索ボックス横のボタンをクリックしてスクリプトをアタッチすることもできます。"
+msgstr "エディターを開き、空のシーンに {{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加してください。新規追加したノードを右クリックし、「スクリプトをアタッチ」を選択します。または、検索ボックス横のボタンをクリックしてスクリプトをアタッチすることもできます。"
 
 #: g101/gdscript/gdscript_01.md
 msgid "You can think of it as the coding version of using the Inspector - GDScript knows all about Godot nodes and how to access them, plus it allows you to change them dynamically."
@@ -9964,7 +9964,7 @@ msgstr "![alt](/godot_recipes/4.x/img/steering_diagram.png)"
 msgid ""
 "To change the behavior to seek a target, we'll use the `acceleration`. However,\n"
 "we don't want the missile to \"turn on a dime\", so we'll add a variable to control its \"steering\" force. This will give the missile a turning radius that can be adjusted for different behavior. We also need a `target` variable so that the missile knows what to chase. We'll set that in `start()` as well:"
-msgstr "ターゲット捜索動作を変更するため、`acceleration`（加速度）を利用します。ただし、ミサイルが「一瞬で方向転換する」のは避けたいので、制御する「ステアリング力」を調整する変数を追加します。この設定により、異なる挙動に対応した旋回半径を調整できるようになります。また、ミサイルが追跡対象を把握するための`target`変数も必要です。これも`start()`関数内で適切に初期化します。"
+msgstr "ターゲット捜索動作を変更するため、`acceleration`（加速度）を利用します。ただし、ミサイルが「一瞬で方向転換する」のは避けたいので、制御する「ステアリング力」を調整する変数を追加してください。この設定により、異なる挙動に対応した旋回半径を調整できるようになります。また、ミサイルが追跡対象を把握するための`target`変数も必要です。これも`start()`関数内で適切に初期化します。"
 
 #: ai/homing_missile.md
 msgid "See the [related recipes](#related-recipes) section below for more information."
@@ -10046,7 +10046,7 @@ msgstr "この例では、{{< gd-icon Sprite2D >}}`Sprite2D`の子要素とし�
 
 #: ai/pet_following.md
 msgid "You need to have a game entity such as a pet or minion, follow a character."
-msgstr "ゲーム要素としてペットやミニオンを追加します。なので、キャラクターに追従させる必要があります。"
+msgstr "ゲーム要素としてペットやミニオンを追加してください。なので、キャラクターに追従させる必要があります。"
 
 #: ai/pet_following.md
 msgid "The `parent` variable holds a reference to the character the pet should follow. We then get the `FollowPoint` node from that so we can get its position in `_physics_process()`:"
@@ -10062,7 +10062,7 @@ msgstr "追いかけるペット"
 
 #: ai/pet_following.md
 msgid "We start by adding a {{< gd-icon Marker2D >}}`Marker2D` to the character. This will represent the place where the pet wants to \"hang out\" near the character."
-msgstr "まず、キャラクターに {{< gd-icon Marker2D >}}`Marker2D` を追加します。このマーカーは、ペットがプレイヤーの近くに「滞在したい」場所を示すものです。"
+msgstr "まず、キャラクターに {{< gd-icon Marker2D >}}`Marker2D` を追加してください。このマーカーは、ペットがプレイヤーの近くに「滞在したい」場所を示すものです。"
 
 #: ai/pet_following.md
 msgid "![alt](/godot_recipes/4.x/img/pet_follow_01.png)"
@@ -10078,7 +10078,7 @@ msgstr "例えば、使用するレイが32本の場合、`interest`は以下の
 
 #: ai/context_map.md
 msgid "In our agent's script, we'll store an array called `interest`, tracking in which directions the agent wants to go."
-msgstr "エージェントのスクリプト内では、エージェントが移動したい方向を追跡するための配列「`interest`」を定義します。"
+msgstr "エージェントのスクリプト内では、エージェントが移動したい方向を追跡するための配列`interest`を定義します。"
 
 #: ai/context_map.md
 msgid "This will vary depending on what your agent's goal is. If it's to chase the player, then the `interest` values should be high in the direction of the player. You can even have multiple targets: closer goals have higher interest, but if an obstacle cancels them out, the lower scoring goals will win."
@@ -10142,7 +10142,7 @@ msgstr "これを実現する方法はいくつかありますが、エージェ
 
 #: ai/context_map.md
 msgid "Now we can populate the `danger` array. Using the `Physics2DDirectSpaceState`, we cast a ray in each direction. If there's a hit, we add a `1` in that spot."
-msgstr "次に、`danger`配列を埋めます。`Physics2DDirectSpaceState`を使用して、各方向にレイをキャストします。衝突があった場合、その位置に`1`を追加します。"
+msgstr "次に、`danger`配列を埋めます。`Physics2DDirectSpaceState`を使用して、各方向にレイをキャストします。衝突があった場合、その位置に`1`を追加してください。"
 
 #: ai/context_map.md
 msgid "* [James Keats: AI Context Behaviors](https://jameskeats.com/portfolio/contextbhvr.html)"
@@ -10150,15 +10150,15 @@ msgstr "* [ジェームズ・キーツ：AIコンテキスト行動管理](https
 
 #: ai/context_map.md
 msgid "In `_physics_process()` we'll populate the context arrays and execute the movement. Note we've broken the steps of the algorithm in to separate functions. Once we've found our chosen direction, we turn towards it as much as possible (based on `steer_force`) and move."
-msgstr "In `_physics_process()` we'll populate the context arrays and execute the movement. Note we've broken the steps of the algorithm in to separate functions. Once we've found our chosen direction, we turn towards it as much as possible (based on `steer_force`) and move."
+msgstr "`_physics_process()` 関数では、コンテキスト配列を埋め、移動処理を実行します。注目すべき点として、アルゴリズムの各ステップを別々の関数に分割しています。目的の方向を特定したら、可能な限りその方向へ向きを変え（`steer_force` に基づく）、その後移動を行います。"
 
 #: ai/context_map.md
 msgid "* [Andrew Fray: Context Behaviours Know How to Share](https://andrewfray.wordpress.com/2013/03/26/context-behaviours-know-how-to-share/)"
-msgstr "* [Andrew Fray: Context Behaviours Know How to Share](https://andrewfray.wordpress.com/2013/03/26/context-behaviours-know-how-to-share/)"
+msgstr "* [アンドリュー・フレイ: 状況に基づく振舞いがどのように共有されるべきか](https://andrewfray.wordpress.com/2013/03/26/context-behaviours-know-how-to-share/)"
 
 #: ai/context_map.md
 msgid "Combining these two arrays, we can eliminate any `interest` directions that are also contained in `danger`. By summing up the remaining `interest` directions, we're left with a new direction pointing away from the obstacle."
-msgstr "これら2つの配列を組み合わせることで、`危険度`に含まれる`興味度`方向を除去することが可能です。残った`興味度`方向を合計すると、障害物から離れる新しい方向ベクトルが得られます。"
+msgstr "これら2つの配列を組み合わせることで、`danger(危険度)`に含まれる`interest(興味度)`方向を除去することが可能です。残った`interest`方向を合計すると、障害物から離れる新しい方向ベクトルが得られます。"
 
 #: ai/context_map.md
 msgid "Finally, we can use the context arrays to choose our direction. Looping through the `danger` array, zero the `interest` wherever there's danger. Then, sum up and normalize the remaining interest vectors."
@@ -10712,7 +10712,7 @@ msgid ""
 "Open \"Project Settings\" and in the \"Input Map\" tab, add a new action called \"click\".\n"
 "Connect it to the left mouse button."
 msgstr ""
-"「プロジェクト設定」を開き、「インプット」タブで「クリック」という新しいアクションを追加します。\n"
+"「プロジェクト設定」を開き、「インプット」タブで「クリック」という新しいアクションを追加してください。\n"
 "これを左マウスボタンに接続してください。"
 
 #: physics/Godot3_KYN_rigidbody1.md
@@ -10774,7 +10774,7 @@ msgid ""
 "default global gravity. You can find this setting in \"Project Settings\" under\n"
 "_Physics -> 2d_. You can also try changing the Block's `Gravity Scale` property in the\n"
 "Inspector. I'm using a value of `3`."
-msgstr "※「再生」を押すとブロックがゆっくりと下方に落ちていくのが確認できるでしょう。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクターで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。私は値を`3`に設定しています。"
+msgstr "※「再生」を押すとブロックがゆっくりと下方に落ちていくのが確認できるでしょう。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクターで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。ここでは値を`3`に設定しています。"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -10794,7 +10794,7 @@ msgstr "よくある間違いとして、次のようなコードを`_physics_pr
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "Here's the image I'm using for my ship:"
-msgstr "以下が私の船で使用している画像です。"
+msgstr "以下が船で使用している画像です。"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "### Stacking blocks"
@@ -11134,7 +11134,7 @@ msgstr "ご覧の通り、`_integrate_forces()` 関数には `state` という�
 
 #: physics/asteroids_physics.md
 msgid "Then add the new function:"
-msgstr "次に新しい機能を追加します。"
+msgstr "次に新しい機能を追加してください。"
 
 #: physics/asteroids_physics.md
 msgid "### Warping"
@@ -11174,7 +11174,7 @@ msgstr "![alt](/godot_recipes/4.x/img/asteroids_wrap.gif)"
 
 #: physics/asteroids_physics.md
 msgid "First, we'll add a new variable for this:"
-msgstr "まず、このために新規変数を追加します。"
+msgstr "まず、このために新規変数を追加してください。"
 
 #: physics/asteroids_physics.md
 msgid "Finally, in `_integrate_forces()`, if there's a `teleport_position` set, we'll use it and then clear it:"
@@ -12492,7 +12492,7 @@ msgstr "以下の3つの機能をカメラに実装が必要です。"
 
 #: 2D/multi_target_camera.md
 msgid "The key functionality here comes from `Rect2`. We want to find a rectangle that encloses all the targets, which we can get with the `expand()` method. We then grow the rect by the `margin`."
-msgstr "ここでの主要な機能は`Rect2`によるものです。すべてのターゲットを包含する長方形を見つける必要があり、これは`expand()`メソッドを使用することで取得できます。その後、この矩形に`margin`分の大きさを追加します。"
+msgstr "ここでの主要な機能は`Rect2`によるものです。すべてのターゲットを包含する長方形を見つける必要があり、これは`expand()`メソッドを使用することで取得できます。その後、この矩形に`margin`分の大きさを追加してください。"
 
 #: 2D/multi_target_camera.md
 msgid "Here's how the script starts:"
@@ -12634,7 +12634,7 @@ msgstr "![alt](/godot_recipes/4.x/img/2d_shoot_02.gif)"
 
 #: 2D/2d_shooting.md
 msgid "In the character's script we add a variable to hold the bullet scene for instancing:"
-msgstr "キャラクタースクリプト内で、インスタンス化用の弾丸シーンを保持する変数を追加します。"
+msgstr "キャラクタースクリプト内で、インスタンス化用の弾丸シーンを保持する変数を追加してください。"
 
 #: 2D/2d_shooting.md
 msgid "Set up the nodes and configure the sprite and collision shape. If your texture is oriented pointing up, like the one above, make sure to rotate the {{< gd-icon Sprite2D >}}`Sprite` node by `90°` so that it's pointing to the right, ensuring it matches the parent’s “forward” direction."
@@ -12976,7 +12976,7 @@ msgstr "{{< gd-icon Tween >}}以下の機能をスムーズに動作させるた
 
 #: 2D/moving_platforms.md
 msgid "Now add a script to the root {{< gd-icon Node2D >}}`Node2D`:"
-msgstr "次にルートノードにスクリプトを追加します。{{< gd-icon Node2D >}}`Node2D`:"
+msgstr "次にルートノードにスクリプトを追加してください。{{< gd-icon Node2D >}}`Node2D`:"
 
 #: 2D/moving_platforms.md
 msgid "Set up the {{< gd-icon Sprite2D >}}`Sprite2D`'s **Texture** and the collision shape appropriately. In the {{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`, set the **Sync to Physics** property \"On\". Since we're moving the body in code, this ensures that it's moved during the physics step, keeping it in sync with the player and other physics bodies."
@@ -13193,7 +13193,7 @@ msgstr ""
 
 #: 2D/touchscreen_camera.md
 msgid "First we're checking for a touch event (`InputEventScreenTouch`). We add the event to the `events` dictionary. The event's `index` property is our dictionary's key. We also remove the event if it's not `pressed`, which means the touch has ended."
-msgstr "まず、タッチイベント（`InputEventScreenTouch`）をチェックしています。このイベントを`events`辞書に追加します。イベントの`index`プロパティが辞書のキーとして使います。また、このイベントが「押されていない」（つまりタッチが終了した場合）には削除します。"
+msgstr "まず、タッチイベント（`InputEventScreenTouch`）をチェックしています。このイベントを`events`辞書に追加してください。イベントの`index`プロパティが辞書のキーとして使います。また、このイベントが「押されていない」（つまりタッチが終了した場合）には削除します。"
 
 #: 2D/touchscreen_camera.md
 msgid "This will allow us to pan the camera around and it will return to the player when we release the touch."
@@ -13219,7 +13219,7 @@ msgstr "`_process()`関数内では、ターゲットへの移動処理を行い
 
 #: 2D/touchscreen_camera.md
 msgid "If we get a drag event, we also add to the dictionary. Note that this will be *updating* the value - index `0` was already there from the first touch event, for example, and has now become a drag event."
-msgstr "ドラッグイベントが発生した場合も同様に辞書に追加します。なお、この場合は既存の値を更新する形になります - 例えば最初のタッチイベント時点で既に存在していたインデックス`0`が、今回はドラッグイベントとして再登録されることになります。"
+msgstr "ドラッグイベントが発生した場合も同様に辞書に追加してください。なお、この場合は既存の値を更新する形になります - 例えば最初のタッチイベント時点で既に存在していたインデックス`0`が、今回はドラッグイベントとして再登録されることになります。"
 
 #: 2D/touchscreen_camera.md
 msgid "Here's an example captured directly from a mobile device. The yellow circle indicates the touch location."
@@ -13571,7 +13571,7 @@ msgid ""
 "of its own - it's just there to contain the rest of the scene."
 msgstr ""
 "まず、2つのビューポートを含む新しいシーンを作成します。\n"
-"ルートノードとして使用するノードを作成します。私は通常、`Node`を使用します。このノードには独自のプロパティが何もないため（単にシーンの他の要素を保持するためのものです）、使い勝手が良いからです。"
+"ルートノードとして使用するノードを作成します。通常、`Node`を使用します。このノードには独自のプロパティが何もないため（単にシーンの他の要素を保持するためのものです）、使い勝手が良いからです。"
 
 #: 2D/splitscreen_demo.md
 msgid ""
@@ -13638,7 +13638,7 @@ msgstr "以下のスクリプトを各カメラに適用してください。"
 
 #: 2D/splitscreen_demo.md
 msgid "The two players are added to a \"World\" scene containing a {{< gd-icon TileMap >}}`TileMap`:"
-msgstr "以下の手順に従って、2つのプレイヤーを {{< gd-icon TileMap >}}`TileMap` を含む「ワールド」シーンに追加します。"
+msgstr "以下の手順に従って、2つのプレイヤーを {{< gd-icon TileMap >}}`TileMap` を含む「ワールド」シーンに追加してください。"
 
 #: 2D/splitscreen_demo.md
 msgid ""
@@ -13680,7 +13680,7 @@ msgid ""
 msgstr ""
 "さらにもう 1 つ  の {{< gd-icon ViewportContainer >}}`ViewportContainer` が必要です。今回は `Main` の子要素として配置します。この場合、\n"
 "*ストレッチ機能は使用しません*。代わりに {{< gd-icon Viewport >}} の {{< gd-icon Viewport >}}`Viewport` を追加し、サイズを `(340, 200)` に設定します\n"
-"その後、 の `Camera2D` 要素を追加します。表示画面中央に配置するため、{{< gd-icon Camera2D >}}`Camera2D` の _位置_ を `(512, 300)` に設定しましょう。表示範囲を拡大するには、_ズーム倍率_ を `(9, 9)` に設定してください。このカメラについても忘れずに\n"
+"その後、 の `Camera2D` 要素を追加してください。表示画面中央に配置するため、{{< gd-icon Camera2D >}}`Camera2D` の _位置_ を `(512, 300)` に設定しましょう。表示範囲を拡大するには、_ズーム倍率_ を `(9, 9)` に設定してください。このカメラについても忘れずに\n"
 "**現在使用中** を選択してください。"
 
 #: 2D/splitscreen_demo.md
@@ -13940,7 +13940,7 @@ msgstr "`offset`プロパティは、2点間のパスを取得する際に重要
 
 #: 2D/grid_pathfinding.md
 msgid "We can find the path between the two points using the `get_point_path()` method, but we also need to visualize it. We can use a {{< gd-icon Line2D >}}`Line2D`, so add one to the scene."
-msgstr "2点間の経路は`get_point_path()`メソッドを使用して取得できますが、これを可視化する必要もあります。ここでは{{< gd-icon Line2D >}}`Line2D`を使用できるので、シーンに追加します。"
+msgstr "2点間の経路は`get_point_path()`メソッドを使用して取得できますが、これを可視化する必要もあります。ここでは{{< gd-icon Line2D >}}`Line2D`を使用できるので、シーンに追加してください。"
 
 #: 2D/grid_pathfinding.md
 msgid "A big factor that affects the resulting path is what _heuristic_ you choose to use. The term \"heuristic\" refers to a \"best guess\", and in the context of pathfinding just means: what direction should we try first when moving toward the goal?"
@@ -14072,11 +14072,11 @@ msgstr "2D見下ろし方式カーコントローラーを作成したい。"
 
 #: 2D/car_steering.md
 msgid "The recipe below is broken into 5 parts, each adding a different feature to the car's movement. Feel free to mix-and-match for your needs."
-msgstr "以下のレシピは5つのセクションに分かれており、それぞれが車の異なる動作要素を追加します。必要に応じて自由に組み合わせてご使用ください。"
+msgstr "以下のレシピは5つのセクションに分かれており、それぞれが車の異なる動作要素を追加してください。必要に応じて自由に組み合わせてご使用ください。"
 
 #: 2D/car_steering.md
 msgid "Run the project and the car should move and turn. It's still very unnatural though - the car starts and stops instantly. To fix that, we'll add acceleration into the calculation."
-msgstr "プロジェクトを実行すると、車が動き始め、方向転換するはずです。ただし現在の動作はまだ不自然で、車の動きが瞬時に開始・停止します。これを改善するため、計算に加速度を追加します。"
+msgstr "プロジェクトを実行すると、車が動き始め、方向転換するはずです。ただし現在の動作はまだ不自然で、車の動きが瞬時に開始・停止します。これを改善するため、計算に加速度を追加してください。"
 
 #: 2D/car_steering.md
 msgid "At high speeds (or even low ones, if desired), the turning force should cause the tires to slip and result in a fishtailing/sliding motion."
@@ -14333,7 +14333,7 @@ msgstr "プレイヤーがプラットフォームの端から離れた場合、
 
 #: 2D/coyote_time.md
 msgid "We're going to add this to an already existing platform character. See the [Platform character](/godot_recipes/4.x/2d/platform_character/) recipe for how to set one up."
-msgstr "この機能を既存のプラットフォームキャラクターに追加します。設定方法については[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)を参照してください。"
+msgstr "この機能を既存のプラットフォームキャラクターに追加してください。設定方法については[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)を参照してください。"
 
 #: 2D/8_direction.md
 msgid "![alt](/godot_recipes/4.x/img/8_direction_02w.png)"
@@ -14573,7 +14573,7 @@ msgid ""
 "Here's my big secret for getting the most out of tutorials like this and others you may find online. At the end, once you've finished building the project, immediately delete it and start over. This time, try and re-create it without looking at the tutorial. If you get stuck, look at *just* that part, then close it again."
 msgstr ""
 "{{% notice style=\"tip\" title=\"効果的な学習の秘訣\" %}}\n"
-"このようなチュートリアルや、オンラインで見つけられる他の教材を最大限に活用するための私のとっておきの方法をご紹介します。作業が終わったらすぐにプロジェクトを削除し、最初からやり直してください。今度は、解説を見ずに自分で再現してみることに挑戦してみます。行き詰まった部分だけは解説を参照しても構いませんが、その後は再度閉じて進めてください。"
+"このようなチュートリアルや、オンラインで見つけられる他の教材を最大限に活用するためのとっておきの方法をご紹介します。作業が終わったらすぐにプロジェクトを削除し、最初からやり直してください。今度は、解説を見ずに自分で再現してみることに挑戦してみます。行き詰まった部分だけは解説を参照しても構いませんが、その後は再度閉じて進めてください。"
 
 #: games/first_2d/first_2d_10.md
 msgid "## Starting the game"
@@ -14585,7 +14585,7 @@ msgstr "メインモジュールでプレイヤーの `died` シグナルを接�
 
 #: games/first_2d/first_2d_10.md
 msgid "In `Main` as a child of the `CanvasLayer`, add a {{< gd-icon CenterContainer >}}`CenterContainer` and set its layout to **Full Rect**. Then add a {{< gd-icon TextureButton >}}`TextureButton` child. Name this button `Start` and add the `START (48 x 8).png` image as its **Normal** texture."
-msgstr "`Main`を`CanvasLayer`の子要素として追加し、そこに{{< gd-icon CenterContainer >}}`CenterContainer`を追加し、そのレイアウトを**フル矩形**に設定します。次に、{{< gd-icon TextureButton >}}`TextureButton`をその子要素として追加します。このボタンに「Start」という名前を付け、その**通常状態**のテクスチャとして`START (48 x 8).png`画像を設定します。"
+msgstr "`Main`を`CanvasLayer`の子要素として追加し、そこに{{< gd-icon CenterContainer >}}`CenterContainer`を追加し、そのレイアウトを**フル矩形**に設定します。次に、{{< gd-icon TextureButton >}}`TextureButton`をその子要素として追加してください。このボタンに「Start」という名前を付け、その**通常状態**のテクスチャとして`START (48 x 8).png`画像を設定します。"
 
 #: games/first_2d/first_2d_10.md
 msgid "Add a reference at the top of the script:"
@@ -14613,7 +14613,7 @@ msgstr "この操作で2秒間「ゲームオーバー」画面が表示され�
 
 #: games/first_2d/first_2d_10.md
 msgid "Our last step is to add a start button and a \"game over\" state to the game."
-msgstr "最後のステップとして、ゲームにスタートボタンと「ゲームオーバー」状態を追加します。"
+msgstr "最後のステップとして、ゲームにスタートボタンと「ゲームオーバー」状態を追加してください。"
 
 #: games/first_2d/first_2d_10.md
 msgid "Connect this button's `pressed` texture to `Main` and add this code:"
@@ -14621,7 +14621,7 @@ msgstr "このボタンの`pressed`テクスチャを`Main`に接続し、この
 
 #: games/first_2d/first_2d_10.md
 msgid "Now add the `new_game()` function:"
-msgstr "次に、`new_game()`関数を追加します。"
+msgstr "次に、`new_game()`関数を追加してください。"
 
 #: games/first_2d/first_2d_10.md
 msgid "Currently when we run the game, it starts immediately. Let's add a button to start it."
@@ -14784,7 +14784,7 @@ msgstr "アセットパックフォルダから、`Player_charged_beam (16 x 16)
 
 #: games/first_2d/first_2d_05.md
 msgid "Next, we'll add a `start()` function similar to the one we made for the `Bullet`. This will let us set initial values for the player, as well as resetting them when the game restarts."
-msgstr "次に、`Bullet`と同様に`start()`関数を追加します。これにより、プレイヤーの初期値を設定できるほか、ゲームが再起動するたびにこれらの値をリセットできるようになります。"
+msgstr "次に、`Bullet`と同様に`start()`関数を追加してください。これにより、プレイヤーの初期値を設定できるほか、ゲームが再起動するたびにこれらの値をリセットできるようになります。"
 
 #: games/first_2d/first_2d_05.md
 msgid "This places the player at the bottom center of the screen - a good place to start. It also ensures that the cooldown timer has the correct wait time."
@@ -14984,7 +14984,7 @@ msgstr "* **テクスチャ** 設定で **繰り返し表示** を **有効** �
 msgid "Add a {{< gd-icon Sprite2D >}}`Sprite2D` child. Name this sprite \"Background\" and add the `Space_BG (2 frames) (64 x 64).png` as its texture."
 msgstr ""
 "以下の手順で操作してください。\n"
-"1.  アイコンを使用して、新しい {{< gd-icon Sprite2D >}}`Sprite2D` 子オブジェクトを追加します。\n"
+"1.  アイコンを使用して、新しい {{< gd-icon Sprite2D >}}`Sprite2D` 子オブジェクトを追加してください。\n"
 "2. このスプライトに「Background」という名前を付けます。\n"
 "3. テクスチャとして `Space_BG (2 frames) (64 x 64).png` を適用します。"
 
@@ -15133,7 +15133,7 @@ msgstr "![alt](/godot_recipes/4.x/img/2d_101_06.png?width=800)"
 
 #: games/first_2d/first_2d_02.md
 msgid "With the `Player` node selected, add another node: a {{< gd-icon Sprite2D >}}`Sprite2D`. To keep things organized, let's rename this node to `Ship`."
-msgstr "`Player`ノードを選択した状態で、もう1つのノードを追加します。{{< gd-icon Sprite2D >}}`Sprite2D`。整理しやすくするため、このノードの名前を`船`に変更してください。"
+msgstr "`Player`ノードを選択した状態で、もう1つのノードを追加してください。{{< gd-icon Sprite2D >}}`Sprite2D`。整理しやすくするため、このノードの名前を`船`に変更してください。"
 
 #: games/first_2d/first_2d_02.md
 msgid "To display these, select the `Ship` node and add a child {{< gd-icon AnimatedSprite2D >}}`AnimatedSprite2D` node and name it \"Boosters\"."
@@ -15501,7 +15501,7 @@ msgstr "プレイヤーが射撃できるようになったので、今度は撃
 
 #: games/first_2d/first_2d_07.md
 msgid "Now add another animation called \"explode\". Set its length to `0.4` seconds."
-msgstr "次に、「explode」というアニメーションを追加します。長さを `0.4` 秒に設定してください。"
+msgstr "次に、「explode」というアニメーションを追加してください。長さを `0.4` 秒に設定してください。"
 
 #: games/first_2d/first_2d_07.md
 msgid "The `start_pos` variable is going to keep track of the enemy's starting position so that after it moves, it can return to its original location. We'll set it when the enemy is spawned and we call its `start()` function."
@@ -15661,7 +15661,7 @@ msgstr "このコンテナでは、各数字を表示する {{< gd-icon TextureR
 
 #: games/first_2d/first_2d_09.md
 msgid "Now we'll add a script to `ScoreCounter` that will choose the correct **Region** values for whichever digit it needs to display."
-msgstr "これから、`ScoreCounter` にスクリプトを追加します。このスクリプトは、表示する必要のある数字に応じて適切な **リージョン** 値を選択します。"
+msgstr "これから、`ScoreCounter` にスクリプトを追加してください。このスクリプトは、表示する必要のある数字に応じて適切な **リージョン** 値を選択します。"
 
 #: games/first_2d/first_2d_09.md
 msgid "Change this function in `main.gd`:"
@@ -15685,7 +15685,7 @@ msgstr "![alt](/godot_recipes/4.x/img/2d_101_22.png)"
 
 #: games/first_2d/first_2d_09.md
 msgid "Next, we'll add an {{< gd-icon HBoxContainer >}}`HBoxContainer`. This type of container organizes its children horizontally. Under that, add a {{< gd-icon TextureProgressBar >}}`TextureProgressBar`, which will represent our ship's shield level. Name it `ShieldBar`."
-msgstr "次に、{{< gd-icon HBoxContainer >}}`HBoxContainer` を追加します。このコンテナは子要素を水平方向に配置します。その上に、船のシールドレベルを表示する{{< gd-icon TextureProgressBar >}}`TextureProgressBar` を追加し、「`ShieldBar`」と名前を付けます。"
+msgstr "次に、{{< gd-icon HBoxContainer >}}`HBoxContainer` を追加してください。このコンテナは子要素を水平方向に配置します。その上に、船のシールドレベルを表示する{{< gd-icon TextureProgressBar >}}`TextureProgressBar` を追加し、「`ShieldBar`」と名前を付けます。"
 
 #: games/first_2d/first_2d_09.md
 msgid "## Player shield"
@@ -15773,7 +15773,7 @@ msgstr "## メイン画面にUIを追加"
 
 #: games/first_2d/first_2d_09.md
 msgid "Start a new scene and add an {{< gd-icon HBoxContainer >}}`HBoxContainer`. Name it `ScoreCounter` then set it to **Top Wide** and set the **Alignment** to \"End\". Also, set the **Theme Overrides/Constants/Separation** to `0` (you need to check the box next to the property)."
-msgstr "新しいシーンを開始し、{{< gd-icon HBoxContainer >}}`HBoxContainer`を追加します。「スコアカウンター」と名前を付け、**レイアウト設定**を**ワイド・トップ配置**に設定し、**整列方法**を「末尾」に設定してください。さらに、**テーマのオーバーライド/定数/分離幅**を `0` に設定します（プロパティ名の横にあるチェックボックスを必ず有効化してください）。"
+msgstr "新しいシーンを開始し、{{< gd-icon HBoxContainer >}}`HBoxContainer`を追加してください。「スコアカウンター」と名前を付け、**レイアウト設定**を**ワイド・トップ配置**に設定し、**整列方法**を「末尾」に設定してください。さらに、**テーマのオーバーライド/定数/分離幅**を `0` に設定します（プロパティ名の横にあるチェックボックスを必ず有効化してください）。"
 
 #: games/first_2d/first_2d_09.md
 msgid "On each of the nodes, click the down arrow next to the `AtlasTexture` and select \"Make Unique\"."
@@ -15860,7 +15860,7 @@ msgstr "時刻 `0` に _フォント/サイズ_ (`64`) のキーフレームを�
 
 #: games/circle_jump/circle_jump_05.md
 msgid "Instance the HUD in the main scene, and add `$HUD.hide()` to the `_ready()` and `_on_Jumper_died()` functions. In `new_game()` we need to show the hud and display a message:"
-msgstr "メインシーンにHUDインスタンスを作成し、`_ready()`関数と`_on_Jumper_died()`関数内に`$HUD.hide()`を追加します。`new_game()`関数では、HUDを表示してメッセージを表示します。以下のように実装します。"
+msgstr "メインシーンにHUDインスタンスを作成し、`_ready()`関数と`_on_Jumper_died()`関数内に`$HUD.hide()`を追加してください。`new_game()`関数では、HUDを表示してメッセージを表示します。以下のように実装します。"
 
 #: games/circle_jump/circle_jump_05.md
 msgid "We'll make two animations: one to set the initial values, and one to animate the message display. Add the first animation, \"init\" and click the \"Autoplay on Load\" button. Set the length to `0.1`."
@@ -15922,7 +15922,7 @@ msgstr "次に、ディスプレイを更新するためのメソッドを含む
 
 #: games/circle_jump/circle_jump_05.md
 msgid "Add a new scene with a `CanvasLayer` root to be our HUD. Give it two children: a `MarginContainer` named \"ScoreBox\" and a `Label\" named \"Message\"."
-msgstr "HUDとして使用する`CanvasLayer`をルートとする新しいシーンを追加します。以下の2つの子要素を持たせます。「スコアボックス」という名前の`MarginContainer`と、「メッセージ」という名前の`Label`です。"
+msgstr "HUDとして使用する`CanvasLayer`をルートとする新しいシーンを追加してください。以下の2つの子要素を持たせます。「スコアボックス」という名前の`MarginContainer`と、「メッセージ」という名前の`Label`です。"
 
 #: games/circle_jump/circle_jump_05.md
 msgid "This message will show information during gameplay (level up, bonuses, etc). We want it to be animated - to appear and then fade out. Add an `AnimationPlayer` to the scene."
@@ -15938,7 +15938,7 @@ msgstr "[https://github.com/kidscancode/circle_jump](https://github.com/kidscanc
 
 #: games/circle_jump/circle_jump_05.md
 msgid "Add the second animation, \"show_message\". Set its length to `0.75` and keyframe _Visibility_ to \"On\"."
-msgstr "2番目のアニメーション「show_message」を追加します。長さを `0.75` に、キーフレームの透明度設定を『オン』に設定してください。"
+msgstr "2番目のアニメーション「show_message」を追加してください。長さを `0.75` に、キーフレームの透明度設定を『オン』に設定してください。"
 
 #: games/circle_jump/circle_jump_01.md games/circle_jump/circle_jump_02.md
 #: games/circle_jump/circle_jump_03.md games/circle_jump/circle_jump_04.md
@@ -16022,7 +16022,7 @@ msgstr "カスタムエンジンモジュールを使用するには、エンジ
 
 #: games/circle_jump/circle_jump_11.md
 msgid "First, we'll change the `enable_ads` to give it a setter function:"
-msgstr "まず、`enable_ads`の値を変更できるように、セッター関数を追加します。"
+msgstr "まず、`enable_ads`の値を変更できるように、セッター関数を追加してください。"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "Run the game on your device, and you should see the test ad appear:"
@@ -16080,7 +16080,7 @@ msgstr "ボタンを追加するには、3行目のボタン列が必要にな�
 
 #: games/circle_jump/circle_jump_11.md
 msgid "And add the setter function:"
-msgstr "また、セッター関数を追加します。"
+msgstr "また、セッター関数を追加してください。"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "## Configuring export"
@@ -16088,7 +16088,7 @@ msgstr "## エクスポートの設定"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "In the `SettingsScreen` scene add a `Button` called \"Ads\" to the middle row. Set its text to \"Disable Ads\", its _Custom Font_ (a size of 48 works well), and set its _Custom Styles_ all to \"New StyleBoxEmpty\". Don't forget to add the button to the \"buttons\" group."
-msgstr "[SettingsScreen]シーンに「Ads」という名前の「Button」を中央の行に追加します。テキストを「広告を無効にする」に設定し、カスタムフォント（サイズ48が適切です）を適用し、さらにカスタムスタイルをすべて「New StyleBoxEmpty」に設定してください。最後に、このボタンを「buttons」グループに追加することを忘れないでください。"
+msgstr "[SettingsScreen]シーンに「Ads」という名前の「Button」を中央の行に追加してください。テキストを「広告を無効にする」に設定し、カスタムフォント（サイズ48が適切です）を適用し、さらにカスタムスタイルをすべて「New StyleBoxEmpty」に設定してください。最後に、このボタンを「buttons」グループに追加することを忘れないでください。"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "## Disabling ads"
@@ -16340,7 +16340,7 @@ msgstr "次に、［入力デバイス／ポインティング］セクション
 
 #: games/circle_jump/circle_jump_04.md
 msgid "The screen should start offscreen, so set the _Offset_ on the root node to `(500, 0)`. Then add a script to the scene:"
-msgstr "スクリーンは画面外に表示開始されるので、ルートノードの _オフセット値_ を `(500, 0)` に設定してください。その後、シーンにスクリプトを追加します。"
+msgstr "スクリーンは画面外に表示開始されるので、ルートノードの _オフセット値_ を `(500, 0)` に設定してください。その後、シーンにスクリプトを追加してください。"
 
 #: games/circle_jump/circle_jump_04.md
 msgid "Run it to test out the screen transitions:"
@@ -16388,7 +16388,7 @@ msgstr "`change_screen()`メソッドは、選択した画面への遷移を処�
 
 #: games/circle_jump/circle_jump_04.md
 msgid "Now we can make our three inherited scenes. For each, name the root node, change the Label text, and add `TextureButton`s to the \"Buttons\" containers. Use the images from the assets folder for each button's _Normal_ texture. Name each button for its function (\"Play\", \"Settings\", etc.) and add it to the group \"buttons\"."
-msgstr "これで3つの継承されたシーンを作成できます。それぞれについて：ルートノードに名前を付け、ラベルテキストを変更し、「Buttons」コンテナに「TextureButton」を追加してください。各ボタンのノーマルテクスチャには、アセットフォルダ内の画像を使いましょう。各ボタンにはその機能に応じた名前を付けてください（例：「再生」「設定」など）。そしてこれらをすべてグループ「buttons」に追加します。"
+msgstr "これで3つの継承されたシーンを作成できます。それぞれについて：ルートノードに名前を付け、ラベルテキストを変更し、「Buttons」コンテナに「TextureButton」を追加してください。各ボタンのノーマルテクスチャには、アセットフォルダ内の画像を使いましょう。各ボタンにはその機能に応じた名前を付けてください（例：「再生」「設定」など）。そしてこれらをすべてグループ「buttons」に追加してください。"
 
 #: games/circle_jump/circle_jump_04.md
 msgid "Add this to the `new_game()` function:"
@@ -16420,7 +16420,7 @@ msgstr "このスクリプトでは、画面の表示／非表示を切り替え
 
 #: games/circle_jump/circle_jump_04.md
 msgid "Finally, add an `HBoxContainer` named \"Buttons\" which will hold the buttons we add to the screens. Set its _Separation_ to `75`. Then duplicate the node so that we have another row of buttons."
-msgstr "最後に、「ボタン」という名前の `HBoxContainer` を追加します。このコンテナには、後でスクリーンに追加するボタンが格納されます。その _間隔_ を `75` に設定します。次にノードを複製して、もう1列分のボタンを作成します。"
+msgstr "最後に、「ボタン」という名前の `HBoxContainer` を追加してください。このコンテナには、後でスクリーンに追加するボタンが格納されます。その _間隔_ を `75` に設定します。次にノードを複製して、もう1列分のボタンを作成します。"
 
 #: games/circle_jump/circle_jump_04.md
 msgid "Next is a `VBoxContainer` to organize the main elements. Set its _Custom Constants/Separation_ to `150`."
@@ -16512,7 +16512,7 @@ msgstr "以下の2ファイルを編集が必要です。"
 
 #: games/circle_jump/circle_jump_03.md
 msgid "The last thing we'll do for this part is add a \"fill\" effect to the circle to show that the orbits are running out. To begin, we'll use some drawing code from the [official docs](https://docs.godotengine.org/en/latest/tutorials/2d/custom_drawing_in_2d.html#arc-polygon-function):"
-msgstr "このセクションの最後の作業として、軌道が尽きつつあることを示すために円に「塗り」効果を追加します。まず、[公式ドキュメント](https://docs.godotengine.org/ja/latest/tutorials/2d/custom_drawing_in_2d.html#arc-polygon-function)にある描画コードを使用します。"
+msgstr "このセクションの最後の作業として、軌道が尽きつつあることを示すために円に「塗り」効果を追加してください。まず、[公式ドキュメント](https://docs.godotengine.org/ja/latest/tutorials/2d/custom_drawing_in_2d.html#arc-polygon-function)にある描画コードを使用します。"
 
 #: games/circle_jump/circle_jump_03.md
 msgid "If we try it out, everything looks good so far:"
@@ -16624,7 +16624,7 @@ msgstr "以下に更新済みの `BaseScreen.gd` を示します。"
 
 #: games/circle_jump/circle_jump_07.md
 msgid "Open up the `Circle` scene and add a `Tween` node called \"MoveTween\". Add this to the top of the circle script:"
-msgstr "シーン「Circle」を開き、「Tween」ノードを「MoveTween」という名前で追加してください。これをサークルスクリプトの先頭に追加します。"
+msgstr "シーン「Circle」を開き、「Tween」ノードを「MoveTween」という名前で追加してください。これをサークルスクリプトの先頭に追加してください。"
 
 #: games/circle_jump/circle_jump_07.md
 msgid "Our first task is to fix a bug with our menu system. Pressing the \"Start\" button launches a new game, but as the screen is moving off, it can be pressed again. Try \"spamming\" the start button - disaster ensues!"
@@ -16680,11 +16680,11 @@ msgstr "円形の場合、シェーダーマテリアルリソースを使用し
 
 #: games/circle_jump/circle_jump_06.md
 msgid "To play sounds, we'll be adding several `AudioStreamPlayer` nodes to different scenes."
-msgstr "サウンドを再生するために、複数の`AudioStreamPlayer`ノードを異なるシーンに追加します。"
+msgstr "サウンドを再生するために、複数の`AudioStreamPlayer`ノードを異なるシーンに追加してください。"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "First, we'll add a new script by choosing _File -> New Script_ in the script tab. Name the script `settings.gd`."
-msgstr "まず、スクリプトタブで［ファイル］→［新規スクリプト］を選択して新しいスクリプトを追加します。スクリプト名は `settings.gd` とします。"
+msgstr "まず、スクリプトタブで［ファイル］→［新規スクリプト］を選択して新しいスクリプトを追加してください。スクリプト名は `settings.gd` とします。"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "Now to play the sounds, we can call their `play()` methods. Add this to `Main.new_game()`:"
@@ -16700,7 +16700,7 @@ msgstr "円形の色はそのモードによって決定されるため、実際
 
 #: games/circle_jump/circle_jump_06.md
 msgid "In the next part, we'll add a movement to the circles."
-msgstr "次のパートでは、円に動きを追加します。"
+msgstr "次のパートでは、円に動きを追加してください。"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "And in `Jumper.gd`, we add the sounds like so:"
@@ -16748,7 +16748,7 @@ msgstr "このスクリプトでは、ゲームの設定パラメーターを配
 
 #: games/circle_jump/circle_jump_06.md
 msgid "- First, add one to the `Main` scene and name it \"Music\". For its _Stream_ property use `res://assets/audio/Music_Light-Puzzles.ogg`."
-msgstr "- 1. まず「メイン」シーンに「音楽」という名前を追加します。［ストリーム］プロパティには `res://assets/audio/Music_Light-Puzzles.ogg` を使いましょう。"
+msgstr "- 1. まず「メイン」シーンに「音楽」という名前を追加してください。［ストリーム］プロパティには `res://assets/audio/Music_Light-Puzzles.ogg` を使いましょう。"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "In `Screens.gd` add this to `_on_button_pressed()`:"
@@ -16764,7 +16764,7 @@ msgstr "## 音声設定"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "- To the `Screens` scene, add another called \"Click\", which will play when we tap buttons. Use `menu_click.wav` from the assets folder."
-msgstr "- 「スクリーン」シーンに新たに「クリック」という画面を追加します。ボタンをタップした際にこの画面が表示されるようにします。アセットフォルダから「menu_click.wav」を使用します。"
+msgstr "- 「スクリーン」シーンに新たに「クリック」という画面を追加してください。ボタンをタップした際にこの画面が表示されるようにします。アセットフォルダから「menu_click.wav」を使用します。"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "## Adding sound"
@@ -16842,7 +16842,7 @@ msgstr "設定を保存しよう"
 
 #: games/circle_jump/circle_jump_12.md
 msgid "The button is setup just like the others - add it to the \"buttons\" group so that it will get registered. In the `Screens.gd`, add another `match` for this button's name:"
-msgstr "ボタンは他のボタンと同様に設定されています。「ボタン」グループに追加して登録されるようにしてください。`Screens.gd`ファイルで、このボタンの名前を対象とするもう一つの`match`を追加します。"
+msgstr "ボタンは他のボタンと同様に設定されています。「ボタン」グループに追加して登録されるようにしてください。`Screens.gd`ファイルで、このボタンの名前を対象とするもう一つの`match`を追加してください。"
 
 #: games/circle_jump/circle_jump_12.md
 msgid "To reach it, we've added a new button on the \"Title\" screen:"
@@ -17040,7 +17040,7 @@ msgstr "カメラが次のサークルに移動するときに「瞬間移動」
 
 #: games/circle_jump/circle_jump_02.md
 msgid "Finally, we'll add some visuals to the circles. First, we'll add an effect when the player jumps off and the circle disappears. Then, we'll add a capture effect for when we hit a circle."
-msgstr "最後に、円に視覚効果を追加します。まず、プレイヤーがジャンプして離れた時に円が消えるエフェクトを実装します。さらに、円に触れた際のキャプチャーエフェクトも追加します。"
+msgstr "最後に、円に視覚効果を追加してください。まず、プレイヤーがジャンプして離れた時に円が消えるエフェクトを実装します。さらに、円に触れた際のキャプチャーエフェクトも追加してください。"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "And in Main, our capture method calls the capture:"
@@ -17082,7 +17082,7 @@ msgstr "Circleの`init()`メソッドにもこれを追加しておきます。"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "Add an `AnimationPlayer` node to the Circle."
-msgstr "Circle ノードに `AnimationPlayer` を追加します。"
+msgstr "Circle ノードに `AnimationPlayer` を追加してください。"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "And then in `Jumper.gd`, our jump function becomes:"
@@ -17234,7 +17234,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_shoot_02.png)"
 
 #: 3D/3d_shooting.md
 msgid "Now in the tank (or whatever object you have doing the shooting), add a {{< gd-icon Marker3D >}}`Marker3D` child at the point where you want the bullets to appear. In the case of our tank, we're placing it at the end of the cannon barrel:"
-msgstr "タンク内（または射撃を行うオブジェクト）の任意の位置に、弾丸が出現させたい場所に {{< gd-icon Marker3D >}}`Marker3D` 子要素を追加します。今回の戦車の場合、砲身の先端部分に配置します。"
+msgstr "タンク内（または射撃オブジェクト）の任意の位置に、弾丸が出現させたい場所に {{< gd-icon Marker3D >}}`Marker3D` 子要素を追加してください。今回の戦車の場合、砲身の先端部分に配置します。"
 
 #: 3D/3d_shooting.md
 msgid "For this example, we'll use the \"Mini Tank\" that we set up in [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)."
@@ -17332,7 +17332,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_car_05.gif)"
 msgid "The {{< gd-icon KinematicBody3D >}}`CharacterBody3D` has a warning about missing collision shapes, so we'll need to fix that first. We're going to add 3 {{< gd-icon CollisionShape3D >}}`CollisionShape`s: a {{< gd-icon BoxShape3D >}}`BoxShape` for the car's body, and a {{< gd-icon CylinderShape3D >}}`CylinderShape` for each of the front and rear axles."
 msgstr ""
 "{{< gd-icon KinematicBody3D >}}`CharacterBody3D` には衝突形状の欠落に関する警告メッセージが表示されています。まずはこの問題を修正する必要があります。\n"
-"* {{< gd-icon CollisionShape3D >}}`CollisionShape` を追加します。\n"
+"* {{< gd-icon CollisionShape3D >}}`CollisionShape` を追加してください。\n"
 "* 車両本体用に {{< gd-icon BoxShape3D >}}`BoxShape` を設定します。\n"
 "* 前輪用と後輪用にそれぞれ1つずつ {{< gd-icon CylinderShape3D >}}`CylinderShape` をおきます。"
 
@@ -17489,7 +17489,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_07_02.png)"
 
 #: g101/3d/101_3d_07.md
 msgid "Start with a `CharacterBody3D`. To this we'll add two `CollisionShape` nodes (\"Body\" and \"Feet\"). We also want to have a `Camera`, but we need to be careful about how we handle rotation. The *character* should rotate in **Y**, but only the camera should rotate in **X** (for looking up and down). To make this work, add a `Node3D` node, which we'll call \"Pivot\", and add the `Camera` to that."
-msgstr "`CharacterBody3D` オブジェクトを用意します。このオブジェクトに以下の2つの `CollisionShape` ノードを追加します。「ボディ用」と「足用」です。また、カメラも必要ですが、回転処理には注意が必要です。*キャラクター*は**Y軸**に沿ってのみ回転し、一方でカメラのみが**X軸**方向に回転する必要があります（上下方向の視点移動のため）。これを実現するために、新たに `Node3D` オブジェクトを作成し、「ピボット」と呼ぶことにします。このピボットノードにカメラを追加してください。"
+msgstr "`CharacterBody3D` オブジェクトを用意します。このオブジェクトに以下の2つの `CollisionShape` ノードを追加してください。「ボディ用」と「足用」です。また、カメラも必要ですが、回転処理には注意が必要です。*キャラクター*は**Y軸**に沿ってのみ回転し、一方でカメラのみが**X軸**方向に回転する必要があります（上下方向の視点移動のため）。これを実現するために、新たに `Node3D` オブジェクトを作成し、「ピボット」と呼ぶことにします。このピボットノードにカメラを追加してください。"
 
 #: g101/3d/101_3d_06.md
 msgid ""
@@ -17592,8 +17592,8 @@ msgid ""
 "Add a script and connect the `body_entered` signal, but this time, we want\n"
 "the object to do something to the character:"
 msgstr ""
-"ついに、環境に危険要素を追加します。`spikes.glb`オブジェクトのインスタンスを作成し、コインと同様にArea3Dとして設定します。\n"
-"スクリプトを追加して`body_entered`シグナルを接続しますが、今回はオブジェクトがキャラクターに対して特定の動作を行うようにします。"
+"ついに、環境に危険要素を追加してください。`spikes.glb`オブジェクトのインスタンスを作成し、コインと同様にArea3Dとして設定します。\n"
+"スクリプトを追加して`body_entered`シグナルを接続しますが、今回はオブジェクトがキャラクターに対して特定の動作をさせます。"
 
 #: g101/3d/101_3d_04.md
 msgid ""
@@ -17762,7 +17762,7 @@ msgstr "![alt](/godot_recipes/4.x/img/ai_context_11.png)"
 
 #: ai/context_map.md
 msgid "For this demo, we'll use a generic \"Agent\" object. In your game, this might be a car driving around a track, a monster patrolling a dungeon, or some other kind of game entity. Our agent will use a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`, but remember, you can use this technique with any kind of object - the algorithm is about the entity choosing a direction to move, how it moves is entirely separate."
-msgstr "このデモでは、汎用的な「エージェント」オブジェクトを使用します。実際のゲームであれば、これはレースコースを走る車、ダンジョンを巡回するモンスター、あるいは他の種類のゲーム内エンティティなどに相当するでしょう。私たちのエージェントは `{{< gd-icon CharacterBody2D >}}CharacterBody2D` を使用しますが、覚えておいていただきたいのは、このテクニックはどんな種類のオブジェクトにも適用可能だということです。アルゴリズム自体は対象が移動する方向を選択する方法に関するものであり、実際の移動方法は完全に別個の問題です。"
+msgstr "このデモでは、汎用的な「エージェント」オブジェクトを使用します。実際のゲームであれば、これはレースコースを走る車、ダンジョンを巡回するモンスター、あるいは他の種類のゲーム内エンティティなどに相当するでしょう。エージェントは `{{< gd-icon CharacterBody2D >}}CharacterBody2D` を使用しますが、覚えておいていただきたいのは、このテクニックはどんな種類のオブジェクトにも適用可能だということです。アルゴリズム自体は対象が移動する方向を選択する方法に関するものであり、実際の移動方法は完全に別個の問題です。"
 
 #: ai/context_map.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_03.png)"
@@ -17908,7 +17908,7 @@ msgstr "![alt](/godot_recipes/4.x/img/k2d_layer_example.png?width=300)"
 
 #: physics/Godot3_kinematic2d.md
 msgid "When moving a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`, you should not set its `position` directly. Instead, you use the `move_and_collide()` or `move_and_slide()` methods. These methods move the body along a given vector and will instantly stop if a collision is detected with another body. After a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` has collided, any _collision response_ must be coded manually."
-msgstr "{{< gd-icon CharacterBody2D >}}`CharacterBody2D` オブジェクトを移動する際、その `position` を直接設定してはいけません。代わりに、`move_and_collide()` または `move_and_slide()` メソッドを使用する必要があります。これらのメソッドは指定されたベクトルに沿ってボディを移動させ、他のボディと衝突した場合に即座に停止させます。{{< gd-icon CharacterBody2D >}}`CharacterBody2D` が衝突した後、どのような _衝突応答処理_ を行うかは、手動でコード化する必要があります。"
+msgstr "{{< gd-icon CharacterBody2D >}}`CharacterBody2D` オブジェクトを移動する際、その `position` を直接設定してはいけません。代わりに、`move_and_collide()` または `move_and_slide()` メソッドを使用する必要があります。これらのメソッドは指定されたベクトルに沿ってボディを移動させ、他のボディと衝突した場合に即座に停止させます。{{< gd-icon CharacterBody2D >}}`CharacterBody2D` が衝突した後、どのような _衝突応答処理_ をするかは、手動でコード化する必要があります。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "![alt](/godot_recipes/3.x/img/k2d_platf_sample.gif?width=300)"

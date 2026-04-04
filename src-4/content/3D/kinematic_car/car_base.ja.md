@@ -53,7 +53,7 @@ Godotでファイルを選択し、「インポート」タブに移動します
 ※各パーツごとの個別メッシュに注意。なお、余分な「tmpParent」{{< gd-icon Node3D >}}`Node3D`ノードがありますが、こちらは無視して構いません。
 
 {{< gd-icon KinematicBody3D >}}`CharacterBody3D` には衝突形状の欠落に関する警告メッセージが表示されています。まずはこの問題を修正する必要があります。
-* {{< gd-icon CollisionShape3D >}}`CollisionShape` を追加します。
+* {{< gd-icon CollisionShape3D >}}`CollisionShape` を追加してください。
 * 車両本体用に {{< gd-icon BoxShape3D >}}`BoxShape` を設定します。
 * 前輪用と後輪用にそれぞれ1つずつ {{< gd-icon CylinderShape3D >}}`CylinderShape` をおきます。
 

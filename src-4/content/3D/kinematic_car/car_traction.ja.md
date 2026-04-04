@@ -33,7 +33,7 @@ var drifting = false
 
 `drifting` はドリフト状態を追跡するためのブール変数です。
 
-次に、`car_base.gd` ファイルの `calculate_steering()` 関数内で、`new_heading` を計算した直後にこのコードを追加します。
+次に、`car_base.gd` ファイルの `calculate_steering()` 関数内で、`new_heading` を計算した直後にこのコードを追加してください。
 
 ```gdscript
 # traction
