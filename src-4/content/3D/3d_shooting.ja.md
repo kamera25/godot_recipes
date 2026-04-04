@@ -15,7 +15,7 @@ ghcommentid: 36
 
 ## 解決策
 
-この例では、[CharacterBody3D：移動操作](/godot_recipes/3.x/3d/kinematic_body/) で設定した「ミニ戦車」を使用します。
+この例では、[CharacterBody3D：移動操作](/godot_recipes/4.x/ja/3d/kinematic_body/) で設定した「ミニ戦車」を使用します。
 
 ### 弾丸の設定
 
@@ -95,7 +95,7 @@ if Input.is_action_just_pressed("shoot"):
 
 これで完了です。シーンを実行して実際に試してみます。
 
-<video controls src="/godot_recipes/3.x/img/3d_shoot_03.webm"></video>
+<video controls src="/godot_recipes/4.x/ja/img/3d_shoot_03.webm"></video>
 
 <!-- {{% notice note %}}
 プロジェクトファイルはこちらよりダウンロードできます。[3d_shooting.zip](/godot_recipes/4.x/ja/files/3d_shooting.zip)
@@ -103,8 +103,8 @@ if Input.is_action_just_pressed("shoot"):
 
 ## 関連レシピ
 
-- [CharacterBody3D: 移動方法](/godot_recipes/3.x/3d/kinematic_body/)
-- [初めてのGodot: 3D入門](/godot_recipes/3.x/g101/3d/)
+- [CharacterBody3D: 移動方法](/godot_recipes/4.x/ja/3d/kinematic_body/)
+- [初めてのGodot: 3D入門](/godot_recipes/4.x/ja/g101/3d/)
 
 <!-- #### Videoが気に入ったら？ -->
 

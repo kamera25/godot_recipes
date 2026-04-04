@@ -154,4 +154,4 @@ move_and_slide()
 
 ## 関連するレシピ
 
-<!-- - [Using CharacterBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->
+<!-- - [Using CharacterBody2D](/godot_recipes/4.x/ja/physics/godot3_kinematic2d/) -->

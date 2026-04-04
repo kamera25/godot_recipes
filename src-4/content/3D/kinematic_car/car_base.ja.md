@@ -204,9 +204,9 @@ func get_input():
 
 ## 関連レシピ
 
-- [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)
-- [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)
-- [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)
+- [2D: Car Steering recipe](/godot_recipes/4.x/ja/2d/car_steering)
+- [Input Actions](/godot_recipes/4.x/ja/input/input_actions/)
+- [3D: CharacterBody3D Movement](/godot_recipes/4.x/ja/3d/kinematic_body/)
 
 #### この動画が気に入ったら？
 

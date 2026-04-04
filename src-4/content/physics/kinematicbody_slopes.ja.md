@@ -65,7 +65,7 @@ func _physics_process(delta):
 
 重力によって生じる落下速度が、表面に沿って滑動しています。
 
-「[move_and_slide() ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide) を確認すると、`stop_on_slope` というパラメーターがあり、デフォルト値は `false` です。
+[`move_and_slide()` ドキュメント](https://docs.godotengine.org/ja/4.x/tutorials/physics/using_character_body_2d.html) を確認すると、`stop_on_slope` というパラメーターがあり、デフォルト値は `false` です。
 
 > 設定値が `true` の場合、重力を考慮した線形速度を適用した状態でオブジェクトが静止している場合、傾斜面でも滑りません。
 
@@ -108,8 +108,8 @@ velocity = move_and_slide_with_snap(velocity, snap, Vector3.UP,
 
 ## 関連レシピ
 
-- [Godot 101: Intro do 3D](/godot_recipes/3.x/g101/3d/)
-- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)
+- [Godot 101: Intro do 3D](/godot_recipes/4.x/ja/g101/3d/)
+- [CharacterBody3D: Movement](/godot_recipes/4.x/ja/3d/kinematic_body/)
 
 #### この動画が気に入ったら？
 

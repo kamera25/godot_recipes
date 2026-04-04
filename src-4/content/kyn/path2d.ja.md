@@ -104,9 +104,9 @@ func get_path_direction(pos):
 
 ## 関連レシピ
 
-- [Interpolated Camera](/godot_recipes/3.x/3d/interpolated_camera/)
-- [Inputs: Introduction](/godot_recipes/3.x/input/input_intro/)
-- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/) -->
+- [Interpolated Camera](/godot_recipes/4.x/ja/3d/interpolated_camera/)
+- [Inputs: Introduction](/godot_recipes/4.x/ja/input/input_intro/)
+- [CharacterBody3D: Movement](/godot_recipes/4.x/ja/3d/kinematic_body/) -->
 
 <!-- #### Videoが気に入ったら？ -->
 

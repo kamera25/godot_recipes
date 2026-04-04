@@ -24,7 +24,7 @@ msgstr ""
 "**Godot 4.0が正式リリースされました！**<br>\n"
 "Godot 4.0はエンジンの最新安定版バージョンです。<br>\n"
 "このサイト(注 : 原文サイトには。この非公式日本語版にはGodot 3の日本語訳はありません。)にはGodot 3向けの学習教材も充実しており、その多くは今でも十分に活用できます。右上のリボンをクリックするとGodot Recipesバージョンを切り替えられますし、以下のボタンからもアクセスできます。<br>\n"
-"{{% button href=\"https://kidscancode.org/godot_recipes/3.x/\" style=\"primary\" icon=\"utensils\" %}}Godot 3レシピ集 (原文・英語){{% /button %}}\n"
+"{{% button href=\"https://kidscancode.org/godot_recipes/4.x/ja/\" style=\"primary\" icon=\"utensils\" %}}Godot 3レシピ集 (原文・英語){{% /button %}}\n"
 "{{% /notice %}}"
 
 #: _index.md
@@ -3192,8 +3192,8 @@ msgid "### Full script"
 msgstr "### 全スクリプト"
 
 #: 3D/spaceship.md
-msgid "Select the `gltf` file of the ship you want, and click the *Import* tab. Change the *Root Type* to {{< gd-icon CharacterBody3D >}} `CharacterBody3D` and click \"Reimport\". Then double-click the `gltf` and you'll have a new inherited scene with a {{< gd-icon KinematicBody3D >}} `CharacterBody3D` root and a {{< gd-icon MeshInstance3D >}} `MeshInstance` child. Add a {{< gd-icon CollisionShape3D >}} `CollisionShape3D` to the body."
-msgstr "インポートする船舶の `gltf` ファイルを選択し、［インポート］タブをクリックします。［ルートの型］を `CharacterBody3D`に変更し、「再インポート」を実行してください。その後、`gltf`ファイルをダブルクリックすると、新たに継承されたシーンが作成され、ルートとして {{< gd-icon KinematicBody3D >}}{{< gd-icon CharacterBody3D >}}`CharacterBody3D`、子要素として {{< gd-icon MeshInstance3D >}} `MeshInstance`が含まれるようになります。このボディに {{< gd-icon CollisionShape3D >}}`CollisionShape3D`を追加します。"
+msgid "Select the `gltf` file of the ship you want, and click the *Import* tab. Change the *Root Type* to {{< gd-icon CharacterBody3D >}} `CharacterBody3D` and click \"Reimport\". Then double-click the `gltf` and you'll have a new inherited scene with a {{< gd-icon CharacterBody3D >}} `CharacterBody3D` root and a {{< gd-icon MeshInstance3D >}} `MeshInstance` child. Add a {{< gd-icon CollisionShape3D >}} `CollisionShape3D` to the body."
+msgstr "インポートする船舶の `gltf` ファイルを選択し、［インポート］タブをクリックします。［ルートの型］を `CharacterBody3D`に変更し、「再インポート」を実行してください。その後、`gltf`ファイルをダブルクリックすると、新たに継承されたシーンが作成され、ルートとして {{< gd-icon CharacterBody3D >}}`CharacterBody3D`、子要素として {{< gd-icon MeshInstance3D >}} `MeshInstance`が含まれるようになります。このボディに {{< gd-icon CollisionShape3D >}}`CollisionShape3D`を追加します。"
 
 #: 3D/spaceship.md
 msgid "Make a test scene with a {{< gd-icon Camera3D >}} `Camera3D` to try it out. You can use a stationary camera or a [chase camera](/godot_recipes/4.x/3d/interpolated_camera/). Check that the ship accelerates and slows before moving on to the next step."
@@ -6387,7 +6387,7 @@ msgstr ""
 
 #: animation/melee_attacks.md
 msgid "For this example, we'll assume we have already set up a character with one or more attack animations. To illustrate, we'll use these two attacks:"
-msgstr "本例では、既に攻撃アニメーションが設定されたキャラクターが存在すると仮定します。説明のために、以下の2種類の攻撃を使用する："
+msgstr "本例では、既に攻撃アニメーションが設定されたキャラクターが存在すると仮定します。説明のために、以下の2種類の攻撃を使用します。"
 
 #: animation/melee_attacks.md
 msgid "Now you should be able to try it out and see the attack doing damage if the target is inside the sword's hitbox."
@@ -11780,7 +11780,7 @@ msgstr "停止時にわずかに上向きの運動量が生じるため、小さ
 
 #: physics/kinematicbody_slopes.md
 msgid "Checking the [`move_and_slide()` documentation](https://docs.godotengine.org/en/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide), we see there's a parameter called `stop_on_slope`, which defaults to `false`:"
-msgstr "「[move_and_slide() ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide) を確認すると、`stop_on_slope` というパラメーターがあり、デフォルト値は `false` です。"
+msgstr "[`move_and_slide()` ドキュメント](https://docs.godotengine.org/ja/4.x/tutorials/physics/using_character_body_2d.html) を確認すると、`stop_on_slope` というパラメーターがあり、デフォルト値は `false` です。"
 
 #: physics/kinematicbody_slopes.md
 msgid "But there is still a problem, which is easier to see if you use a low value for `gravity`:"
@@ -12372,7 +12372,7 @@ msgstr "以下の例のように、障害物を追加する方法はいくつか
 
 #: 2D/grid_movement.md
 msgid "`tile_size` should be set to match the size of your tiles. In a larger project, this can be set by your main scene when instancing the player. We're using 64x64 tiles in the example below."
-msgstr "にはタイルのサイズに合わせて適切な値を設定してください。大規模なプロジェクトでは、メインシーンからプレイヤーインスタンスを生成する際にこを設定します。以下の例では 64×64ピクセルのタイルを使用しています。"
+msgstr "`tile_size`にはタイルのサイズに合わせて適切な値を設定してください。大規模なプロジェクトでは、メインシーンからプレイヤーインスタンスを生成する際にこを設定します。以下の例では 64×64ピクセルのタイルを使用しています。"
 
 #: 2D/grid_movement.md
 msgid "![alt](/godot_recipes/4.x/img/grid_example3.gif)"
@@ -12616,9 +12616,9 @@ msgid ""
 "- [Gamedev Math: transforms](/godot_recipes/4.x/math/transforms/)\n"
 "<!-- - [AI: Homing missiles](/godot_recipes/3.x/ai/homing_missile/) -->"
 msgstr ""
-"<!-- - [Top-down character](/godot_recipes/3.x/2d/topdown_movement/) -->\n"
+"<!-- - [Top-down character](/godot_recipes/4.x/ja/2d/topdown_movement/) -->\n"
 "- [ゲーム数学：トランスフォーム操作](/godot_recipes/4.x/math/transforms/)\n"
-"<!-- - [AI: Homing missiles](/godot_recipes/3.x/ai/homing_missile/) -->"
+"<!-- - [AI: Homing missiles](/godot_recipes/4.x/ja/ai/homing_missile/) -->"
 
 #: 2D/2d_shooting.md
 msgid "Download the project code here: [https://github.com/godotrecipes/2d_shooting](https://github.com/godotrecipes/2d_shooting)"
@@ -17142,11 +17142,11 @@ msgstr "新着レシピ"
 
 #: basics/getting_nodes.md
 msgid "- [Using CharacterBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->"
-msgstr "- [CharacterBody2Dの使用例](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->"
+msgstr "- [CharacterBody2Dの使用例](/godot_recipes/4.x/ja/physics/godot3_kinematic2d/) -->"
 
 #: basics/understanding_delta.md
 msgid "<!-- - [Using CharacterBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->"
-msgstr "<!-- - [Using CharacterBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/) -->"
+msgstr "<!-- - [Using CharacterBody2D](/godot_recipes/4.x/ja/physics/godot3_kinematic2d/) -->"
 
 #: basics/custom_resources.md
 msgid "![alt](/godot_recipes/3.x/img/custom_resource_01.png)"
@@ -17193,7 +17193,7 @@ msgid ""
 "![alt](/godot_recipes/3.x/img/organize_01.png)\n"
 "<!--  -->"
 msgstr ""
-"![alt](/godot_recipes/3.x/img/organize_01.png)\n"
+"![alt](/godot_recipes/4.x/ja/img/organize_01.png)\n"
 "<!--  -->"
 
 #: basics/organizing.md
@@ -17238,11 +17238,11 @@ msgstr "タンク内（または射撃を行うオブジェクト）の任意の
 
 #: 3D/3d_shooting.md
 msgid "For this example, we'll use the \"Mini Tank\" that we set up in [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)."
-msgstr "この例では、[CharacterBody3D：移動操作](/godot_recipes/3.x/3d/kinematic_body/) で設定した「ミニ戦車」を使用します。"
+msgstr "この例では、[CharacterBody3D：移動操作](/godot_recipes/4.x/ja/3d/kinematic_body/) で設定した「ミニ戦車」を使用します。"
 
 #: 3D/3d_shooting.md
 msgid "<video controls src=\"/godot_recipes/3.x/img/3d_shoot_03.webm\"></video>"
-msgstr "<video controls src=\"/godot_recipes/3.x/img/3d_shoot_03.webm\"></video>"
+msgstr "<video controls src=\"/godot_recipes/4.x/ja/img/3d_shoot_03.webm\"></video>"
 
 #: 3D/3d_shooting.md
 msgid ""
@@ -17267,8 +17267,8 @@ msgid ""
 "- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)\n"
 "- [Godot 101: Intro to 3D](/godot_recipes/3.x/g101/3d/)"
 msgstr ""
-"- [CharacterBody3D: 移動方法](/godot_recipes/3.x/3d/kinematic_body/)\n"
-"- [初めてのGodot: 3D入門](/godot_recipes/3.x/g101/3d/)"
+"- [CharacterBody3D: 移動方法](/godot_recipes/4.x/ja/3d/kinematic_body/)\n"
+"- [初めてのGodot: 3D入門](/godot_recipes/4.x/ja/g101/3d/)"
 
 #: 3D/rolling_cube.md
 msgid ""
@@ -17282,7 +17282,7 @@ msgstr ""
 
 #: 3D/3d_sphere_car.md
 msgid "If you've tried driving on a slope, you've seen that the car mesh doesn't tilt at all, it always remains level. That looks unnatural, so let's use the process described in [CharacterBody3D: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/) to fix that."
-msgstr "坂で運転操作を試したことがある方ならご存知でしょうが、車のメッシュは全く傾かず、常に水平を保っています。これは不自然に見えるため、[CharacterBody3D: 表面と整列](/godot_recipes/3.x/3d/3d_align_surface/) セクションで説明されている方法を使って修正しましょう。"
+msgstr "坂で運転操作を試したことがある方ならご存知でしょうが、車のメッシュは全く傾かず、常に水平を保っています。これは不自然に見えるため、[CharacterBody3D: 表面と整列](/godot_recipes/4.x/ja/3d/3d_align_surface/) セクションで説明されている方法を使って修正しましょう。"
 
 #: 3D/move_with_camera.md
 msgid "![alt](/godot_recipes/3.x/img/3d_move_camera_01.gif)"
@@ -17346,9 +17346,9 @@ msgid ""
 "- [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)\n"
 "- [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)"
 msgstr ""
-"- [2D: Car Steering recipe](/godot_recipes/3.x/2d/car_steering)\n"
-"- [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)\n"
-"- [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)"
+"- [2D: Car Steering recipe](/godot_recipes/4.x/ja/2d/car_steering)\n"
+"- [Input Actions](/godot_recipes/4.x/ja/input/input_actions/)\n"
+"- [3D: CharacterBody3D Movement](/godot_recipes/4.x/ja/3d/kinematic_body/)"
 
 #: 3D/kinematic_car/car_base.md
 msgid "![alt](/godot_recipes/3.x/img/3d_car_01.png)"
@@ -17382,18 +17382,18 @@ msgid ""
 "- [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/)\n"
 "- [3D: CharacterBody3D Movement](/godot_recipes/3.x/3d/kinematic_body/)"
 msgstr ""
-"- [運動車：基本モデル](/godot_recipes/3.x/3d/kinematic_car/car_base/)\n"
+"- [運動車：基本モデル](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)\n"
 "- [2D: 車両のステアリング制御レシピ](/godot_secrets/3.x/2d/car_steering)\n"
-"- [入力アクション設定](http://kidscancode.org/godot_recipes/input/input_actions/)\n"
-"- [3D: CharacterBody3Dの移動機能](/godot_recipes/3.x/3d/kinematic_body/)"
+"- [入力アクション設定](/godot_recipes/4.x/ja/input/input_actions/)\n"
+"- [3D: CharacterBody3Dの移動機能](/godot_recipes/4.x/ja/3d/kinematic_body/)"
 
 #: 3D/kinematic_car/car_slopes.md
 msgid ""
 "- [Kinematic Car: Base](/godot_recipes/3.x/3d/kinematic_car/car_base/)\n"
 "- [CharacterBody3D: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/)"
 msgstr ""
-"[運動力学カー：ベースモデル](/godot_recipes/3.x/3d/kinematic_car/car_base/)\n"
-"[CharacterBody3D：地面との整合性調整](/godot_recipes/3.x/3d/3d_align_surface/)"
+"[運動力学カー：ベースモデル](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)\n"
+"[CharacterBody3D：地面との整合性調整](/godot_recipes/4.x/ja/3d/3d_align_surface/)"
 
 #: 3D/kinematic_car/car_slopes.md
 msgid "![alt](/godot_recipes/3.x/img/3d_car_11.png)"
@@ -17440,7 +17440,7 @@ msgid ""
 msgstr ""
 "{{% notice tip %}}\n"
 "作業効率を上げるため、一時的に {{< gd-icon Camera3D >}}`Camera` を適切な位置に配置し、「プレビュー」モードを使用して、{{< gd-icon Marker3D >}}`Marker3D` が正確に狙いたい方向を指すように調整する方法が有効です（作業完了後はカメラを削除してください）。\n"
-"![alt](/godot_recipes/3.x/img/3d_car_09.png)\n"
+"![alt](/godot_recipes/4.x/ja/img/3d_car_09.png)\n"
 "{{% /notice %}}"
 
 #: 3D/kinematic_car/car_traction.md
@@ -17698,9 +17698,9 @@ msgid ""
 "- [Inputs: Introduction](/godot_recipes/3.x/input/input_intro/)\n"
 "- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/) -->"
 msgstr ""
-"- [Interpolated Camera](/godot_recipes/3.x/3d/interpolated_camera/)\n"
-"- [Inputs: Introduction](/godot_recipes/3.x/input/input_intro/)\n"
-"- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/) -->"
+"- [Interpolated Camera](/godot_recipes/4.x/ja/3d/interpolated_camera/)\n"
+"- [Inputs: Introduction](/godot_recipes/4.x/ja/input/input_intro/)\n"
+"- [CharacterBody3D: Movement](/godot_recipes/4.x/ja/3d/kinematic_body/) -->"
 
 #: ai/context_map.md kyn/path2d.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_10.gif)"
@@ -17798,15 +17798,15 @@ msgstr "![alt](/godot_recipes/4.x/img/path2d_buttons.png)"
 
 #: shaders/blur.md
 msgid "<video controls src='/godot_recipes/3.x/img/blur_shader3.webm'></video>"
-msgstr "<video controls src='/godot_recipes/3.x/img/blur_shader3.webm'></video>"
+msgstr "<video controls src='/godot_recipes/4.x/ja/img/blur_shader3.webm'></video>"
 
 #: shaders/blur.md
 msgid ""
 "![alt](/godot_recipes/3.x/img/blur_shader1.png)\n"
 "![alt](/godot_recipes/3.x/img/blur_shader2.png)"
 msgstr ""
-"![alt](/godot_recipes/3.x/img/blur_shader1.png)\n"
-"![alt](/godot_recipes/3.x/img/blur_shader2.png)"
+"![alt](/godot_recipes/4.x/ja/img/blur_shader1.png)\n"
+"![alt](/godot_recipes/4.x/ja/img/blur_shader2.png)"
 
 #: shaders/greyscale.md
 msgid "![alt](/godot_recipes/3.x/img/shader_greyscale01.png)"
@@ -17958,8 +17958,8 @@ msgid ""
 "- [Godot 101: Intro do 3D](/godot_recipes/3.x/g101/3d/)\n"
 "- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)"
 msgstr ""
-"- [Godot 101: Intro do 3D](/godot_recipes/3.x/g101/3d/)\n"
-"- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)"
+"- [Godot 101: Intro do 3D](/godot_recipes/4.x/ja/g101/3d/)\n"
+"- [CharacterBody3D: Movement](/godot_recipes/4.x/ja/3d/kinematic_body/)"
 
 #: physics/kinematicbody_slopes.md
 msgid "Your {{< gd-icon KinematicBody3D >}}`CharacterBody3D` slides down slopes."
@@ -18031,9 +18031,9 @@ msgid ""
 "- [Using CharacterBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/)\n"
 "- [Moving Platforms](/godot_recipes/3.x/2d/moving_platforms/)"
 msgstr ""
-"・[プラットフォームキャラクターの実装方法](http://kidscancode.org/godot_recipes/2d/platform_character)\n"
-"・[CharacterBody2Dコンポーネントの活用法](/godot_recipes/3.x/physics/godot3_kinematic2d/)\n"
-"・[移動式プラットフォームの作成テクニック](/godot_recipes/3.x/2d/moving_platforms/)"
+"・[プラットフォームキャラクターの実装方法](/godot_recipes/4.x/ja/2d/platform_character)\n"
+"・[CharacterBody2Dコンポーネントの活用法](/godot_recipes/4.x/ja/physics/godot3_kinematic2d/)\n"
+"・[移動式プラットフォームの作成テクニック](/godot_recipes/4.x/ja/2d/moving_platforms/)"
 
 #: physics/conveyor_belt.md
 msgid "![alt](/godot_recipes/3.x/img/conveyor_3d.gif)"
@@ -18171,11 +18171,11 @@ msgstr "{{< gd-icon CharacterBody2D >}}`CharacterBody2D`キャラクターが{{<
 
 #: 2D/touchscreen_camera.md
 msgid "<video controls src=\"/godot_recipes/3.x/img/touch_camera_01.webm\"></video>"
-msgstr "<video controls src=\"/godot_recipes/3.x/img/touch_camera_01.webm\"></video>"
+msgstr "<video controls src=\"/godot_recipes/4.x/ja/img/touch_camera_01.webm\"></video>"
 
 #: 2D/touchscreen_camera.md
 msgid "<video controls src=\"/godot_recipes/3.x/img/touch_camera_02.webm\"></video>"
-msgstr "<video controls src=\"/godot_recipes/3.x/img/touch_camera_02.webm\"></video>"
+msgstr "<video controls src=\"/godot_recipes/4.x/ja/img/touch_camera_02.webm\"></video>"
 
 #: 2D/splitscreen_demo.md
 msgid "![alt](/godot_recipes/3.x/img/splitscreen2.gif)"
@@ -18328,8 +18328,8 @@ msgid ""
 "![alt](/godot_recipes/3.x/img/cj_02_03.png)\n"
 "![alt](/godot_recipes/3.x/img/cj_02_04.gif)"
 msgstr ""
-"![alt](/godot_recipes/3.x/img/cj_02_03.png)\n"
-"![alt](/godot_recipes/3.x/img/cj_02_04.gif)"
+"![alt](/godot_recipes/4.x/ja/img/cj_02_03.png)\n"
+"![alt](/godot_recipes/4.x/ja/img/cj_02_04.gif)"
 
 #: games/circle_jump/circle_jump_02.md
 msgid "![alt](/godot_recipes/3.x/img/cj_02_01.png?width=200)"

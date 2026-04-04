@@ -51,7 +51,7 @@ func _on_change_camera(t):
 
 {{% notice tip %}}
 作業効率を上げるため、一時的に {{< gd-icon Camera3D >}}`Camera` を適切な位置に配置し、「プレビュー」モードを使用して、{{< gd-icon Marker3D >}}`Marker3D` が正確に狙いたい方向を指すように調整する方法が有効です（作業完了後はカメラを削除してください）。
-![alt](/godot_recipes/3.x/img/3d_car_09.png)
+![alt](/godot_recipes/4.x/ja/img/3d_car_09.png)
 {{% /notice %}}
 
 カメラと通信するために、位置変更が必要な時にシグナルを発します。以下のコードを車のスクリプトに追加してください。
@@ -89,10 +89,10 @@ func _input(event):
 
 ## 関連レシピ
 
-- [運動車：基本モデル](/godot_recipes/3.x/3d/kinematic_car/car_base/)
+- [運動車：基本モデル](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)
 - [2D: 車両のステアリング制御レシピ](/godot_secrets/3.x/2d/car_steering)
-- [入力アクション設定](http://kidscancode.org/godot_recipes/input/input_actions/)
-- [3D: CharacterBody3Dの移動機能](/godot_recipes/3.x/3d/kinematic_body/)
+- [入力アクション設定](/godot_recipes/4.x/ja/input/input_actions/)
+- [3D: CharacterBody3Dの移動機能](/godot_recipes/4.x/ja/3d/kinematic_body/)
 
 #### この動画が気に入ったら？
 

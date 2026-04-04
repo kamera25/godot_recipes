@@ -32,7 +32,7 @@ tags: []
 
 ### 設定手順
 
-インポートする船舶の `gltf` ファイルを選択し、［インポート］タブをクリックします。［ルートの型］を `CharacterBody3D`に変更し、「再インポート」を実行してください。その後、`gltf`ファイルをダブルクリックすると、新たに継承されたシーンが作成され、ルートとして {{< gd-icon KinematicBody3D >}}{{< gd-icon CharacterBody3D >}}`CharacterBody3D`、子要素として {{< gd-icon MeshInstance3D >}} `MeshInstance`が含まれるようになります。このボディに {{< gd-icon CollisionShape3D >}}`CollisionShape3D`を追加します。
+Select the `gltf` file of the ship you want, and click the *Import* tab. Change the *Root Type* to {{< gd-icon CharacterBody3D >}} `CharacterBody3D` and click "Reimport". Then double-click the `gltf` and you'll have a new inherited scene with a {{< gd-icon KinematicBody3D >}} `CharacterBody3D` root and a {{< gd-icon MeshInstance3D >}} `MeshInstance` child. Add a {{< gd-icon CollisionShape3D >}} `CollisionShape3D` to the body.
 
 *プロジェクト設定 > インプットマップ* にて、以下の入力を設定してください。
 
