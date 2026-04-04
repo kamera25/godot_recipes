@@ -30,7 +30,7 @@ draft: false
 
 使用しているハートのアイコン のサイズは53×45ピクセルです。以下から入手できます。
 
-[ケンニードットネット：プラットフォーマーアートデラックス](https://kenney.nl/assets/platformer-art-deluxe)
+[Kenney.nl: Platformer Art Deluxe](https://kenney.nl/assets/platformer-art-deluxe)
 
 理想的には、ハートバーは全体のHUD/UIに簡単に組み込めるものであるべきです。したがって、これを別個のシーンとして作成するのが合理的です。まず{{< gd-icon HBoxContainer >}}`HBoxContainer`から始めてください。これにより要素が適切に整列されます。テーマオーバーライド/定数/分離幅を5に設定してください。
 

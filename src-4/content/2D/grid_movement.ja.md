@@ -85,7 +85,7 @@ func move(dir):
         position += inputs[dir] * tile_size
 ```
 
-レイキャストの `target_position` プロパティを変更する場合、物理エンジンは次の物理フレームまで衝突を再計算しません。`force_raycast_update()` を使用すると、即座にレイの状態を更新できます。もし衝突が発生していなければ、移動は許可されます。
+レイキャストの `target_position` プロパティを変更する場合、物理エンジンは次の物理フレームまで衝突を再計算しません。`force_raycast_update()` を使用すると、即座にレイの状態を更新できます。もし衝突が発生していなければ、移動できます。
 
 ![alt](/godot_recipes/4.x/img/grid_example2.gif)
 

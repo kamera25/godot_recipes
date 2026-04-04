@@ -210,11 +210,11 @@ func _physics_process(delta):
 
 [RigidBody2Dドキュメント](http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#description)より引用すると：
 
-> リジッドボディの位置や直線速度をフレームごとに、あるいは頻繁に変更することは避けるべきです。状態に直接影響を与えたい場合は、物理演算の状態を直接操作できる `_integrate_forces` メソッドを使用してください。
+> リジッドボディの位置や直線速度をフレームごとに、あるいは頻繁に変更することは避けるべきです。状態に直接影響を与えたい場合は、物理演算の状態を直接操作できる `_integrate_forces` メソッドを使いましょう。
 
 [_integrate_forces の説明](http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#class-rigidbody2d-integrate-forces)：
 
-> オブジェクトのシミュレーション状態を読み取り、**安全に変更**できます。物体の位置やその他の物理特性を直接変更する必要がある場合は、`_physics_process` の代わりにこの関数を使用してください。
+> オブジェクトのシミュレーション状態を読み取り、**安全に変更**できます。物体の位置やその他の物理特性を直接変更する必要がある場合は、`_physics_process` の代わりにこの関数を使いましょう。
 
 このように、`_physics_process()` の代わりに `_integrate_forces()` を使用が必要です。これにより、<a href="http://docs.godotengine.org/ja/latest/classes/class_physics2ddirectbodystate.html" target="_blank">Physics2DDirectBodyState</a> オブジェクトにアクセスできるようになります。物理状態オブジェクトには、非常に有用な情報が豊富に含まれているので、ぜひリンク先のドキュメントを参照されることを強くオススメします。
 特に重要な情報は、物体の <a href="http://docs.godotengine.org/ja/latest/classes/class_transform2d.html" target="_blank">Transform2D</a> です。

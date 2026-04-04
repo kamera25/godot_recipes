@@ -52,7 +52,7 @@ draft: false
 ![alt](/godot_recipes/4.x/img/3d_sphere_car_02.png)
 
 {{% notice note %}}
-ケンニーの『カーキット』でこの車種や他のモデルを入手できます。以下のURLからダウンロードできます。
+Kenny氏の『カーキット』でこの車種や他のモデルを入手できます。以下のURLからダウンロードできます。
 [https://kenney.nl/assets/car-kit](https://kenney.nl/assets/car-kit)。すべてのアセットをダウンロードできます。使いたいものだけを選んでいただいて構いません。このキットには複数のフォーマット形式のモデルが含まれていますが、プロジェクトに必要な全てを使用する必要はありません。Godotでの使用にはGLTF形式を推奨します。{{% /notice %}}
 
 GLTFモデルを使用する場合、インポート設定で調整する必要はありません。
@@ -232,7 +232,7 @@ body_mesh.rotation.z = lerp(body_mesh.rotation.z, t, 10 * delta)
 ### クレジット表記
 >
 > 本デモプロジェクトでは以下のオープンソース／クリエイティブ・コモンズ素材を使用しています。
-> - 車両モデル：Kenney氏制作の[ケンニー・カーキット](https://kenney.nl/assets/car-kit)
+> - 車両モデル：Kenney氏制作の[カーキット](https://kenney.nl/assets/car-kit)
 > - コースデータ：Keith氏による[モジュール式レーシングカートトラック（起伏のある地形テーマ）](https://fertile-soil-productions.itch.io/modular-racekart-track-hilly-terrain-theme)、Fertile Soil Productions提供
 
 

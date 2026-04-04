@@ -170,8 +170,8 @@ Circle ノードに `AnimationPlayer` を追加します。
 
 キャプチャアニメーションはもう少し複雑です。スプライトを複製して「SpriteEffect」という名前に変更してください。その［表示］プロパティはオフに設定します。この二つ目のリングがメインサークルに向かってズームインするアニメーションを作成します。
 
-![alt](/godot_recipes/4.x/ja/img/cj_02_03.png)
-![alt](/godot_recipes/4.x/ja/img/cj_02_04.gif)
+![alt](/godot_recipes/4.x/img/cj_02_03.png)
+![alt](/godot_recipes/4.x/img/cj_02_04.gif)
 
 以下の機能をサークルスクリプトに追加する必要があります。
 

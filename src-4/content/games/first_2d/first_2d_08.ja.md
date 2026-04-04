@@ -46,7 +46,7 @@ func _on_area_entered(area):
 var bullet_scene = preload("res://enemy_bullet.tscn")
 ```
 
-次に撮影機能を更新します。
+次に射撃関数を書き換えます。
 
 ```gdscript
 func _on_shoot_timer_timeout():

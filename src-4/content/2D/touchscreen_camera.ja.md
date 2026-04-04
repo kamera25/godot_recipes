@@ -99,7 +99,7 @@ func _unhandled_input(event):
 
 モバイルデバイスから直接キャプチャした例をご紹介します。黄色の円がタッチ位置を示しています。
 
-<video controls src="/godot_recipes/4.x/ja/img/touch_camera_01.webm"></video>
+<video controls src="/godot_recipes/4.x/img/touch_camera_01.webm"></video>
 
 ### ズーム機能
 
@@ -130,13 +130,13 @@ if event is InputEventScreenDrag:
 計算結果が指定された範囲を超えないように制限を施し、新しい "zoom" 値を設定
 最後に次回イベント用に "last_drag_distance" を更新
 
-<video controls src="/godot_recipes/4.x/ja/img/touch_camera_02.webm"></video>
+<video controls src="/godot_recipes/4.x/img/touch_camera_02.webm"></video>
 
 ## まとめ
 
 これを底本にして、ニーズに合わせて活用できます。以下に、試せる提案をいくつかご紹介します。
 
-* ズーム動作を滑らかにするには`lerp()`を使用してください。
+* ズーム動作を滑らかにするには`lerp()`を使いましょう。
 * ズームは自動的にデフォルトレベルに戻ります。
 * ダブルタップでリセットできます。
 * さらにジェスチャーを追加可能 - 例：3本指操作など。

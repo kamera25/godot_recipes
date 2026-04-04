@@ -70,4 +70,4 @@ func shoot():
 ## 関連レシピ
 
 - [2Dシューティングゲームの作成レシピ](/godot_recipes/4.x/ja/2d/2d_shooting/)
-  - [2D：軌跡を描画する方法](/godot_recipes/4.x/ja/2d/2d_draw_trajectory/)
+- [2D：軌跡を描画する方法](/godot_recipes/4.x/ja/2d/2d_draw_trajectory/)

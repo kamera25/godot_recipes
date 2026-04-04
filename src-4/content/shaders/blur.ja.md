@@ -27,8 +27,8 @@ void fragment() {
 
 例えば、シーン切り替え効果のために画面全体を徐々にぼかすには。
 
-![alt](/godot_recipes/4.x/ja/img/blur_shader1.png)
-![alt](/godot_recipes/4.x/ja/img/blur_shader2.png)
+![alt](/godot_recipes/4.x/img/blur_shader1.png)
+![alt](/godot_recipes/4.x/img/blur_shader2.png)
 
 ぼかし効果もアニメーション化できます。
 
@@ -46,7 +46,7 @@ func _process(delta):
     blur.material.set_shader_param("blur_amount", blur_amount)
 ```
 
-<video controls src='/godot_recipes/4.x/ja/img/blur_shader3.webm'></video>
+<video controls src='/godot_recipes/4.x/img/blur_shader3.webm'></video>
 
 ## 関連するレシピ
 
