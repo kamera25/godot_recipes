@@ -14,7 +14,7 @@ draft: false
 
 ### キャラクターの準備
 
-以下の理由でキャラクターには `CharacterBody3D` を選択しました。そのため、シーンはこのような外観になるはずです（メッシュリストが非常に長いため、`Rig`ノードは折りたたみ状態にしています）：
+以下の理由でキャラクターには {{< gd-icon CharacterBody3D >}}`CharacterBody3D` を選択しました。そのため、シーンはこのような外観になるはずです（メッシュリストが非常に長いため、`Rig`ノードは折りたたみ状態にしています）：
 
 ![alt](/godot_recipes/4.x/img/3dcharacter_imported_scene.png)
 
@@ -28,14 +28,14 @@ draft: false
 
 また、キャラクターが静止している場合も考慮します。この時は"Idle"アニメーションを再生する必要があります。プレイヤーが「前進」ボタンを押すと、キャラクターは移動を開始し、同時に"Walking"アニメーションに切り替わるべきです。しかしこの急激な切り替えは不自然に見えるため、できれば2つのアニメーションをよりスムーズに移行させる「ブレンド処理」が望まれます。
 
-これらの複雑なアニメーション問題を解決するには、`AnimationTree`ノードを使用が必要です。このノードは{{< gd-icon AnimationPlayer >}}`AnimationPlayer`を制御するために設計されており、アニメーションの遷移やブレンド方法を管理する機能を備えています。
+これらの複雑なアニメーション問題を解決するには、{{< gd-icon AnimationTree >}}`AnimationTree`ノードを使用が必要です。このノードは{{< gd-icon AnimationPlayer >}}`AnimationPlayer`を制御するために設計されており、アニメーションの遷移やブレンド方法を管理する機能を備えています。
 
-シーンに `AnimationTree` コンポーネントを追加します。［インスペクター］で［ツリールート］を新規作成された `AnimationNodeStateMachine` に設定し、［Anim Player］ではキャラクターの {{< gd-icon AnimationPlayer >}}`AnimationPlayer` を選択します。最後に［有効化］チェックボックスをオンにしてください。
+シーンに {{< gd-icon AnimationTree >}}`AnimationTree` コンポーネントを追加します。［インスペクター］で［ツリールート］を新規作成された `AnimationNodeStateMachine` に設定し、［Anim Player］ではキャラクターの {{< gd-icon AnimationPlayer >}}`AnimationPlayer` を選択します。最後に［有効化］チェックボックスをオンにしてください。
 
 ![alt](/godot_recipes/4.x/img/animtree_settings.png)
 
 {{% notice style="note" title="" %}}
-{{< gd-icon AnimationTree >}}.  `AnimationTreeが有効になっていると、 {{< gd-icon AnimationPlayer >}} `AnimationTree` でアニメーションを選択できなくなることにご注意ください。変更を加えたりアニメーションをテストする必要がある場合は、作業する際にツリーの **有効** プロパティを必ずオフにしてください。
+.  `AnimationTreeが有効になっていると、 {{< gd-icon AnimationPlayer >}} {{< gd-icon AnimationTree >}}`AnimationTree` でアニメーションを選択できなくなることにご注意ください。変更を加えたりアニメーションをテストする必要がある場合は、作業する際にツリーの **有効** プロパティを必ずオフにしてください。
 {{% /notice %}}
 
 ### 待機/歩行/走行サイクルについて

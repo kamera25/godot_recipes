@@ -23,7 +23,7 @@ ghcommentid: 53
 
 {{< gd-icon Area2D >}}`Area2D` を使用して剣がターゲットに命中したことを検出できますが、実際に有効化する必要があるのはスイング動作中のみです。アニメーションと同期させるためには、この活性化をAnimationPlayerで制御します。
 
-シーンに `Area2D` と `CollisionShape2D` を追加します。ヒットボックスには矩形形状を使用し、剣が振り上げフレームで完全にカバーされるようにサイズを調整します。
+シーンに {{< gd-icon Area2D >}}`Area2D` と {{< gd-icon CollisionShape2D >}}`CollisionShape2D` を追加します。ヒットボックスには矩形形状を使用し、剣が振り上げフレームで完全にカバーされるようにサイズを調整します。
 
 ![alt](/godot_recipes/3.x/img/melee_attack_01.png)
 

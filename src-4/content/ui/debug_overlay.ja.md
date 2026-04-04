@@ -21,7 +21,7 @@ ghcommentid: 59
 
 ![alt](/godot_recipes/4.x/img/debug_stats_01.png)
 
-まず最初に、名前を `DebugStats` とする `MarginContainer` を追加し、その中に `VBoxContainer` の子要素を配置します。マージンは適切な値に設定してください（私は通常 `20` を使用しています）。
+まず最初に、名前を `DebugStats` とする {{< gd-icon MarginContainer >}}`MarginContainer` を追加し、その中に {{< gd-icon VBoxContainer >}}`VBoxContainer` の子要素を配置します。マージンは適切な値に設定してください（私は通常 `20` を使用しています）。
 
 コードを見てみてください。
 

@@ -47,7 +47,7 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 {{< gd-icon Sprite3D >}}`Sprite3D`を使用することで、2D画像を3D空間で表示することが可能です。新しいシーンに追加し、「Healthbar3D」という名前を付けます。まず設定とサイズ調整を行いますので、 _Texture_ プロパティに緑色のバー画像を設定してください。
 
-{{<  gd-icon Sprite3D >}}`Sprite3D`は通常の3Dオブジェクトと同様に動作します。カメラを移動させると、視点が変わるためです。ただし、HPバーは常にカメラの方を向くようにして、いつでも確認できるようにしたいです。
+{{< gd-icon Sprite3D >}}`Sprite3D`は通常の3Dオブジェクトと同様に動作します。カメラを移動させると、視点が変わるためです。ただし、HPバーは常にカメラの方を向くようにして、いつでも確認できるようにしたいです。
 
 インスペクターで、 _Flags_ セクションの _Billboard_ を「Enabled」に設定してください。
 
@@ -61,10 +61,10 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 ### ビューポートテクスチャ
 
-{{< gd-icon Sprite3D >}}`Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}} `TextureProgressBar` を表示したいです。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現できます。
+{{< gd-icon Sprite3D >}}`Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}}`TextureProgressBar` を表示したいです。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現できます。
 
 以下の手順で操作してください。
-1. {{< gd-icon SubViewport >}} `SubViewport` を {{< gd-icon Sprite3D >}} `Sprite3D` の子要素として追加します。
+1. {{< gd-icon SubViewport >}}`SubViewport` を {{< gd-icon Sprite3D >}}`Sprite3D` の子要素として追加します。
 2. インスペクタウィンドウで、_Transparent BG_ 設定を **オン** に設定してください。
 
 さらに、HPバーテクスチャのサイズに合わせてビューポートのサイズを設定する必要があり、そのサイズは`(200, 26)`です。
@@ -73,7 +73,7 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 ![alt](/godot_recipes/4.x/img/3d_bars_03a.png)
 
-もし `SubViewport` が `Sprite3D` の子要素でなかった場合、インスペクター上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可能性があります。そのため、以下のように `Sprite3D` にアタッチされたスクリプト内で設定します。
+もし {{< gd-icon SubViewport >}}`SubViewport` が {{< gd-icon Sprite3D >}}`Sprite3D` の子要素でなかった場合、インスペクター上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可能性があります。そのため、以下のように {{< gd-icon Sprite3D >}}`Sprite3D` にアタッチされたスクリプト内で設定します。
 
 ```gdscript
 extends Sprite3D

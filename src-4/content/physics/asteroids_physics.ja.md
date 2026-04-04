@@ -6,7 +6,7 @@ draft: false
 
 ## 課題
 
-「Astroids」のような半リアルな宇宙船を作成するため、`RigidBody2D`を使いたい。
+「Astroids」のような半リアルな宇宙船を作成するため、{{< gd-icon RigidBody2D >}}`RigidBody2D`を使いたい。
 
 ## 解決策
 

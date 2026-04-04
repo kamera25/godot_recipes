@@ -38,7 +38,7 @@ AbilityButton: {{< gd-icon TextureButton >}} TextureButton
 
 ![alt](/godot_recipes/4.x/img/cooldown_02.png)
 
-`Timer`ノードの設定は「ワンショット」に設定してください。
+{{< gd-icon Timer >}}`Timer`ノードの設定は「One Shot」に設定してください。
 
 `Counter`はテキストを保持・配置するためのコンテナです。レイアウトを"Bottom Wide"に設定し、**Theme Overrides/Constants** セクションでは両方の **Margin Right** と **Margin Left**  を `5` に指定してください。
 
@@ -68,7 +68,7 @@ func _ready():
 
 まず、能力のクールタイム時間を格納する`cooldown`変数をエクスポートします。次に、`_ready()`メソッド内でこの値を使用して`Timer`を設定できます。最後に、カウントダウン中のみ表示させたいため、ラベルは非表示にしておきます。
 
-次に、`TextureProgress` 表示に割り当てるテクスチャが必要となります。この例では、ボタンのテクスチャをコピーしていますが、お好みで別のテクスチャを使用しても構いません。
+次に、{{< gd-icon TextureProgressBar >}}`TextureProgress` 表示に割り当てるテクスチャが必要となります。この例では、ボタンのテクスチャをコピーしていますが、お好みで別のテクスチャを使用しても構いません。
 
 最後に、スイープ値を `0` に設定し、ノードの処理フラグを `false` にします。アニメーションは `_process()` 内で処理するため、クールタイムモードではない時に実行される必要がないようにします。
 

@@ -21,11 +21,11 @@ Godotでは衝突検出と応答を提供するための様々なコリジョン
 
 Godot では3種類の物理ボディが提供されており、<a href="http://docs.godotengine.org/ja/latest/classes/class_physicsbody2d.html" target="_blank">`PhysicsBody2D`</a> タイプに分類されます。
 
-- {{< gd-icon StaticBody2D >}}`StaticBody2D`- {{< gd-icon StaticBody2D >}} `StaticBody2D`
+- `StaticBody2D`- {{< gd-icon StaticBody2D >}}`StaticBody2D`
 
 スタティックボディとは、物理エンジンによって移動されないオブジェクトです。衝突検知には参加しますが、衝突に応じて移動することはありません。このタイプのボディは、環境の一部となるオブジェクトや、動的な挙動を必要としないオブジェクトに最もよく使います。
 
-- [`RigidBody2D`]({{< gd-icon RigidBody2D >}}) `RigidBody2D`
+- [`RigidBody2D`]() {{< gd-icon RigidBody2D >}}`RigidBody2D`
 
 このノードはシミュレーションされた2D物理を実装しています。直接リジッドボディを操作するのではなく、重力やインパルスなどの力を適用することで、物理エンジンがその結果生じる移動量を計算します。詳細は[Godot 3.0: リジッドボディ](/blog/2017/12/godot3_kyn_rigidbody1/)の記事をご覧ください。
 
@@ -78,7 +78,7 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 
 {{< gd-icon CharacterBody2D >}}`CharacterBody2D` は、コードによって制御されるボディを実装するためのコンポーネントです。移動中に他のオブジェクトと衝突を検出しますが、重力や摩擦といったエンジンの物理特性の影響を受けません。このため、動作を実現するためには多少のコーディングが必要となりますが、その分、動き方や反応をより精密にコントロールできるという利点があります。
 
-> **注意:** `CharacterBody2D` は重力やその他の力の影響を受けますが、移動計算は必ずコード側で実装してください。物理エンジンでは `CharacterBody2D` を自動的に動かすことはできません。
+> **注意:** {{< gd-icon CharacterBody2D >}}`CharacterBody2D` は重力やその他の力の影響を受けますが、移動計算は必ずコード側で実装してください。物理エンジンでは {{< gd-icon CharacterBody2D >}}`CharacterBody2D` を自動的に動かすことはできません。
 
 ### 移動と衝突判定
 
@@ -92,7 +92,7 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 
 ##### KinematicCollision2D
 
-{{< gd-icon CharacterBody2D >}} `CharacterBody2D` が衝突を検知すると、Godotは<a href="http://docs.godotengine.org/en/latest/classes/class_kinematiccollision2d.html" target="_blank">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と衝突相手の物体データが含まれています。このデータを活用すれば、衝突に対する適切な応答計算が可能になります。
+{{< gd-icon CharacterBody2D >}}`CharacterBody2D` が衝突を検知すると、Godotは<a href="http://docs.godotengine.org/en/latest/classes/class_kinematiccollision2d.html" target="_blank">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と衝突相手の物体データが含まれています。このデータを活用すれば、衝突に対する適切な応答計算が可能になります。
 
 #### 移動とスライド処理
 
@@ -145,9 +145,9 @@ velocity = move_and_slide(velocity)
 
 サンプルプロジェクトをダウンロード済みの場合、この例は「BasicMovement.tscn」シーンに含まれています。
 
-このサンプルでは、`CharacterBody2D`コンポーネントを追加し、これに2つの子オブジェクトを配置します。`Sprite`と`CollisionShape2D`です。多くのデモと同様に、Godotのデフォルトアイコン画像"icon.png"を`Sprite`のテクスチャとして使用します（ファイルシステムドックからドラッグして、`Sprite`プロパティの「テクスチャ」欄に設定してください）。`CollisionShape2D`の「形状」プロパティでは「新規 RectangleShape2D」を選択し、その長方形サイズを調整してスプライト画像を覆うように配置します。
+このサンプルでは、{{< gd-icon CharacterBody2D >}}`CharacterBody2D`コンポーネントを追加し、これに2つの子オブジェクトを配置します。{{< gd-icon Sprite2D >}}`Sprite`と{{< gd-icon CollisionShape2D >}}`CollisionShape2D`です。多くのデモと同様に、Godotのデフォルトアイコン画像"icon.png"を{{< gd-icon Sprite2D >}}`Sprite`のテクスチャとして使用します（ファイルシステムドックからドラッグして、`Sprite`プロパティの「テクスチャ」欄に設定してください）。{{< gd-icon CollisionShape2D >}}`CollisionShape2D`の「形状」プロパティでは「新規 RectangleShape2D」を選択し、その長方形サイズを調整してスプライト画像を覆うように配置します。
 
-以下のコードを追加してください：
+{{< gd-icon CharacterBody2D >}}以下のコードを追加してください：
 
 {{< highlight gdscript >}}
 extends CharacterBody2D

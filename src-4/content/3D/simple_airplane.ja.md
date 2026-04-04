@@ -18,7 +18,7 @@ draft: false
 
 ### ノード設定
 
-このシーンでは `CharacterBody3D` を使用します。実際の飛行力学（揚力、抗力など）はシミュレートしないため、この場合 `RigidBody3D` は必要ありません。
+このシーンでは {{< gd-icon CharacterBody3D >}}`CharacterBody3D` を使用します。実際の飛行力学（揚力、抗力など）はシミュレートしないため、この場合 {{< gd-icon RigidBody3D >}}`RigidBody3D` は必要ありません。
 
 以下にモデルのセットアップをご説明します。
 

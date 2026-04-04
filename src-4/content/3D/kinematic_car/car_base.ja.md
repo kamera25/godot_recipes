@@ -21,7 +21,7 @@ ghcommentid: 41
 
 Godotには{{< gd-icon VehicleBody3D >}}`VehicleBody`ノードが用意されており、これは{{< gd-icon RigidBody3D >}}`RigidBody`をベースに、エンジン・ブレーキング・サスペンションなど複雑な物理挙動をシミュレートする機能を備えています。ただし、このアプローチは過剰な複雑さを伴うため、一般的なカジュアルレース／ドライビングゲームには不向きです。そこでここでは、CharacterBody3Dベースのソリューションを採用することにします。
 
-{{% notice info %}}
+{{< gd-icon VehicleBody3D >}}{{% notice info %}}
 VehicleBody3D`車両ボディ`の操作方法について詳しく知りたい方には、[Bastiaan Olij氏によるこのシリーズ動画](https://youtu.be/B5vE-nNszxA)を強くオススメします。
 {{% /notice %}}
 
@@ -50,7 +50,7 @@ Godotでファイルを選択し、「インポート」タブに移動します
 
 ![alt](/godot_recipes/3.x/img/3d_car_02.png)
 
-※各パーツごとの個別メッシュに注意。なお、余分な「tmpParent」{{< gd-icon Node3D >}} `Node3D`ノードがありますが、こちらは無視して構いません。
+※各パーツごとの個別メッシュに注意。なお、余分な「tmpParent」{{< gd-icon Node3D >}}`Node3D`ノードがありますが、こちらは無視して構いません。
 
 {{< gd-icon KinematicBody3D >}}`CharacterBody3D` には衝突形状の欠落に関する警告メッセージが表示されています。まずはこの問題を修正する必要があります。
 * {{< gd-icon CollisionShape3D >}}`CollisionShape` を追加します。

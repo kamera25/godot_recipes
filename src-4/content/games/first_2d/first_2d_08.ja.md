@@ -25,7 +25,7 @@ func _process(delta):
     position.y += speed * delta
 ```
 
-以下の方法でそれぞれ接続してください。
+{{< gd-icon Area2D >}}{{< gd-icon VisibleOnScreenNotifier2D >}}以下の方法でそれぞれ接続してください。
 
 ```gdscript
 func _on_visible_on_screen_notifier_2d_screen_exited():

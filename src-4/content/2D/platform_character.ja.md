@@ -21,7 +21,7 @@ ghcommentid: 16
 {{< gd-icon RigidBody2D >}}`RigidBody2D` を使用してプラットフォーマーキャラクターを作成することはできますが、ここでは {{< gd-icon CharacterBody2D >}}`CharacterBody2D` に焦点を当てます。運動制御ボディはプラットフォームゲームに最適です。このようなゲームでは、リアルな物理挙動よりも反応の良いアーケードライクな操作感が重視されるためです。
 {{% /notice %}}
 
-まず `CharacterBody2D` ノードを作成し、その上に `Sprite2D` と `CollisionShape2D` を追加してください。
+まず {{< gd-icon CharacterBody2D >}}`CharacterBody2D` ノードを作成し、その上に {{< gd-icon Sprite2D >}}`Sprite2D` と {{< gd-icon CollisionShape2D >}}`CollisionShape2D` を追加してください。
 
 以下のスクリプトをキャラクターノードのルートに追加してください。なお、ここでは[インプットマップ]で定義した入力アクション（`"walk_right"`、`"walk_left"`、および `"jump"`）を使用しています。詳細は [InputActions](/godot_recipes/4.x/ja/input/input_actions/) をご覧ください。
 

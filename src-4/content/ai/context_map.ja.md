@@ -179,7 +179,7 @@ func choose_direction():
 
 ### 実際の使用例
 
-実際に試してみます！ここでは、{{< gd-icon Path2D >}} `Path2D`と衝突判定用のポリゴンを使ってトラックを作成してみました。
+実際に試してみます！ここでは、{{< gd-icon Path2D >}}`Path2D`と衝突判定用のポリゴンを使ってトラックを作成してみました。
 
 ![alt](/godot_recipes/3.x/img/ai_context_11.png)
 

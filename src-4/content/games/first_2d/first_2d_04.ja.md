@@ -29,10 +29,10 @@ pre: "04. "
 
 以下にノードの設定を示します。
 
-* `Area2D` - この`Bullet`に名前を付ける
-        * `Sprite2D`
-        * `CollisionShape2D`
-        * `VisibleOnScreenNotifier2D`
+* {{< gd-icon Area2D >}}`Area2D` - この`Bullet`に名前を付ける
+        * {{< gd-icon Sprite2D >}}`Sprite2D`
+        * {{< gd-icon CollisionShape2D >}}`CollisionShape2D`
+        * {{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`
 
 アセットパックフォルダから、`Player_charged_beam (16 x 16).png`画像ファイルを、{{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの**テクスチャ**プロパティにドラッグ＆ドロップしてください。
 

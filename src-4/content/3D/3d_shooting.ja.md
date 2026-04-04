@@ -38,7 +38,7 @@ ghcommentid: 36
 メッシュを {{< gd-icon MeshInstance3D >}}`MeshInstance` に追加し、衝突形状もそれに合わせてスケール調整してください。
 
 {{% notice warning %}}
-必ず `MeshInstance` を `Area3D` ノードの前方方向（**-Z** 軸）と揃えてください。そうしないと、弾丸が正しく飛んでいるように見えませんよ！
+必ず {{< gd-icon MeshInstance3D >}}`MeshInstance` を `Area3D` ノードの前方方向（**-Z** 軸）と揃えてください。そうしないと、弾丸が正しく飛んでいるように見えませんよ！
 {{% /notice %}}
 
 スクリプトを追加し、{{< gd-icon Area3D >}}`Area3D`の`body_entered`シグナルを接続してください。

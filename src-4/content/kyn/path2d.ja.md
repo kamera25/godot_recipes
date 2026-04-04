@@ -14,7 +14,7 @@ ghcommentid: 94
 
 パスには様々な用途があります。敵モブが辿る巡回経路、アニメーション効果のための曲がりくねった道、移動プラットフォームの動作パターンなどを作成できます。
 
-### `Curve2D`について【{{<  gd-icon Curve2D >}}】
+### `Curve2D`について【{{< gd-icon Curve2D >}}】
 
 パスのデータはこのリソースオブジェクトに保持されています。これには曲線の数学的表現が含まれており、そのデータと対話するための方法がいくつか提供されています。[APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_curve2d.html)に詳細が記載されていますが、ここでは特に役立つメソッドをいくつか紹介します。
 
@@ -36,7 +36,7 @@ ghcommentid: 94
 
 ## 経路の描画方法
 
-{{< gd-icon Path2D >}} `Path2D` ノードを選択すると、アイコンバーに以下の新しいアイコンが表示されます。
+{{< gd-icon Path2D >}}`Path2D` ノードを選択すると、アイコンバーに以下の新しいアイコンが表示されます。
 
 ![alt](/godot_recipes/3.x/img/kyn_path2d_01.png)
 
@@ -58,7 +58,7 @@ ghcommentid: 94
 
 ## 経路の追跡
 
-単体では{{< gd-icon Path2D >}} `Path2D`ノードにはほとんど機能がありません。経路に沿って移動するには、{{< gd-icon PathFollow2D >}} `PathFollow2D` ノードも併せて使用が必要です。これは親の {{< gd-icon Path2D >}} `Path2D` に沿って移動する役割を持つノードです。
+単体では{{< gd-icon Path2D >}}`Path2D`ノードにはほとんど機能がありません。経路に沿って移動するには、{{< gd-icon PathFollow2D >}}`PathFollow2D` ノードも併せて使用が必要です。これは親の {{< gd-icon Path2D >}}`Path2D` に沿って移動する役割を持つノードです。
 
 ノードプロパティを調整：
 
@@ -91,7 +91,7 @@ func _process(delta):
 
 ![alt](/godot_recipes/3.x/img/ai_context_10.gif)
 
-この例では、AIエージェントは壁や他のエージェントを回避するだけでなく、正しい進行方向に沿って移動を続けようとします。軌道上には以下の[{{< gd-icon Path2D >}} `Path2D`]が描画されており、エージェントはこれを参照して現在の進行方向を確認します。
+この例では、AIエージェントは壁や他のエージェントを回避するだけでなく、正しい進行方向に沿って移動を続けようとします。軌道上には以下の[{{< gd-icon Path2D >}}`Path2D`]が描画されており、エージェントはこれを参照して現在の進行方向を確認します。
 
 ```gdscript
 func get_path_direction(pos):
@@ -100,7 +100,7 @@ func get_path_direction(pos):
     return $Path2D/PathFollow2D.transform.x
 ```
 
-任意の経路上の位置において、{{< gd-icon PathFollow2D >}} `PathFollow2D` の前方方向 (`transform.x`) は常に経路に沿っています。
+任意の経路上の位置において、{{< gd-icon PathFollow2D >}}`PathFollow2D` の前方方向 (`transform.x`) は常に経路に沿っています。
 
 ## 関連レシピ
 

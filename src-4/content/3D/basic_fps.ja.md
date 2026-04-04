@@ -11,7 +11,7 @@ tags: []
 
 ## 解決策
 
-まず、`CharacterBody3D` ノードから始め、次に `CollisionShape3D` を追加します。この場合、最も一般的な選択肢は `CapsuleShape3D` 衝突形状です。ワールドの設定によっては、ここに他の形状も追加できますが、この例では基本に忠実に進めます。
+まず、{{< gd-icon CharacterBody3D >}}`CharacterBody3D` ノードから始め、次に {{< gd-icon CollisionShape3D >}}`CollisionShape3D` を追加します。この場合、最も一般的な選択肢は {{< gd-icon CapsuleShape3D >}}`CapsuleShape3D` 衝突形状です。ワールドの設定によっては、ここに他の形状も追加できますが、この例では基本に忠実に進めます。
 
 サイズはすべて初期設定値のままにします（カプセルの高さは2メートルとなります）。地面と底面を揃えるため、高さを「+1.0」m移動させてください。
 

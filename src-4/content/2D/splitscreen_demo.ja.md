@@ -20,7 +20,7 @@ ghcommentid: 18
 ### ゲーム設定
 
 ゲーム世界のセットアップに多くの時間をかけるつもりはありません。登場する2人のキャラクターは
-シンプルな8方向移動を実装した{{< gd-icon CharacterBody2D >}} `CharacterBody2D` オブジェクトです。
+シンプルな8方向移動を実装した{{< gd-icon CharacterBody2D >}}`CharacterBody2D` オブジェクトです。
 
 {{% notice note %}}
 このパーツのセットアップでお困りの場合は、公式Godotドキュメントの以下のセクションをご覧ください: [2D移動概要](http://docs.godotengine.org/ja/stable/tutorials/2d/2d_movement.html)。
@@ -40,7 +40,7 @@ func get_input():
 
 この方法であれば、キャラクターが同じ移動スクリプトを使用できます。各プレイヤーに適切な値を `id` として割り当てるだけです。
 
-以下の手順に従って、2つのプレイヤーを `TileMap` を含む「ワールド」シーンに追加します。
+以下の手順に従って、2つのプレイヤーを {{< gd-icon TileMap >}}`TileMap` を含む「ワールド」シーンに追加します。
 
 ![alt](/godot_recipes/3.x/img/splitscreen_map.png)
 
@@ -159,9 +159,9 @@ func set_camera_limits():
 
 もう一つ便利な機能を追加してください。マップ全体を見渡せるミニマップです。プレイヤーが現在地を把握しやすくなります。
 
-さらにもう 1 つ {{< gd-icon ViewportContainer >}} の `ViewportContainer` が必要です。今回は `Main` の子要素として配置します。この場合、
-*ストレッチ機能は使用しません*。代わりに {{< gd-icon Viewport >}} の `Viewport` を追加し、サイズを `(340, 200)` に設定します
-その後、{{< gd-icon Camera2D >}} の `Camera2D` 要素を追加します。表示画面中央に配置するため、`Camera2D` の _位置_ を `(512, 300)` に設定しましょう。表示範囲を拡大するには、_ズーム倍率_ を `(9, 9)` に設定してください。このカメラについても忘れずに
+さらにもう 1 つ  の {{< gd-icon ViewportContainer >}}`ViewportContainer` が必要です。今回は `Main` の子要素として配置します。この場合、
+*ストレッチ機能は使用しません*。代わりに {{< gd-icon Viewport >}} の {{< gd-icon Viewport >}}`Viewport` を追加し、サイズを `(340, 200)` に設定します
+その後、 の `Camera2D` 要素を追加します。表示画面中央に配置するため、{{< gd-icon Camera2D >}}`Camera2D` の _位置_ を `(512, 300)` に設定しましょう。表示範囲を拡大するには、_ズーム倍率_ を `(9, 9)` に設定してください。このカメラについても忘れずに
 **現在使用中** を選択してください。
 
 `_ready()`関数内では、ミニマップが他の2つのビューポートと同じワールドを使用するように設定します。

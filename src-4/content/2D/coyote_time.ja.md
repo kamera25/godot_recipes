@@ -25,7 +25,7 @@ draft: false
 
 この機能を既存のプラットフォームキャラクターに追加します。設定方法については[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)を参照してください。
 
-タイミング処理に関しては、`CoyoteTimer`という名前の`Timer`ノードを追加し、設定を**ワンショットモード**にします。
+タイミング処理に関しては、`CoyoteTimer`という名前の{{< gd-icon Timer >}}`Timer`ノードを追加し、設定を**ワンショットモード**にします。
 
 コヨーテタイム管理に必要な新しい変数がいくつかあります。
 
@@ -35,7 +35,7 @@ var coyote = false  # Track whether we're in coyote time or not
 var last_floor = false  # Last frame's on-floor state
 ```
 
-フレーム単位で時間を設定しているため、`_ready()`内で`Timer`の長さを設定する際にも次のように変換できます。
+フレーム単位で時間を設定しているため、`_ready()`内で{{< gd-icon Timer >}}`Timer`の長さを設定する際にも次のように変換できます。
 
 ```gdscript
 $CoyoteTimer.wait_time = coyote_frames / 60.0

@@ -114,7 +114,7 @@ LevelMenu:{{< gd-icon MarginContainer >}} MarginContainer
 
 * {{< gd-icon MarginContainer >}}`LevelMenu`
     * **テーマオーバーライド/定数/マージン**: `20`
-* {{< gd-icon VBoxContainer >}} `VBoxContainer`
+* {{< gd-icon VBoxContainer >}}`VBoxContainer`
     * **テーマオーバーライド/定数/間隔**: `50`
 * {{< gd-icon Label >}} `Title`
     * フォントスタイルはお好みでカスタマイズ可能
@@ -126,7 +126,7 @@ LevelMenu:{{< gd-icon MarginContainer >}} MarginContainer
     * **Layout/Clip Contents**: `有効化`
     * **Layout/Custom Minimum Size**: `(710, 350)` (`レベルグリッド`のサイズに相当)
 
-ノード「ClipControl」内にグリッドが配置されます。**コンテンツを切り取る** を有効にすると、コントロール領域を超える内容は自動的に切り取られます。これにより、水平スクロール可能なグリッドセットを作成できるようになります。「ClipControl」に{{< gd-icon HBoxContainer >}} `HBoxContainer` 要素を「GridBox」という名前で追加し、その内部にインスタンス3個以上の `LevelGrid`を配置してください。
+ノード「ClipControl」内にグリッドが配置されます。**コンテンツを切り取る** を有効にすると、コントロール領域を超える内容は自動的に切り取られます。これにより、水平スクロール可能なグリッドセットを作成できるようになります。「ClipControl」に{{< gd-icon HBoxContainer >}}`HBoxContainer` 要素を「GridBox」という名前で追加し、その内部にインスタンス3個以上の `LevelGrid`を配置してください。
 
 必ず**テーマのオーバーライド／定数／区切り文字**を `0` に設定してください。
 
@@ -146,7 +146,7 @@ LevelMenu:{{< gd-icon MarginContainer >}} MarginContainer
 ```
 
 {{% notice info %}}
-「なぜこの場面で{{< gd-icon ScrollContainer >}} `ScrollContainer`を使わないのか」と疑問に思われるかもしれません。もちろん、使用することはできますが、連続スクロールを望んでいませんし、スクロールバーが表示されることも避けたいからです。
+「なぜこの場面で{{< gd-icon ScrollContainer >}}`ScrollContainer`を使わないのか」と疑問に思われるかもしれません。もちろん、使用することはできますが、連続スクロールを望んでいませんし、スクロールバーが表示されることも避けたいからです。
 {{% /notice %}}
 
 スクリプトを `LevelMenu` に追加し、2つのボタンの `pressed`シグナルを接続してください。

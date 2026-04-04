@@ -63,7 +63,7 @@ draft: false
 
 ### マップマーカー
 
-`Grid`の子要素として、名前を「PlayerMarker」とする`Sprite2D`ノードを追加します。また、 `minimapIcon_arrowA.png` テクスチャを適用します。スプライトの **Transform/Position** プロパティに注意してください。 `(0, 0)` となっており、これにより`Grid`の左上隅に正確に配置されます。
+`Grid`の子要素として、名前を「PlayerMarker」とする{{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加します。また、 `minimapIcon_arrowA.png` テクスチャを適用します。スプライトの **Transform/Position** プロパティに注意してください。 `(0, 0)` となっており、これにより`Grid`の左上隅に正確に配置されます。
 
 ![alt](/godot_recipes/4.x/img/minimap_05.png)
 

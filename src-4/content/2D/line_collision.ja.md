@@ -6,7 +6,7 @@ draft: false
 
 ## 課題
 
-衝突検出を {{<  gd-icon Line2D >}}`Line2D` に対して行いたい。
+衝突検出を {{< gd-icon Line2D >}}`Line2D` に対して行いたい。
 
 ## 解決策
 
@@ -27,7 +27,7 @@ draft: false
 
 次に、ボディに衝突形状を追加が必要です。以下の2つのオプションがあります。
 
-### その1：{{< gd-icon SegmentShape2D >}} `SegmentShape2D`の使用
+### その1：{{< gd-icon SegmentShape2D >}}`SegmentShape2D`の使用
 
 {{< gd-icon SegmentShape2D >}}`SegmentShape2D` は線分衝突形状です。この手法の目的は、直線上の各点ペアに対して個別のセグメント衝突を作成することです。
 

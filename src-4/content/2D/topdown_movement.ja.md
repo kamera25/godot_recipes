@@ -21,7 +21,7 @@ ghcommentid: 20
 `"left"` | A,←
 `"click"` | マウスボタン1
 
-また、以下のノードを使用していると想定します。{{< gd-icon CharacterBody2D >}} `CharacterBody2D` ノード。
+また、以下のノードを使用していると想定します。{{< gd-icon CharacterBody2D >}}`CharacterBody2D` ノード。
 
 この問題は、求める行動の種類に応じてさまざまな方法で解決できます。
 

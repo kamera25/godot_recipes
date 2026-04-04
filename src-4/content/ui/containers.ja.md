@@ -17,7 +17,7 @@ ghcommentid: 56
 
 多くの開発者にとって、UI開発は最も苦手な作業です。複雑なUIは制御不能に陥りやすく、修正や変更が極めて困難な状況に陥ることがあります。Godotには優れたUI構築ツールが揃っていますが、これらを適切に使いこなすための時間を投資すれば、そうした苦労を大幅に軽減できることに気付くでしょう。
 
-解決策は `Container` コンポーネントです。コンテナを活用することで、UIのレイアウト構築が大幅に効率化できます。
+解決策は {{< gd-icon Container >}}`Container` コンポーネントです。コンテナを活用することで、UIのレイアウト構築が大幅に効率化できます。
 
 {{< gd-icon Control >}}`Control` を`Container`に追加すると、コンテナが当該コントロールの位置指定情報をすべて継承します。これにより、子要素のサイズや位置、その他のレイアウトプロパティを個別に設定することはできなくなります。
 
@@ -29,7 +29,7 @@ ghcommentid: 56
 
 以下によく使われる代表的なコンテナをいくつか紹介します。
 
-* {{< gd-icon CenterContainer >}} `CenterContainer`
+* {{< gd-icon CenterContainer >}}`CenterContainer`
 
     このコンテナは子要素を中央に配置します。
 
@@ -37,7 +37,7 @@ ghcommentid: 56
 
     このコンテナはマージンを保持しており、子要素がコンテナの端に近づきすぎるのを防ぎます。マージン値はプロパティの「カスタム定数」セクションで設定できます。
 
-* {{< gd-icon VBoxContainer >}} ``VBoxContainer`` / {{< gd-icon HBoxContainer >}} ``HBoxContainer``
+*  `{{< gd-icon VBoxContainer >}}`VBoxContainer`` /  `{{< gd-icon HBoxContainer >}}`HBoxContainer``
 
     これらのコンテナは、内容物を垂直または水平方向に整列させます。「カスタム定数」セクションでは、要素間の間隔を広げるための*分離*プロパティも設定できます。
 

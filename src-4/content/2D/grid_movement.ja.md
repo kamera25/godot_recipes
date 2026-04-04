@@ -21,7 +21,7 @@ ghcommentid: 21
 
 以下がプレイヤーで使用するノードです。
 
-- {{< gd-icon Area2D >}}`Area2D` ("プレイヤー"): `Area2D` を使用することで、オブジェクトのピックアップや敵との衝突判定が可能になります。
+- {{< gd-icon Area2D >}}`Area2D` ("プレイヤー"): {{< gd-icon Area2D >}}`Area2D` を使用することで、オブジェクトのピックアップや敵との衝突判定が可能になります。
   - {{< gd-icon Sprite2D >}}`Sprite2D`: ここではスプライトシートを使用できます（アニメーション設定は後述します）。
   - {{< gd-icon CollisionShape2D >}}`CollisionShape2D`: ヒットボックスが大きすぎないように注意してください。プレイヤーがタイルの中心に立つため、オーバーラップ判定も中央から行われます。
   - {{< gd-icon RayCast2D >}}`RayCast2D`: 指定された方向への移動が可能かどうかを確認する際に使われます。
@@ -103,7 +103,7 @@ var animation_speed = 3
 var moving = false
 ```
 
-ノード `Tween` に参照を追加し、移動速度を設定する変数を作成します。
+ノード {{< gd-icon Tween >}}`Tween` に参照を追加し、移動速度を設定する変数を作成します。
 
 ```gdscript
 func _unhandled_input(event):

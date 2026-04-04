@@ -21,7 +21,7 @@ ghcommentid: 37
 
 ### セットアップ方法
 
-表示レイヤーについては、3Dシーンに{{< gd-icon CanvasLayer >}}`CanvasLayer`コンポーネントを追加し、その中に{{< gd-icon Control >}}`Control`を配置してください。さらに、この`Control`にスクリプトを割り当てる必要があります。
+表示レイヤーについては、3Dシーンに{{< gd-icon CanvasLayer >}}`CanvasLayer`コンポーネントを追加し、その中に`Control`を配置してください。さらに、この{{< gd-icon Control >}}`Control`にスクリプトを割り当てる必要があります。
 
 ![alt](/godot_recipes/3.x/img/3d_debug_03.png)
 

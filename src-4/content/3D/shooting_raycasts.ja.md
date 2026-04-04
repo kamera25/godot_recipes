@@ -21,7 +21,7 @@ Godotにおけるレイキャスティングには、主に2つの方法があ�
 このレシピでは、すでに動作するFPSキャラクターコントローラーと移動可能なワールドが用意されていることを前提としています。もし用意されていない場合は、先に[FPSキャラクターの作り方](/godot_recipes/4.x/ja/3d/basic_fps)のチュートリアルを参照してください。
 {{% /notice %}}
 
-ヒットした内容を確認するには、`FPSPlayer`シーンに{{<  gd-icon CanvasLayer >}}`CanvasLayer`ノードと{{<  gd-icon Label >}}`Label`ノードを追加してください。
+ヒットした内容を確認するには、`FPSPlayer`シーンに{{< gd-icon CanvasLayer >}}`CanvasLayer`ノードと{{< gd-icon Label >}}`Label`ノードを追加してください。
 
 マウス入力を処理するために既に使用している `_input()` 関数に、入力チェックを追加します。
 

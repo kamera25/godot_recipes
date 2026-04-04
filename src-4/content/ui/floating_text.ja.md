@@ -81,7 +81,7 @@ func show_value(value, travel, duration, spread, crit=false):
 
 次に、浮遊テキストの表示位置を管理し生成するための小さなノードを作成します。このノードは、浮動テキストエフェクトを表示させたいゲームエンティティにアタッチされます。
 
-これは `Node2D` クラスのノードで「FCTManager」という名前です。このノードには以下のスクリプトが含まれています。
+これは {{< gd-icon Node2D >}}`Node2D` クラスのノードで「FCTManager」という名前です。このノードには以下のスクリプトが含まれています。
 
 ```gdscript
 extends Node2D
