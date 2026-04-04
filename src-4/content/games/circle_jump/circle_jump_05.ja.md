@@ -17,7 +17,7 @@ HUDとして使用する`CanvasLayer`をルートとする新しいシーンを�
 
 Scene treeは以下のようになっている必要があります。
 
-![alt](/godot_recipes/3.x/img/cj_05_01.png)
+![alt](/godot_recipes/4.x/img/cj_05_01.png)
 
 以下の設定を行ってください。
 - `ScoreBox` のレイアウトを「下部ワイド」に設定
@@ -28,7 +28,7 @@ Scene treeは以下のようになっている必要があります。
 
 同じ「DynamicFont」リソースを両方のラベルに追加しますが、最初のラベルでは「ユニークにする」を選択し、そのサイズを `32` に設定します。_Text_プロパティには「スコア」と入力してください。その _Size Flags/Vertical_ で「塗りつぶし」を設定します。レイアウトは以下のようになります。
 
-![alt](/godot_recipes/3.x/img/cj_05_02.png)
+![alt](/godot_recipes/4.x/img/cj_05_02.png)
 
 次に、`Message`ノードの処理に移ります。まずフォントを読み込み、_Text_プロパティに「メッセージ」を設定します。こうすることで表示内容が確認できるようになります。さらに、フォントリソースで「ユニーク化」（Make Unique）を選択してください（この理由は次のセクションで説明します）。_Align_と_Valign_は「中央」に設定し、_Clip Text_は「オン」にしてください。レイアウトに関しては「ワイド・センタリング」を選択します。また、_Grow Direction/Vertical_を「両方」に設定します。
 
@@ -48,11 +48,11 @@ Scene treeは以下のようになっている必要があります。
 
 以下にアニメーション設定の例を示します。
 
-![alt](/godot_recipes/3.x/img/cj_05_03.png)
+![alt](/godot_recipes/4.x/img/cj_05_03.png)
 
 アニメーション再生時の挙動：
 
-![alt](/godot_recipes/3.x/img/cj_05_04.gif)
+![alt](/godot_recipes/4.x/img/cj_05_04.gif)
 
 ## HUDスクリプト
 

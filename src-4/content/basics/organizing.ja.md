@@ -35,7 +35,7 @@ draft: true
 
 一般的な解決策として、プロジェクトファイルをゲーム機能ごとに階層化したフォルダ構造に分割する方法があります。例えば、以下のような構成が考えられます。
 
-![alt](/godot_recipes/3.x/img/organize_02.png)
+![alt](/godot_recipes/4.x/img/organize_02.png)
 
 <!--
 ```markdown

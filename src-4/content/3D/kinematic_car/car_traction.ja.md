@@ -58,7 +58,7 @@ velocity = new_heading * velocity.length()
 velocity = lerp(velocity, new_heading * velocity.length(), traction)
 ```
 
-![alt](/godot_recipes/3.x/img/3d_car_06.gif)
+![alt](/godot_recipes/4.x/img/3d_car_06.gif)
 
 ### まとめ
 

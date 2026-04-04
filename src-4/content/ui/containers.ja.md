@@ -49,7 +49,7 @@ ghcommentid: 56
 
 コンテナが子要素をどのように扱うかは、主に「サイズフラグ」プロパティによって制御されます。
 
-![alt](/godot_recipes/3.x/img/ui_size_flags.png)
+![alt](/godot_recipes/4.x/img/ui_size_flags.png)
 
 * Fill
 
@@ -73,11 +73,11 @@ ghcommentid: 56
 
 これらの設定を試すには、以下のようなテストシーンを設定する方法が有効です。
 
-![alt](/godot_recipes/3.x/img/ui_flags_example01.png)
+![alt](/godot_recipes/4.x/img/ui_flags_example01.png)
 
 異なるボタンの「サイズフラグ」プロパティを調整してみて、それが `HBoxContainer` 内での配置にどのように影響するか確認してください。
 
-![alt](/godot_recipes/3.x/img/ui_flags_example02.gif)
+![alt](/godot_recipes/4.x/img/ui_flags_example02.gif)
 
 ### ネストされたコンテナ
 

@@ -23,7 +23,7 @@ ghcommentid: 37
 
 表示レイヤーについては、3Dシーンに{{< gd-icon CanvasLayer >}}`CanvasLayer`コンポーネントを追加し、その中に`Control`を配置してください。さらに、この{{< gd-icon Control >}}`Control`にスクリプトを割り当てる必要があります。
 
-![alt](/godot_recipes/3.x/img/3d_debug_03.png)
+![alt](/godot_recipes/4.x/img/3d_debug_03.png)
 
 例：描画制御ノードがプレイヤーノードを参照しており、その速度ベクトルを描画したいとします。また、{{< gd-icon Camera3D >}}`Camera`も参照しています。これらの参照方法については後ほど詳しく説明します。
 
@@ -48,9 +48,9 @@ func draw_triangle(pos, dir, size, color):
 
 ベクトルの始点と終点を求めるために`unproject_position()`を使用します。`draw_triangle()`は、見栄えの良い尖った矢印形状を表示するために用意されています。
 
-![alt](/godot_recipes/3.x/img/3d_debug_01.png)
+![alt](/godot_recipes/4.x/img/3d_debug_01.png)
 
-![alt](/godot_recipes/3.x/img/3d_debug_02.png)
+![alt](/godot_recipes/4.x/img/3d_debug_02.png)
 
 ### ゲームオブジェクトからの簡単なアクセス方法
 
@@ -139,7 +139,7 @@ DebugOverlay.draw.add_vector(self, "velocity", 1, 4, Color(0,1,0, 0.5))
 
 以下に、レイキャストと操舵方向を表示するAI制御車両の実例をご紹介します。
 
-![alt](/godot_recipes/3.x/img/3d_debug_04.gif)
+![alt](/godot_recipes/4.x/img/3d_debug_04.gif)
 
 ## 関連レシピ
 

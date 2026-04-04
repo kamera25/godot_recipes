@@ -13,7 +13,7 @@ ghcommentid: 44
 
 [キネマティックカー](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/) は斜面を登れるようになりましたが、見た目が少し不自然です。
 
-![alt](/godot_recipes/3.x/img/3d_car_10.png)
+![alt](/godot_recipes/4.x/img/3d_car_10.png)
 
 ## 解決策
 
@@ -21,7 +21,7 @@ ghcommentid: 44
 
 まず、車輪が地面に接触していない状況を検出する必要があります。車に2つの {{< gd-icon RayCast3D >}}`RayCast` ノードを追加し、以下のように前輪と後輪にそれぞれ配置します。
 
-![alt](/godot_recipes/3.x/img/3d_car_11.png)
+![alt](/godot_recipes/4.x/img/3d_car_11.png)
 
 両方の場合、［キャスト先］を（0、-0.25、0）に設定し、「有効」ボックスのチェックを忘れずに行ってください。
 
@@ -56,7 +56,7 @@ if $FrontRay.is_colliding() or $RearRay.is_colliding():
 
 それ以外の場合は、前面および背面レイの結果を平均化して使用します。衝突が発生している場合、衝突オブジェクトの表面法線が考慮されます。この方法により、例えばカーブした坂道のように2つの車輪が異なる斜面に接している状況でも、両方の車輪を可能な限り表面に接触させようとする処理が行われます。
 
-![alt](/godot_recipes/3.x/img/3d_car_12.png)
+![alt](/godot_recipes/4.x/img/3d_car_12.png)
 
 この画像では、車がどちらの面にも平行ではなく、中間位置に配置されていることがわかります。
 

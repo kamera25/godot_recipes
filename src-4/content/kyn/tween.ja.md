@@ -24,7 +24,7 @@ tags: []
 
 trans_typeパラメーターを使用することで、補間に使用する遷移タイプを選択できます。これは、各フレームにおけるプロパティ値を計算するための数学的公式を指定するものです。異なるタイプのトランジションは、それぞれ特徴的な移動パターンを生成します。以下に示すように、各アイコンの'position'値は同一の範囲と時間範囲でTween処理されます。
 
-![alt](/godot_recipes/3.x/img/tween_01.gif)
+![alt](/godot_recipes/4.x/img/tween_01.gif)
 
 {{% notice note %}}
 {{% /notice %}}

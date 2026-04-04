@@ -80,7 +80,7 @@ func shake():
     offset.y = max_offset.y * amount * rand_range(-1, 1)
 ```
 
-![alt](/godot_recipes/3.x/img/shake_rand01.gif)
+![alt](/godot_recipes/4.x/img/shake_rand01.gif)
 
 これは良さそうですが、もっと見栄え良くできます。
 
@@ -96,7 +96,7 @@ func shake():
 
 `FastNoiseLite` は、3D空間上に点の「雲」を生成することで動作します。各点には「-1」から「1」までの値が割り当てられます。以下に、`FastNoiseLite` によって生成されたノイズの具体例を2つ示します。画像では、各ピクセルの色がその位置におけるノイズ値に対応しています。
 
-![alt](/godot_recipes/3.x/img/2d_noise_example.png)
+![alt](/godot_recipes/4.x/img/2d_noise_example.png)
 
 ご覧のとおり、「ノイジー」な性質ではありますが、特定のピクセルを選択すると、その周辺ピクセルは予測不能に変動するものの、急激に極端な値から別の極端値へと飛び移るようなことはありません。動作特性は用途に応じて調整可能ですが、ここではFastNoiseLiteの詳細な設定方法については割愛します。より詳しい情報については、以下の[関連レシピ](#関連レシピ)セクションをご覧ください。
 
@@ -124,7 +124,7 @@ offset.y = max_offset.y * amount * noise.get_noise_2d(noise.seed*3, noise_y)
 
 `get_noise_2d()` は指定された座標 `(x, y)` におけるノイズ値を返します。3つのオフセットすべてに同じノイズ値を使用するのは避けるため、ここでは恣意的に異なる（かつ離れた）3つの `x` 値を選び、それぞれの点で連続的に増加する `noise_y` 値を使ってグラデーションに沿って「移動」させる手法を採用しています。
 
-![alt](/godot_recipes/3.x/img/shake_noise01.gif)
+![alt](/godot_recipes/4.x/img/shake_noise01.gif)
 
 {{% notice note %}}
 プロジェクトファイルはこちらからダウンロードできます。[screen_shake.zip](/godot_recipes/4.x/ja/files/screen_shake.zip)

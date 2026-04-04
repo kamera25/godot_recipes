@@ -12,7 +12,7 @@ pre: "<i class='far fa-circle fa-fw'></i>&nbsp"
 
 この連載シリーズでは、ワンタップで遊べるモバイルゲーム『サークルジャンプ』を開発していきます。まずはこのゲームの概要から見てみてください。
 
-![alt](/godot_recipes/3.x/img/circle_jump.gif)
+![alt](/godot_recipes/4.x/img/circle_jump.gif)
 
 各エピソードでは、新機能の追加やバグ修正を行い、その過程を分かりやすく解説していきます。
 

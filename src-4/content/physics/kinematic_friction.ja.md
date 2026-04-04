@@ -83,7 +83,7 @@ func get_input():
 値に `1.0` を使用すると、当初の「瞬間的な」移動状態が復活します。
 {{% /notice %}}
 
-![alt](/godot_recipes/3.x/img/friction_platformer.gif)
+![alt](/godot_recipes/4.x/img/friction_platformer.gif)
 
 ## 関連するレシピ
 

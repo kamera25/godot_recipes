@@ -29,7 +29,7 @@ ghcommentid: 55
 
 シーンに新しい {{< gd-icon Label >}}`Label`ノードを追加します。インスペクターでは、ほとんどのプロパティが自明な内容になっています（マウスカーソルを合わせると説明が表示されます）：
 
-![alt](/godot_recipes/3.x/img/ui_label_properties.png)
+![alt](/godot_recipes/4.x/img/ui_label_properties.png)
 
 「テキスト」フィールドに任意の文字を入力して、表示スタイルを試してみます。デフォルトフォントが設定されていますが、かなりシンプルな（しかも小さい）デザインになっています。
 
@@ -37,19 +37,19 @@ ghcommentid: 55
 
 フォントを追加するには：インスペクターで「カスタムフォント」セクションまでスクロールダウンし、展開してください。空の「フォント」プロパティで『新規ダイナミックフォント』を選択し、新しく表示された`DynamicFont`をクリックしてさらに展開します。
 
-![alt](/godot_recipes/3.x/img/ui_label_font_properties.png)
+![alt](/godot_recipes/4.x/img/ui_label_font_properties.png)
 
 フォントファイル（この例では`Roboto-Medium.ttf`を使用しています）を*フォントデータ*プロパティにドラッグするか、「読み込み」を選択して直接ファイルを指定します。調整すべきプロパティは複数ありますが、まずは*サイズ*を少し大きくしてみます。
 
 テキストの表示に与える影響を自由に調整してみてください。例えば、以下の画像では、2番目のラベルに*フィルター*プロパティが有効になっています。
 
-![alt](/godot_recipes/3.x/img/ui_label_font_filter.png)
+![alt](/godot_recipes/4.x/img/ui_label_font_filter.png)
 
 #### 色の調整
 
 ラベルのフォントカラーは「カスタムカラー」セクションで調整できます。ここでは「フォントカラー」を変更できるほか、影の色を追加することもできます。影のプロパティは「カスタム定数」セクションで設定します。
 
-![alt](/godot_recipes/3.x/img/ui_label_font_colors.png)
+![alt](/godot_recipes/4.x/img/ui_label_font_colors.png)
 
 ### 動的に変化するテキスト表示
 

@@ -22,25 +22,25 @@ draft: false
 
 以下に具体例を示します。{{< gd-icon StaticBody2D >}}`StaticBody2D`と{{< gd-icon RigidBody2D >}}`RigidBody2D`を使用しています。追加コードは一切ありません。スタティックボディの*定数線形速度*は `(200, 0)` に設定されています。
 
-![alt](/godot_recipes/3.x/img/conveyor_02.gif)
+![alt](/godot_recipes/4.x/img/conveyor_02.gif)
 
 ### ベルトの動きをアニメーション化
 
 コンベアベルトの「外観」を表現する方法は、使用するアートアセットによって異なります。今回のデモプロジェクトでは、以下の単一サイズ88×88ピクセルのタイルマップのみを使用しています。
 
-![alt](/godot_recipes/3.x/img/tileGreen_03.png)
+![alt](/godot_recipes/4.x/img/tileGreen_03.png)
 
 スタティックボディに {{< gd-icon Sprite2D >}}`Sprite` を追加し、 *テクスチャ* セクションで「新規AtlasTexture」を選択してください。
 
-![alt](/godot_recipes/3.x/img/conveyor_04.png)
+![alt](/godot_recipes/4.x/img/conveyor_04.png)
 
 タイルテクスチャをプロパティの*Texture*項目に配置し、*Region*を`(0, 0, 880, 88)`に設定してください。
 
-![alt](/godot_recipes/3.x/img/conveyor_05.png)
+![alt](/godot_recipes/4.x/img/conveyor_05.png)
 
 「880」を選択すれば、幅が正確に10タイルのコンベアベルトを作成できます。必要な幅を自由に設定できます。
 
-![alt](/godot_recipes/3.x/img/conveyor_06.png)
+![alt](/godot_recipes/4.x/img/conveyor_06.png)
 
 {{% notice tip %}}
 画像が繰り返されていない、または表示がおかしい場合、*リピート* フラグを「有効」に設定して再インポートしてください。
@@ -62,11 +62,11 @@ func _process(delta):
 
 このコードは、ベルトが目標速度で動作することと、アニメーションが物理効果と同期することを保証します。注意点として、方向は反対になっています。領域の `x` 値を増やすと画像は左方向に移動します。
 
-![alt](/godot_recipes/3.x/img/conveyor_01.gif)
+![alt](/godot_recipes/4.x/img/conveyor_01.gif)
 
 This works perfectly well with kinematic bodies, too. Here's the same conveyor belt object added to our [Platform character](/godot_recipes/4.x/ja/2d/platform_character) recipe:
 
-![alt](/godot_recipes/3.x/img/conveyor_07.gif)
+![alt](/godot_recipes/4.x/img/conveyor_07.gif)
 
 ### 3D
 
@@ -74,9 +74,9 @@ This works perfectly well with kinematic bodies, too. Here's the same conveyor b
 
 ただし、プロジェクト設定で「弾丸」から「GodotPhysics」エンジンに変更すれば、この手法を使用できます。
 
-![alt](/godot_recipes/3.x/img/conveyor_03.png)
+![alt](/godot_recipes/4.x/img/conveyor_03.png)
 
-![alt](/godot_recipes/3.x/img/conveyor_3d.gif)
+![alt](/godot_recipes/4.x/img/conveyor_3d.gif)
 
 ## 関連レシピ
 

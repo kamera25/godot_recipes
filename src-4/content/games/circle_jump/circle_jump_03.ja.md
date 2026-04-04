@@ -99,7 +99,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 試しに動かしてみると、今のところ問題なく動作しています。
 
-![alt](/godot_recipes/3.x/img/cj_03_01.gif)
+![alt](/godot_recipes/4.x/img/cj_03_01.gif)
 
 ### サークル効果
 
@@ -131,7 +131,7 @@ func _draw():
 
 最後に、`_physics_process` に `update()` を追加し、`check_orbits()` が呼び出されるたびに実行されるようにしてください。
 
-![alt](/godot_recipes/3.x/img/cj_03_02.gif)
+![alt](/godot_recipes/4.x/img/cj_03_02.gif)
 
 次のパートでは、UI要素を追加していきます。
 

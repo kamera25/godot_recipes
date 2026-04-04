@@ -19,7 +19,7 @@ ghcommentid: 50
 
 例えば、以下の画像を使用するには：
 
-![alt](/godot_recipes/3.x/img/crosshair137.png)
+![alt](/godot_recipes/4.x/img/crosshair137.png)
 
 そして、ホットスポットを中央位置に設定します。
 

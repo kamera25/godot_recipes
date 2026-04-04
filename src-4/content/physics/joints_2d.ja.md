@@ -31,17 +31,17 @@ Godotの`Joint2D`ノードについて理解したい。
 
 「ピン接合」は、2つの部材を1点で接続し、自由に回転できるようにします。
 
-![alt](/godot_recipes/3.x/img/pinjoint_example.gif)
+![alt](/godot_recipes/4.x/img/pinjoint_example.gif)
 
 ピン接合部の［柔軟性］プロパティにより、接続にある程度の「弾力」が与えられます。この値はデフォルト値の `0`（移動不可）から最大値 `16` まで設定できます。
 
-![alt](/godot_recipes/3.x/img/pinjoint_example2.gif)
+![alt](/godot_recipes/4.x/img/pinjoint_example2.gif)
 
 ### {{< gd-icon DampedSpringJoint2D >}} 減衰スプリングジョイント（2D）
 
 この継手はスプリング状の力によって2つの部材を連結します。
 
-![alt](/godot_recipes/3.x/img/springjoint_example.gif)
+![alt](/godot_recipes/4.x/img/springjoint_example.gif)
 
 以下のプロパティでスプリングの挙動を調整できます。
 
@@ -54,7 +54,7 @@ Godotの`Joint2D`ノードについて理解したい。
 
 この関節は、接続された物体が直線的に移動するように制約します。
 
-![alt](/godot_recipes/3.x/img/groovejoint_example.gif)
+![alt](/godot_recipes/4.x/img/groovejoint_example.gif)
 
 デフォルトでは溝は垂直方向に配置されますが、溝ノードを回転させることでこれを変更できます。
 
@@ -65,6 +65,6 @@ Godotの`Joint2D`ノードについて理解したい。
 
 <!-- You can download an example project to play with these joints here: [physics_joints.zip](/godot_recipes/4.x/ja/files/physics_joints.zip) -->
 
-![alt](/godot_recipes/3.x/img/joints_demo.png)
+![alt](/godot_recipes/4.x/img/joints_demo.png)
 
 ## 関連するレシピ

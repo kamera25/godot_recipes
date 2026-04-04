@@ -124,7 +124,7 @@ func _physics_process(delta):
 
 シーンを再生 - 自由に飛行できるはずです。
 
-![alt](/godot_recipes/3.x/img/rigidbody_ship1.gif)
+![alt](/godot_recipes/4.x/img/rigidbody_ship1.gif)
 
 #### ポジション問題
 
@@ -173,7 +173,7 @@ func _integrate_forces(state):
 
 物理状態に基づいてボディの 'transform' を調整することで、エンジンは正常に動作し続け、期待通りの結果が得られます。
 
-![alt](/godot_recipes/3.x/img/rigidbody_ship2.gif)
+![alt](/godot_recipes/4.x/img/rigidbody_ship2.gif)
 
 <!-- #### Videoが気に入ったら？ -->
 

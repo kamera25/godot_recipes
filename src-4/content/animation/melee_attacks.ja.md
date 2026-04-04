@@ -17,19 +17,19 @@ ghcommentid: 53
 
 本例では、既に攻撃アニメーションが設定されたキャラクターが存在すると仮定します。説明のために、以下の2種類の攻撃を使用する：
 
-![alt](/godot_recipes/3.x/img/attack2.png)
+![alt](/godot_recipes/4.x/img/attack2.png)
 
-![alt](/godot_recipes/3.x/img/attack1.png)
+![alt](/godot_recipes/4.x/img/attack1.png)
 
 {{< gd-icon Area2D >}}`Area2D` を使用して剣がターゲットに命中したことを検出できますが、実際に有効化する必要があるのはスイング動作中のみです。アニメーションと同期させるためには、この活性化をAnimationPlayerで制御します。
 
 シーンに {{< gd-icon Area2D >}}`Area2D` と {{< gd-icon CollisionShape2D >}}`CollisionShape2D` を追加します。ヒットボックスには矩形形状を使用し、剣が振り上げフレームで完全にカバーされるようにサイズを調整します。
 
-![alt](/godot_recipes/3.x/img/melee_attack_01.png)
+![alt](/godot_recipes/4.x/img/melee_attack_01.png)
 
 アニメーションを最初のフレームに移動し、領域の [無効] プロパティを確認します。キーフレームアイコンをクリックしてアニメーションにトラックを追加します。次に、剣が伸びているフレームまでアニメーションを進め、[無効] を解除した状態でもう1つのキーフレームを追加します。最後に、スイングの終わりまで進み、再度 [無効] を有効にしてキーフレームを作成します。
 
-![alt](/godot_recipes/3.x/img/melee_attack_02.gif)
+![alt](/godot_recipes/4.x/img/melee_attack_02.gif)
 
 新しいエリアの`area_entered`シグナル（またはゲームの設定によっては、`body_entered`）を接続します。このデモでは、ダメージを受け取れる任意のボディには{{< gd-icon Area2D >}}`Area2D`が定義され、「hurtbox」というグループ内に配置されているとします。
 
@@ -41,15 +41,15 @@ func _on_SwordHit_area_entered(area):
 
 これで実際に試してみて、ターゲットが剣の当たり判定範囲内にいればダメージが発生するか確認できるはずです。
 
-![alt](/godot_recipes/3.x/img/melee_attack_03.gif)
+![alt](/godot_recipes/4.x/img/melee_attack_03.gif)
 
 ### ヒットボックスサイズの変更方法
 
 複数の攻撃アニメーションがある場合、ダメージ範囲の大きさが統一されていないことがあります。上記のアニメーション例では、最初の動きは広範囲をカバーする斜め上方向への振り下ろし攻撃です。この処理に対応するため、衝突形状の _Extents_ プロパティに対するアニメーショントラックも追加が必要です。この値を設定して各アニメーションの開始時にキーフレームとして登録してください。
 
-![alt](/godot_recipes/3.x/img/melee_attack_04.gif)
+![alt](/godot_recipes/4.x/img/melee_attack_04.gif)
 
-![alt](/godot_recipes/3.x/img/melee_attack_05.gif)
+![alt](/godot_recipes/4.x/img/melee_attack_05.gif)
 
 ## 関連レシピ
 

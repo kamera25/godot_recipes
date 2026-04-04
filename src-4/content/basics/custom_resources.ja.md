@@ -113,15 +113,15 @@ func heal(amount):
 
 一度「PlayerHealth」クラスを定義すれば、新しいインスタンスを作成できます。インスペクター上部の「新規リソース作成」ボタンをクリックしてください。
 
-![alt](/godot_recipes/3.x/img/custom_resource_01.png)
+![alt](/godot_recipes/4.x/img/custom_resource_01.png)
 
 「新規リソース作成」ダイアログでは、様々な種類のリソースが一覧表示されます。検索機能を使って、作成した `PlayerHealth` タイプを見つけてください。
 
-![alt](/godot_recipes/3.x/img/custom_resource_02.png)
+![alt](/godot_recipes/4.x/img/custom_resource_02.png)
 
 これで、希望する`max_value`を設定し、新しいリソースを`.tres`ファイルとして保存できます。
 
-![alt](/godot_recipes/3.x/img/custom_resource_03.png)
+![alt](/godot_recipes/4.x/img/custom_resource_03.png)
 
 #### リソースの使用方法
 
@@ -171,7 +171,7 @@ func _on_player_health_changed(value):
 
 動作例をご覧ください。
 
-![alt](/godot_recipes/3.x/img/custom_resource_04.gif)
+![alt](/godot_recipes/4.x/img/custom_resource_04.gif)
 
 {{% notice note %}}
 プロジェクトファイルをこちらからダウンロードしてください: [custom_resources.zip](/godot_recipes/4.x/ja/files/custom_resources.zip)

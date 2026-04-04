@@ -17,7 +17,7 @@ pre: "13. "
 
 最初のステップは、プロジェクトにAndroidカスタムビルドテンプレートをインストールすることです。
 
-![alt](/godot_recipes/3.x/img/admob_3.2_03.png)
+![alt](/godot_recipes/4.x/img/admob_3.2_03.png)
 
 プラグインを解凍し、`admob-plugin` フォルダを `res://android/` ディレクトリに、`admob-lib` フォルダを `res://` ディレクトリに配置してください。
 
@@ -40,11 +40,11 @@ AdMobアプリケーションIDを`android:value=""/>`行に貼り付けてく�
 
 これで `AdMob` ノードを `Main` シーンに追加できます。
 
-![alt](/godot_recipes/3.x/img/admob_3.2_01.png)
+![alt](/godot_recipes/4.x/img/admob_3.2_01.png)
 
 クリックしてみると、ノードの設定に使用するエクスポート済みプロパティセットが表示されます。ここで広告ユニットIDを貼り付け、本番広告やテスト広告などを構成していきます。
 
-![alt](/godot_recipes/3.x/img/admob_3.2_02.png)
+![alt](/godot_recipes/4.x/img/admob_3.2_02.png)
 
 注: 「AdMob」ノードは接続可能なシグナルを提供しており、広告の読み込み完了、クローズ、ロード失敗時に通知されます。このゲームでは「リワード型」広告は使用していませんが、これらのシグナルを利用すれば適切なタイミングで報酬を付与できます。
 

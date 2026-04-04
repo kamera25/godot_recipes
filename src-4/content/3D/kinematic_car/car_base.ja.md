@@ -33,7 +33,7 @@ VehicleBody3D`車両ボディ`の操作方法について詳しく知りたい�
 
 以下はこのデモンストレーションで使用する車両モデルです。
 
-![alt](/godot_recipes/3.x/img/3d_car_01.png)
+![alt](/godot_recipes/4.x/img/3d_car_01.png)
 
 {{% notice note %}}
 ケンニーの『カーキット』でこの車種やその他のモデルを見つけることができます。以下のリンクから入手できます。
@@ -48,7 +48,7 @@ Godotでファイルを選択し、「インポート」タブに移動します
 
 `sedanSports.glb`ファイルをダブルクリックし、「新規継承」を選択してください。以下のように新しいシーンが作成されます。
 
-![alt](/godot_recipes/3.x/img/3d_car_02.png)
+![alt](/godot_recipes/4.x/img/3d_car_02.png)
 
 ※各パーツごとの個別メッシュに注意。なお、余分な「tmpParent」{{< gd-icon Node3D >}}`Node3D`ノードがありますが、こちらは無視して構いません。
 
@@ -59,7 +59,7 @@ Godotでファイルを選択し、「インポート」タブに移動します
 
 形状設定が完了したら、以下のような表示になるはずです。
 
-![alt](/godot_recipes/3.x/img/3d_car_03.png)
+![alt](/godot_recipes/4.x/img/3d_car_03.png)
 
 {{% notice tip %}}
 前面と背面の形状を一致させるには、どちらか一方を作成してサイズ設定した後、複製するだけで構いません。また、各ノードに適切な名前を付けることをオススメします。{{< gd-icon CollisionShape3D >}}`CollisionShape`ノードには `CollisionBody`、`CollisionWheelsFront`、`CollisionWheelsRear`といった名称が適切でしょう。
@@ -159,7 +159,7 @@ func get_input():
 
 これでプレイヤー操作を追加できるようになりました。以下が入力マッピングの設定です。
 
-![alt](/godot_recipes/3.x/img/3d_car_04.png)
+![alt](/godot_recipes/4.x/img/3d_car_04.png)
 
 アナログスティック付きゲームパッドをお持ちの場合は、ぜひそれをご使用になることを強くオススメします。キーボード操作ではオン/オフしか制御できないため、「ハンドル」を最大限に回転させるしかありません。アナログスティックを使えば、はるかに快適な操作体験が得られます。いずれの操作方法でもコードが正しく動作するよう、しっかり対応いたします。
 
@@ -187,7 +187,7 @@ func get_input():
 
 ステアリング操作後、加速／ブレーキ入力を確認して車両の「加速度」を設定します。
 
-![alt](/godot_recipes/3.x/img/3d_car_05.gif)
+![alt](/godot_recipes/4.x/img/3d_car_05.gif)
 
 ### まとめ
 

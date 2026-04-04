@@ -38,7 +38,7 @@ ghcommentid: 94
 
 {{< gd-icon Path2D >}}`Path2D` ノードを選択すると、アイコンバーに以下の新しいアイコンが表示されます。
 
-![alt](/godot_recipes/3.x/img/kyn_path2d_01.png)
+![alt](/godot_recipes/4.x/img/kyn_path2d_01.png)
 
 アイコンのいずれかを選択すると、マウスカーソルの動作が変更されます。ホバーするとそれぞれの名前を確認できます。
 
@@ -50,11 +50,11 @@ ghcommentid: 94
 
 「ポイントを追加」を選択し、エディターウィンドウ内でクリックしてポイントを作成します。
 
-![alt](/godot_recipes/3.x/img/kyn_path2d_02.png)
+![alt](/godot_recipes/4.x/img/kyn_path2d_02.png)
 
 より滑らかで丸みを帯びた曲線を作成するには、「制御点を選択」を選択し、カーブ上の任意の点をドラッグして「内向き」「外向き」ハンドルを調整してください。
 
-![alt](/godot_recipes/3.x/img/kyn_path2d_03.png)
+![alt](/godot_recipes/4.x/img/kyn_path2d_03.png)
 
 ## 経路の追跡
 
@@ -70,7 +70,7 @@ ghcommentid: 94
 
 例えば、この平面が経路に沿って移動する様子を考えてみます（経路を可視化するには、*デバッグ > ナビゲート表示* を設定してください。
 
-![alt](/godot_recipes/3.x/img/kyn_path2d_04.gif)
+![alt](/godot_recipes/4.x/img/kyn_path2d_04.gif)
 
 これは、平面ノードを {{< gd-icon Sprite2D >}} スプライトとして {{< gd-icon PathFollow2D >}} 経路追従オブジェクトの子要素にし、以下の内容を `_process()` 関数に追加することで実現しています。
 
@@ -89,7 +89,7 @@ func _process(delta):
 
 以下の例を[AI：場面に基づく操縦](/godot_recipes/4.x/ja/ai/context_map/)レシピからご覧ください。
 
-![alt](/godot_recipes/3.x/img/ai_context_10.gif)
+![alt](/godot_recipes/4.x/img/ai_context_10.gif)
 
 この例では、AIエージェントは壁や他のエージェントを回避するだけでなく、正しい進行方向に沿って移動を続けようとします。軌道上には以下の[{{< gd-icon Path2D >}}`Path2D`]が描画されており、エージェントはこれを参照して現在の進行方向を確認します。
 

@@ -75,7 +75,7 @@ func _input(event):
 
 インプットマップにカメラ切り替え用のアクションを追加します。ここではTabキーと右ショルダーボタンを使用しています。
 
-![alt](/godot_recipes/3.x/img/3d_car_07.png)
+![alt](/godot_recipes/4.x/img/3d_car_07.png)
 
 ### 接続方法
 
@@ -85,7 +85,7 @@ func _input(event):
 
 ゲームを起動し、カメラ切替ボタンを押して試してみてください。
 
-![alt](/godot_recipes/3.x/img/3d_car_08.gif)
+![alt](/godot_recipes/4.x/img/3d_car_08.gif)
 
 ## 関連レシピ
 

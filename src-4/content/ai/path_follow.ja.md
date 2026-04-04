@@ -23,7 +23,7 @@ ghcommentid: 72
 
 {{< gd-icon Path2D >}}`Path2D`ノードを追加すると、ビューポート上部に新しいボタンが表示されます。
 
-![alt](/godot_recipes/3.x/img/path2d_buttons.png)
+![alt](/godot_recipes/4.x/img/path2d_buttons.png)
 
 「ポイント追加」ボタンを選択してクリックし、追加を開始します。閉じた曲線を作成したい場合は、「曲線を閉じる」ボタンをクリックすると最後の点が最初の点に接続されます。
 

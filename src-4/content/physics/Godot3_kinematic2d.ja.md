@@ -56,11 +56,11 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 
 また、レイヤーに名前を割り当てることもできます。「プロジェクト設定」内の「レイヤー名→2D物理」セクションをご確認ください。
 
-![alt](/godot_recipes/3.x/img/k2d_layer_names.png?width=300)
+![alt](/godot_recipes/4.x/img/k2d_layer_names.png?width=300)
 
 身体のレイヤープロパティは、コードまたはインスペクターから直接設定できます。
 
-![alt](/godot_recipes/3.x/img/k2d_layer_example.png?width=300)
+![alt](/godot_recipes/4.x/img/k2d_layer_example.png?width=300)
 
 **例：**
 
@@ -123,7 +123,7 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 新規ユーザーからよく寄せられる質問の一つに「どの移動関数を使えばよいか？」というものがあります。
 多くの場合、「よりシンプルだから」という理由から `move_and_slide()` が推奨されますが、必ずしもそうとは限りません。この概念を理解する一つの方法として、`move_and_slide()` は特殊なケースであり、`move_and_collide()` がより一般的なケースであると考えるとよいでしょう。例えば、以下の2つのコードスニペットはいずれも同じ衝突判定結果になります。
 
-![alt](/godot_recipes/3.x/img/k2d_compare.gif)
+![alt](/godot_recipes/4.x/img/k2d_compare.gif)
 
 {{< highlight gdscript>}}
 var collision = move_and_collide(velocity * delta)
@@ -257,7 +257,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 衝突するオブジェクト（`collider`）に`hit`メソッドが定義されている場合、
 そちらも呼び出します。サンプルプロジェクトでは、この機能を可視化するために、壁に点滅効果を追加しています。
 
-![alt](/godot_recipes/3.x/img/k2d_bullet_bounce.gif)
+![alt](/godot_recipes/4.x/img/k2d_bullet_bounce.gif)
 
 ### ムーブアンドスライドを使ったプラットフォーマー開発
 
@@ -331,7 +331,7 @@ func _physics_process(delta):
         get_tree().reload_current_scene()
 {{< /highlight >}}
 
-![alt](/godot_recipes/3.x/img/k2d_platf_sample.gif?width=300)
+![alt](/godot_recipes/4.x/img/k2d_platf_sample.gif?width=300)
 
 現在、キャラクターの待機状態・走行状態・ジャンプ状態間の遷移を管理するため、非常に基本的なステートマシンを使用しています。
 

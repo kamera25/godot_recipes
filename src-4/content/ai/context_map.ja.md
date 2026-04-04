@@ -29,31 +29,31 @@ ghcommentid: 75
 
 まず、エージェントがすべての方向に放射線状に広がる複数のレイを持っていると仮定します（使用する本数については後で説明します。とりあえずここでは8本を使用してください）
 
-![alt](/godot_recipes/3.x/img/ai_context_01.png)
+![alt](/godot_recipes/4.x/img/ai_context_01.png)
 
 エージェントのスクリプト内では、エージェントが移動したい方向を追跡するための配列「`interest`」を定義します。
 
-![alt](/godot_recipes/3.x/img/ai_context_04.png)
+![alt](/godot_recipes/4.x/img/ai_context_04.png)
 
 もちろん、全て同じ方向なら動けません。あらゆる方向に均等に移動したいはずです！そこで、特定の方向への優先性があると仮定します。主に前進したい場合を考えます。
 
-![alt](/godot_recipes/3.x/img/ai_context_03.png)
+![alt](/godot_recipes/4.x/img/ai_context_03.png)
 
 この場合、`interest`配列は以下のようになります。
 
-![alt](/godot_recipes/3.x/img/ai_context_05.png)
+![alt](/godot_recipes/4.x/img/ai_context_05.png)
 
 最も強い願望は前進することですが、左前方や右前方も許容範囲内です。しかし、障害物が現れた場合は？
 
-![alt](/godot_recipes/3.x/img/ai_context_06.png)
+![alt](/godot_recipes/4.x/img/ai_context_06.png)
 
 次に、好ましくない方向を示す第2の配列「danger」を導入します。
 
-![alt](/godot_recipes/3.x/img/ai_context_07.png)
+![alt](/godot_recipes/4.x/img/ai_context_07.png)
 
 これら2つの配列を組み合わせることで、`危険度`に含まれる`興味度`方向を除去することが可能です。残った`興味度`方向を合計すると、障害物から離れる新しい方向ベクトルが得られます。
 
-![alt](/godot_recipes/3.x/img/ai_context_08.png)
+![alt](/godot_recipes/4.x/img/ai_context_08.png)
 
 要約すると：
 
@@ -126,7 +126,7 @@ func _physics_process(delta):
 
 例えば、使用するレイが32本の場合、`interest`は以下のようになります。
 
-![alt](/godot_recipes/3.x/img/ai_context_09.png)
+![alt](/godot_recipes/4.x/img/ai_context_09.png)
 
 安全対策として、案内してくれる所有者がいない場合は、自動的に前進を試みる設定になっています。
 
@@ -181,7 +181,7 @@ func choose_direction():
 
 実際に試してみます！ここでは、{{< gd-icon Path2D >}}`Path2D`と衝突判定用のポリゴンを使ってトラックを作成してみました。
 
-![alt](/godot_recipes/3.x/img/ai_context_11.png)
+![alt](/godot_recipes/4.x/img/ai_context_11.png)
 
 このシーンのスクリプトには、`get_path_direction()` 関数が含まれています。位置を指定すると、この関数はパス上で最も近い点を検出し、その位置に `PathFollow2D` を配置することで進行方向を取得します。
 
@@ -194,7 +194,7 @@ func get_path_direction(pos):
 
 エージェントの移動速度をランダム化してバリエーションを加えました。速いエージェントが低速のエージェントをうまく避けながら進む様子に注目してください。
 
-![alt](/godot_recipes/3.x/img/ai_context_10.gif)
+![alt](/godot_recipes/4.x/img/ai_context_10.gif)
 
 ### まとめ
 

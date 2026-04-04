@@ -49,7 +49,7 @@ void fragment() {
 }
 ```
 
-![alt](/godot_recipes/3.x/img/shader_intro_01.png)
+![alt](/godot_recipes/4.x/img/shader_intro_01.png)
 
 全てのピクセルが赤色になります。`COLOR`はフラグメントシェーダーの出力値であり、これをすべてのピクセルに同時に適用します。しかし、何らかのバリエーションを持たせたい場合はどうしますか？
 
@@ -67,7 +67,7 @@ void fragment() {
 }
 ```
 
-![alt](/godot_recipes/3.x/img/shader_intro_02.png)
+![alt](/godot_recipes/4.x/img/shader_intro_02.png)
 
 現在の赤色チャンネルは、左側から右側にかけて「0」から「1.0」まで変化し、これは**UV座標**とともに変動します。
 
@@ -78,7 +78,7 @@ void fragment() {
     COLOR = vec4(UV.x, 1.0 - UV.y, 0.5, 1.0);
 ```
 
-![alt](/godot_recipes/3.x/img/shader_intro_02a.png)
+![alt](/godot_recipes/4.x/img/shader_intro_02a.png)
 
 #### テクスチャ
 
@@ -101,7 +101,7 @@ void fragment() {
 }
 ```
 
-![alt](/godot_recipes/3.x/img/shader_intro_03.png)
+![alt](/godot_recipes/4.x/img/shader_intro_03.png)
 
 この操作によりアルファチャンネルの値が低下し、フェードアウト効果が得られます。
 
@@ -116,7 +116,7 @@ void fragment() {
 }
 ```
 
-![alt](/godot_recipes/3.x/img/shader_intro_04.gif)
+![alt](/godot_recipes/4.x/img/shader_intro_04.gif)
 
 またはこちら：
 
@@ -126,7 +126,7 @@ void fragment() {
     COLOR.a = max(0.0, UV.x - abs(sin(TIME)));
 }
 ```
-![alt](/godot_recipes/3.x/img/shader_intro_05.gif)
+![alt](/godot_recipes/4.x/img/shader_intro_05.gif)
 
 ### 頂点シェーダー
 
@@ -140,7 +140,7 @@ void vertex() {
 }
 ```
 
-![alt](/godot_recipes/3.x/img/shader_intro_06.png)
+![alt](/godot_recipes/4.x/img/shader_intro_06.png)
 
 このシェーダーでは、左側の2つの頂点 `(0, 0)` と `(0, 1)` は変更されず、右側の頂点がそれぞれ `(10, 0)` と `/` 10, 1) に変わります。
 
@@ -152,7 +152,7 @@ void vertex() {
 }
 ```
 
-![alt](/godot_recipes/3.x/img/shader_intro_07.gif)
+![alt](/godot_recipes/4.x/img/shader_intro_07.gif)
 
 ### ユニフォーム
 

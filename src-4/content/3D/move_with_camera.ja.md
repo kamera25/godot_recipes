@@ -43,7 +43,7 @@ var forward = -camera.transform.basis.z.normalized()
 
 一部の設定ではこれでも問題ありませんが、キューブに関してはまったく機能しません：
 
-![alt](/godot_recipes/3.x/img/3d_move_camera_01.gif)
+![alt](/godot_recipes/4.x/img/3d_move_camera_01.gif)
 
 キューブは4つの基本方向（前後・左右・上下）にのみ移動できます。このため、カメラの前方ベクトルを取得し、どの軸方向に最も近いかを確認する必要があります。**+X**、**-X**、**+Z**、または **-Z** のいずれかです。
 
@@ -72,7 +72,7 @@ func _physics_process(_delta):
 
 このクリップでは、移動するために「w」キーのみを押しています。
 
-![alt](/godot_recipes/3.x/img/3d_move_camera_02.gif)
+![alt](/godot_recipes/4.x/img/3d_move_camera_02.gif)
 
 ## 関連レシピ
 
