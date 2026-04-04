@@ -102,7 +102,7 @@ func _physics_process(delta):
 <!-- ## 関連レシピ -->
 
 <!-- - [入力入門](/godot_recipes/4.x/ja/input/input_intro/)
-- [キネマティック摩擦](/godot_recipes/4.x/ja/physics/kinematic_friction/) -->
+- [動摩擦](/godot_recipes/4.x/ja/physics/kinematic_friction/) -->
 
 ## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 

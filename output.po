@@ -3192,10 +3192,6 @@ msgid "### Full script"
 msgstr "### 全スクリプト"
 
 #: 3D/spaceship.md
-msgid "Select the `gltf` file of the ship you want, and click the *Import* tab. Change the *Root Type* to {{< gd-icon CharacterBody3D >}} `CharacterBody3D` and click \"Reimport\". Then double-click the `gltf` and you'll have a new inherited scene with a {{< gd-icon CharacterBody3D >}} `CharacterBody3D` root and a {{< gd-icon MeshInstance3D >}} `MeshInstance` child. Add a {{< gd-icon CollisionShape3D >}} `CollisionShape3D` to the body."
-msgstr "インポートする船舶の `gltf` ファイルを選択し、［インポート］タブをクリックします。［ルートの型］を `CharacterBody3D`に変更し、「再インポート」を実行してください。その後、`gltf`ファイルをダブルクリックすると、新たに継承されたシーンが作成され、ルートとして {{< gd-icon CharacterBody3D >}}`CharacterBody3D`、子要素として {{< gd-icon MeshInstance3D >}} `MeshInstance`が含まれるようになります。このボディに {{< gd-icon CollisionShape3D >}}`CollisionShape3D`を追加してください。"
-
-#: 3D/spaceship.md
 msgid "Make a test scene with a {{< gd-icon Camera3D >}} `Camera3D` to try it out. You can use a stationary camera or a [chase camera](/godot_recipes/4.x/3d/interpolated_camera/). Check that the ship accelerates and slows before moving on to the next step."
 msgstr "テスト用シーンを作成し、{{< gd-icon Camera3D >}}`Camera3D` コンポーネントを試してみます。固定カメラを使用するか、［追従カメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/) を採用することもできます。宇宙船が加速と減速を適切に行うことを確認した上で、次のステップに進んでください。"
 
@@ -5632,7 +5628,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"Godot には組み込みの `InterpolatedCamera` ノードが用意されており、ここで説明している機能の大部分をすでに実装しています。ただし、このノードを使用しない理由は2つあります。第一に、キネマティックボディを追いかける際にカクツキが発生しやすい点、次に Godot 4.0 で廃止予定となっている点です。とはいえ、独自のセットアップは非常に簡単ですので、ご安心ください。<i class='far fa-smile-beam'></i>\n"
+"Godot には組み込みの `InterpolatedCamera` ノードが用意されており、ここで説明している機能の大部分をすでに実装しています。ただし、このノードを使用しない理由は2つあります。第一に、キャラクターボディを追いかける際にカクツキが発生しやすい点、次に Godot 4.0 で廃止予定となっている点です。とはいえ、独自のセットアップは非常に簡単ですので、ご安心ください。<i class='far fa-smile-beam'></i>\n"
 "{{% /notice %}}"
 
 #: 3D/kinematic_car/car_camera.md
@@ -7020,10 +7016,6 @@ msgstr "CSGは**Constructive Solid Geometry**（空間領域構成法）の略�
 #: g101/3d/101_3d_02.md
 msgid "![alt](/godot_recipes/4.x/img/kenney_3d_platform_sample.png?width=100)"
 msgstr "![alt](/godot_recipes/4.x/img/kenney_3d_platform_sample.png?width=100)"
-
-#: g101/3d/101_3d_02.md
-msgid "Finally, we need to add a collision shape to the body. While we could do this by adding a {{< gd-icon CollisionShape3D >}}`CollisionShape3D`, as you would typically do in 2D, but there's a quicker way."
-msgstr "最後に、ボディに衝突形状を追加が必要です。通常は2D環境で扱うような {{< gd-icon CollisionShape3D >}}`CollisionShape3D` を追加する方法もありますが、もっと簡単な方法があります。"
 
 #: g101/3d/101_3d_02.md
 msgid "Run the scene again, and you'll be able to see your crates falling."
@@ -10274,7 +10266,7 @@ msgstr "### 経路に沿った移動"
 
 #: ai/path_follow.md
 msgid "You can use {{< gd-icon PathFollow2D >}}`PathFollow2D` to automatically move along a path. However, if you're using a kinematic body, this will cause problems with collisions, because you're not using the body's movement methods. For this reason, we'll instead use the path's points as \"targets\" for the body to move towards."
-msgstr "以下のタグを使用して経路に沿って自動移動させることができます。{{< gd-icon PathFollow2D >}}`PathFollow2D`。ただし、キネマティックボディを使用している場合、この方法は衝突判定に問題を引き起こす可能性があります。これはボディの移動メソッドを利用していないためです。このため、代わりに経路上の各点を「目標」として設定し、ボディがその方向へ移動するようにします。"
+msgstr "以下のタグを使用して経路に沿って自動移動させることができます。{{< gd-icon PathFollow2D >}}`PathFollow2D`。ただし、キャラクターボディを使用している場合、この方法は衝突判定に問題を引き起こす可能性があります。これはボディの移動メソッドを利用していないためです。このため、代わりに経路上の各点を「目標」として設定し、ボディがその方向へ移動するようにします。"
 
 #: ai/path_follow.md
 msgid "Next, we can use the currently selected point in the path as our target for movement. If we get close enough to it, we advance to the next point in the curve, using `wrapi()` to loop around to the first point when we reach the end."
@@ -11107,10 +11099,6 @@ msgid "To move a body, we need to apply a push in a given direction - a *force*.
 msgstr "物体を移動させるには、特定の方向に力を加える必要があります - これが「*力*」です。物体が動き始めたら、最終位置に近づくにつれてこの力は徐々に小さくなるようにします。"
 
 #: physics/smooth_rigid_move.md
-msgid "- [RigidBody2D: Look at Target](/godot_recipes/4.x/physics/smooth_rigid_rotate/)"
-msgstr "- [RigidBody2D：ターゲットを注視する](/godot_recipes/4.x/ja/physics/smooth_rigid_rotate/)"
-
-#: physics/smooth_rigid_move.md
 msgid "This is the perfect situation to use the `Vector2.distance_to()` function. It will tell us how far away the target is, and we can use that to set the force."
 msgstr "この場合、まさに`Vector2.distance_to()`関数を使用するのに最適な状況です。この関数を使えばターゲットまでの距離を正確に測定でき、その値を基に適切な力を加えることができます。"
 
@@ -11471,7 +11459,7 @@ msgstr "次は、他の具体例をいくつか見ていきます。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "## Kinematic Bodies"
-msgstr "## キネマティックボディ"
+msgstr "## キャラクターボディ"
 
 #: physics/Godot3_kinematic2d.md
 msgid "Try changing the function to `move_and_slide(velocity)` and running again. Note that we removed `delta` from the velocity calculation."
@@ -11577,7 +11565,7 @@ msgid ""
 "some obstacles. Add a {{< gd-icon StaticBody2D >}}`StaticBody2D` with a rectangular collision shape. For visibility,\n"
 "you can use a sprite, a {{< gd-icon Polygon2D >}}`Polygon2D`, or just turn on \"Visible Collision Shapes\" from\n"
 "the \"Debug\" menu."
-msgstr "このシーンを実行すると、`move_and_collide()`が想定通りに動作し、ボディが速度ベクトルに沿って移動することを確認できます。では、障害物を追加した場合にどうなるかを見てみてください。矩形の衝突形状を持つ{{< gd-icon StaticBody2D >}}`StaticBody2D`オブジェクトを追加してください。視認性を高めるには、スプライトを使用するか、{{< gd-icon Polygon2D >}}`Polygon2D`を使用するか、あるいは「デバッグ」メニューから「可視衝突形状」を有効化する方法もあります。"
+msgstr "このシーンを実行すると、`move_and_collide()`が想定通りに動作し、ボディが速度ベクトルに沿って移動することを確認できます。では、障害物を追加した場合にどうなるかを見てみてください。矩形の衝突形状を持つ{{< gd-icon StaticBody2D >}}`StaticBody2D`オブジェクトを追加してください。視認性を高めるには、スプライトを使用するか、{{< gd-icon Polygon2D >}}`Polygon2D`を使用するか、あるいは「デバッグ」メニューから「コリジョン形状を表示」を有効化する方法もあります。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "The `move_and_slide()` method is intended to simplify the collision response in the common case where you want one body to slide along the other. This is especially useful in platformers or top-down games, for example."
@@ -11678,7 +11666,7 @@ msgstr "このメソッドは1つの引数を取ります。ボディの相対�
 
 #: physics/Godot3_kinematic2d.md
 msgid "> **Note:** Kinematic body movement should only be done in the `_physics_process()` callback."
-msgstr "> **注意:** キネマティックボディの移動は `_physics_process()` コールバック内のみで行ってください。"
+msgstr "> **注意:** キャラクターボディの移動は `_physics_process()` コールバック内のみで行ってください。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "If you've downloaded the sample project, this example is in the \"BasicMovement.tscn\" scene."
@@ -11824,7 +11812,7 @@ msgstr "以下のプロパティでスプリングの挙動を調整できます
 
 #: physics/joints_2d.md
 msgid "The pin joint's _Softness_ property gives some \"springiness\" to the connection. The value can range from `0` (the default) which allows no movement, to `16`."
-msgstr "ピン接合部の［柔軟性］プロパティにより、接続にある程度の「弾力」が与えられます。この値はデフォルト値の `0`（移動不可）から最大値 `16` まで設定できます。"
+msgstr "ピン接合部の _Softness_ プロパティにより、接続にある程度の「弾力」が与えられます。この値はデフォルト値の `0`（移動不可）から最大値 `16` まで設定できます。"
 
 #: physics/joints_2d.md
 msgid "These properties control the groove's behavior:"
@@ -11906,7 +11894,7 @@ msgstr "「ピン接合」は、2つの部材を1点で接続し、自由に回�
 
 #: physics/joints_2d.md
 msgid "There are three types of {{< gd-icon Joint2D >}}`Joint2D`. In all of the following examples, there is one {{< gd-icon RigidBody2D >}}`RigidBody2D` connected via a joint to a {{< gd-icon StaticBody2D >}}`StaticBody2D`. \"Visible Collision Shapes\" is enabled in the screen images below so you can see a representation of the joint."
-msgstr "以下の3種類の {{< gd-icon Joint2D >}}`Joint2D` があります。すべての例で、1つの {{< gd-icon RigidBody2D >}}`RigidBody2D` がジョイントを介して {{< gd-icon StaticBody2D >}}`StaticBody2D` に接続されています。画面画像では「可視衝突形状」が有効化されているため、ジョイントの表現を確認できます。"
+msgstr "以下の3種類の {{< gd-icon Joint2D >}}`Joint2D` があります。すべての例で、1つの {{< gd-icon RigidBody2D >}}`RigidBody2D` がジョイントを介して {{< gd-icon StaticBody2D >}}`StaticBody2D` に接続されています。画面で「コリジョン形状を表示」が有効化されているため、ジョイントの表現を確認できます。"
 
 #: physics/kinematic_friction.md
 msgid ""
@@ -11968,7 +11956,7 @@ msgstr "### 解説"
 
 #: physics/conveyor_belt.md
 msgid "This works perfectly well with kinematic bodies, too. Here's the same conveyor belt object added to our [Platform character](http://kidscancode.org/godot_recipes/2d/platform_character) recipe:"
-msgstr "This works perfectly well with kinematic bodies, too. Here's the same conveyor belt object added to our [Platform character](/godot_recipes/4.x/ja/2d/platform_character) recipe:"
+msgstr "これはキャラクターボディに対しても完璧に動作します。同じコンベアベルトオブジェクトの追加する場合は、[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character)を参照してください。"
 
 #: physics/conveyor_belt.md
 msgid ""
@@ -11982,7 +11970,7 @@ msgstr ""
 
 #: physics/conveyor_belt.md
 msgid "Here's an example, using a {{< gd-icon StaticBody2D >}}`StaticBody2D` and a {{< gd-icon RigidBody2D >}}`RigidBody2D`. No code was added. The static body's *Constant Linear Velocity* is set to `(200, 0)`."
-msgstr "以下に具体例を示します。{{< gd-icon StaticBody2D >}}`StaticBody2D`と{{< gd-icon RigidBody2D >}}`RigidBody2D`を使用しています。追加コードは一切ありません。スタティックボディの*定数線形速度*は `(200, 0)` に設定されています。"
+msgstr "以下に具体例を示します。{{< gd-icon StaticBody2D >}}`StaticBody2D`と{{< gd-icon RigidBody2D >}}`RigidBody2D`を使用しています。追加コードは一切ありません。スタティックボディの*線速度一定*は `(200, 0)` に設定されています。"
 
 #: physics/conveyor_belt.md
 msgid "This code ensures that our belt moves at the desired speed, and that the animation matches the physics effect. Note that the directions are opposite: increasing the `x` of the region shifts the image to the *left*."
@@ -12028,7 +12016,7 @@ msgstr ""
 
 #: physics/conveyor_belt.md
 msgid "You want to make a conveyor belt object that will move bodies (kinematic or rigid)."
-msgstr "キネマティックまたはリジッドボディを移動させるコンベアベルトオブジェクトを作成したい。"
+msgstr "キャラクタ＾またはリジッドボディを移動させるコンベアベルトオブジェクトを作成したい。"
 
 #: physics/conveyor_belt.md
 msgid "Choosing `880` gives us a conveyor belt that's exactly 10 tiles wide. You can use any width you need."
@@ -12040,7 +12028,7 @@ msgstr "`constant_linear_velocity` プロパティを使用することで、{{<
 
 #: physics/conveyor_belt.md
 msgid "Try adjusting the `x` of the *Region* property. You'll see the tiles shift. This is what we need to animate the belt. You can do this with an {{< gd-icon AnimationPlayer >}}`AnimationPlayer` or in code. We'll do the latter for this example:"
-msgstr "{{< gd-icon AnimationPlayer >}}アニメーションプレイヤーを使用するか、コードで実装するかです。ここでは後者の方法を実演します。"
+msgstr "*Region* プロパティの `x` の値を調整してみてください。タイルがずれるのが確認できるはずです。これがベルトのアニメーションに必要な動きです。このアニメーションは {{< gd-icon AnimationPlayer >}}`AnimationPlayer`を使用するか、コードで実装するかです。ここでは後者の方法を実演します。"
 
 #: physics/conveyor_belt.md
 msgid "### 3D"
@@ -12150,7 +12138,7 @@ msgstr ""
 
 #: 2D/2d_align_surface.md
 msgid "We'll start with a basic kinematic platform character. See the [Platform character](/godot_recipes/4.x/2d/platform_character/) recipe for details."
-msgstr "まずは基本的なキネマティックプラットフォームキャラクターから始めてください。詳細は[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_char/)を参照してください。"
+msgstr "まずは基本的なプラットフォームキャラクターから始めてください。詳細は[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_char/)を参照してください。"
 
 #: 2D/2d_align_surface.md
 msgid "<video controls src=\"/godot_recipes/4.x/img/2d_align_06.webm\"></video>"
@@ -13364,7 +13352,7 @@ msgid ""
 "- [Kinematic Friction](/godot_recipes/3.x/physics/kinematic_friction/) -->"
 msgstr ""
 "<!-- - [入力入門](/godot_recipes/4.x/ja/input/input_intro/)\n"
-"- [キネマティック摩擦](/godot_recipes/4.x/ja/physics/kinematic_friction/) -->"
+"- [動摩擦](/godot_recipes/4.x/ja/physics/kinematic_friction/) -->"
 
 #: 2D/platform_character.md
 msgid "One way to add this behavior is to use linear interpolation (\"lerp\"). When moving, we will lerp between the current speed and the max speed and while stopping we'll lerp between the current speed and `0`. Adjusting the lerp amount will give us a variety of movement styles."
@@ -18380,3 +18368,15 @@ msgstr ""
 #: physics/collision_layers.md
 msgid "## Introduction"
 msgstr "## はじめに"
+
+#: 3D/spaceship.md
+msgid "Select the `gltf` file of the ship you want, and click the *Import* tab. Change the *Root Type* to {{< gd-icon CharacterBody3D >}} `CharacterBody3D` and click \"Reimport\". Then double-click the `gltf` and you'll have a new inherited scene with a {{< gd-icon KinematicBody3D >}} `CharacterBody3D` root and a {{< gd-icon MeshInstance3D >}} `MeshInstance` child. Add a {{< gd-icon CollisionShape3D >}} `CollisionShape3D` to the body."
+msgstr "操作対象の宇宙船に対応する `gltf` ファイルを選択し、*インポート*タブをクリックしてください。*ルートタイプ*を {{< gd-icon CharacterBody3D >}} `CharacterBody3D` に変更します。次に『再インポート』をクリックします。その後、`gltf`ファイルをダブルクリックすると、新しいシーンが生成され、その中に {{< gd-icon KinematicBody3D >}} `CharacterBody3D` をルートとする子オブジェクトとして {{< gd-icon MeshInstance3D >}} `MeshInstance` が表示されます。ボディに {{< gd-icon CollisionShape3D >}} `CollisionShape3D`を追加してください。"
+
+#: g101/3d/101_3d_02.md
+msgid "Finally, we need to add a collision shape to the body. While we could do this by adding a {{< gd-icon CollionShape3D >}}`CollionShape3D`, as you would typically do in 2D, but there's a quicker way."
+msgstr "最後に、ボディに衝突形状を追加する必要があります。通常は 2D ゲームで行うように {{< gd-icon CollionShape3D >}} `CollionShape3D`を追加することも可能ですが、より効率的な方法があります。"
+
+#: physics/smooth_rigid_move.md
+msgid "-  [RigidBody2D: Look at Target](/godot_recipes/4.x/physics/smooth_rigid_rotate/)"
+msgstr "-  [RigidBody2D: ターゲットに向ける](/godot_recipes/4.x/physics/smooth_rigid_rotate/)"

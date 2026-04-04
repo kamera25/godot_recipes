@@ -36,4 +36,4 @@ func _physics_process(delta):
 
 ## 関連レシピ
 
--  [RigidBody2D: Look at Target](/godot_recipes/4.x/physics/smooth_rigid_rotate/)
+-  [RigidBody2D: ターゲットに向ける](/godot_recipes/4.x/physics/smooth_rigid_rotate/)

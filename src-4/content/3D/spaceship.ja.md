@@ -32,7 +32,7 @@ tags: []
 
 ### 設定手順
 
-Select the `gltf` file of the ship you want, and click the *Import* tab. Change the *Root Type* to {{< gd-icon CharacterBody3D >}} `CharacterBody3D` and click "Reimport". Then double-click the `gltf` and you'll have a new inherited scene with a {{< gd-icon KinematicBody3D >}} `CharacterBody3D` root and a {{< gd-icon MeshInstance3D >}} `MeshInstance` child. Add a {{< gd-icon CollisionShape3D >}} `CollisionShape3D` to the body.
+操作対象の宇宙船に対応する `gltf` ファイルを選択し、*インポート*タブをクリックしてください。*ルートタイプ*を {{< gd-icon CharacterBody3D >}} `CharacterBody3D` に変更します。次に『再インポート』をクリックします。その後、`gltf`ファイルをダブルクリックすると、新しいシーンが生成され、その中に {{< gd-icon KinematicBody3D >}} `CharacterBody3D` をルートとする子オブジェクトとして {{< gd-icon MeshInstance3D >}} `MeshInstance` が表示されます。ボディに {{< gd-icon CollisionShape3D >}} `CollisionShape3D`を追加してください。
 
 *プロジェクト設定 > インプットマップ* にて、以下の入力を設定してください。
 

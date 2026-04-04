@@ -25,7 +25,7 @@ Godotの`Joint2D`ノードについて理解したい。
 *  _Bias_：両オブジェクトが離れる方向に関節が引き寄せる速度。デフォルト値は 0 です
 *  _Disable Collisions_：接続されたオブジェクト間の衝突を考慮しないようにできます。デフォルトは true（有効）です
 
-以下の3種類の {{< gd-icon Joint2D >}}`Joint2D` があります。すべての例で、1つの {{< gd-icon RigidBody2D >}}`RigidBody2D` がジョイントを介して {{< gd-icon StaticBody2D >}}`StaticBody2D` に接続されています。画面画像では「可視衝突形状」が有効化されているため、ジョイントの表現を確認できます。
+以下の3種類の {{< gd-icon Joint2D >}}`Joint2D` があります。すべての例で、1つの {{< gd-icon RigidBody2D >}}`RigidBody2D` がジョイントを介して {{< gd-icon StaticBody2D >}}`StaticBody2D` に接続されています。画面で「コリジョン形状を表示」が有効化されているため、ジョイントの表現を確認できます。
 
 ### {{< gd-icon PinJoint2D >}} PinJoint2D
 
@@ -33,7 +33,7 @@ Godotの`Joint2D`ノードについて理解したい。
 
 ![alt](/godot_recipes/4.x/img/pinjoint_example.gif)
 
-ピン接合部の［柔軟性］プロパティにより、接続にある程度の「弾力」が与えられます。この値はデフォルト値の `0`（移動不可）から最大値 `16` まで設定できます。
+ピン接合部の _Softness_ プロパティにより、接続にある程度の「弾力」が与えられます。この値はデフォルト値の `0`（移動不可）から最大値 `16` まで設定できます。
 
 ![alt](/godot_recipes/4.x/img/pinjoint_example2.gif)
 

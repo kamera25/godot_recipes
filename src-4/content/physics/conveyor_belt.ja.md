@@ -10,7 +10,7 @@ draft: false
 
 ## 課題
 
-キネマティックまたはリジッドボディを移動させるコンベアベルトオブジェクトを作成したい。
+キャラクタ＾またはリジッドボディを移動させるコンベアベルトオブジェクトを作成したい。
 
 ## 解決策
 
@@ -20,7 +20,7 @@ draft: false
 この問題を3D環境で解決する方法については[以下を参照](#3d)ください。
 {{% /notice %}}
 
-以下に具体例を示します。{{< gd-icon StaticBody2D >}}`StaticBody2D`と{{< gd-icon RigidBody2D >}}`RigidBody2D`を使用しています。追加コードは一切ありません。スタティックボディの*定数線形速度*は `(200, 0)` に設定されています。
+以下に具体例を示します。{{< gd-icon StaticBody2D >}}`StaticBody2D`と{{< gd-icon RigidBody2D >}}`RigidBody2D`を使用しています。追加コードは一切ありません。スタティックボディの*線速度一定*は `(200, 0)` に設定されています。
 
 ![alt](/godot_recipes/4.x/img/conveyor_02.gif)
 
@@ -46,7 +46,7 @@ draft: false
 画像が繰り返されていない、または表示がおかしい場合、*リピート* フラグを「有効」に設定して再インポートしてください。
 {{% /notice %}}
 
-{{< gd-icon AnimationPlayer >}}アニメーションプレイヤーを使用するか、コードで実装するかです。ここでは後者の方法を実演します。
+*Region* プロパティの `x` の値を調整してみてください。タイルがずれるのが確認できるはずです。これがベルトのアニメーションに必要な動きです。このアニメーションは {{< gd-icon AnimationPlayer >}}`AnimationPlayer`を使用するか、コードで実装するかです。ここでは後者の方法を実演します。
 
 ```gdscript
 extends StaticBody2D
@@ -64,7 +64,7 @@ func _process(delta):
 
 ![alt](/godot_recipes/4.x/img/conveyor_01.gif)
 
-This works perfectly well with kinematic bodies, too. Here's the same conveyor belt object added to our [Platform character](/godot_recipes/4.x/ja/2d/platform_character) recipe:
+これはキャラクターボディに対しても完璧に動作します。同じコンベアベルトオブジェクトの追加する場合は、[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character)を参照してください。
 
 ![alt](/godot_recipes/4.x/img/conveyor_07.gif)
 
