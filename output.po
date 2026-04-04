@@ -11828,7 +11828,7 @@ msgstr "この継手はスプリング状の力によって2つの部材を連�
 
 #: physics/joints_2d.md
 msgid "### {{< gd-icon DampedSpringJoint2D >}} DampedSpringJoint2D"
-msgstr "### {{< gd-icon DampedSpringJoint2D >}} 減衰スプリングジョイント（2D）"
+msgstr "### {{< gd-icon DampedSpringJoint2D >}} DampedSpringJoint2D"
 
 #: physics/joints_2d.md
 msgid "By default, the groove runs vertically, but you can change this by rotating the groove node."
