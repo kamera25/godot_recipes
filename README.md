@@ -1,11 +1,33 @@
-# Godot Recipes by KidsCanCode
-
-Game development tutorials and examples using the Godot Engine.
-
-This is the source for the site. Please visit [Godot Recipes](http://godotrecipes.com/).
+# Godot Recipes (Japanese Translation) / Godotレシピ (日本語訳版)
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![licensebuttons by](https://licensebuttons.net/l/by/3.0/88x31.png)](https://creativecommons.org/licenses/by/4.0)
 
-# Godotレシピ - 日本語訳の貢献者
- * [kamera25(ナカオクタカヒロ)](https://github.com/kamera25)
+このリポジトリは、KidsCanCodeによる「[Godot Recipes](http://godotrecipes.com/)」の日本語翻訳プロジェクトです。
+Godot Engineを用いたゲーム開発のチュートリアルや実装例を豊富に含んでいます。
+
+This repository is a Japanese translation of the "[Godot Recipes](http://godotrecipes.com/)" by KidsCanCode. It contains a collection of game development tutorials and examples for the Godot Engine.
+
+## サイトのリンク / Site Links
+
+- **[Godotレシピ (日本語版)](https://kamera25.github.io/godot_recipes/4.x/ja/)**
+- **[Godot Recipes (Original English)](https://godotrecipes.com/)**
+
+## 本リポジトリについて / About this repository
+
+このリポジトリは、オリジナルのソースコードを翻訳・管理するためのものです。
+Hugoを使用して静的サイトを生成しており、Godot 4系（`src-4`）のみを翻訳対象しています。
+
+This repository is for translating and managing the original source content. It uses Hugo to generate a static site and only supports Godot 4 (`src-4`) versions.
+
+## 貢献者 / Contributors
+
+### 日本語訳 (Japanese Translation)
+* [kamera25 (ナカオクタカヒロ)](https://github.com/kamera25)
+* [PLaMo-2 by Preferred Networks](https://huggingface.co/pfnet/plamo-2-translate) (AI-assisted translation)
+
+## ライセンス / License
+
+- テキスト・コンテンツ: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+- コード・サンプル: [MIT License](https://lbesson.mit-license.org/)
+- オリジナル作成者: [KidsCanCode](https://kidscancode.org/)

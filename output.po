@@ -9293,7 +9293,7 @@ msgstr "コード内でパスのポイントを操作する必要がある場合
 
 #: kyn/path2d.md
 msgid "For example, consider this plane moving along a path (you can make the path visible by setting *Debug>Visible Navigation*):"
-msgstr "例えば、この平面が経路に沿って移動する様子を考えてみます（経路を可視化するには、*デバッグ > ナビゲート表示* を設定してください。"
+msgstr "例えば、この平面が経路に沿って移動する様子を考えてみます（経路を可視化するにはメニューから、*デバッグ > ナビゲーションを表示* を選択してください。"
 
 #: kyn/path2d.md
 msgid "* `get_closest_point()`"
@@ -9313,7 +9313,7 @@ msgstr "パスのデータはこのリソースオブジェクトに保持され
 
 #: kyn/path2d.md
 msgid "This is done by making the plane {{< gd-icon Sprite2D >}}`Sprite` a child of the {{< gd-icon PathFollow2D >}}`PathFollow2D` and adding the following to `_process()`:"
-msgstr "これは、平面ノードを {{< gd-icon Sprite2D >}} スプライトとして {{< gd-icon PathFollow2D >}} 経路追従オブジェクトの子要素にし、以下の内容を `_process()` 関数に追加することで実現しています。"
+msgstr "これは、平面ノードを {{< gd-icon Sprite2D >}}`Sprite`として {{< gd-icon PathFollow2D >}} `PathFollow2D`の子要素にし、以下の内容を `_process()` 関数に追加することで実現しています。"
 
 #: kyn/path2d.md
 msgid "Consider this example, from the [AI: Context-based Steering](/godot_recipes/3.x/ai/context_map/) recipe:"
@@ -13592,7 +13592,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice tip %}}\n"
-"カメラの［ドラッグ余白］プロパティを無効にすると、見た目が一番良くなると思います。\n"
+"カメラの _Drag Margin_ プロパティを無効にすると、見た目が一番良くなります。\n"
 "{{% /notice %}}"
 
 #: 2D/splitscreen_demo.md
@@ -13690,7 +13690,7 @@ msgid ""
 "onto the {{< gd-icon Viewport >}}`Viewport`. Add one to each viewport. Don't forget to check the _Current_\n"
 "property to activate the camera. We can also set each camera's _Zoom_ to `(0.75, 0.75)`\n"
 "to get a better view of the area around the player."
-msgstr "{{< gd-icon Viewport >}}`ビューポート`に何らかのコンテンツを表示するには、{{< gd-icon Camera2D >}}`Camera2D`が必要です。このカメラは{{< gd-icon Viewport >}}`ビューポート`上にレンダリングを行います。各ビューポートに1つずつ追加してください。また、カメラを有効にするには_現在のプロパティを必ずチェックしてください_。さらに、各カメラのズーム値を`(0.75, 0.75)`に設定することで、プレイヤー周辺のエリアをより詳細に表示できるようになります。"
+msgstr "{{< gd-icon Viewport >}}`Viewport`にコンテンツを表示するには、{{< gd-icon Camera2D >}}`Camera2D`が必要です。このカメラは{{< gd-icon Viewport >}}`Viewport`上にレンダリングを行います。各ビューポートに1つずつ追加してください。また、カメラを有効にするには _現在のプロパティを必ずチェックしてください_ 。さらに、各カメラのズーム値を`(0.75, 0.75)`に設定することで、プレイヤー周辺のエリアをより詳細に表示できるようになります。"
 
 #: 2D/splitscreen_demo.md
 msgid ""
