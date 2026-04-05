@@ -184,7 +184,7 @@ func capture():
 func implode():
     if !$AnimationPlayer.is_playing():
         $AnimationPlayer.play("implode")
-    yield($AnimationPlayer, "animation_finished")
+    await $AnimationPlayer.animation_finished
     queue_free()
 ```
 
