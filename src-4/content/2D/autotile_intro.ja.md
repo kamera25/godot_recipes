@@ -20,7 +20,7 @@ ghcommentid: 23
 ![alt](/godot_recipes/4.x/img/autotile_tileset.png)
 
 {{% notice note %}}
-これらのタイルはKenney氏の『Topdown Shooter』アートパックに含まれており、こちらから入手できます。[https://kenney.nl/assets/topdown-shooter](https://kenney.nl/assets/topdown-shooter)
+これらのタイルはKenney氏の『Topdown Shooter』アートパックに含まれており、こちらから入手できます。[https://kenney.nl/assets/top-down-shooter](https://kenney.nl/assets/top-down-shooter)
 {{% /notice %}}
 
 これらのタイルから地図を作成する場合、1枚ずつ手動で配置していくと非常に手間がかかります。角や交差点、終点部分を合わせるために、常に異なるタイルを切り替えながら作業することになるからです。

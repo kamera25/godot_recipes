@@ -21,7 +21,7 @@ ghcommentid: 50
 
 ![alt](/godot_recipes/4.x/img/crosshair137.png)
 
-以下で照準を中央位置に設定します。
+以下で照準をマウスカーソルの中央位置に設定します。
 
 ```gdscript
 extends Node2D

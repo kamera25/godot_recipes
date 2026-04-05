@@ -22,7 +22,7 @@ tags: []
 
 宇宙船モデルは以下のアセットパックに含まれています。
 
-[Quaternius製「究極の宇宙船パック」](https://quaternius.com/packs/ultimatespaceships.html)
+[Quaternius 制作「Ultimate Spaceships Pack」](https://quaternius.com/packs/ultimatespaceships.html)
 
 「処刑人」級の艦船モデルを選択しました。
 

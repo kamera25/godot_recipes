@@ -107,6 +107,6 @@ func set_tween(object=null, key=null):
 
 [https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)
 
-#### 動画の方がお好みですか？
+#### 動画で見る
 
 {{< youtube 8SOw_IvB2gE >}}

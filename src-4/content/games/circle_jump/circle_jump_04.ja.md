@@ -22,10 +22,7 @@ pre: "04. "
       * `HBoxContainer` ("Buttons")
   * `Tween`
 
-{
-  "title": "マージンコンテナの設定",
-  "content": "「マージンコンテナ」を使用すると、UI要素が画面端に近づきすぎるのを防止できます。4つのカスタム定数プロパティをすべて'20'に設定してください。"
-}
+`MarginContainer`「マージンコンテナ」を使用すると、UI要素が画面端に近づきすぎるのを防止できます。4つの _Custom Constants_ プロパティをすべて`20`に設定してください。
 
 次に使用するのはメイン要素を整理するための`VBoxContainer`です。このコンテナの［カスタム定数／間隔］設定を`150`に設定してください。
 
@@ -135,6 +132,6 @@ func _on_Jumper_died():
 
 [https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)
 
-#### 動画の方がお好みですか？
+#### 動画で見る
 
 {{< youtube tWWncIkfCWs >}}

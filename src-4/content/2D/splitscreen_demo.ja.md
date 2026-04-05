@@ -106,7 +106,9 @@ func _ready():
     viewport2.world_2d = viewport1.world_2d
 {{< /highlight >}}
 
-The `onready` node references are for convenience - we'll be using them as we progress forward. Remember that when you type "`$`", Godot will automatically suggest node paths so you don't need to type them. You can also drag a node directly from the scene tree into the script editor, and you'll get the node's path.
+`onready` ノード参照は利便性のためです。作業中に随時使用します。
+`$`と入力すると、Godotは自動的にノードパスを提案してくれるので、手動でタイプする必要はありません。
+また、シーンツリーからノードをスクリプトエディタへドラッグすれば、そのノードのパスを取得できます。
 
 現在シーンを実行すると、両方のビューポートでレンダリングされた世界が表示されます。ただし、どちらのカメラも移動していないため、表示されるのは世界のごく一部に過ぎません。
 

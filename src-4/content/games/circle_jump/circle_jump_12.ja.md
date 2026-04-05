@@ -120,6 +120,6 @@ func _on_TextEdit_meta_clicked(meta):
 
 [https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)
 
-#### 動画の方がお好みですか？
+#### 動画で見る
 
 {{< youtube h5987aIENqs >}}

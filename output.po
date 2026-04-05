@@ -494,7 +494,7 @@ msgstr "ノードが子要素を呼び出している場合（つまりツリー
 
 #: basics/node_communication.md
 msgid "Communication between nodes and scenes doesn't have to be complicated. There is a better way."
-msgstr "もっと良い方法があります。ノード間やシーン間のやり取りをシンプルにしてください。"
+msgstr "もっと良い方法があります。ノード間やシーン間のやり取りをシンプルにしていきましょう。"
 
 #: basics/node_communication.md
 msgid "We'll go into detailed examples later in this tutorial, but for now, here's the \"golden rule\" of node communication:"
@@ -600,7 +600,7 @@ msgstr "代わりに、プレイヤーがHPを増減させるたびに、`health
 
 #: basics/node_communication.md
 msgid "As a general rule, nodes should manage their children, not the other way around. If you're using `get_parent()` or `get_node(\"..\")`, then you're probably headed for trouble. Node paths like this are *brittle*, meaning they can break easily. The three main problems with this arrangement:"
-msgstr "基本的に、ノードはその子ノードを管理するべきです。逆の関係(子ノードが親ノードを管理する)は避ける必要があります。`get_parent()`や`get_node(\"..\")`を使用している場合、すでに問題が発生し始めています。このようなノードパスは **脆弱** であり、容易に壊れてしまう性質があります。この構成には主に3つの重大な問題点があります。"
+msgstr "基本的に、ノードはその子ノードを管理するべきです。逆の関係(子ノードが親ノードを管理する)は避ける必要があります。`get_parent()`や`get_node(\"..\")`を使用している場合、すでに問題が発生し始めています。このようなノードパスは **脆弱** であり、簡単に壊れてしまう性質があります。この構成には主に3つの重大な問題点があります。"
 
 #: basics/node_communication.md
 msgid "Let's assume every enemy has an `explode()` function that handles what happens when it dies (playing an animation, spawning dropped items, etc). Now that every enemy is in the group, we can implement our smart bomb function like this:"
@@ -1593,7 +1593,7 @@ msgstr "## <i class=\"fas fa-code-branch\"></i> プロジェクトのダウン�
 
 #: ui/minimap.md
 msgid "Now we can begin adding a script to the `Minimap`. First, a `player` reference that can be assigned in the Inspector when the minimap is added to the main scene and a `zoom` property to calibrate the scale - how far the minimap can \"see\". We also have some `@onready` variables to make it more convenient to access the nodes we need."
-msgstr "これで`Minimap`にスクリプトを追加する準備が整いました。まず、メインシーンにミニマップが追加された時にインスペクターで割り当て可能なプレイヤー参照と、スケールを調整するズームプロパティを実装します。必要なノードへのアクセスを容易にするため、`@onready`変数も用意しました。"
+msgstr "これで`Minimap`にスクリプトを追加する準備が整いました。まず、メインシーンにミニマップが追加された時にインスペクターで割り当て可能なプレイヤー参照と、スケールを調整するズームプロパティを実装します。必要なノードへのアクセスを簡単にするため、`@onready`変数も用意しました。"
 
 #: ui/minimap.md
 msgid "We'll also create markers for every game object (using the \"minimap_objects\" group) by duplicating the matching marker node and tying the marker to the object via the `markers` dictionary:"
@@ -1738,7 +1738,7 @@ msgstr ""
 
 #: ui/floating_text.md
 msgid "However, for this recipe, we'll use a {{< gd-icon Label >}}`Label` node (named \"FCT\"). This will give us the flexibility to change the font, as well as making it easy to display the number as a string - or even other messages such as \"miss\"."
-msgstr "ただし、このレシピでは {{< gd-icon Label >}}`Label` ノード（名前は「FCT」）を使用します。この方法であれば、フォントの変更が柔軟に行えるだけでなく、数字を文字列として表示するのも容易になります。さらには状況に応じて「miss」などの他のメッセージを表示することもできます。"
+msgstr "ただし、このレシピでは {{< gd-icon Label >}}`Label` ノード（名前は「FCT」）を使用します。この方法であれば、フォントの変更が柔軟に行えるだけでなく、数字を文字列として表示するのも簡単になります。さらには状況に応じて「miss」などの他のメッセージを表示することもできます。"
 
 #: ui/floating_text.md
 msgid "You want units to display damage as floating numbers when hit."
@@ -3141,7 +3141,7 @@ msgstr "これで準備完了！飛行できます！このコントローラー
 
 #: 3D/spaceship.md
 msgid "[Ultimate Spaceships Pack by Quaternius](https://quaternius.com/packs/ultimatespaceships.html)"
-msgstr "[Quaternius製「究極の宇宙船パック」](https://quaternius.com/packs/ultimatespaceships.html)"
+msgstr "[Quaternius 制作「Ultimate Spaceships Pack」](https://quaternius.com/packs/ultimatespaceships.html)"
 
 #: 3D/spaceship.md
 msgid "Finally, we need to rotate the ship's `Basis` according to the inputs. Note how each input affects one axis of rotation:"
@@ -4221,7 +4221,7 @@ msgstr "最後に、新しいフォロー対象ベクトルを登録する関数
 
 #: 3D/debug_overlay.md
 msgid "You'd like visual debug information in your 3D game: a way to see vectors representing velocity, position, etc."
-msgstr "3Dゲームで視覚的なデバッグ情報が欲しい：速度や位置などを表すベクトルを可視化する方法があれば便利だ"
+msgstr "3Dゲームで視覚的なデバッグ情報が欲しい。例えば、速度や位置などを表すベクトルを可視化する方法があれば嬉しい。"
 
 #: 3D/debug_overlay.md
 msgid "Here's an example of an AI car displaying its raycasts and steering direction:"
@@ -4485,7 +4485,7 @@ msgstr "まず第一に、マウスを動かすのと同じ方向にプレイヤ
 
 #: 3D/basic_fps.md
 msgid "We'll leave all the sizing at the default values, meaning the capsule will be 2 meters high. Move it up by `1.0` m to align its bottom with the ground."
-msgstr "サイズはすべて初期設定値のままにします（カプセルの高さは2メートルとなります）。地面と底面を揃えるため、高さを「+1.0」m移動させてください。"
+msgstr "サイズはすべて初期設定値のままにします（カプセルの高さは2メートルとなります）。地面と底面を揃えるため、高さを`1.0`m移動させてください。"
 
 #: 3D/basic_fps.md
 msgid "## Holding a weapon"
@@ -4513,7 +4513,7 @@ msgstr "以下の手順で「World」シーンにプレイヤーを追加して�
 
 #: 3D/basic_fps.md
 msgid "Add your weapon mesh as a child of the {{< gd-icon Camera3D >}}`Camera3D`. Then, in the editor view menu, choose \"2 Viewports\" and set one of them to preview the camera. Then, you can move around the weapon and easily see how it will look from the player's perspective."
-msgstr "武器モデルを{{< gd-icon Camera3D >}}`Camera3D`の子要素として追加してください。その後、エディタービューメニューで「2つのビューポート」を選択し、そのうち1つをカメラプレビュー用に設定してください。これで、武器を自由に移動させながら、プレイヤー視点でどのように見えるかを容易に確認できるようになります。"
+msgstr "武器モデルを{{< gd-icon Camera3D >}}`Camera3D`の子要素として追加してください。その後、エディタービューメニューで「2つのビューポート」を選択し、そのうち1つをカメラプレビュー用に設定してください。これで、武器を自由に移動させながら、プレイヤー視点でどのように見えるかを簡単に確認できるようになります。"
 
 #: 3D/basic_fps.md
 msgid "To add a little personality, try using an {{< gd-icon AnimationPlayer >}}`AnimationPlayer` to animate the weapon's position from side-to-side as the player moves."
@@ -6109,7 +6109,7 @@ msgstr "ゲーム中のマウスカーソルをカスタマイズしたい。"
 
 #: input/custom_mouse_cursor.md
 msgid "And set its hotspot to the center:"
-msgstr "以下で照準を中央位置に設定します。"
+msgstr "以下で照準をマウスカーソルの中央位置に設定します。"
 
 #: input/_index.md
 msgid "Input"
@@ -12016,7 +12016,7 @@ msgstr ""
 
 #: physics/conveyor_belt.md
 msgid "You want to make a conveyor belt object that will move bodies (kinematic or rigid)."
-msgstr "キャラクタ＾またはリジッドボディを移動させるコンベアベルトオブジェクトを作成したい。"
+msgstr "キャラクターまたはリジッドボディを移動させるコンベアベルトオブジェクトを作成したい。"
 
 #: physics/conveyor_belt.md
 msgid "Choosing `880` gives us a conveyor belt that's exactly 10 tiles wide. You can use any width you need."
@@ -12731,7 +12731,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"これらのタイルはKenney氏の『Topdown Shooter』アートパックに含まれており、こちらから入手できます。[https://kenney.nl/assets/topdown-shooter](https://kenney.nl/assets/topdown-shooter)\n"
+"これらのタイルはKenney氏の『Topdown Shooter』アートパックに含まれており、こちらから入手できます。[https://kenney.nl/assets/top-down-shooter](https://kenney.nl/assets/top-down-shooter)\n"
 "{{% /notice %}}"
 
 #: 2D/autotile_intro.md
@@ -13340,7 +13340,7 @@ msgstr "![alt](/godot_recipes/4.x/img/platformer1.gif)"
 
 #: 2D/platform_character.md
 msgid "Try changing the values for `friction` and `acceleration` to see how they affect the game's feel. An ice level, for example, could use very low values, making it harder to maneuver."
-msgstr "「摩擦係数」 と 「加速度」 の値を変更して、ゲームの操作性にどのような影響があるか試してみます。例えば氷ステージの場合、これらの値を非常に低く設定することで、キャラクターの動きがより鈍くなるように調整できます。"
+msgstr "`friction` と `acceleration` の値を変更して、ゲームの操作性にどのような影響があるか試してみます。例えば氷ステージの場合、これらの値を非常に低く設定することで、キャラクターの動きがより鈍くなるように調整できます。"
 
 #: 2D/platform_character.md
 msgid "You need to make a 2D platform-style character."
@@ -13356,7 +13356,7 @@ msgstr ""
 
 #: 2D/platform_character.md
 msgid "One way to add this behavior is to use linear interpolation (\"lerp\"). When moving, we will lerp between the current speed and the max speed and while stopping we'll lerp between the current speed and `0`. Adjusting the lerp amount will give us a variety of movement styles."
-msgstr "この動作を実現する効果的な方法の一つが線形補間(lerp）を使用することです。移動中は現在速度と最大速度の間で補間し、停止時は現在速度から0まで補間します。補間量を調整することで、さまざまな移動スタイルを実現できます。"
+msgstr "この動作を実現する効果的な方法の一つが線形補間(lerp）を使用することです。移動中は現在速度と最大速度の間で補間し、停止時は現在速度から`0`まで補間します。補間量を調整することで、さまざまな移動スタイルを実現できます。"
 
 #: 2D/platform_character.md
 msgid "Platform character"
@@ -13576,7 +13576,10 @@ msgid ""
 "forward. Remember that when you type \"`$`\" Godot will autosuggest node paths so you\n"
 "don't have to type them. You can also drag a node from the scene tree into the\n"
 "script editor and you'll get the node's path."
-msgstr "The `onready` node references are for convenience - we'll be using them as we progress forward. Remember that when you type \"`$`\", Godot will automatically suggest node paths so you don't need to type them. You can also drag a node directly from the scene tree into the script editor, and you'll get the node's path."
+msgstr ""
+"`onready` ノード参照は利便性のためです。作業中に随時使用します。\n"
+"`$`と入力すると、Godotは自動的にノードパスを提案してくれるので、手動でタイプする必要はありません。\n"
+"また、シーンツリーからノードをスクリプトエディタへドラッグすれば、そのノードのパスを取得できます。"
 
 #: 2D/splitscreen_demo.md
 msgid ""
@@ -15818,7 +15821,7 @@ msgstr "### 2Dシューティングゲーム開発でGodotの基本を学ぼう�
 #: games/circle_jump/circle_jump_06.md games/circle_jump/circle_jump_07.md
 #: games/circle_jump/circle_jump_11.md games/circle_jump/circle_jump_12.md
 msgid "#### Do you prefer video?"
-msgstr "#### 動画の方がお好みですか？"
+msgstr "#### 動画で見る"
 
 #: games/circle_jump/circle_jump_05.md
 msgid "In the next part, we'll add sound and color to the game!"
@@ -16356,11 +16359,7 @@ msgstr "基本ゲームプレイが完成したので、次はUIの実装に取�
 
 #: games/circle_jump/circle_jump_04.md
 msgid "The `MarginContainer` will ensure that none of our UI elements get too close to the edge of the screen. Set all four of its _Custom Constants_ properties to `20`."
-msgstr ""
-"{\n"
-"  \"title\": \"マージンコンテナの設定\",\n"
-"  \"content\": \"「マージンコンテナ」を使用すると、UI要素が画面端に近づきすぎるのを防止できます。4つのカスタム定数プロパティをすべて'20'に設定してください。\"\n"
-"}"
+msgstr "`MarginContainer`「マージンコンテナ」を使用すると、UI要素が画面端に近づきすぎるのを防止できます。4つの _Custom Constants_ プロパティをすべて`20`に設定してください。"
 
 #: games/circle_jump/circle_jump_04.md
 msgid "Instance this scene in Main, then connect its `start_game` signal to the `new_game()` function in main. Don't forget to remove `new_game()` from the `_ready()`. Try running the game and you should be able to start. The last part will be to connect up the game over condition."
