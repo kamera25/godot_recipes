@@ -2706,8 +2706,8 @@ msgid ""
 "- [Capturing the Mouse](/godot_recipes/3.x/input/mouse_capture/)\n"
 "- [Intro to 3D](/godot_recipes/3.x/g101/3d/) -->"
 msgstr ""
-"[マウス操作のキャプチャ方法](/godot_recipes/4.x/ja/input/mouse_capture/)\n"
-"[3D入門ガイド](/godot_recipes/4.x/ja/g101/3d/) →"
+"- [マウス操作のキャプチャ方法](/godot_recipes/4.x/ja/input/mouse_capture/)\n"
+"- [3D入門ガイド](/godot_recipes/4.x/ja/g101/3d/) -->"
 
 #: 3D/camera_gimbal.md
 msgid "The `-1.4` value lets it go *almost* to 90 degrees up, while setting a very small value for the minimum keeps the camera from clipping into the ground. Feel free to experiment with other values."
@@ -2758,7 +2758,7 @@ msgstr "このプロジェクトでは、ゲームプレイ中にマウス入力
 
 #: 3D/camera_gimbal.md
 msgid "You need a camera controller, using mouse or keyboard, that remains level while rotating and following a target."
-msgstr "以下の機能を備えたカメラコントローラーが必要となります。マウスまたはキーボード操作で、回転中も水平を保ちつつ、ターゲットを追従できるもの。"
+msgstr "マウスまたはキーボード操作で、回転中も水平を保ちつつ、ターゲットを追従できるカメラコントローラーが必要です。"
 
 #: 3D/camera_gimbal.md
 msgid "You'll notice that holding the up/down control will cause the camera to rotate all the way around, eventually becoming upside-down. To prevent this, we can clamp the rotation."
@@ -2770,7 +2770,7 @@ msgstr "マウスを急激に動かすと、上下移動に問題が生じるこ
 
 #: 3D/camera_gimbal.md
 msgid "The solution to this problem is to place the camera on a _gimbal_ - a device designed to keep an object level during movement. We can create a gimbal using two {{< gd-icon Node3D >}}`Node3D` nodes, which will control the camera's left/right and up/down rotation respectively."
-msgstr "この問題を解決するには、カメラを_ジンバル・マウント_に取り付ける必要があります。これは、移動時も物体の水平を保つよう設計された装置です。2つの{{< gd-icon Node3D >}}`Node3D`ノードを使用することで、左右方向と上下方向の回転を個別に制御できる簡易ジンバルを作成できます。"
+msgstr "この問題を解決するには、カメラを _ジンバル_ に取り付ける必要があります。これは、移動時も物体の水平を保つよう設計された装置です。2つの{{< gd-icon Node3D >}}`Node3D`ノードを使用することで、左右方向と上下方向の回転を個別に制御できる簡易ジンバルを作成できます。"
 
 #: 3D/camera_gimbal.md
 msgid "Using `lerp()` to change the zoom level results in smoother zooming."
@@ -2830,7 +2830,7 @@ msgstr "カメラジンバルのセットアップが完了したら、以下の
 
 #: 3D/camera_gimbal.md
 msgid "Here's how the gimbal works: the outer node can only be rotated in **Y**, while the inner one rotates only in **X**. You can test this out by rotating them manually, but make sure you change to \"Local Space Mode\" first (that's the cube icon next to the lock in the menu bar - the keyboard shortcut to toggle is \"T\"). Remember to only move the _green_ ring of the outer node and only the _red_ ring of the inner one. Don't touch the camera node at all."
-msgstr "以下にジンバルの仕組みを説明します。外側ノードは**Y軸方向のみ**回転可能で、内側ノードは**X軸方向のみ**回転できます。手動で試したい場合は、まず「ーカル空間を使用」（メニューバーのロックアイコン隣にあるキューブアイコン - ショートカットキーは「T」）に切り替えることを忘れないでください。必ず外側ノードの_緑色リング_のみを、内側ノードの_赤色リング_のみを操作してください。カメラノードには一切触れないよう注意してください。"
+msgstr "以下にジンバルの仕組みを説明します。外側ノードは**Y軸方向のみ**回転可能で、内側ノードは**X軸方向のみ**回転できます。手動で試したい場合は、まず「ローカル空間を使用」（メニューバーのロックアイコン隣にあるキューブアイコン - ショートカットキーは「T」）に切り替えることを忘れないでください。必ず外側ノードの _緑色リング_ のみを、内側ノードの _赤色リング_ のみを操作してください。カメラノードには一切触れないよう注意してください。"
 
 #: 3D/camera_gimbal.md
 msgid "Reset all the rotations to `0` once you've finished experimenting."
@@ -5078,7 +5078,7 @@ msgstr "カプセルのサイズと位置を調整し、キャラクターの全
 
 #: 3D/assets/character_controller.md
 msgid "In this recipe, we'll assume you've already imported your character model and animations, and that you're set up {{< gd-icon AnimationTree >}}`AnimationTree` to handle transitioning and blending the animations. If you haven't yet, see [Importing Assets](/4.x/3d/assets/importing_assets/) and [Character Animation](/4.x/3d/assets/character_animation/) for details. As a reminder, we're using the art packs linked in the [section description](/godot_recipes/4.x/3d/assets/)."
-msgstr "このレシピでは、既にキャラクターモデルとアニメーションをインポートしており、アニメーションの遷移やブレンド処理用に {{< gd-icon AnimationTree >}}`AnimationTree` が適切に設定されていることを前提に進めます。まだ準備ができていない場合は、[アセットのインポート方法](/godot_recipes/4.x/ja/3d/assets/importing_assets/) および [キャラクターアニメーションについて](/4.ex/3d/assets/character_animation/) を参照してください。参考までに、ここでは [セクション説明](/godot_recipes/4.x/ja/3d/assets/) でリンクされているアートパックを使用しています。"
+msgstr "このレシピでは、既にキャラクターモデルとアニメーションをインポートしており、アニメーションの遷移やブレンド処理用に {{< gd-icon AnimationTree >}}`AnimationTree` が適切に設定されていることを前提に進めます。まだ準備ができていない場合は、[アセットのインポート方法](/godot_recipes/4.x/ja/3d/assets/importing_assets/) および [キャラクターアニメーションについて](/godot_recipes/4.x/ja/3d/assets/character_animation/) を参照してください。参考までに、ここでは [セクション説明](/godot_recipes/4.x/ja/3d/assets/) でリンクされているアートパックを使用しています。"
 
 #: 3D/assets/character_controller.md
 msgid "And then, some references to the nodes we'll need to access:"
@@ -5167,7 +5167,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice style=\"info\" title=\"衝突レイヤーの整理\" %}}\n"
-"最終的には、プレイヤーオブジェクト、環境要素、敵キャラクターなど、さまざまなゲームオブジェクトに対する衝突レイヤーを適切に管理が必要です。\n"
+"プレイヤーオブジェクト、環境要素、敵キャラクターなど、さまざまなゲームオブジェクトに対する衝突レイヤーを、最終的には適切に管理することが必要です。\n"
 "{{% /notice %}}"
 
 #: 3D/assets/character_controller.md

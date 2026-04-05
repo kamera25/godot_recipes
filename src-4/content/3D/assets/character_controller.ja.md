@@ -10,7 +10,7 @@ Godot環境でリグ設定済みのアニメーション3Dキャラクターを�
 
 ## 解決策
 
-このレシピでは、既にキャラクターモデルとアニメーションをインポートしており、アニメーションの遷移やブレンド処理用に {{< gd-icon AnimationTree >}}`AnimationTree` が適切に設定されていることを前提に進めます。まだ準備ができていない場合は、[アセットのインポート方法](/godot_recipes/4.x/ja/3d/assets/importing_assets/) および [キャラクターアニメーションについて](/4.ex/3d/assets/character_animation/) を参照してください。参考までに、ここでは [セクション説明](/godot_recipes/4.x/ja/3d/assets/) でリンクされているアートパックを使用しています。
+このレシピでは、既にキャラクターモデルとアニメーションをインポートしており、アニメーションの遷移やブレンド処理用に {{< gd-icon AnimationTree >}}`AnimationTree` が適切に設定されていることを前提に進めます。まだ準備ができていない場合は、[アセットのインポート方法](/godot_recipes/4.x/ja/3d/assets/importing_assets/) および [キャラクターアニメーションについて](/godot_recipes/4.x/ja/3d/assets/character_animation/) を参照してください。参考までに、ここでは [セクション説明](/godot_recipes/4.x/ja/3d/assets/) でリンクされているアートパックを使用しています。
 
 ### 衝突の追加
 
@@ -44,7 +44,7 @@ Godot の 3D 操作に慣れている方なら、キャラクターが画面後�
 We don't want the spring arm to collide with the player's capsule shape, so in the root {{< gd-icon CharacterBody3D >}}`CharacterBody3D` set the collision layer to `2`. Since the spring arm is checking collision layer `1`, that will prevent the camera hitting the player's head.
 
 {{% notice style="info" title="衝突レイヤーの整理" %}}
-最終的には、プレイヤーオブジェクト、環境要素、敵キャラクターなど、さまざまなゲームオブジェクトに対する衝突レイヤーを適切に管理が必要です。
+プレイヤーオブジェクト、環境要素、敵キャラクターなど、さまざまなゲームオブジェクトに対する衝突レイヤーを、最終的には適切に管理することが必要です。
 {{% /notice %}}
 
 ### 移動
