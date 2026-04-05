@@ -162,8 +162,8 @@ Finally, for the UI to display the health, we attach the same health resource an
 @export var player_health: Resource
 
 func _ready():
-    if player_health:
-        player_health.connect("health_changed", self, "_on_player_health_changed")
+	if player_health:
+		player_health.health_changed.connect(_on_player_health_changed)
 
 func _on_player_health_changed(value):
     healthbar.value = float(value) / player_health.max_value * 100

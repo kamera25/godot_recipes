@@ -44,14 +44,14 @@ func _process(delta):
 
 ## ベクトル補間
 
-また、ベクトル間での補間もできます。`Vector2` および `Vector3` はどちらも `linear_interpolate()` メソッドを提供しています。
+また、ベクトル間での補間もできます。`Vector2` および `Vector3` はどちらも `lerp()` メソッドを提供しています。
 
 例：`Node3D`ノードの前方方向ベクトルと左方向ベクトルのちょうど中間に位置するベクターを取得するには。
 
 ```gdscript
 var forward = -transform.basis.z
 var left = transform.basis.x
-var forward_left = forward.linear_interpolate(left, 0.5)
+var forward_left = forward.lerp(left, 0.5)
 ```
 
 以下の例では、スプライトノードをマウスクリック位置に移動させています。各フレームごとにノードは目標位置まで10%ずつ近づきます。これにより、オブジェクトが近づくにつれて速度が徐々に減速する「接近」効果が得られます。
@@ -67,7 +67,7 @@ func _input(event):
 
 func _process(delta):
     if target:
-        position = position.linear_interpolate(target, 0.1)
+        position = position.lerp(target, 0.1)
 ```
 <!-- !LINK -->
 補間のより高度な応用については、`Tween` を参照してください。

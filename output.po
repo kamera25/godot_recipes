@@ -4835,7 +4835,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3dcharacter_imported_scene.png)"
 
 #: 3D/assets/character_animation.md
 msgid "The `IWR` looping animations can be thought of as the \"heart\" of the animation tree. The character will spend most of its time playing these animations. Any other animations will branch off from it (like we did earlier with the attack)."
-msgstr "アニメーションツリーの中核となるのが「IWR」ループアニメーションです。このアニメーションはキャラクターが最も多くの時間を過ごす場面で再生されます。他のあらゆるアニメーションは、この基本アニメーションから分岐する形で実装されます（先ほど攻撃動作で行ったように）。"
+msgstr "アニメーションツリーの中核となるのが`IWR`ループアニメーションです。このアニメーションはキャラクターが最も多くの時間を過ごす場面で再生されます。他のあらゆるアニメーションは、この基本アニメーションから分岐する形で実装されます（先ほど攻撃動作で行ったように）。"
 
 #: 3D/assets/character_animation.md 3D/assets/character_controller.md
 #: 3D/assets/importing_assets.md
@@ -5026,7 +5026,7 @@ msgstr "### 攻撃方法"
 
 #: 3D/assets/character_controller.md
 msgid "### IWR Animations"
-msgstr "### アイダブルアールアニメーション作品"
+msgstr "### IWR（アイドル/ウォーク/ラン） アニメーション"
 
 #: 3D/assets/character_controller.md
 msgid "Now that we have movement and rotation, we need to choose animations. The idea is to take the character's horizontal velocity (the *x/z* movement) and use it to set the blend position in the `IWR` blendspace we created."
@@ -5054,7 +5054,7 @@ msgstr "ジャンプモーションは複数のアニメーションが連動す
 
 #: 3D/assets/character_controller.md
 msgid "Character Controller"
-msgstr "キャラクタコントローラ"
+msgstr "キャラクタコントローラー"
 
 #: 3D/assets/character_controller.md
 msgid "And then this `if` statement after the first one above:"
@@ -8670,10 +8670,6 @@ msgstr "ノードのプロパティを`lerp()`でアニメーション化でき�
 #: Math/interpolation.md
 msgid "In this formula, `a` and `b` represent the two values and `t` is the amount of interpolation, typically expressed as a value between `0` (which returns `a`), and `1` (which returns `b`). The function finds a value the given amount between the two. For example:"
 msgstr "この数式において、`a` と `b` は2つの値を表し、`t` は補間量を示します。通常、`0`（結果は`a`）から`1`（結果は`b`）までの範囲で指定します。この関数は、指定された比率に基づいて2つの値の間に適切な中間値を求めます。具体例を挙げると以下となります。"
-
-#: Math/interpolation.md
-msgid "You can also interpolate between vectors. Both `Vector2` and `Vector3` provide `linear_interpolate()` methods for this."
-msgstr "また、ベクトル間での補間もできます。`Vector2` および `Vector3` はどちらも `linear_interpolate()` メソッドを提供しています。"
 
 #: Math/interpolation.md
 msgid "## Vector interpolation"
@@ -15850,10 +15846,6 @@ msgid ""
 msgstr "時刻 `0` に _フォント/サイズ_ (`64`) のキーフレームを追加し、_表示_ を「オフ」に設定するキーフレームも追加してください。"
 
 #: games/circle_jump/circle_jump_05.md
-msgid "Instance the HUD in the main scene, and add `$HUD.hide()` to the `_ready()` and `_on_Jumper_died()` functions. In `new_game()` we need to show the hud and display a message:"
-msgstr "メインシーンにHUDインスタンスを作成し、`_ready()`関数と`_on_Jumper_died()`関数内に`$HUD.hide()`を追加してください。`new_game()`関数では、HUDを表示してメッセージを表示します。以下のように実装します。"
-
-#: games/circle_jump/circle_jump_05.md
 msgid "We'll make two animations: one to set the initial values, and one to animate the message display. Add the first animation, \"init\" and click the \"Autoplay on Load\" button. Set the length to `0.1`."
 msgstr "以下の2つのアニメーションを作成します。初期値を設定するものと、メッセージ表示をアニメーションさせるものです。まず最初のアニメーション「init」を追加し、「ページ読み込み時に自動再生」ボタンをクリックします。持続時間は`0.1`に設定してください。"
 
@@ -15872,8 +15864,8 @@ msgstr ""
 "- `ScoreBox` のレイアウトを「下部ワイド」に設定\n"
 "- すべてのカスタム定数値を20に設定\n"
 "- `HBoxContainer` 子要素を追加し、その下に2つの `Label`ノードを配置\n"
-"- 2番目のラベルに「スコア」という名前を付け、_テキストプロパティ_に100を入力\n"
-"- `HBoxContainer` の _整列位置_ を「右端」に設定"
+"- 2番目のラベルに「スコア」という名前を付け、 _Text_ プロパティに100を入力\n"
+"- `HBoxContainer` の _Alignment_ を「End」に設定"
 
 #: games/circle_jump/circle_jump_05.md
 msgid "To add the score, create a `score` variable and set it to `0` in `new_game()`. In `_on_Jumper_captured()` increment it by one. Make sure to call `$HUD.update_score(score)` after each of these."
@@ -15885,7 +15877,7 @@ msgstr "次に、時刻「0」と「200」におけるフォントサイズを�
 
 #: games/circle_jump/circle_jump_05.md
 msgid "Now for the `Message` node load the font and set _Text_ to \"Message\" so we'll have something to see. Also choose \"Make Unique\" on the font resource (you'll see why in the next section). Set _Align_ and _Valign_ to \"Center\" and _Clip Text_ to \"On\". For layout, choose \"Center Wide\". Also, set _Grow Direction/Vertical_ to \"Both\"."
-msgstr "次に、`Message`ノードの処理に移ります。まずフォントを読み込み、_Text_プロパティに「メッセージ」を設定します。こうすることで表示内容が確認できるようになります。さらに、フォントリソースで「ユニーク化」（Make Unique）を選択してください（この理由は次のセクションで説明します）。_Align_と_Valign_は「中央」に設定し、_Clip Text_は「オン」にしてください。レイアウトに関しては「ワイド・センタリング」を選択します。また、_Grow Direction/Vertical_を「両方」に設定します。"
+msgstr "次に、`Message`ノードの処理に移ります。まずフォントを読み込み、 _Text_ プロパティに「メッセージ」を設定します。こうすることで表示内容が確認できるようになります。さらに、フォントリソースで「ユニーク化」（Make Unique）を選択してください（この理由は次のセクションで説明します）。 _Align_ と _Valign_ は「中央」に設定し、 _Clip Text_ は「オン」にしてください。レイアウトに関しては「ワイド・センタリング」を選択します。また、_Grow Direction/Vertical_を「両方」に設定します。"
 
 #: games/circle_jump/circle_jump_05.md
 msgid "Heres' what the animation settings should look like:"
@@ -16747,7 +16739,7 @@ msgstr "音声機能が正常に動作するようになったので、「設定
 
 #: games/circle_jump/circle_jump_06.md
 msgid "## Sound settings"
-msgstr "## 音声設定"
+msgstr "## サウンド設定"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "- To the `Screens` scene, add another called \"Click\", which will play when we tap buttons. Use `menu_click.wav` from the assets folder."
@@ -18379,3 +18371,11 @@ msgstr "最後に、ボディに衝突形状を追加する必要があります
 #: physics/smooth_rigid_move.md
 msgid "-  [RigidBody2D: Look at Target](/godot_recipes/4.x/physics/smooth_rigid_rotate/)"
 msgstr "-  [RigidBody2D: ターゲットに向ける](/godot_recipes/4.x/physics/smooth_rigid_rotate/)"
+
+#: Math/interpolation.md
+msgid "You can also interpolate between vectors. Both `Vector2` and `Vector3` provide `lerp()` methods for this."
+msgstr "また、ベクトル間での補間もできます。`Vector2` および `Vector3` はどちらも `lerp()` メソッドを提供しています。"
+
+#: games/circle_jump/circle_jump_05.md
+msgid "Instance the HUD in the main scene, and add `$HUD.hide_score()` to the `_ready()` and `_on_Jumper_died()` functions. In `new_game()` we need to show the hud and display a message:"
+msgstr "メインシーンにHUDインスタンスを作成し、`_ready()`関数と`_on_Jumper_died()`関数内に`$HUD.hide_score()`を追加してください。`new_game()`関数では、HUDを表示してメッセージを表示します。以下のように実装します。"

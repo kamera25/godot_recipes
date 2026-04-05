@@ -61,20 +61,20 @@ func show_message(text):
     $Message.text = text
     $AnimationPlayer.play("show_message")
 
-func hide():
+func hide_score():
     $ScoreBox.hide()
 
-func show():
+func show_score():
     $ScoreBox.show()
 
 func update_score(value):
     $ScoreBox/HBoxContainer/Score.text = str(value)
 ```
 
-Instance the HUD in the main scene, and add `$HUD.hide()` to the `_ready()` and `_on_Jumper_died()` functions. In `new_game()` we need to show the hud and display a message:
+Instance the HUD in the main scene, and add `$HUD.hide_score()` to the `_ready()` and `_on_Jumper_died()` functions. In `new_game()` we need to show the hud and display a message:
 
 ```gdscript
-$HUD.show()
+$HUD.show_score()
 $HUD.show_message("Go!")
 ```
 

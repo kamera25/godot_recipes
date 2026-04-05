@@ -44,14 +44,14 @@ func _process(delta):
 
 ## Vector interpolation
 
-You can also interpolate between vectors. Both `Vector2` and `Vector3` provide `linear_interpolate()` methods for this.
+You can also interpolate between vectors. Both `Vector2` and `Vector3` provide `lerp()` methods for this.
 
 For example, to find a vector that's halfway between a `Node3D` node's forward and left direction vectors:
 
 ```gdscript
 var forward = -transform.basis.z
 var left = transform.basis.x
-var forward_left = forward.linear_interpolate(left, 0.5)
+var forward_left = forward.lerp(left, 0.5)
 ```
 
 The following example moves a Sprite node towards the mouse click position. Each frame the node moves 10% of the way to the target. This results in an "approach" effect, where the object's speed becomes slower the closer it gets to the target.
@@ -67,7 +67,7 @@ func _input(event):
 
 func _process(delta):
     if target:
-        position = position.linear_interpolate(target, 0.1)
+        position = position.lerp(target, 0.1)
 ```
 <!-- !LINK -->
 For more advanced applications of interpolation, see `Tween`.
