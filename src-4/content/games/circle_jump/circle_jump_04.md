@@ -80,7 +80,7 @@ func _on_button_pressed(name):
             change_screen($TitleScreen)
         "Play":
             change_screen(null)
-            yield(get_tree().create_timer(0.5), "timeout")
+            await get_tree().create_timer(0.5).timeout
             emit_signal("start_game")
         "Settings":
             change_screen($SettingsScreen)
@@ -88,11 +88,11 @@ func _on_button_pressed(name):
 func change_screen(new_screen):
     if current_screen:
         current_screen.disappear()
-        yield(current_screen.tween, "tween_completed")
+        await current_screen.tween.tween_completed
     current_screen = new_screen
     if new_screen:
         current_screen.appear()
-        yield(current_screen.tween, "tween_completed")
+        await current_screen.tween.tween_completed
 
 func game_over():
     change_screen($GameOverScreen)

@@ -117,7 +117,7 @@ func _on_button_pressed(button):
             change_screen($TitleScreen)
         "Play":
             change_screen(null)
-            yield(get_tree().create_timer(0.5), "timeout")
+            await get_tree().create_timer(0.5).timeout
             emit_signal("start_game")
         "Settings":
             change_screen($SettingsScreen)
