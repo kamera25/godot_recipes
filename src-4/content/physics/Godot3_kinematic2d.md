@@ -134,7 +134,7 @@ if collision:
 	velocity = velocity.slide(collision.normal)
 {{< /highlight >}}
 {{< highlight gdscript>}}
-velocity = move_and_slide(velocity)
+move_and_slide()
 {{< /highlight >}}
 
 Anything you do with `move_and_slide()` can also be done with `move_and_collide()`,
@@ -242,7 +242,7 @@ func _physics_process(delta):
 	# Don't move if too close to the mouse pointer
 	if dir.length() > 5:
 		rotation = dir.angle()
-		velocity = move_and_slide(velocity)
+		move_and_slide()
 {{< /highlight >}}
 
 And the code for the Bullet:
@@ -348,7 +348,7 @@ func _physics_process(delta):
     if state == JUMP:
         if is_on_floor():
             change_state(IDLE)
-    velocity = move_and_slide(velocity, Vector2(0, -1))
+    move_and_slide()
 
     if position.y > 600:
         get_tree().reload_current_scene()

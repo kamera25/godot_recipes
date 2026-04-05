@@ -46,7 +46,7 @@ func _physics_process(delta):
     get_input(delta)
     velocity.y += gravity * delta
 
-    velocity = move_and_slide(velocity, Vector3.UP)
+    move_and_slide()
 
     if jumping and is_on_floor():
         jumping = false
@@ -72,7 +72,7 @@ Checking the [`move_and_slide()` documentation](https://docs.godotengine.org/en/
 So we can change our movement to this instead:
 
 ```gdscript
-velocity = move_and_slide(velocity, Vector3.UP, true)
+move_and_slide()
 ```
 
 Now we stop sliding down slopes!
@@ -90,7 +90,7 @@ In order to ensure we can still jump, we also need to disable snapping during a 
 
 ```gdscript
     var snap = Vector3.DOWN if not jumping else Vector3.ZERO
-    velocity = move_and_slide_with_snap(velocity, snap, Vector3.UP, true)
+    move_and_slide()
 ```
 
 Now the "hop" is gone, and everything works as expected.
@@ -102,8 +102,7 @@ Finally, you may notice that on very steep slopes, you still have a problem:
 This is because the default value of the `floor_max_angle` parameter is 45°, and the slope shown is greater. Any angle above this value does not count as a floor. Increasing the value makes this slope behave like the others:
 
 ```gdscript
-velocity = move_and_slide_with_snap(velocity, snap, Vector3.UP,
-        true, 4, deg2rad(52))
+move_and_slide()
 ```
 
 ## Related recipes
