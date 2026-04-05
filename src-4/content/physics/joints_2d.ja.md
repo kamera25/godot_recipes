@@ -37,7 +37,7 @@ Godotの`Joint2D`ノードについて理解したい。
 
 ![alt](/godot_recipes/4.x/img/pinjoint_example2.gif)
 
-### {{< gd-icon DampedSpringJoint2D >}} 減衰スプリングジョイント（2D）
+### {{< gd-icon DampedSpringJoint2D >}} DampedSpringJoint2D
 
 この継手はスプリング状の力によって2つの部材を連結します。
 
@@ -56,7 +56,7 @@ Godotの`Joint2D`ノードについて理解したい。
 
 ![alt](/godot_recipes/4.x/img/groovejoint_example.gif)
 
-デフォルトでは溝は垂直方向に配置されますが、溝ノードを回転させることでこれを変更できます。
+デフォルトでは垂直方向に配置されますが、ノードを回転させることでこれを変更できます。
 
 以下のプロパティは溝の動作を制御します。
 

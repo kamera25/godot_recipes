@@ -2146,7 +2146,7 @@ msgstr "### ノード設定"
 
 #: ui/cooldown_button.md
 msgid "On the `Sweep` node, choose \"Full Rect\" from the **Presets** menu. Set the **Fill Mode** to \"Counter Clockwise\"."
-msgstr "「掃引」ノードでは、**プリセット**メニューから「完全矩形」を選択します。**塗りつぶしモード**を「反時計回り」に設定してください。"
+msgstr "`Sweep`ノードでは、**Presets**メニューから 「Full Rect」 を選択します。**Fill Mode(塗りつぶしモード)**を「Counter Clockwise(反時計回り)」に設定してください。"
 
 #: ui/cooldown_button.md
 msgid "You want to make RPG-style ability buttons, including a cooldown effect."
@@ -2296,7 +2296,7 @@ msgstr "### フォント操作について"
 
 #: ui/labels.md
 msgid "To add your font in the Inspector, scroll down to and expand the *Custom Fonts* section. In the empty *Font* property, choose \"New DynamicFont\" and then click the new `DynamicFont` to expand it."
-msgstr "フォントを追加するには：インスペクターで「カスタムフォント」セクションまでスクロールダウンし、展開してください。空の「フォント」プロパティで『新規ダイナミックフォント』を選択し、新しく表示された`DynamicFont`をクリックしてさらに展開します。"
+msgstr "フォントを追加するには。インスペクターで「カスタムフォント」セクションまでスクロールダウンし、展開してください。空の「フォント」プロパティで『新規ダイナミックフォント』を選択し、新しく表示された`DynamicFont`をクリックしてさらに展開します。"
 
 #: ui/labels.md
 msgid "Drag your font file (in this example we're using `Roboto-Medium.ttf`) into the *Font Data* property (or choose \"Load\" and navigate to the file). There are several properties to adjust but for now let's make *Size* a bit bigger."
@@ -2786,7 +2786,7 @@ msgstr "![alt](/godot_recipes/4.x/img/gimbal_02.gif)"
 
 #: 3D/camera_gimbal.md
 msgid "For completeness, here's the full script, including `@export` variables for all the camera settings, so that you can configure it in your project."
-msgstr "参考までに、カメラ設定の全変数を含む完全なスクリプトを掲載します。この内容を参考にプロジェクト環境で設定してください。"
+msgstr "参考までに、カメラ設定の全変数を含む全てのスクリプトを掲載します。この内容を参考にプロジェクト環境で設定してください。"
 
 #: 3D/camera_gimbal.md
 msgid "### Camera zoom"
@@ -3133,7 +3133,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_ship_01.png)"
 
 #: 3D/spaceship.md
 msgid "Here's the complete script:"
-msgstr "以下に完全なスクリプトを示します。"
+msgstr "以下に全てのスクリプトを示します。"
 
 #: 3D/spaceship.md
 msgid "That's it, now you can fly! This controller is a great start for whatever space-based game you might have in mind. Add some other ships, and a few effects, and you're ready go:"
@@ -3483,7 +3483,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"ここに掲載している弾丸モデルを使用したい場合は、[Kenney's \"Weapon Pack\"](https://kenney.nl/assets/weapon-pack)から入手できます。\n"
+"ここに掲載している弾丸モデルを使用したい場合は、[Kenney's \"Blaster Kit\"](https://www.kenney.nl/assets/blaster-kit)から入手できます。\n"
 "{{% /notice %}}"
 
 #: 2D/2d_shooting.md 2D/ballistic_bullet.md 3D/3d_shooting.md
@@ -5689,7 +5689,7 @@ msgstr "この段階では、車の挙動を幅広く調整できる多数のパ
 
 #: 3D/kinematic_car/car_traction.md
 msgid "`traction_slow` and `traction_fast` represent the traction when below or above the `slip_speed`, ranging from `0` - `1`. Smaller numbers mean the car will feel more \"slippery\". Setting them to `1` will be \"on rails\" with no sliding at all."
-msgstr "`traction_slow` および `traction_fast` は、`slip_speed` 以下またはそれ以上におけるトラクション特性を表し、値は 0～1 の範囲で設定されます。数値が小さいほど車両は「滑りやすい」感覚が強くなります。これらを 1 に設定すると、「レール上を走る」ように完全に滑らない状態になります。"
+msgstr "`traction_slow` および `traction_fast` は、`slip_speed` 以下またはそれ以上におけるトラクション特性を表し、値は 0～1 の範囲で設定されます。数値が小さいほど車両は「滑りやすい」感覚が強くなります。これらを 1 に設定すると、「レール上を走る」ように全く滑らない状態になります。"
 
 #: 3D/kinematic_car/car_traction.md
 msgid "`drifting` is a boolean variable to keep track of the drifting state."
@@ -5855,7 +5855,7 @@ msgstr "「+」をクリックして別の入力を追加してください。�
 
 #: input/input_actions.md
 msgid "Let's say you're making a top-down character and you write code using `InputActionKey` that uses the arrow keys for movement. You'll quickly find that many players prefer to use \"WASD\" style controls. You can go back into your code and add the additional key checks, but this would result in duplicated/redundant code."
-msgstr "例えば、見下ろし型キャラクターのゲームを開発していて、`InputActionKey`を使って矢印キーで移動操作するコードを書いたとします。するとすぐに、多くのプレイヤーが「WASD」スタイルの操作方法を好むことに気づくでしょう。後からコードに戻って追加のキーチェックを実装することもできますが、これでは重複した冗長なコードが生じてしまいます。"
+msgstr "例えば、見下ろし型キャラクターのゲームを開発していて、`InputActionKey`を使って矢印キーで移動操作するコードを書いたとします。すると、多くのプレイヤーが「WASD」スタイルの操作方法を好き好んで使っていることに気づくと思います。後からコードに戻って追加のキーチェックを実装することもできますが、これでは重複した冗長なコードが生じてしまいます。"
 
 #: input/input_actions.md
 msgid "If instead you want to detect the action at the moment it occurs, you can use the `_input()` or `_unhandled_input()` callbacks:"
@@ -6013,7 +6013,7 @@ msgstr "- **MOUSE_MODE_CONFINED** ：マウスは表示されていますが、�
 
 #: input/mouse_capture.md
 msgid "When the mouse is captured, mouse input events will still be passed as normal. However, you will find there is a problem. If you want to close the game or switch to another window, you can't. For this reason, you will want to also include a way to \"release\" the mouse. For example, to release when the player pressed the Escape key:"
-msgstr "マウスが捕捉されている状態でも、通常どおりマウス入力イベントは伝達されます。ただし、問題が生じることに注意してください。ゲームを終了したり他のウィンドウに切り替えたい場合、それが不可能になります。このため、「マウス解放」機能も実装しておくと便利です。例えば、プレイヤーがEscキーを押したときにマウスを解放するには："
+msgstr "マウスが捕捉されている状態でも、通常どおりマウス入力イベントは伝達されます。ただし、問題が生じることに注意してください。ゲームを終了したり他のウィンドウに切り替えたい場合、それが不可能になります。このため、「マウス解放」機能も実装しておくと便利です。例えば、プレイヤーがEscキーを押したときにマウスを解放するには。"
 
 #: input/mouse_capture.md
 msgid "You want to hide the mouse cursor and keep the mouse from leaving the game window. This is common in many 3D games (and some 2D ones)."
@@ -6093,7 +6093,7 @@ msgstr "マウスカーソルの設定は `Input.set_custom_mouse_cursor()` メ�
 
 #: input/custom_mouse_cursor.md
 msgid "For example, to use the following image:"
-msgstr "例えば、以下の画像を使用するには："
+msgstr "例えば、以下の画像を使用するには。"
 
 #: input/custom_mouse_cursor.md
 msgid "Customizing the Mouse Cursor"
@@ -6101,7 +6101,7 @@ msgstr "カーソルのカスタマイズ"
 
 #: input/custom_mouse_cursor.md
 msgid "The second parameter sets which system cursor to replace. See the [Input docs](https://docs.godotengine.org/en/latest/classes/class_input.html#enum-input-cursorshape) for the full list."
-msgstr "第2パラメーターはどのシステムカーソルを置き換えるかを指定します。完全なリストについては[入力ドキュメント](https://docs.godotengine.org/ja/latest/classes/class_input.html#enum-input-cursorshape)を参照してください。"
+msgstr "第2パラメーターはどのシステムカーソルを置き換えるかを指定します。このパラメーターの全ての一覧は[入力ドキュメント](https://docs.godotengine.org/ja/latest/classes/class_input.html#enum-input-cursorshape)を参照してください。"
 
 #: input/custom_mouse_cursor.md
 msgid "You want to use a custom mouse cursor."
@@ -6109,7 +6109,7 @@ msgstr "ゲーム中のマウスカーソルをカスタマイズしたい。"
 
 #: input/custom_mouse_cursor.md
 msgid "And set its hotspot to the center:"
-msgstr "そして、ホットスポットを中央位置に設定します。"
+msgstr "以下で照準を中央位置に設定します。"
 
 #: input/_index.md
 msgid "Input"
@@ -6329,7 +6329,7 @@ msgstr "このアニメーション手法では、{{< gd-icon Sprite2D >}}`Sprit
 
 #: animation/spritesheet_animation.md
 msgid "Drag the spritesheet texture into the _Texture_ property of the {{< gd-icon Sprite2D >}}`Sprite2D`. You'll see the entire spritesheet displayed in the viewport. To slice it up into individual frames, expand the \"Animation\" section in the Inspector and set the _Hframes_ to `13` and _Vframes_ to `8`. _Hframes_ and _Vframes_ are the number of horizontal and vertical frames in your spritesheet."
-msgstr "{{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの _Texture_ プロパティにスプライトシートテクスチャをドラッグ＆ドロップしてください。ビューポート内に完全なスプライトシートが表示されます。個別のフレームに分割するには、インスペクターの「Animation」セクションを展開し、 _Hframes_ を `13`、 _Vframes_ を `8`に設定します。_Hframes_ と _Vframes_ は、それぞれ水平方向および垂直方向のフレーム数を指定するパラメーターです。"
+msgstr "{{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの _Texture_ プロパティにスプライトシートテクスチャをドラッグ＆ドロップしてください。ビューポート内にすべてのスプライトシートが表示されます。個別のフレームに分割するには、インスペクターの「Animation」セクションを展開し、 _Hframes_ を `13`、 _Vframes_ を `8`に設定します。_Hframes_ と _Vframes_ は、それぞれ水平方向および垂直方向のフレーム数を指定するパラメーターです。"
 
 #: animation/spritesheet_animation.md
 msgid "![alt](/godot_recipes/4.x/img/sprite_animation_03.png)"
@@ -11832,7 +11832,7 @@ msgstr "### {{< gd-icon DampedSpringJoint2D >}} DampedSpringJoint2D"
 
 #: physics/joints_2d.md
 msgid "By default, the groove runs vertically, but you can change this by rotating the groove node."
-msgstr "デフォルトでは溝は垂直方向に配置されますが、溝ノードを回転させることでこれを変更できます。"
+msgstr "デフォルトでは垂直方向に配置されますが、ノードを回転させることでこれを変更できます。"
 
 #: physics/joints_2d.md
 msgid "Joint are used to constrain the movement of attached physics objects. For any joint node, you need to attach two bodies, which must extend from `PhysicsObject2D`."
@@ -13314,7 +13314,7 @@ msgstr ""
 "このコードは、独自のプラットフォームコントローラーを構築するための基礎を提供します。壁ジャンプなどのより高度なプラットフォーマー機能については、本セクションの他のレシピを参照してください。\n"
 "\n"
 "<!--\n"
-"このレシピを使用したサンプルプロジェクトをダウンロードするには："
+"このレシピを使用したサンプルプロジェクトをダウンロードするには。"
 
 #: 2D/platform_character.md
 msgid ""
@@ -17565,13 +17565,13 @@ msgid ""
 "_One Shot_ and _Autostart_ properties both on."
 msgstr ""
 "新規にArea3Dルートを持つシーンを作成し、「Bullet」という名前を付けます。以下のコンポーネントを追加してください：\n"
-"・`MeshInstance`コンポーネント\n"
-"・`CollisionShape`コンポーネント\n"
-"・`Timer`コンポーネント\n"
+"* `MeshInstance`コンポーネント\n"
+"* `CollisionShape`コンポーネント\n"
+"* `Timer`コンポーネント\n"
 "\n"
 "メッシュと衝突判定には球体形状を使用し、半径を`0.2`にスケーリングしてキャラクターと比較した際に大きすぎないようにしています。`Timer`は弾丸に時間制限を設けるためのものです。以下のプロパティを設定してください：\n"
-"・_One Shot_ モードを有効にする\n"
-"・_Autostart_ プロパティも有効にする"
+"* _One Shot_ モードを有効にする\n"
+"* _Autostart_ プロパティを有効にする"
 
 #: g101/3d/101_3d_04.md
 msgid ""
@@ -17602,7 +17602,7 @@ msgstr "スクリプトをArea3Dに追加し、`body_entered`シグナルに接�
 
 #: Math/interpolation.md
 msgid "For example, to find a vector that's halfway between a `Node3D` node's forward and left direction vectors:"
-msgstr "例：`Node3D`ノードの前方方向ベクトルと左方向ベクトルのちょうど中間に位置するベクターを取得するには："
+msgstr "例：`Node3D`ノードの前方方向ベクトルと左方向ベクトルのちょうど中間に位置するベクターを取得するには。"
 
 #: Math/dot_cross_product.md
 msgid ""
@@ -18019,9 +18019,9 @@ msgid ""
 "- [Using CharacterBody2D](/godot_recipes/3.x/physics/godot3_kinematic2d/)\n"
 "- [Moving Platforms](/godot_recipes/3.x/2d/moving_platforms/)"
 msgstr ""
-"・[プラットフォームキャラクターの実装方法](/godot_recipes/4.x/ja/2d/platform_character)\n"
-"・[CharacterBody2Dコンポーネントの活用法](/godot_recipes/4.x/ja/physics/godot3_kinematic2d/)\n"
-"・[移動式プラットフォームの作成テクニック](/godot_recipes/4.x/ja/2d/moving_platforms/)"
+"- [プラットフォームキャラクターの実装方法](/godot_recipes/4.x/ja/2d/platform_character)\n"
+"- [CharacterBody2Dコンポーネントの活用法](/godot_recipes/4.x/ja/physics/godot3_kinematic2d/)\n"
+"- [移動式プラットフォームの作成テクニック](/godot_recipes/4.x/ja/2d/moving_platforms/)"
 
 #: physics/conveyor_belt.md
 msgid "![alt](/godot_recipes/3.x/img/conveyor_3d.gif)"

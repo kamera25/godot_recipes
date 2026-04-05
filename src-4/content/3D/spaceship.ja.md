@@ -152,7 +152,7 @@ yaw_input = roll_input
 
 ### 全スクリプト
 
-以下に完全なスクリプトを示します。
+以下に全てのスクリプトを示します。
 
 ```gdscript
 extends CharacterBody3D

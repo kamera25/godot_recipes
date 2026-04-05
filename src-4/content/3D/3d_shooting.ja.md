@@ -32,7 +32,7 @@ ghcommentid: 36
 ![alt](/godot_recipes/4.x/img/3d_shoot_01.png)
 
 {{% notice note %}}
-ここに掲載している弾丸モデルを使用したい場合は、[Kenney's "Weapon Pack"](https://kenney.nl/assets/weapon-pack)から入手できます。
+ここに掲載している弾丸モデルを使用したい場合は、[Kenney's "Blaster Kit"](https://www.kenney.nl/assets/blaster-kit)から入手できます。
 {{% /notice %}}
 
 メッシュを {{< gd-icon MeshInstance3D >}}`MeshInstance` に追加し、衝突形状もそれに合わせてスケール調整してください。

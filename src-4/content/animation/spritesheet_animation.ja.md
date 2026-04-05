@@ -33,7 +33,7 @@ Godotが自動的に画像を切り分けできるように、スプライトシ
   {{< gd-icon AnimationPlayer >}} AnimationPlayer
 ```
 
-{{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの _Texture_ プロパティにスプライトシートテクスチャをドラッグ＆ドロップしてください。ビューポート内に完全なスプライトシートが表示されます。個別のフレームに分割するには、インスペクターの「Animation」セクションを展開し、 _Hframes_ を `13`、 _Vframes_ を `8`に設定します。_Hframes_ と _Vframes_ は、それぞれ水平方向および垂直方向のフレーム数を指定するパラメーターです。
+{{< gd-icon Sprite2D >}}`Sprite2D`コンポーネントの _Texture_ プロパティにスプライトシートテクスチャをドラッグ＆ドロップしてください。ビューポート内にすべてのスプライトシートが表示されます。個別のフレームに分割するには、インスペクターの「Animation」セクションを展開し、 _Hframes_ を `13`、 _Vframes_ を `8`に設定します。_Hframes_ と _Vframes_ は、それぞれ水平方向および垂直方向のフレーム数を指定するパラメーターです。
 
 ![alt](/godot_recipes/4.x/img/sprite_animation_01.png)
 

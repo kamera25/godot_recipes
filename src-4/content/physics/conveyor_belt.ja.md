@@ -80,6 +80,6 @@ func _process(delta):
 
 ## 関連レシピ
 
-・[プラットフォームキャラクターの実装方法](/godot_recipes/4.x/ja/2d/platform_character)
-・[CharacterBody2Dコンポーネントの活用法](/godot_recipes/4.x/ja/physics/godot3_kinematic2d/)
-・[移動式プラットフォームの作成テクニック](/godot_recipes/4.x/ja/2d/moving_platforms/)
+- [プラットフォームキャラクターの実装方法](/godot_recipes/4.x/ja/2d/platform_character)
+- [CharacterBody2Dコンポーネントの活用法](/godot_recipes/4.x/ja/physics/godot3_kinematic2d/)
+- [移動式プラットフォームの作成テクニック](/godot_recipes/4.x/ja/2d/moving_platforms/)
