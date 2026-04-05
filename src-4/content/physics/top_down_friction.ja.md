@@ -37,5 +37,5 @@ func _physics_process(delta):
         velocity = lerp(velocity, direction.normalized() * speed, acceleration)
     else:
         velocity = lerp(velocity, Vector2.ZERO, friction)
-    velocity = move_and_slide(velocity)
+    move_and_slide()
 ```

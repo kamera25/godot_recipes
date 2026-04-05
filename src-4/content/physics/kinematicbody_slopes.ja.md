@@ -46,7 +46,7 @@ func _physics_process(delta):
     get_input(delta)
     velocity.y += gravity * delta
 
-    velocity = move_and_slide(velocity, Vector3.UP)
+    move_and_slide()
 
     if jumping and is_on_floor():
         jumping = false
@@ -72,7 +72,7 @@ func _physics_process(delta):
 このように、移動方法を次のように変更できます。
 
 ```gdscript
-velocity = move_and_slide(velocity, Vector3.UP, true)
+move_and_slide()
 ```
 
 これで斜面を滑り落ちるのを止められます！
@@ -90,7 +90,7 @@ Jump 機能を確実に動作させるため、ジャンプ中のスナップ機
 
 ```gdscript
     var snap = Vector3.DOWN if not jumping else Vector3.ZERO
-    velocity = move_and_slide_with_snap(velocity, snap, Vector3.UP, true)
+    move_and_slide()
 ```
 
 これで「ホップ」がなくなり、すべてが期待通りに動作するようになりました。
@@ -102,8 +102,7 @@ Jump 機能を確実に動作させるため、ジャンプ中のスナップ機
 これは、デフォルトの `floor_max_angle` パラメーター値が45度に設定されており、表示される傾斜角がこの値を超えているためです。この値を超える角度は床として認識されません。値を大きくすると、この傾斜も他の傾斜と同様に扱われるようになります。
 
 ```gdscript
-velocity = move_and_slide_with_snap(velocity, snap, Vector3.UP,
-        true, 4, deg2rad(52))
+move_and_slide()
 ```
 
 ## 関連レシピ

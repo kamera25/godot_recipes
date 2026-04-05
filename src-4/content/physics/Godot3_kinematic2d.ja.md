@@ -131,7 +131,7 @@ if collision:
 	velocity = velocity.slide(collision.normal)
 {{< /highlight >}}
 {{< highlight gdscript>}}
-velocity = move_and_slide(velocity)
+move_and_slide()
 {{< /highlight >}}
 
 `move_and_slide()` で行う操作は、すべて `move_and_collide()` でも実行可能です。ただ、コード量が少し増えるかもしれません。ただし、以下の例でご覧いただけるように、
@@ -223,7 +223,7 @@ func _physics_process(delta):
 	# Don't move if too close to the mouse pointer
 	if dir.length() > 5:
 		rotation = dir.angle()
-		velocity = move_and_slide(velocity)
+		move_and_slide()
 {{< /highlight >}}
 
 そして、弾丸のコード:
@@ -325,7 +325,7 @@ func _physics_process(delta):
     if state == JUMP:
         if is_on_floor():
             change_state(IDLE)
-    velocity = move_and_slide(velocity, Vector2(0, -1))
+    move_and_slide()
 
     if position.y > 600:
         get_tree().reload_current_scene()
