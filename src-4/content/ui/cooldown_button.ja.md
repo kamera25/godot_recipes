@@ -110,4 +110,4 @@ func _on_Timer_timeout():
 ## 関連レシピ
 
 - [UI: ラベル](/godot_recipes/4.x/ja/ui/labels/)
-   - [UI: ユニットHPバー](/godot_recipes/4.x/ja/ui/unit_healthbar/) -->
+- [UI: ユニットHPバー](/godot_recipes/4.x/ja/ui/unit_healthbar/) -->

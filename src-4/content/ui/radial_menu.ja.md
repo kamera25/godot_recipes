@@ -116,4 +116,4 @@ func hide_menu():
 
 ## 関連レシピ
 
-* [UI：クールタイムボタン](/godot_recipes/4.x/ja/ui/cooldown_button/)
+- [UI：クールタイムボタン](/godot_recipes/4.x/ja/ui/cooldown_button/)

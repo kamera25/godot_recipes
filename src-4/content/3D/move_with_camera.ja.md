@@ -77,7 +77,7 @@ func _physics_process(_delta):
 ## 関連レシピ
 
 - [転がるキューブ](/godot_recipes/4.x/ja/3d/rolling_cube/)
-- [カメラ・ジンバル](/godot_recipes/4.x/ja/3d/camera_gimbal/)
+- [カメラジンバル](/godot_recipes/4.x/ja/3d/camera_gimbal/)
 
 #### この動画が気に入ったら？
 

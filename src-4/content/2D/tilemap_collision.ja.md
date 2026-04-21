@@ -42,7 +42,7 @@ if collision.collider is TileMap:
 
 ## 関連レシピ
 
-- [タイルマップ: オートタイルを利用する](/godot_recipes/4.x/ja/2d/autotile_intro/)
+- [タイルマップ: オートタイルを使う](/godot_recipes/4.x/ja/2d/autotile_intro/)
 - [タイルマップ: アニメーションタイル](/godot_recipes/4.x/ja/2d/tilemap_animation/)
 
 #### この動画が気に入ったら？

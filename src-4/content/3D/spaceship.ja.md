@@ -203,7 +203,7 @@ func _physics_process(delta):
 
 ## 関連レシピ
 
-[補間カメラの実装](/godot_recipes/4.x/ja/3d/interpolated_camera/)
+- [補間カメラの実装](/godot_recipes/4.x/ja/3d/interpolated_camera/)
 
 
 <!-- #### Videoが気に入ったら？ -->

@@ -66,4 +66,4 @@ _Frame_ プロパティを変更してみて、画像がどのように変化す
 ## 関連レシピ
 
 - [プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)
- <!-- - [アニメーション状態のコントロール](http://kidscancancode.org/godot_recipes/animation/animation_state_machine/) -->
+<!-- - [アニメーション状態のコントロール](/godot_recipes/4.x/ja/animation/animation_state_machine/) -->

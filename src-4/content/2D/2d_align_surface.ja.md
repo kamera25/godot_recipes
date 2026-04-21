@@ -102,7 +102,7 @@ func _physics_process(delta):
 
 ## 関連レシピ
 
-- [Platform character](/godot_recipes/4.x/2d/platform_character)
-- [Using CharacterBody2D](/godot_recipes/4.x/physics/godot3_kinematic2d/)
+- [プラットフォームキャラクター](/godot_recipes/4.x/2d/platform_character)
+- [CharacterBody2Dを使う](/godot_recipes/4.x/physics/godot3_kinematic2d/)
 
 <!-- #### この動画が気に入ったら？ -->

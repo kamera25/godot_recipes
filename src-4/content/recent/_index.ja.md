@@ -20,5 +20,5 @@ pre = "<i class='fas fa-newspaper fa-fw'></i>&nbsp"
 * [3D空間に浮かぶHPバー](/godot_recipes/4.x/ja/3d/healthbars/)
 * [グリッドベースの移動](/godot_recipes/4.x/ja/2d/grid_movement)
 * [アーケードスタイル3D宇宙船モデル](/godot_recipes/4.x/ja/3d/spaceship)
-* [補間機能付きカメラシステム](/godot_recipes/4.x/ja/3d/interpolated_camera/)
+* [補間機能付きカメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/)
 * [プラットフォーム用キャラクターモデル](/godot_recipes/4.x/ja/2d/platform_character/)

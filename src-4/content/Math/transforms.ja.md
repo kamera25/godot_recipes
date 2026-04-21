@@ -99,6 +99,6 @@ func _unhandled_input(event):
 ```
 
 {{% notice tip %}}
-Godotにはデフォルトのベクター値が定義されています。例えば：`Vector3.FORWARD == Vector3(0, 0, -1)`。詳細は[Vector2](https://docs.godotengine.org/ja/latest/classes/class_vector2.html)および[Vector3](https://docs.beetsaudio.com/docs/reference/vectors.html)のドキュメントを参照してください。
+Godotにはデフォルトのベクター値が定義されています。例えば：`Vector3.FORWARD == Vector3(0, 0, -1)`。詳細は[Vector2](https://docs.godotengine.org/ja/latest/classes/class_vector2.html)および[Vector3](https://docs.godotengine.org/ja/latest/classes/class_vector3.html)のドキュメントを参照してください。
 {{% /notice %}}
 

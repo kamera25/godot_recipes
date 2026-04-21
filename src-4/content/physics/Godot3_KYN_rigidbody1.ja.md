@@ -16,7 +16,7 @@ draft: true
 
 ## はじめに
 
-<a href="http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html" target="_blank"><svg width="18" height="18" class="icon-icon_rigid_body_2d">
+<a href="https://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html" target="_blank"><svg width="18" height="18" class="icon-icon_rigid_body_2d">
 <use xlink:href="/blog/img/symbol-defs.svg#icon-icon_rigid_body_2d"></svg> `RigidBody2D`</a> とは、Godot において物理シミュレーションを提供するオブジェクトです。これはつまり、直接 RigidBody2D を操作するわけではないということです。代わりに力（重力、衝撃など）を加えると、Godot の内蔵物理エンジンが衝突・反発・回転などの運動結果を計算してくれます。
 
 RigidBody2Dの動作は「質量」「摩擦」「反発」などのプロパティを通じて変更できます。
@@ -25,7 +25,7 @@ RigidBody2Dの動作は「質量」「摩擦」「反発」などのプロパテ
 ![alt](/godot_recipes/4.x/img/rigidbody_properties.png)
 
 The body's behavior is also affected by the world, via the _Project Settings -> Physics_
-properties, or by entering an <a href="http://docs.godotengine.org/ja/latest/classes/class_area2d.html"><svg width="18" height="18" class="icon-icon_area_2d" target="_blank"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_area_2d"></svg> `Area2D`</a> that is overriding the global physics properties.
+properties, or by entering an <a href="https://docs.godotengine.org/ja/latest/classes/class_area2d.html"><svg width="18" height="18" class="icon-icon_area_2d" target="_blank"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_area_2d"></svg> `Area2D`</a> that is overriding the global physics properties.
 
 ## RigidBody2Dを使う
 
@@ -33,20 +33,20 @@ properties, or by entering an <a href="http://docs.godotengine.org/ja/latest/cla
 
 ### ブロックの積み重ね方
 
-Start by creating a RigidBody2D for the block and adding <a href="http://docs.godotengine.org/ja/latest/classes/class_sprite.html" target="_blank"><svg width="18" height="18" class="icon-icon_sprite"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_sprite"></svg>`Sprite`</a> and
-<a href="http://docs.godotengine.org/ja/latest/classes/class_collisionshape2D.html" target="_blank"><svg width="18" height="18" class="icon-icon_collision_shape_2d"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_collision_shape_2d"></svg>`CollisionShape2D`</a>
+Start by creating a RigidBody2D for the block and adding <a href="https://docs.godotengine.org/ja/latest/classes/class_sprite.html" target="_blank"><svg width="18" height="18" class="icon-icon_sprite"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_sprite"></svg>`Sprite`</a> and
+<a href="https://docs.godotengine.org/ja/latest/classes/class_collisionshape2D.html" target="_blank"><svg width="18" height="18" class="icon-icon_collision_shape_2d"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_collision_shape_2d"></svg>`CollisionShape2D`</a>
 children:
 
 ![alt](/godot_recipes/4.x/img/rigidbody_block_scene.png)
 
 スプライトにテクスチャを追加し、矩形の衝突形状を設定します。**重要** ： 衝突形状のスケールは__変更しないでください__。一般的にこれは推奨されない方法であり、予期しない衝突挙動を引き起こす原因となります。常に形状内のサイズハンドルを使用し、外側の`Node2D`由来のスケーリングハンドルは使わないようにしてください。
 
-> ※重要：本サンプルで使用しているテクスチャは、Kenney.nl の[物理アセットパック](http://kenney.nl/assets/physics-assets)を使用しています。このパッケージには、さまざまな形状・材質のブロックが多数収録されています。
+> ※重要：本サンプルで使用しているテクスチャは、Kenney.nl の[物理アセットパック](https://kenney.nl/assets/physics-assets)を使用しています。このパッケージには、さまざまな形状・材質のブロックが多数収録されています。
 
 ※「再生」を押すとブロックがゆっくりと下方に落ちていくのが確認できるでしょう。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクターで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。ここでは値を`3`に設定しています。
 
-メインシーンを作成します（通常は<a href="http://docs.godotengine.org/ja/latest/classes/class_node.html" target="_blank"><svg width="18" height="18" class="icon-icon_node"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_node"></svg>Node</a>を使用します）。
-地面と壁として機能させるため、長方形の衝突形状を持つ<a href="http://docs.godotengine.org/ja/latest/classes/class_staticbody2d.html" target="_blank"><svg width="18" height="18" class="icon-icon_staticbody2d"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_static_body_2d"></svg>StaticBody2D</a>ノードをいくつか追加してください。
+メインシーンを作成します（通常は<a href="https://docs.godotengine.org/ja/latest/classes/class_node.html" target="_blank"><svg width="18" height="18" class="icon-icon_node"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_node"></svg>Node</a>を使用します）。
+地面と壁として機能させるため、長方形の衝突形状を持つ<a href="https://docs.godotengine.org/ja/latest/classes/class_staticbody2d.html" target="_blank"><svg width="18" height="18" class="icon-icon_staticbody2d"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_static_body_2d"></svg>StaticBody2D</a>ノードをいくつか追加してください。
 
 インスタンス化したブロックを複製します（Windows では Ctrl+D、macOS では Command+D）。これで綺麗なスタックを作成できます。例えば：
 
@@ -119,7 +119,7 @@ func _input(event):
 
 ![alt](/godot_recipes/4.x/img/ship_red.png)
 
-また、[OpenGameArt](http://opengameart.org/) もチェックして、「素敵な宇宙背景画像」（ただしこれは完全に任意です）を検索することをオススメします。
+また、[OpenGameArt](https://opengameart.org/) もチェックして、「素敵な宇宙背景画像」（ただしこれは完全に任意です）を検索することをオススメします。
 
 上記と同様に、以下のノード構造を用いて艦船用の新規シーンを作成してください。
 
@@ -208,17 +208,17 @@ func _physics_process(delta):
 
 正確には違います。`_physics_process()` は物理時間ステップに同期されていますが、だからといってあらゆる処理に使えるわけではありません。ただし、解決策はドキュメントに記載されていますのでご安心ください。
 
-[RigidBody2Dドキュメント](http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#description)より引用すると：
+[RigidBody2Dドキュメント](https://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#description)より引用すると：
 
 > リジッドボディの位置や直線速度をフレームごとに、あるいは頻繁に変更することは避けるべきです。状態に直接影響を与えたい場合は、物理演算の状態を直接操作できる `_integrate_forces` メソッドを使いましょう。
 
-[_integrate_forces の説明](http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#class-rigidbody2d-integrate-forces)：
+[_integrate_forces の説明](https://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#class-rigidbody2d-integrate-forces)：
 
 > オブジェクトのシミュレーション状態を読み取り、**安全に変更**できます。物体の位置やその他の物理特性を直接変更する必要がある場合は、`_physics_process` の代わりにこの関数を使いましょう。
 
-このように、`_physics_process()` の代わりに `_integrate_forces()` を使用が必要です。これにより、<a href="http://docs.godotengine.org/ja/latest/classes/class_physics2ddirectbodystate.html" target="_blank">Physics2DDirectBodyState</a> オブジェクトにアクセスできるようになります。物理状態オブジェクトには、非常に有用な情報が豊富に含まれているので、ぜひリンク先のドキュメントを参照されることを強くオススメします。
-特に重要な情報は、物体の <a href="http://docs.godotengine.org/ja/latest/classes/class_transform2d.html" target="_blank">Transform2D</a> です。
-（変換についての詳細な説明はこの文書の範囲を超えますので、より詳しい情報は[行列と変換](http://docs.godotengine.org/ja/latest/learning/features/math/matrices_and_transforms.html)を参照してください。）
+このように、`_physics_process()` の代わりに `_integrate_forces()` を使用が必要です。これにより、<a href="https://docs.godotengine.org/ja/latest/classes/class_physics2ddirectbodystate.html" target="_blank">Physics2DDirectBodyState</a> オブジェクトにアクセスできるようになります。物理状態オブジェクトには、非常に有用な情報が豊富に含まれているので、ぜひリンク先のドキュメントを参照されることを強くオススメします。
+特に重要な情報は、物体の <a href="https://docs.godotengine.org/ja/latest/classes/class_transform2d.html" target="_blank">Transform2D</a> です。
+（変換についての詳細な説明はこの文書の範囲を超えますので、より詳しい情報は[行列と変換](https://docs.godotengine.org/ja/latest/learning/features/math/matrices_and_transforms.html)を参照してください。）
 
 Bodyの位置はトランスフォームの `origin` に含まれています。`_physics_process()` を `_integrate_forces()` に変更し、以下のコードを追加してください。
 

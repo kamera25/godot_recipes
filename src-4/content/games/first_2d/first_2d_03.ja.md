@@ -61,7 +61,7 @@ func _process(delta):
 * `delta`とは？ [デルタについての解説](/godot_recipes/4.x/ja/basics/understanding_delta/)
 {{% /expand %}}
 
-シーンを実行するには**［現在のシーンを実行］**ボタンをクリックしてください。その後、自由に移動してみてください。
+シーンを実行するには **［現在のシーンを実行］** ボタンをクリックしてください。その後、自由に移動してみてください。
 
 ![alt](/godot_recipes/4.x/img/2d_101_15.png)
 

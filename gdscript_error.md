@@ -1,9 +1,6 @@
-kamera25@NAKAOKUnoMacBook-Air godot_recipes % python3 check_gdscript_syntax.py src-4
 Syntax error found in src-4/content/basics/custom_resources.ja.md:161
 --- Output ---
-SCRIPT ERROR: Parse Error: Invalid argument for "connect()" function: argument 2 should be "Callable" but is "/tmp/check_script.gd".
-SCRIPT ERROR: Parse Error: Cannot pass a value of type "String" as "int".
-SCRIPT ERROR: Parse Error: Invalid argument for "connect()" function: argument 3 should be "int" but is "String".
+SCRIPT ERROR: Parse Error: Used space character for indentation instead of tab as used before in the file.
 --------------
 Syntax error found in src-4/content/basics/getting_nodes.md:34
 --- Output ---
@@ -51,9 +48,7 @@ SCRIPT ERROR: Parse Error: Unexpected identifier "velocity" in class body.
 --------------
 Syntax error found in src-4/content/basics/custom_resources.md:161
 --- Output ---
-SCRIPT ERROR: Parse Error: Invalid argument for "connect()" function: argument 2 should be "Callable" but is "/tmp/check_script.gd".
-SCRIPT ERROR: Parse Error: Cannot pass a value of type "String" as "int".
-SCRIPT ERROR: Parse Error: Invalid argument for "connect()" function: argument 3 should be "int" but is "String".
+SCRIPT ERROR: Parse Error: Used space character for indentation instead of tab as used before in the file.
 --------------
 Syntax error found in src-4/content/basics/node_communication.ja.md:16
 --- Output ---
@@ -273,14 +268,6 @@ Syntax error found in src-4/content/g101/3d/101_3d_05.md:179
 --- Output ---
 SCRIPT ERROR: Parse Error: Unexpected "not" in class body.
 --------------
-Syntax error found in src-4/content/g101/3d/101_3d_04.md:126
---- Output ---
-SCRIPT ERROR: Parse Error: "yield" was removed in Godot 4. Use "await" instead.
---------------
-Syntax error found in src-4/content/g101/3d/101_3d_04.ja.md:114
---- Output ---
-SCRIPT ERROR: Parse Error: "yield" was removed in Godot 4. Use "await" instead.
---------------
 Syntax error found in src-4/content/Math/transforms.ja.md:24
 --- Output ---
 SCRIPT ERROR: Parse Error: Unexpected identifier "position" in class body.
@@ -297,19 +284,9 @@ Syntax error found in src-4/content/Math/interpolation.md:21
 --- Output ---
 SCRIPT ERROR: Parse Error: Unexpected identifier "x" in class body.
 --------------
-Syntax error found in src-4/content/Math/interpolation.md:59
---- Output ---
-SCRIPT ERROR: Parse Error: Cannot find member "linear_interpolate" in base "Vector2".
-SCRIPT ERROR: Parse Error: Function "linear_interpolate()" not found in base Vector2. Did you mean to use "lerp()"?
---------------
 Syntax error found in src-4/content/Math/interpolation.ja.md:21
 --- Output ---
 SCRIPT ERROR: Parse Error: Unexpected identifier "x" in class body.
---------------
-Syntax error found in src-4/content/Math/interpolation.ja.md:59
---- Output ---
-SCRIPT ERROR: Parse Error: Cannot find member "linear_interpolate" in base "Vector2".
-SCRIPT ERROR: Parse Error: Function "linear_interpolate()" not found in base Vector2. Did you mean to use "lerp()"?
 --------------
 Syntax error found in src-4/content/Math/transforms.md:24
 --- Output ---
@@ -355,17 +332,9 @@ Syntax error found in src-4/content/shaders/interacting.ja.md:20
 --- Output ---
 SCRIPT ERROR: Parse Error: Unexpected identifier "node" in class body.
 --------------
-Syntax error found in src-4/content/physics/kinematic_friction.ja.md:21
---- Output ---
-SCRIPT ERROR: Parse Error: Too many arguments for "move_and_slide()" call. Expected at most 0 but received 2.
---------------
 Syntax error found in src-4/content/physics/kinematic_friction.ja.md:50
 --- Output ---
 SCRIPT ERROR: Parse Error: Unexpected identifier "lerp" in class body.
---------------
-Syntax error found in src-4/content/physics/top_down_friction.md:13
---- Output ---
-SCRIPT ERROR: Parse Error: Too many arguments for "move_and_slide()" call. Expected at most 0 but received 1.
 --------------
 Syntax error found in src-4/content/physics/collision_layers.md:32
 --- Output ---
@@ -377,63 +346,31 @@ SCRIPT ERROR: Parse Error: Unexpected identifier "set_collision_layer_value" in 
 --------------
 Syntax error found in src-4/content/physics/Godot3_kinematic2d.md:136
 --- Output ---
-SCRIPT ERROR: Parse Error: Unexpected identifier "velocity" in class body.
---------------
-Syntax error found in src-4/content/physics/Godot3_kinematic2d.md:215
---- Output ---
-SCRIPT ERROR: Parse Error: Too many arguments for "move_and_slide()" call. Expected at most 0 but received 1.
---------------
-Syntax error found in src-4/content/physics/Godot3_kinematic2d.md:295
---- Output ---
-SCRIPT ERROR: Parse Error: Too many arguments for "move_and_slide()" call. Expected at most 0 but received 2.
---------------
-Syntax error found in src-4/content/physics/kinematicbody_slopes.md:21
---- Output ---
-SCRIPT ERROR: Parse Error: Too many arguments for "move_and_slide()" call. Expected at most 0 but received 2.
+SCRIPT ERROR: Parse Error: Unexpected identifier "move_and_slide" in class body.
 --------------
 Syntax error found in src-4/content/physics/kinematicbody_slopes.md:74
 --- Output ---
-SCRIPT ERROR: Parse Error: Unexpected identifier "velocity" in class body.
+SCRIPT ERROR: Parse Error: Unexpected identifier "move_and_slide" in class body.
 --------------
 Syntax error found in src-4/content/physics/kinematicbody_slopes.md:104
 --- Output ---
-SCRIPT ERROR: Parse Error: Unexpected identifier "velocity" in class body.
+SCRIPT ERROR: Parse Error: Unexpected identifier "move_and_slide" in class body.
 --------------
 Syntax error found in src-4/content/physics/Godot3_kinematic2d.ja.md:133
 --- Output ---
-SCRIPT ERROR: Parse Error: Unexpected identifier "velocity" in class body.
---------------
-Syntax error found in src-4/content/physics/Godot3_kinematic2d.ja.md:196
---- Output ---
-SCRIPT ERROR: Parse Error: Too many arguments for "move_and_slide()" call. Expected at most 0 but received 1.
---------------
-Syntax error found in src-4/content/physics/Godot3_kinematic2d.ja.md:272
---- Output ---
-SCRIPT ERROR: Parse Error: Too many arguments for "move_and_slide()" call. Expected at most 0 but received 2.
---------------
-Syntax error found in src-4/content/physics/kinematicbody_slopes.ja.md:21
---- Output ---
-SCRIPT ERROR: Parse Error: Too many arguments for "move_and_slide()" call. Expected at most 0 but received 2.
+SCRIPT ERROR: Parse Error: Unexpected identifier "move_and_slide" in class body.
 --------------
 Syntax error found in src-4/content/physics/kinematicbody_slopes.ja.md:74
 --- Output ---
-SCRIPT ERROR: Parse Error: Unexpected identifier "velocity" in class body.
+SCRIPT ERROR: Parse Error: Unexpected identifier "move_and_slide" in class body.
 --------------
 Syntax error found in src-4/content/physics/kinematicbody_slopes.ja.md:104
 --- Output ---
-SCRIPT ERROR: Parse Error: Unexpected identifier "velocity" in class body.
---------------
-Syntax error found in src-4/content/physics/kinematic_friction.md:21
---- Output ---
-SCRIPT ERROR: Parse Error: Too many arguments for "move_and_slide()" call. Expected at most 0 but received 2.
+SCRIPT ERROR: Parse Error: Unexpected identifier "move_and_slide" in class body.
 --------------
 Syntax error found in src-4/content/physics/kinematic_friction.md:50
 --- Output ---
 SCRIPT ERROR: Parse Error: Unexpected identifier "lerp" in class body.
---------------
-Syntax error found in src-4/content/physics/top_down_friction.ja.md:13
---- Output ---
-SCRIPT ERROR: Parse Error: Too many arguments for "move_and_slide()" call. Expected at most 0 but received 1.
 --------------
 Syntax error found in src-4/content/2D/2d_align_surface.md:34
 --- Output ---
@@ -567,23 +504,16 @@ Syntax error found in src-4/content/games/circle_jump/circle_jump_07.ja.md:76
 --- Output ---
 SCRIPT ERROR: Parse Error: The default value uses "$" which won't return nodes in the scene tree before "_ready()" is called. Use the "@onready" annotation to solve this. (Warning treated as error.)
 --------------
-Syntax error found in src-4/content/games/circle_jump/circle_jump_05.md:57
---- Output ---
-SCRIPT ERROR: Parse Error: The method "hide()" overrides a method from native class "CanvasLayer". This won't be called by the engine and may not work as expected. (Warning treated as error.)
-SCRIPT ERROR: Parse Error: The method "show()" overrides a method from native class "CanvasLayer". This won't be called by the engine and may not work as expected. (Warning treated as error.)
---------------
 Syntax error found in src-4/content/games/circle_jump/circle_jump_11.md:127
 --- Output ---
 SCRIPT ERROR: Parse Error: Expected end of statement after variable declaration, found "Identifier" instead.
 --------------
-Syntax error found in src-4/content/games/circle_jump/circle_jump_05.ja.md:61
---- Output ---
-SCRIPT ERROR: Parse Error: The method "hide()" overrides a method from native class "CanvasLayer". This won't be called by the engine and may not work as expected. (Warning treated as error.)
-SCRIPT ERROR: Parse Error: The method "show()" overrides a method from native class "CanvasLayer". This won't be called by the engine and may not work as expected. (Warning treated as error.)
---------------
 Syntax error found in src-4/content/games/circle_jump/circle_jump_04.md:61
 --- Output ---
-SCRIPT ERROR: Parse Error: "yield" was removed in Godot 4. Use "await" instead.
+SCRIPT ERROR: Parse Error: Too many arguments for "connect()" call. Expected at most 3 but received 4.
+SCRIPT ERROR: Parse Error: Invalid argument for "connect()" function: argument 2 should be "Callable" but is "/tmp/check_script.gd".
+SCRIPT ERROR: Parse Error: Cannot pass a value of type "String" as "int".
+SCRIPT ERROR: Parse Error: Invalid argument for "connect()" function: argument 3 should be "int" but is "String".
 --------------
 Syntax error found in src-4/content/games/circle_jump/circle_jump_04.md:115
 --- Output ---
@@ -591,7 +521,10 @@ SCRIPT ERROR: Parse Error: Unexpected identifier "player" in class body.
 --------------
 Syntax error found in src-4/content/games/circle_jump/circle_jump_04.ja.md:61
 --- Output ---
-SCRIPT ERROR: Parse Error: "yield" was removed in Godot 4. Use "await" instead.
+SCRIPT ERROR: Parse Error: Too many arguments for "connect()" call. Expected at most 3 but received 4.
+SCRIPT ERROR: Parse Error: Invalid argument for "connect()" function: argument 2 should be "Callable" but is "/tmp/check_script.gd".
+SCRIPT ERROR: Parse Error: Cannot pass a value of type "String" as "int".
+SCRIPT ERROR: Parse Error: Invalid argument for "connect()" function: argument 3 should be "int" but is "String".
 --------------
 Syntax error found in src-4/content/games/circle_jump/circle_jump_04.ja.md:115
 --- Output ---
@@ -605,10 +538,6 @@ Syntax error found in src-4/content/games/circle_jump/circle_jump_06.ja.md:105
 --- Output ---
 SCRIPT ERROR: Parse Error: Unexpected identifier "button" in class body.
 --------------
-Syntax error found in src-4/content/games/circle_jump/circle_jump_06.ja.md:111
---- Output ---
-SCRIPT ERROR: Parse Error: "yield" was removed in Godot 4. Use "await" instead.
---------------
 Syntax error found in src-4/content/games/circle_jump/circle_jump_02.ja.md:116
 --- Output ---
 SCRIPT ERROR: Parse Error: Unexpected identifier "target" in class body.
@@ -620,10 +549,6 @@ SCRIPT ERROR: Parse Error: Unexpected identifier "rotation_speed" in class body.
 Syntax error found in src-4/content/games/circle_jump/circle_jump_02.ja.md:141
 --- Output ---
 SCRIPT ERROR: Parse Error: The default value uses "$" which won't return nodes in the scene tree before "_ready()" is called. Use the "@onready" annotation to solve this. (Warning treated as error.)
---------------
-Syntax error found in src-4/content/games/circle_jump/circle_jump_02.ja.md:178
---- Output ---
-SCRIPT ERROR: Parse Error: "yield" was removed in Godot 4. Use "await" instead.
 --------------
 Syntax error found in src-4/content/games/circle_jump/circle_jump_13.ja.md:54
 --- Output ---
@@ -661,10 +586,6 @@ Syntax error found in src-4/content/games/circle_jump/circle_jump_06.md:105
 --- Output ---
 SCRIPT ERROR: Parse Error: Unexpected identifier "button" in class body.
 --------------
-Syntax error found in src-4/content/games/circle_jump/circle_jump_06.md:111
---- Output ---
-SCRIPT ERROR: Parse Error: "yield" was removed in Godot 4. Use "await" instead.
---------------
 Syntax error found in src-4/content/games/circle_jump/circle_jump_12.ja.md:79
 --- Output ---
 SCRIPT ERROR: Parse Error: Expected newline after comment string.
@@ -685,9 +606,5 @@ Syntax error found in src-4/content/games/circle_jump/circle_jump_02.md:143
 --- Output ---
 SCRIPT ERROR: Parse Error: The default value uses "$" which won't return nodes in the scene tree before "_ready()" is called. Use the "@onready" annotation to solve this. (Warning treated as error.)
 --------------
-Syntax error found in src-4/content/games/circle_jump/circle_jump_02.md:180
---- Output ---
-SCRIPT ERROR: Parse Error: "yield" was removed in Godot 4. Use "await" instead.
---------------
 Scanned 351 files.
-Found errors in 92 files.
+Found errors in 86 files.

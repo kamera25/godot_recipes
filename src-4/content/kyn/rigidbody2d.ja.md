@@ -27,7 +27,7 @@ tags: []
 
 以下に主要な特性をご説明します。
 
-モード（`mode`）
+* モード（`mode`）
 
 リジッドボディには4つの異なるモードが存在し、それぞれその挙動に影響を与えます。
 
@@ -79,8 +79,8 @@ tags: []
 硬い物体をより直接的に制御する必要があるケースもあります。例えば、クラシックゲーム『Asteroids』のリメイクを作ろうとしている場合を考えてみます。プレイヤーの宇宙船は左右矢印キーで回転させ、上矢印が押されたときに前進するようにしなければなりません。
 
 デフォルトでは、プロジェクト設定で設定した**減衰効果**がボディの速度と回転を抑制します。宇宙空間には摩擦がないため、本来はこのような減衰は存在しないはずです。ただし、「スペースインベーダー」風のゲーム体験を実現するためには、キーを離すと機体が徐々に停止し、回転も自然に止まるようにしたいところです。これを実現するため、インスペクタ画面で以下の値を設定します。
-- 角加速度減衰係数：`5`
-- 直線加速度減衰係数：`1`
+- *Angular/Damp*：`5`
+- *Linear/Damp*：`1`
 
 以下がコードです。
 
@@ -152,8 +152,8 @@ func _physics_process(delta):
 
 > RigidBody2D の `position` や `linear_velocity` を毎フレーム、あるいは頻繁に変更するべきではありません。もし直接ボディの状態を操作する必要がある場合は、物理演算状態に直接アクセスできる `_integrate_forces` を使いましょう。
 
- _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [Physics2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。
- 関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](http://docs.godotengine.org/ja/stable/classes/class_transform2d.html) に関する情報です。
+ _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [Physics2DDirectBodyState](https://docs.godotengine.org/ja/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。
+ 関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](https://docs.godotengine.org/ja/stable/classes/class_transform2d.html) に関する情報です。
 
 したがって、`_integrate_forces()` に移動して以下のようにコードを記述します。
 

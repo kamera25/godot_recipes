@@ -37,7 +37,7 @@ ghcommentid: 56
 
     このコンテナはマージンを保持しており、子要素がコンテナの端に近づきすぎるのを防ぎます。マージン値はプロパティの「カスタム定数」セクションで設定できます。
 
-*  `{{< gd-icon VBoxContainer >}}`VBoxContainer`` /  `{{< gd-icon HBoxContainer >}}`HBoxContainer``
+* {{< gd-icon VBoxContainer >}}`VBoxContainer`/ {{< gd-icon HBoxContainer >}}`HBoxContainer`
 
     これらのコンテナは、内容物を垂直または水平方向に整列させます。「カスタム定数」セクションでは、要素間の間隔を広げるための*分離*プロパティも設定できます。
 

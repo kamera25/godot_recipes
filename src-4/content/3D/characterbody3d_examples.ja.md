@@ -103,6 +103,6 @@ func get_input(delta):
 
 ## 関連レシピ
 
-* [3D入門](/godot_recipes/4.x/ja/g101/3d/)
-* [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)
+- [3D入門](/godot_recipes/4.x/ja/g101/3d/)
+- [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)
 

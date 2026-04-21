@@ -64,8 +64,8 @@ if $FrontRay.is_colliding() or $RearRay.is_colliding():
 
 ## 関連レシピ
 
-[運動力学カー：ベースモデル](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)
-[CharacterBody3D：地面との整合性調整](/godot_recipes/4.x/ja/3d/3d_align_surface/)
+- [運動力学カー：ベースモデル](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)
+- [CharacterBody3D：地面に沿う](/godot_recipes/4.x/ja/3d/3d_align_surface/)
 
 #### この動画が気に入ったら？
 

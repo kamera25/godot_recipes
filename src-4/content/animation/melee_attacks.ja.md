@@ -53,8 +53,8 @@ func _on_SwordHit_area_entered(area):
 
 ## 関連レシピ
 
-[見下ろし型キャラクター制御](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)
-[アニメーション状態の管理方法](http://kidscancancode.org/godot_recipes/animation/animation_state_machine/)
+- [見下ろし型キャラクター制御](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)
+- [アニメーション状態の管理方法](/godot_recipes/4.x/ja/animation/animation_state_machine/)
 
 #### この動画が気に入ったら？
 

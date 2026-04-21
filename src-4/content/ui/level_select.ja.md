@@ -192,8 +192,8 @@ func _on_NextButton_pressed():
 
 ## 関連レシピ
 
-[コンテナ](/godot_recipes/4.x/ja/ui/containers/)
-[ノードを知る：ラベル](/godot_recipes/4.x/ja/kyn/label/) -->
+- [コンテナ](/godot_recipes/4.x/ja/ui/containers/)
+- [Label を理解する](/godot_recipes/4.x/ja/kyn/label/) -->
 
 <!-- #### Videoが気に入ったら？ -->
 

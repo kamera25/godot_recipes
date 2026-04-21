@@ -101,9 +101,8 @@ func _physics_process(delta):
 
 ## 関連レシピ
 
-- [Interpolated Camera](/godot_recipes/4.x/ja/3d/interpolated_camera/)
-- [Inputs: Introduction](/godot_recipes/4.x/ja/input/input_intro/)
-- [CharacterBody3D: Movement](/godot_recipes/4.x/ja/3d/kinematic_body/) -->
+- [補間カメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/)
+- [CharacterBody3D: 移動](/godot_recipes/4.x/ja/3d/kinematic_body/) -->
 
 <!-- #### Videoが気に入ったら？ -->
 

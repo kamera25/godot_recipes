@@ -107,8 +107,8 @@ move_and_slide()
 
 ## 関連レシピ
 
-- [Godot 101: Intro do 3D](/godot_recipes/4.x/ja/g101/3d/)
-- [CharacterBody3D: Movement](/godot_recipes/4.x/ja/3d/kinematic_body/)
+- [はじめてのGodot : 3D入門](/godot_recipes/4.x/ja/g101/3d/)
+- [CharacterBody3Dで動かす](/godot_recipes/4.x/ja/3d/kinematic_body/)
 
 #### この動画が気に入ったら？
 

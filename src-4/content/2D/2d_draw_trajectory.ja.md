@@ -93,5 +93,5 @@ func _on_Bullet_exploded(pos):
 
 ## 関連レシピ
 
-[2Dシューティングゲームの作成レシピ](/godot_recipes/4.x/ja/2d/2d_shooting/)
-[2D弾道式弾丸システム](/godot_recipes/4.x/ja/2d/ballistic_bullet)
+- [2Dシューティングゲームの作成レシピ](/godot_recipes/4.x/ja/2d/2d_shooting/)
+- [2D弾道式弾丸システム](/godot_recipes/4.x/ja/2d/ballistic_bullet)

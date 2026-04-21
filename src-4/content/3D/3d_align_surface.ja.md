@@ -113,7 +113,7 @@ var n = ($FrontRay.get_collision_normal() + $RearRay.get_collision_normal()) / 2
 
 ## 関連レシピ
 
-* [CharacterBody3Dの移動](/godot_recipes/4.x/ja/3d/characterbody3d_examples/)
-* [ゲーム数学 補間](/godot_recipes/4.x/ja/math/interpolation/)
-* [ゲーム数学 トランスフォーム](/godot_recipes/4.x/ja/math/transforms/)
+- [CharacterBody3Dの移動](/godot_recipes/4.x/ja/3d/characterbody3d_examples/)
+- [ゲーム数学 補間](/godot_recipes/4.x/ja/math/interpolation/)
+- [ゲーム数学 トランスフォーム](/godot_recipes/4.x/ja/math/transforms/)
 

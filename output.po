@@ -1987,8 +1987,8 @@ msgid ""
 "- [Containers](/godot_recipes/3.x/ui/containers/)\n"
 "- [Know Your Nodes: Label](/godot_recipes/3.x/kyn/label/) -->"
 msgstr ""
-"[コンテナ](/godot_recipes/4.x/ja/ui/containers/)\n"
-"[ノードを知る：ラベル](/godot_recipes/4.x/ja/kyn/label/) -->"
+"- [コンテナ](/godot_recipes/4.x/ja/ui/containers/)\n"
+"- [Label を理解する](/godot_recipes/4.x/ja/kyn/label/) -->"
 
 #: ui/level_select.md
 msgid "{{< youtube C-Sn55e5wnk >}} -->"
@@ -2132,7 +2132,7 @@ msgid ""
 "- [UI: Object Healthbars](/godot_recipes/3.x/ui/unit_healthbar/) -->"
 msgstr ""
 "- [UI: ラベル](/godot_recipes/4.x/ja/ui/labels/)\n"
-"   - [UI: ユニットHPバー](/godot_recipes/4.x/ja/ui/unit_healthbar/) -->"
+"- [UI: ユニットHPバー](/godot_recipes/4.x/ja/ui/unit_healthbar/) -->"
 
 #: ui/cooldown_button.md
 msgid "Cooldown Button"
@@ -2401,7 +2401,7 @@ msgstr "本例では、`mode` オプションの設定例として以下の2つ�
 
 #: ui/debug_overlay.md
 msgid "- [Drawing Vectors in 3D](/godot_recipes/3.x/3d/debug_overlay) -->"
-msgstr "[3D空間でのベクトル描画](/godot_recipes/4.x/ja/3d/debug_overlay) -->"
+msgstr "- [3D空間でのベクトル描画](/godot_recipes/4.x/ja/3d/debug_overlay) -->"
 
 #: ui/debug_overlay.md
 msgid "Start by adding a {{< gd-icon MarginContainer >}}`MarginContainer` named `DebugStats` with a {{< gd-icon VBoxContainer >}}`VBoxContainer` child. Set the margins to a comfortable value (I usually use `20`)."
@@ -2525,7 +2525,7 @@ msgstr "本例では、[クールタイムボタンレシピ](/godot_recipes/4.x
 
 #: ui/radial_menu.md
 msgid "- [UI: Cooldown Button](/godot_recipes/4.x/ui/cooldown_button/)"
-msgstr "* [UI：クールタイムボタン](/godot_recipes/4.x/ja/ui/cooldown_button/)"
+msgstr "- [UI：クールタイムボタン](/godot_recipes/4.x/ja/ui/cooldown_button/)"
 
 #: ui/radial_menu.md
 msgid "Let's look at the `show_menu()` function:"
@@ -2671,7 +2671,7 @@ msgstr "{{< gd-icon Control >}}`Control` を`Container`に追加すると、コ�
 
 #: ui/containers.md
 msgid "* {{< gd-icon VBoxContainer >}}`VBoxContainer`/ {{< gd-icon HBoxContainer >}}`HboxContainer`"
-msgstr "*  `{{< gd-icon VBoxContainer >}}`VBoxContainer`` /  `{{< gd-icon HBoxContainer >}}`HBoxContainer``"
+msgstr "* {{< gd-icon VBoxContainer >}}`VBoxContainer`/ {{< gd-icon HBoxContainer >}}`HBoxContainer`"
 
 #: ui/containers.md
 msgid "Containers"
@@ -2970,9 +2970,9 @@ msgid ""
 "- [Math: Interpolation](/godot_recipes/4.x/math/interpolation/)\n"
 "- [Math: Transforms](/godot_recipes/4.x/math/transforms/)"
 msgstr ""
-"* [CharacterBody3Dの移動](/godot_recipes/4.x/ja/3d/characterbody3d_examples/)\n"
-"* [ゲーム数学 補間](/godot_recipes/4.x/ja/math/interpolation/)\n"
-"* [ゲーム数学 トランスフォーム](/godot_recipes/4.x/ja/math/transforms/)"
+"- [CharacterBody3Dの移動](/godot_recipes/4.x/ja/3d/characterbody3d_examples/)\n"
+"- [ゲーム数学 補間](/godot_recipes/4.x/ja/math/interpolation/)\n"
+"- [ゲーム数学 トランスフォーム](/godot_recipes/4.x/ja/math/transforms/)"
 
 #: 3D/3d_align_surface.md
 msgid ""
@@ -3163,7 +3163,7 @@ msgstr "ロールとヨーの速度を調整することで、ゲームプレイ
 msgid ""
 "<!-- - [Input Actions](http://kidscancode.org/godot_recipes/input/input_actions/) -->\n"
 "- [Interpolated Camera](/godot_recipes/4.x/3d/interpolated_camera/)"
-msgstr "[補間カメラの実装](/godot_recipes/4.x/ja/3d/interpolated_camera/)"
+msgstr "- [補間カメラの実装](/godot_recipes/4.x/ja/3d/interpolated_camera/)"
 
 #: 3D/spaceship.md
 msgid "To accomplish this, we'll use a {{< gd-icon CharacterBody3D >}} `CharacterBody3D` for the ship. The three axis inputs (*pitch*, *roll*, and *yaw*) will rotate the body's `basis` around the corresponding axis. The direction of motion will always point forward."
@@ -3688,7 +3688,7 @@ msgstr "#### ステップ1"
 
 #: 3D/rolling_cube.md
 msgid "Rolling a cube is trickier than it seems. You can't just rotate the cube around its center:"
-msgstr "キューブを回転させるのは見た目より難しいです。単に中心軸を中心に回すだけではうまくいきません："
+msgstr "キューブを転がすのは見た目より難しいです。単に中心軸を中心に回すだけではうまくいきません："
 
 #: 3D/rolling_cube.md
 msgid "Here's the tricky part: which bottom edge? It depends on which direction the cube is rolling."
@@ -3744,7 +3744,7 @@ msgstr "![alt](/godot_recipes/4.x/img/cube_001.gif)"
 
 #: 3D/rolling_cube.md
 msgid "Rolling Cube"
-msgstr "キューブを回転させる"
+msgstr "転がるキューブ"
 
 #: 3D/rolling_cube.md
 msgid "The default size of a {{< gd-icon BoxMesh3D >}}`BoxMesh3D` is `(1, 1, 1)`, so do this, move the mesh and collision nodes both up to `(0, 0.5, 0)`, leaving the rest where they are. Now when you select the root node, its position will be the *bottom* of the cube:"
@@ -4131,7 +4131,7 @@ msgid ""
 "- [Camera Gimbal](/godot_recipes/3.x/3d/camera_gimbal/)"
 msgstr ""
 "- [転がるキューブ](/godot_recipes/4.x/ja/3d/rolling_cube/)\n"
-"- [カメラ・ジンバル](/godot_recipes/4.x/ja/3d/camera_gimbal/)"
+"- [カメラジンバル](/godot_recipes/4.x/ja/3d/camera_gimbal/)"
 
 #: 3D/move_with_camera.md
 msgid "When moving with WASD-style controls in 3D, it's easy to get disoriented if the camera rotates. Whose forward counts - the player's (ie the camera's) or the object in the game world?"
@@ -4262,8 +4262,8 @@ msgid ""
 "- [Intro to 3D](/godot_recipes/4.x/g101/3d/)\n"
 "- [Input Actions](/godot_recipes/4.x/input/input_actions/)"
 msgstr ""
-"* [3D入門](/godot_recipes/4.x/ja/g101/3d/)\n"
-"* [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)"
+"- [3D入門](/godot_recipes/4.x/ja/g101/3d/)\n"
+"- [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)"
 
 #: 3D/characterbody3d_examples.md
 msgid "You need a player-controlled 3D character body."
@@ -6305,7 +6305,7 @@ msgid ""
 "<!-- - [Controlling animation states](http://kidscancode.org/godot_recipes/animation/animation_state_machine/) -->"
 msgstr ""
 "- [プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character/)\n"
-" <!-- - [アニメーション状態のコントロール](http://kidscancancode.org/godot_recipes/animation/animation_state_machine/) -->"
+"<!-- - [アニメーション状態のコントロール](/godot_recipes/4.x/ja/animation/animation_state_machine/) -->"
 
 #: animation/spritesheet_animation.md
 msgid "### Adding animations"
@@ -6378,8 +6378,8 @@ msgid ""
 "- [Top-down character](http://kidscancode.org/godot_recipes/2d/topdown_movement/#option-1-8-way-movement)\n"
 "- [Controlling animation states](http://kidscancode.org/godot_recipes/animation/animation_state_machine/)"
 msgstr ""
-"[見下ろし型キャラクター制御](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)\n"
-"[アニメーション状態の管理方法](http://kidscancancode.org/godot_recipes/animation/animation_state_machine/)"
+"- [見下ろし型キャラクター制御](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)\n"
+"- [アニメーション状態の管理方法](/godot_recipes/4.x/ja/animation/animation_state_machine/)"
 
 #: animation/melee_attacks.md
 msgid "For this example, we'll assume we have already set up a character with one or more attack animations. To illustrate, we'll use these two attacks:"
@@ -8908,7 +8908,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice tip %}}\n"
-"Godotにはデフォルトのベクター値が定義されています。例えば：`Vector3.FORWARD == Vector3(0, 0, -1)`。詳細は[Vector2](https://docs.godotengine.org/ja/latest/classes/class_vector2.html)および[Vector3](https://docs.beetsaudio.com/docs/reference/vectors.html)のドキュメントを参照してください。\n"
+"Godotにはデフォルトのベクター値が定義されています。例えば：`Vector3.FORWARD == Vector3(0, 0, -1)`。詳細は[Vector2](https://docs.godotengine.org/ja/latest/classes/class_vector2.html)および[Vector3](https://docs.godotengine.org/ja/latest/classes/class_vector3.html)のドキュメントを参照してください。\n"
 "{{% /notice %}}"
 
 #: Math/transforms.md
@@ -9348,8 +9348,8 @@ msgstr ""
 msgid "By default, there is some *damping* (set in **Project Settings**), which reduces a body's velocity and spin. In space there's no friction, so there shouldn't be and damping at all. However, for the \"Asteroids\" feel, we want the ship to coast to a stop and to stop rotating when we let go of the keys. To do that, we set the ship's *Angular/Damp* to `5` and *Linear/Damp* to `1` in the Inspector."
 msgstr ""
 "デフォルトでは、プロジェクト設定で設定した**減衰効果**がボディの速度と回転を抑制します。宇宙空間には摩擦がないため、本来はこのような減衰は存在しないはずです。ただし、「スペースインベーダー」風のゲーム体験を実現するためには、キーを離すと機体が徐々に停止し、回転も自然に止まるようにしたいところです。これを実現するため、インスペクタ画面で以下の値を設定します。\n"
-"- 角加速度減衰係数：`5`\n"
-"- 直線加速度減衰係数：`1`"
+"- *Angular/Damp*：`5`\n"
+"- *Linear/Damp*：`1`"
 
 #: kyn/raycast2d.md kyn/rigidbody2d.md
 msgid "### Useful functions"
@@ -9389,7 +9389,7 @@ msgstr "最終的に、物理関連の処理は`_physics_process()`関数内で�
 
 #: kyn/rigidbody2d.md
 msgid "* Mode (`mode`)"
-msgstr "モード（`mode`）"
+msgstr "* モード（`mode`）"
 
 #: kyn/rigidbody2d.md
 msgid "Using this property you can get or set the total force applied to the body."
@@ -9482,8 +9482,8 @@ msgstr "「アステロイド」のもう一つの特徴は、画面がループ
 #: kyn/rigidbody2d.md
 msgid "So the answer is to use `_integrate_forces()` *instead* of `_physics_process()`, because in that function you are able to safely modify the body's [Physics2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html). I highly recommend you take a look at the linked document; there is a lot of really useful data provided in the physics state object. For our purposes, the key piece of information is the body’s [Transform2D](http://docs.godotengine.org/en/stable/classes/class_transform2d.html)."
 msgstr ""
-" _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [Physics2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。\n"
-" 関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](http://docs.godotengine.org/ja/stable/classes/class_transform2d.html) に関する情報です。"
+" _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [Physics2DDirectBodyState](https://docs.godotengine.org/ja/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。\n"
+" 関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](https://docs.godotengine.org/ja/stable/classes/class_transform2d.html) に関する情報です。"
 
 #: kyn/rigidbody2d.md
 msgid "Play the scene - you should be able to fly around freely:"
@@ -10683,7 +10683,7 @@ msgid ""
 "properties, or by entering an <a href=\"http://docs.godotengine.org/en/latest/classes/class_area2d.html\"><svg width=\"18\" height=\"18\" class=\"icon-icon_area_2d\" target=\"_blank\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_area_2d\"></svg> `Area2D`</a> that is overriding the global physics properties."
 msgstr ""
 "The body's behavior is also affected by the world, via the _Project Settings -> Physics_\n"
-"properties, or by entering an <a href=\"http://docs.godotengine.org/ja/latest/classes/class_area2d.html\"><svg width=\"18\" height=\"18\" class=\"icon-icon_area_2d\" target=\"_blank\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_area_2d\"></svg> `Area2D`</a> that is overriding the global physics properties."
+"properties, or by entering an <a href=\"https://docs.godotengine.org/ja/latest/classes/class_area2d.html\"><svg width=\"18\" height=\"18\" class=\"icon-icon_area_2d\" target=\"_blank\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_area_2d\"></svg> `Area2D`</a> that is overriding the global physics properties."
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -10728,7 +10728,7 @@ msgstr "リジッドボディを使用"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "And the [description for _integrate_forces](http://docs.godotengine.org/en/latest/classes/class_rigidbody2d.html#class-rigidbody2d-integrate-forces):"
-msgstr "[_integrate_forces の説明](http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#class-rigidbody2d-integrate-forces)："
+msgstr "[_integrate_forces の説明](https://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#class-rigidbody2d-integrate-forces)："
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -10821,7 +10821,7 @@ msgid ""
 "etc.) and Godot's built-in physics engine calculates the resulting movement, including\n"
 "collisions, bouncing, rotating, etc."
 msgstr ""
-"<a href=\"http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_rigid_body_2d\">\n"
+"<a href=\"https://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_rigid_body_2d\">\n"
 "<use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_rigid_body_2d\"></svg> `RigidBody2D`</a> とは、Godot において物理シミュレーションを提供するオブジェクトです。これはつまり、直接 RigidBody2D を操作するわけではないということです。代わりに力（重力、衝撃など）を加えると、Godot の内蔵物理エンジンが衝突・反発・回転などの運動結果を計算してくれます。"
 
 #: physics/Godot3_KYN_rigidbody1.md
@@ -10838,7 +10838,7 @@ msgstr ""
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "To quote the [RigidBody2D docs](http://docs.godotengine.org/en/latest/classes/class_rigidbody2d.html#description):"
-msgstr "[RigidBody2Dドキュメント](http://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#description)より引用すると："
+msgstr "[RigidBody2Dドキュメント](https://docs.godotengine.org/ja/latest/classes/class_rigidbody2d.html#description)より引用すると："
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -10878,8 +10878,8 @@ msgid ""
 "Add a few <a href=\"http://docs.godotengine.org/en/latest/classes/class_staticbody2d.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_staticbody2d\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_static_body_2d\"></svg>StaticBody2D</a>\n"
 "nodes with rectangular collision shapes to serve as your \"ground\" and walls."
 msgstr ""
-"メインシーンを作成します（通常は<a href=\"http://docs.godotengine.org/ja/latest/classes/class_node.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_node\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_node\"></svg>Node</a>を使用します）。\n"
-"地面と壁として機能させるため、長方形の衝突形状を持つ<a href=\"http://docs.godotengine.org/ja/latest/classes/class_staticbody2d.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_staticbody2d\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_static_body_2d\"></svg>StaticBody2D</a>ノードをいくつか追加してください。"
+"メインシーンを作成します（通常は<a href=\"https://docs.godotengine.org/ja/latest/classes/class_node.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_node\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_node\"></svg>Node</a>を使用します）。\n"
+"地面と壁として機能させるため、長方形の衝突形状を持つ<a href=\"https://docs.godotengine.org/ja/latest/classes/class_staticbody2d.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_staticbody2d\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_static_body_2d\"></svg>StaticBody2D</a>ノードをいくつか追加してください。"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -10890,9 +10890,9 @@ msgid ""
 "(Explaining transforms is beyond the scope of this document - see [Matrices and transforms](http://docs.godotengine.org/en/latest/learning/features/math/matrices_and_transforms.html)\n"
 "for more information.)"
 msgstr ""
-"このように、`_physics_process()` の代わりに `_integrate_forces()` を使用が必要です。これにより、<a href=\"http://docs.godotengine.org/ja/latest/classes/class_physics2ddirectbodystate.html\" target=\"_blank\">Physics2DDirectBodyState</a> オブジェクトにアクセスできるようになります。物理状態オブジェクトには、非常に有用な情報が豊富に含まれているので、ぜひリンク先のドキュメントを参照されることを強くオススメします。\n"
-"特に重要な情報は、物体の <a href=\"http://docs.godotengine.org/ja/latest/classes/class_transform2d.html\" target=\"_blank\">Transform2D</a> です。\n"
-"（変換についての詳細な説明はこの文書の範囲を超えますので、より詳しい情報は[行列と変換](http://docs.godotengine.org/ja/latest/learning/features/math/matrices_and_transforms.html)を参照してください。）"
+"このように、`_physics_process()` の代わりに `_integrate_forces()` を使用が必要です。これにより、<a href=\"https://docs.godotengine.org/ja/latest/classes/class_physics2ddirectbodystate.html\" target=\"_blank\">Physics2DDirectBodyState</a> オブジェクトにアクセスできるようになります。物理状態オブジェクトには、非常に有用な情報が豊富に含まれているので、ぜひリンク先のドキュメントを参照されることを強くオススメします。\n"
+"特に重要な情報は、物体の <a href=\"https://docs.godotengine.org/ja/latest/classes/class_transform2d.html\" target=\"_blank\">Transform2D</a> です。\n"
+"（変換についての詳細な説明はこの文書の範囲を超えますので、より詳しい情報は[行列と変換](https://docs.godotengine.org/ja/latest/learning/features/math/matrices_and_transforms.html)を参照してください。）"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -10951,8 +10951,8 @@ msgid ""
 "<a href=\"http://docs.godotengine.org/en/latest/classes/class_collisionshape2D.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_collision_shape_2d\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_collision_shape_2d\"></svg>`CollisionShape2D`</a>\n"
 "children:"
 msgstr ""
-"Start by creating a RigidBody2D for the block and adding <a href=\"http://docs.godotengine.org/ja/latest/classes/class_sprite.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_sprite\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_sprite\"></svg>`Sprite`</a> and\n"
-"<a href=\"http://docs.godotengine.org/ja/latest/classes/class_collisionshape2D.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_collision_shape_2d\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_collision_shape_2d\"></svg>`CollisionShape2D`</a>\n"
+"Start by creating a RigidBody2D for the block and adding <a href=\"https://docs.godotengine.org/ja/latest/classes/class_sprite.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_sprite\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_sprite\"></svg>`Sprite`</a> and\n"
+"<a href=\"https://docs.godotengine.org/ja/latest/classes/class_collisionshape2D.html\" target=\"_blank\"><svg width=\"18\" height=\"18\" class=\"icon-icon_collision_shape_2d\"><use xlink:href=\"/blog/img/symbol-defs.svg#icon-icon_collision_shape_2d\"></svg>`CollisionShape2D`</a>\n"
 "children:"
 
 #: physics/Godot3_KYN_rigidbody1.md
@@ -10963,7 +10963,7 @@ msgstr "## 位置問題"
 msgid ""
 "> **NOTE:** For the textures in this example, I'm using the [Physics Asset](http://kenney.nl/assets/physics-assets) pack from Kenney.nl. It contains a\n"
 "wide variety of blocks in different shapes and materials."
-msgstr "> ※重要：本サンプルで使用しているテクスチャは、Kenney.nl の[物理アセットパック](http://kenney.nl/assets/physics-assets)を使用しています。このパッケージには、さまざまな形状・材質のブロックが多数収録されています。"
+msgstr "> ※重要：本サンプルで使用しているテクスチャは、Kenney.nl の[物理アセットパック](https://kenney.nl/assets/physics-assets)を使用しています。このパッケージには、さまざまな形状・材質のブロックが多数収録されています。"
 
 #: physics/Godot3_KYN_rigidbody1.md physics/Godot3_kinematic2d.md
 msgid ""
@@ -11035,7 +11035,7 @@ msgstr "- `apply_impulse()`"
 msgid ""
 "I recommend you also go to [OpenGameArt](http://opengameart.org/) and search for\n"
 "a nice space background (but this is totally optional)."
-msgstr "また、[OpenGameArt](http://opengameart.org/) もチェックして、「素敵な宇宙背景画像」（ただしこれは完全に任意です）を検索することをオススメします。"
+msgstr "また、[OpenGameArt](https://opengameart.org/) もチェックして、「素敵な宇宙背景画像」（ただしこれは完全に任意です）を検索することをオススメします。"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -11311,8 +11311,8 @@ msgid ""
 "- **Collision Layer**: Which layer(s) the object **lives on**.\n"
 "- **Collision Mask**: Which layer(s) the object **scans for collisions**."
 msgstr ""
-"*  **衝突判定レイヤー**：オブジェクトが **存在する** レイヤを指定します。\n"
-"*  **衝突検知マスク**：オブジェクトが **衝突を検出する** 対象のレイヤを指定します。"
+"-  **Collision Layer(衝突判定レイヤー)**：オブジェクトが **存在する** レイヤを指定します。\n"
+"-  **Collision Mask(衝突検知マスク)**：オブジェクトが **衝突を検出する** 対象のレイヤを指定します。"
 
 #: physics/collision_layers.md
 msgid "Collision layers and masks are essential for controlling which objects interact with each other in Godot 4."
@@ -11505,7 +11505,7 @@ msgstr "## 衝突形状について"
 
 #: physics/Godot3_kinematic2d.md
 msgid "- {{< gd-icon StaticBody2D >}}`StaticBody2D`"
-msgstr "- `StaticBody2D`- {{< gd-icon StaticBody2D >}}`StaticBody2D`"
+msgstr "- {{< gd-icon StaticBody2D >}}`StaticBody2D`"
 
 #: physics/Godot3_kinematic2d.md
 msgid "This is the minimum velocity when standing on a slope. This prevents a body from sliding down a slope when standing still."
@@ -11513,7 +11513,7 @@ msgstr "これは、斜面に立ったときの最小速度です。これによ
 
 #: physics/Godot3_kinematic2d.md
 msgid "Godot offers three kinds of physics bodies, grouped under the <a href=\"http://docs.godotengine.org/en/latest/classes/class_physicsbody2d.html\" target=\"_blank\">`PhysicsBody2D`</a> type:"
-msgstr "Godot では3種類の物理ボディが提供されており、<a href=\"http://docs.godotengine.org/ja/latest/classes/class_physicsbody2d.html\" target=\"_blank\">`PhysicsBody2D`</a> タイプに分類されます。"
+msgstr "Godot では3種類の物理ボディが提供されており、<a href=\"https://docs.godotengine.org/ja/latest/classes/class_physicsbody2d.html\" target=\"_blank\">`PhysicsBody2D`</a> タイプに分類されます。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "> **Note:** Be careful to never scale your collision shapes in the editor. The `Scale` property in the Inspector should remain at `(1, 1)`. When changing the size of the collision shape, you should always use the shape's handles."
@@ -11634,7 +11634,7 @@ msgstr "衝突検知機能を提供しますが、物理演算はしません。
 
 #: physics/Godot3_kinematic2d.md
 msgid "- {{< gd-icon RigidBody2D >}}`RigidBody2D`"
-msgstr "- [`RigidBody2D`]() {{< gd-icon RigidBody2D >}}`RigidBody2D`"
+msgstr "- {{< gd-icon RigidBody2D >}}`RigidBody2D`"
 
 #: physics/Godot3_kinematic2d.md
 msgid "Here's the code for the player body:"
@@ -11844,9 +11844,9 @@ msgid ""
 "- _Bias_: The rate at which the joint pulls the two bodies back together if they move apart. Defaults to `0`.\n"
 "- _Disable Collisions_: Allows the connected bodies to ignore collisions between them. Defaults to `true`."
 msgstr ""
-"*  _Node A_ and _Node B_：割り当てられた物理ボディ\n"
-"*  _Bias_：両オブジェクトが離れる方向に関節が引き寄せる速度。デフォルト値は 0 です\n"
-"*  _Disable Collisions_：接続されたオブジェクト間の衝突を考慮しないようにできます。デフォルトは true（有効）です"
+"- _Node A_ and _Node B_：割り当てられた物理ボディ\n"
+"- _Bias_：両オブジェクトが離れる方向に関節が引き寄せる速度。デフォルト値は 0 です\n"
+"- _Disable Collisions_：接続されたオブジェクト間の衝突を考慮しないようにできます。デフォルトは true（有効）です"
 
 #: physics/joints_2d.md
 msgid "Using 2D Joints"
@@ -12253,8 +12253,8 @@ msgid ""
 "- [2D shooting recipe](/godot_recipes/3.x/2d/2d_shooting/)\n"
 "- [2D ballistic bullet](/godot_recipes/3.x/2d/ballistic_bullet)"
 msgstr ""
-"[2Dシューティングゲームの作成レシピ](/godot_recipes/4.x/ja/2d/2d_shooting/)\n"
-"[2D弾道式弾丸システム](/godot_recipes/4.x/ja/2d/ballistic_bullet)"
+"- [2Dシューティングゲームの作成レシピ](/godot_recipes/4.x/ja/2d/2d_shooting/)\n"
+"- [2D弾道式弾丸システム](/godot_recipes/4.x/ja/2d/ballistic_bullet)"
 
 #: 2D/2d_draw_trajectory.md
 msgid "Now we're ready to draw the line. The goal will be to move along the projected trajectory and add points to the line as we go. Since we know the starting velocity and the gravity that the bullet is using, we can use the same calculation."
@@ -12939,7 +12939,7 @@ msgid ""
 "- [TileMap: using autotile](http://kidscancode.org/godot_recipes/2d/autotile_intro/)\n"
 "- [TileMap: animated tiles](http://kidscancode.org/godot_recipes/2d/tilemap_animation/)"
 msgstr ""
-"- [タイルマップ: オートタイルを利用する](/godot_recipes/4.x/ja/2d/autotile_intro/)\n"
+"- [タイルマップ: オートタイルを使う](/godot_recipes/4.x/ja/2d/autotile_intro/)\n"
 "- [タイルマップ: アニメーションタイル](/godot_recipes/4.x/ja/2d/tilemap_animation/)"
 
 #: 2D/tilemap_collision.md
@@ -13073,6 +13073,7 @@ msgid ""
 "#### Example 1"
 msgstr ""
 "この目的のためのノードが用意されています。{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`。このノードをオブジェクトにアタッチすれば、`screen_entered`シグナルと`screen_exited`シグナルを利用可能になります。\n"
+"*\n"
 "#### 例 1"
 
 #: 2D/enter_exit_screen.md
@@ -13103,11 +13104,11 @@ msgid ""
 "* `zoom_sensitivity` - Sets how sensitive pinch-to-zoom will be - it's the number of pixels' movement needed to \"start\" a zoom.\n"
 "* `zoom_speed` - Used to smooth the zooming."
 msgstr ""
-"- `target_return_enabled` - これを `true` に設定すると、ドラッグ後にカメラは自動的にターゲット位置に復帰します。\n"
-"- `target_return_rate` - カメラがターゲット位置に戻る速度を調整します。\n"
-"- `min_zoom` / `max_zoom` - ズームの最小/最大倍率制限値を設定します。\n"
-"- `zoom_sensitivity` - ピンチ操作によるズーム感度を設定します - これは「ズーム動作」が開始されるために必要なピクセル単位の動きを指定します。\n"
-"- `zoom_speed` - ズーム操作をより滑らかに実行するためのパラメータです。"
+"* `target_return_enabled` - これを `true` に設定すると、ドラッグ後にカメラは自動的にターゲット位置に復帰します。\n"
+"* `target_return_rate` - カメラがターゲット位置に戻る速度を調整します。\n"
+"* `min_zoom` / `max_zoom` - ズームの最小/最大倍率制限値を設定します。\n"
+"* `zoom_sensitivity` - ピンチ操作によるズーム感度を設定します - これは「ズーム動作」が開始されるために必要なピクセル単位の動きを指定します。\n"
+"* `zoom_speed` - ズーム操作をより滑らかに実行するためのパラメータです。"
 
 #: 2D/touchscreen_camera.md
 msgid "Just like mouse or keyboard events, touch events extend `InputEvent` and follow the same input priority. We'll use `_unhandled_input()` for processing so that other nodes, such as {{< gd-icon Control >}}`Control` nodes, can process events first:"
@@ -13625,14 +13626,14 @@ msgstr "以下のスクリプトを各カメラに適用してください。"
 
 #: 2D/splitscreen_demo.md
 msgid "The two players are added to a \"World\" scene containing a {{< gd-icon TileMap >}}`TileMap`:"
-msgstr "以下の手順に従って、2つのプレイヤーを {{< gd-icon TileMap >}}`TileMap` を含む「ワールド」シーンに追加してください。"
+msgstr "以下の手順に従って、2つのプレイヤーを {{< gd-icon TileMap >}}`TileMap` を含む「World」シーンに追加してください。"
 
 #: 2D/splitscreen_demo.md
 msgid ""
 "Note that the map is much larger than the game screen, but aside from that everything\n"
 "works as intended. Setting up your game \"world\" separately like this will make\n"
 "setting up the viewports much easier and more flexible."
-msgstr "このマップはゲーム画面よりもはるかに大きいことに注意してください。ただ、それ以外の点ではすべて正常に動作します。このようにゲームの「世界」を個別に設定することで、ビューポートの設定が格段に容易になり、より柔軟に扱えるようになります。"
+msgstr "このマップはゲーム画面よりもはるかに大きいことに注意してください。ただ、それ以外の点ではすべて正常に動作します。このようにゲームの「World」を個別に設定することで、ビューポートの設定が格段に容易になり、より柔軟に扱えるようになります。"
 
 #: 2D/splitscreen_demo.md
 msgid ""
@@ -13654,7 +13655,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"このパーツのセットアップでお困りの場合は、公式Godotドキュメントの以下のセクションをご覧ください: [2D移動の概要](http://docs.godotengine.org/ja/stable/tutorials/2d/2d_movement.html)。\n"
+"このパーツのセットアップでお困りの場合は、公式Godotドキュメントの以下のセクションをご覧ください: [2D移動の概要](https://docs.godotengine.org/ja/stable/tutorials/2d/2d_movement.html)。\n"
 "{{% /notice %}}"
 
 #: 2D/splitscreen_demo.md
@@ -13666,9 +13667,9 @@ msgid ""
 "click _Current_ on this camera as well."
 msgstr ""
 "さらにもう 1 つ  の {{< gd-icon ViewportContainer >}}`ViewportContainer` が必要です。今回は `Main` の子要素として配置します。この場合、\n"
-"*ストレッチ機能は使用しません*。代わりに {{< gd-icon Viewport >}} の {{< gd-icon Viewport >}}`Viewport` を追加し、サイズを `(340, 200)` に設定します\n"
-"その後、 の `Camera2D` 要素を追加してください。表示画面中央に配置するため、{{< gd-icon Camera2D >}}`Camera2D` の _位置_ を `(512, 300)` に設定しましょう。表示範囲を拡大するには、_ズーム倍率_ を `(9, 9)` に設定してください。このカメラについても忘れずに\n"
-"**現在使用中** を選択してください。"
+"_Stretch_は使用しません*。代わりに {{< gd-icon Viewport >}}`Viewport` を追加し、_Size_を `(340, 200)` に設定します\n"
+"その後、 の `Camera2D` 要素を追加してください。表示画面中央に配置するため、{{< gd-icon Camera2D >}}`Camera2D` の _Position_ を `(512, 300)` に設定しましょう。表示範囲を拡大するには、_Zoom_ を `(9, 9)` に設定してください。このカメラについても忘れずに\n"
+"_Current_ を選択してください。"
 
 #: 2D/splitscreen_demo.md
 msgid ""
@@ -13676,7 +13677,7 @@ msgid ""
 "two players (one using arrow keys and the other using WASD controls). This is\n"
 "not a problem if our game world all fits on one screen, but if the map is large,\n"
 "we'll want to have a \"split screen\" view tracking the two players separately."
-msgstr "このデモでは、ローカルマルチプレイヤーゲーム――見下ろし型の迷路ゲームを例に挙げます。このゲームでは2人のプレイヤーが参加し、一方は矢印キー、もう一方はWASDキーで操作します。これは問題ありませんが、もしゲーム世界全体が1画面に収められる程度の大きさであれば、特に問題はありません。しかし、マップが非常に広い場合、両プレイヤーを個別に表示する「分割画面」ビューが必要になるでしょう。"
+msgstr "このデモでは、見下ろし型の迷路ゲームを例に、ローカルマルチプレイヤーゲームを考えます。このゲームでは2人のプレイヤーが参加し、一方は矢印キー、もう一方はWASDキーで操作します。これは問題ありませんが、もしゲーム世界全体が1画面に収められる程度の大きさであれば、特に問題はありません。しかし、マップが非常に広い場合、両プレイヤーを個別に表示する「分割画面」ビューが必要になるでしょう。"
 
 #: 2D/splitscreen_demo.md
 msgid ""
@@ -13737,7 +13738,7 @@ msgid ""
 "_Size_ property, it will be reset by the container."
 msgstr ""
 "各コンテナ内に、{{< gd-icon Viewport >}}`Viewport` 要素を追加してください。なお、ビューポートの\n"
-"_サイズ_ プロパティを設定した場合、その値はコンテナによってリセットされますのでご注意ください。"
+"_Size_ プロパティを設定した場合、その値はコンテナによってリセットされますのでご注意ください。"
 
 #: 2D/splitscreen_demo.md
 msgid "#### Setting up the cameras"
@@ -14091,7 +14092,7 @@ msgstr "`steer_direction` には車輪の回転量が設定されます。"
 
 #: 2D/car_steering.md
 msgid "- Drag is the force resulting from wind resistance. It's based on the car's cross-section - a large truck or van experiences more drag than a sleek race car. Drag is proportional to the velocity *squared*."
-msgstr "* ドラッグは空気抵抗によって生じる力です。車両の断面積が大きいほど影響が大きくなります - 流線型のレースカーに比べて大型トラックやバンの方がより大きな抗力を受けます。ドラッグの値は速度の二乗に比例します。"
+msgstr "- ドラッグは空気抵抗によって生じる力です。車両の断面積が大きいほど影響が大きくなります。例えば、流線型のレースカーに比べて大型トラックやバンの方がより大きな抗力を受けます。ドラッグの値は速度の二乗に比例します。"
 
 #: 2D/car_steering.md
 msgid "Add whatever sprite texture you like. For this demo, we'll use art from [Kenney's Racing Pack](https://kenney.nl/assets/racing-pack). {{< gd-icon CapsuleShape2D >}}`CapsuleShape2D` is a good choice for the collision, so that the car won't have sharp corners to get caught on obstacles."
@@ -14124,7 +14125,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"以下の方法は、こちらのアルゴリズムに基づいています。 http://engineeringdotnet.blogspot.com/2010/04/simple-2d-car-physics-in-games.html\n"
+"以下の方法は、こちらのアルゴリズムに基づいています。 https://engineeringdotnet.blogspot.com/2010/04/simple-2d-car-physics-in-games.html\n"
 "{{% /notice %}}"
 
 #: 2D/car_steering.md
@@ -14145,7 +14146,8 @@ msgid ""
 "- A car can *only* turn when it's moving - it can't spin in place.\n"
 "- A car isn't a train; it's not on rails. Turning at high speeds should involve some sliding (drifting)."
 msgstr ""
-"- 自動車は中心軸を中心に旋回するものではありません。別の言い方をすれば、後輪が左右に滑ることはありません。（ドリフト走行時はこの限りではないが、その点については後述します）- 自動車は動いている時にのみ方向転換が可能で、その場で回転することはできません。。\n"
+"- 自動車は中心軸を中心に旋回するものではありません。別の言い方をすれば、後輪が左右に滑ることはありません。（ドリフト走行時はこの限りではないが、その点については後述します）\n"
+"- 自動車は動いている時にのみ方向転換が可能で、その場で回転することはできません。\n"
 "- 自動車は列車ではありません。レールに縛られていません。高速で曲がる際にはある程度の横滑り（ドリフト）が伴うべきです。"
 
 #: 2D/car_steering.md
@@ -14662,9 +14664,9 @@ msgid ""
 "    * {{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`"
 msgstr ""
 "* {{< gd-icon Area2D >}}`Area2D` - この`Bullet`に名前を付ける\n"
-"        * {{< gd-icon Sprite2D >}}`Sprite2D`\n"
-"        * {{< gd-icon CollisionShape2D >}}`CollisionShape2D`\n"
-"        * {{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`"
+"    * {{< gd-icon Sprite2D >}}`Sprite2D`\n"
+"    * {{< gd-icon CollisionShape2D >}}`CollisionShape2D`\n"
+"    * {{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`"
 
 #: games/first_2d/first_2d_04.md
 msgid ""
@@ -14952,8 +14954,9 @@ msgid ""
 "    * **Window Width Override** & **Window Height Override** to `480`, `640`.\n"
 "    * **Stretch/Mode** to `canvas_items`."
 msgstr ""
-"* **ウィンドウ幅の上書き** & **ウィンドウ高さの上書き** を `480`, `640` に設定。\n"
-"    * **伸縮モード** を `canvas_items` に指定。"
+"* **Viewport Width** と **Viewport Height** を `240`, `320` に設定。\n"
+"    * **Window Width Override** と **Window Height Override** を `480`, `640` に設定。\n"
+"    * **Stretch/Mode** を `canvas_items` に指定。"
 
 #: games/first_2d/first_2d_01.md
 msgid "## Downloading the art"
@@ -15368,7 +15371,7 @@ msgstr "* 変数名の前に `@export` を付けると、**インスペクター
 
 #: games/first_2d/first_2d_03.md
 msgid "Run the scene by clicking the **Run Current Scene** button, and try moving around."
-msgstr "シーンを実行するには**［現在のシーンを実行］**ボタンをクリックしてください。その後、自由に移動してみてください。"
+msgstr "シーンを実行するには **［現在のシーンを実行］** ボタンをクリックしてください。その後、自由に移動してみてください。"
 
 #: games/first_2d/first_2d_03.md
 msgid "Once again, play the scene and verify that the images change when moving left/right. Verify that everything works as intended before moving to the next step."
@@ -16727,7 +16730,7 @@ msgstr "このスクリプトでは、ゲームの設定パラメーターを配
 
 #: games/circle_jump/circle_jump_06.md
 msgid "- First, add one to the `Main` scene and name it \"Music\". For its _Stream_ property use `res://assets/audio/Music_Light-Puzzles.ogg`."
-msgstr "- 1. まず「メイン」シーンに「音楽」という名前を追加してください。［ストリーム］プロパティには `res://assets/audio/Music_Light-Puzzles.ogg` を使いましょう。"
+msgstr "- まず「メイン」シーンに「音楽」という名前を追加してください。［ストリーム］プロパティには `res://assets/audio/Music_Light-Puzzles.ogg` を使いましょう。"
 
 #: games/circle_jump/circle_jump_06.md
 msgid "In `Screens.gd` add this to `_on_button_pressed()`:"
@@ -17112,7 +17115,7 @@ msgstr ""
 "* [3D空間に浮かぶHPバー](/godot_recipes/4.x/ja/3d/healthbars/)\n"
 "* [グリッドベースの移動](/godot_recipes/4.x/ja/2d/grid_movement)\n"
 "* [アーケードスタイル3D宇宙船モデル](/godot_recipes/4.x/ja/3d/spaceship)\n"
-"* [補間機能付きカメラシステム](/godot_recipes/4.x/ja/3d/interpolated_camera/)\n"
+"* [補間機能付きカメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/)\n"
 "* [プラットフォーム用キャラクターモデル](/godot_recipes/4.x/ja/2d/platform_character/)"
 
 #: recent/_index.md
@@ -17371,8 +17374,8 @@ msgid ""
 "- [Kinematic Car: Base](/godot_recipes/3.x/3d/kinematic_car/car_base/)\n"
 "- [CharacterBody3D: Align with Surface](/godot_recipes/3.x/3d/3d_align_surface/)"
 msgstr ""
-"[運動力学カー：ベースモデル](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)\n"
-"[CharacterBody3D：地面との整合性調整](/godot_recipes/4.x/ja/3d/3d_align_surface/)"
+"- [運動力学カー：ベースモデル](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/)\n"
+"- [CharacterBody3D：地面に沿う](/godot_recipes/4.x/ja/3d/3d_align_surface/)"
 
 #: 3D/kinematic_car/car_slopes.md
 msgid "![alt](/godot_recipes/3.x/img/3d_car_11.png)"
@@ -17677,9 +17680,8 @@ msgid ""
 "- [Inputs: Introduction](/godot_recipes/3.x/input/input_intro/)\n"
 "- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/) -->"
 msgstr ""
-"- [Interpolated Camera](/godot_recipes/4.x/ja/3d/interpolated_camera/)\n"
-"- [Inputs: Introduction](/godot_recipes/4.x/ja/input/input_intro/)\n"
-"- [CharacterBody3D: Movement](/godot_recipes/4.x/ja/3d/kinematic_body/) -->"
+"- [補間カメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/)\n"
+"- [CharacterBody3D: 移動](/godot_recipes/4.x/ja/3d/kinematic_body/) -->"
 
 #: ai/context_map.md kyn/path2d.md
 msgid "![alt](/godot_recipes/3.x/img/ai_context_10.gif)"
@@ -17859,7 +17861,7 @@ msgid ""
 "comfortable with the class methods."
 msgstr ""
 "この紹介では{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ノードの機能のほんの一端に触れたに過ぎません。\n"
-"他のGodotノードと同様、<a href=\"http://docs.godotengine.org/en/latest/classes/class_kinematicbody2d.html\" target=\"_blank\">APIドキュメント</a>は頼りになる情報源ですので、クラスメソッドに慣れてしまうまで頻繁に参照してください。"
+"他のGodotノードと同様、<a href=\"https://docs.godotengine.org/ja/4.x/classes/class_characterbody2d.html\" target=\"_blank\">APIドキュメント</a>は頼りになる情報源ですので、クラスメソッドに慣れてしまうまで頻繁に参照してください。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "![alt](/godot_recipes/3.x/img/k2d_compare.gif)"
@@ -17871,7 +17873,7 @@ msgstr "{{< gd-icon CharacterBody2D >}}以下のコードを追加してくだ�
 
 #: physics/Godot3_kinematic2d.md
 msgid "When a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` detects a collision, Godot provides a <a href=\"http://docs.godotengine.org/en/latest/classes/class_kinematiccollision2d.html\" target=\"_blank\">`KinematicCollision2D`</a> object. This object contains data about the collision and the colliding object. Using this data you can calculate your collision response."
-msgstr "{{< gd-icon CharacterBody2D >}}`CharacterBody2D` が衝突を検知すると、Godotは<a href=\"http://docs.godotengine.org/en/latest/classes/class_kinematiccollision2d.html\" target=\"_blank\">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と衝突相手の物体データが含まれています。このデータを活用すれば、衝突に対する適切な応答計算が可能になります。"
+msgstr "{{< gd-icon CharacterBody2D >}}`CharacterBody2D` が衝突を検知すると、Godotは<a href=\"https://docs.godotengine.org/ja/latest/classes/class_kinematiccollision2d.html\" target=\"_blank\">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と衝突相手の物体データが含まれています。このデータを活用すれば、衝突に対する適切な応答計算が可能になります。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "![alt](/godot_recipes/3.x/img/k2d_bullet_bounce.gif)"
@@ -17937,8 +17939,8 @@ msgid ""
 "- [Godot 101: Intro do 3D](/godot_recipes/3.x/g101/3d/)\n"
 "- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)"
 msgstr ""
-"- [Godot 101: Intro do 3D](/godot_recipes/4.x/ja/g101/3d/)\n"
-"- [CharacterBody3D: Movement](/godot_recipes/4.x/ja/3d/kinematic_body/)"
+"- [はじめてのGodot : 3D入門](/godot_recipes/4.x/ja/g101/3d/)\n"
+"- [CharacterBody3Dで動かす](/godot_recipes/4.x/ja/3d/kinematic_body/)"
 
 #: physics/kinematicbody_slopes.md
 msgid "Your {{< gd-icon KinematicBody3D >}}`CharacterBody3D` slides down slopes."
@@ -18035,6 +18037,8 @@ msgid ""
 "- [Platform character](/godot_recipes/4.x/2d/platform_character)\n"
 "- [Using CharacterBody2D](/godot_recipes/4.x/physics/godot3_kinematic2d/)"
 msgstr ""
+"- [プラットフォームキャラクター](/godot_recipes/4.x/2d/platform_character)\n"
+"- [CharacterBody2Dを使う](/godot_recipes/4.x/physics/godot3_kinematic2d/)"
 
 #: 2D/2d_draw_trajectory.md
 msgid "![alt](/godot_recipes/3.x/img/2d_tank_03.png)"

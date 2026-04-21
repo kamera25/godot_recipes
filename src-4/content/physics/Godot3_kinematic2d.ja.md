@@ -19,13 +19,13 @@ Godotでは衝突検出と応答を提供するための様々なコリジョン
 
 ゲーム開発において、ゲーム内空間内の二つのオブジェクトが交差するか接触するかどうかを判断する必要が生じる場面は頻繁にあります。これは「衝突検知」と呼ばれる処理です。衝突が検出された場合、通常は何らかのアクションを発生させたいものです。この部分を総称して「衝突応答」と呼びます。
 
-Godot では3種類の物理ボディが提供されており、<a href="http://docs.godotengine.org/ja/latest/classes/class_physicsbody2d.html" target="_blank">`PhysicsBody2D`</a> タイプに分類されます。
+Godot では3種類の物理ボディが提供されており、<a href="https://docs.godotengine.org/ja/latest/classes/class_physicsbody2d.html" target="_blank">`PhysicsBody2D`</a> タイプに分類されます。
 
-- `StaticBody2D`- {{< gd-icon StaticBody2D >}}`StaticBody2D`
+- {{< gd-icon StaticBody2D >}}`StaticBody2D`
 
 スタティックボディとは、物理エンジンによって移動されないオブジェクトです。衝突検知には参加しますが、衝突に応じて移動することはありません。このタイプのボディは、環境の一部となるオブジェクトや、動的な挙動を必要としないオブジェクトに最もよく使います。
 
-- [`RigidBody2D`]() {{< gd-icon RigidBody2D >}}`RigidBody2D`
+- {{< gd-icon RigidBody2D >}}`RigidBody2D`
 
 このノードはシミュレーションされた2D物理を実装しています。直接リジッドボディを操作するのではなく、重力やインパルスなどの力を適用することで、物理エンジンがその結果生じる移動量を計算します。詳細は[Godot 3.0: リジッドボディ](/blog/2017/12/godot3_kyn_rigidbody1/)の記事をご覧ください。
 
@@ -92,7 +92,7 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 
 ##### KinematicCollision2D
 
-{{< gd-icon CharacterBody2D >}}`CharacterBody2D` が衝突を検知すると、Godotは<a href="http://docs.godotengine.org/en/latest/classes/class_kinematiccollision2d.html" target="_blank">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と衝突相手の物体データが含まれています。このデータを活用すれば、衝突に対する適切な応答計算が可能になります。
+{{< gd-icon CharacterBody2D >}}`CharacterBody2D` が衝突を検知すると、Godotは<a href="https://docs.godotengine.org/ja/latest/classes/class_kinematiccollision2d.html" target="_blank">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と衝突相手の物体データが含まれています。このデータを活用すれば、衝突に対する適切な応答計算が可能になります。
 
 #### 移動とスライド処理
 
@@ -347,7 +347,7 @@ func _physics_process(delta):
 ## 結論
 
 この紹介では{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ノードの機能のほんの一端に触れたに過ぎません。
-他のGodotノードと同様、<a href="http://docs.godotengine.org/en/latest/classes/class_kinematicbody2d.html" target="_blank">APIドキュメント</a>は頼りになる情報源ですので、クラスメソッドに慣れてしまうまで頻繁に参照してください。
+他のGodotノードと同様、<a href="https://docs.godotengine.org/ja/4.x/classes/class_characterbody2d.html" target="_blank">APIドキュメント</a>は頼りになる情報源ですので、クラスメソッドに慣れてしまうまで頻繁に参照してください。
 
 運動体は非常に便利な仕組みなので、今後は『ノードの活用術』といった続編記事でさらに多くの活用法を探っていきたいと思います。その他に取り上げてほしい具体例やアイデアがあれば、ぜひコメント欄でご意見をお寄せください。
 
