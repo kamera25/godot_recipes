@@ -27,6 +27,19 @@ def extract_md_blocks(content):
     # フロントマターを削除 (抽出時と同じ正規表現を使用)
     text_content = re.sub(r'^(---\s*\r?\n.*?\r?\n---\s*|\+\+\+\s*\r?\n.*?\r?\n\+\+\+\s*)(\r?\n|$)', '', content, flags=re.DOTALL)
     
+    # コードブロック内のコメントを抽出対象に追加
+    code_blocks = re.findall(r'```.*?```', text_content, flags=re.DOTALL)
+    code_blocks += re.findall(r'\{\{<\s*highlight.*?\{\{<\s*/highlight\s*>\}\}', text_content, flags=re.DOTALL)
+    for block in code_blocks:
+        for line in block.split('\n'):
+            m_full = re.match(r'^\s*(#|//)\s*(.+)$', line)
+            if m_full:
+                texts.add(line.strip())
+            else:
+                m_inline = re.search(r'\s+(#|//)\s*(.+)$', line)
+                if m_inline:
+                    texts.add(m_inline.group(0).strip())
+
     # コードブロックを抽出対象から外す
     text_content = re.sub(r'```.*?```', '', text_content, flags=re.DOTALL)
     text_content = re.sub(r'\{\{<\s*highlight.*?\{\{<\s*/highlight\s*>\}\}', '', text_content, flags=re.DOTALL)

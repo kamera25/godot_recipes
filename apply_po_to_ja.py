@@ -50,8 +50,14 @@ def translate_content(content, translations):
     protected_blocks = []
     
     def protect(match):
+        block = match.group(0)
+        # Apply translations to comments inside the code block before protecting it
+        for msgid in sorted_keys:
+            if msgid in block:
+                block = block.replace(msgid, translations[msgid])
+
         placeholder = f"__PROTECTED_BLOCK_{len(protected_blocks)}__"
-        protected_blocks.append(match.group(0))
+        protected_blocks.append(block)
         return placeholder
 
     # Protect code blocks (```)
