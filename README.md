@@ -1,7 +1,7 @@
 # Godot Recipes (Japanese Translation) / Godotレシピ (日本語訳版)
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-[![licensebuttons by](https://licensebuttons.net/l/by/3.0/88x31.png)](https://creativecommons.org/licenses/by/4.0)
+[![licensebuttons by](https://licensebuttons.net/l/by/3.0/88x31.png)](https://creativecommons.org/licenses/by/4.0)  (Original Recipe)
 
 このリポジトリは、KidsCanCodeによる「[Godot Recipes](http://godotrecipes.com/)」の日本語翻訳プロジェクトです。
 Godot Engineを用いたゲーム開発のチュートリアルや実装例を豊富に含んでいます。
@@ -31,3 +31,8 @@ This repository is for translating and managing the original source content. It 
 - テキスト・コンテンツ: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 - コード・サンプル: [MIT License](https://lbesson.mit-license.org/)
 - オリジナル作成者: [KidsCanCode](https://kidscancode.org/)
+
+### 日本語訳の利用について
+本サイトの日本語訳はPLaMo-2による翻訳が含まれており、[PLaMoコミュニティライセンス契約](https://plamo.preferredai.jp/info/plamo-community-license-ja) に従います。
+
+このため二次利用の際には、**オリジナルライセンスに加え、当該のライセンスにも従って**ご利用ください。
