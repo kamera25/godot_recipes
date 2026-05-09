@@ -205,7 +205,7 @@ msgstr ""
 
 #: basics/getting_nodes.md
 msgid "Once you understand how to use node paths, you'll see how easy it is to reference any node you need. And put a stop to seeing those `null instance` error messages."
-msgstr "ノードパスの使い方をマスターすれば、必要なノードを簡単に参照できるようになります。慣れれば「nullインスタンス」エラーメッセージに悩まされることもなくなります。"
+msgstr "ノードパスの使い方をマスターすれば、必要なノードを簡単に参照できるようになります。慣れれば`null instance`エラーメッセージに悩まされることもなくなります。"
 
 #: basics/getting_nodes.md
 msgid "`/root`, which can also be accessed with `get_tree().root` is *not* the root node of your scene. It's the Viewport node that is always present by default in the SceneTree."
@@ -313,7 +313,7 @@ msgid ""
 "{{% notice tip %}}\n"
 "Does this seem familiar? Node paths work exactly like directory paths in your operating system. The `/` character indicates the parent-child relationship, and `..` means \"up one level\".\n"
 "{{% /notice %}}"
-msgstr "{{% notice tip %}}\n見覚えがありますか？ ノードパスの仕組みは、オペレーティングシステムのディレクトリパスと完全に同じです。スラッシュ「/」は 親と子 の関係を示し、`..`は「1つ上の階層に移動」の意味です。\n{{% /notice %}}"
+msgstr "{{% notice tip %}}\n見覚えがありますか？ ノードパスの仕組みは、オペレーティングシステムのディレクトリパスと完全に同じです。スラッシュ`/`は 親と子 の関係を示し、`..`は「1つ上の階層に移動」の意味です。\n{{% /notice %}}"
 
 #: basics/getting_nodes.md
 msgid "Getting a node reference with `get_node()` is such a common situation that GDScript has a shortcut for it:"
@@ -662,7 +662,7 @@ msgstr "たとえ微小なフレームレートの変動があったとしても
 
 #: basics/understanding_delta.md
 msgid "To illustrate the problem, let's consider a `Sprite` node moving across the screen. If our screen is `600` pixels wide and we want the sprite to take `5` seconds to cross the screen, we can use the following calculation to find the necessary speed:"
-msgstr "問題を具体的に説明するため、画面上を移動する「スプライト」ノードを考えてみます。画面幅が600ピクセルで、スプライトがこのスクリーン全体を横切るのに5秒かかる場合、必要な移動速度は以下の計算で求められます。"
+msgstr "問題を具体的に説明するため、画面上を移動する`Sprite`ノードを考えてみます。画面幅が600ピクセルで、スプライトがこのスクリーン全体を横切るのに5秒かかる場合、必要な移動速度は以下の計算で求められます。"
 
 #: 2D/tilemap_animation.md basics/understanding_delta.md input/input_actions.md
 #: physics/joints_2d.md physics/kinematic_friction.md shaders/blur.md
@@ -705,7 +705,7 @@ msgstr "加速を適用する際に `delta` を考慮しない場合、フレー
 
 #: basics/understanding_delta.md
 msgid "When using the `_process()` function, it automatically includes a parameter called `delta` that's passed in from the engine (so does `_physics_process()`, which is used for physics-related code). This is a floating point value representing the length of time since the previous frame. Typically, this will be approximately 1/60 or `0.0167` seconds."
-msgstr "`_process()`関数を使用する場合、自動的にエンジンから渡されるパラメーターとして`delta`が含まれます（これは`_physics_process()`と同様で、物理関連コード用に使います）。これは時間間隔を表す浮動小数点数値であり、直前のフレームから経過した時間の長さを示します。通常この値は1/60秒、つまり約0.0167秒に相当します。"
+msgstr "`_process()`関数を使用する場合、自動的にエンジンから渡されるパラメーターとして`delta`が含まれます（これは`_physics_process()`と同様で、物理関連コード用に使います）。これは時間間隔を表す浮動小数点数値であり、直前のフレームから経過した時間の長さを示します。通常この値は1/60秒、つまり約`0.0167`秒に相当します。"
 
 #: basics/understanding_delta.md
 msgid "Let's change the code to use this calculation:"
@@ -740,7 +740,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice tip %}}\n"
-"ピクセル単位や秒単位で考えると、現実世界での測定方法に直結するため直感的にも理解しやすいですよね。「重力加速度は毎秒100ピクセル/秒なので、ボールが2秒後には毎秒200ピクセルの速さになっている」といった具合です。フレーム単位で扱う場合は「加速をピクセル/フレーム/フレームという単位で計算しなければ」と考えなければなりません。実際に試してみてください…あまり自然ではありませんよ。\n"
+"ピクセル単位や秒単位で考えると、現実世界での測定方法に直結するため直感的にも理解しやすいですよね。「重力加速度は毎秒100ピクセル/秒なので、ボールが2秒後には毎秒200ピクセルの速さになっている」といった具合です。フレーム単位で扱う場合は、加速を `ピクセル/フレーム/フレーム` という単位で計算しなければなりません。実際に試してみてください…あまり自然ではありませんよ。\n"
 "{{% /notice %}}"
 
 #: basics/understanding_delta.md
@@ -753,7 +753,7 @@ msgstr "エンジンの `delta` 値にこの数値を掛けることで、各フ
 
 #: basics/understanding_delta.md
 msgid "We'll move the sprite every frame using the `_process()` function. If the game is running at `60` frames per second, we can find the per-frame movement like so:"
-msgstr "この実装により、ゲームが60フレーム/秒で動作している場合でも、毎フレーム正確に移動量を計算して表示できます。fps_factorはFPSレートに応じて調整するための係数です。"
+msgstr "この実装により、ゲームが`60`フレーム/秒で動作している場合でも、毎フレーム正確に移動量を計算して表示できます。fps_factorはFPSレートに応じて調整するための係数です。"
 
 #: basics/understanding_delta.md
 msgid "What if your movement is more complex? The concept remains the same. Keep your units in seconds, not frames, and multiply by `delta` each frame."
@@ -835,7 +835,7 @@ msgstr "ゲームの全コードを掲載するのではなく、HPリソース�
 
 #: basics/custom_resources.md
 msgid "In the _Script_ tab, choose _File>New Script_. Make sure it inherits `Resource` and name it `PlayerHealth.gd`."
-msgstr "スクリプトタブで、ファイル >新規スクリプト を選択します。「リソース」を継承するように設定し、ファイル名を `PlayerHealth.gd` とします。"
+msgstr "_Script_ タブで、 _ファイル >新規スクリプト_ を選択します。`Resource`を継承するように設定し、ファイル名を `PlayerHealth.gd` とします。"
 
 #: basics/custom_resources.md
 msgid "You're looking for a way to handle data and/or create flexible data objects in your game."
@@ -1061,7 +1061,7 @@ msgstr "この手法は3D空間でも同じように機能します。"
 
 #: basics/rotation.md
 msgid "Place the orbiting sprite in a child node of the main sprite (we're calling it \"Pivot\"). Give it an offset and rotate the `Pivot`."
-msgstr "軌道周回させるスプライトをメインスプライトの子ノードに配置します（ここでは「ピボット」と呼びます）。オフセット値を適用し、「ピボット」を回転させます。"
+msgstr "軌道周回させるスプライトをメインスプライトの子ノードに配置します（ここでは「ピボット」と呼びます）。オフセット値を適用し、`ピボット`を回転させます。"
 
 #: basics/rotation.md
 msgid "Circular movement"
@@ -1403,7 +1403,7 @@ msgstr "サイズを変更するとどうなるか、次に見てみてくださ
 
 #: ui/minimap.md
 msgid "If our `Grid` size is currently `(150, 150)` (you can check this in its **Size** property), then its center will be `(75, 75)`. Put the `PlayerMarker`'s **Position** there:"
-msgstr "もし現在のグリッドサイズが `(150, 150)` であれば（これは［サイズ］プロパティで確認できます）、中心座標は `(75, 75)` になります。ここにプレイヤーマーカーの位置を設定しましょう。"
+msgstr "もし現在のグリッドサイズが `(150, 150)` であれば（これは［サイズ］プロパティで確認できます）、中心座標は `(75, 75)` になります。ここに`PlayerMarker`の**座標**を設定しましょう。"
 
 #: ui/minimap.md
 msgid "Some other things you might want to add:"
@@ -1463,7 +1463,7 @@ msgstr "まず、{{< gd-icon MarginContainer >}}`MarginContainer`を追加して
 
 #: ui/minimap.md
 msgid "For this demo, we have two game objects: a `Mob`, which wanders around the map randomly, and a `Crate`, which the player can pick up. Many of these are scattered around the main scene. Each will need to be represented by one of the map markers we made."
-msgstr "本デモで使用するゲームオブジェクトは2種類です。ランダムにマップを徘徊する「モブ」と、プレイヤーが持ち上げ可能な「木箱」です。これらのオブジェクトの多くがメインシーン内に散らばっています。それぞれを適切に表示するために、先ほど作成したマップマーカーのいずれかを使いましょう。"
+msgstr "本デモで使用するゲームオブジェクトは2種類です。ランダムにマップを徘徊する `Mob` (モブ) と、プレイヤーが持ち上げ可能な `Crate` (クレート) です。これらのオブジェクトの多くがメインシーン内に散らばっています。それぞれを適切に表示するために、先ほど作成したマップマーカーのいずれかを使いましょう。"
 
 #: ui/minimap.md
 msgid "![alt](/godot_recipes/4.x/img/minimap_06.png)"
@@ -2171,7 +2171,7 @@ msgstr "選択したアイコンを `AbilityButton` の **Textures/Normal** プ�
 
 #: ui/cooldown_button.md
 msgid "In `_process()` we use the `time_left` on the timer to set the label's `text` and the sweep's `value`."
-msgstr "を設定します。"
+msgstr "`_process()` 関数内では、タイマーの `time_left` プロパティを使用してラベルの `text` プロパティと `Sweep` コンポーネントの `value` プロパティを設定しています。"
 
 #: ui/cooldown_button.md
 msgid "Next, we need a texture to assign to the {{< gd-icon TextureProgressBar >}}`TextureProgress` display. In this case, we'll copy the texture from the button - you could also use a different texture if you like."
@@ -2213,7 +2213,7 @@ msgstr "![alt](/godot_recipes/4.x/img/cooldown_01.gif)"
 
 #: ui/cooldown_button.md
 msgid "Finally, on the `Value` label, set **Horizontal Alignment** to \"Right\" and **Clip Text** to \"On\". Add a font to the **Theme Overrides/Font**. Put a value like `0.0` in the **Text** field to check how it works. Since our icon is black and white, it also helps to add a **Theme Overrides/Constants/Outline Size**_ of `1`."
-msgstr "最後に、［値］ラベルで［水平整列］を「右揃え」に設定し、［テキストクリッピング］を「有効」にしてください。**テーマオーバーライド／フォント**にフォントを追加してください。動作確認のため、**テキスト**欄には `0.0` のような値を入力してください。アイコンが白黒の場合は、**テーマオーバーライド／定数／アウトラインサイズ**として `1` を設定すると効果的です。"
+msgstr "最後に、`Value`ラベルで［水平整列］を「右揃え」に設定し、［テキストクリッピング］を「有効」にしてください。**テーマオーバーライド／フォント**にフォントを追加してください。動作確認のため、**テキスト**欄には `0.0` のような値を入力してください。アイコンが白黒の場合は、**テーマオーバーライド／定数／アウトラインサイズ**として `1` を設定すると効果的です。"
 
 #: ui/cooldown_button.md
 msgid "If you need art for your buttons, you can find a wide variety of well-designed buttons at [Game-icons.net](https://game-icons.net/). We'll be using a few from there for this recipe."
@@ -2433,7 +2433,7 @@ msgid ""
 "* `\"length\"` - if the `property` is a vector, we'll display its length.\n"
 "* `\"round\"` - if the property is a numeric type, we'll round its values."
 msgstr ""
-"* `\"length\"` - プロパティがベクトルの場合、その長さを表示します。\n"
+"* `\"length\"` - `property`がベクトルの場合、その長さを表示します。\n"
 "* `\"round\"` - プロパティが数値型の場合、値を四捨五入します。"
 
 #: ui/direction_indicators.md
@@ -2716,7 +2716,7 @@ msgstr ""
 "以下の手順でテストシーンを作成してください。\n"
 "\n"
 "1. {{< gd-icon MeshInstance3D >}}`MeshInstance3D`を使用してテスト用シーンを作成します\n"
-"2. そのシーン内に`CameraGimbal`インスタンスを配置し、動作をテストします"
+"2. そのシーン内に CameraGimbal インスタンスを配置し、動作をテストします"
 
 #: 3D/camera_gimbal.md
 msgid "{{< youtube 4NLrfxNt3ps >}} -->"
