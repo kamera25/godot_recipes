@@ -30,7 +30,7 @@ LevelBox: {{< gd-icon PanelContainer >}} PanelContainer
         {{< gd-icon TextureRect >}} TextureRect
 ```
 
-{{< gd-icon TextureRect >}} テクスチャレクトはロックアイコンの表示用、{{< gd-icon Label >}} ラベルはレベル番号の表示用に使います。一方が表示されている間は、もう一方は非表示になります。
+{{< gd-icon TextureRect >}} TextureRect はロックアイコンの表示用、{{< gd-icon Label >}} Label はレベル番号の表示用に使います。一方が表示されている間は、もう一方は非表示になります。
 
 ご自由にスタイルを設定できます。例としては。
 
@@ -88,7 +88,7 @@ func _on_gui_input(event):
 
 この例では、**テーマオーバーライド / 定数 / H分離幅**と**V分離幅** がどちらも`10`に設定されています。
 
-このシーンを「LevelGrid」として保存します。メニューでは、複数のインスタンスを使用して希望するレベル数を表示します。
+このシーンを`LevelGrid`として保存します。メニューでは、複数のインスタンスを使用して希望するレベル数を表示します。
 
 ### 3: メニュー画面
 
@@ -126,7 +126,7 @@ LevelMenu:{{< gd-icon MarginContainer >}} MarginContainer
     * **Layout/Clip Contents**: `有効化`
     * **Layout/Custom Minimum Size**: `(710, 350)` (`レベルグリッド`のサイズに相当)
 
-ノード「ClipControl」内にグリッドが配置されます。**コンテンツを切り取る** を有効にすると、コントロール領域を超える内容は自動的に切り取られます。これにより、水平スクロール可能なグリッドセットを作成できるようになります。「ClipControl」に{{< gd-icon HBoxContainer >}}`HBoxContainer` 要素を「GridBox」という名前で追加し、その内部にインスタンス3個以上の `LevelGrid`を配置してください。
+ノード`ClipControl`内にグリッドが配置されます。**コンテンツを切り取る** を有効にすると、コントロール領域を超える内容は自動的に切り取られます。これにより、水平スクロール可能なグリッドセットを作成できるようになります。`ClipControl`に{{< gd-icon HBoxContainer >}}`HBoxContainer` 要素を`GridBox`という名前で追加し、その内部にインスタンス3個以上の `LevelGrid`を配置してください。
 
 必ず**テーマのオーバーライド／定数／区切り文字**を `0` に設定してください。
 

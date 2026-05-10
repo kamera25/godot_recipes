@@ -30,11 +30,11 @@ var circles_per_level = 5
 
 サウンドを再生するために、複数の`AudioStreamPlayer`ノードを異なるシーンに追加してください。
 
-- まず「メイン」シーンに「音楽」という名前を追加してください。［ストリーム］プロパティには `res://assets/audio/Music_Light-Puzzles.ogg` を使いましょう。
+- まず `Main` シーンに「Music」という名前を追加してください。_Stream_ プロパティには `res://assets/audio/Music_Light-Puzzles.ogg` を使いましょう。
 
-- 「スクリーン」シーンに新たに「クリック」という画面を追加してください。ボタンをタップした際にこの画面が表示されるようにします。アセットフォルダから「menu_click.wav」を使用します。
+- `Screens` シーンに新たに「Click(クリック)」という画面を追加してください。ボタンをタップした際にこの画面が表示されるようにします。アセットフォルダから`menu_click.wav`を使用します。
 
-- 「Circle」シーンに、名前を『Beep』としたオーディオプレイヤーを追加し、`89.ogg`サウンドファイルを使用します。
+- `Circle`シーンに、名前を『Beep』としたオーディオプレイヤーを追加し、`89.ogg`サウンドファイルを使用します。
 
 - 最後にジャンパー部では、「ジャンプ」と「キャプチャー」の2種類の効果音が必要です。それぞれ`70.ogg`と`88.ogg`を使いましょう。
 
@@ -52,14 +52,14 @@ if settings.enable_music:
     $Music.stop()
  ```
 
-'Screens.gd' ファイルの `_on_button_pressed()` 関数に以下を追加してください。
+`Screens.gd` ファイルの `_on_button_pressed()` 関数に以下を追加してください。
 
 ```gdscript
 if settings.enable_sound:
     $Click.play()
 ```
 
-円軌道において、限定された円（制限軌道）が1周完了した際に「ビープ音」を再生したいです。これは`check_orbits()`関数内で実装します。
+円軌道において、限定された円（制限軌道）が1周完了した際に`ビープ音`を再生したいです。これは`check_orbits()`関数内で実装します。
 
 ```gdscript
 current_orbits -= 1

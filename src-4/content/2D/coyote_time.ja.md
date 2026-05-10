@@ -63,7 +63,7 @@ $CoyoteTimer.wait_time = coyote_frames / 60.0
         $CoyoteTimer.start()
 ```
 
-「CoyoteTimer」は以下のタイミングでコヨーテ状態の終了を通知します。
+`CoyoteTimer`は以下のタイミングでコヨーテ状態の終了を通知します。
 
 ```gdscript
 func _on_coyote_timer_timeout():

@@ -43,7 +43,7 @@ var events = {}
 var last_drag_distance = 0
 ```
 
-もし「ターゲット」が設定されている場合、カメラはその対象物を追いかける、または自動的にその位置に戻ることができます。その他のカメラ動作を制御するプロパティ：
+もし`target`が設定されている場合、カメラはその対象物を追いかける、または自動的にその位置に戻ることができます。その他のカメラ動作を制御するプロパティ：
 
 * `target_return_enabled` - これを `true` に設定すると、ドラッグ後にカメラは自動的にターゲット位置に復帰します。
 * `target_return_rate` - カメラがターゲット位置に戻る速度を調整します。
@@ -82,7 +82,7 @@ func _unhandled_input(event):
             events.erase(event.index)
 ```
 
-まず、タッチイベント（`InputEventScreenTouch`）をチェックしています。このイベントを`events`辞書に追加してください。イベントの`index`プロパティが辞書のキーとして使います。また、このイベントが「押されていない」（つまりタッチが終了した場合）には削除します。
+まず、タッチイベント（`InputEventScreenTouch`）をチェックしています。このイベントを`events`辞書に追加してください。イベントの`index`プロパティが辞書のキーとして使います。また、このイベントが `押されていない`（つまりタッチが終了した場合）場合には削除します。
 
 次は、タッチ動作の後に発生するドラッグ操作について処理が必要です。
 
@@ -124,11 +124,11 @@ if event is InputEventScreenDrag:
             last_drag_distance = drag_distance
 ```
 
-アクティブなドラッグイベントが2件ある場合の処理を記述
-"drag_distance" は各イベント間の距離を示し、前回計測した距離と比較して増減を確認可能
-"zoom_speed" は倍率係数で、ズームイン時は「1.05」倍、アウト時は「0.95」倍に調整する
-計算結果が指定された範囲を超えないように制限を施し、新しい "zoom" 値を設定
-最後に次回イベント用に "last_drag_distance" を更新
+アクティブなドラッグイベントが`2`件ある場合の処理を記述
+`drag_distance` は各イベント間の距離を示し、`last_drag_distance` と比較して増減を確認可能
+`zoom_speed` は倍率係数で、ズームイン時は`1.05`倍、アウト時は`0.95`倍に調整する
+計算結果が指定された範囲を超えないように制限を施し、新しい `zoom` 値を設定
+最後に次回イベント用に `last_drag_distance` を更新します。
 
 <video controls src="/godot_recipes/4.x/img/touch_camera_02.webm"></video>
 
@@ -141,7 +141,7 @@ if event is InputEventScreenDrag:
 * ダブルタップでリセットできます。
 * さらにジェスチャーを追加可能 - 例：3本指操作など。
 
-完全な参考として、以下にフルバージョンの「TouchCamera.gd」スクリプトを記載します。
+完全な参考として、以下にフルバージョンの`TouchCamera.gd`スクリプトを記載します。
 
 ```gdscript
 extends Camera2D

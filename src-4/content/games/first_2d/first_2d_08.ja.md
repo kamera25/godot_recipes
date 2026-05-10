@@ -9,7 +9,7 @@ pre: "08. "
 
 ## 敵弾シーン
 
-以前プレイヤー用の弾丸を作成したときと同じように、新しい「EnemyBullet」シーンを作成してください。ここでは詳細な手順は割愛しますが、行き詰まった場合はその部分を参照してください。唯一の違いは、代わりに「Enemy_projectile (16 x 16).png」画像を使用できる点です。
+以前プレイヤー用の弾丸を作成したときと同じように、新しい`EnemyBullet`シーンを作成してください。ここでは詳細な手順は割愛しますが、行き詰まった場合はその部分を参照してください。唯一の違いは、代わりに`Enemy_projectile (16 x 16).png`画像を使用できる点です。
 
 スクリプトは少し異なります。
 
@@ -25,7 +25,7 @@ func _process(delta):
     position.y += speed * delta
 ```
 
-{{< gd-icon Area2D >}}{{< gd-icon VisibleOnScreenNotifier2D >}}以下の方法でそれぞれ接続してください。
+{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`と{{< gd-icon Area2D >}}`Area2D`の `screen_exited` シグナルと `area_entered` シグナルをそれぞれ接続してください。
 
 ```gdscript
 func _on_visible_on_screen_notifier_2d_screen_exited():
@@ -57,7 +57,7 @@ func _on_shoot_timer_timeout():
     $ShootTimer.start()
 ```
 
-メインシーンを再び再生すると、ランダムな敵の弾丸が表示されるはずです。
+`Main` シーンを再生し直すと、ランダムな敵の弾丸が出現するはずです。
 
 | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_07/" icon="fas fa-arrow-left" %}}戻る{{% /button %}} | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_09/" icon="fas fa-arrow-right" icon-position="right" %}}次へ{{% /button %}} |
 |------|------:|

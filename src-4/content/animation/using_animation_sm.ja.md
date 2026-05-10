@@ -26,7 +26,7 @@ We'll also assume you've already set up the character's animations using {{< gd-
 
 ![alt](/godot_recipes/4.x/img/animation_tree_01.png)
 
-{{< gd-icon AnimationPlayer >}}{{< gd-icon AnimationTree >}}`AnimationTree`で作成されたアニメーションを制御するノードです。既存のアニメーションにアクセスさせるには、_Anim Player_ プロパティ内の「割り当て」ボタンをクリックし、使用するアニメーションノードを選択してください。
+{{< gd-icon `AnimationPlayer` >}}{{< gd-icon AnimationTree >}}`AnimationTree`で作成されたアニメーションを制御するノードです。既存のアニメーションにアクセスさせるには、_Anim Player_ プロパティ内の「割り当て」ボタンをクリックし、使用するアニメーションノードを選択してください。
 
 以下は、状態機械を {{< gd-icon AnimationTree >}}`AnimationTree` パネルに設定し始める方法です。
 

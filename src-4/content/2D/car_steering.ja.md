@@ -55,7 +55,7 @@ var steering_angle = 15  # Amount that front wheel turns, in degrees
 var steer_direction
 ```
 
-'wheelbase' をスプライトに適した値に設定してください。
+`wheelbase` をスプライトに適した値に設定してください。
 
 `steer_direction` には車輪の回転量が設定されます。
 
@@ -71,7 +71,7 @@ func _physics_process(delta):
     move_and_slide()
 ```
 
-各フレームでは、入力のチェックとステアリング計算が必要です。その後、算出された「速度」を `move_and_slide()` 関数に渡します。これら2つの関数については次に定義します。
+各フレームでは、入力のチェックとステアリング計算が必要です。その後、算出された`速度`を `move_and_slide()` 関数に渡します。これら2つの関数については次に定義します。
 
 ```gdscript
 func get_input():
@@ -82,7 +82,7 @@ func get_input():
         velocity = transform.x * 500
 ```
 
-ここではユーザー入力を確認し、移動速度を設定します。注意：速度「500」は一時的なもので、動きのテスト用です。これについては次のセクションで対処します。
+ここではユーザー入力を確認し、移動速度を設定します。注意：速度`500`は一時的なもので、動きのテスト用です。これについては次のセクションで対処します。
 
 以下に、リンク先のアルゴリズムを実装します。
 
@@ -160,7 +160,7 @@ var drag = -0.06
 こちらのツールで値を変更してその影響を確認できます。
 [https://www.desmos.com/calculator/e4ayu3xkip](https://www.desmos.com/calculator/e4ayu3xkip)
 
-関数 _physics_process() では、現在の摩擦係数を計算する関数を呼び出し、それを加速度力に適用します。
+関数 `_physics_process()` では、現在の摩擦係数を計算する関数を呼び出し、それを加速度力に適用します。
 
 ```gdscript
 func _physics_process(delta):
@@ -218,7 +218,7 @@ func calculate_steering(delta):
     rotation = new_heading.angle()
 ```
 
-2つのベクトルの内積を利用することで、前進しているか後退しているかを判断できます。ベクトルが一致している場合、結果は正の値になります。移動方向が車の進行方向と逆向きの場合、内積は負の値となり、後方に移動していることが確認されます。
+ドット積を使用することで、前進または後退の加速状態を判定できます。2つのベクトルが一致していれば、結果は `0` より大きくなります。移動方向が車の向いている方向と逆向きの場合、ドット積は `0` 未満となり、後退中であることが分かります。
 
 <video controls src='/godot_recipes/4.x/img/car_reverse.webm'></video>
 

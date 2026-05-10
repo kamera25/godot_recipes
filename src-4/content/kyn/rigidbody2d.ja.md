@@ -116,7 +116,7 @@ func _physics_process(delta):
     applied_torque = rotation_dir * spin_thrust
 ```
 
-このスクリプトの処理内容を順を追って説明します。このスクリプトでは、2つの変数 `engine_thrust` と `spin_thrust` によって、宇宙船の加速速度と旋回速度を制御します。`thrust` は宇宙船のエンジン状態を表す変数で、惰行時には (0, 0)、エンジンが作動中の場合は `engine_thrust` の長さを持つベクトル値になります。`rotation_dir` は宇宙船の回転方向を表す変数です。また、`screensize` 変数には画面サイズを格納し、後で使用します。
+このスクリプトの処理内容を順を追って説明します。このスクリプトでは、2つの変数 `engine_thrust` と `spin_thrust` によって、宇宙船の加速速度と旋回速度を制御します。`thrust` は宇宙船のエンジン状態を表す変数で、惰行時には `(0, 0)`、エンジンが作動中の場合は `engine_thrust` の長さを持つベクトル値になります。`rotation_dir` は宇宙船の回転方向を表す変数です。また、`screensize` 変数には画面サイズを格納し、後で使用します。
 
 次に、`input()` 関数はキー状態を取得し、宇宙船の推進モードを有効/無効に設定するとともに、回転方向（`rotation_dir`）を正または負方向に決定します。この関数は `_process()` 内で毎フレーム呼び出されます。
 
@@ -152,7 +152,7 @@ func _physics_process(delta):
 
 > RigidBody2D の `position` や `linear_velocity` を毎フレーム、あるいは頻繁に変更するべきではありません。もし直接ボディの状態を操作する必要がある場合は、物理演算状態に直接アクセスできる `_integrate_forces` を使いましょう。
 
- _physics_process() の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [Physics2DDirectBodyState](https://docs.godotengine.org/ja/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。
+ `_physics_process()` の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [Physics2DDirectBodyState](https://docs.godotengine.org/ja/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。
  関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](https://docs.godotengine.org/ja/stable/classes/class_transform2d.html) に関する情報です。
 
 したがって、`_integrate_forces()` に移動して以下のようにコードを記述します。
@@ -171,7 +171,7 @@ func _integrate_forces(state):
         state.transform.origin.y = screensize.y
 ```
 
-物理状態に基づいてボディの 'transform' を調整することで、エンジンは正常に動作し続け、期待通りの結果が得られます。
+物理状態に基づいてボディの `transform` を調整することで、エンジンは正常に動作し続け、期待通りの結果が得られます。
 
 ![alt](/godot_recipes/4.x/img/rigidbody_ship2.gif)
 

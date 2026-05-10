@@ -105,7 +105,7 @@ func _physics_process(delta):
 var n = ($FrontRay.get_collision_normal() + $RearRay.get_collision_normal()) / 2.0
 ```
 
-補間量は自由に調整してみてください。この環境で「12」が最適でしたが、環境によってはさらに高い値や低い値が適している場合もあります。
+補間量は自由に調整してみてください。この環境で`12`が最適でしたが、環境によってはさらに高い値や低い値が適している場合もあります。
 
 ## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 

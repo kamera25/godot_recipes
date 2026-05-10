@@ -11,7 +11,7 @@ pre: "10. "
 
 現在ゲームを実行するとすぐに開始されますが、起動用のボタンを追加してください。
 
-`Main`を`CanvasLayer`の子要素として追加し、そこに{{< gd-icon CenterContainer >}}`CenterContainer`を追加し、そのレイアウトを**フル矩形**に設定します。次に、{{< gd-icon TextureButton >}}`TextureButton`をその子要素として追加してください。このボタンに「Start」という名前を付け、その**通常状態**のテクスチャとして`START (48 x 8).png`画像を設定します。
+`Main`を`CanvasLayer`の子要素として追加し、そこに{{< gd-icon CenterContainer >}}`CenterContainer`を追加し、そのレイアウトを**フル矩形**に設定します。次に、{{< gd-icon TextureButton >}}`TextureButton`をその子要素として追加してください。このボタンに`Start`という名前を付け、その**通常状態**のテクスチャとして`START (48 x 8).png`画像を設定します。
 
 スクリプトの上部に参照を追加：
 
@@ -59,7 +59,7 @@ func new_game():
 
 また、`_ready()` に `game_over.hide()` を追加してください。
 
-メインモジュールでプレイヤーの `died` シグナルを接続してください。
+`Main` でプレイヤーの `died` シグナルを接続してください。
 
 ```gdscript
 func _on_player_died():

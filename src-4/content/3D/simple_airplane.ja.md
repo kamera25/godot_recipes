@@ -63,7 +63,7 @@ var pitch_input = 0
 
 ![alt](/godot_recipes/4.x/img/kb_plane_02.png)
 
-この機能は入力値を取得し、設定された値を反映します。なお、スロットルの増減操作は「actual_speed」ではなく「target_speed」を変更することに注意してください。これにより、現在の速度から目標速度までスムーズに加速・減速が可能になります。
+この機能は入力値を取得し、設定された値を反映します。なお、スロットルの増減操作は「actual_speed」ではなく`target_speed`を変更することに注意してください。これにより、現在の速度から目標速度までスムーズに加速・減速が可能になります。
 
 ```gdscript
 func get_input(delta):
@@ -131,9 +131,9 @@ mesh.rotation.z = lerpf(mesh.rotation.z, -turn_input, level_speed * delta)
 
 ![alt](/godot_recipes/4.x/img/kb_plane_06.gif)
 
-mesh は、平面シーン内の {{< gd-icon MeshInstance3D >}}`MeshInstance3D` オブジェクトへの参照です（例では `$cartoon_plane`）。
+`mesh` は、平面シーン内の {{< gd-icon MeshInstance3D >}}`MeshInstance3D` オブジェクトへの参照です（例では `$cartoon_plane`）。
 
-ロール量は「turn_input」値に関連しているため、緩やかなターンでは傾きが少なくなります。直進すると自動的に機体が水平になります。
+ロール量は`turn_input`値に関連しているため、緩やかなターンでは傾きが少なくなります。直進すると自動的に機体が水平になります。
 
 これで完了です！基本的な飛行制御が正常に動作するようになり、快適に操縦できるはずです。各種プロパティを調整して、それらが動きにどう影響するか試してみてください。
 

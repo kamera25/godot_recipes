@@ -55,7 +55,7 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 ![alt](/godot_recipes/4.x/img/3d_bars02.gif)
 
-このシーンのインスタンスを「Mob」シーンに追加し、バーをモブの体の上に配置してください。
+このシーンのインスタンスを`Mob`シーンに追加し、バーをモブの体の上に配置してください。
 
 ![alt](/godot_recipes/4.x/img/3d_bars04.png)
 

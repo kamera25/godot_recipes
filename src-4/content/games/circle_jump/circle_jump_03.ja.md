@@ -119,7 +119,7 @@ func draw_circle_arc_poly(center, radius, angle_from, angle_to, color):
     draw_polygon(points_arc, colors)
 ```
 
-以下の関数は _draw() 内で呼び出されます。
+以下の関数は `_draw()` 内で呼び出されます。
 
 ```gdscript
 func _draw():

@@ -114,7 +114,7 @@ func _unhandled_input(event):
             move(dir)
 ```
 
-Tween が実行されている間は入力を無視し、直接的な位置変更を削除することで、Tween自体がその処理を行えるようにします。
+Tween が実行されている間は入力を無視し、直接的な `位置` 変更を無効とすることで、Tween自体がその処理を行えるようにします。
 
 ```gdscript
 func move(dir):

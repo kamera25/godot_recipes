@@ -69,7 +69,7 @@ ghcommentid: 67
 
 ### 実用的な応用例
 
-以下のアニメーションをご覧ください。これは Vector2.dot() と Vector2.cross() の結果が、角度の変化に伴ってどのように変わるかを視覚的に示しています。
+以下のアニメーションをご覧ください。これは `Vector2.dot()` と `Vector2.cross()` の結果が、角度の変化に伴ってどのように変わるかを視覚的に示しています。
 
 ![alt](/godot_recipes/4.x/img/dot_cross_01.gif)
 

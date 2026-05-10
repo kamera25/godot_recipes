@@ -11,7 +11,7 @@ ghcommentid: 19
 
 ## 解決策
 
-{{< gd-icon CharacterBody2D >}} オブジェクト同士が衝突した場合、衝突データは `KinematicCollision2D` オブジェクトとして取得されます。 {{< gd-icon TileMap >}}`TileMap` は単一のコリダーとして機能するため、`collider` プロパティを参照すると実際にはこの {{< gd-icon TileMap >}}`TileMap` ノードが返される点にご注意ください。
+{{< gd-icon `CharacterBody2D` >}} オブジェクト同士が衝突した場合、衝突データは `KinematicCollision2D` オブジェクトとして取得されます。 {{< gd-icon TileMap >}}`TileMap` は単一のコリダーとして機能するため、`collider` プロパティを参照すると実際にはこの {{< gd-icon TileMap >}}`TileMap` ノードが返される点にご注意ください。
 
 その後、衝突位置にある{{< gd-icon TileMap >}}`TileMap`のタイルを特定が必要です。
 

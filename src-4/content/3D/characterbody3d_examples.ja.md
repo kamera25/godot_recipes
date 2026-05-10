@@ -82,10 +82,10 @@ func get_input(delta):
 
 これをもう少し詳しく見ていきます。プレイヤー入力は水平方向の移動に影響を与えるべきです。地面に沿った前後移動と、戦車の中心周りの回転です。**Y軸方向**の移動は、重力の影響を受けるべきものであり、つまり毎フレーム`0`に設定すべきではありません。これが、新しい速度ベクトルを水平移動用に割り当てる間、その値を一時的に保持するために`vy`変数を使用している理由です。そして最後に、この値を新たに追加してください。
 
-前方/後方移動にはキャラクターのローカル座標系の Z 軸を使用しています。
+前方/後方移動にはキャラクターの `transform.basis.z` を使用しています。
 これにより、身体の「ローカル」前方方向へ正しく移動します。
 
-「これが動作中の戦車です。テスト用シーンとして、地面には {{< gd-icon StaticBody3D >}} 球体、カメラには [補間付きカメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/index.html) レシピを使用した {{< gd-icon Camera3D >}}`Camera3D` を配置しています。
+「これが動作中の戦車です。テスト用シーンとして、地面には {{< gd-icon `StaticBody3D` >}} 球体、カメラには [補間付きカメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/index.html) レシピを使用した {{< gd-icon Camera3D >}}`Camera3D` を配置しています。
 
 <video controls src="/godot_recipes/4.x/img/3d_kinematic_09.webm"></video>
 

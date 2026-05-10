@@ -61,7 +61,7 @@ func _unhandled_input(event):
 
 入力状態を確認するために使える機能はいくつかあります。
 
-- `is_action_pressed()`: この関数は現在アクションが「押された」状態にある場合に`true`を返します。
+- `is_action_pressed()`: この関数は現在アクションが`押された`状態にある場合に`true`を返します。
 
 - `is_action_released()`: この関数は、アクションが `pressed` 状態にない場合に `true` を返します。
 

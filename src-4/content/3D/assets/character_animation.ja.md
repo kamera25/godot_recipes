@@ -35,7 +35,7 @@ draft: false
 ![alt](/godot_recipes/4.x/img/animtree_settings.png)
 
 {{% notice style="note" title="" %}}
-.  `AnimationTreeが有効になっていると、 {{< gd-icon AnimationPlayer >}} {{< gd-icon AnimationTree >}}`AnimationTree` でアニメーションを選択できなくなることにご注意ください。変更を加えたりアニメーションをテストする必要がある場合は、作業する際にツリーの **有効** プロパティを必ずオフにしてください。
+{{< gd-icon AnimationTree >}}`AnimationTree`　が有効になっていると、 {{< gd-icon AnimationPlayer >}} {{< gd-icon AnimationTree >}}`AnimationTree` でアニメーションを選択できなくなることにご注意ください。変更を加えたりアニメーションをテストする必要がある場合は、作業する際にツリーの **有効** プロパティを必ずオフにしてください。
 {{% /notice %}}
 
 ### 待機/歩行/走行サイクルについて
@@ -44,13 +44,13 @@ draft: false
 
 {{< gd-icon AnimationPlayer >}}`AnimationPlayer`コンポーネントで、"Idle"（待機）、"Running_A"（前進ランニング）、"Walking_Backwards"（後方歩行）、および"Running_Strafe_Left"/"Running_Strafe_Right"（横移動左右ランニング）のアニメーションを設定してください。すべてループ再生に設定することを確認してください。「Play」ボタンを押してテストできます。(▶)。いずれかがループになっていない場合は、設定した後でキャラクターを再インポートしてください（[アセットのインポート方法](/godot_recipes/4.x/ja/3d/assets/importing_assets/)参照）。
 
-「AnimationTree」ノードを選択すると、ウィンドウ下部にパネルが開きます。
+`AnimationTree`ノードを選択すると、ウィンドウ下部にパネルが開きます。
 
 ![alt](/godot_recipes/4.x/img/animtree_empty.png)
 
 例として、空きスペースを右クリックし、「アニメーション追加 → 待機」を選択してから、同様に「1H_Melee_Attack_Chop」アニメーションも追加してください。
 
-「ノードを接続」ボタンを選択し、「開始」から「アイドル」までの接続線を引いてください。即座に「アイドル」アニメーションが再生されるはずです。
+「ノードを接続」ボタンを選択し、`開始`から`アイドル`までの接続線を引いてください。即座に「アイドル」アニメーションが再生されるはずです。
 
 しかし、このままではうまくいきません。2つのアニメーション間で急速に点滅を繰り返すだけで、両方が「即時遷移」に設定されているため、スムーズな移行ができないからです。
 
@@ -101,7 +101,7 @@ draft: false
 
 ![alt](/godot_recipes/4.x/img/anim_tree_jumping.png)
 
-段差から転落した場合、即座に「IWR」から「Jump_Idle」に直接遷移できるようにする必要がありますが、「ジャンプ」ボタンを押した場合はまず「Jump_Start」を経由する必要があります。
+段差から転落した場合、即座に`IWR`から`Jump_Idle`に直接遷移できるようにする必要がありますが、「ジャンプ」ボタンを押した場合はまず`Jump_Start`を経由する必要があります。
 
 さらに、`IWR`から`Jump_Start`への遷移設定は「自動」のまま変更していません。「有効化」に差し替えるのではなく、この遷移に**条件**として`jumping`を追加しました。
 

@@ -78,7 +78,7 @@ In the `update_label()` method we build up a string to display in the label's `t
 
 本例では、`mode` オプションの設定例として以下の2つのケースを示します。
 
-* `"length"` - プロパティがベクトルの場合、その長さを表示します。
+* `"length"` - `property`がベクトルの場合、その長さを表示します。
 * `"round"` - プロパティが数値型の場合、値を四捨五入します。
 
 We then need functions to add/remove properties from the display:

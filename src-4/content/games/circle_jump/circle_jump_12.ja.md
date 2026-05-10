@@ -85,9 +85,9 @@ for button in buttons:
 
 ![alt](/godot_recipes/4.x/img/cj_12_02.png)
 
-「BaseScreen.tscn」を継承し、ここにテキスト編集エリアとホームボタン用のコンテナを追加しました。
+「BaseScreen.tscn」を継承し、ここに`TextEdit`とホームボタン用のコンテナを追加しました。
 
-「テキストエディター」設定で［_BBCode］を有効にし、［テキスト］プロパティに以下を入力します。
+`TextEdit`設定で［_BBCode］を有効にし、［テキスト］プロパティに以下を入力します。
 
 ```text
 [center][u]Circle Jump[/u]

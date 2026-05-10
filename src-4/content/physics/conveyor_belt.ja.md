@@ -38,7 +38,7 @@ draft: false
 
 ![alt](/godot_recipes/4.x/img/conveyor_05.png)
 
-「880」を選択すれば、幅が正確に10タイルのコンベアベルトを作成できます。必要な幅を自由に設定できます。
+`880`を選択すれば、幅が正確に10タイルのコンベアベルトを作成できます。必要な幅を自由に設定できます。
 
 ![alt](/godot_recipes/4.x/img/conveyor_06.png)
 

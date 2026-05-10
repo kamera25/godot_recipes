@@ -15,7 +15,7 @@ GDScriptからGodotシェーダーと連携したい。
 
 ## 解決策
 
-GDScriptから uniform の値にアクセスするには、オブジェクトの`material`プロパティに対して`set_shader_param()`メソッドを使用できます。もしアタッチされているマテリアルが`ShaderMaterial`の場合、以下のようにアクセス可能です。
+GDScriptから uniform の値にアクセスするには、オブジェクトの`material`プロパティに対して`set_shader_param()`メソッドを使用できます。もしアタッチされているマテリアルが ShaderMaterial の場合、以下のようにアクセス可能です。
 
 ```gdscript
 node.material.set_shader_param("param_name", value)

@@ -313,7 +313,10 @@ msgid ""
 "{{% notice tip %}}\n"
 "Does this seem familiar? Node paths work exactly like directory paths in your operating system. The `/` character indicates the parent-child relationship, and `..` means \"up one level\".\n"
 "{{% /notice %}}"
-msgstr "{{% notice tip %}}\n見覚えがありますか？ ノードパスの仕組みは、オペレーティングシステムのディレクトリパスと完全に同じです。スラッシュ`/`は 親と子 の関係を示し、`..`は「1つ上の階層に移動」の意味です。\n{{% /notice %}}"
+msgstr ""
+"{{% notice tip %}}\n"
+"見覚えがありますか？ ノードパスの仕組みは、オペレーティングシステムのディレクトリパスと完全に同じです。スラッシュ`/`は 親と子 の関係を示し、`..`は「1つ上の階層に移動」の意味です。\n"
+"{{% /notice %}}"
 
 #: basics/getting_nodes.md
 msgid "Getting a node reference with `get_node()` is such a common situation that GDScript has a shortcut for it:"
@@ -3806,7 +3809,10 @@ msgid ""
 "{{% notice tip %}}\n"
 "You can do this with {{< gd-icon RigidBody3D >}}`RigidBody3D`, {{< gd-icon CharacterBody3D >}}`CharacterBody3D`, or {{< gd-icon Area3D >}}`Area3D` as your collision node. There will be minor differences in how you handle movement. Which node you choose should depend on what other behavior you want in your game. For this recipe, we're only concerned with the movement.\n"
 "{{% /notice %}}"
-msgstr "{{< gd-icon `RigidBody3D` >}}{{% notice tip %}}\n「{{< gd-icon `CharacterBody3D` >}}`CharacterBody3D`」、または {{< gd-icon Area3D >}} 「Area3D」を衝突ノードとして使用できます。ただし、移動制御の方法には若干の違いが生じます。どのノードを選択するかは、ゲームで他にどのような挙動を必要とするかによって決めるべきです。このレシピでは、単に動きに焦点を当てています。\n{{% /notice %}}"
+msgstr ""
+"{{< gd-icon `RigidBody3D` >}}{{% notice tip %}}\n"
+"「{{< gd-icon `CharacterBody3D` >}}`CharacterBody3D`」、または {{< gd-icon Area3D >}} 「Area3D」を衝突ノードとして使用できます。ただし、移動制御の方法には若干の違いが生じます。どのノードを選択するかは、ゲームで他にどのような挙動を必要とするかによって決めるべきです。このレシピでは、単に動きに焦点を当てています。\n"
+"{{% /notice %}}"
 
 #: 3D/rolling_cube.md
 msgid "Now the pivot node is at the correct edge and rotating it will also rotate the mesh."
@@ -6513,7 +6519,8 @@ msgstr ""
 msgid ""
 "Remember how the 3D gizmo can be set to \"Local Space Mode\"? When in this mode,\n"
 "the gizmo's **X/Y/Z** axes point along the _object's_ axes. This is the same as the `basis` of the transform. The basis contains three `Vector3` objects called `x`, `y`, and `z` that represent these directions. We can use this to ensure that pressing the **W** key will always move us in the object's forward direction."
-msgstr "3Dギズモを『ローカル空間モード』に設定できることを思い出してください。このモードで動作させると、\n"
+msgstr ""
+"3Dギズモを『ローカル空間モード』に設定できることを思い出してください。このモードで動作させると、\n"
 "ギズモの**X/Y/Z** 軸はオブジェクトそのものの座標系に沿って配置されます。これは変換の `basis` と同じ概念です。基底には `x`, `y`, `z` という3つの `Vector3` オブジェクトが含まれており、これらが各方向を表します。この機能を利用することで、**W**キーを押すと常にオブジェクトの進行方向に移動させることができます。"
 
 #: g101/3d/101_3d_03.md
@@ -6720,7 +6727,10 @@ msgid ""
 "{{% notice note %}}\n"
 "The value of `mouse_sensitivity` maps the movement of the mouse, which is in pixels, to rotation, in degrees. So for each pixel the mouse moves, we'll rotate by `0.002` radians (or about `0.1` degrees).\n"
 "{{% /notice %}}"
-msgstr "{{% notice note %}}\n`mouse_sensitivity` の値は、マウスの移動距離（ピクセル単位）を角度回転に変換します。つまり、マウスが1ピクセル移動するごとに、`0.002`ラジアン（約`0.1`度）だけ回転します。\n{{% /notice %}}"
+msgstr ""
+"{{% notice note %}}\n"
+"`mouse_sensitivity` の値は、マウスの移動距離（ピクセル単位）を角度回転に変換します。つまり、マウスが1ピクセル移動するごとに、`0.002`ラジアン（約`0.1`度）だけ回転します。\n"
+"{{% /notice %}}"
 
 #: g101/3d/101_3d_07.md
 msgid "In this installment, we'll look at how to make a first-person character. We'll use the CSG-based level we designed in the previous part as a place to walk   around and test our movement."
@@ -6932,7 +6942,12 @@ msgid ""
 "property as well. This reverses the shape so that the solid walls are on the\n"
 "inside rather than the outside. Also check the _Use Collision_ property, so that\n"
 "the physics engine will treat this shape as a static body object."
-msgstr "まず `CSGBox` を作成し、以下のプロパティを設定します。\n* 幅 (Width) と奥行き (Depth) を `20` に設定\n* 高さ (Height) を `5` に設定\n\nこのボックスは内部に侵入するものとして扱う必要があるため、[面反転] (Invert Faces) プロパティも有効にしてください。これにより形状が反転し、内側の壁面が外側になります。さらに、[衝突機能使用] (Use Collision) プロパティもチェックしてください。これにより、物理エンジンはこの形状を静止物体オブジェクトとして適切に処理します。"
+msgstr ""
+"まず `CSGBox` を作成し、以下のプロパティを設定します。\n"
+"* 幅 (Width) と奥行き (Depth) を `20` に設定\n"
+"* 高さ (Height) を `5` に設定\n"
+"\n"
+"このボックスは内部に侵入するものとして扱う必要があるため、[面反転] (Invert Faces) プロパティも有効にしてください。これにより形状が反転し、内側の壁面が外側になります。さらに、[衝突機能使用] (Use Collision) プロパティもチェックしてください。これにより、物理エンジンはこの形状を静止物体オブジェクトとして適切に処理します。"
 
 #: g101/3d/101_3d_06.md
 msgid ""
@@ -7754,7 +7769,9 @@ msgid ""
 "ahead of the player, we'll pass the player's transform to `start()` and use it\n"
 "to orient the bullet and make it move forward (remember in Godot's orientation,\n"
 "\"forward\" is along the negative **z** axis)."
-msgstr "プレイヤーの位置から正確に前方へ発射するため、プレイヤーのトランスフォームを `start()` に渡し、\nこれを使用して弾丸の方向を調整し、前進させます (Godot では向きに関して、「前方」は負の z軸方向です)。"
+msgstr ""
+"プレイヤーの位置から正確に前方へ発射するため、プレイヤーのトランスフォームを `start()` に渡し、\n"
+"これを使用して弾丸の方向を調整し、前進させます (Godot では向きに関して、「前方」は負の z軸方向です)。"
 
 #: g101/3d/101_3d_04.md
 msgid "Add a spike instance to your level and try it out:"
@@ -9466,7 +9483,9 @@ msgstr "「アステロイド」のもう一つの特徴は、画面がループ
 
 #: kyn/rigidbody2d.md
 msgid "So the answer is to use `_integrate_forces()` *instead* of `_physics_process()`, because in that function you are able to safely modify the body's [Physics2DDirectBodyState](http://docs.godotengine.org/en/stable/classes/class_physics2ddirectbodystate.html). I highly recommend you take a look at the linked document; there is a lot of really useful data provided in the physics state object. For our purposes, the key piece of information is the body’s [Transform2D](http://docs.godotengine.org/en/stable/classes/class_transform2d.html)."
-msgstr " `_physics_process()` の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [Physics2DDirectBodyState](https://docs.godotengine.org/ja/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。\n 関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](https://docs.godotengine.org/ja/stable/classes/class_transform2d.html) に関する情報です。"
+msgstr ""
+" `_physics_process()` の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [Physics2DDirectBodyState](https://docs.godotengine.org/ja/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。\n"
+" 関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](https://docs.godotengine.org/ja/stable/classes/class_transform2d.html) に関する情報です。"
 
 #: kyn/rigidbody2d.md
 msgid "Play the scene - you should be able to fly around freely:"
@@ -11827,7 +11846,10 @@ msgid ""
 "- _Node A_ and _Node B_: The assigned physics bodies.\n"
 "- _Bias_: The rate at which the joint pulls the two bodies back together if they move apart. Defaults to `0`.\n"
 "- _Disable Collisions_: Allows the connected bodies to ignore collisions between them. Defaults to `true`."
-msgstr "- _Node A_ and _Node B_：割り当てられた物理ボディ\n- _Bias_：両オブジェクトが離れる方向に関節が引き寄せる速度。デフォルト値は `0` です\n- _Disable Collisions_：接続されたオブジェクト間の衝突を考慮しないようにできます。デフォルトは `true`（有効）です"
+msgstr ""
+"- _Node A_ and _Node B_：割り当てられた物理ボディ\n"
+"- _Bias_：両オブジェクトが離れる方向に関節が引き寄せる速度。デフォルト値は `0` です\n"
+"- _Disable Collisions_：接続されたオブジェクト間の衝突を考慮しないようにできます。デフォルトは `true`（有効）です"
 
 #: physics/joints_2d.md
 msgid "Using 2D Joints"
@@ -12971,7 +12993,11 @@ msgid ""
 "  - {{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`: This represents the platform itself. This is the node that will move.\n"
 "    - {{< gd-icon Sprite2D >}}`Sprite2D`: You can use a sprite sheet here, individual images, or even a {{< gd-icon TileMap >}}`TileMap`.\n"
 "    - {{< gd-icon CollisionShape2D >}}`CollisionShape2D`: Don't make the hitbox too big, or the player will appear to be \"hovering\" off the edge of the platform."
-msgstr "- {{< gd-icon Node2D >}}`Node2D` (\"MovingPlatform\")：この `Node2D` の親ノードは「アンカー」またはプラットフォームの起点として機能します。アニメーションでは、この親ノードを基準としたプラットフォームの `位置変化` を制御します。\n  - {{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`：これは実際に移動するプラットフォーム本体を表します。このノードが移動対象となります。\n    - {{< gd-icon Sprite2D >}}`Sprite2D`：ここではスプライトシート、個別の画像、あるいは {{< gd-icon `TileMap` >}} ノードとしてタイルマップを使用することもできます。\n    - {{< gd-icon CollisionShape2D >}}`CollisionShape2D`：ヒットボックスの大きさが大きすぎると、プレイヤーがプラットフォームの端から「浮いて」見える原因になるので注意してください。"
+msgstr ""
+"- {{< gd-icon Node2D >}}`Node2D` (\"MovingPlatform\")：この `Node2D` の親ノードは「アンカー」またはプラットフォームの起点として機能します。アニメーションでは、この親ノードを基準としたプラットフォームの `位置変化` を制御します。\n"
+"  - {{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`：これは実際に移動するプラットフォーム本体を表します。このノードが移動対象となります。\n"
+"    - {{< gd-icon Sprite2D >}}`Sprite2D`：ここではスプライトシート、個別の画像、あるいは {{< gd-icon `TileMap` >}} ノードとしてタイルマップを使用することもできます。\n"
+"    - {{< gd-icon CollisionShape2D >}}`CollisionShape2D`：ヒットボックスの大きさが大きすぎると、プレイヤーがプラットフォームの端から「浮いて」見える原因になるので注意してください。"
 
 #: 2D/moving_platforms.md
 msgid "The platform scene contains the following nodes:"
@@ -13201,7 +13227,12 @@ msgstr "完全な参考として、以下にフルバージョンの`TouchCamera
 
 #: 2D/touchscreen_camera.md
 msgid "Here we handle the case of `2` active drag events. `drag_distance` tells us how far apart they are, and we can compare it with `last_drag_distance` to see if it's larger or smaller. `zoom_speed` is a factor, so we'll be multiplying the zoom by `1.05` (for zooming in) and `0.95` (for zooming out). We can then clamp the resulting zoom so that it doesn't exceed our designated limits, and then assign the new `zoom` level. Finally, we update `last_drag_distance` for the next event."
-msgstr "アクティブなドラッグイベントが`2`件ある場合の処理を記述\n`drag_distance` は各イベント間の距離を示し、`last_drag_distance` と比較して増減を確認可能\n`zoom_speed` は倍率係数で、ズームイン時は`1.05`倍、アウト時は`0.95`倍に調整する\n計算結果が指定された範囲を超えないように制限を施し、新しい `zoom` 値を設定\n最後に次回イベント用に `last_drag_distance` を更新します。"
+msgstr ""
+"アクティブなドラッグイベントが`2`件ある場合の処理を記述\n"
+"`drag_distance` は各イベント間の距離を示し、`last_drag_distance` と比較して増減を確認可能\n"
+"`zoom_speed` は倍率係数で、ズームイン時は`1.05`倍、アウト時は`0.95`倍に調整する\n"
+"計算結果が指定された範囲を超えないように制限を施し、新しい `zoom` 値を設定\n"
+"最後に次回イベント用に `last_drag_distance` を更新します。"
 
 #: 2D/touchscreen_camera.md
 msgid ""
@@ -13438,7 +13469,10 @@ msgid ""
 "{{% notice note %}}\n"
 "Godot considers an angle of `0` degrees to be pointing along the `x` axis. This means that a node's forward direction (`transform.x`) is to the right. You should ensure that your character's sprite is also drawn pointing to the right.\n"
 "{{% /notice %}}"
-msgstr "{{% notice note %}}\nGodotでは角度 `0` 度を`x`軸に沿っていることを意味します。これは、ノードの前方方向（`transform.x`）が右向きであることを示しています。キャラクタースプライトも同様に、右側に向かって描画されるように設定してください。\n{{% /notice %}}"
+msgstr ""
+"{{% notice note %}}\n"
+"Godotでは角度 `0` 度を`x`軸に沿っていることを意味します。これは、ノードの前方方向（`transform.x`）が右向きであることを示しています。キャラクタースプライトも同様に、右側に向かって描画されるように設定してください。\n"
+"{{% /notice %}}"
 
 #: 2D/topdown_movement.md
 msgid "For this solution, we'll assume you have the following input actions defined:"
@@ -13551,7 +13585,9 @@ msgstr ""
 msgid ""
 "Now we can assign a target to each camera and it will follow that node's position.\n"
 "We'll do that in the `Main` script:"
-msgstr "現在、各カメラにターゲットを割り当て、そのノードの位置に従うように設定できます。\n以下の`Main`スクリプトで実装します。"
+msgstr ""
+"現在、各カメラにターゲットを割り当て、そのノードの位置に従うように設定できます。\n"
+"以下の`Main`スクリプトで実装します。"
 
 #: 2D/splitscreen_demo.md
 msgid ""
@@ -15059,7 +15095,7 @@ msgstr "プレイヤーシーンの設計"
 
 #: games/first_2d/first_2d_02.md
 msgid "In the **Inspector**, under the **Animation** section, you'll find a property called **Sprite Frames**, which is currently `<empty>`. Click it to create a `New SpriteFrames`, then click the `SpriteFrames` item to open the animation panel at the bottom of the editor window."
-msgstr msgid "インスペクターの**アニメーション** セクション内にある**Sprite Frames**プロパティは、現在 `<空>` と表示されています。これをクリックすると新しい `SpriteFrames`が作成され、エディタウィンドウ下部にあるアニメーションパネルを開くために `SpriteFrames` 項目をクリックできるようになります。"
+msgstr "インスペクターの**アニメーション** セクション内にある**Sprite Frames**プロパティは、現在 `<空>` と表示されています。これをクリックすると新しい `SpriteFrames`が作成され、エディタウィンドウ下部にあるアニメーションパネルを開くために `SpriteFrames` 項目をクリックできるようになります。"
 
 #: games/first_2d/first_2d_02.md
 msgid "### Choosing nodes"
@@ -15075,7 +15111,7 @@ msgstr "![alt](/godot_recipes/4.x/img/2d_101_04.png)"
 
 #: games/first_2d/first_2d_02.md
 msgid "In the **Inspector** for this node, you'll see a **Shape** property that currently shows `<empty>`. If you click in this box, you'll see a dropdown that allows you to select from a variety of shapes. Choose {{< gd-icon RectangleShape2D >}}`New RectangleShape2D` and you'll see a light blue square appear over the ship. You can adjust the size of the shape by dragging the orange circles, or you can click on the shape in the **Shape** property to expand it and fill in the **Size** manually."
-msgstr "このノードの**インスペクタ**ウィンドウで**形状**プロパティを確認すると、現在は `<empty>` と表示されています。このボックスをクリックすると、様々な形状を選択できるドロップダウンメニューが表示されます。ここでは {{< gd-icon RectangleShape2D >}}.  `New RectangleShape2D` を選択して追加すると、船の上に水色の正方形が表示されるはずです。図形のサイズは、オレンジ色の円をドラッグして調整できます。または、形状 プロパティ内の **Shape** をクリックして拡大表示し、手動で **サイズ** を入力することも可能です。""
+msgstr "このノードの**インスペクタ**ウィンドウで**形状**プロパティを確認すると、現在は `<empty>` と表示されています。このボックスをクリックすると、様々な形状を選択できるドロップダウンメニューが表示されます。ここでは {{< gd-icon RectangleShape2D >}}.  `New RectangleShape2D` を選択して追加すると、船の上に水色の正方形が表示されるはずです。図形のサイズは、オレンジ色の円をドラッグして調整できます。または、形状 プロパティ内の **Shape** をクリックして拡大表示し、手動で **サイズ** を入力することも可能です。"
 
 #: games/first_2d/first_2d_02.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_07.png?width=800)"
@@ -18347,4 +18383,3 @@ msgstr "また、ベクトル間での補間もできます。`Vector2` およ�
 #: games/circle_jump/circle_jump_05.md
 msgid "Instance the HUD in the main scene, and add `$HUD.hide_score()` to the `_ready()` and `_on_Jumper_died()` functions. In `new_game()` we need to show the hud and display a message:"
 msgstr "メインシーンにHUDインスタンスを作成し、`_ready()`関数と`_on_Jumper_died()`関数内に`$HUD.hide_score()`を追加してください。`new_game()`関数では、HUDを表示してメッセージを表示します。以下のように実装します。"
-

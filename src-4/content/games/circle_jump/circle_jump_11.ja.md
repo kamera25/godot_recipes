@@ -142,9 +142,9 @@ func set_enable_ads(value):
 
 ボタンを追加するには、3行目のボタン列が必要になります。`BaseScreen`シーンを開き、最初のHBoxContainerを複製してください。
 
-[SettingsScreen]シーンに「Ads」という名前の「Button」を中央の行に追加してください。テキストを「広告を無効にする」に設定し、カスタムフォント（サイズ48が適切です）を適用し、さらにカスタムスタイルをすべて「New StyleBoxEmpty」に設定してください。最後に、このボタンを「buttons」グループに追加することを忘れないでください。
+[`SettingsScreen`]シーンに「Ads」という名前の`Button`を中央の行に追加してください。テキストを「広告を無効にする」に設定し、カスタムフォント（サイズ48が適切です）を適用し、さらにカスタムスタイルをすべて「New StyleBoxEmpty」に設定してください。最後に、このボタンを「buttons」グループに追加することを忘れないでください。
 
-「Screens.gd」ファイル内で、ボタン処理用の「match」ステートメントに以下を追加してください。
+`Screens.gd`ファイル内で、ボタン処理用の`match`ステートメントに以下を追加してください。
 
 ```gdscript
 match button.name:

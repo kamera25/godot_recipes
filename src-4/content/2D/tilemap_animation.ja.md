@@ -30,7 +30,7 @@ ghcommentid: 27
 
 ![alt](/godot_recipes/4.x/img/create_new_resource.png)
 
-「AnimatedTexture」を選択し、［フレーム］プロパティを「5」に設定します。各フレームごとに、対応する画像を［テクスチャ］プロパティにドラッグしてください。
+`AnimatedTexture`を選択し、［フレーム］プロパティを`5`に設定します。各フレームごとに、対応する画像を［テクスチャ］プロパティにドラッグしてください。
 
 ![alt](/godot_recipes/4.x/img/anim_texture_add.png)
 
@@ -40,7 +40,7 @@ ghcommentid: 27
 
 ### TileMapでのAnimatedTextureの使用について
 
-アニメーション付きテクスチャが保存されたので、これで`TileSet`で使用できるようになります。新規または既存の{{< gd-icon TileMap >}}`TileMap`を開き、その _Tile Set_ プロパティを選択します。新しいテクスチャを`TileSet`に追加するには、ボタンをクリックしてください。
+`AnimatedTexture` が保存されたので、これで`TileSet`で使用できるようになります。新規または既存の{{< gd-icon TileMap >}}`TileMap`を開き、その _Tile Set_ プロパティを選択します。新しいテクスチャを`TileSet`に追加するには、ボタンをクリックしてください。
 
 ![alt](/godot_recipes/4.x/img/anim_tile_add.png)
 
