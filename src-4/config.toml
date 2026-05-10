@@ -1,8 +1,8 @@
-baseURL = 'https://godotrecipes.com/godot_recipes/4.x/'
-languageCode = 'en-us'
-defaultContentLanguage = 'en'
+baseURL = 'https://kamera25.github.io/godot_recipes/4.x/'
+languageCode = 'ja-jp'
+defaultContentLanguage = 'ja'
 publishDir = "../docs/4.x"
-title = 'Godot 4 Recipes'
+title = 'Godot 4 レシピ'
 theme = "hugo-theme-relearn-main"
 pygmentsStyle = "nord"
 pygmentsCodeFences = true
@@ -31,6 +31,9 @@ themesDir = "../themes_shared"
     identifier = "godotdocs"
     url = "https://docs.godotengine.org/"
     weight = 40
+
+    [languages.en.params]
+    description = "An unofficial Japanese translation site of Godot Recipes, featuring game development tutorials, tips, and code examples for Godot 4."
 
   [languages.ja]
     languageName = "日本語"
@@ -66,6 +69,9 @@ themesDir = "../themes_shared"
     identifier = "godotdocs"
     url = "https://docs.godotengine.org/ja/"
     weight = 40
+
+    [languages.ja.params]
+    description = "Godot Engineを用いたゲーム開発のチュートリアルや実装例を豊富に含んだ非公式日本語訳サイトです。"
 
 [params]
     disableNextPrev = true
