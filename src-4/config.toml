@@ -1,6 +1,6 @@
 baseURL = 'https://kamera25.github.io/godot_recipes/4.x/'
 languageCode = 'ja-jp'
-defaultContentLanguage = 'ja'
+defaultContentLanguage = 'en'
 publishDir = "../docs/4.x"
 title = 'Godot 4 レシピ'
 theme = "hugo-theme-relearn-main"
