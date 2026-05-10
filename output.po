@@ -5893,7 +5893,7 @@ msgstr "入力アクションを活用することで、コードの設定可能
 
 #: input/input_actions.md
 msgid "- `is_action_pressed()`: This function returns `true` if the action is currently in the `pressed` state."
-msgstr "- `is_action_pressed()`: この関数は現在アクションが「押された」状態にある場合に`true`を返します。"
+msgstr "- `is_action_pressed()`: この関数は現在アクションが`押された`状態にある場合に`true`を返します。"
 
 #: input/input_actions.md
 msgid "- [Inputs: Introduction](/godot_recipes/3.x/input/input_intro/)"
@@ -6052,7 +6052,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice tip %}}\n"
-"通常のボタンとは異なり、マウスホイールクリックでは「押された」イベントのみが発生します。マウスホイールクリックが「離された」というイベントはありません。\n"
+"通常のボタンとは異なり、マウスホイールクリックでは`pressed(押された)`イベントのみが発生します。マウスホイールクリックが「離された」というイベントはありません。\n"
 "{{% /notice %}}"
 
 #: input/mouse_input.md
@@ -6282,7 +6282,7 @@ msgid ""
 msgstr ""
 "以下の手順に従ってアニメーションを設定します。\n"
 "\n"
-"1. 「{{< gd-icon AnimationPlayer >}}AnimationPlayer」コンポーネントを選択します。\n"
+"1. 「{{< gd-icon AnimationPlayer >}}`AnimationPlayer`コンポーネントを選択します。\n"
 "2. 「アニメーション」ボタンをクリックし、続いて「新規作成」を選択します。\n"
 "3. 新しいアニメーションに「idle」という名前を付けます。\n"
 "4. アニメーションの長さを `2` に設定します。\n"
@@ -10756,7 +10756,7 @@ msgstr "クリック、ドラッグ、マウスボタンを放した時にボー
 msgid ""
 "Instance a Block, and then duplicate it (`Ctrl-D` on Windows and `Cmd-D` on MacOS)\n"
 "so you can make a nice stack. Something like this:"
-msgstr "インスタンス化したブロックを複製します（Windows では Ctrl+D、macOS では Command+D）。これで綺麗なスタックを作成できます。例えば："
+msgstr "インスタンス化したブロックを複製します（Windows では`Ctrl+D`、macOS では`Command+D`）。これで綺麗なスタックを作成できます。例えば："
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "A common mistake is to try adding something like this to `_physics_process()`:"
@@ -11467,7 +11467,7 @@ msgstr "Godotにおいて最も強力でありながらしばしば誤解され�
 
 #: physics/Godot3_kinematic2d.md
 msgid "> **NOTE:** `move_and_slide()` automatically calculates frame-based movement using `delta`. Do _not_ multiply your velocity vector by `delta` before passing it to `move_and_slide()`."
-msgstr "> **注意:** `move_and_slide()` 関数は内部で `delta` パラメーターを使用してフレームベースの移動計算を自動的に行います。速度ベクトルに手動で `delta` を掛けたものを直接渡す必要はありません。"
+msgstr "> **注意:** `move_and_slide()` 関数は内部で `delta` パラメーターを使用してフレームベースの移動計算を自動的に行います。つまり、速度ベクトルに手動で `delta` を掛けたものを直接渡す必要はありません。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "For this example, we'll assume you have a level made of StaticBody2D objects. They can be any shape and size. In the sample project, we're using a TileMap to lay out the level, but for the purposes of this demo, they could just as well be individual static bodies."
@@ -12209,7 +12209,7 @@ msgstr "メインシーン内（タンクと地面を含む部分）に、{{< gd
 
 #: 2D/2d_draw_trajectory.md
 msgid "This instances the bullet, adds it as a child to the \"world\" node (the tank's `owner`) and sets its initial properties. Note that we're using the tank to define gravity, but that's just for this example - in a full project you would likely use a global value for this."
-msgstr "このインスタンスでは弾丸オブジェクトを作成し、「世界」ノード（戦車の所有者）の下に子要素として追加し、初期プロパティを設定します。なお、この例では重力定義に戦車を利用していますが、これは単なるデモンストレーション用です。実際のプロジェクトでは、グローバルな値を使用する方が望ましいでしょう。"
+msgstr "このインスタンスでは弾丸オブジェクトを作成し、「World」ノード（戦車の`owner`）の下に子要素として追加し、初期プロパティを設定します。なお、この例では重力定義に戦車を利用していますが、これは単なるデモンストレーション用です。実際のプロジェクトでは、グローバルな値を使用する方が望ましいでしょう。"
 
 #: 2D/2d_draw_trajectory.md
 msgid "To improve the line's appearance, we've set the **Width** to `15` and all of the **Capping** options to \"Round\". We've also added a `Gradient` in the **Fill** section:"
@@ -15496,7 +15496,7 @@ msgstr "スプライトの**テクスチャ**を `Explosion (16 x 16).png` に�
 
 #: games/first_2d/first_2d_07.md
 msgid "This makes 27 enemies and positions them in a grid in the top half of the screen. We also make sure to connect the `died` signal of each, so we need to create that function:"
-msgstr "これにより、27体の敵キャラクターが生成され、画面上部半分にグリッド状に配置されます。また、各敵キャラの「死亡」シグナルを適切に接続する必要があるため、この機能を実装する関数を作成します。"
+msgstr "これにより、27体の敵キャラクターが生成され、画面上部半分にグリッド状に配置されます。また、各敵キャラの `died(死亡)` シグナルを適切に接続する必要があるため、この機能を実装する関数を作成します。"
 
 #: games/first_2d/first_2d_07.md
 msgid "We can start moving when the timer runs out, and we'll also shoot, but we haven't made a bullet yet, so that part will come later. Now that we're changing the `speed`, we can move using it."
