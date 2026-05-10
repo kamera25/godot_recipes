@@ -7,6 +7,7 @@ ghcommentid: 32
 
 {{% notice style="tips" title="ℹ️ 留意事項"%}}
 この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
 ## 課題
@@ -48,7 +49,7 @@ func _unhandled_input(event):
 
 メインシーン内（タンクと地面を含む部分）に、{{< gd-icon Line2D >}}`Line2D` を追加しました。これが軌跡を描画するための要素となります。
 
-ラインの見た目を改善するため、**幅**を`15`に設定し、すべての**角処理**オプションを「丸み」に変更しました。さらに、**Fill(塗りつぶし)**セクションに`Gradient(グラデーション)`を追加しました。
+ラインの見た目を改善するため、**幅**を`15`に設定し、すべての**角処理**オプションを「丸み」に変更しました。さらに、 **Fill(塗りつぶし)** セクションに`Gradient(グラデーション)`を追加しました。
 
 ![alt](/godot_recipes/4.x/img/2d_tank_03.png)
 

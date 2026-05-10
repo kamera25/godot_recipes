@@ -45,7 +45,7 @@ msgstr "経験豊富な開発者の方や、他のゲームエンジンに精通
 
 #: _index.md
 msgid "Are you ready to learn game development? Whether it's as a hobby or working towards your dream career, there's never been a better time to get started. Modern programming languages and tools have made it easier than ever to build high-quality games and distribute them to the world. One of these tools is the Godot game engine. For beginners, it offers a friendly way to learn gamedev techniques. For experienced developers, it's a powerful, customizable and _open_ tool for bringing your visions to life."
-msgstr "ゲーム開発を学ぶ準備はできていますか？趣味として、あるいは夢のキャリアへの第一歩として、今ほど良いタイミングはありません。現代のプログラミング言語とツールを駆使すれば、高品質なゲームを簡単に作成できます。また世界中に向けて配信できます。その中の一つがGodotゲームエンジンです。初心者でもゲーム開発技術を楽しく、親しみやすい方法で学ぶことができます。一方、経験豊富な開発者にとっては、自らのビジョンを形にするための強力なツールです。カスタマイズも可能で、オープンソースとして利用できます。"
+msgstr "ゲーム開発を学ぶ準備はできていますか？趣味として、あるいは夢のキャリアへの最初の一歩として、今ほど良いタイミングはありません。現代のプログラミング言語とツールを駆使すれば、高品質なゲームを簡単に作成できます。また世界中に向けて配信できます。その中の一つがGodotゲームエンジンです。初心者でもゲーム開発技術を楽しく、親しみやすい方法で学ぶことができます。一方、経験豊富な開発者にとっては、自らのビジョンを形にするための強力なツールです。カスタマイズも可能で、オープンソースとして利用できます。"
 
 #: _index.md
 msgid "If you're new to Godot, start here: [What is Godot?](/godot_recipes/4.x/g101/start/101_01/)."
@@ -99,7 +99,7 @@ msgstr "ではここで、より複雑なシーンツリーを見てみてくだ
 
 #: basics/getting_nodes.md
 msgid "For this reason, you should try to avoid using node paths that go *up* the scene tree. In the above situation, if the player instead emitted a signal when the health changed, the UI could listen for that signal to update itself. You could then rearrange and separate nodes without fear of breaking your game."
-msgstr "この理由から、シーンツリーの *上位* 方向へノードパスを指定する操作は避けるべきです。前述の状況では、プレイヤーのHPが変化した時にシグナルを発行するように変更すれば、UIコンポーネントはそのシグナルを受け取って自身の状態を更新できます。この方法なら、ゲームコードに影響を与えることなくノードを自由に再配置・分離することが可能になります。"
+msgstr "この理由から、シーンツリーの *上位* 方向へノードパスを指定する操作は避けるべきです。前述の状況では、プレイヤーのHPが変化した時にシグナルを発行するように変更すれば、UIコンポーネントはそのシグナルを受け取って自身の状態を更新できます。この方法なら、ゲームのソースコードに影響を与えることなくノードを自由に再配置・分離することが可能になります。"
 
 #: basics/getting_nodes.md
 msgid "Understanding node paths"
@@ -302,7 +302,7 @@ msgstr "## まとめ"
 
 #: basics/getting_nodes.md
 msgid "For example, the absolute path to the player node is:"
-msgstr "例えば、プレイヤーノードが絶対パスで指定されている場合。"
+msgstr "例えば、プレイヤーノードが絶対パスで指定されている場合は。"
 
 #: basics/getting_nodes.md
 msgid "The above examples all use *relative* paths - meaning they start at the current node and follow the path to the destination. Node paths can also be absolute, starting from the root node of the scene."
@@ -1838,7 +1838,7 @@ msgstr "[Kenney.nl: Platformer Art Deluxe](https://kenney.nl/assets/platformer-a
 
 #: ui/heart_containers_3.md
 msgid "Finally, for the partially filled containers, we have a third texture and twice the number of possible values:"
-msgstr "最後に、部分的に充填された容器については、第三のテクスチャと可能な値の数が2倍になります。"
+msgstr "最後に、部分的に充填された容器については、第3のテクスチャと可能な値の数が2倍になります。"
 
 #: ui/heart_containers_3.md
 msgid "![alt](/godot_recipes/4.x/img/heart_bar_04.gif)"
@@ -1889,7 +1889,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"入力値に対する境界チェックは行いません。ゲームでHPを実装する方法には様々な方法があるため、これについては開発者の裁量に委ねられています。\n"
+"ここでは入力値に対する境界チェックは行いません。ゲームでHPを実装する様々な方法があるためです。\n"
 "{{% /notice %}}"
 
 #: ui/heart_containers_3.md
@@ -1936,7 +1936,7 @@ msgstr ""
 
 #: ui/heart_containers_3.md
 msgid "Use this heart bar setup as a basis for your own HUD. This technique can be expanded to support a wide variety of information displays."
-msgstr "このハートバーの設定を、独自のHUD作成の基礎として活用してください。この手法をさらに拡張すれば、多種多様な情報を表示できます。"
+msgstr "このハートバーの設定を、独自のHUD(ヘッドアップディスプレイ)作成の基礎として活用してください。この手法をさらに拡張すれば、多種多様な情報を表示できます。"
 
 #: ui/level_select.md
 msgid "### 2: Grid"
@@ -3002,7 +3002,7 @@ msgstr "FPSゲームで射撃機能を実装しますが、個別の発射物を
 
 #: 3D/shooting_raycasts.md
 msgid "We'll use the second method, querying the physics state, because we want to know, at the moment we press the \"shoot\" key, whether we've hit anything."
-msgstr "第二の方法、つまり物理状態を問い合わせる方法を採用します。これは、「発射」キーを押した瞬間に、何かに当たったかどうかを知りたいからです。"
+msgstr "2つ目の方法、つまり物理状態を問い合わせる方法を採用します。これは、「発射」キーを押した瞬間に、何かに当たったかどうかを知りたいからです。"
 
 #: 3D/shooting_raycasts.md
 msgid "- [Basic FPS Character](/godot_recipes/4.x/3d/basic_fps)"
@@ -3125,7 +3125,7 @@ msgstr "### ロール/ヨー軸の連動設定"
 
 #: 3D/spaceship.md
 msgid "In the `get_input()` function, change the line getting `yaw_input` to the following:"
-msgstr "In the `get_input()` function, change the line getting `yaw_input` to the following:"
+msgstr "`get_input()` 関数内で、`yaw_input`を取得する行を以下のように変更してください："
 
 #: 3D/spaceship.md
 msgid "![alt](/godot_recipes/4.x/img/3d_ship_01.png)"
@@ -3193,7 +3193,7 @@ msgstr "### 全スクリプト"
 
 #: 3D/spaceship.md
 msgid "Make a test scene with a {{< gd-icon Camera3D >}} `Camera3D` to try it out. You can use a stationary camera or a [chase camera](/godot_recipes/4.x/3d/interpolated_camera/). Check that the ship accelerates and slows before moving on to the next step."
-msgstr "テスト用シーンを作成し、{{< gd-icon Camera3D >}}`Camera3D` コンポーネントを試してみます。固定カメラを使用するか、［追従カメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/) を採用することもできます。宇宙船が加速と減速を適切に行うことを確認した上で、次のステップに進んでください。"
+msgstr "テスト用シーンを作成し、{{< gd-icon Camera3D >}}`Camera3D` コンポーネントを試してみます。固定カメラを使用するか、[追従カメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/) を採用することもできます。宇宙船が加速と減速を適切に行うことを確認した上で、次のステップに進んでください。"
 
 #: 3D/spaceship.md
 msgid "![alt](/godot_recipes/4.x/img/3d_ship_03.gif)"
@@ -3508,7 +3508,7 @@ msgstr "これで完了です。シーンを実行して実際に試してみま
 
 #: 3D/3d_shooting.md
 msgid "Using `look_at()` each frame turns the bullet to point in its direction of travel."
-msgstr "Using `look_at()` each frame turns the bullet to point in its direction of travel."
+msgstr "`look_at()` をフレームごとに使用すると、弾丸は常に進行方向を向くようになります。"
 
 #: 3D/rotate_interpolate.md
 msgid "![alt](/godot_recipes/4.x/img/3d_rotate_01.gif)"
@@ -3574,7 +3574,7 @@ msgstr "以下の例では、ミサイルや矢のような3Dオブジェクト�
 
 #: 3D/rotate_interpolate.md
 msgid "Note that `look_at()` requires 2 parameters: the target position, and an \"up vector\". Imagine an airplane pointing its nose towards a target - there are an infinite number of ways it could be oriented, because the plane could roll about its axis. This second parameter is how you define what you want the final orientation to be."
-msgstr "注：`look_at()` 関数は2つのパラメーターを必要とします。ターゲット位置と「上方向ベクトル」です。飛行機が目標地点に向かって機首を向ける様子を想像してみてください。機体の向きには無数の方法が考えられます。これは、航空機がその軸を中心に回転できるためです。この第二パラメーターによって、最終的な機体の向きをどのように定義するかを指定します。"
+msgstr "注：`look_at()` 関数は2つのパラメーターを必要とします。ターゲット位置と「上方向ベクトル」です。飛行機が目標地点に向かって機首を向ける様子を想像してみてください。機体の向きには無数の方法が考えられます。これは、航空機がその軸を中心に回転できるためです。この第2パラメーターによって、最終的な機体の向きをどのように定義するかを指定します。"
 
 #: 3D/rotate_interpolate.md
 msgid "When you first encounter this problem, you may find yourself thinking in terms of *Euler angles* - the three values representing the angles to the **x/y/z** axes. While Godot will allow you to see the object's Euler angles in the `rotation` property, it is not recommended to use them to work in 3D. There are a number of reasons why this the case, such as a problem called \"gimbal lock\", where you lose one degree of freedom when one of your rotations reaches 90 degrees."
@@ -4283,7 +4283,7 @@ msgstr "CharacterBody3Dの移動"
 
 #: 3D/simple_airplane.md
 msgid "In this recipe, we're going to make a *simplified* airplane controller. By \"simplified\" we mean stripping things down to the basics. We're looking for the \"feel\" of flying a plane - one that you can just jump in and start flying effortlessly, with a minimal control scheme."
-msgstr "このレシピでは、「簡素化された」航空機コントローラーを作成します。ここで言う「簡素化」とは、基本機能だけに絞り込むことを意味します。目指しているのは、飛行機の操縦感覚――特別な訓練なしですぐに飛び立て、最小限の操作体系で簡単に飛行を楽しめるような体験です。"
+msgstr "このレシピでは、*単純な*航空機コントローラーを作成します。ここで言う「単純な」とは、基本機能だけに絞り込むことを意味します。目指しているのは、飛行機の操縦感覚――特別な訓練なしですぐに飛び立て、最小限の操作体系で簡単に飛行を楽しめるような体験です。"
 
 #: 3D/simple_airplane.md
 msgid "Notice that while the plane turns, it doesn't really look natural. Airplanes *bank* when they turn, so let's animate that by changing the rotation of the mesh:"
@@ -4481,7 +4481,7 @@ msgstr "まず、{{< gd-icon CharacterBody3D >}}`CharacterBody3D` ノードか�
 
 #: 3D/basic_fps.md
 msgid "First, we need the player to rotate left/right when we move the mouse the same way. Mouse input is represented in 2D, relative to the screen, so we need the `x` movement of the mouse to rotate the player's body around its `y` (vertical) axis. The `mouse_sensitivity` property we defined above lets us adjust how many pixels of mouse movement translate to a degree of rotation."
-msgstr "まず第一に、マウスを動かすのと同じ方向にプレイヤーを左／右に回転させる必要があります。マウス入力は画面座標系で2次元的に表現されるため、マウスの水平方向（`x`）の動きを、垂直軸である`y`を軸にしたプレイヤー本体の回転に変換する必要があります。先ほど定義した`mouse_sensitivity`プロパティを使えば、マウス移動量がどれだけ回転角度に相当するかを調整できます。"
+msgstr "まず、マウスを動かすのと同じ方向にプレイヤーを左／右に回転させる必要があります。マウス入力は画面座標系で2次元的に表現されるため、マウスの水平方向（`x`）の動きを、垂直軸である`y`を軸にしたプレイヤー本体の回転に変換する必要があります。先ほど定義した`mouse_sensitivity`プロパティを使えば、マウス移動量がどれだけ回転角度に相当するかを調整できます。"
 
 #: 3D/basic_fps.md
 msgid "We'll leave all the sizing at the default values, meaning the capsule will be 2 meters high. Move it up by `1.0` m to align its bottom with the ground."
@@ -4771,7 +4771,7 @@ msgstr "ブレンドスペースの実験が終わったら、パネル上部の
 
 #: 3D/assets/character_animation.md
 msgid "### About the AnimationTree"
-msgstr "### アニメーションツリーについて"
+msgstr "### アニメーションツリー(AnimationTree)について"
 
 #: 3D/assets/character_animation.md
 msgid "Also, consider when the character is standing still: it should be playing the \"Idle\" animation. When the player presses \"forward\", the character should move and switch to playing the \"Walking\" animation. This sudden transition is going to look jarring, so we'd prefer if the two animations can be \"blended\" into a smoother transition."
@@ -4922,7 +4922,7 @@ msgstr ""
 
 #: 3D/assets/importing_assets.md
 msgid "Right click `knight.glb` in the **FileSystem** and choose *New Inherited Scene*."
-msgstr "ファイルシステム内の`knight.glb`を右クリックし、［新規継承シーン］を選択してください。"
+msgstr "**ファイルシステム**内の`knight.glb`を右クリックし、*新規継承シーン*を選択してください。"
 
 #: 3D/assets/importing_assets.md
 msgid "![alt](/godot_recipes/4.x/img/3d_import_physics.png)"
@@ -5307,7 +5307,7 @@ msgstr "#### 胸"
 
 #: 3D/assets/level_design.md
 msgid "A third option is to use a separate tool to design your levels and then import them to Godot. [Blender](https://blender.org/) is a very popular choice for this. Odds are, if you're making your own 3D assets, you're probably already using Blender to do your modeling."
-msgstr "第三の選択肢として、専用ツールでレベルを設計した後、Godotにインポートする方法があります。[Blender](https://blender.org/)はこの目的で非常に人気の高い選択です。すでに独自の3Dアセットを作成している場合、おそらくモデリング作業にはBlenderを使用していることでしょう。"
+msgstr "第3の選択肢として、専用ツールでレベルを設計した後、Godotにインポートする方法があります。[Blender](https://blender.org/)はこの目的で非常に人気の高い選択です。すでに独自の3Dアセットを作成している場合、おそらくモデリング作業にはBlenderを使用していることでしょう。"
 
 #: 3D/assets/level_design.md
 msgid "### Options"
@@ -5628,7 +5628,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice note %}}\n"
-"Godot には組み込みの `InterpolatedCamera` ノードが用意されており、ここで説明している機能の大部分をすでに実装しています。ただし、このノードを使用しない理由は2つあります。第一に、キャラクターボディを追いかける際にカクツキが発生しやすい点、次に Godot 4.0 で廃止予定となっている点です。とはいえ、独自のセットアップは非常に簡単ですので、ご安心ください。<i class='far fa-smile-beam'></i>\n"
+"Godot には組み込みの `InterpolatedCamera` ノードが用意されており、ここで説明している機能の大部分をすでに実装しています。ただし、このノードを使用しない理由は2つあります。まず、キャラクターボディを追いかける際にカクツキが発生しやすい点、次に Godot 4.0 で廃止予定となっている点です。とはいえ、独自のセットアップは非常に簡単ですので、ご安心ください。<i class='far fa-smile-beam'></i>\n"
 "{{% /notice %}}"
 
 #: 3D/kinematic_car/car_camera.md
@@ -8785,7 +8785,7 @@ msgstr "### 実用的な応用例"
 
 #: Math/dot_cross_product.md
 msgid "This demonstrates two common applications of these methods. If the red vector is our object's forward direction, and the green shows the direction towards another object:"
-msgstr "この例は、これらの手法の2つの典型的な応用事例を示しています。赤色ベクトルが対象物の前方方向を表し、緑色ベクトルが他の物体に向かう方向を示す場合："
+msgstr "この例は、これらの手法の2つのよくある応用事例を示しています。赤色ベクトルが対象物の前方方向を表し、緑色ベクトルが他の物体に向かう方向を示す場合。"
 
 #: Math/transforms.md
 msgid ""
@@ -9275,11 +9275,11 @@ msgid ""
 "* **Delete Point** - Click to delete a point.\n"
 "* **Close Curve** - Connects the last point in the curve to the first one, creating a loop."
 msgstr ""
-"* **ポイント選択ツール** - クリック＆ドラッグで既存のポイントを移動できます。\n"
-"* **コントロール点設定ツール** - ポイントに調整ハンドルを追加し、カーブ形状を調整できます（詳細は後述）。\n"
-"* **新規ポイント追加ツール** - 空白部分をクリックすることで新しいポイントを作成します。\n"
-"* **ポイント削除ツール** - クリックすると指定したポイントを削除します。\n"
-"* **曲線閉じ処理ツール** - 曲線の最終ポイントと最初のポイントを接続してループ状に仕上げます。"
+"* **ポイントを選択** - クリック＆ドラッグで既存のポイントを移動できます。\n"
+"* **コントロールポイントを選ぶ** - ポイントに調整ハンドルを追加し、カーブ形状を調整できます（詳細は後述）。\n"
+"* **ポイントを追加(空きポイントに)** - 空白部分をクリックすることで新しいポイントを作成します。\n"
+"* **点を削除** - クリックすると指定したポイントを削除します。\n"
+"* **曲線を閉じる** - 曲線の最終ポイントと最初のポイントを接続してループ状に仕上げます。"
 
 #: kyn/path2d.md
 msgid "* `get_closest_offset()`"
@@ -9319,7 +9319,7 @@ msgstr "これは、平面ノードを {{< gd-icon Sprite2D >}}`Sprite`として
 
 #: kyn/path2d.md
 msgid "Consider this example, from the [AI: Context-based Steering](/godot_recipes/3.x/ai/context_map/) recipe:"
-msgstr "以下の例を[AI：場面に基づく操縦](/godot_recipes/4.x/ja/ai/context_map/)レシピからご覧ください。"
+msgstr "以下の例を[AI：状況に基づく操縦](/godot_recipes/4.x/ja/ai/context_map/)レシピからご覧ください。"
 
 #: kyn/path2d.md
 #, fuzzy
@@ -10072,7 +10072,7 @@ msgstr "エージェントのスクリプト内では、エージェントが移
 
 #: ai/context_map.md
 msgid "This will vary depending on what your agent's goal is. If it's to chase the player, then the `interest` values should be high in the direction of the player. You can even have multiple targets: closer goals have higher interest, but if an obstacle cancels them out, the lower scoring goals will win."
-msgstr "これはエージェントの目標内容によって異なります。もしその目的が『プレイヤーを追跡すること』であれば、`興味度`値はプレイヤー方向へ高くなるべきです。複数のターゲットを設定することも可能で、より近い目標ほど高い興味を持ちますが、障害物によって無効化された場合、スコアが低い他の目標が優先されます。"
+msgstr "これはエージェントの目標内容によって異なります。もしその目的が『プレイヤーを追跡すること』であれば、`interest`の値はプレイヤー方向へ高くなるべきです。複数のターゲットを設定することも可能で、より近い目標ほど高い興味を持ちますが、障害物によって無効化された場合、スコアが低い他の目標が優先されます。"
 
 #: ai/context_map.md
 msgid "The strongest desire is to go forward, but forward-left and forward-right are acceptible as well. But what if an obstacle appears?"
@@ -10088,7 +10088,7 @@ msgstr "### アルゴリズムについて"
 
 #: ai/context_map.md
 msgid "Context-based steering"
-msgstr "場面に基づく操縦"
+msgstr "状況に基づく操縦"
 
 #: ai/context_map.md
 msgid "Rather than a danger item canceling the interest, it could *add* to the interest in the opposite direction."
@@ -10217,10 +10217,10 @@ msgid ""
 "1. Eliminate any `interest` directions that are dangerous.\n"
 "1. Sum the remaining `interest` directions to find the new heading."
 msgstr ""
-"1. オブジェクトの`関心`方向を特定する\n"
-"1. `危険`を含む方向をすべて特定する\n"
-"1. 危険な`関心`方向がある場合はすべて除外する\n"
-"1. 残った`関心`方向を合算して新たな進行方向を決定する"
+"1. オブジェクトの`interst(関心度)`方向を特定する\n"
+"1. `danger(危険度)`を含む方向をすべて特定する\n"
+"1. 危険な`interest(関心度)`方向がある場合はすべて除外する\n"
+"1. 残った`interest(関心度)`方向を合算して新たな進行方向を決定する"
 
 #: ai/context_map.md
 msgid "Let's try it out in action! Here, we've created a track using a {{< gd-icon Path2D >}}`Path2D` and some collision polygons."
@@ -12165,7 +12165,7 @@ msgstr "この手法により、さまざまなプラットフォーマー風の
 
 #: 2D/2d_align_surface.md
 msgid "As you can see, there are a couple of problems. First, the character flies off the slope when running. It's also sliding down the slope when there's no input."
-msgstr "ご覧の通りこれには問題があります。第一に、キャラクターは走っている時に斜面から滑り落ちてしまいます。また、入力がない状態でも坂を滑って降りていきます。"
+msgstr "ご覧の通りこれには問題があります。まず、キャラクターは走っている時に斜面から滑り落ちてしまいます。また、入力がない状態でも坂を滑って降りていきます。"
 
 #: 2D/2d_align_surface.md
 msgid "<video controls src=\"/godot_recipes/4.x/img/2d_align_02.webm\"></video>"
@@ -12237,7 +12237,7 @@ msgstr "このインスタンスでは弾丸オブジェクトを作成し、「
 
 #: 2D/2d_draw_trajectory.md
 msgid "To improve the line's appearance, we've set the **Width** to `15` and all of the **Capping** options to \"Round\". We've also added a `Gradient` in the **Fill** section:"
-msgstr "ラインの見た目を改善するため、**幅**を`15`に設定し、すべての**角処理**オプションを「丸み」に変更しました。さらに、**Fill(塗りつぶし)**セクションに`Gradient(グラデーション)`を追加しました。"
+msgstr "ラインの見た目を改善するため、**幅**を`15`に設定し、すべての**角処理**オプションを「丸み」に変更しました。さらに、 **Fill(塗りつぶし)** セクションに`Gradient(グラデーション)`を追加しました。"
 
 #: 2D/2d_draw_trajectory.md
 msgid "### Drawing the line"
@@ -12555,11 +12555,11 @@ msgstr "最大・最小ズーム値は、ゲーム中のオブジェクトの大
 
 #: 2D/multi_target_camera.md
 msgid "You need a dynamic camera that moves and zooms to keep multiple objects on screen at the same time."
-msgstr "複数のオブジェクトを同時に画面上に表示し続けるには、移動・ズーム機能を備えたダイナミックなカメラシステムが必要です。"
+msgstr "複数のオブジェクトを同時に画面上に表示し続けるために、移動・ズーム機能を備えたダイナミックなカメラシステムを作りたいです。"
 
 #: 2D/multi_target_camera.md
 msgid "An example might be in a 2 player game, keeping both players on-screen as they move farther and closer together, like so:"
-msgstr "例を挙げると、2人用ゲームで両プレイヤーを画面内に表示したまま、互いに近づき離れていく様子を表現する場合などです。"
+msgstr "2人用ゲームで両プレイヤーを画面内に表示したまま、互いに近づき離れていく様子を表現する場合などです。"
 
 #: 2D/multi_target_camera.md
 msgid "For adding and removing targets, we have two helper functions. You can use these during gameplay to change what targets are being tracked (\"Player 3 has entered the game!\"). Note that we don't want to have the same target tracked twice, so we reject it if it's already there."
@@ -12895,7 +12895,7 @@ msgstr "「保存」ボタンをクリックしてリソースを保存します
 
 #: 2D/tilemap_animation.md
 msgid "You can adjust the overall animation's speed with the _Fps_ property, as well as each individual frame's _Delay Sec_."
-msgstr "アニメーション全体の速度は_Fps_プロパティで、各フレームごとの遅延時間は_Delay Sec_で個別に調整できます。"
+msgstr "アニメーション全体の速度は _Fps_ プロパティで、各フレームごとの遅延時間は _Delay Sec_ で個別に調整できます。"
 
 #: 2D/tilemap_animation.md
 msgid "Now you can select the tile in your `TileMap` and draw with it just like any other tile."
@@ -13131,7 +13131,7 @@ msgstr ""
 "* ズーム動作を滑らかにするには`lerp()`を使いましょう。\n"
 "* ズームは自動的にデフォルトレベルに戻ります。\n"
 "* ダブルタップでリセットできます。\n"
-"* さらにジェスチャーを追加可能 - 例：3本指操作など。"
+"* さらにジェスチャーを追加可能(例：3本指操作など)"
 
 #: 2D/touchscreen_camera.md
 msgid "### Zoom"
@@ -13223,7 +13223,7 @@ msgstr "### パン"
 
 #: 2D/touchscreen_camera.md
 msgid "For completeness, here's the full `TouchCamera.gd` script:"
-msgstr "完全な参考として、以下にフルバージョンの`TouchCamera.gd`スクリプトを記載します。"
+msgstr "完全な参考として、以下に`TouchCamera.gd`の全スクリプトを記載します。"
 
 #: 2D/touchscreen_camera.md
 msgid "Here we handle the case of `2` active drag events. `drag_distance` tells us how far apart they are, and we can compare it with `last_drag_distance` to see if it's larger or smaller. `zoom_speed` is a factor, so we'll be multiplying the zoom by `1.05` (for zooming in) and `0.95` (for zooming out). We can then clamp the resulting zoom so that it doesn't exceed our designated limits, and then assign the new `zoom` level. Finally, we update `last_drag_distance` for the next event."
@@ -13524,7 +13524,7 @@ msgid ""
 "Set the {{< gd-icon HBoxContainer >}}`HBoxContainer`'s _Alignment_ to \"Center\" and to have a small\n"
 "gap between the two viewports, set _Custom Constants/Separation_ to `5`. In the\n"
 "\"Layout\" menu, choose \"Full Rect\"."
-msgstr "{{< gd-icon HBoxContainer >}}`HBoxContainer`の配置を「中央」に設定し、2つのビューポート間に小さな隙間を設けるには、_カスタム定数/間隔_に `5` を設定してください。「レイアウト」メニューでは「フル矩形」を選択します。"
+msgstr "{{< gd-icon HBoxContainer >}}`HBoxContainer`の配置を「中央」に設定し、2つのビューポート間に小さな隙間を設けるには、_カスタム定数/間隔_に `5` を設定してください。「Layout(レイアウト)」メニューでは「Full Rect」を選択します。"
 
 #: 2D/splitscreen_demo.md
 msgid ""
@@ -13532,7 +13532,7 @@ msgid ""
 "zoom level that matches our desired minimap size, but instead, we'll check the\n"
 "_Transparent Bg_ on the {{< gd-icon Viewport >}}`Viewport`. Now our non-map areas aren't visible and the\n"
 "minimap appears floating directly on top of the main viewports."
-msgstr "エッジ周りのグレーゾーンを解消が必要です。正確なズームレベルを特定して希望のミニマップサイズに合わせることもできますが、代わりに{{< gd-icon Viewport >}}`Viewport`設定の_透過背景(Bg_をチェックします。これで非地図領域が見えなくなり、ミニマップがメインビューポートの上に直接浮かんで表示されるようになります。"
+msgstr "エッジ周りのグレーゾーンを解消が必要です。正確なズームレベルを特定して希望のミニマップサイズに合わせることもできますが、代わりに{{< gd-icon Viewport >}}`Viewport`設定の_Transparent Bg(透過背景)_をチェックします。これで非地図領域が見えなくなり、ミニマップがメインビューポートの上に直接浮かんで表示されるようになります。"
 
 #: 2D/splitscreen_demo.md
 msgid "### Conclusion"
@@ -13967,7 +13967,7 @@ msgstr "ドット積を使用することで、前進または後退の加速状
 
 #: 2D/car_steering.md
 msgid "### Part 3: Friction/drag"
-msgstr "### その3：摩擦・抗力について"
+msgstr "### その3：摩擦・抵抗について"
 
 #: 2D/car_steering.md
 msgid "The first step is to code the movement based on the algorithm described above."
@@ -14163,7 +14163,7 @@ msgstr "これらの値は、ステアリング計算時に適用します。現
 
 #: 2D/car_steering.md
 msgid "When approaching this problem, beginners often wind up creating something that handles nothing like a real car. Some common mistakes you'll find in amateur car games:"
-msgstr "この問題に取り組む際、初心者はしばしば実際の車とはかけ離れた挙動のゲームを作ってしまいがちです。アマチュアが作ったカーゲームでよく見られる典型的な失敗例をご紹介します。"
+msgstr "この問題に取り組む際、初心者はしばしば実際の車とはかけ離れた挙動のゲームを作ってしまいがちです。アマチュアが作ったカーゲームでよく見られる失敗例をご紹介します。"
 
 #: 2D/car_steering.md
 msgid ""
@@ -18357,6 +18357,7 @@ msgid ""
 msgstr ""
 "{{% notice style=\"tips\" title=\"ℹ️ 留意事項\"%}}\n"
 "この記事は Godot 3から Godot 4 へ内容の書き換え中です。\n"
+"Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。\n"
 "{{% /notice %}}"
 
 #: 2D/splitscreen_demo.md physics/Godot3_KYN_rigidbody1.md

@@ -7,6 +7,7 @@ ghcommentid: 18
 
 {{% notice style="tips" title="ℹ️ 留意事項"%}}
 この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
 ## はじめに
@@ -58,7 +59,7 @@ func get_input():
 
 各ビューポートノード（{{< gd-icon Viewport >}}`Viewport`）には位置情報が含まれません（{{< gd-icon Node3D >}}`Node3D`や{{< gd-icon Node2D >}}`Node2D`を継承していません）。ここでは、各ビューポートを管理するために{{< gd-icon SubViewportContainer >}}`ViewportContainer`を使用します。このコンテナは{{< gd-icon Control >}}`Control`ノードの一種です。それらを横並びに配置するためには、{{< gd-icon HBoxContainer >}}`HBoxContainer`を使います。
 
-{{< gd-icon HBoxContainer >}}`HBoxContainer`の配置を「中央」に設定し、2つのビューポート間に小さな隙間を設けるには、_カスタム定数/間隔_に `5` を設定してください。「レイアウト」メニューでは「フル矩形」を選択します。
+{{< gd-icon HBoxContainer >}}`HBoxContainer`の配置を「中央」に設定し、2つのビューポート間に小さな隙間を設けるには、_カスタム定数/間隔_に `5` を設定してください。「Layout(レイアウト)」メニューでは「Full Rect」を選択します。
 
 次に、2つの{{< gd-icon SubViewportContainer >}}`ViewportContainer`を子要素として追加し、それぞれに`2`と`1`という名前を付けます（これらは表示するプレイヤーに対応するためです）。両方のコンテナについて_サイズフラグ_を「画面いっぱいに拡張」に設定してください。これにより、各コンテナが画面の半分を埋めるように拡大されます。さらに、_伸縮指定_プロパティもチェックすることで、{{< gd-icon Viewport >}}`Viewport`が自動的にコンテナのサイズに合わせて調整されるようになります。
 
@@ -176,7 +177,7 @@ $Minimap/Viewport.world_2d = viewport1.world_2d
 
 ![alt](/godot_recipes/4.x/img/splitscreen_minimap1.png?width=400)
 
-エッジ周りのグレーゾーンを解消が必要です。正確なズームレベルを特定して希望のミニマップサイズに合わせることもできますが、代わりに{{< gd-icon Viewport >}}`Viewport`設定の_透過背景(Bg_をチェックします。これで非地図領域が見えなくなり、ミニマップがメインビューポートの上に直接浮かんで表示されるようになります。
+エッジ周りのグレーゾーンを解消が必要です。正確なズームレベルを特定して希望のミニマップサイズに合わせることもできますが、代わりに{{< gd-icon Viewport >}}`Viewport`設定の_Transparent Bg(透過背景)_をチェックします。これで非地図領域が見えなくなり、ミニマップがメインビューポートの上に直接浮かんで表示されるようになります。
 
 ![alt](/godot_recipes/4.x/img/splitscreen_minimap2.png?width=400)
 

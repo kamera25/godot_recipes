@@ -6,6 +6,7 @@ draft: false
 
 {{% notice style="tips" title="ℹ️ 留意事項"%}}
 この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
 ## 課題
@@ -68,7 +69,7 @@ func update_health(value):
 バーに対して `update_health()` を呼び出すと、選択されたモードに基づいて渡された値が表示されます。
 
 {{% notice note %}}
-入力値に対する境界チェックは行いません。ゲームでHPを実装する方法には様々な方法があるため、これについては開発者の裁量に委ねられています。
+ここでは入力値に対する境界チェックは行いません。ゲームでHPを実装する様々な方法があるためです。
 {{% /notice %}}
 
 まず、`update_simple()` メソッドについて説明します。この処理では、ハートコンテナを順にループしながら、各 {{< gd-icon TextureRect >}}`TextureRect` の表示状態を設定します。
@@ -90,7 +91,7 @@ func update_empty(value):
             get_child(i).texture = heart_empty
 ```
 
-最後に、部分的に充填された容器については、第三のテクスチャと可能な値の数が2倍になります。
+最後に、部分的に充填された容器については、第3のテクスチャと可能な値の数が2倍になります。
 
 ```gdscript
 func update_partial(value):
@@ -109,7 +110,7 @@ func update_partial(value):
 
 ## まとめ
 
-このハートバーの設定を、独自のHUD作成の基礎として活用してください。この手法をさらに拡張すれば、多種多様な情報を表示できます。
+このハートバーの設定を、独自のHUD(ヘッドアップディスプレイ)作成の基礎として活用してください。この手法をさらに拡張すれば、多種多様な情報を表示できます。
 
 ## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 

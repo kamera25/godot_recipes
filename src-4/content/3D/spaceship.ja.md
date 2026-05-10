@@ -67,7 +67,7 @@ func _physics_process(delta):
     move_and_collide(velocity * delta)
 ```
 
-テスト用シーンを作成し、{{< gd-icon Camera3D >}}`Camera3D` コンポーネントを試してみます。固定カメラを使用するか、［追従カメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/) を採用することもできます。宇宙船が加速と減速を適切に行うことを確認した上で、次のステップに進んでください。
+テスト用シーンを作成し、{{< gd-icon Camera3D >}}`Camera3D` コンポーネントを試してみます。固定カメラを使用するか、[追従カメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/) を採用することもできます。宇宙船が加速と減速を適切に行うことを確認した上で、次のステップに進んでください。
 
 ![alt](/godot_recipes/4.x/img/3d_ship_02.gif)
 
@@ -136,7 +136,7 @@ yaw_input = lerp(yaw_input, Input.get_axis("yaw_right", "yaw_left"),
 
 この操作体系には1つの問題点があります。それは操作性に難がある点です。ヨーの入力に別途スティックを必要とするため、特に射撃や他のコントロールと組み合わせた場合、スムーズな操作が困難になります。多くのゲームでは、この問題を解決するためにロール入力と連動して少量のヨー回転も発生させる仕様にしています。これを実装するには、`yaw_speed`を`roll_speed`の1/4～1/2程度に設定するのが適切です。
 
-In the `get_input()` function, change the line getting `yaw_input` to the following:
+`get_input()` 関数内で、`yaw_input`を取得する行を以下のように変更してください：
 
 ```gdscript
 yaw_input = roll_input

@@ -46,7 +46,7 @@ draft: false
 自作キャラクターを作成する場合、このステップは省略できます。ただし、アニメーション名がすべて`"-loop"`で終わるように命名してください。その他のインポート関連のヒントについては、[Godotドキュメント](https://docs.godotengine.org/ja/stable/tutorials/assets_pipeline/importing_scenes.html#import-hints)の「インポートヒント」セクションを参照してください。
 {{% /notice %}}
 
-ファイルシステム内の`knight.glb`を右クリックし、［新規継承シーン］を選択してください。
+**ファイルシステム**内の`knight.glb`を右クリックし、*新規継承シーン*を選択してください。
 
 このシーンではすべてのモデルと{{< gd-icon AnimationPlayer >}}`AnimationPlayer` が表示され、ここではアニメーションを実際にテストできます。
 

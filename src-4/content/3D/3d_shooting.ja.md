@@ -7,6 +7,7 @@ ghcommentid: 36
 
 {{% notice style="tips" title="ℹ️ 留意事項"%}}
 この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
 ## 課題
@@ -67,7 +68,7 @@ func _on_Shell_body_entered(body):
 
 カスタムの重力ベクトル `g` を使用することで、戦車の砲弾が綺麗な弧を描くように、大砲からどのように飛ぶかを制御できます。もし、飛び道具を直線的に移動させたい場合は、`_physics_process()` で重力を適用している行を削除してください。
 
-Using `look_at()` each frame turns the bullet to point in its direction of travel.
+`look_at()` をフレームごとに使用すると、弾丸は常に進行方向を向くようになります。
 
 また、`exploded`シグナルも発出します。これを利用して爆発エフェクトやダメージ効果を実装できます（ただし詳細な実装は別のレシピで解説します）。
 

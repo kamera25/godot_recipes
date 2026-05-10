@@ -7,6 +7,7 @@ ghcommentid: 27
 
 {{% notice style="tips" title="ℹ️ 留意事項"%}}
 この記事は Godot 3から Godot 4 へ内容の書き換え中です。
+Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
 ## 課題
@@ -34,7 +35,7 @@ ghcommentid: 27
 
 ![alt](/godot_recipes/4.x/img/anim_texture_add.png)
 
-アニメーション全体の速度は_Fps_プロパティで、各フレームごとの遅延時間は_Delay Sec_で個別に調整できます。
+アニメーション全体の速度は _Fps_ プロパティで、各フレームごとの遅延時間は _Delay Sec_ で個別に調整できます。
 
 「保存」ボタンをクリックしてリソースを保存します。`water_anim.tres`のような名前を付けてください。
 
