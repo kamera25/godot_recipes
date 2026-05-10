@@ -18,7 +18,11 @@ This repository is a Japanese translation of the "[Godot Recipes](http://godotre
 このリポジトリは、オリジナルのソースコードを翻訳・管理するためのものです。
 Hugoを使用して静的サイトを生成しており、Godot 4系（`src-4`）のみを翻訳対象しています。
 
+また本家ではGodot 3系のみしか掲載されていないコンテンツについては、新たにGodot 4系以降のコンテンツとしてコンバートを行っています(現在、修正中)。
+
 This repository is for translating and managing the original source content. It uses Hugo to generate a static site and only supports Godot 4 (`src-4`) versions.
+
+Also, content that is only available for Godot 3.x in the original work is being converted to Godot 4.x content (currently under correction).
 
 ## 貢献者 / Contributors
 
