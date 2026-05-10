@@ -1590,11 +1590,11 @@ msgstr "## <i class=\"fas fa-code-branch\"></i> プロジェクトのダウン�
 
 #: ui/minimap.md
 msgid "Now we can begin adding a script to the `Minimap`. First, a `player` reference that can be assigned in the Inspector when the minimap is added to the main scene and a `zoom` property to calibrate the scale - how far the minimap can \"see\". We also have some `@onready` variables to make it more convenient to access the nodes we need."
-msgstr "これで`Minimap`にスクリプトを追加する準備が整いました。まず、メインシーンにミニマップが追加された時にインスペクターで割り当て可能な`player`への参照と、スケールを調整するズームプロパティを実装します。必要なノードへのアクセスを簡単にするため、`@onready`変数も用意しました。"
+msgstr "これで`Minimap`にスクリプトを追加する準備が整いました。まず、メインシーンにミニマップが追加された時にインスペクターで割り当て可能な`player`への参照と、スケールを調整する`zoom`プロパティを実装します。必要なノードへのアクセスを簡単にするため、`@onready`変数も用意しました。"
 
 #: ui/minimap.md
 msgid "We'll also create markers for every game object (using the \"minimap_objects\" group) by duplicating the matching marker node and tying the marker to the object via the `markers` dictionary:"
-msgstr "これで`Minimap`にスクリプトを追加し始めることができます。まず第一に、メインシーンにミニマップが追加された際にインスペクターで割り当て可能な`player`リファレンスと、スケールを調整するための`zoom`プロパティが必要となります。これにより、ミニマップが「視認」できる範囲を設定できます。また、必要なノードにより簡単にアクセスできるよう、`@onready`変数もいくつか追加しています。"
+msgstr "また、すべてのゲームオブジェクトに対応するマーカーを作成します（「minimap_objects」グループを使用）。これは、対応するマーカーノードを複製し、`markers`ディクショナリを介してオブジェクトと関連付けることで実現されます。"
 
 #: ui/minimap.md
 msgid "If there is a `player`, we'll first rotate the player marker to match the player's heading. Since our `PlayerMarker` sprite points upwards rather than along the `x` axis, we must add 90 degrees:"
@@ -2171,7 +2171,7 @@ msgstr "選択したアイコンを `AbilityButton` の **Textures/Normal** プ�
 
 #: ui/cooldown_button.md
 msgid "In `_process()` we use the `time_left` on the timer to set the label's `text` and the sweep's `value`."
-msgstr "`_process()` 関数内では、タイマーの `time_left` プロパティを使用してラベルの `text` プロパティと `Sweep` コンポーネントの `value` プロパティを設定しています。"
+msgstr "`_process()` 関数内では、タイマーの `time_left` プロパティを使用してラベルの `text` プロパティと Sweepノードの `value` プロパティを設定しています。"
 
 #: ui/cooldown_button.md
 msgid "Next, we need a texture to assign to the {{< gd-icon TextureProgressBar >}}`TextureProgress` display. In this case, we'll copy the texture from the button - you could also use a different texture if you like."
@@ -2783,7 +2783,7 @@ msgstr "![alt](/godot_recipes/4.x/img/gimbal_02.gif)"
 
 #: 3D/camera_gimbal.md
 msgid "For completeness, here's the full script, including `@export` variables for all the camera settings, so that you can configure it in your project."
-msgstr "参考までに、カメラ設定の全変数を含む全てのスクリプトを掲載します。この内容を参考にプロジェクト環境で設定してください。"
+msgstr "参考までに、カメラ設定の全変数を含む全てのスクリプトを掲載します。`@export`変数により、必要に応じてプロジェクト環境で設定することも可能です。"
 
 #: 3D/camera_gimbal.md
 msgid "### Camera zoom"
@@ -5136,7 +5136,7 @@ msgstr "それから、`_unhandled_input()` 関数内で、アクションが押
 
 #: 3D/assets/character_controller.md
 msgid "Since `velocity` is in global space, but the character model is rotating, we need to transform `velocity` into model space using the model's `basis`. Once we have that, we need to map that 3D vector to the 2D vector of the blend space, dividing by `speed` so that we'll get values between `-1` and `1`. Also, *-z* is forward, but *+y* represents the blendspace forward animation, so we negate the value to make them match."
-msgstr "`velocity`はグローバル座標系で定義されていますが、キャラクターモデルが回転しているため、この速度をモデル空間に変換する必要があります。そのためにはモデルの`basis`を使用して変換を行います。変換後は、この3次元ベクトルをブレンドスペースの2次元ベクトルにマッピングし、`speed`で除算することで、値が-1から1の範囲内になるように調整します。また、*-z軸*は前方方向ですが、*+y軸*はブレンドスペースにおける前進アニメーションを表すため、値を反転して両者を一致させる必要があります。"
+msgstr "`velocity` はグローバル座標系ですが、キャラクターモデルが回転しているため、モデルの `basis` を使用して `velocity` をローカル座標系に変換する必要があります。変換後、3Dベクトルをブレンドスペースの2Dベクトルにマッピングし、`speed` で割ることで `-1` から `1` の範囲の値を得ます。また、*-z*方向は前方ですが、*+y*方向はブレンドスペースにおける前進アニメーションを表すため、値が一致するよう符号を調整します。"
 
 #: 3D/assets/character_controller.md
 msgid "You've imported a rigged, animated 3D character in Godot and set up its animations using {{< gd-icon AnimationTree >}}`AnimationTree`. Now you need to implement movement: you need a character controller."
@@ -6513,7 +6513,8 @@ msgstr ""
 msgid ""
 "Remember how the 3D gizmo can be set to \"Local Space Mode\"? When in this mode,\n"
 "the gizmo's **X/Y/Z** axes point along the _object's_ axes. This is the same as the `basis` of the transform. The basis contains three `Vector3` objects called `x`, `y`, and `z` that represent these directions. We can use this to ensure that pressing the **W** key will always move us in the object's forward direction."
-msgstr "このモードでは、ギズモの**X/Y/Z**軸がオブジェクト自体の座標軸に沿って配置されます。これは変換行列の基底と同じ概念です。基底には、`x`、`y`、`z`という3つの`Vector3`オブジェクトが含まれており、それぞれ対応する方向を表しています。この仕組みを利用することで、キー入力時に常にオブジェクトの進行方向に移動するように制御できます。"
+msgstr "3Dギズモを『ローカル空間モード』に設定できることを思い出してください。このモードで動作させると、\n"
+"ギズモの**X/Y/Z** 軸はオブジェクトそのものの座標系に沿って配置されます。これは変換の `basis` と同じ概念です。基底には `x`, `y`, `z` という3つの `Vector3` オブジェクトが含まれており、これらが各方向を表します。この機能を利用することで、**W**キーを押すと常にオブジェクトの進行方向に移動させることができます。"
 
 #: g101/3d/101_3d_03.md
 msgid "![alt](/godot_recipes/4.x/img/3d_character_01.png)"
@@ -6922,7 +6923,7 @@ msgstr ""
 msgid ""
 "Make sure to add a `Material` to your shapes, choosing an _Albedo_ color that\n"
 "seems pleasant to you. In the following examples, we've picked a tan color."
-msgstr "以下の例では、ベージュ系の色を選択しています。"
+msgstr "形状には必ず `Material` を追加し、好みに合う _Albedo_ (アルベド) カラーを選択してください。以下の例では、茶色系の色を選択しています。"
 
 #: g101/3d/101_3d_06.md
 msgid ""
@@ -7850,7 +7851,7 @@ msgstr "{{< gd-icon Area3D >}}`Area3D` ノードは主に以下の目的で使�
 msgid ""
 "Add a script and connect the `Timer`'s `timeout` signal and the {{< gd-icon Area3D >}}`Area3D`'s\n"
 "`body_entered` signal. Then add the following:"
-msgstr "{{< gd-icon `Area3D` >}}以下を追加してください。"
+msgstr "スクリプトを追加し、`Timer`の `timeout` シグナルと {{< gd-icon Area3D >}}`Area3D`の `body_entered` シグナルを接続します。次に、以下の内容を追加してください。"
 
 #: g101/3d/101_3d_04.md
 msgid "We're going to use {{< gd-icon Area3D >}}`Area3D` to create three types of objects:"
@@ -10197,10 +10198,10 @@ msgid ""
 "1. Eliminate any `interest` directions that are dangerous.\n"
 "1. Sum the remaining `interest` directions to find the new heading."
 msgstr ""
-"1. オブジェクトの「関心」方向を特定する\n"
-"1. 「危険」を含む方向をすべて特定する\n"
-"1. 危険な「関心」方向がある場合はすべて除外する\n"
-"1. 残った「関心」方向を合算して新たな進行方向を決定する"
+"1. オブジェクトの`関心`方向を特定する\n"
+"1. `危険`を含む方向をすべて特定する\n"
+"1. 危険な`関心`方向がある場合はすべて除外する\n"
+"1. 残った`関心`方向を合算して新たな進行方向を決定する"
 
 #: ai/context_map.md
 msgid "Let's try it out in action! Here, we've created a track using a {{< gd-icon Path2D >}}`Path2D` and some collision polygons."
@@ -10846,9 +10847,10 @@ msgid ""
 "`rotation_dir` will represent what direction the ship is turning. The `screensize`\n"
 "variable will capture the size of the screen, which we'll be using later."
 msgstr ""
-"このスクリプトの動作について説明します。変数`engine_thrust`と`spin_thrust`は、宇宙船の加速速度と旋回性能を制御します。インスペクタではそれぞれ500、25000に設定してください（トルク単位のため数値が大きくなります）。\n"
-"変数`thrust`は宇宙船のエンジン状態を示します。走行中時は(0, 0)、動力がオンの場合は`engine_thrust`の長さを持つベクトルとなります。\n"
-"`rotation_dir`は宇宙船の旋回方向を表現します。`screensize`変数には画面サイズを保持し、後ほど使用します。"
+"このスクリプトの動作を順を追って説明しましょう。変数 `engine_thrust` と\n"
+"`spin_thrust` は、船の加速速度と旋回性能を決定するものです。インスペクターでそれぞれ\n"
+"`500` と `25000` に設定してください（トルク単位のため数値が大きくなります）。`thrust` は船のエンジン状態を表します：惰行時は `(0, 0)`、動力がオンの場合は `engine_thrust` の長さを持つベクトルになります。\n"
+"`rotation_dir` は船が旋回する方向を示します。変数 `screensize` はスクリーンサイズを保持し、後で使用します。"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid "> You should not change a RigidBody2D’s position or linear_velocity every frame or even very often. If you need to directly affect the body’s state, use `_integrate_forces`, which allows you to directly access the physics state."
@@ -12035,7 +12037,7 @@ msgstr "`drop`関数内では、`freeze`を再び`false`に設定した後、ボ
 
 #: physics/rigidbody_drag_drop.md
 msgid "Note the use of `get_last_mouse_velocity()` to pass the impulse to the object - be careful with this! You may find yourself launching the rigid bodies at high speeds, especially if the bodies have low `mass` values. It's probably a good idea to scale this to a reasonable value and `clamp()` it to some maximum. Experiment to find out what works for you."
-msgstr "物体に衝撃力を適用するために `get_last_mouse_velocity()` を使用している点には注意が必要です! 特に質量値が小さい場合、リジッドボディは高速で発射される可能性があります。適切なスケールに調整し、最大値に`clamp()`をかけることをオススメします。最適な設定を見つけるには実験が必要です。"
+msgstr "物体に衝撃力を適用するために `get_last_mouse_velocity()` を使用している点には注意が必要です! 特に`mess(質量)`が小さい場合、リジッドボディは高速で発射される可能性があります。適切なスケールに調整し、最大値に`clamp()`をかけることをオススメします。最適な設定を見つけるには実験が必要です。"
 
 #: physics/rigidbody_drag_drop.md
 msgid "If the body is being dragged, we update its position to follow the mouse."
@@ -12181,7 +12183,7 @@ msgstr "## 速度ベクトルの方向決定"
 
 #: 2D/2d_align_surface.md
 msgid "Now when we move, we want our `x` velocity to align with our local `x` axis (the red arrow), and gravity/jump to align with local `y` (the green arrow). We can keep our input code the same, and just assume that `velocity` is always calculated in the local coordinate system. The only problem will be that `move_and_slide()` expects the velocity vector to be in *global* coordinates. Let's adjust `move_and_slide_with_snap()` to account for this:"
-msgstr "現在の実装では、移動時に速度ベクトルをローカル座標系のx軸（赤色矢印）に、重力/ジャンプ力をy軸（緑色矢印）に合わせる必要があります。入力処理コードはそのままで、常に`velocity`がローカル座標系で計算されると仮定できます。唯一の問題は`move_and_slide()`関数が速度ベクトルをグローバル座標系で受け取ることを期待している点です。この問題を解決するため、以下のように`move_and_slide_with_snap()`を調整します。"
+msgstr "移動時には、`x` 方向の速度をローカル座標系の `x軸`（赤い矢印）と一致させ、重力/ジャンプ動作をローカル `y軸`（緑の矢印）と一致させる必要があります。入力処理コードはそのままで、常に `velocity` がローカル座標系で計算されると仮定できます。唯一の問題は、`move_and_slide()` メソッドが速度ベクトルをグローバル座標系で受け取ることを期待している点です。この問題を解決するため、`move_and_slide_with_snap()` 関数を調整しましょう。"
 
 #: 2D/2d_align_surface.md
 msgid "<video controls src=\"/godot_recipes/4.x/img/2d_align_03.webm\"></video>"
@@ -13925,7 +13927,7 @@ msgstr "一旦加速度が得られたら、以下のように速度に適用で
 
 #: 2D/car_steering.md
 msgid "We can find whether we're accelerating forward or backward using the dot product. If the two vectors are aligned, the result will be greater than `0`. If the movement is in the opposite direction the car's facing, then the dot product will be less than `0` and we must be moving backward."
-msgstr "2つのベクトルの内積を利用することで、前進しているか後退しているかを判断できます。ベクトルが一致している場合、結果は正の値になります。移動方向が車の進行方向と逆向きの場合、内積は負の値となり、後方に移動していることが確認されます。"
+msgstr "ドット積を使用することで、前進または後退の加速状態を判定できます。2つのベクトルが一致していれば、結果は `0` より大きくなります。移動方向が車の向いている方向と逆向きの場合、ドット積は `0` 未満となり、後退中であることが分かります。"
 
 #: 2D/car_steering.md
 msgid "### Part 3: Friction/drag"
@@ -15057,7 +15059,7 @@ msgstr "プレイヤーシーンの設計"
 
 #: games/first_2d/first_2d_02.md
 msgid "In the **Inspector**, under the **Animation** section, you'll find a property called **Sprite Frames**, which is currently `<empty>`. Click it to create a `New SpriteFrames`, then click the `SpriteFrames` item to open the animation panel at the bottom of the editor window."
-msgstr "インスペクターの[アニメーション]セクションにある[スプライトフレーム]プロパティは現在空になっています。これをクリックすると新しい[スプライトフレーム]が作成されますので、その後でエディターウィンドウ下部のアニメーションパネルを開くために[スプライトフレーム]項目をクリックしてください。"
+msgstr msgid "インスペクターの**アニメーション** セクション内にある**Sprite Frames**プロパティは、現在 `<空>` と表示されています。これをクリックすると新しい `SpriteFrames`が作成され、エディタウィンドウ下部にあるアニメーションパネルを開くために `SpriteFrames` 項目をクリックできるようになります。"
 
 #: games/first_2d/first_2d_02.md
 msgid "### Choosing nodes"
@@ -15545,7 +15547,7 @@ msgstr "敵の射撃"
 
 #: games/first_2d/first_2d_08.md
 msgid "Connect the `screen_exited` and `area_entered` signals of the {{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D` and {{< gd-icon Area2D >}}`Area2D`, respectively:"
-msgstr "{{< gd-icon `Area2D` >}}{{< gd-icon `VisibleOnScreenNotifier2D` >}}以下の方法でそれぞれ接続してください。"
+msgstr "{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`と{{< gd-icon Area2D >}}`Area2D`の `screen_exited` シグナルと `area_entered` シグナルをそれぞれ接続してください。"
 
 #: games/first_2d/first_2d_08.md
 msgid "The script will be a little bit different:"
