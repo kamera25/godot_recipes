@@ -1,12 +1,12 @@
-# Godot Recipes (Japanese Translation) / Godotレシピ (日本語訳版)
+# Godot Recipes (unofficial Japanese Translation) / Godotレシピ (非公式日本語訳版)
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![licensebuttons by](https://licensebuttons.net/l/by/3.0/88x31.png)](https://creativecommons.org/licenses/by/4.0)  (Original Recipe)
 
-このリポジトリは、KidsCanCodeによる「[Godot Recipes](http://godotrecipes.com/)」の日本語翻訳プロジェクトです。
+このリポジトリは、KidsCanCodeによる「[Godot Recipes](http://godotrecipes.com/)」の**非公式**日本語翻訳プロジェクトです。
 Godot Engineを用いたゲーム開発のチュートリアルや実装例を豊富に含んでいます。
 
-This repository is a Japanese translation of the "[Godot Recipes](http://godotrecipes.com/)" by KidsCanCode. It contains a collection of game development tutorials and examples for the Godot Engine.
+This repository is an **unofficial** Japanese translation of the "[Godot Recipes](http://godotrecipes.com/)" by KidsCanCode. It contains a collection of game development tutorials and examples for the Godot Engine.
 
 ## サイトのリンク / Site Links
 
