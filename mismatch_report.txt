@@ -1,0 +1,31 @@
+PO Backtick Match Report
+Target file: output.po
+Total entries processed: 3896
+Untranslated entries skipped: 2
+Mismatches found: 3
+============================================================
+
+[1] Mismatch near line 409
+    Line (msgid) : 409
+    Line (msgstr): 410
+    msgid  (` count: 2):
+      3. Ready order is children-first, parent-last. This means that trying to access a parent's property in a node's `_ready()` can fail because the parent isn't ready yet.
+    msgstr (` count: 6):
+      3. ノードの`_ready()`が呼ばれる順番は、子ノード優先、親ノード後回しとなります。つまり、ノードの `_ready()` メソッド内で親プロパティにアクセスしようとすると失敗するケースがあります。これは親ノードがまだ準備中(`_ready()`が呼ばれていない)状態であるためです。
+--------------------------------------------------
+[2] Mismatch near line 12035
+    Line (msgid) : 12035
+    Line (msgstr): 12036
+    msgid  (` count: 5):
+      In the `drop` function, after we change `freeze` back to `false, the body will return to the physics engine's control. By passing in an optional impulse value, we can add the ability to \"throw\" the object on release.
+    msgstr (` count: 6):
+      `drop`関数内では、`freeze`を再び`false`に設定した後、ボディは物理エンジンの制御下に戻ります。オプションで衝撃値を指定することで、リリース時にオブジェクトを『投げる』機能を追加することも可能になります。
+--------------------------------------------------
+[3] Mismatch near line 15874
+    Line (msgid) : 15874
+    Line (msgstr): 15875
+    msgid  (` count: 5):
+      Add a new scene with a `CanvasLayer` root to be our HUD. Give it two children: a `MarginContainer` named \"ScoreBox\" and a `Label\" named \"Message\".
+    msgstr (` count: 6):
+      HUDとして使用する`CanvasLayer`をルートとする新しいシーンを追加してください。以下の2つの子要素を持たせます。「ScoreBox」という名前の`MarginContainer`と、「メッセージ」という名前の`Label`です。
+--------------------------------------------------
