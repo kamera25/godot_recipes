@@ -12963,11 +12963,11 @@ msgstr "{{< gd-icon Tween >}}以下の機能をスムーズに動作させるた
 
 #: 2D/moving_platforms.md
 msgid "Now add a script to the root {{< gd-icon Node2D >}}`Node2D`:"
-msgstr "次にルートノードにスクリプトを追加してください。{{< gd-icon Node2D >}}`Node2D`:"
+msgstr "次にルートノードの{{< gd-icon Node2D >}}`Node2D`にスクリプトを追加してください。"
 
 #: 2D/moving_platforms.md
 msgid "Set up the {{< gd-icon Sprite2D >}}`Sprite2D`'s **Texture** and the collision shape appropriately. In the {{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`, set the **Sync to Physics** property \"On\". Since we're moving the body in code, this ensures that it's moved during the physics step, keeping it in sync with the player and other physics bodies."
-msgstr "{{< gd-icon Sprite2D >}}`Sprite2D`の**テクスチャ**と衝突形状を適切に設定してください。{{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`では、**物理演算同期** プロパティを「オン」に設定します。コードでボディを動かしているため、これにより物理演算ステップ時に正しく移動され、プレイヤーや他の物理オブジェクトと連動した動きを維持できます。"
+msgstr "{{< gd-icon Sprite2D >}}`Sprite2D`の**テクスチャ**と衝突形状を適切に設定してください。{{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`では、**Sync to Physics(物理演算と同期)** プロパティを「オン」に設定します。コードでボディを動かしているため、これにより物理演算ステップ時に正しく移動され、プレイヤーや他の物理オブジェクトと連動した動きを維持できます。"
 
 #: 2D/coyote_time.md 2D/moving_platforms.md
 msgid "Download the project code here: [https://github.com/godotrecipes/2d_moving_platforms](https://github.com/godotrecipes/2d_moving_platforms)"
@@ -12994,7 +12994,7 @@ msgid ""
 "    - {{< gd-icon Sprite2D >}}`Sprite2D`: You can use a sprite sheet here, individual images, or even a {{< gd-icon TileMap >}}`TileMap`.\n"
 "    - {{< gd-icon CollisionShape2D >}}`CollisionShape2D`: Don't make the hitbox too big, or the player will appear to be \"hovering\" off the edge of the platform."
 msgstr ""
-"- {{< gd-icon Node2D >}}`Node2D` (\"MovingPlatform\")：この `Node2D` の親ノードは「アンカー」またはプラットフォームの起点として機能します。アニメーションでは、この親ノードを基準としたプラットフォームの `位置変化` を制御します。\n"
+"- {{< gd-icon Node2D >}}`Node2D` (\"MovingPlatform\")：この `Node2D` の親ノードは、プラットフォームの「アンカー」または開始点として機能します。アニメーションでは、この親ノードを基準としてプラットフォームの `座標` を制御します。\n"
 "  - {{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`：これは実際に移動するプラットフォーム本体を表します。このノードが移動対象となります。\n"
 "    - {{< gd-icon Sprite2D >}}`Sprite2D`：ここではスプライトシート、個別の画像、あるいは {{< gd-icon `TileMap` >}} ノードとしてタイルマップを使用することもできます。\n"
 "    - {{< gd-icon CollisionShape2D >}}`CollisionShape2D`：ヒットボックスの大きさが大きすぎると、プレイヤーがプラットフォームの端から「浮いて」見える原因になるので注意してください。"
