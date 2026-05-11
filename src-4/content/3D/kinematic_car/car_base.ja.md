@@ -20,7 +20,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 3D環境においても、車両は基本的に地面に留まる性質があります。このため、移動処理の多くは実質的に2Dと同様の扱いができます。車の動作コードの大部分は、[2D用カーステアリングレシピ](/godot_recipes/4.x/ja/2d/car_steering)と非常に似た構造になります。このチュートリアルに進む前に、必ずそのレシピを確認しておくことをオススメします。
 {{% /notice %}}
 
-Godotには{{< gd-icon VehicleBody3D >}}`VehicleBody`ノードが用意されており、これは{{< gd-icon RigidBody3D >}}`RigidBody`をベースに、エンジン・ブレーキング・サスペンションなど複雑な物理挙動をシミュレートする機能を備えています。ただし、このアプローチは過剰な複雑さを伴うため、一般的なカジュアルレース／ドライビングゲームには不向きです。そこでここでは、CharacterBody3Dベースのソリューションを採用することにします。
+Godotには{{< gd-icon VehicleBody3D >}}`VehicleBody`ノードが用意されており、これは{{< gd-icon RigidBody3D >}}`RigidBody`をベースに、エンジン・ブレーキング・サスペンションなど複雑な物理挙動をシミュレートする機能を備えています。ただし、このアプローチは過剰な複雑さを伴うため、一般的なカジュアルレース／ドライビングゲームには不向きです。そこでここでは、CharacterBody3Dベースの解決策を採用します。
 
 {{< gd-icon VehicleBody3D >}}{{% notice info %}}
 VehicleBody3D`車両ボディ`の操作方法について詳しく知りたい方には、[Bastiaan Olij氏によるこのシリーズ動画](https://youtu.be/B5vE-nNszxA)を強くオススメします。
@@ -97,7 +97,7 @@ var steer_angle = 0.0  # current wheel angle
 
 *  `drag` と `friction` については[こちらで詳しく説明しています](/godot_recipes/4.x/ja/2d/car_steering/#part-3-frictiondrag)。
 
-スクリプトの残り部分は、2D版と非常に似た構造になりますが、{{< gd-icon Node3D >}}`Node3D`と`Transform`を適切に動作させるために、いくつかの変更が必要です。
+スクリプトの残り部分は、2D版と非常に似た構造になりますが、{{< gd-icon Node3D >}}`Node3D`と`Transform`を適切に動作させるために、変更が必要です。
 
 まず`_physics_process()`から見ていきます。
 

@@ -19,7 +19,7 @@ ghcommentid: 17
 
     `get_viewport_rect()` は `CanvasItem` 派生ノードであればどのノードからも利用できます。
 
-1. プレイヤーのポジションを比較します。
+1. プレイヤーの座標を比較します。
 
     ```gdscript
     if position.x > screen_size.x:
@@ -32,7 +32,7 @@ ghcommentid: 17
         position.y = screen_size.y
     ```
 
-    注意：この処理ではノードの`position`を使用しています。これは通常、スプライトまたはボディの中心位置を指します。
+    注意：この処理ではノードの`position`を使用しています。これは通常、スプライトまたはボディの中心座標を指します。
 
 1. `wrapf()` を使用して、シンプルに実装します。
 

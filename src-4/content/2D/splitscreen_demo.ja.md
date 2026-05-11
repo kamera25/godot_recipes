@@ -127,7 +127,7 @@ func _physics_process(delta):
         position = target.position
 {{< /highlight >}}
 
-現在、各カメラにターゲットを割り当て、そのノードの位置に従うように設定できます。
+現在、各カメラにターゲットを割り当て、そのノードの座標に従うように設定できます。
 以下の`Main`スクリプトで実装します。
 
 {{< highlight gdscript>}}

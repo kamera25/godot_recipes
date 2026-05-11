@@ -13,7 +13,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 本チュートリアルはGodotレシピ集が公開される前に執筆されたものです。今後、当サイトの他のドキュメントと同様にフォーマットを更新する予定です。
 {{% /notice %}}
 
-このチュートリアルでは、リジッドボディを使用するべきタイミング（および使用すべきでないタイミング）や、仕組みの解説、さらには思い通りに制御するための便利なテクニックをいくつかご紹介します。具体例ではRigidBody2Dを使用しますが、ここで学ぶ内容は3Dモデルにも同様に適用できます。
+このチュートリアルでは、リジッドボディを使用するべきタイミング（および使用すべきでないタイミング）や、仕組みの解説、さらには思い通りに制御するための便利なテクニックをご紹介します。具体例ではRigidBody2Dを使用しますが、ここで学ぶ内容は3Dモデルにも同様に適用できます。
 
 ## はじめに
 
@@ -47,7 +47,7 @@ children:
 ※「再生」を押すとブロックがゆっくりと下方に落ちていくのが確認できるでしょう。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクターで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。ここでは値を`3`に設定しています。
 
 メインシーンを作成します（通常は<a href="https://docs.godotengine.org/ja/latest/classes/class_node.html" target="_blank"><svg width="18" height="18" class="icon-icon_node"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_node"></svg>Node</a>を使用します）。
-地面と壁として機能させるため、長方形の衝突形状を持つ<a href="https://docs.godotengine.org/ja/latest/classes/class_staticbody2d.html" target="_blank"><svg width="18" height="18" class="icon-icon_staticbody2d"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_static_body_2d"></svg>StaticBody2D</a>ノードをいくつか追加してください。
+地面と壁として機能させるため、長方形の衝突形状を持つ<a href="https://docs.godotengine.org/ja/latest/classes/class_staticbody2d.html" target="_blank"><svg width="18" height="18" class="icon-icon_staticbody2d"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_static_body_2d"></svg>StaticBody2D</a>ノードを追加してください。
 
 インスタンス化したブロックを複製します（Windows では`Ctrl+D`、macOS では`Command+D`）。これで綺麗なスタックを作成できます。例えば：
 

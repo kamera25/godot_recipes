@@ -24,14 +24,14 @@ draft: false
 
 プラットフォームシーンには以下のノードが含まれています。
 
-- {{< gd-icon Node2D >}}`Node2D` ("MovingPlatform")：この `Node2D` の親ノードは「アンカー」またはプラットフォームの起点として機能します。アニメーションでは、この親ノードを基準としたプラットフォームの `位置変化` を制御します。
+- {{< gd-icon Node2D >}}`Node2D` ("MovingPlatform")：この `Node2D` の親ノードは、プラットフォームの「アンカー」または開始点として機能します。アニメーションでは、この親ノードを基準としてプラットフォームの `座標` を制御します。
   - {{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`：これは実際に移動するプラットフォーム本体を表します。このノードが移動対象となります。
     - {{< gd-icon Sprite2D >}}`Sprite2D`：ここではスプライトシート、個別の画像、あるいは {{< gd-icon `TileMap` >}} ノードとしてタイルマップを使用することもできます。
     - {{< gd-icon CollisionShape2D >}}`CollisionShape2D`：ヒットボックスの大きさが大きすぎると、プレイヤーがプラットフォームの端から「浮いて」見える原因になるので注意してください。
 
-{{< gd-icon Sprite2D >}}`Sprite2D`の**テクスチャ**と衝突形状を適切に設定してください。{{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`では、**物理演算同期** プロパティを「オン」に設定します。コードでボディを動かしているため、これにより物理演算ステップ時に正しく移動され、プレイヤーや他の物理オブジェクトと連動した動きを維持できます。
+{{< gd-icon Sprite2D >}}`Sprite2D`の**テクスチャ**と衝突形状を適切に設定してください。{{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`では、**Sync to Physics(物理演算と同期)** プロパティを「オン」に設定します。コードでボディを動かしているため、これにより物理演算ステップ時に正しく移動され、プレイヤーや他の物理オブジェクトと連動した動きを維持できます。
 
-次にルートノードにスクリプトを追加してください。{{< gd-icon Node2D >}}`Node2D`:
+次にルートノードの{{< gd-icon Node2D >}}`Node2D`にスクリプトを追加してください。
 
 ```gdscript
 extends Node2D
@@ -49,7 +49,7 @@ func start_tween():
     tween.tween_property($AnimatableBody2d, "position", Vector2.ZERO, duration / 2)
 ```
 
-{{< gd-icon Tween >}}以下の機能をスムーズに動作させるために、`Twien` のオプションをいくつか活用しています。
+{{< gd-icon Tween >}}以下の機能をスムーズに動作させるために、`Twien` のオプションを活用しています。
 
 * `set_process_mode()`：物理演算処理段階でのみ移動が行われるようにします。
 * `set_loops()`：Tween再生を繰り返す設定です。
