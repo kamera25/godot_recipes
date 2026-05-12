@@ -104,7 +104,7 @@ if Input.is_action_just_pressed("shoot"):
 
 ## 関連レシピ
 
-- [CharacterBody3D: 移動方法](/godot_recipes/4.x/ja/3d/kinematic_body/)
+- [CharacterBody3D: 移動方法](/godot_recipes/4.x/ja/3d/characterbody3d_examples/)
 - [初めてのGodot: 3D入門](/godot_recipes/4.x/ja/g101/3d/)
 
 <!-- #### Videoが気に入ったら？ -->

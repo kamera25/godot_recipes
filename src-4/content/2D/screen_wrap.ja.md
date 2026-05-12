@@ -17,7 +17,7 @@ ghcommentid: 17
     @onready var screen_size = get_viewport_rect().size
     ```
 
-    `get_viewport_rect()` は `CanvasItem` 派生ノードであればどのノードからも利用できます。
+    `get_viewport_rect()` は `CanvasItem` の派生ノードであればどれでも利用できます。
 
 1. プレイヤーの座標を比較します。
 

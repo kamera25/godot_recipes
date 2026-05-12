@@ -1008,7 +1008,7 @@ msgstr ""
 
 #: basics/file_io.md
 msgid "This article just scratches the surface of what you can do with `FileAccess`. For the full list of available `FileAccess` methods, see the [FileAccess documentation](https://docs.godotengine.org/en/stable/classes/class_fileaccess.html)."
-msgstr "この記事で「`FileAccess`」の基本的な機能をざっとご紹介しました。利用可能な「`FileAccess`」メソッドの全一覧については、[公式ドキュメントのFileAccessページ](https://docs.godotengine.org/ja/stable/classes/class_fileaccess.html)をご覧ください。"
+msgstr "この記事で「`FileAccess`」の基本的な機能をざっとご紹介しました。利用可能な「`FileAccess`」メソッドの一覧については、[公式ドキュメントのFileAccessページ](https://docs.godotengine.org/ja/stable/classes/class_fileaccess.html)をご覧ください。"
 
 #: basics/file_io.md
 msgid "This means JSON has limitations that are negatives for you when it comes to saving your game data. JSON doesn't support many data types (no int vs. float, for example) so you have to do a lot of converting and validating to try and save/load your data. It's cumbersome and time consuming."
@@ -1064,7 +1064,7 @@ msgstr "この手法は3D空間でも同じように機能します。"
 
 #: basics/rotation.md
 msgid "Place the orbiting sprite in a child node of the main sprite (we're calling it \"Pivot\"). Give it an offset and rotate the `Pivot`."
-msgstr "軌道周回させるスプライトをメインスプライトの子ノードに配置します（ここでは「ピボット」と呼びます）。オフセット値を適用し、`ピボット`を回転させます。"
+msgstr "軌道周回させるスプライトをメインスプライトの子ノードに配置します（ここでは「ピボット」と呼びます）。オフセット値を適用し、`Pivot`で回転させます。"
 
 #: basics/rotation.md
 msgid "Circular movement"
@@ -2838,7 +2838,7 @@ msgstr "実験が完了したら、すべての回転値を`0`にリセットし
 
 #: 3D/camera_gimbal.md
 msgid "Set the **Transform/Position** of the {{< gd-icon Camera3D >}}`Camera3D` to `(0, 0, 4)`."
-msgstr "{{< gd-icon Camera3D >}}`Camera3D` の**変換/位置**を `(0, 0, 4)` に設定してください。"
+msgstr "{{< gd-icon Camera3D >}}`Camera3D` の **Transform/Position** を `(0, 0, 4)` に設定してください。"
 
 #: 3D/camera_gimbal.md
 msgid "We'll add a flag called `mouse_control` to enable easy toggling of mouse/keyboard controls."
@@ -3065,7 +3065,7 @@ msgstr ""
 
 #: 3D/interpolated_camera.md
 msgid "In the `_physics_process()` function we interpolate the camera's position with the `target`'s (plus `offset`)."
-msgstr "`_physics_process()`関数内では、カメラの位置を`target`の位置（プラス`offset`）に補間します。"
+msgstr "`_physics_process()`関数内では、カメラの位置を`target`の位置（と、`offset`を加算した値）に補間します。"
 
 #: 3D/interpolated_camera.md
 msgid "<video width=\"500\" controls src=\"/godot_recipes/4.x/img/3d_sphere_car_07.webm\"></video>"
@@ -3347,7 +3347,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_bars_03a.png)"
 
 #: 3D/healthbars.md
 msgid "In the Inspector, under _Flags_, set _Billboard_ to \"Enabled\"."
-msgstr "インスペクターで、 _Flags_ セクションの _Billboard_ を「Enabled」に設定してください。"
+msgstr "インスペクターで、 _Flags_ セクションの _Billboard_ を「Enabled(有効)」に設定してください。"
 
 #: 3D/healthbars.md
 msgid "If the {{< gd-icon SubViewport >}}`SubViewport` were not a child of the {{< gd-icon Sprite3D >}}`Sprite3D`, we could set it as the sprite's texture directly in the Inspector. Since it's a child, it won't be ready at the right time, so we'll need to set it in a script attached to the {{< gd-icon Sprite3D >}}`Sprite3D`:"
@@ -3810,8 +3810,8 @@ msgid ""
 "You can do this with {{< gd-icon RigidBody3D >}}`RigidBody3D`, {{< gd-icon CharacterBody3D >}}`CharacterBody3D`, or {{< gd-icon Area3D >}}`Area3D` as your collision node. There will be minor differences in how you handle movement. Which node you choose should depend on what other behavior you want in your game. For this recipe, we're only concerned with the movement.\n"
 "{{% /notice %}}"
 msgstr ""
-"{{< gd-icon `RigidBody3D` >}}{{% notice tip %}}\n"
-"「{{< gd-icon `CharacterBody3D` >}}`CharacterBody3D`」、または {{< gd-icon Area3D >}} 「Area3D」を衝突ノードとして使用できます。ただし、移動制御の方法には若干の違いが生じます。どのノードを選択するかは、ゲームで他にどのような挙動を必要とするかによって決めるべきです。このレシピでは、単に動きに焦点を当てています。\n"
+"{{% notice tip %}}\n"
+"衝突を検知するノードとして {{< gd-icon `RigidBody3D` >}}`RigidBody3D`、{{< gd-icon `CharacterBody3D` >}}`CharacterBody3D`、または {{< gd-icon Area3D >}}`Area3D`を使用することも可能です。ただし、移動制御の方法には若干の違いが生じます。どのノードを選択するかは、ゲームで他にどのような挙動を必要とするかによって決めるべきです。このレシピでは、単に動きに焦点を当てています。\n"
 "{{% /notice %}}"
 
 #: 3D/rolling_cube.md
@@ -4275,7 +4275,7 @@ msgstr "`move_and_slide()`メソッドを使用することで、移動コード
 
 #: 3D/characterbody3d_examples.md
 msgid "Here's the tank in action. We've made a test scene with a {{< gd-icon StaticBody3D >}}`StaticBody3D` plane for the ground and an {{< gd-icon Camera3D >}}`Camera3D` using the [Interpolated Camera](/godot_recipes/4.x/3d/interpolated_camera/index.html) recipe."
-msgstr "「これが動作中の戦車です。テスト用シーンとして、地面には {{< gd-icon `StaticBody3D` >}} 球体、カメラには [補間付きカメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/index.html) レシピを使用した {{< gd-icon Camera3D >}}`Camera3D` を配置しています。"
+msgstr "「これが動作中の戦車です。テスト用シーンとして、地面には {{< gd-icon `StaticBody3D` >}} `StaticBody3D`、カメラには [補間付きカメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/index.html) レシピを使用した {{< gd-icon Camera3D >}}`Camera3D` を配置しています。"
 
 #: 3D/characterbody3d_examples.md
 msgid "CharacterBody3D: Movement"
@@ -8853,7 +8853,7 @@ msgstr "トランスフォーム"
 
 #: Math/transforms.md
 msgid "Knowing this, we can move the ship forward by moving it along its own **X** axis and we won't have to worry about angles and trig functions. To do this in Godot, we can use the `transform` property, which is available to all [{{< gd-icon Node2D >}}`Node2D`]([https://link](https://docs.godotengine.org/en/latest/classes/class_node2d.html)) derived nodes."
-msgstr "この特性を利用すれば、船を**X軸**に沿って移動させることで簡単に前進できます。角度計算や三角関数を気にする必要もありません。Godotでこれを実現するには、すべての[{{< gd-icon Node2D >}}`Node2D`]([https://link](https://docs.godotengine.org/ja/latest/classes/class_node2d.html))派生ノードで利用できる`transform`プロパティを使用します。"
+msgstr "この特性を利用すれば、船を**X軸**に沿って移動させることで簡単に前進できます。角度計算や三角関数を気にする必要もありません。Godotでこれを実現するには、すべての[{{< gd-icon Node2D >}}`Node2D`]([https://link](https://docs.godotengine.org/ja/latest/classes/class_node2d.html)) の派生ノードで利用できる`transform`プロパティを使用します。"
 
 #: Math/transforms.md
 msgid "## 3D Transforms"
@@ -12039,7 +12039,7 @@ msgstr "はじめに、リジッドボディオブジェクトを作成します
 
 #: physics/rigidbody_drag_drop.md
 msgid "You want to pick up and move rigid bodies with the mouse."
-msgstr "マウスでリジッドボディを選択して移動させたい場合。"
+msgstr "マウスでリジッドボディを選択して移動させたい。"
 
 #: physics/rigidbody_drag_drop.md
 msgid "Create a main scene with some static body obstacles or a {{< gd-icon TileMap >}}`TileMap` and instance a few copies of the pickable body."
@@ -13376,7 +13376,7 @@ msgstr "1. スクリーンサイズ（ビューポート）を取得します。
 
 #: 2D/screen_wrap.md
 msgid "`get_viewport_rect()` is available to any `CanvasItem` derived node."
-msgstr "`get_viewport_rect()` は `CanvasItem` 派生ノードであればどのノードからも利用できます。"
+msgstr "`get_viewport_rect()` は `CanvasItem` の派生ノードであればどれでも利用できます。"
 
 #: 2D/screen_wrap.md
 msgid "1. Compare your player's position"
@@ -13733,7 +13733,7 @@ msgid ""
 "so that they will each expand to fill half of the screen. Also, check the _Stretch_\n"
 "property so that the {{< gd-icon Viewport >}}`Viewport` will automatically be set to the size of the\n"
 "container."
-msgstr "次に、2つの{{< gd-icon SubViewportContainer >}}`ViewportContainer`を子要素として追加し、それぞれに`2`と`1`という名前を付けます（これらは表示するプレイヤーに対応するためです）。両方のコンテナについて_サイズフラグ_を「画面いっぱいに拡張」に設定してください。これにより、各コンテナが画面の半分を埋めるように拡大されます。さらに、_伸縮指定_プロパティもチェックすることで、{{< gd-icon Viewport >}}`Viewport`が自動的にコンテナのサイズに合わせて調整されるようになります。"
+msgstr "次に、2つの{{< gd-icon SubViewportContainer >}}`ViewportContainer`を子要素として追加し、それぞれに`2`と`1`という名前を付けます（これらは表示するプレイヤーに対応するためです）。両方のコンテナについて _Size Flags_ を「Fill, Expand」に設定してください。これにより、各コンテナが画面の半分を埋めるように拡大されます。さらに、 _Stretch_ プロパティもチェックすることで、{{< gd-icon Viewport >}}`Viewport`が自動的にコンテナのサイズに合わせて調整されるようになります。"
 
 #: 2D/splitscreen_demo.md
 msgid ""
@@ -14756,11 +14756,11 @@ msgstr "`area_entered` シグナルを選択し、**接続…** ボタン（ま�
 
 #: games/first_2d/first_2d_04.md
 msgid "As with the ship image, there are multiple versions here, so set the ***Hframes** to `2` so we'll only see one at a time."
-msgstr "船舶画像と同様に、ここにも複数のバージョンが存在するため、***Hframes**を`2`に設定し、一度に表示する画像を1つだけにしてください。"
+msgstr "船舶画像と同様に、ここにも複数のバージョンが存在するため、**Hframes**を`2`に設定し、一度に表示する画像を1つだけにしてください。"
 
 #: games/first_2d/first_2d_04.md
 msgid "Note the `start()` function we defined. That will let us set the bullet's starting `position`, since the player will move around and spawn the bullets at different locations."
-msgstr "定義した`start()`関数に注目してください。これにより、プレイヤーが移動して異なる位置から弾丸を発射するため、弾丸の初期`位置`を設定することが可能になります。"
+msgstr "定義した`start()`関数に注目してください。これにより、プレイヤーが移動して異なる位置から弾丸を発射するため、弾丸の初期`座標`を設定することが可能になります。"
 
 #: games/first_2d/first_2d_04.md
 msgid "Now select the `Bullet` node and then click the **Node** tab next to the **Inspector**."
@@ -14983,7 +14983,7 @@ msgstr ""
 
 #: games/first_2d/first_2d_06.md
 msgid "Animations work by adding *tracks* that represent properties that you want the {{< gd-icon AnimationPlayer >}}`AnimationPlayer` to control. In the timeline of the player, you'll add *keyframes* that define what value you want the property to have at that particular time."
-msgstr "{{< gd-icon `AnimationPlayer` >}}アニメーション機能は、制御したいプロパティを表す「トラック」を追加することで動作します。プレイヤーのタイムライン上では、「キーフレーム」を追加して特定の時点でそのプロパティに設定したい値を指定します。"
+msgstr "{{< gd-icon `AnimationPlayer` >}}`AnimationPlayer` は、制御したいプロパティを表す「トラック」を追加することで動作します。プレイヤーのタイムライン上では、「キーフレーム」を追加して特定の時点でそのプロパティに設定したい値を指定します。"
 
 #: games/first_2d/first_2d_06.md
 msgid "Before we can make enemies, powerups, or any other game objects, we need a place where they can all exist together with the player. In most games, this would be called a \"level\" or \"main\" scene, and that's what we'll call it here."
@@ -14991,7 +14991,7 @@ msgstr "ほとんどのゲームでは、これを「レベル」または「メ
 
 #: games/first_2d/first_2d_06.md
 msgid "* Under **Offset** set **Centered** to \"off\". This makes the image's top left corner start at the origin rather than its center."
-msgstr "* **オフセット** 設定で **中央揃え** をオフにします。これにより、画像の左上隅が原点から始まるようになり、中心からは始まらなくなります。"
+msgstr "* **Offset** 設定で **Centered(中央揃え)** をオフにします。これにより、画像の左上隅が原点から始まるようになり、中心からは始まらなくなります。"
 
 #: games/first_2d/first_2d_06.md
 msgid "This image has two frames, each `64x64` pixels in size. We'd like the image to tile across the full size of the screen, so start with the following settings:"
@@ -15035,7 +15035,7 @@ msgstr "メインシーン"
 
 #: games/first_2d/first_2d_06.md
 msgid "* Under **Region**, turn **Enabled** \"on\", and then set the **Rect** to a width of `240` and a height of `320`. This makes the image stretch to the size of the screen."
-msgstr "* **リージョン** 設定で **Enabled** をオンにし、幅を`240`、高さを`320`に指定します。これにより画像が画面サイズに合わせて拡大されます。"
+msgstr "* **Region** 設定で **Enabled** をオンにし、幅を`240`、高さを`320`に指定します。これにより画像が画面サイズに合わせて拡大されます。"
 
 #: games/first_2d/first_2d_06.md
 msgid "The main scene is now ready for us to add enemies. In the next step we'll make a single enemy scene, as we did with the bullets, and then instantiate that multiple times."
@@ -15123,7 +15123,7 @@ msgstr "![alt](/godot_recipes/4.x/img/2d_101_06.png?width=800)"
 
 #: games/first_2d/first_2d_02.md
 msgid "With the `Player` node selected, add another node: a {{< gd-icon Sprite2D >}}`Sprite2D`. To keep things organized, let's rename this node to `Ship`."
-msgstr "`Player`ノードを選択した状態で、もう1つのノードを追加してください。{{< gd-icon Sprite2D >}}`Sprite2D`。整理しやすくするため、このノードの名前を`船`に変更してください。"
+msgstr "`Player`ノードを選択した状態で、もう1つのノードを追加してください。{{< gd-icon Sprite2D >}}`Sprite2D`。整理しやすくするため、このノードの名前を`Ship`に変更してください。"
 
 #: games/first_2d/first_2d_02.md
 msgid "To display these, select the `Ship` node and add a child {{< gd-icon AnimatedSprite2D >}}`AnimatedSprite2D` node and name it \"Boosters\"."
@@ -17249,7 +17249,7 @@ msgid ""
 "- [CharacterBody3D: Movement](/godot_recipes/3.x/3d/kinematic_body/)\n"
 "- [Godot 101: Intro to 3D](/godot_recipes/3.x/g101/3d/)"
 msgstr ""
-"- [CharacterBody3D: 移動方法](/godot_recipes/4.x/ja/3d/kinematic_body/)\n"
+"- [CharacterBody3D: 移動方法](/godot_recipes/4.x/ja/3d/characterbody3d_examples/)\n"
 "- [初めてのGodot: 3D入門](/godot_recipes/4.x/ja/g101/3d/)"
 
 #: 3D/rolling_cube.md

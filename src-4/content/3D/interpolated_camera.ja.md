@@ -39,7 +39,7 @@ func _physics_process(delta):
     look_at(target.global_transform.origin, target.transform.basis.y)
 ```
 
-`_physics_process()`関数内では、カメラの位置を`target`の位置（プラス`offset`）に補間します。
+`_physics_process()`関数内では、カメラの位置を`target`の位置（と、`offset`を加算した値）に補間します。
 
 ### 使用例
 

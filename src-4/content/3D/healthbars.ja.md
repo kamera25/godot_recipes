@@ -49,7 +49,7 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 {{< gd-icon Sprite3D >}}`Sprite3D`は通常の3Dオブジェクトと同様に動作します。カメラを移動させると、視点が変わるためです。ただし、HPバーは常にカメラの方を向くようにして、いつでも確認できるようにしたいです。
 
-インスペクターで、 _Flags_ セクションの _Billboard_ を「Enabled」に設定してください。
+インスペクターで、 _Flags_ セクションの _Billboard_ を「Enabled(有効)」に設定してください。
 
 続いてカメラを動かして、テクスチャが常にプレイヤー側を向いているか確認してください。
 

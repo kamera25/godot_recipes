@@ -110,4 +110,4 @@ Godot 自体がシーンやリソースの保存にJSONを使用していない�
 
 ### まとめ
 
-この記事で「`FileAccess`」の基本的な機能をざっとご紹介しました。利用可能な「`FileAccess`」メソッドの全一覧については、[公式ドキュメントのFileAccessページ](https://docs.godotengine.org/ja/stable/classes/class_fileaccess.html)をご覧ください。
+この記事で「`FileAccess`」の基本的な機能をざっとご紹介しました。利用可能な「`FileAccess`」メソッドの一覧については、[公式ドキュメントのFileAccessページ](https://docs.godotengine.org/ja/stable/classes/class_fileaccess.html)をご覧ください。

@@ -37,7 +37,7 @@ position += Vector2(10, 0)
 
 これらの「ローカル」座標軸は、オブジェクトの `transform` プロパティに含まれています。
 
-この特性を利用すれば、船を**X軸**に沿って移動させることで簡単に前進できます。角度計算や三角関数を気にする必要もありません。Godotでこれを実現するには、すべての[{{< gd-icon Node2D >}}`Node2D`]([https://link](https://docs.godotengine.org/ja/latest/classes/class_node2d.html))派生ノードで利用できる`transform`プロパティを使用します。
+この特性を利用すれば、船を**X軸**に沿って移動させることで簡単に前進できます。角度計算や三角関数を気にする必要もありません。Godotでこれを実現するには、すべての[{{< gd-icon Node2D >}}`Node2D`]([https://link](https://docs.godotengine.org/ja/latest/classes/class_node2d.html)) の派生ノードで利用できる`transform`プロパティを使用します。
 
 ```gdscript
     position += transform.x * 10
