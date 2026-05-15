@@ -1,0 +1,73 @@
+{{- $dot := . -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ .Site.BaseURL | safeJS }}#website",
+      "url": "{{ .Site.BaseURL | safeJS }}",
+      "name": "{{ .Site.Title | safeJS }}",
+      "description": "{{ .Site.Params.description | safeJS }}",
+      "inLanguage": "{{ .Page.Language | default "ja-JP" | safeJS }}"
+    },
+    {{- if not .IsHome }}
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ .Permalink | safeJS }}#breadcrumb",
+      "itemListElement": [
+        {{- $breadcrumb := slice }}
+        {{- $to := . }}
+        {{- $breadcrumb = $breadcrumb | append $to }}
+        {{- $depth := int (partial "get-page-depth.hugo" (dict "page" .)) }}
+        {{- range seq $depth }}
+          {{- $to = $to.Parent }}
+          {{- if $to }}
+            {{- $breadcrumb = $breadcrumb | append $to }}
+          {{- else }}
+            {{- break }}
+          {{- end }}
+        {{- end }}
+        {{- $len := len $breadcrumb }}
+        {{- range $i, $e := $breadcrumb }}
+          {{- if $i }},{{- end }}
+          {
+            "@type": "ListItem",
+            "position": {{ sub $len $i }},
+            "name": "{{ if $e.Title }}{{ $e.Title | safeJS }}{{ else }}{{ $e.Site.Title | safeJS }}{{ end }}",
+            "item": "{{ $e.Permalink | safeJS }}"
+          }
+        {{- end }}
+      ]
+    },
+    {{- end }}
+    {{- if .IsPage }}
+    {
+      "@type": "TechArticle",
+      "@id": "{{ .Permalink | safeJS }}#article",
+      "isPartOf": { "@id": "{{ .Site.BaseURL | safeJS }}#website" },
+      "headline": "{{ .Title | safeJS }}",
+      "description": "{{ with .Description }}{{ . | safeJS }}{{ else }}{{ .Summary | plainify | safeJS }}{{ end }}",
+      "image": "{{ "img/godot-chan.png" | absURL | safeJS }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ .Site.Params.author | default "kamera25" | safeJS }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ .Site.Title | safeJS }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ "img/favicon.png" | absURL | safeJS }}"
+        }
+      }
+      {{- if not .PublishDate.IsZero }},"datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" | safeJS }}"{{ end }}
+      {{- if not .Lastmod.IsZero }},"dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | safeJS }}"{{ end }},
+      "inLanguage": "{{ .Page.Language | default "ja-JP" | safeJS }}"
+    }
+
+
+    {{- end }}
+  ]
+}
+</script>
