@@ -41,7 +41,7 @@ func load_settings():
         f.close()
 ```
 
-`load_settings()` を呼び出すタイミングを次のように変更してください。
+`load_settings()` を呼び出すタイミングを次のように変更します。
 - `set_enable_ads()` の終了時に `_ready()` 内で呼び出す
 - `save_settings()` の終了時にも同じく `_ready()` 内で呼び出す
 さらに、`Screens.gd` ファイルでは、サウンド/音楽設定が変更された際に状態を保持する必要があるため、match 文内の各ケース部分に `settings.save_settings()` を追加が必要です。
@@ -68,14 +68,14 @@ for button in buttons:
 このセクションに追加するもう一つの要素は「ゲームについて」画面です。これはプレイヤーがこのゲームの概要を把握し、ライセンス情報とこのページへのリンクを確認するためのものです。本作はチュートリアルゲームであるため、このような情報提供が不可欠です。
 
 {{% notice warning %}}
-ライセンス条件を遵守することは非常に重要です。Godotで求められる要件については、以下のページを参照してください。[ライセンス遵守について](https://docs.godotengine.org/ja/4.x/about/complying_with_licenses.html)。なお、使用するアートワークについても、クレジット表記やリンク、その他の謝辞が必要となる場合があることにご注意ください。
+ライセンス条件を遵守することは非常に重要です。Godotで求められる要件については、以下のページを参照します。[ライセンス遵守について](https://docs.godotengine.org/ja/4.x/about/complying_with_licenses.html)。なお、使用するアートワークについても、クレジット表記やリンク、その他の謝辞が必要となる場合があることにご注意ください。
 {{% /notice %}}
 
 これに到達するために、「タイトル」画面に新規ボタンを追加しました。
 
 ![alt](/godot_recipes/4.x/img/cj_12_01.png)
 
-ボタンは他のボタンと同様に設定されています。「ボタン」グループに追加して登録されるようにしてください。`Screens.gd`ファイルで、このボタンの名前を対象とするもう一つの`match`を追加してください。
+ボタンは他のボタンと同様に設定されています。「ボタン」グループに追加して登録されるようにします。`Screens.gd`ファイルで、このボタンの名前を対象とするもう一つの`match`を追加します。
 
 ```gdscript
 "About":
@@ -105,7 +105,7 @@ Copyright © 2019 KidsCanCode
 ```
 
 {{% notice note %}}
-BBCodeの書式設定に関する詳細な仕様については、[RichTextLabelにおけるBBCode](https://docs.godotengine.org/ja/4.x/tutorials/ui/bbcode_in_richtextlabel.html)のドキュメントを参照してください。
+BBCodeの書式設定に関する詳細な仕様については、[RichTextLabelにおけるBBCode](https://docs.godotengine.org/ja/4.x/tutorials/ui/bbcode_in_richtextlabel.html)のドキュメントを参照します。
 {{% /notice %}}
 
 URL をクリック可能にするには、`TextEdit` の `meta_clicked` シグナルを接続します。

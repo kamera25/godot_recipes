@@ -22,7 +22,7 @@ A*アルゴリズムは、2点間の最短経路を求めるために広く利�
 
 最も重要な設定決定事項は、セルのサイズとグリッド自体のサイズです。ここでは例として `(64, 64)` を使用しますが、ウィンドウサイズは画面上に収まるセル数を決定に使います。ただし、セルサイズが異なっても基本的な動作原理は同じです。
 
-このコードを {{< gd-icon Node2D >}}`Node2D`に追加してください。
+このコードを {{< gd-icon Node2D >}}`Node2D`に追加します。
 
 ```gdscript
 extends Node2D
@@ -76,7 +76,7 @@ func draw_grid():
 
 ### 経路の描画方法
 
-パスを見つけるには、開始点と終了点が必要です。スクリプトの上部にこれらの変数を追加してください。
+パスを見つけるには、開始点と終了点が必要です。スクリプトの上部にこれらの変数を追加します。
 
 ```gdscript
 var start = Vector2i.ZERO
@@ -90,7 +90,7 @@ var end = Vector2i(5, 5)
     draw_rect(Rect2(end * cell_size, cell_size), Color.ORANGE_RED)
 ```
 
-2点間の経路は`get_point_path()`メソッドを使用して取得できますが、これを可視化する必要もあります。ここでは{{< gd-icon Line2D >}}`Line2D`を使用できるので、シーンに追加してください。
+2点間の経路は`get_point_path()`メソッドを使用して取得できますが、これを可視化する必要もあります。ここでは{{< gd-icon Line2D >}}`Line2D`を使用できるので、シーンに追加します。
 
 以下の方法でパスを取得し、得られた点を {{< gd-icon Line2D >}}`Line2D` に追加する方法をご紹介します。
 
@@ -110,7 +110,7 @@ func update_path():
 * `DIAGONAL_MODE_AT_LEAST_ONE_WALKABLE` - この設定では対角移動ができますが、斜め配置された障害物の「間」を経路が通過するのを防ぎます。
 * `DIAGONAL_MODE_ONLY_IF_NO_OBSTACLES` - この場合、障害物のないオープンエリアでのみ対角移動ができます。障害物付近ではこのモードは適用されません。
 
-プロパティを変更すると結果が大きく変わる可能性があるため、環境に合わせた調整が重要です。`initialize_grid()` 関数にこれを追加してください。
+プロパティを変更すると結果が大きく変わる可能性があるため、環境に合わせた調整が重要です。`initialize_grid()` 関数にこれを追加します。
 
 ```gdscript
 astar_grid.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER
@@ -134,7 +134,7 @@ func fill_walls():
                 draw_rect(Rect2(x * cell_size.x, y * cell_size.y, cell_size.x, cell_size.y), Color.DARK_GRAY)
 ```
 
-`_draw()` 内でこの関数を呼び出してください。
+`_draw()` 内でこの関数を呼び出します。
 
 その後、マウスを使ってセルをクリックし、その状態を切り替えることができます。
 

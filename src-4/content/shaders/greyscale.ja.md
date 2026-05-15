@@ -30,9 +30,9 @@ void fragment() {
 
 ![alt](/godot_recipes/4.x/img/shader_greyscale01.png)
 
-この機能を画面全体に適用するには、{{< gd-icon ColorRect >}}`ColorRect` コンポーネント（カメラの動きを無視するため {{< gd-icon CanvasLayer >}}`CanvasLayer` 内に配置）を追加し、画面全体を覆うようにスケールを調整してください。
+この機能を画面全体に適用するには、{{< gd-icon ColorRect >}}`ColorRect` コンポーネント（カメラの動きを無視するため {{< gd-icon CanvasLayer >}}`CanvasLayer` 内に配置）を追加し、画面全体を覆うようにスケールを調整します。
 
-`texture()` 関数を修正し、オブジェクトのピクセルではなく画面を直接サンプリングするようにしてください。
+`texture()` 関数を修正し、オブジェクトのピクセルではなく画面を直接サンプリングするようにします。
 
 ```glsl
 COLOR = texture(SCREEN_TEXTURE, SCREEN_UV);

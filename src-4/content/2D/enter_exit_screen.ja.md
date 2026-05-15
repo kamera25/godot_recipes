@@ -28,7 +28,7 @@ func _process(delta):
     position += velocity * delta
 ```
 
-プロジェクトイルが画面外に移動した際に自動的に削除されるようにするには、{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`を追加し、その`screen_exited`シグナルを接続してください。
+プロジェクトイルが画面外に移動した際に自動的に削除されるようにするには、{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`を追加し、その`screen_exited`シグナルを接続します。
 
 ```gdscript
 func _on_VisibleOnScreenNotifier2D_screen_exited():

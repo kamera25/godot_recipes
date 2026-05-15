@@ -24,14 +24,14 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ![alt](/godot_recipes/4.x/img/anim_tiles.png)
 
-これらの画像をダウンロードしてください。[water.zip](/godot_recipes/4.x/ja/files/water_tiles.zip)
+これらの画像をダウンロードします。[water.zip](/godot_recipes/4.x/ja/files/water_tiles.zip)
 
-画像ファイルをプロジェクトフォルダに解凍してください。
+画像ファイルをプロジェクトフォルダに解凍します。
 インスペクタで「新しいリソースを作成」ボタンをクリックします。
 
 ![alt](/godot_recipes/4.x/img/create_new_resource.png)
 
-`AnimatedTexture`を選択し、［フレーム］プロパティを`5`に設定します。各フレームごとに、対応する画像を［テクスチャ］プロパティにドラッグしてください。
+`AnimatedTexture`を選択し、［フレーム］プロパティを`5`に設定します。各フレームごとに、対応する画像を［テクスチャ］プロパティにドラッグします。
 
 ![alt](/godot_recipes/4.x/img/anim_texture_add.png)
 
@@ -41,7 +41,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ### TileMapでのAnimatedTextureの使用について
 
-`AnimatedTexture` が保存されたので、これで`TileSet`で使用できるようになります。新規または既存の{{< gd-icon TileMap >}}`TileMap`を開き、その _Tile Set_ プロパティを選択します。新しいテクスチャを`TileSet`に追加するには、ボタンをクリックしてください。
+`AnimatedTexture` が保存されたので、これで`TileSet`で使用できるようになります。新規または既存の{{< gd-icon TileMap >}}`TileMap`を開き、その _Tile Set_ プロパティを選択します。新しいテクスチャを`TileSet`に追加するには、ボタンをクリックします。
 
 ![alt](/godot_recipes/4.x/img/anim_tile_add.png)
 

@@ -14,11 +14,11 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ## サークルモードについて
 
-最終的には様々なモードを実装する予定ですが、まずは「制限モード」から始めてください。このモードでは、円は特定回数の周回後に消滅します。まず、残りの周回数を表示する `Label` ノードを追加してください。テキストフィールドに数値（例：`1`）を入力して、表示方法を確認してみてください。
+最終的には様々なモードを実装する予定ですが、まずは「制限モード」から始めてください。このモードでは、円は特定回数の周回後に消滅します。まず、残りの周回数を表示する `Label` ノードを追加します。テキストフィールドに数値（例：`1`）を入力して、表示方法を確認してみてください。
 
 [カスタムフォント] セクションで、新しい `DynamicFont` を追加し、アセットフォルダから _フォントデータ_ を読み込み、 _サイズ_ を `64` に設定します。ラベルの位置を中央配置するには、「レイアウト」メニューから「中央揃え」を選択します。
 
-以下の新しい変数を `Circle.gd` ファイルの先頭に追加してください。
+以下の新しい変数を `Circle.gd` ファイルの先頭に追加します。
 
 ```gdscript
 enum MODES {STATIC, LIMITED}
@@ -45,7 +45,7 @@ func set_mode(_mode):
 
 現在はこれら2つのモードが定義されていますが、後でさらに追加される予定です。
 
-さらに、`init()` メソッドにモードを引数として渡す方法も追加してください。デフォルト値は `STATIC` のままにしますが、今回はテスト用に `LIMITED` を使用することにします。これにより、以下のことができるようになります。
+さらに、`init()` メソッドにモードを引数として渡す方法も追加します。デフォルト値は `STATIC` のままにしますが、今回はテスト用に `LIMITED` を使用することにします。これにより、以下のことができるようになります。
 
 ```gdscript
 func init(_position, _radius=radius, _mode=MODES.LIMITED):
@@ -62,7 +62,7 @@ func capture(target):
     orbit_start = $Pivot.rotation
 ```
 
-注意：現在はジャンパーへの参照を渡しているため、スクリプトの先頭に`var jumper = null`を追加し、`Main.gd`スクリプト内の呼び出しを`object.capture(player)`に変更してください。
+注意：現在はジャンパーへの参照を渡しているため、スクリプトの先頭に`var jumper = null`を追加し、`Main.gd`スクリプト内の呼び出しを`object.capture(player)`に変更します。
 
 現在位置が一周したか確認し、もしそうであれば`current_orbits`を1減算します。
 
@@ -104,7 +104,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 ### サークル効果
 
-このセクションの最後の作業として、軌道が尽きつつあることを示すために円に「塗り」効果を追加してください。まず、[公式ドキュメント](https://docs.godotengine.org/ja/latest/tutorials/2d/custom_drawing_in_2d.html#arc-polygon-function)にある描画コードを使用します。
+このセクションの最後の作業として、軌道が尽きつつあることを示すために円に「塗り」効果を追加します。まず、[公式ドキュメント](https://docs.godotengine.org/ja/latest/tutorials/2d/custom_drawing_in_2d.html#arc-polygon-function)にある描画コードを使用します。
 
 
 ```gdscript
@@ -130,7 +130,7 @@ func _draw():
                             $Pivot.rotation + PI/2, Color(1, 0, 0))
 ```
 
-最後に、`_physics_process` に `update()` を追加し、`check_orbits()` が呼び出されるたびに実行されるようにしてください。
+最後に、`_physics_process` に `update()` を追加し、`check_orbits()` が呼び出されるたびに実行されるようにします。
 
 ![alt](/godot_recipes/4.x/img/cj_03_02.gif)
 

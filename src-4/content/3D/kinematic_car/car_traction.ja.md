@@ -18,7 +18,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 車がドリフト走行している場合、進行方向（向いている向き）と速度ベクトル（移動方向）は必ずしも一致しません。ハンドルを切ると車は旋回しますが、速度ベクトルはすぐに追従してくれません。代わりに `lerp()` 関数を使用して、徐々に目標方向への速度を調整します。
 
-以下の新しい変数を`car_base.gd`に追加してください。
+以下の新しい変数を`car_base.gd`に追加します。
 
 ```gdscript
 @export var slip_speed = 9.0
@@ -34,7 +34,7 @@ var drifting = false
 
 `drifting` はドリフト状態を追跡するためのブール変数です。
 
-次に、`car_base.gd` ファイルの `calculate_steering()` 関数内で、`new_heading` を計算した直後にこのコードを追加してください。
+次に、`car_base.gd` ファイルの `calculate_steering()` 関数内で、`new_heading` を計算した直後にこのコードを追加します。
 
 ```gdscript
 # traction
@@ -47,7 +47,7 @@ var traction = traction_fast if drifting else traction_slow
 
 このコードでは状況に応じて`drifting(ドリフト値)`を設定し、その後どのトラクション値を使用するかを決定します。
 
-最後の手順は、速度を新しい進行方向に合わせて補間することです。この行を変更してください。
+最後の手順は、速度を新しい進行方向に合わせて補間することです。この行を変更します。
 
 ```gdscript
 velocity = new_heading * velocity.length()

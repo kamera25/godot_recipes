@@ -52,7 +52,7 @@ func _physics_process(delta):
 lerp(start_value, end_value, amount)
 ```
 
-`lerp()`（線形補間）は、2つの数値間で「ブレンドされた」値を求める関数です。詳細は[補間処理](/godot_recipes/4.x/ja/math/interpolation/)を参照してください。
+`lerp()`（線形補間）は、2つの数値間で「ブレンドされた」値を求める関数です。詳細は[補間処理](/godot_recipes/4.x/ja/math/interpolation/)を参照します。
 
 以下のコードでは、`friction(摩擦係数)`はキャラクターが停止する速度を、`acceleration(加速力)`は最大加速するまでの速度を決定する要素です。どちらも値が`0.0`から`1.0`の範囲内で設定されます。
 

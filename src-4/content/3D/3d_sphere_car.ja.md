@@ -25,7 +25,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ### 入力値
 
-制御用に、以下の4つの入力を［インプットマップ］に追加してください。
+制御用に、以下の4つの入力を［インプットマップ］に追加します。
 
 - `accelerate(加速)`
 - `brake(ブレーキ)`
@@ -66,7 +66,7 @@ GLTFモデルを使用する場合、インポート設定で調整する必要�
 
 #### ボール
 
-{{< gd-icon CollisionShape3D >}}`CollisionShape3D` に球形状を追加してください。ここでは半径を `1` に設定していますが、異なる走行挙動を得るには、ボールのサイズを調整して実験してみてください。
+{{< gd-icon CollisionShape3D >}}`CollisionShape3D` に球形状を追加します。ここでは半径を `1` に設定していますが、異なる走行挙動を得るには、ボールのサイズを調整して実験してみてください。
 
 以下の方法でボディの設定を調整できます。
 
@@ -78,7 +78,7 @@ GLTFモデルを使用する場合、インポート設定で調整する必要�
 
 #### RayCast
 
-最後に、{{< gd-icon RayCast3D >}}`RayCast3D`ノードを{{< gd-icon MeshInstance3D >}}`CarMesh`の子要素として追加してください。**ターゲット位置**は`(0, -1, 0)`に設定してください。
+最後に、{{< gd-icon RayCast3D >}}`RayCast3D`ノードを{{< gd-icon MeshInstance3D >}}`CarMesh`の子要素として追加します。**ターゲット位置**は`(0, -1, 0)`に設定します。
 
 ![alt](/godot_recipes/4.x/img/3d_sphere_car_03.png)
 
@@ -100,7 +100,7 @@ extends RigidBody3D
 @onready var left_wheel = $CarMesh/suv2/wheel_frontLeft
 ```
 
-次に、車両の動作を制御する変数について説明します。各変数の機能についてはコメントを参照してください。
+次に、車両の動作を制御する変数について説明します。各変数の機能についてはコメントを参照します。
 
 ```gdscript
 # Where to place the car mesh relative to the sphere
@@ -170,7 +170,7 @@ if linear_velocity.length() > turn_stop_limit:
 
 坂で運転操作を試したことがある方ならご存知でしょうが、車のメッシュは全く傾かず、常に水平を保っています。これは不自然に見えるため、[CharacterBody3D: 表面と整列](/godot_recipes/4.x/ja/3d/3d_align_surface/) セクションで説明されている方法を使って修正しましょう。
 
-追加するコードは `_process()` 内でメッシュを回転させた後に配置してください。
+追加するコードは `_process()` 内でメッシュを回転させた後に配置します。
 
 ```gdscript
 if ground_ray.is_colliding():
@@ -191,14 +191,14 @@ func align_with_y(xform, new_y):
 
 #### 2. 車輪を回転させる
 
-フロントホイールがハンドル操作に応じて動くようにすると、よりリアルに見えます。スクリプトの上部にフロントホイールメッシュに関する参照を追加してください。
+フロントホイールがハンドル操作に応じて動くようにすると、よりリアルに見えます。スクリプトの上部にフロントホイールメッシュに関する参照を追加します。
 
 ```gdscript
 @onready var right_wheel = $CarMesh/suv2/wheel_frontRight
 @onready var left_wheel = $CarMesh/suv2/wheel_frontLeft
 ```
 
-入力を取得した直後に以下を追加してください。
+入力を取得した直後に以下を追加します。
 
 ```gdscript
     # rotate wheels for effect
@@ -210,7 +210,7 @@ func align_with_y(xform, new_y):
 
 ### 3. 車体を傾ける
 
-このスクリプトでは視覚的な魅力を大幅に向上させます。ターン速度に基づいて車のボディを傾斜させる機能を追加してください。スクリプト上部に変数を追加しましょう。
+このスクリプトでは視覚的な魅力を大幅に向上させます。ターン速度に基づいて車のボディを傾斜させる機能を追加します。スクリプト上部に変数を追加しましょう。
 
 ```gdscript
 var body_tilt = 35
@@ -226,7 +226,7 @@ var t = -rotate_input * ball.linear_velocity.length() / body_tilt
 body_mesh.rotation.z = lerp(body_mesh.rotation.z, t, 10 * delta)
 ```
 
-違いを観察してください。
+違いを観察します。
 
 ![alt](/godot_recipes/4.x/img/3d_sphere_car_06.gif)
 

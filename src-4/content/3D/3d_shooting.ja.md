@@ -36,13 +36,13 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 ここに掲載している弾丸モデルを使用したい場合は、[Kenney's "Blaster Kit"](https://www.kenney.nl/assets/blaster-kit)から入手できます。
 {{% /notice %}}
 
-メッシュを {{< gd-icon MeshInstance3D >}}`MeshInstance` に追加し、衝突形状もそれに合わせてスケール調整してください。
+メッシュを {{< gd-icon MeshInstance3D >}}`MeshInstance` に追加し、衝突形状もそれに合わせてスケール調整します。
 
 {{% notice warning %}}
 必ず {{< gd-icon MeshInstance3D >}}`MeshInstance` を `Area3D` ノードの前方方向（**-Z** 軸）と揃えてください。そうしないと、弾丸が正しく飛んでいるように見えませんよ！
 {{% /notice %}}
 
-スクリプトを追加し、{{< gd-icon Area3D >}}`Area3D`の`body_entered`シグナルを接続してください。
+スクリプトを追加し、{{< gd-icon Area3D >}}`Area3D`の`body_entered`シグナルを接続します。
 
 ```gdscript
 extends Area3D
@@ -66,7 +66,7 @@ func _on_Shell_body_entered(body):
     queue_free()
 ```
 
-カスタムの重力ベクトル `g` を使用することで、戦車の砲弾が綺麗な弧を描くように、大砲からどのように飛ぶかを制御できます。もし、飛び道具を直線的に移動させたい場合は、`_physics_process()` で重力を適用している行を削除してください。
+カスタムの重力ベクトル `g` を使用することで、戦車の砲弾が綺麗な弧を描くように、大砲からどのように飛ぶかを制御できます。もし、飛び道具を直線的に移動させたい場合は、`_physics_process()` で重力を適用している行を削除します。
 
 `look_at()` をフレームごとに使用すると、弾丸は常に進行方向を向くようになります。
 
@@ -74,7 +74,7 @@ func _on_Shell_body_entered(body):
 
 ### 射撃
 
-タンク内（または射撃オブジェクト）の任意の位置に、弾丸が出現させたい場所に {{< gd-icon Marker3D >}}`Marker3D` 子要素を追加してください。今回の戦車の場合、砲身の先端部分に配置します。
+タンク内（または射撃オブジェクト）の任意の位置に、弾丸が出現させたい場所に {{< gd-icon Marker3D >}}`Marker3D` 子要素を追加します。今回の戦車の場合、砲身の先端部分に配置します。
 
 ![alt](/godot_recipes/4.x/img/3d_shoot_02.png)
 
@@ -84,7 +84,7 @@ func _on_Shell_body_entered(body):
 @export var Bullet: PackedScene
 ```
 
-そして、`_process()` または `_unhandled_input()`（入力をキャプチャしている箇所）に、以下のコードを追加して弾丸を生成してください。
+そして、`_process()` または `_unhandled_input()`（入力をキャプチャしている箇所）に、以下のコードを追加して弾丸を生成します。
 
 ```gdscript
 if Input.is_action_just_pressed("shoot"):

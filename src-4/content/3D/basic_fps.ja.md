@@ -7,11 +7,11 @@ tags: []
 
 ## 課題
 
-ファーストパーソン・シューティングゲーム（FPS）用のキャラクターを作成してください。
+ファーストパーソン・シューティングゲーム（FPS）用のキャラクターを作成します。
 
 ## 解決策
 
-まず、{{< gd-icon CharacterBody3D >}}`CharacterBody3D` ノードから始め、次に {{< gd-icon CollisionShape3D >}}`CollisionShape3D` を追加してください。この場合、最も一般的な選択肢は {{< gd-icon CapsuleShape3D >}}`CapsuleShape3D` 衝突形状です。ワールドの設定によっては、ここに他の形状も追加できますが、この例では基本に忠実に進めます。
+まず、{{< gd-icon CharacterBody3D >}}`CharacterBody3D` ノードから始め、次に {{< gd-icon CollisionShape3D >}}`CollisionShape3D` を追加します。この場合、最も一般的な選択肢は {{< gd-icon CapsuleShape3D >}}`CapsuleShape3D` 衝突形状です。ワールドの設定によっては、ここに他の形状も追加できますが、この例では基本に忠実に進めます。
 
 サイズはすべて初期設定値のままにします（カプセルの高さは2メートルとなります）。地面と底面を揃えるため、高さを`1.0`m移動させてください。
 
@@ -47,9 +47,9 @@ func _physics_process(delta):
         velocity.y = jump_speed
 ```
 
-入力マッピングに「W」「A」「S」「D」（標準設定）またはコントローラーの軸（好みに応じて選択可能）を使用して、適切な入力アクションを必ず追加してください。
+入力マッピングに「W」「A」「S」「D」（標準設定）またはコントローラーの軸（好みに応じて選択可能）を使用して、適切な入力アクションを必ず追加します。
 
-以下の手順で「World」シーンにプレイヤーを追加してください。床に{{< gd-icon StaticBody3D >}}`StaticBody3D`ノードを、壁用に複数のノードを作成済みとします。
+以下の手順で「World」シーンにプレイヤーを追加します。床に{{< gd-icon StaticBody3D >}}`StaticBody3D`ノードを、壁用に複数のノードを作成済みとします。
 
 移動しようとすると、前後・左右に動けるものの、回転はできないことがわかります。次はこの点を処理していきます。
 
@@ -89,7 +89,7 @@ func _input(event):
 
 FPSキャラクターには通常、前面に位置した武器の3Dメッシュが用意されています。これをセットアップするのは、Godotエディターの便利な機能を使えば簡単に行えます。
 
-武器モデルを{{< gd-icon Camera3D >}}`Camera3D`の子要素として追加してください。その後、エディタービューメニューで「2つのビューポート」を選択し、そのうち1つをカメラプレビュー用に設定してください。これで、武器を自由に移動させながら、プレイヤー視点でどのように見えるかを簡単に確認できるようになります。
+武器モデルを{{< gd-icon Camera3D >}}`Camera3D`の子要素として追加します。その後、エディタービューメニューで「2つのビューポート」を選択し、そのうち1つをカメラプレビュー用に設定します。これで、武器を自由に移動させながら、プレイヤー視点でどのように見えるかを簡単に確認できるようになります。
 
 個性を加えるには、{{< gd-icon AnimationPlayer >}}`AnimationPlayer` を使用して武器の位置をプレイヤーの移動に合わせて左右にアニメーションさせる方法がオススメです。
 
@@ -101,4 +101,4 @@ FPSキャラクターには通常、前面に位置した武器の3Dメッシュ
 
 ## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
-プロジェクトコードはこちらからダウンロードしてください。[https://github.com/godotrecipes/basic_fps](https://github.com/godotrecipes/basic_fps)
+プロジェクトコードはこちらからダウンロードします。[https://github.com/godotrecipes/basic_fps](https://github.com/godotrecipes/basic_fps)

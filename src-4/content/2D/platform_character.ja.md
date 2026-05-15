@@ -16,15 +16,15 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ## 解決策
 
-経験が少ない開発者は、プラットフォームキャラクターをプログラミングするのがいかに複雑かを知って驚くことがよくあります。Godotには組み込みツールが用意されているものの、ゲームごとに解決策が異なるため、万能な答えはありません。このチュートリアルでは、ダブルジャンプやしゃがみ動作、ウォールジャンプ、アニメーションといった機能について詳しく掘り下げることはしません。ここではプラットフォーマー移動の基本原理に焦点を当てます。他の課題については、残りのレシピを参照してください。
+経験が少ない開発者は、プラットフォームキャラクターをプログラミングするのがいかに複雑かを知って驚くことがよくあります。Godotには組み込みツールが用意されているものの、ゲームごとに解決策が異なるため、万能な答えはありません。このチュートリアルでは、ダブルジャンプやしゃがみ動作、ウォールジャンプ、アニメーションといった機能について詳しく掘り下げることはしません。ここではプラットフォーマー移動の基本原理に焦点を当てます。他の課題については、残りのレシピを参照します。
 
 {{% notice tip %}}
 {{< gd-icon RigidBody2D >}}`RigidBody2D` を使用してプラットフォーマーキャラクターを作成することはできますが、ここでは {{< gd-icon CharacterBody2D >}}`CharacterBody2D` に焦点を当てます。運動制御ボディはプラットフォームゲームに最適です。このようなゲームでは、リアルな物理挙動よりも反応の良いアーケードライクな操作感が重視されるためです。
 {{% /notice %}}
 
-まず {{< gd-icon CharacterBody2D >}}`CharacterBody2D` ノードを作成し、その上に {{< gd-icon Sprite2D >}}`Sprite2D` と {{< gd-icon CollisionShape2D >}}`CollisionShape2D` を追加してください。
+まず {{< gd-icon CharacterBody2D >}}`CharacterBody2D` ノードを作成し、その上に {{< gd-icon Sprite2D >}}`Sprite2D` と {{< gd-icon CollisionShape2D >}}`CollisionShape2D` を追加します。
 
-以下のスクリプトをキャラクターノードのルートに追加してください。なお、ここでは[インプットマップ]で定義した入力アクション（`"walk_right"`、`"walk_left"`、および `"jump"`）を使用しています。詳細は [InputActions](/godot_recipes/4.x/ja/input/input_actions/) をご覧ください。
+以下のスクリプトをキャラクターノードのルートに追加します。なお、ここでは[インプットマップ]で定義した入力アクション（`"walk_right"`、`"walk_left"`、および `"jump"`）を使用しています。詳細は [InputActions](/godot_recipes/4.x/ja/input/input_actions/) をご覧ください。
 
 ```gdscript
 extends CharacterBody2D
@@ -91,7 +91,7 @@ func _physics_process(delta):
 
 ## 結論
 
-このコードは、独自のプラットフォームコントローラーを構築するための基礎を提供します。壁ジャンプなどのより高度なプラットフォーマー機能については、本セクションの他のレシピを参照してください。
+このコードは、独自のプラットフォームコントローラーを構築するための基礎を提供します。壁ジャンプなどのより高度なプラットフォーマー機能については、本セクションの他のレシピを参照します。
 
 <!--
 このレシピを使用したサンプルプロジェクトをダウンロードするには。
@@ -107,4 +107,4 @@ func _physics_process(delta):
 
 ## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
-プロジェクトコードはこちらからダウンロードしてください。[https://github.com/godotrecipes/2d_platform_basic](https://github.com/godotrecipes/2d_platform_basic)
+プロジェクトコードはこちらからダウンロードします。[https://github.com/godotrecipes/2d_platform_basic](https://github.com/godotrecipes/2d_platform_basic)

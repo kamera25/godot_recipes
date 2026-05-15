@@ -16,7 +16,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ## 解決策
 
-マウスカーソルの設定は `Input.set_custom_mouse_cursor()` メソッドを使用して行います。必要なのは使用するテクスチャだけです。なお、このテクスチャのサイズは最大で `256x256` ピクセル以内にしてください。
+マウスカーソルの設定は `Input.set_custom_mouse_cursor()` メソッドを使用して行います。必要なのは使用するテクスチャだけです。なお、このテクスチャのサイズは最大で `256x256` ピクセル以内にします。
 
 例えば、以下の画像を使用するには。
 
@@ -33,4 +33,4 @@ func _ready():
             Vector2(64, 64))
 ```
 
-第2パラメーターはどのシステムカーソルを置き換えるかを指定します。このパラメーターの全ての一覧は[入力ドキュメント](https://docs.godotengine.org/ja/latest/classes/class_input.html#enum-input-cursorshape)を参照してください。
+第2パラメーターはどのシステムカーソルを置き換えるかを指定します。このパラメーターの全ての一覧は[入力ドキュメント](https://docs.godotengine.org/ja/latest/classes/class_input.html#enum-input-cursorshape)を参照します。

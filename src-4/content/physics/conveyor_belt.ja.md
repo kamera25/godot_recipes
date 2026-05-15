@@ -31,11 +31,11 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ![alt](/godot_recipes/4.x/img/tileGreen_03.png)
 
-スタティックボディに {{< gd-icon Sprite2D >}}`Sprite` を追加し、 *テクスチャ* セクションで「新規AtlasTexture」を選択してください。
+スタティックボディに {{< gd-icon Sprite2D >}}`Sprite` を追加し、 *テクスチャ* セクションで「新規AtlasTexture」を選択します。
 
 ![alt](/godot_recipes/4.x/img/conveyor_04.png)
 
-タイルテクスチャをプロパティの*Texture*項目に配置し、*Region*を`(0, 0, 880, 88)`に設定してください。
+タイルテクスチャをプロパティの*Texture*項目に配置し、*Region*を`(0, 0, 880, 88)`に設定します。
 
 ![alt](/godot_recipes/4.x/img/conveyor_05.png)
 
@@ -44,7 +44,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 ![alt](/godot_recipes/4.x/img/conveyor_06.png)
 
 {{% notice tip %}}
-画像が繰り返されていない、または表示がおかしい場合、*リピート* フラグを「有効」に設定して再インポートしてください。
+画像が繰り返されていない、または表示がおかしい場合、*リピート* フラグを「有効」に設定して再インポートします。
 {{% /notice %}}
 
 *Region* プロパティの `x` の値を調整してみてください。タイルがずれるのが確認できるはずです。これがベルトのアニメーションに必要な動きです。このアニメーションは {{< gd-icon AnimationPlayer >}}`AnimationPlayer`を使用するか、コードで実装するかです。ここでは後者の方法を実演します。
@@ -65,7 +65,7 @@ func _process(delta):
 
 ![alt](/godot_recipes/4.x/img/conveyor_01.gif)
 
-これはキャラクターボディに対しても完璧に動作します。同じコンベアベルトオブジェクトの追加する場合は、[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character)を参照してください。
+これはキャラクターボディに対しても完璧に動作します。同じコンベアベルトオブジェクトの追加する場合は、[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character)を参照します。
 
 ![alt](/godot_recipes/4.x/img/conveyor_07.gif)
 

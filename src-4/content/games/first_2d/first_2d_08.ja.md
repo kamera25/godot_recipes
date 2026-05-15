@@ -9,7 +9,7 @@ pre: "08. "
 
 ## 敵弾シーン
 
-以前プレイヤー用の弾丸を作成したときと同じように、新しい`EnemyBullet`シーンを作成してください。ここでは詳細な手順は割愛しますが、行き詰まった場合はその部分を参照してください。唯一の違いは、代わりに`Enemy_projectile (16 x 16).png`画像を使用できる点です。
+以前プレイヤー用の弾丸を作成したときと同じように、新しい`EnemyBullet`シーンを作成します。ここでは詳細な手順は割愛しますが、行き詰まった場合はその部分を参照します。唯一の違いは、代わりに`Enemy_projectile (16 x 16).png`画像を使用できる点です。
 
 スクリプトは少し異なります。
 
@@ -25,7 +25,7 @@ func _process(delta):
     position.y += speed * delta
 ```
 
-{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`と{{< gd-icon Area2D >}}`Area2D`の `screen_exited` シグナルと `area_entered` シグナルをそれぞれ接続してください。
+{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`と{{< gd-icon Area2D >}}`Area2D`の `screen_exited` シグナルと `area_entered` シグナルをそれぞれ接続します。
 
 ```gdscript
 func _on_visible_on_screen_notifier_2d_screen_exited():

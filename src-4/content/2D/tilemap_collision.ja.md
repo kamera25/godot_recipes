@@ -15,7 +15,7 @@ ghcommentid: 19
 
 その後、衝突位置にある{{< gd-icon TileMap >}}`TileMap`のタイルを特定が必要です。
 
-以下の状況を想定してください。変数 `collision` に `KinematicCollision2D` オブジェクトが格納されている場合：
+以下の状況を想定します。変数 `collision` に `KinematicCollision2D` オブジェクトが格納されている場合：
 
 ```gdscript
 # Confirm the colliding body is a TileMap

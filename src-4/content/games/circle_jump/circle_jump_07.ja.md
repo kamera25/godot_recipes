@@ -40,7 +40,7 @@ var score = 0 setget set_score
 var level = 0
 ```
 
-また、`new_game()`関数でそのメソッドを使用するよう更新してください。
+また、`new_game()`関数でそのメソッドを使用するよう更新します。
 
 ```gdscript
 func new_game():
@@ -71,7 +71,7 @@ func set_score(value):
 
 レベルアップに伴う難易度上昇の仕組みとして、サークルの動きを変化させる方法を採用します。既に静的タイプと限定的移動可能なタイプという複数のサークル種類が存在していますが、これらはいずれも動的な動きを可能にするべき機能を備えているため、新たなタイプを追加するわけではありません。むしろ、これは任意のサークルに付与できるプロパティとして実装されます。
 
-シーン`Circle`を開き、`Tween`ノードを「MoveTween」という名前で追加してください。これをサークルスクリプトの先頭に追加してください。
+シーン`Circle`を開き、`Tween`ノードを「MoveTween」という名前で追加します。これをサークルスクリプトの先頭に追加します。
 
 ```gdscript
 @onready var move_tween = $MoveTween
@@ -84,7 +84,7 @@ var move_speed = 1.0  # The circle's movement speed.
 
 移動処理を管理するために、`MoveTween`を開始します。処理が完了したら、`tween_completed`シグナルを利用して逆方向に再始動させます。
 
-これは移動を開始するコードです。`tween_completed`シグナルをこの関数に接続してください。
+これは移動を開始するコードです。`tween_completed`シグナルをこの関数に接続します。
 
 ```gdscript
 func set_tween(object=null, key=null):

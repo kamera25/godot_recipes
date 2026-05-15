@@ -70,4 +70,4 @@ func _process(delta):
         position = position.lerp(target, 0.1)
 ```
 <!-- !LINK -->
-補間のより高度な応用については、`Tween` を参照してください。
+補間のより高度な応用については、`Tween` を参照します。

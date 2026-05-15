@@ -45,17 +45,17 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 ### 2Dを3Dに変換
 
-{{< gd-icon Sprite3D >}}`Sprite3D`を使用することで、2D画像を3D空間で表示することが可能です。新しいシーンに追加し、「Healthbar3D」という名前を付けます。まず設定とサイズ調整を行いますので、 _Texture_ プロパティに緑色のバー画像を設定してください。
+{{< gd-icon Sprite3D >}}`Sprite3D`を使用することで、2D画像を3D空間で表示することが可能です。新しいシーンに追加し、「Healthbar3D」という名前を付けます。まず設定とサイズ調整を行いますので、 _Texture_ プロパティに緑色のバー画像を設定します。
 
 {{< gd-icon Sprite3D >}}`Sprite3D`は通常の3Dオブジェクトと同様に動作します。カメラを移動させると、視点が変わるためです。ただし、HPバーは常にカメラの方を向くようにして、いつでも確認できるようにしたいです。
 
-インスペクターで、 _Flags_ セクションの _Billboard_ を「Enabled(有効)」に設定してください。
+インスペクターで、 _Flags_ セクションの _Billboard_ を「Enabled(有効)」に設定します。
 
-続いてカメラを動かして、テクスチャが常にプレイヤー側を向いているか確認してください。
+続いてカメラを動かして、テクスチャが常にプレイヤー側を向いているか確認します。
 
 ![alt](/godot_recipes/4.x/img/3d_bars02.gif)
 
-このシーンのインスタンスを`Mob`シーンに追加し、バーをモブの体の上に配置してください。
+このシーンのインスタンスを`Mob`シーンに追加し、バーをモブの体の上に配置します。
 
 ![alt](/godot_recipes/4.x/img/3d_bars04.png)
 
@@ -63,13 +63,13 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 {{< gd-icon Sprite3D >}}`Sprite3D` ノードが静的なテクスチャを表示するのではなく、{{< gd-icon TextureProgressBar >}}`TextureProgressBar` を表示したいです。これは、テクスチャをエクスポートできる {{< gd-icon SubViewport >}}`SubViewport` ノードを使用することで実現できます。
 
-以下の手順で操作してください。
-1. {{< gd-icon SubViewport >}}`SubViewport` を {{< gd-icon Sprite3D >}}`Sprite3D` の子要素として追加してください。
-2. インスペクタウィンドウで、_Transparent BG_ 設定を **オン** に設定してください。
+以下の手順で操作します。
+1. {{< gd-icon SubViewport >}}`SubViewport` を {{< gd-icon Sprite3D >}}`Sprite3D` の子要素として追加します。
+2. インスペクタウィンドウで、_Transparent BG_ 設定を **オン** に設定します。
 
 さらに、HPバーテクスチャのサイズに合わせてビューポートのサイズを設定する必要があり、そのサイズは`(200, 26)`です。
 
-インスタンス化する際に、`HealthBar2D` を {{< gd-icon Viewport >}}`Viewport` の子要素として配置してください。シーン構成は以下のようになるはずです。
+インスタンス化する際に、`HealthBar2D` を {{< gd-icon Viewport >}}`Viewport` の子要素として配置します。シーン構成は以下のようになるはずです。
 
 ![alt](/godot_recipes/4.x/img/3d_bars_03a.png)
 
@@ -84,13 +84,13 @@ func _ready():
 
 ### 作ったものを統合しよう
 
-モブの `_on_input_event()` メソッド内で、HPを減少させた後に以下を追加してください。
+モブの `_on_input_event()` メソッド内で、HPを減少させた後に以下を追加します。
 
 ```gdscript
 $HealthBar3D.update(health, max_health)
 ```
 
-以下の内容を `HealthBar3D.gd` に追加してください。
+以下の内容を `HealthBar3D.gd` に追加します。
 
 ```gdscript
 func update_health(_value, _max_value):
@@ -111,7 +111,7 @@ func update_health(_value, _max_value):
         texture_progress = bar_red
 ```
 
-クリックしてモブのHPゲージが変化する様子を確認してください。
+クリックしてモブのHPゲージが変化する様子を確認します。
 
 ![alt](/godot_recipes/4.x/img/3d_bars_05a.gif)
 

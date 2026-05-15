@@ -11,7 +11,7 @@ ghcommentid: 65
 
 ## 2Dトランスフォーム
 
-2D空間では、おなじみのX軸・Y軸座標平面を使用します。Godotでは（ほとんどのコンピュータグラフィックスアプリケーションと同様に）、**Y**軸は下向きに定義されていることに注意してください。
+2D空間では、おなじみのX軸・Y軸座標平面を使用します。Godotでは（ほとんどのコンピュータグラフィックスアプリケーションと同様に）、**Y**軸は下向きに定義されていることに注意します。
 
 ![alt](/godot_recipes/4.x/img/0_2d_coordinate_plane.png?width=250px)
 
@@ -46,7 +46,7 @@ position += Vector2(10, 0)
 このコードは「変換の x ベクトルに 10 を乗算した結果を追加する」という意味です。これを分解して説明します。`transform` オブジェクトには `x` と `y` プロパティがあり、これらはローカル座標軸を表しています。これらは「単位ベクトル」であり、その長さは `1` です。単位ベクトルは別の言い方で「方向ベクトル」とも呼ばれます。これは船の **x** 軸が指し示す方向を示しています。この値に `10` を掛けることで、より長い距離に対応するようにスケール変換しています。
 
 {{% notice tip %}}
-ノードの `transform` プロパティは親ノードに対する相対値です。グローバル座標が必要な場合は、`global_transform` を参照してください。
+ノードの `transform` プロパティは親ノードに対する相対値です。グローバル座標が必要な場合は、`global_transform` を参照します。
 {{% /notice %}}
 
 ローカル座標系に加えて、この変換には `origin(原点)` と呼ばれるコンポーネントも含まれています。原点は位置の _移動量_、すなわち変化した位置を表します。
@@ -74,7 +74,7 @@ func _unhandled_input(event):
             printt(event.position, to_local(event.position))
 ```
 
-利用可能なプロパティとメソッドの一覧については、[Transform2Dドキュメント](https://docs.godotengine.org/ja/latest/classes/class_transform2d.html)を参照してください。
+利用可能なプロパティとメソッドの一覧については、[Transform2Dドキュメント](https://docs.godotengine.org/ja/latest/classes/class_transform2d.html)を参照します。
 
 ## 3D トランスフォーム
 
@@ -99,6 +99,6 @@ func _unhandled_input(event):
 ```
 
 {{% notice tip %}}
-Godotにはデフォルトのベクター値が定義されています。例えば：`Vector3.FORWARD == Vector3(0, 0, -1)`。詳細は[Vector2](https://docs.godotengine.org/ja/latest/classes/class_vector2.html)および[Vector3](https://docs.godotengine.org/ja/latest/classes/class_vector3.html)のドキュメントを参照してください。
+Godotにはデフォルトのベクター値が定義されています。例えば：`Vector3.FORWARD == Vector3(0, 0, -1)`。詳細は[Vector2](https://docs.godotengine.org/ja/latest/classes/class_vector2.html)および[Vector3](https://docs.godotengine.org/ja/latest/classes/class_vector3.html)のドキュメントを参照します。
 {{% /notice %}}
 

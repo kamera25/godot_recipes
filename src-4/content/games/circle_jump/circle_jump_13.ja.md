@@ -14,19 +14,19 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 [パート11](/godot_recipes/4.x/ja/games/circle_jump/circle_jump_11/) でモバイル広告の設定を行って以降、GodotによるAndroidプラグイン処理とAdMob SDKには重要な更新が加えられています。もし現在ゲームが正常に動作している場合、現時点では特に変更を加える必要はないでしょう（まだ）。新規プロジェクトを開発中の場合は、以下の手順に従うことをオススメします。
 
-以前と同様に、[Shin-NiL Android AdMobプラグイン](https://github.com/Shin-NiL/Godot-Android-Admob-Plugin)を使用しています。「リリース」タブからzipファイルをダウンロードしてください。
+以前と同様に、[Shin-NiL Android AdMobプラグイン](https://github.com/Shin-NiL/Godot-Android-Admob-Plugin)を使用しています。「リリース」タブからzipファイルをダウンロードします。
 
 最初のステップは、プロジェクトにAndroidカスタムビルドテンプレートをインストールすることです。
 
 ![alt](/godot_recipes/4.x/img/admob_3.2_03.png)
 
-プラグインを解凍し、`admob-plugin` フォルダを `res://android/` ディレクトリに、`admob-lib` フォルダを `res://` ディレクトリに配置してください。
+プラグインを解凍し、`admob-plugin` フォルダを `res://android/` ディレクトリに、`admob-lib` フォルダを `res://` ディレクトリに配置します。
 
 以下の2ファイルを編集が必要です。
 
 * `res://android/build/gradle.properties`
 
-以下の行を追加してください。
+以下の行を追加します。
 
 ```
 android.useAndroidX=true

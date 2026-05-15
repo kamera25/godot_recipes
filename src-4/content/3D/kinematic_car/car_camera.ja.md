@@ -22,7 +22,7 @@ Godot には組み込みの `InterpolatedCamera` ノードが用意されてお�
 
 ### カメラのセットアップ方法
 
-新しいシーンを{{< gd-icon Camera3D >}}`Camera3D`で追加してください。名前は`ChaseCamera`とし、保存してからスクリプトを追加してください。
+新しいシーンを{{< gd-icon Camera3D >}}`Camera3D`で追加します。名前は`ChaseCamera`とし、保存してからスクリプトを追加します。
 
 `ChaseCamera`には追跡対象の`target`が設定されます。また、必要に応じてこのターゲットを変更する機能も実装します。
 
@@ -46,16 +46,16 @@ func _on_change_camera(t):
 
 ### ターゲットの設定
 
-複数の異なるカメラポジションを設定したいと考えています。例えば、近距離用と遠距離用の2種類、あるいは真下を見下ろすアングルなどです。車オブジェクトに  {{< gd-icon Node3D >}}`Node3D` を追加し、名前を `CameraPositions` とします。さらにこのオブジェクトに、必要な数だけ {{< gd-icon Marker3D >}}`Marker3D` を配置してください。
+複数の異なるカメラポジションを設定したいと考えています。例えば、近距離用と遠距離用の2種類、あるいは真下を見下ろすアングルなどです。車オブジェクトに  {{< gd-icon Node3D >}}`Node3D` を追加し、名前を `CameraPositions` とします。さらにこのオブジェクトに、必要な数だけ {{< gd-icon Marker3D >}}`Marker3D` を配置します。
 
-{{< gd-icon Marker3D >}}`Marker3D` をお好みの位置に移動・配置してください。位置の **-Z** 軸は車両に向けるようにしてください。
+{{< gd-icon Marker3D >}}`Marker3D` をお好みの位置に移動・配置します。位置の **-Z** 軸は車両に向けるようにします。
 
 {{% notice tip %}}
 作業効率を上げるため、一時的に {{< gd-icon Camera3D >}}`Camera` を適切な位置に配置し、「プレビュー」モードを使用して、{{< gd-icon Marker3D >}}`Marker3D` が正確に狙いたい方向を指すように調整する方法が有効です（作業完了後はカメラを削除してください）。
 ![alt](/godot_recipes/4.x/img/3d_car_09.png)
 {{% /notice %}}
 
-カメラと通信するために、位置変更が必要な時にシグナルを発します。以下のコードを車のスクリプトに追加してください。
+カメラと通信するために、位置変更が必要な時にシグナルを発します。以下のコードを車のスクリプトに追加します。
 
 ```gdscript
 extends "res://cars/car_base.gd"
@@ -74,13 +74,13 @@ func _input(event):
         emit_signal("change_camera", $CameraPositions.get_child(current_camera))
 ```
 
-インプットマップにカメラ切り替え用のアクションを追加してください。ここではTabキーと右ショルダーボタンを使用しています。
+インプットマップにカメラ切り替え用のアクションを追加します。ここではTabキーと右ショルダーボタンを使用しています。
 
 ![alt](/godot_recipes/4.x/img/3d_car_07.png)
 
 ### 接続方法
 
-メインシーンに`ChaseCamera`インスタンスを追加し、`現在`のカメラとして設定してください。その後、車の`change_camera`シグナルをカメラの`_on_change_angle()`関数に接続します。
+メインシーンに`ChaseCamera`インスタンスを追加し、`現在`のカメラとして設定します。その後、車の`change_camera`シグナルをカメラの`_on_change_angle()`関数に接続します。
 
 
 

@@ -14,7 +14,7 @@ ghcommentid: 88
 Godotに標準搭載されている`InterpolatedCamera`ノードは非推奨となっており、Godot 4.0リリース時に廃止される予定です。
 {{% /notice %}}
 
-以下のスクリプトをシーン内の{{< gd-icon Camera3D >}}`Camera3D`ノードにアタッチしてください。3つの`export`プロパティにより、以下のように選択できます。
+以下のスクリプトをシーン内の{{< gd-icon Camera3D >}}`Camera3D`ノードにアタッチします。3つの`export`プロパティにより、以下のように選択できます。
 
 * `lerp_speed` - カメラの移動速度。値を小さくすると「動きが鈍い」印象になります
 * `target` - カメラのターゲットノードを選択します

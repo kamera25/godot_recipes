@@ -52,7 +52,7 @@ func _process(delta):
         available.pop_front()
 ```
 
-このスクリプトをプロジェクト設定で 自動読み込み に設定してください。「AudioManager」のように、わかりやすく認識しやすい名前を付けてください。
+このスクリプトをプロジェクト設定で 自動読み込み に設定します。「AudioManager」のように、わかりやすく認識しやすい名前を付けてください。
 
 ![alt](/godot_recipes/4.x/img/audio_mgr_01.png)
 

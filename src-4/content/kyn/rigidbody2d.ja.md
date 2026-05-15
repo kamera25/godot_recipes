@@ -64,7 +64,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 * `apply_impulse()` / `apply_central_impulse()`
 
-瞬時に「力強さ」を与える動作です。野球のバットでボールを打つ様子をイメージしてください。
+瞬時に「力強さ」を与える動作です。野球のバットでボールを打つ様子をイメージします。
 
 * `_integrate_forces()`
 
@@ -154,7 +154,7 @@ func _physics_process(delta):
 > RigidBody2D の `position` や `linear_velocity` を毎フレーム、あるいは頻繁に変更するべきではありません。もし直接ボディの状態を操作する必要がある場合は、物理演算状態に直接アクセスできる `_integrate_forces` を使いましょう。
 
  `_physics_process()` の代わりに `_integrate_forces()` を使用するべきです。この関数では、ボディの [Physics2DDirectBodyState](https://docs.godotengine.org/ja/stable/classes/class_physics2ddirectbodystate.html) を安全に変更できるからです。
- 関連するドキュメントをぜひ参照してください。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](https://docs.godotengine.org/ja/stable/classes/class_transform2d.html) に関する情報です。
+ 関連するドキュメントをぜひ参照します。物理状態オブジェクトには非常に便利な情報がたくさん含まれています。場合、最も重要なのはボディの [Transform2D](https://docs.godotengine.org/ja/stable/classes/class_transform2d.html) に関する情報です。
 
 したがって、`_integrate_forces()` に移動して以下のようにコードを記述します。
 

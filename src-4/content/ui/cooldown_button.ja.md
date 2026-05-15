@@ -31,23 +31,23 @@ AbilityButton: {{< gd-icon TextureButton >}} TextureButton
       Value: {{< gd-icon Label >}} Label
 ```
 
-選択したアイコンを `AbilityButton` の **Textures/Normal** プロパティにドロップしてください。
+選択したアイコンを `AbilityButton` の **Textures/Normal** プロパティにドロップします。
 
-`Sweep`ノードでは、**Presets**メニューから 「Full Rect」 を選択します。**Fill Mode(塗りつぶしモード)**を「Counter Clockwise(反時計回り)」に設定してください。
+`Sweep`ノードでは、**Presets**メニューから 「Full Rect」 を選択します。**Fill Mode(塗りつぶしモード)**を「Counter Clockwise(反時計回り)」に設定します。
 
-また、クールタイム時の「時計ワイプ」でボタンを暗く表示させたいため、**[変調]** プロパティに透明度のある濃いグレーを設定してください。
+また、クールタイム時の「時計ワイプ」でボタンを暗く表示させたいため、**[変調]** プロパティに透明度のある濃いグレーを設定します。
 
 ![alt](/godot_recipes/4.x/img/cooldown_02.png)
 
-{{< gd-icon Timer >}}`Timer`ノードの設定は「One Shot」に設定してください。
+{{< gd-icon Timer >}}`Timer`ノードの設定は「One Shot」に設定します。
 
-`Counter`はテキストを保持・配置するためのコンテナです。レイアウトを"Bottom Wide"に設定し、**Theme Overrides/Constants** セクションでは両方の **Margin Right** と **Margin Left**  を `5` に指定してください。
+`Counter`はテキストを保持・配置するためのコンテナです。レイアウトを"Bottom Wide"に設定し、**Theme Overrides/Constants** セクションでは両方の **Margin Right** と **Margin Left**  を `5` に指定します。
 
-最後に、`Value`ラベルで［水平整列］を「右揃え」に設定し、［テキストクリッピング］を「有効」にしてください。**テーマオーバーライド／フォント**にフォントを追加してください。動作確認のため、**テキスト**欄には `0.0` のような値を入力してください。アイコンが白黒の場合は、**テーマオーバーライド／定数／アウトラインサイズ**として `1` を設定すると効果的です。
+最後に、`Value`ラベルで［水平整列］を「右揃え」に設定し、［テキストクリッピング］を「有効」にします。**テーマオーバーライド／フォント**にフォントを追加します。動作確認のため、**テキスト**欄には `0.0` のような値を入力します。アイコンが白黒の場合は、**テーマオーバーライド／定数／アウトラインサイズ**として `1` を設定すると効果的です。
 
 ### スクリプト
 
-以下のスクリプトを `AbilityButton` に追加してください。
+以下のスクリプトを `AbilityButton` に追加します。
 - `Timer` の `timeout` シグナルと `AbilityButton` の `pressed` シグナルを接続します。
 
 ```gdscript

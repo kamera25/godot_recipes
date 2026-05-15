@@ -26,7 +26,7 @@ draft: false
 
 衝突判定用に円筒を使用し、機体のサイズに合わせて調整しています。これにより、デモで必要となる地面との接触検出ができるようになります。
 
-スクリプトを実行する前に、航空機のプロパティを確認してください。
+スクリプトを実行する前に、航空機のプロパティを確認します。
 
 ```gdscript
 extends CharacterBody3D
@@ -63,7 +63,7 @@ var pitch_input = 0
 
 ![alt](/godot_recipes/4.x/img/kb_plane_02.png)
 
-この機能は入力値を取得し、設定された値を反映します。なお、スロットルの増減操作は「actual_speed」ではなく`target_speed`を変更することに注意してください。これにより、現在の速度から目標速度までスムーズに加速・減速できます。
+この機能は入力値を取得し、設定された値を反映します。なお、スロットルの増減操作は「actual_speed」ではなく`target_speed`を変更することに注意します。これにより、現在の速度から目標速度までスムーズに加速・減速できます。
 
 ```gdscript
 func get_input(delta):
@@ -105,7 +105,7 @@ func _physics_process(delta):
 
 ![alt](/godot_recipes/4.x/img/kb_plane_03.gif)
 
-次に、飛行機のピッチ角度を変更する処理を追加してください。`_physics_process()` 内の `get_input()` 呼び出し直後に以下を追加してください。
+次に、飛行機のピッチ角度を変更する処理を追加します。`_physics_process()` 内の `get_input()` 呼び出し直後に以下を追加します。
 
 ```gdscript
 transform.basis = transform.basis.rotated(transform.basis.x, pitch_input * pitch_speed * delta)
@@ -115,7 +115,7 @@ transform.basis = transform.basis.rotated(transform.basis.x, pitch_input * pitch
 
 ![alt](/godot_recipes/4.x/img/kb_plane_04.gif)
 
-その後、ターン入力用に以下を追加してください。
+その後、ターン入力用に以下を追加します。
 
 ```gdscript
 transform.basis = transform.basis.rotated(Vector3.UP, turn_input * turn_speed * delta)

@@ -24,7 +24,7 @@ node.material.set_shader_param("param_name", value)
 
 以下の方法で値を取得することもできます。`get_shader_param()`。
 
-例については、[ブラーシェーダー](/godot_recipes/4.x/ja/shaders/blur/)のレシピを参照してください。
+例については、[ブラーシェーダー](/godot_recipes/4.x/ja/shaders/blur/)のレシピを参照します。
 
 ## 関連するレシピ
 

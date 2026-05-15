@@ -32,9 +32,9 @@ tags: []
 
 ### 設定手順
 
-操作対象の宇宙船に対応する `gltf` ファイルを選択し、*インポート*タブをクリックしてください。*ルートタイプ*を {{< gd-icon CharacterBody3D >}} `CharacterBody3D` に変更します。次に『再インポート』をクリックします。その後、`gltf`ファイルをダブルクリックすると、新しいシーンが生成され、その中に {{< gd-icon KinematicBody3D >}} `CharacterBody3D` をルートとする子オブジェクトとして {{< gd-icon MeshInstance3D >}} `MeshInstance` が表示されます。ボディに {{< gd-icon CollisionShape3D >}} `CollisionShape3D`を追加してください。
+操作対象の宇宙船に対応する `gltf` ファイルを選択し、*インポート*タブをクリックします。*ルートタイプ*を {{< gd-icon CharacterBody3D >}} `CharacterBody3D` に変更します。次に『再インポート』をクリックします。その後、`gltf`ファイルをダブルクリックすると、新しいシーンが生成され、その中に {{< gd-icon KinematicBody3D >}} `CharacterBody3D` をルートとする子オブジェクトとして {{< gd-icon MeshInstance3D >}} `MeshInstance` が表示されます。ボディに {{< gd-icon CollisionShape3D >}} `CollisionShape3D`を追加します。
 
-*プロジェクト設定 > インプットマップ* にて、以下の入力を設定してください。
+*プロジェクト設定 > インプットマップ* にて、以下の入力を設定します。
 
 * `roll_right` / `roll_left` （ロール操作）
 * `pitch_up` / `pitch_down` （ピッチ操作）
@@ -73,7 +73,7 @@ func _physics_process(delta):
 
 ### 回転角度設定
 
-現在、3軸方向の回転処理が対応可能になりました。以下の変数をスクリプトの先頭に追加してください。
+現在、3軸方向の回転処理が対応可能になりました。以下の変数をスクリプトの先頭に追加します。
 
 ```gdscript
 @export var pitch_speed = 1.5
@@ -117,7 +117,7 @@ transform.basis = transform.basis.orthonormalized()
 @export var input_response = 8.0
 ```
 
-以下の内容に従って、`get_input()` 内の 3 軸入力を変更してください。
+以下の内容に従って、`get_input()` 内の 3 軸入力を変更します。
 
 ```gdscript
 pitch_input = lerp(pitch_input, Input.get_axis("pitch_down", "pitch_up"),
@@ -197,7 +197,7 @@ func _physics_process(delta):
 ```
 
 <!-- {{% notice note %}}
-    プロジェクトファイルをこちらからダウンロードしてください。[https://github.com/kidscancode/3d_spaceship_demo](https://github.com/kidscancode/3d_spaceship_demo)
+    プロジェクトファイルをこちらからダウンロードします。[https://github.com/kidscancode/3d_spaceship_demo](https://github.com/kidscancode/3d_spaceship_demo)
     {{% /notice %}} -->
 
 

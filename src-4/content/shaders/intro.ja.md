@@ -36,7 +36,7 @@ shader_type canvas_item;
 shader_type spatial;
 ```
 
-これらの初期例では2Dに限定して進めてください。まず{{< gd-icon Sprite2D >}}`Sprite`ノードを追加し、上記の手順に従ってシェーダーを適用してください。テクスチャにはGodotのデフォルトアイコンを使用することもできます。
+これらの初期例では2Dに限定して進めてください。まず{{< gd-icon Sprite2D >}}`Sprite`ノードを追加し、上記の手順に従ってシェーダーを適用します。テクスチャにはGodotのデフォルトアイコンを使用することもできます。
 
 ここで解説するシェーダーには主に2種類あります。 _頂点シェーダー_ と _フラグメントシェーダー_ です。
 
@@ -169,7 +169,7 @@ void vertex() {
 uniform float radius : hint_range(0, 1);
 ```
 
-各種データ型に対応するヒントが用意されています。完全なリストについては [シェーダー言語リファレンス](https://docs.godotengine.org/ja/latest/tutorials/shading/shading_reference/shading_language.html#uniforms) を参照してください。
+各種データ型に対応するヒントが用意されています。完全なリストについては [シェーダー言語リファレンス](https://docs.godotengine.org/ja/latest/tutorials/shading/shading_reference/shading_language.html#uniforms) を参照します。
 
 ### まとめ
 

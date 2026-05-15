@@ -40,14 +40,14 @@ children:
 
 ![alt](/godot_recipes/4.x/img/rigidbody_block_scene.png)
 
-スプライトにテクスチャを追加し、矩形の衝突形状を設定します。**重要** ： 衝突形状のスケールは__変更しないでください__。一般的にこれは推奨されない方法であり、予期しない衝突挙動を引き起こす原因となります。常に形状内のサイズハンドルを使用し、外側の`Node2D`由来のスケーリングハンドルは使わないようにしてください。
+スプライトにテクスチャを追加し、矩形の衝突形状を設定します。**重要** ： 衝突形状のスケールは__変更しないでください__。一般的にこれは推奨されない方法であり、予期しない衝突挙動を引き起こす原因となります。常に形状内のサイズハンドルを使用し、外側の`Node2D`由来のスケーリングハンドルは使わないようにします。
 
 > ※重要：本サンプルで使用しているテクスチャは、Kenney.nl の[物理アセットパック](https://kenney.nl/assets/physics-assets)を使用しています。このパッケージには、さまざまな形状・材質のブロックが多数収録されています。
 
 ※「再生」を押すとブロックがゆっくりと下方に落ちていくのが確認できるでしょう。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクターで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。ここでは値を`3`に設定しています。
 
 メインシーンを作成します（通常は<a href="https://docs.godotengine.org/ja/latest/classes/class_node.html" target="_blank"><svg width="18" height="18" class="icon-icon_node"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_node"></svg>Node</a>を使用します）。
-地面と壁として機能させるため、長方形の衝突形状を持つ<a href="https://docs.godotengine.org/ja/latest/classes/class_staticbody2d.html" target="_blank"><svg width="18" height="18" class="icon-icon_staticbody2d"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_static_body_2d"></svg>StaticBody2D</a>ノードを追加してください。
+地面と壁として機能させるため、長方形の衝突形状を持つ<a href="https://docs.godotengine.org/ja/latest/classes/class_staticbody2d.html" target="_blank"><svg width="18" height="18" class="icon-icon_staticbody2d"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_static_body_2d"></svg>StaticBody2D</a>ノードを追加します。
 
 インスタンス化したブロックを複製します（Windows では`Ctrl+D`、macOS では`Command+D`）。これで綺麗なスタックを作成できます。例えば：
 
@@ -55,10 +55,10 @@ children:
 
 ### 投射物
 
-以下の手順に従って作成してください。
+以下の手順に従って作成します。
 * Blockと同じノード構成で、名前を「ボール」に変更した新しいシーンを作成します。
-* 球体テクスチャのいずれかと、円形の衝突判定形状を選択してください。
-* このインスタンスをメインシーンに配置し、ブロックスタックの側面などに設置してください。
+* 球体テクスチャのいずれかと、円形の衝突判定形状を選択します。
+* このインスタンスをメインシーンに配置し、ブロックスタックの側面などに設置します。
 
 リジッドボディを動かすには、何らかの初速度が必要です。以下の方法で物体に初期速度を設定できます。`Linear -> Velocity`。試しにこれを `(500, 0)` に設定してみてください。
 
@@ -77,16 +77,16 @@ Linear velocityをリセットして`(0, 0)`に設定します。では、ボー
 
 - `add_force()`
 
-物体に連続的な力を加えます。ロケットの推進力のように、一定の力で加速を続ける様子を想像してください。なお、これは既存のすべての力に加算されるものです。除去されるまで、この力は継続的に作用し続けます。
+物体に連続的な力を加えます。ロケットの推進力のように、一定の力で加速を続ける様子を想像します。なお、これは既存のすべての力に加算されるものです。除去されるまで、この力は継続的に作用し続けます。
 
 - `apply_impulse()`
 
-身体に「瞬間的な『力』」を瞬時に加えます。野球のバットでボールを叩く動作を想像してください。
+身体に「瞬間的な『力』」を瞬時に加えます。野球のバットでボールを叩く動作を想像します。
 
 クリック、ドラッグ、マウスボタンを放した時にボールを蹴るように`apply_impulse()`を使用します。
 
-「プロジェクト設定」を開き、「インプット」タブで「クリック」という新しいアクションを追加してください。
-これを左マウスボタンに接続してください。
+「プロジェクト設定」を開き、「インプット」タブで「クリック」という新しいアクションを追加します。
+これを左マウスボタンに接続します。
 
 次に、ボールにスクリプトを追加し、以下のコードを記述します。
 
@@ -122,7 +122,7 @@ func _input(event):
 
 また、[OpenGameArt](https://opengameart.org/) もチェックして、「素敵な宇宙背景画像」（ただしこれは完全に任意です）を検索することをオススメします。
 
-上記と同様に、以下のノード構造を用いて艦船用の新規シーンを作成してください。
+上記と同様に、以下のノード構造を用いて艦船用の新規シーンを作成します。
 
 - `RigidBody2D`
     - `Sprite`
@@ -135,7 +135,7 @@ func _input(event):
 デフォルトでは、物理設定により物体の速度と回転運動に適度な_減衰効果が付与されます_。
 宇宙空間には摩擦がないため、本来はいかなる種類の減衰も適用すべきではありません。
 しかし「スペースインベーダー」風のゲーム感を出すため、キーを離すと船が即座に停止するようにしたいので、
-船の`Angular -> Damp`パラメータを`5`に設定してください。
+船の`Angular -> Damp`パラメータを`5`に設定します。
 
 {{< highlight swift >}}
 extends RigidBody2D
@@ -220,9 +220,9 @@ func _physics_process(delta):
 
 このように、`_physics_process()` の代わりに `_integrate_forces()` を使用が必要です。これにより、<a href="https://docs.godotengine.org/ja/latest/classes/class_physics2ddirectbodystate.html" target="_blank">Physics2DDirectBodyState</a> オブジェクトにアクセスできるようになります。物理状態オブジェクトには、非常に有用な情報が豊富に含まれているので、ぜひリンク先のドキュメントを参照されることを強くオススメします。
 特に重要な情報は、物体の <a href="https://docs.godotengine.org/ja/latest/classes/class_transform2d.html" target="_blank">Transform2D</a> です。
-（変換についての詳細な説明はこの文書の範囲を超えますので、より詳しい情報は[行列と変換](https://docs.godotengine.org/ja/latest/learning/features/math/matrices_and_transforms.html)を参照してください。）
+（変換についての詳細な説明はこの文書の範囲を超えますので、より詳しい情報は[行列と変換](https://docs.godotengine.org/ja/latest/learning/features/math/matrices_and_transforms.html)を参照します。）
 
-Bodyの位置はトランスフォームの `origin` に含まれています。`_physics_process()` を `_integrate_forces()` に変更し、以下のコードを追加してください。
+Bodyの位置はトランスフォームの `origin` に含まれています。`_physics_process()` を `_integrate_forces()` に変更し、以下のコードを追加します。
 
 {{< highlight swift >}}
 func _integrate_forces(state):

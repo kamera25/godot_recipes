@@ -46,11 +46,11 @@ func _on_BallisticBullet_body_entered(body):
     queue_free()
 ```
 
-ここで必要なのは[運動方程式](https://www.khanacademy.org/science/physics/one-dimensional-motion/kinematic-formulas/a/what-are-the-kinematic-formulas)を適用するだけです。`velocity` の初期値は単なるテスト用です。ブレットシーンを実行してください。
+ここで必要なのは[運動方程式](https://www.khanacademy.org/science/physics/one-dimensional-motion/kinematic-formulas/a/what-are-the-kinematic-formulas)を適用するだけです。`velocity` の初期値は単なるテスト用です。ブレットシーンを実行します。
 
 ![alt](/godot_recipes/4.x/img/2d_ballistic_01.gif)
 
-現在の射撃オブジェクトでは、弾丸インスタンスを作成し、初期プロパティを設定できます。以下のいずれかの射撃処理関数／入力ハンドラに実装してください。
+現在の射撃オブジェクトでは、弾丸インスタンスを作成し、初期プロパティを設定できます。以下のいずれかの射撃処理関数／入力ハンドラに実装します。
 
 ```gdscript
 @export var muzzle_velocity = 350

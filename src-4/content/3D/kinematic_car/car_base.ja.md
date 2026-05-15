@@ -41,20 +41,20 @@ Kenny氏の『カーキット』でこの車種やその他のモデルを見つ
 [https://kenney.nl/assets/car-kit](https://kenney.nl/assets/car-kit)。キット全体をダウンロードすれば、後で他の車両も使用できます。
 {{% /notice %}}
 
-車を読み込むには、`"Models/GLTF format"`フォルダ内で該当モデルを探してください。今回は`sedanSports.glb`を使用します。このファイルを新規Godotプロジェクトにインポートし、できれば`res://assets/cars/`のような専用フォルダにまとめておくと良いでしょう。
+車を読み込むには、`"Models/GLTF format"`フォルダ内で該当モデルを探します。今回は`sedanSports.glb`を使用します。このファイルを新規Godotプロジェクトにインポートし、できれば`res://assets/cars/`のような専用フォルダにまとめておくと良いでしょう。
 
 Godotでファイルを選択し、「インポート」タブに移動します。_ルートタイプ_を「CharacterBody3D」に変更し、「再インポート」をクリックします。これでこの車を使用する準備が整いました。
 
 #### {{< gd-icon KinematicBody3D >}} キャラクター用 Body3D の設定
 
-`sedanSports.glb`ファイルをダブルクリックし、「新規継承」を選択してください。以下のように新しいシーンが作成されます。
+`sedanSports.glb`ファイルをダブルクリックし、「新規継承」を選択します。以下のように新しいシーンが作成されます。
 
 ![alt](/godot_recipes/4.x/img/3d_car_02.png)
 
 ※各パーツごとの個別メッシュに注意。なお、余分な「tmpParent」{{< gd-icon Node3D >}}`Node3D`ノードがありますが、こちらは無視して構いません。
 
 {{< gd-icon KinematicBody3D >}}`CharacterBody3D` には衝突形状の欠落に関する警告メッセージが表示されています。まずはこの問題を修正する必要があります。
-* {{< gd-icon CollisionShape3D >}}`CollisionShape` を追加してください。
+* {{< gd-icon CollisionShape3D >}}`CollisionShape` を追加します。
 * 車両本体用に {{< gd-icon BoxShape3D >}}`BoxShape` を設定します。
 * 前輪用と後輪用にそれぞれ1つずつ {{< gd-icon CylinderShape3D >}}`CylinderShape` をおきます。
 
@@ -91,7 +91,7 @@ var velocity = Vector3.ZERO  # current velocity
 var steer_angle = 0.0  # current wheel angle
 ```
 
-※ `gravity` 変数を使用する代わりに、「プロジェクト設定」でグローバル値を設定することもできます。別々に定義すれば、ゲームオブジェクトごとに異なる挙動を実現できます。最適な方法はプロジェクトの要件次第ですので、状況に応じて選択してください。
+※ `gravity` 変数を使用する代わりに、「プロジェクト設定」でグローバル値を設定することもできます。別々に定義すれば、ゲームオブジェクトごとに異なる挙動を実現できます。最適な方法はプロジェクトの要件次第ですので、状況に応じて選択します。
 
 * `engine_power` と `braking` は車の加速・減速時に適用されます。
 
@@ -192,7 +192,7 @@ func get_input():
 
 ### まとめ
 
-これは基本的な車コントローラーの実装です。ゲーム開発の出発点として自由にお使いください。さらに機能を追加したい場合は、以下に挙げるフォローアップレシピで扱うトピックを参考にしてください。
+これは基本的な車コントローラーの実装です。ゲーム開発の出発点として自由にお使いください。さらに機能を追加したい場合は、以下に挙げるフォローアップレシピで扱うトピックを参考にします。
 
 * 牽引およびドリフト走行
 * チェイスカメラ制御とカメラ操作

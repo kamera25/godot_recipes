@@ -76,7 +76,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ![alt](/godot_recipes/4.x/img/ui_flags_example01.png)
 
-異なるボタンの「サイズフラグ」プロパティを調整してみて、それが `HBoxContainer` 内での配置にどのように影響するか確認してください。
+異なるボタンの「サイズフラグ」プロパティを調整してみて、それが `HBoxContainer` 内での配置にどのように影響するか確認します。
 
 ![alt](/godot_recipes/4.x/img/ui_flags_example02.gif)
 

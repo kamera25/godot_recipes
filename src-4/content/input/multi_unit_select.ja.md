@@ -22,7 +22,7 @@ RTS(リアルタイムストラテジー)のように、複数ユニットを選
 
 ### ワールドのセットアップ
 
-ユニット選択の処理はワールド内で行います。まず「World」という名前の{{< gd-icon Node2D >}}`Node2D`オブジェクトを作成し、その中に`Unit`インスタンスを追加してください。Worldノードにスクリプトをアタッチし、以下の変数を設定してください。
+ユニット選択の処理はワールド内で行います。まず「World」という名前の{{< gd-icon Node2D >}}`Node2D`オブジェクトを作成し、その中に`Unit`インスタンスを追加します。Worldノードにスクリプトをアタッチし、以下の変数を設定します。
 
 ```gdscript
 extends Node2D
@@ -64,7 +64,7 @@ func _draw():
 
 選択ボックスが作成できたら、その内部に位置するユニットを特定する必要があります。ボタンを放してドラッグ操作が終了した際には、物理空間クエリを実行して対象のユニットを検索する必要があります。なお、対象となるユニットは{{< gd-icon CharacterBody2D >}}`CharacterBody2D`ですが、{{< gd-icon Area2D >}}`Area2D`やその他のボディタイプでも問題ありません。
 
-`PhysicsDirectSpaceState2D.intersect_shape()`を使用してユニットを検出します。これには形状（ここでは矩形）と変換行列（位置）が必要となります。詳細は[Godotドキュメント](https://docs.godotengine.org/ja/4.x/classes/class_physicsdirectspacestate2d.html)を参照してください。
+`PhysicsDirectSpaceState2D.intersect_shape()`を使用してユニットを検出します。これには形状（ここでは矩形）と変換行列（位置）が必要となります。詳細は[Godotドキュメント](https://docs.godotengine.org/ja/4.x/classes/class_physicsdirectspacestate2d.html)を参照します。
 
 ```gdscript
 elif dragging:
@@ -125,7 +125,7 @@ func _unhandled_input(event):
 
 ## まとめ
 
-このテクニックはリアルタイムストラテジーゲーム（RTS）やその他のジャンルのゲームに応用できます。以下から完全版プロジェクトをダウンロードして、ゲームを作る際に活用してください。
+このテクニックはリアルタイムストラテジーゲーム（RTS）やその他のジャンルのゲームに応用できます。以下から完全版プロジェクトをダウンロードして、ゲームを作る際に活用します。
 
 ## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 
