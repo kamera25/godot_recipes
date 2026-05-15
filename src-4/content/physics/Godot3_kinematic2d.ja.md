@@ -46,7 +46,7 @@ Godot では3種類の物理ボディが提供されており、<a href="https:/
 
 ### 衝突レイヤーとマスクについて
 
-Godotにおいて最も強力でありながらしばしば誤解されがちな衝突判定機能の一つが、「衝突レイヤーシステム」です。この仕組みを利用することで、多種多様なオブジェクト間で極めて複雑な相互作用を構築することが可能になります。核心となるのは「レイヤー」と「マスク」です。各衝突オブジェクトは、32種類の異なる物理レイヤーと相互作用できるよう設計されています。
+Godotにおいて最も強力でありながらしばしば誤解されがちな衝突判定機能の一つが、「コリジョンレイヤーシステム」です。この仕組みを利用することで、多種多様なオブジェクト間で極めて複雑な相互作用を構築できます。核心となるのは「レイヤー」と「マスク」です。各衝突オブジェクトは、32種類の異なる物理レイヤーと相互作用できるよう設計されています。
 
 各プロパティを順番に見てみてください:
 
@@ -93,7 +93,7 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 
 ##### KinematicCollision2D
 
-{{< gd-icon CharacterBody2D >}}`CharacterBody2D` が衝突を検知すると、Godotは<a href="https://docs.godotengine.org/ja/latest/classes/class_kinematiccollision2d.html" target="_blank">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と衝突相手の物体データが含まれています。このデータを活用すれば、衝突に対する適切な応答計算が可能になります。
+{{< gd-icon CharacterBody2D >}}`CharacterBody2D` が衝突を検知すると、Godotは<a href="https://docs.godotengine.org/ja/latest/classes/class_kinematiccollision2d.html" target="_blank">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と衝突相手の物体データが含まれています。このデータを活用すれば、衝突に対する適切な応答・演算を実現できます。
 
 #### 移動とスライド処理
 

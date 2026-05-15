@@ -146,7 +146,7 @@ func _process(delta):
     scale = lerp(scale, Vector3.ONE * zoom, zoom_speed)
 ```
 
-`lerp()` を使用してズームレベルを変更すると、より滑らかなズーミングが可能になります。
+`lerp()` を使用してズームレベルを変更すると、より滑らかなズームが実現できます。
 
 ![alt](/godot_recipes/4.x/img/gimbal_02.gif)
 

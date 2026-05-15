@@ -66,7 +66,7 @@ func _physics_process(delta):
             c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
 ```
 
-衝突時の法線ベクトルはリジッドボディの外側を指しているため、これを反転させてキャラクターから離れる方向に調整し、`push_force` 係数を適用します。これで再び押す動作が可能になります。なお、壁越しにリジッドボディを移動させることはできません。
+衝突時の法線ベクトルはリジッドボディの外側を指しているため、これを反転させてキャラクターから離れる方向に調整し、`push_force` 係数を適用します。これで再び押す動作ができるようになります。なお、壁越しにリジッドボディを移動させることはできません。
 
 ![alt](/godot_recipes/4.x/img/char_push_impulse.gif)
 

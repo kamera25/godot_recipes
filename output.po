@@ -99,7 +99,7 @@ msgstr "ではここで、より複雑なシーンツリーを見てみてくだ
 
 #: basics/getting_nodes.md
 msgid "For this reason, you should try to avoid using node paths that go *up* the scene tree. In the above situation, if the player instead emitted a signal when the health changed, the UI could listen for that signal to update itself. You could then rearrange and separate nodes without fear of breaking your game."
-msgstr "この理由から、シーンツリーの *上位* 方向へノードパスを指定する操作は避けるべきです。前述の状況では、プレイヤーのHPが変化した時にシグナルを発行するように変更すれば、UIコンポーネントはそのシグナルを受け取って自身の状態を更新できます。この方法なら、ゲームのソースコードに影響を与えることなくノードを自由に再配置・分離することが可能になります。"
+msgstr "この理由から、シーンツリーの *上位* 方向へノードパスを指定する操作は避けるべきです。前述の状況では、プレイヤーのHPが変化した時にシグナルを発行するように変更すれば、UIコンポーネントはそのシグナルを受け取って自身の状態を更新できます。この方法なら、ゲームのソースコードに影響を与えることなくノードを自由に再配置・分離できます。"
 
 #: basics/getting_nodes.md
 msgid "Understanding node paths"
@@ -1668,7 +1668,7 @@ msgstr "ノード`MiniMap`で、インスペクター内のシグナル `_gui_in
 
 #: ui/minimap.md
 msgid "If you've stuck with it this far, we have one more feature to add: adjustable zoom level. With this, scrolling the mouse wheel when hovering over the map will zoom its scale in and out."
-msgstr "ここまでお読みいただいた方には、最後にもう一つの機能を追加してください。この「調整可能なズームレベル」を使えば、地図の上にマウスカーソルを置いた状態でホイールを回すことで、表示の拡大・縮小が可能になります。"
+msgstr "ここまでお読みいただいた方には、最後にもう一つの機能を追加してください。この「調整可能なズームレベル」を使えば、地図の上にマウスカーソルを置いた状態でホイールを回すことで、表示の拡大・縮小が可能です。"
 
 #: ui/minimap.md
 msgid "Next, we'll use a dictionary to map the `minimap_icon` tags we gave our units to the corresponding marker:"
@@ -2774,7 +2774,7 @@ msgstr "この問題を解決するには、カメラを _ジンバル_ に取�
 
 #: 3D/camera_gimbal.md
 msgid "Using `lerp()` to change the zoom level results in smoother zooming."
-msgstr "`lerp()` を使用してズームレベルを変更すると、より滑らかなズーミングが可能になります。"
+msgstr "`lerp()` を使用してズームレベルを変更すると、より滑らかなズームが実現できます。"
 
 #: 3D/camera_gimbal.md
 msgid "Also, in `_process()` we disable keyboard input when using mouse control."
@@ -4205,7 +4205,7 @@ msgstr ""
 
 #: 3D/debug_overlay.md
 msgid "Add the `DebugOverlay` as an autoload and set it as a singleton. This way we can access it from any node. Add this script to it:"
-msgstr "以下の手順で`DebugOverlay`を自動読み込みとして追加し、シングルトンとして設定してください。これにより、どのノードからでもアクセス可能になります。このスクリプトに以下の内容を追加してください。"
+msgstr "以下の手順で`DebugOverlay`を自動読み込みとして追加し、シングルトンとして設定してください。これにより、どのノードからでもアクセスできます。このスクリプトに以下の内容を追加してください。"
 
 #: 3D/debug_overlay.md
 msgid "We use `unproject_position()` to find the start and end points of the vector we want to draw. `draw_triangle()` is there to give us a nice pointed arrow appearance."
@@ -4353,7 +4353,7 @@ msgstr "以下にモデルのセットアップをご説明します。"
 
 #: 3D/simple_airplane.md
 msgid "We're using a cylinder for the collision shape, sized to match the plane's fuselage. This will allow for detecting the ground, which is all we're concerned with for this demo."
-msgstr "衝突判定用に円筒を使用し、機体のサイズに合わせて調整しています。これにより、デモで必要となる地面との接触検出が可能になります。"
+msgstr "衝突判定用に円筒を使用し、機体のサイズに合わせて調整しています。これにより、デモで必要となる地面との接触検出ができるようになります。"
 
 #: 3D/simple_airplane.md
 msgid "You can adapt this technique to a variety of arcade-style flying games. For example, for mouse control, you could use the `relative` property of `InputEventMouseMotion` to set the pitch and turn input."
@@ -4369,7 +4369,7 @@ msgstr "このデモではゲームコントローラーを使用しています
 
 #: 3D/simple_airplane.md
 msgid "This function captures the inputs and sets the input values. Note that increasing/decreasing throttle changes the `target_speed`, not the actual speed. This will allow us to acclerate/decelerate from the current speed to the target speed."
-msgstr "この機能は入力値を取得し、設定された値を反映します。なお、スロットルの増減操作は「actual_speed」ではなく`target_speed`を変更することに注意してください。これにより、現在の速度から目標速度までスムーズに加速・減速が可能になります。"
+msgstr "この機能は入力値を取得し、設定された値を反映します。なお、スロットルの増減操作は「actual_speed」ではなく`target_speed`を変更することに注意してください。これにより、現在の速度から目標速度までスムーズに加速・減速できます。"
 
 #: 3D/simple_airplane.md
 msgid "![alt](/godot_recipes/4.x/img/kb_plane_01.png)"
@@ -5154,7 +5154,7 @@ msgstr "ルートノードの子として追加し、その後に {{< gd-icon Ca
 
 #: 3D/assets/character_controller.md
 msgid "Next, we need to know when we touch the ground, so we can transition out of the \"Jump_Idle\" animation. To do this, we need to keep track of our grounded status by comparing it with the previous frame. Add a new variable at the top:"
-msgstr "次に、地面に接地したタイミングを把握する必要があります。これにより、「Jump_Idle」アニメーションから移行可能になります。これを実現するためには、前フレームと比較することで接地状態を追跡する必要があります。上部に新しい変数を追加してください。"
+msgstr "次に、地面に接地したタイミングを把握する必要があります。これにより、「Jump_Idle」アニメーションから遷移できます。これを実現するためには、前フレームと比較することで接地状態を追跡する必要があります。上部に新しい変数を追加してください。"
 
 #: 3D/assets/character_controller.md
 msgid "We'll add a variable for the rotation speed, so that we don't snap instantly to the new heading."
@@ -5287,7 +5287,7 @@ msgstr "#### 外部ツール"
 
 #: 3D/assets/level_design.md
 msgid "Add the {{< gd-icon StaticBody3D >}}`StaticBody3D` child of the door to a group called \"interactable\". This is the object the player is going to detect. If it's in that group, the player will call `interact()` on it."
-msgstr "ドアの子要素である {{< gd-icon StaticBody3D >}}`StaticBody3D` を「インタラクタブル」というグループに追加してください。これはプレイヤーが検出する対象となるオブジェクトです。このグループに属することで、プレイヤーは `interact()` メソッドを呼び出すことが可能になります。"
+msgstr "ドアの子要素である {{< gd-icon StaticBody3D >}}`StaticBody3D` を「interactable」というグループに追加してください。これはプレイヤーが検出する対象となるオブジェクトです。このグループに属することで、プレイヤーは `interact()` メソッドを呼び出せます。"
 
 #: 3D/assets/level_design.md
 msgid "#### Directly placing models"
@@ -5375,7 +5375,7 @@ msgstr "車が斜面から滑り落ちるのを防ぐ `move_and_slide_with_snap(
 
 #: 3D/kinematic_car/car_base.md
 msgid "We can also handle reverse by checking the dot product of the new heading (the direction the car is facing) with the velocity."
-msgstr "また、車両の進行方向ベクトルと速度ベクトルの内積を計算することで、逆向き判定も可能になります。"
+msgstr "また、車両の進行方向ベクトルと速度ベクトルの内積を計算することで、逆向き判定もできます。"
 
 #: 3D/kinematic_car/car_base.md
 msgid "We'll start with `_physics_process()`."
@@ -6013,7 +6013,7 @@ msgstr "- **MOUSE_MODE_CONFINED** ：マウスは表示されていますが、�
 
 #: input/mouse_capture.md
 msgid "When the mouse is captured, mouse input events will still be passed as normal. However, you will find there is a problem. If you want to close the game or switch to another window, you can't. For this reason, you will want to also include a way to \"release\" the mouse. For example, to release when the player pressed the Escape key:"
-msgstr "マウスが捕捉されている状態でも、通常どおりマウス入力イベントは伝達されます。ただし、問題が生じることに注意してください。ゲームを終了したり他のウィンドウに切り替えたい場合、それが不可能になります。このため、「マウス解放」機能も実装しておくと便利です。例えば、プレイヤーがEscキーを押したときにマウスを解放するには。"
+msgstr "マウスが捕捉されている状態でも、通常どおりマウス入力イベントは伝達されます。ただし、問題が生じることに注意してください。ゲームを終了したり他のウィンドウに切り替えたりできなくなります。このため、「マウス解放」機能も実装しておくと便利です。例えば、プレイヤーがEscキーを押したときにマウスを解放するには。"
 
 #: input/mouse_capture.md
 msgid "You want to hide the mouse cursor and keep the mouse from leaving the game window. This is common in many 3D games (and some 2D ones)."
@@ -6223,7 +6223,7 @@ msgstr "AnimationTreeStateMachine を使用して以下の処理を管理でき�
 
 #: animation/using_animation_sm.md
 msgid "Use an {{< gd-icon AnimationTree >}}`AnimationTree` to create an animation _state machine_. This will allow us to organize our animations and most importantly, control the transitions between them."
-msgstr "アニメーション状態機械を作成するには {{< gd-icon AnimationTree >}}`AnimationTree` を使いましょう。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御することが可能になります。"
+msgstr "アニメーション状態機械を作成するには {{< gd-icon AnimationTree >}}`AnimationTree` を使いましょう。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御できるようになります。"
 
 #: animation/using_animation_sm.md
 msgid "Note that we're using `return` after traveling to the attack animations. This is so that we won't instead travel to the \"run\" or \"idle\" animations further down in the function."
@@ -8144,7 +8144,7 @@ msgstr "ゲームの動作やメカニクスを構築するには、スクリプ
 
 #: g101/gdscript/gdscript_01.md
 msgid "Since the script was added to a {{< gd-icon Sprite2D >}}`Sprite2D`, the first line is automatically set to `extends Sprite2D`.  Because this script extends the {{< gd-icon Sprite2D >}}`Sprite2D` class, it will be able to access and manipulate all the properties and methods that a {{< gd-icon Sprite2D >}}`Sprite2D` node provides."
-msgstr "スクリプトが {{< gd-icon Sprite2D >}}`Sprite2D` に追加されたため、最初の行は `extends Sprite2D` に自動的に設定されます。このスクリプトは {{< gd-icon Sprite2D >}}`Sprite2D` クラスを継承しているため、{{< gd-icon Sprite2D >}}`Sprite2D`ノードが提供するすべてのプロパティとメソッドにアクセスして操作することが可能になります。"
+msgstr "スクリプトが {{< gd-icon Sprite2D >}}`Sprite2D` に追加されたため、最初の行は `extends Sprite2D` に自動的に設定されます。このスクリプトは {{< gd-icon Sprite2D >}}`Sprite2D` クラスを継承しているため、{{< gd-icon Sprite2D >}}`Sprite2D`ノードが提供するすべてのプロパティとメソッドにアクセスして操作できます。"
 
 #: g101/gdscript/gdscript_01.md
 msgid "Next you need to decide where you want the script saved and what to call it. If you've named the node, the script will automatically be named to match it (so unless you've changed anything this script will likely be called \"sprite2d.gd\")."
@@ -10572,7 +10572,7 @@ msgstr "この設定には長所と短所があります。最大の利点は、
 
 #: physics/character_vs_rigid.md
 msgid "The collision normal points *out* of the rigid body, so we reverse it to point away from the character and apply the `push_force` factor. Now pushing works again, but it won't force the rigid bodies through walls:"
-msgstr "衝突時の法線ベクトルはリジッドボディの外側を指しているため、これを反転させてキャラクターから離れる方向に調整し、`push_force` 係数を適用します。これで再び押す動作が可能になります。なお、壁越しにリジッドボディを移動させることはできません。"
+msgstr "衝突時の法線ベクトルはリジッドボディの外側を指しているため、これを反転させてキャラクターから離れる方向に調整し、`push_force` 係数を適用します。これで再び押す動作ができるようになります。なお、壁越しにリジッドボディを移動させることはできません。"
 
 #: physics/character_vs_rigid.md
 msgid "Experiment to find the settings that work for your particular game."
@@ -11265,7 +11265,7 @@ msgstr "RigidBody2D で対象物を見る"
 
 #: physics/smooth_rigid_rotate.md
 msgid "You can avoid all of this entirely by not rotating your rigid body at all! Instead, change the child sprite's `rotation` to point at the target. You can use `lerp()` or a {{< gd-icon Tween >}}`Tween` to make the rotation as smooth as you wish."
-msgstr "リジッドボディを一切回転させないことで、これらの問題をすべて回避できます！代わりに、子スプライトの`rotation`プロパティをターゲット方向に合わせるように変更してください。`lerp()`関数や{{< gd-icon Tween >}}`Tween`を使用することで、滑らかにアニメーションさせることが可能になります。"
+msgstr "リジッドボディを一切回転させないことで、これらの問題をすべて回避できます！代わりに、子スプライトの`rotation`プロパティをターゲット方向に合わせるように変更してください。`lerp()`関数や{{< gd-icon Tween >}}`Tween`を使用することで、滑らかにアニメーションを実現できます。"
 
 #: physics/smooth_rigid_rotate.md
 msgid "In many cases, this will be a great solution. Remember, the underlying body's orientation doesn't have to match the attached sprite!"
@@ -11484,7 +11484,7 @@ msgstr "身体のレイヤープロパティは、コードまたはインスペ
 
 #: physics/Godot3_kinematic2d.md
 msgid "One of the most powerful but frequently misunderstood collision features in Godot is the collision layer system. This system allows you to build up very complex interactions between a variety of objects. The key concepts are _layers_ and _masks_. Each collision object has 32 different physics layers it can interact with."
-msgstr "Godotにおいて最も強力でありながらしばしば誤解されがちな衝突判定機能の一つが、「衝突レイヤーシステム」です。この仕組みを利用することで、多種多様なオブジェクト間で極めて複雑な相互作用を構築することが可能になります。核心となるのは「レイヤー」と「マスク」です。各衝突オブジェクトは、32種類の異なる物理レイヤーと相互作用できるよう設計されています。"
+msgstr "Godotにおいて最も強力でありながらしばしば誤解されがちな衝突判定機能の一つが、「コリジョンレイヤーシステム」です。この仕組みを利用することで、多種多様なオブジェクト間で極めて複雑な相互作用を構築できます。核心となるのは「レイヤー」と「マスク」です。各衝突オブジェクトは、32種類の異なる物理レイヤーと相互作用できるよう設計されています。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "> **NOTE:** `move_and_slide()` automatically calculates frame-based movement using `delta`. Do _not_ multiply your velocity vector by `delta` before passing it to `move_and_slide()`."
@@ -12055,7 +12055,7 @@ msgstr "物理演算エンジンの制御から一時的に解放するために
 
 #: physics/rigidbody_drag_drop.md
 msgid "In the `drop` function, after we change `freeze` back to `false, the body will return to the physics engine's control. By passing in an optional impulse value, we can add the ability to \"throw\" the object on release."
-msgstr "`drop`関数内では、`freeze`を再び`false`に設定した後、ボディは物理エンジンの制御下に戻ります。オプションで衝撃値を指定することで、リリース時にオブジェクトを『投げる』機能を追加することも可能になります。"
+msgstr "`drop`関数内では、`freeze`を再び`false`に設定した後、ボディは物理エンジンの制御下に戻ります。オプションで衝撃値を指定することで、リリース時にオブジェクトを『投げる』機能を追加できます。"
 
 #: physics/rigidbody_drag_drop.md
 msgid "Note the use of `get_last_mouse_velocity()` to pass the impulse to the object - be careful with this! You may find yourself launching the rigid bodies at high speeds, especially if the bodies have low `mass` values. It's probably a good idea to scale this to a reasonable value and `clamp()` it to some maximum. Experiment to find out what works for you."
@@ -12087,7 +12087,7 @@ msgstr "最後に、ドラッグ中にマウスボタンを離す場合、その
 
 #: physics/rigidbody_drag_drop.md
 msgid "Place the body in a group called \"pickable\". We'll use this to allow for multiple instances of the pickable object in the main scene. Attach a script to the body and connect the its `_input_event` signal."
-msgstr "体を「pickable」というグループに配置します。この設定により、メインシーンで複数のpick可能オブジェクトインスタンスを使用可能になります。Bodyにスクリプトをアタッチし、その`_input_event`シグナルに接続してください。"
+msgstr "体を「pickable」というグループに配置します。この設定により、メインシーンで複数のピックアップ可能なオブジェクトインスタンスを利用できます。Bodyにスクリプトをアタッチし、その`_input_event`シグナルに接続してください。"
 
 #: physics/rigidbody_drag_drop.md
 msgid "Next,  we have the function we connect the signal to. The connected function sets `held_object` so that we know something is currently being dragged, and calls the body's `pickup()` method."
@@ -12343,7 +12343,7 @@ msgid ""
 "  - {{< gd-icon RayCast2D >}}`RayCast2D`: For checking if movement is possible in the given direction.\n"
 "  - {{< gd-icon AnimationPlayer >}}`AnimationPlayer`: For playing the character's walk animation(s)."
 msgstr ""
-"- {{< gd-icon Area2D >}}`Area2D` (\"プレイヤー\"): {{< gd-icon Area2D >}}`Area2D` を使用することで、オブジェクトのピックアップや敵との衝突判定が可能になります。\n"
+"- {{< gd-icon Area2D >}}`Area2D` (\"プレイヤー\"): {{< gd-icon Area2D >}}`Area2D` を使用することで、オブジェクトのピックアップや敵との衝突判定が実現できます。\n"
 "  - {{< gd-icon Sprite2D >}}`Sprite2D`: ここではスプライトシートを使用できます（アニメーション設定は後述します）。\n"
 "  - {{< gd-icon CollisionShape2D >}}`CollisionShape2D`: ヒットボックスが大きすぎないように注意してください。プレイヤーがタイルの中心に立つため、オーバーラップ判定も中央から行われます。\n"
 "  - {{< gd-icon RayCast2D >}}`RayCast2D`: 指定された方向への移動が可能かどうかを確認する際に使われます。\n"
@@ -12521,7 +12521,7 @@ msgstr "これらの設定によりカメラ動作を調整できるようにな
 
 #: 2D/multi_target_camera.md
 msgid "Lastly, we have our array of targets and we get the viewport size so that we can properly calculate the scale."
-msgstr "最後に、ターゲット配列を取得し、ビューポートサイズを確認することで、適切なスケール計算が可能になります。"
+msgstr "最後に、ターゲット配列を取得し、ビューポートサイズを確認することで、適切なスケール計算ができるようになります。"
 
 #: 2D/multi_target_camera.md
 msgid "Multitarget Camera"
@@ -13075,7 +13075,7 @@ msgid ""
 "*\n"
 "#### Example 1"
 msgstr ""
-"この目的のためのノードが用意されています。{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`。このノードをオブジェクトにアタッチすれば、`screen_entered`シグナルと`screen_exited`シグナルを利用可能になります。\n"
+"この目的のためのノードが用意されています。{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`。このノードをオブジェクトにアタッチすれば、`screen_entered`シグナルと`screen_exited`シグナルが使えるようになります。\n"
 "*\n"
 "#### 例 1"
 
@@ -14760,7 +14760,7 @@ msgstr "船舶画像と同様に、ここにも複数のバージョンが存在
 
 #: games/first_2d/first_2d_04.md
 msgid "Note the `start()` function we defined. That will let us set the bullet's starting `position`, since the player will move around and spawn the bullets at different locations."
-msgstr "定義した`start()`関数に注目してください。これにより、プレイヤーが移動して異なる位置から弾丸を発射するため、弾丸の初期`座標`を設定することが可能になります。"
+msgstr "定義した`start()`関数に注目してください。これにより、プレイヤーが移動して異なる位置から弾丸を発射するため、弾丸の初期`座標`を設定できます。"
 
 #: games/first_2d/first_2d_04.md
 msgid "Now select the `Bullet` node and then click the **Node** tab next to the **Inspector**."
@@ -16322,7 +16322,7 @@ msgstr ""
 
 #: games/circle_jump/circle_jump_01.md
 msgid "Next, in _Input Devices/Pointing_ enable \"Emulate Touch From Mouse\". This will let us write the code only using screen touch events, but still play by using the mouse on PC platforms."
-msgstr "次に、［入力デバイス／ポインティング］セクションで「マウスからタッチ操作をエミュレート」を有効にしてください。これにより、画面のタッチイベントのみを使用してコードを入力できる上に、PCプラットフォームではマウスを使ったプレイも可能になります。"
+msgstr "次に、［入力デバイス／ポインティング］セクションで「マウスからタッチ操作をエミュレート」を有効にしてください。これにより、画面のタッチイベントのみを使用してコードを入力できる上に、PCプラットフォームではマウスを使ったプレイが実現できます。"
 
 #: games/circle_jump/circle_jump_04.md
 msgid "The screen should start offscreen, so set the _Offset_ on the root node to `(500, 0)`. Then add a script to the scene:"
@@ -16554,7 +16554,7 @@ msgstr "[カスタムフォント] セクションで、新しい `DynamicFont` 
 
 #: games/circle_jump/circle_jump_03.md
 msgid "Let's also add to the `init()` method a way to pass a mode. The default should be `STATIC`, but we're going to use `LIMITED` now so we can test:"
-msgstr "さらに、`init()` メソッドにモードを引数として渡す方法も追加してください。デフォルト値は `STATIC` のままにしますが、今回はテスト用に `LIMITED` を使用することにします。これにより、以下のことが可能になります。"
+msgstr "さらに、`init()` メソッドにモードを引数として渡す方法も追加してください。デフォルト値は `STATIC` のままにしますが、今回はテスト用に `LIMITED` を使用することにします。これにより、以下のことができるようになります。"
 
 #: games/circle_jump/circle_jump_03.md
 msgid "Add the following new variables at the top of the `Circle.gd`:"
@@ -17873,7 +17873,7 @@ msgstr "{{< gd-icon `CharacterBody2D` >}}以下のコードを追加してくだ
 
 #: physics/Godot3_kinematic2d.md
 msgid "When a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` detects a collision, Godot provides a <a href=\"http://docs.godotengine.org/en/latest/classes/class_kinematiccollision2d.html\" target=\"_blank\">`KinematicCollision2D`</a> object. This object contains data about the collision and the colliding object. Using this data you can calculate your collision response."
-msgstr "{{< gd-icon CharacterBody2D >}}`CharacterBody2D` が衝突を検知すると、Godotは<a href=\"https://docs.godotengine.org/ja/latest/classes/class_kinematiccollision2d.html\" target=\"_blank\">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と衝突相手の物体データが含まれています。このデータを活用すれば、衝突に対する適切な応答計算が可能になります。"
+msgstr "{{< gd-icon CharacterBody2D >}}`CharacterBody2D` が衝突を検知すると、Godotは<a href=\"https://docs.godotengine.org/ja/latest/classes/class_kinematiccollision2d.html\" target=\"_blank\">`KinematicCollision2D`</a>オブジェクトを提供します。このオブジェクトには衝突に関する情報と衝突相手の物体データが含まれています。このデータを活用すれば、衝突に対する適切な応答・演算を実現できます。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "![alt](/godot_recipes/3.x/img/k2d_bullet_bounce.gif)"

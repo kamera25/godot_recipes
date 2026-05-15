@@ -52,7 +52,7 @@ func _process(delta):
     pass
 ```
 
-スクリプトが {{< gd-icon Sprite2D >}}`Sprite2D` に追加されたため、最初の行は `extends Sprite2D` に自動的に設定されます。このスクリプトは {{< gd-icon Sprite2D >}}`Sprite2D` クラスを継承しているため、{{< gd-icon Sprite2D >}}`Sprite2D`ノードが提供するすべてのプロパティとメソッドにアクセスして操作することが可能になります。
+スクリプトが {{< gd-icon Sprite2D >}}`Sprite2D` に追加されたため、最初の行は `extends Sprite2D` に自動的に設定されます。このスクリプトは {{< gd-icon Sprite2D >}}`Sprite2D` クラスを継承しているため、{{< gd-icon Sprite2D >}}`Sprite2D`ノードが提供するすべてのプロパティとメソッドにアクセスして操作できます。
 
 {{% notice title="プロパティとメソッド" style="note" %}}
 *プロパティ* と *メソッド* は、オブジェクト内で定義された *変数* および *関数* を指す専門用語です。プログラマー間では、これらの用語がしばしば混同されて使用されています。
