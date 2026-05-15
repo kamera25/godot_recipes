@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 47
 ---
 
-## 課題
+## 今回のお題
 
 マウス入力を検出したい。
 
-## 解決策
+## 作り方
 
 `InputEventMouse` はマウスイベントの基本クラスです。これには `position` および `global_position` プロパティが含まれています。このクラスを継承するサブクラスとして、`InputEventMouseButton` と `InputEventMouseMotion` の2つがあります。
 
@@ -19,7 +19,7 @@ ghcommentid: 47
 
 ### `InputEventMouseButton`
 
-`@GlobalScope.ButtonList` には、各可能なボタンに対応する定数リスト（例：`BUTTON_*`）が格納されており、これらの値はイベントの`button_index`プロパティで報告されます。なお、スクロールホイールも1つのボタンとしてカウントされます - 正確には2つのボタンがあり、それぞれ`BUTTON_WHEEL_UP`と`BUTTON_WHEEL_DOWN`という別々のイベントとして扱われます。
+`@GlobalScope.ButtonList` には、各可能なボタンに対応する定数リスト（例：`BUTTON_*`）が格納されており、これらの値はイベントの`button_index`プロパティで報告されます。なお、スクロールホイールも1つのボタンとしてカウントされます。正確には2つのボタンがあり、それぞれ`BUTTON_WHEEL_UP`と`BUTTON_WHEEL_DOWN`という別々のイベントとして扱われます。
 
 {{% notice tip %}}
 通常のボタンとは異なり、マウスホイールクリックでは`pressed(押された)`イベントのみが発生します。マウスホイールクリックが「離された」というイベントはありません。

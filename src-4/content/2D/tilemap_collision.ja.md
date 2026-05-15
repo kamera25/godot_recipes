@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 19
 ---
 
-## 課題
+## 今回のお題
 
 {{< gd-icon CharacterBody2D >}}`CharacterBody2D`キャラクターが{{< gd-icon TileMap >}}`TileMap`と衝突しており、どのタイルに衝突したのかを確認したい場合。
 
-## 解決策
+## 作り方
 
 {{< gd-icon `CharacterBody2D` >}} オブジェクト同士が衝突した場合、衝突データは `KinematicCollision2D` オブジェクトとして取得されます。 {{< gd-icon TileMap >}}`TileMap` は単一のコリダーとして機能するため、`collider` プロパティを参照すると実際にはこの {{< gd-icon TileMap >}}`TileMap` ノードが返される点にご注意ください。
 

@@ -4,11 +4,11 @@ weight: 3
 draft: false
 ---
 
-## 課題
+## 今回のお題
 
 実行時にインプットマップにアクションを追加が必要です。
 
-## 解決策
+## 作り方
 
 通常、入力アクションは[プロジェクト設定]から追加します（詳細は[レシピ : 入力アクション](/godot_recipes/4.x/ja/input/input_actions/)参照）。ただし、スクリプト内で直接アクションを追加する必要がある場合もあります。このような場合には、[InputMapシングルトン](https://docs.godotengine.org/ja/latest/classes/class_inputmap.html)が提供するメソッドが便利です。
 

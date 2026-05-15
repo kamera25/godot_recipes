@@ -9,13 +9,13 @@ draft: false
 Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
-## 課題
+## 今回のお題
 
 ダメージを受けたとき、数字を浮かせながら表示(Floating Combat Text)させたい。
 
 ![alt](/godot_recipes/4.x/img/fct_demo.gif)
 
-## 解決策
+## 作り方
 
 この問題に取り組む方法は様々です。例えば、ビットマップフォントを使用し、各数字をその構成桁から画像として生成した上で、{{< gd-icon Sprite2D >}}`Sprite2D`ノードを使って表示・移動させるといった手法が考えられます。
 

@@ -10,11 +10,11 @@ ghcommentid: 27
 Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
-## 課題
+## 今回のお題
 
 タイルマップでアニメーションタイルを使用したい。
 
-## 解決策
+## 作り方
 
 この問題に対処する最も直接的な方法は、`AnimatedTexture`リソースを使用することです。
 

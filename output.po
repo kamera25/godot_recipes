@@ -182,7 +182,7 @@ msgstr "このシーンのスクリプトは `Player` ノードに実装され�
 #: ui/debug_overlay.md ui/floating_text.md ui/heart_containers_3.md
 #: ui/labels.md ui/level_select.md ui/minimap.md ui/radial_menu.md
 msgid "## Problem"
-msgstr "## 課題"
+msgstr "## 今回のお題"
 
 #: basics/getting_nodes.md
 msgid "Let's break that down. The path `\"../../Player\"` means \"get the node that's up one level (`HUD`), then one more level (`Main`), then its child `Player`\"."
@@ -252,7 +252,7 @@ msgstr "`get_node()` 関数の引数は、対象ノードへのパスを表す�
 #: ui/debug_overlay.md ui/floating_text.md ui/heart_containers_3.md
 #: ui/labels.md ui/level_select.md ui/minimap.md ui/radial_menu.md
 msgid "## Solution"
-msgstr "## 解決策"
+msgstr "## 作り方"
 
 #: basics/getting_nodes.md
 msgid "While this may work fine at first, it is *brittle*, meaning it can break easily. There are two main problems with this kind of arrangement:"
@@ -2345,7 +2345,7 @@ msgstr "We then need functions to add/remove properties from the display:"
 
 #: ui/debug_overlay.md
 msgid "`add_property()` can be called from any node (we should load the debug display as a singleton - see below)."
-msgstr "`add_property()` は任意のノードから呼び出すことができます（デバッグ表示機能はシングルトンとしてロードが必要となります - 後述参照）。"
+msgstr "`add_property()` は任意のノードから呼び出すことができます（デバッグ表示機能はシングルトンとしてロードが必要となります。後述参照）。"
 
 #: ui/debug_overlay.md
 msgid "### Adding to game"
@@ -2986,7 +2986,7 @@ msgstr ""
 
 #: 3D/shooting_raycasts.md
 msgid "There are two ways to approach raycasting in Godot: the {{< gd-icon RayCast3D >}}`RayCast3D` node, or directly casting a ray in space using the physics engine. While they can both accomplish the same thing, each has its uses. The node method tends to be best for situations where you continuously want to check for collisions - a downward-facing ray to check if you're on the floor, for example."
-msgstr "Godotにおけるレイキャスティングには、主に2つの方法があります。{{< gd-icon RayCast3D >}}`RayCast3D`ノードを使用する方法と、物理エンジンを直接操作して空間内に直線状の レイ を投射する方法です。どちらも同じ目的を達成できますが、それぞれに異なる利点があります。ノードベースのアプローチは、継続的な衝突検出が必要な場合に特に有効です - 例えば、床に触れているかどうかを確認するための下向きのレイを継続的にチェックする場合などに最適です。"
+msgstr "Godotにおけるレイキャスティングには、主に2つの方法があります。{{< gd-icon RayCast3D >}}`RayCast3D`ノードを使用する方法と、物理エンジンを直接操作して空間内に直線状の レイ を投射する方法です。どちらも同じ目的を達成できますが、それぞれに異なる利点があります。ノードベースのアプローチは、継続的な衝突検出が必要な場合に特に有効です。例えば、床に触れているかどうかを確認するための下向きのレイを継続的にチェックする場合などに最適です。"
 
 #: 3D/shooting_raycasts.md
 msgid "Download the project code here: [https://github.com/godotrecipes/3d_shoot_raycasts](https://github.com/godotrecipes/3d_shoot_raycasts)"
@@ -4283,7 +4283,7 @@ msgstr "CharacterBody3Dの移動"
 
 #: 3D/simple_airplane.md
 msgid "In this recipe, we're going to make a *simplified* airplane controller. By \"simplified\" we mean stripping things down to the basics. We're looking for the \"feel\" of flying a plane - one that you can just jump in and start flying effortlessly, with a minimal control scheme."
-msgstr "このレシピでは、*単純な*航空機コントローラーを作成します。ここで言う「単純な」とは、基本機能だけに絞り込むことを意味します。目指しているのは、飛行機の操縦感覚――特別な訓練なしですぐに飛び立て、最小限の操作体系で簡単に飛行を楽しめるような体験です。"
+msgstr "このレシピでは、*単純な*航空機コントローラーを作成します。ここで言う「単純な」とは、基本機能だけに絞り込むことを意味します。目指しているのは、飛行機の操縦感覚、かつ特別な訓練なしですぐに飛び立て、最小限の操作体系で簡単に飛行を楽しめるような体験です。"
 
 #: 3D/simple_airplane.md
 msgid "Notice that while the plane turns, it doesn't really look natural. Airplanes *bank* when they turn, so let's animate that by changing the rotation of the mesh:"
@@ -4393,7 +4393,7 @@ msgstr "このシーンでは {{< gd-icon CharacterBody3D >}}`CharacterBody3D` �
 
 #: 3D/simple_airplane.md
 msgid "While the above is fine for flying, it doesn't handle the ground very well. Here, we'll simulate landing using a simplistic approach (by \"simplistic\", we mean doing so in a very basic way - you'll probably want to expand on it depending on what your game may need)."
-msgstr "上記の方法は空中移動には適していますが、地上での挙動を考えると不十分です。ここでは、非常に簡易的なアプローチ（「簡易」という表現は非常に基本的な方法を意味します - 実際のゲーム要件によっては、さらに拡張が必要になるでしょう）を用いて着陸シミュレーションを実装します。"
+msgstr "上記の方法は空中移動には適していますが、地上での挙動を考えると不十分です。ここでは、非常に簡易的なアプローチ（「簡易」という表現は非常に基本的な方法を意味します。実際のゲーム要件によっては、さらに拡張が必要になるでしょう）を用いて着陸シミュレーションを実装します。"
 
 #: 3D/simple_airplane.md
 msgid "![alt](/godot_recipes/4.x/img/kb_plane_04.gif)"
@@ -4803,7 +4803,7 @@ msgstr "以下の画像では、他の複数のアニメーションで同じ手
 
 #: 3D/assets/character_animation.md
 msgid "The one animation that's different is jumping. The jump animation is split into three parts: \"start\"and \"land\", which are played when the character starts jumping, and when the jump ends. The \"idle\" portion of the jump is a looping animation that plays as long as the character is in the air - if they fall a long way, for example."
-msgstr "※アニメーションが異なるのは「ジャンプ」動作のみです。ジャンプアニメーションは以下の3段階で構成されています。「開始」「着地」で、キャラクターがジャンプを始める時と終了する時にそれぞれ再生されます。また、空中にいる間はループする待機アニメーションが再生されます - 例えば長距離落下した場合などに。"
+msgstr "※アニメーションが異なるのは「ジャンプ」動作のみです。ジャンプアニメーションは以下の3段階で構成されています。「開始」「着地」で、キャラクターがジャンプを始める時と終了する時にそれぞれ再生されます。また、空中にいる間はループする待機アニメーションが再生されます。例えば長距離落下した場合などに。"
 
 #: 3D/assets/character_animation.md
 msgid "There are a lot of animations provided with these models. For this example, we're going to focus on the idle-walk-run cycle, jumping, and attacking. If you want to include other animations, they'll be handled in a similar way."
@@ -4980,7 +4980,7 @@ msgstr "ファイルシステムタブで`knight.glb`ファイルを選択し、
 
 #: 3D/assets/importing_assets.md
 msgid "One the left you'll see all the data that is contained in the GLTF scene, including textures and animations. Note all the weapon options attached to the character and the extensive list of animations."
-msgstr "左側に表示されるのは、GLTFシーンに含まれる全てのデータです - テクスチャやアニメーションも含まれます。キャラクターに付属する各種武器オプションや、豊富なアニメーションリストに注目します。"
+msgstr "左側に表示されるのは、GLTFシーンに含まれる全てのデータです。テクスチャやアニメーションも含まれます。キャラクターに付属する各種武器オプションや、豊富なアニメーションリストに注目します。"
 
 #: 3D/assets/importing_assets.md
 msgid "Click **Reimport**. Now when using this in the game, Godot will automatically create a {{< gd-icon StaticBody3D >}}`StaticBody3D` with a collision shape to match."
@@ -5539,7 +5539,7 @@ msgstr "最初に、ステアリング入力を取得します。これにより
 
 #: 3D/kinematic_car/car_base.md
 msgid "We want to be able to make cars that can be driven by human or AI control. In either case, most of the movement code will be the same - it's really just the input that will be different. For this reason, we can use a base car script that can be shared between them."
-msgstr "人間が操作する場合とAIが制御する場合の両方に対応できる自動車システムを構築したいです。どちらのケースでも、動作コードの大部分は共通化可能です - 実際には入力方法が異なるだけです。このため、両者で共有可能な基本カースクリプトを活用できます。"
+msgstr "人間が操作する場合とAIが制御する場合の両方に対応できる自動車システムを構築したいです。どちらのケースでも、動作コードの大部分は共通化可能です。実際には入力方法が異なるだけです。このため、両者で共有可能な基本カースクリプトを活用できます。"
 
 #: 3D/kinematic_car/car_base.md
 msgid "### Base script"
@@ -5843,7 +5843,7 @@ msgstr "- `is_action_released()`: この関数は、アクションが `pressed`
 
 #: input/input_actions.md
 msgid "Now you can assign inputs to this action by clicking the \"+\" sign to the right. Inputs can be keys, mouse buttons, or joy/gamepad inputs. Choose \"Key\" and you can press the key on the keyboard you want to assign - let's press the spacebar - and click \"OK\"."
-msgstr "以下の手順でこのアクションに入力を割り当てることができます。右側にある「+」記号をクリックします。使用可能な入力には、キーボードキー、マウスボタン、またはジョイスティック/ゲームパッド入力があります。「キー」を選択したら、割り当てたいキーボード上のキーを押します - ここではスペースバーを押してみます - そして「OK」をクリックして確定します。"
+msgstr "以下の手順でこのアクションに入力を割り当てることができます。右側にある「+」記号をクリックします。使用可能な入力には、キーボードキー、マウスボタン、またはジョイスティック/ゲームパッド入力があります。「キー」を選択したら、割り当てたいキーボード上のキーを押します。ここではスペースバーを押してみます。そして「OK」をクリックして確定します。"
 
 #: input/input_actions.md
 msgid "### Creating inputs"
@@ -6075,7 +6075,7 @@ msgstr "### `InputEventMouseMotion`"
 
 #: input/mouse_input.md
 msgid "`@GlobalScope.ButtonList` contains a list of `BUTTON_*` constants for each possible button, which will be reported in the event’s `button_index` property. Note that the scrollwheel also counts as a button - two buttons, to be precise, with both `BUTTON_WHEEL_UP` and `BUTTON_WHEEL_DOWN` being separate events."
-msgstr "`@GlobalScope.ButtonList` には、各可能なボタンに対応する定数リスト（例：`BUTTON_*`）が格納されており、これらの値はイベントの`button_index`プロパティで報告されます。なお、スクロールホイールも1つのボタンとしてカウントされます - 正確には2つのボタンがあり、それぞれ`BUTTON_WHEEL_UP`と`BUTTON_WHEEL_DOWN`という別々のイベントとして扱われます。"
+msgstr "`@GlobalScope.ButtonList` には、各可能なボタンに対応する定数リスト（例：`BUTTON_*`）が格納されており、これらの値はイベントの`button_index`プロパティで報告されます。なお、スクロールホイールも1つのボタンとしてカウントされます。正確には2つのボタンがあり、それぞれ`BUTTON_WHEEL_UP`と`BUTTON_WHEEL_DOWN`という別々のイベントとして扱われます。"
 
 #: input/mouse_input.md
 msgid ""
@@ -6471,7 +6471,7 @@ msgstr "引き続き、[パート2](/godot_recipes/4.x/ja/g101/3d/101_3d_02/)で
 
 #: g101/3d/101_3d_03.md
 msgid "In its properties, set **Spring Length** to `5`, and set its **Position** to `(0, 1, 0)`, which is at the character's head. Note the yellow line indicating the **Spring Length**. The camera will move along this line - at its end whenever possible, but moving closer if an obstacle is there."
-msgstr "プロパティ設定で、**スプリング長さ**を`5`に、**位置**を`(0, 1, 0)`に設定します。これはキャラクターの頭部に位置する値です。**スプリング長さ**を示す黄色のラインに注意します。カメラはこのラインに沿って移動します - 可能であれば終点まで進み、障害物がある場合はより近付く方向に動きます。"
+msgstr "プロパティ設定で、**スプリング長さ**を`5`に、**位置**を`(0, 1, 0)`に設定します。これはキャラクターの頭部に位置する値です。**スプリング長さ**を示す黄色のラインに注意します。カメラはこのラインに沿って移動します。可能であれば終点まで進み、障害物がある場合はより近付く方向に動きます。"
 
 #: g101/3d/101_3d_03.md
 msgid "In the last part, we covered how to import 3D objects and how to arrange them in a scene. In this installment, we'll add more objects to the scene, including a user-controlled character."
@@ -8088,7 +8088,7 @@ msgstr "![alt](/godot_recipes/4.x/img/gds_01_attach.png?width=250)"
 
 #: g101/gdscript/gdscript_01.md
 msgid "Now we see a function called `_ready()`. In GDScript you define a function with the keyword \"func\". The `_ready()` function is a special one that Godot looks for and runs whenever a node is added to the tree, for example when we hit \"Play\"."
-msgstr "ここで `_ready()` という関数が定義されています。GDScriptでは関数を「func」キーワードで宣言します。この`_ready()`関数はGodotが特にチェックする特別な関数で、ノードがツリーに追加されるたびに実行されます - 例えば「再生」ボタンを押した時などに呼び出されます。"
+msgstr "ここで `_ready()` という関数が定義されています。GDScriptでは関数を「func」キーワードで宣言します。この`_ready()`関数はGodotが特にチェックする特別な関数で、ノードがツリーに追加されるたびに実行されます。例えば「再生」ボタンを押した時などに呼び出されます。"
 
 #: g101/gdscript/gdscript_01.md
 msgid "Let's go back to the script and use that property:"
@@ -8164,7 +8164,7 @@ msgstr "これで「このスプライトが起動したら、その位置を `(
 
 #: g101/gdscript/gdscript_01.md
 msgid "After that is where you're going to define all the variables you will use in the script, the \"member variables\". You define variables with the 'var' keyword - as you can see by the comment examples."
-msgstr "その後、スクリプトで使用するすべての変数（いわゆる「メンバ変数」）を定義します。変数は 「var」 キーワードで宣言します - コメント例からもわかるように。"
+msgstr "その後、スクリプトで使用するすべての変数（いわゆる「メンバ変数」）を定義します。変数は 「var」 キーワードで宣言します。コメント例からもわかるように。"
 
 #: g101/gdscript/gdscript_01.md
 msgid "Godot has a great built-in help/reference tool. Click on \"Classes\" at the top of the Script window and search for Node2D and you'll see a help page showing you all the properties and methods the class has available. Looking down a bit you can see `position` in the \"Member Variables\" section - that's the one we want. It also tells us the property is of the type \"Vector2\"."
@@ -9216,7 +9216,7 @@ msgstr "より滑らかで丸みを帯びた曲線を作成するには、「制
 
 #: kyn/path2d.md
 msgid "In this example, the AI agents avoid walls and each other, but also \"want\" to continue along the track in the correct direction. There is a {{< gd-icon Path2D >}}`Path2D` drawn along the track, and the agents query it to find out what direction it's pointing:"
-msgstr "この例では、AIエージェントは壁や他のエージェントを回避するだけでなく、正しい進行方向に沿って移動を続けようとします。軌道上には以下の[{{< gd-icon Path2D >}}`Path2D`]が描画されており、エージェントはこれを参照して現在の進行方向を確認します。"
+msgstr "この例では、AIエージェントは壁や他のエージェントを回避するだけでなく、正しい進行方向に沿って移動を続けようとします。軌道上には以下の{{< gd-icon Path2D >}}`Path2D`が描画されており、エージェントはこれを参照して現在の進行方向を確認します。"
 
 #: kyn/path2d.md
 #, fuzzy
@@ -10184,7 +10184,7 @@ msgstr "* 危険度レベル"
 
 #: ai/context_map.md
 msgid "Using each ray direction, we take the *dot product* with the given path direction. Recall that the dot product of two aligned vectors is `1` and for two perpendicular vectors it's `0`. We ignore negative values - 0 means we don't want to go that way."
-msgstr "各レイの方向に対して、与えられた経路方向との *内積* を計算します。二つの平行なベクトルの内積は 1、直交するベクトルの場合は `0` となることを思い出します。負の値は無視します - 値が `0` の場合は、その方向へ進む必要がないことを意味します。"
+msgstr "各レイの方向に対して、与えられた経路方向との *内積* を計算します。二つの平行なベクトルの内積は 1、直交するベクトルの場合は `0` となることを思い出します。負の値は無視します。値が `0` の場合は、その方向へ進む必要がないことを意味します。"
 
 #: ai/context_map.md
 msgid "### Example in Practice"
@@ -10665,7 +10665,7 @@ msgid ""
 "1. You can give them a push based on the character's imagined \"mass\" and velocity. This will give you a \"realistic\" result - pushing heavy bodies a little, and lighter bodies a lot."
 msgstr ""
 "1. 物理を無視して直接押すこともできます。Godot 3.x に慣れている方なら、これは\"infinite inertia(無限慣性)\"オプションと同等の機能です。\n"
-"1. キャラクターの想定する「質量」と「速度」に基づいて押力を発揮させることもできます。これにより「リアルな」結果が得られます - 重い物体は少し、軽い物体は大きく押し出されるようになります。"
+"1. キャラクターの想定する「質量」と「速度」に基づいて押力を発揮させることもできます。これにより「リアルな」結果が得られます。重い物体は少し、軽い物体は大きく押し出されるようになります。"
 
 #: physics/character_vs_rigid.md
 msgid "Character to Rigid Body Interaction"
@@ -11347,8 +11347,8 @@ msgid ""
 "> - New helper methods like `set_collision_layer_value()` replace the need for complex bitwise math (`1 << (layer - 1)`)."
 msgstr ""
 "{{% notice style=\"tip\" title=\"Godot 3から4への移行ポイントまとめ\" %}}\n"
-"- レイヤー用インスペクタUIが改善されました\n"
-"- `set_collision_layer_value()`などの新ヘルパーメソッドにより、複雑なビット演算処理(例: `1 << (layer - 1)`)が不要になりました{{% /notice %}}"
+"- レイヤー用のインスペクターのUIが改善されました\n"
+"- `set_collision_layer_value()`などの新しいヘルパーメソッドにより、複雑なビット演算処理(例: `1 << (layer - 1)`)が不要になりました{{% /notice %}}"
 
 #: physics/collision_layers.md
 #, fuzzy
@@ -11923,7 +11923,7 @@ msgstr "このコードを実行すると、キャラクターの**x**方向速�
 
 #: physics/kinematic_friction.md
 msgid "For most games, we're not necessarily interested in a perfect physics simulation. We want action, responsiveness, and arcade feel. This is why you choose a kinematic body over a rigid one: so that you can control its behavior directly. However, *some* amount of physics is good - it means an object doesn't instantly change direction or come to a stop."
-msgstr "多くのゲームにおいて、必ずしも完全な物理シミュレーションを求めているわけではありません。重要なのはアクション性、反応の良さ、そしてアーケードならではの爽快感です。だからこそ、RigidBodyではなくKinematicBodyを選択するのです - これによって物体の動きを直接制御できるようになります。ただし、ある程度の物理的な挙動は必要です。これはつまり、オブジェクトが突然方向を変えたり停止したりしないようにするためです。"
+msgstr "多くのゲームにおいて、必ずしも完全な物理シミュレーションを求めているわけではありません。重要なのはアクション性、反応の良さ、そしてアーケードならではの爽快感です。だからこそ、RigidBodyではなくKinematicBodyを選択するのです。これによって物体の動きを直接制御できるようになります。ただし、ある程度の物理的な挙動は必要です。これはつまり、オブジェクトが突然方向を変えたり停止したりしないようにするためです。"
 
 #: physics/kinematic_friction.md
 msgid "In the code below, `friction`  represents how quickly the character comes to a stop, while `acceleration` determines how quickly it gets up to full speed. Both are values between `0.0` and `1.0`."
@@ -12709,7 +12709,7 @@ msgstr "タイルの「アクティブ」部分（つまり壁ではない箇所
 
 #: 2D/autotile_intro.md
 msgid "In a 3x3 grid there are 512 possible combinations (2^9). We can discard most of these, as they don't make sense for making continuous walls. It turns out, to properly cover the wall combinations, you need 48 tiles, which we have in our tileset. We'll be ignoring the 7 tiles in the bottom-right (the ones with the white background)."
-msgstr "3×3のグリッド上には、512通りの組み合わせパターンが存在します（2^9）。これらのほとんどは連続した壁を作る上で実用的ではないため、除外して構いません。実際に適切な形で壁面を覆うためには、48枚のタイルが必要であることが分かりました。これはタイルセットに用意されているものです。以下の7枚のタイルは無視することにします - 右下隅に位置する白い背景のタイルです。"
+msgstr "3×3のグリッド上には、512通りの組み合わせパターンが存在します（2^9）。これらのほとんどは連続した壁を作る上で実用的ではないため、除外して構いません。実際に適切な形で壁面を覆うためには、48枚のタイルが必要であることが分かりました。これはタイルセットに用意されているものです。以下の7枚のタイルは無視することにします。右下隅に位置する白い背景のタイルです。"
 
 #: 2D/autotile_intro.md
 msgid "If we were to do this with each tile, the computer can then make sure that whatever tile is placed adjacent to this one will match up."
@@ -13110,7 +13110,7 @@ msgstr ""
 "* `target_return_enabled` - これを `true` に設定すると、ドラッグ後にカメラは自動的にターゲット位置に復帰します。\n"
 "* `target_return_rate` - カメラがターゲット位置に戻る速度を調整します。\n"
 "* `min_zoom` / `max_zoom` - ズームの最小/最大倍率制限値を設定します。\n"
-"* `zoom_sensitivity` - ピンチ操作によるズーム感度を設定します - これは「ズーム動作」が開始されるために必要なピクセル単位の動きを指定します。\n"
+"* `zoom_sensitivity` - ピンチ操作によるズーム感度を設定します。これは「ズーム動作」が開始されるために必要なピクセル単位の動きを指定します。\n"
 "* `zoom_speed` - ズーム操作をより滑らかに実行するためのパラメータです。"
 
 #: 2D/touchscreen_camera.md
@@ -13207,7 +13207,7 @@ msgstr "`_process()`関数内では、ターゲットへの移動処理を行い
 
 #: 2D/touchscreen_camera.md
 msgid "If we get a drag event, we also add to the dictionary. Note that this will be *updating* the value - index `0` was already there from the first touch event, for example, and has now become a drag event."
-msgstr "ドラッグイベントが発生した場合も同様に辞書に追加します。なお、この場合は既存の値を更新する形になります - 例えば最初のタッチイベント時点で既に存在していたインデックス`0`が、今回はドラッグイベントとして再登録されることになります。"
+msgstr "ドラッグイベントが発生した場合も同様に辞書に追加します。なお、この場合は既存の値を更新する形になります。例えば最初のタッチイベント時点で既に存在していたインデックス`0`が、今回はドラッグイベントとして再登録されることになります。"
 
 #: 2D/touchscreen_camera.md
 msgid "Here's an example captured directly from a mobile device. The yellow circle indicates the touch location."
@@ -15159,7 +15159,7 @@ msgstr "このアニメーションにはフレームが2つしかありませ�
 
 #: games/first_2d/first_2d_02.md
 msgid "The first thing you'll notice is that there seem to be three ships! The image from the art pack also includes versions of the ship going to the left/right. We can use this - in the **Animation** section of the **Inspector**, set **Hframes** to `3`. Now, changing the **Frame** property will move between the three different versions. Leave it at `1` for now."
-msgstr "最初に気づくのは、どうやら船が3隻あるように見える点です！アートパックに含まれている画像には、左右へ移動するバージョンも含まれています。これを利用してみます - ［インスペクター］の［アニメーション］セクションで、**Hフレーム数**を`3`に設定します。これで**フレーム**プロパティを変更すると、これら3つの異なるバージョン間を切り替えられるようになります。今のところは`1`のままにしておいてください。"
+msgstr "最初に気づくのは、どうやら船が3隻あるように見える点です！アートパックに含まれている画像には、左右へ移動するバージョンも含まれています。これを利用してみます。［インスペクター］の［アニメーション］セクションで、**Hフレーム数**を`3`に設定します。これで**フレーム**プロパティを変更すると、これら3つの異なるバージョン間を切り替えられるようになります。今のところは`1`のままにしておいてください。"
 
 #: games/first_2d/first_2d_02.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_11.png)"
@@ -15639,7 +15639,7 @@ msgstr "## スコアカウンター"
 
 #: games/first_2d/first_2d_09.md
 msgid "This is because `Resource` objects (such as `Texture`) are loaded into memory and then shared - there's really only one texture. While this is very efficient, because you don't waste memory loading the same image multiple times, it means that when we *do* want things to be unique, we have to specify it."
-msgstr "これはなぜかというと、`Resource`オブジェクト（例えば`Texture`）はメモリにロードされてから共有されるからです。実際には単一のテクスチャしか存在しないため、このアプローチは非常に効率的です - 同じ画像を何度も読み込んでメモリを浪費するのを防げます。ただし、特定のノードをユニークにする場合は明示的に指定します。"
+msgstr "これはなぜかというと、`Resource`オブジェクト（例えば`Texture`）はメモリにロードされてから共有されるからです。実際には単一のテクスチャしか存在しないため、このアプローチは非常に効率的です。同じ画像を何度も読み込んでメモリを浪費するのを防げます。ただし、特定のノードをユニークにする場合は明示的に指定します。"
 
 #: games/first_2d/first_2d_09.md
 msgid "Finally, we need to connect the player's `shield_changed` signal to the function in the UI that updates the shield bar. You can do this in the Inspector by selecting the `Player` node in the Main scene. Under the Node tab, double-click the `shield_changed` signal to open the \"Connect a Signal\" window. In this window, select the `UI` node and type `update_shield` in the **Receiver Method** box."
@@ -16090,7 +16090,7 @@ msgstr "このモジュールは、インタースティシャル広告が閉じ
 
 #: games/circle_jump/circle_jump_11.md
 msgid "In the AdMob manager, create a new app - ours is titled \"Circle Jump\" - and specify the \"Android\" platform (we'll discuss iOS later)."
-msgstr "アドモブマネージャーで新しいアプリを作成します - アプリは「サークルジャンプ」というタイトルです - そして「Android」プラットフォームを指定します（iOSについては後ほど説明します）。"
+msgstr "アドモブマネージャーで新しいアプリを作成します。アプリは「サークルジャンプ」というタイトルです。そして「Android」プラットフォームを指定します（iOSについては後ほど説明します）。"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "In `Screens.gd`, add the following to the `match` statement that processes the buttons:"
@@ -16126,7 +16126,7 @@ msgstr "## ゲームプラン"
 
 #: games/circle_jump/circle_jump_01.md
 msgid "In this game, the player controls a \"character\" that jumps from circle to circle. Jumping is initiated by a click or touch, and if you don't hit another circle, you lose. The score is related to how long you survive, and the difficulty will increase over time with circles that move, shrink, and/or expire. The idea is fast-paced, short games with a \"top that\" feel. As much as possible, the art will remain simple and clean, with visual and audio effects to add appeal."
-msgstr "このゲームでは、プレイヤーは「キャラクター」を操作し、円形のフィールドから別の円形へジャンプしていきます。ジャンプはクリックまたはタップで開始され、次のサークルに着地できなければゲームオーバーとなります。スコアは生存時間に応じて加算され、難易度は徐々に上昇していきます - 移動するサークルや、サイズが小さくなるサークル、さらには消滅するサークルが登場するためです。コンセプトは、スピード感あふれる短時間で遊べる、「もっと上を目指せ」という感覚を刺激するゲームプレイです。可能な限り、アートスタイルはシンプルでクリーンなデザインを維持し、視覚効果やオーディオエフェクトを駆使して魅力を高めていきます。"
+msgstr "このゲームでは、プレイヤーは「キャラクター」を操作し、円形のフィールドから別の円形へジャンプしていきます。ジャンプはクリックまたはタップで開始され、次のサークルに着地できなければゲームオーバーとなります。スコアは生存時間に応じて加算され、難易度は徐々に上昇していきます。移動するサークルや、サイズが小さくなるサークル、さらには消滅するサークルが登場するためです。コンセプトは、スピード感あふれる短時間で遊べる、「もっと上を目指せ」という感覚を刺激するゲームプレイです。可能な限り、アートスタイルはシンプルでクリーンなデザインを維持し、視覚効果やオーディオエフェクトを駆使して魅力を高めていきます。"
 
 #: games/circle_jump/circle_jump_01.md
 msgid "Here is the code for our color shader. It uses a `uniform` variable for the color, which allows us to choose a value from the Inspector or from our game script. Then it changes all the visible pixels of the texture into that color, preserving the alpha (transparency) value."

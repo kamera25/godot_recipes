@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 15
 ---
 
-## 課題
+## 今回のお題
 
 オブジェクトが画面内に表示、また非表示になるタイミングを検知したい。
 
-## 解決策
+## 作り方
 
 この目的のためのノードが用意されています。{{< gd-icon VisibleOnScreenNotifier2D >}}`VisibleOnScreenNotifier2D`。このノードをオブジェクトにアタッチすれば、`screen_entered`シグナルと`screen_exited`シグナルが使えるようになります。
 *

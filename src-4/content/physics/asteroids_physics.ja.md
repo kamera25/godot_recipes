@@ -4,11 +4,11 @@ weight: 12
 draft: false
 ---
 
-## 課題
+## 今回のお題
 
 「Astroids」のような半リアルな宇宙船を作成するため、{{< gd-icon RigidBody2D >}}`RigidBody2D`を使いたい。
 
-## 解決策
+## 作り方
 
 {{< gd-icon RigidBody2D >}}`RigidBody2D` を使用する際には少し注意が必要です。Godotの物理エンジンによって制御されるため、直接移動させるのではなく力を加えましょう。リジッドボディを扱う前に、[RigidBody2D APIドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html)を必ず確認することを強くオススメします。これからこの例を進めていく過程で、このドキュメントを参照しながら進めていきます。
 

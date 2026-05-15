@@ -10,11 +10,11 @@ ghcommentid: 85
 Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
-## 課題
+## 今回のお題
 
 ゲーム内でデータを処理する方法や、柔軟なデータオブジェクトを作成する方法を探しています。
 
-## 解決策
+## 作り方
 
 Godotの`Resource`クラスは、データを格納・操作するための強力なツールです。Godotで扱う最も一般的なオブジェクトの多くは[Resource](https://docs.godotengine.org/ja/stable/classes/class_resource.html#class-resource)タイプを拡張しています。アニメーション、衝突形状、画像など。リソースは単なるデータ保持だけでなく、そのデータを操作することもできます（Unityの *ScriptableObject* に似ています。）。
 

@@ -11,11 +11,11 @@ tags: []
 Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
-## 課題
+## 今回のお題
 
 {{< gd-icon KinematicBody3D >}}`CharacterBody3D` が坂道を滑り落ちてしまいます。
 
-## 解決策
+## 作り方
 
 まず、最小限の機能で構成された {{< gd-icon KinematicBody3D >}}`CharacterBody3D` から始め、以下のスクリプトで `move_and_slide()` メソッドを使用しています。
 

@@ -10,11 +10,11 @@ ghcommentid: 70
 Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
-## 課題
+## 今回のお題
 
 Godotの`Joint2D`ノードについて理解したい。
 
-## 解決策
+## 作り方
 
 ジョイントは、接続された物理オブジェクトの動きを制限するために使います。任意のジョイントノードには、`PhysicsObject2D` から拡張される2つのボディを結合が必要です。
 

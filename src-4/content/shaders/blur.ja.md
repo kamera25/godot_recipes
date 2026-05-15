@@ -10,11 +10,11 @@ ghcommentid: 79
 Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
-## 課題
+## 今回のお題
 
 オブジェクトや画面をぼかすシェーダーが欲しい。
 
-## 解決策
+## 作り方
 
 ```glsl
 shader_type canvas_item;

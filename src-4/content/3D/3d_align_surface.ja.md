@@ -4,11 +4,11 @@ weight: 15
 draft: false
 ---
 
-## 課題
+## 今回のお題
 
 キャラクターの体は地面や地形と平行になるように調整が必要となります。
 
-## 解決策
+## 作り方
 
 このレシピは[キャラクターボディ3D：移動制御](/godot_recipes/4.x/ja/3d/characterbody3d_examples/) レシピで解説されている基本の{{< gd-icon CharacterBody3D >}}`CharacterBody3D`コントローラーを拡張する内容となっています。まずはそちらを先にお読みください。
 

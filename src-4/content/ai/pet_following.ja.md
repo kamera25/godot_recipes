@@ -4,13 +4,13 @@ weight: 10
 draft: false
 ---
 
-## 課題
+## 今回のお題
 
 ゲーム要素としてペットやミニオンを追加します。なので、キャラクターに追従させましょう。
 
 <video controls src='/godot_recipes/4.x/img/pet_follow.webm'></video>
 
-## 解決策
+## 作り方
 
 まず、キャラクターに {{< gd-icon Marker2D >}}`Marker2D` を追加します。このマーカーは、ペットがプレイヤーの近くに「滞在したい」場所を示すものです。
 

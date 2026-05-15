@@ -5,11 +5,11 @@ draft: false
 tags: []
 ---
 
-## 課題
+## 今回のお題
 
 ファーストパーソン・シューティングゲーム（FPS）用のキャラクターを作成します。
 
-## 解決策
+## 作り方
 
 まず、{{< gd-icon CharacterBody3D >}}`CharacterBody3D` ノードから始め、次に {{< gd-icon CollisionShape3D >}}`CollisionShape3D` を追加します。この場合、最も一般的な選択肢は {{< gd-icon CapsuleShape3D >}}`CapsuleShape3D` 衝突形状です。ワールドの設定によっては、ここに他の形状も追加できますが、この例では基本に忠実に進めます。
 

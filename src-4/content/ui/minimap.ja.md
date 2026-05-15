@@ -4,11 +4,11 @@ weight: 12
 draft: false
 ---
 
-## 課題
+## 今回のお題
 
 プレイヤーの視界外にあるオブジェクトの位置を表示するためのミニマップまたはレーダー風UI要素が欲しい。
 
-## 解決策
+## 作り方
 
 以下に、目指している実装例をご紹介します。
 <video controls src="/godot_recipes/4.x/img/minimap_01.webm"></video>

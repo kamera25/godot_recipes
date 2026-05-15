@@ -10,11 +10,11 @@ ghcommentid: 77
 Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
-## 課題
+## 今回のお題
 
 GDScriptからGodotシェーダーと連携したい。
 
-## 解決策
+## 作り方
 
 GDScriptから uniform の値にアクセスするには、オブジェクトの`material`プロパティに対して`set_shader_param()`メソッドを使用できます。もしアタッチされているマテリアルが ShaderMaterial の場合、以下のようにアクセス可能です。
 

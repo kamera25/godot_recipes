@@ -4,11 +4,11 @@ weight: 2
 draft: false
 ---
 
-## 課題
+## 今回のお題
 
 対象物を観察するため、リジッドに滑らかな回転動作をしたい。
 
-## 解決策
+## 作り方
 
 {{< gd-icon RigidBody2D >}}`RigidBody2D` の操作は少し複雑です。Godot の物理エンジンで制御されるため、直接移動させるのではなく、力を加えましょう。リジッドボディを扱う前に、[RigidBody2D API ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) を読むことを強くオススメします。
 

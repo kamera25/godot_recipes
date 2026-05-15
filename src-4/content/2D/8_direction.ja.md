@@ -5,11 +5,11 @@ draft: false
 ghcommentid: 100
 ---
 
-## 課題
+## 今回のお題
 
 2Dキャラクターが必要です。アニメーションを含む8方向移動が可能なものが求められます。
 
-## 解決策
+## 作り方
 
 この例では、[Isometric: Mini-Crusader](https://remos.itch.io/mini-crusader)を使用します。これには待機、歩行、攻撃など8方向に対応したアニメーションが含まれています。
 

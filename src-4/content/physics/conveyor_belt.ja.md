@@ -9,11 +9,11 @@ draft: false
 Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
-## 課題
+## 今回のお題
 
 キャラクターまたはリジッドボディを移動させるコンベアベルトオブジェクトを作成したい。
 
-## 解決策
+## 作り方
 
 `constant_linear_velocity` プロパティを使用することで、{{< gd-icon StaticBody2D >}}`StaticBody2D`だけでコンベアベルトオブジェクトを作成できます。
 

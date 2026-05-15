@@ -5,13 +5,13 @@ draft: false
 ghcommentid: 101
 ---
 
-## 課題
+## 今回のお題
 
 3Dで回転するキューブを作成したい。
 
 <video width="500" controls src="/godot_recipes/4.x/img/rolling_cube.webm"></video>
 
-## 解決策
+## 作り方
 
 キューブを転がすのは見た目より難しいです。単に中心軸を中心に回すだけではうまくいきません：
 

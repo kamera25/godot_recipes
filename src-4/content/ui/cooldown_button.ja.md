@@ -9,13 +9,13 @@ draft: false
 Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
-## 課題
+## 今回のお題
 
 RPG風のスキルボタンを作成したい。クールタイム効果も組み込みたい。
 
 ![alt](/godot_recipes/4.x/img/cooldown_01.gif)
 
-## 解決策
+## 作り方
 
 ボタン用のアイコンが必要な場合、[Game-icons.net](https://game-icons.net/)では多種多様なデザイン性の高いボタン素材を提供しています。このレシピでもその一部を使用しています。
 

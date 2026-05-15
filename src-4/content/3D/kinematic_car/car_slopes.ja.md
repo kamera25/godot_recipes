@@ -10,13 +10,13 @@ ghcommentid: 44
 Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
-## 課題
+## 今回のお題
 
 [キネマティックカー](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/) は斜面を登れるようになりましたが、見た目が少し不自然です。
 
 ![alt](/godot_recipes/4.x/img/3d_car_10.png)
 
-## 解決策
+## 作り方
 
 運動体は衝突時に自動で回転しません。画像のように車輪が地面に接触していない場合、手動で車を整列させましょう。
 

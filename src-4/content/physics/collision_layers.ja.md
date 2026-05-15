@@ -39,5 +39,5 @@ if get_collision_mask_value(3):
 ```
 
 {{% notice style="tip" title="Godot 3から4への移行ポイントまとめ" %}}
-- レイヤー用インスペクタUIが改善されました
-- `set_collision_layer_value()`などの新ヘルパーメソッドにより、複雑なビット演算処理(例: `1 << (layer - 1)`)が不要になりました{{% /notice %}}
+- レイヤー用のインスペクターのUIが改善されました
+- `set_collision_layer_value()`などの新しいヘルパーメソッドにより、複雑なビット演算処理(例: `1 << (layer - 1)`)が不要になりました{{% /notice %}}

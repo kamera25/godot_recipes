@@ -10,13 +10,13 @@ ghcommentid: 11
 Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
-## 課題
+## 今回のお題
 
 「無効なノード参照」、これはGodotヘルプチャンネルで最も頻繁に報告される問題の一つです。ほとんどの場合、以下のようなエラーメッセージとして表示されます。
 
 > Invalid get index 'position' (on base: 'null instance').
 
-## 解決策
+## 作り方
 
 問題の核心は「nullインスタンス」部分にあり、これがGodot初心者にとって最も混乱を招く要因となっています。
 
