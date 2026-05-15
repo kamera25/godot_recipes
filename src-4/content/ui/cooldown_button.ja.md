@@ -33,7 +33,7 @@ AbilityButton: {{< gd-icon TextureButton >}} TextureButton
 
 選択したアイコンを `AbilityButton` の **Textures/Normal** プロパティにドロップします。
 
-`Sweep`ノードでは、**Presets**メニューから 「Full Rect」 を選択します。**Fill Mode(塗りつぶしモード)**を「Counter Clockwise(反時計回り)」に設定します。
+`Sweep`ノードでは、**Presets**メニューから 「Full Rect」 を選択します。**Fill Mode(塗りつぶし)** を「Counter Clockwise(反時計回り)」に設定します。
 
 また、クールタイム時の「時計ワイプ」でボタンを暗く表示させたいため、**[変調]** プロパティに透明度のある濃いグレーを設定します。
 

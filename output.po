@@ -23,7 +23,7 @@ msgstr ""
 "{{% notice style=\"tip\" title=\"Godot 4.0\"%}}\n"
 "**Godot 4.0が正式リリースされました！**<br>\n"
 "Godot 4.0はエンジンの最新安定版バージョンです。<br>\n"
-"このサイト(注 : 原文サイトには。この非公式日本語版にはGodot 3の日本語訳はありません。)にはGodot 3向けの学習教材も充実しており、その多くは今でも十分に活用できます。右上のリボンをクリックするとGodot Recipesバージョンを切り替えられますし、以下のボタンからもアクセスできます。<br>\n"
+"このサイト(注 : 原文サイトには。この非公式日本語版にはGodot 3の日本語訳はありません。)にはGodot 3向けの学習教材も充実しており、その多くは今でも十分に活用できます。以下のボタンからアクセスできます。<br>\n"
 "{{% button href=\"https://kidscancode.org/godot_recipes/4.x/ja/\" style=\"primary\" icon=\"utensils\" %}}Godot 3レシピ集 (原文・英語){{% /button %}}\n"
 "{{% /notice %}}"
 
@@ -2146,7 +2146,7 @@ msgstr "### ノード設定"
 
 #: ui/cooldown_button.md
 msgid "On the `Sweep` node, choose \"Full Rect\" from the **Presets** menu. Set the **Fill Mode** to \"Counter Clockwise\"."
-msgstr "`Sweep`ノードでは、**Presets**メニューから 「Full Rect」 を選択します。**Fill Mode(塗りつぶしモード)**を「Counter Clockwise(反時計回り)」に設定します。"
+msgstr "`Sweep`ノードでは、**Presets**メニューから 「Full Rect」 を選択します。**Fill Mode(塗りつぶし)** を「Counter Clockwise(反時計回り)」に設定します。"
 
 #: ui/cooldown_button.md
 msgid "You want to make RPG-style ability buttons, including a cooldown effect."

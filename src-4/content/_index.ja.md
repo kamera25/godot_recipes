@@ -13,7 +13,7 @@ draft: false
 {{% notice style="tip" title="Godot 4.0"%}}
 **Godot 4.0が正式リリースされました！**<br>
 Godot 4.0はエンジンの最新安定版バージョンです。<br>
-このサイト(注 : 原文サイトには。この非公式日本語版にはGodot 3の日本語訳はありません。)にはGodot 3向けの学習教材も充実しており、その多くは今でも十分に活用できます。右上のリボンをクリックするとGodot Recipesバージョンを切り替えられますし、以下のボタンからもアクセスできます。<br>
+このサイト(注 : 原文サイトには。この非公式日本語版にはGodot 3の日本語訳はありません。)にはGodot 3向けの学習教材も充実しており、その多くは今でも十分に活用できます。以下のボタンからアクセスできます。<br>
 {{% button href="https://kidscancode.org/godot_recipes/4.x/ja/" style="primary" icon="utensils" %}}Godot 3レシピ集 (原文・英語){{% /button %}}
 {{% /notice %}}
 
