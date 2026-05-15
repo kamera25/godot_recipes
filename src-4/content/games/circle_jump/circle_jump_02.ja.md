@@ -10,7 +10,7 @@ pre: "02. "
 Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
 {{% /notice %}}
 
-前回のパートでは、ゲームの中核をなす`ジャンパー`オブジェクトと`サークル`オブジェクトを作成しました。次に、プレイヤーがミスするまで連続して出現するサークルの進行システムを追加する必要があります。
+前回のパートでは、ゲームの中核をなす`ジャンパー`オブジェクトと`サークル`オブジェクトを作成しました。次に、プレイヤーがミスするまで連続して出現するサークルの進行システムを追加しましょう。
 
 ## メインシーンの拡張
 
@@ -174,7 +174,7 @@ Circle ノードに `AnimationPlayer` を追加します。
 ![alt](/godot_recipes/4.x/img/cj_02_03.png)
 ![alt](/godot_recipes/4.x/img/cj_02_04.gif)
 
-以下の機能をサークルスクリプトに追加する必要があります。
+以下の機能をサークルスクリプトに追加しましょう。
 
 ```gdscript
 func capture():
@@ -209,7 +209,7 @@ func _on_Jumper_captured(object):
 
 ----------
 
-#### GitHubでプロジェクトをフォローしてください！
+#### GitHubでプロジェクトをフォローしましょう！
 
 [https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)
 

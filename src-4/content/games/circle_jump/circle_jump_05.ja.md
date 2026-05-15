@@ -16,7 +16,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 HUDとして使用する`CanvasLayer`をルートとする新しいシーンを追加します。以下の2つの子要素を持たせます。「ScoreBox」という名前の`MarginContainer`と、「メッセージ」という名前の`Label`です。
 
-Scene treeは以下のようになっている必要があります。
+Scene treeは以下のようになっています。
 
 ![alt](/godot_recipes/4.x/img/cj_05_01.png)
 
@@ -31,7 +31,7 @@ Scene treeは以下のようになっている必要があります。
 
 ![alt](/godot_recipes/4.x/img/cj_05_02.png)
 
-次に、`Message`ノードの処理に移ります。まずフォントを読み込み、 _Text_ プロパティに「メッセージ」を設定します。こうすることで表示内容が確認できるようになります。さらに、フォントリソースで「ユニーク化」（Make Unique）を選択してください（この理由は次のセクションで説明します）。 _Align_ と _Valign_ は「中央」に設定し、 _Clip Text_ は「オン」にします。レイアウトに関しては「ワイド・センタリング」を選択します。また、_Grow Direction/Vertical_を「両方」に設定します。
+次に、`Message`ノードの処理に移ります。まずフォントを読み込み、 _Text_ プロパティに「メッセージ」を設定します。こうすることで表示内容が確認できるようになります。さらに、フォントリソースで「ユニーク化」（Make Unique）を選択しましょう（この理由は次のセクションで説明します）。 _Align_ と _Valign_ は「中央」に設定し、 _Clip Text_ は「オン」にします。レイアウトに関しては「ワイド・センタリング」を選択します。また、_Grow Direction/Vertical_を「両方」に設定します。
 
 ## メッセージアニメーション
 
@@ -89,7 +89,7 @@ $HUD.show_message("Go!")
 
 ----------
 
-#### GitHubでプロジェクトをフォローしてください！
+#### GitHubでプロジェクトをフォローしましょう！
 
 [https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)
 

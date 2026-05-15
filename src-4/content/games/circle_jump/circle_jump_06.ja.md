@@ -92,7 +92,7 @@ func _on_Jumper_area_entered(area):
 
 音声機能が正常に動作するようになったので、「設定」画面で音と音楽を切り替えられるボタンも接続できるようになりました。
 
-ボタンの表示を、プロパティの現在のオン／オフ状態に合わせる必要があります。まずはテクスチャを読み込んでから、必要に応じて割り当てられるようにします。
+ボタンの表示を、プロパティの現在のオン／オフ状態に合わせましょう。まずはテクスチャを読み込んでから、必要に応じて割り当てられるようにします。
 
 ```gdscript
 var sound_buttons = {true: preload("res://assets/images/buttons/audioOn.png"),
@@ -210,7 +210,7 @@ func _ready():
 
 ----------
 
-#### GitHubでプロジェクトをフォローしてください！
+#### GitHubでプロジェクトをフォローしましょう！
 
 [https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)
 

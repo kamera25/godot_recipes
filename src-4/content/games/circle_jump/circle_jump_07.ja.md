@@ -33,7 +33,7 @@ func disappear():
 
 ## スコアとレベルについて
 
-スコアが上がるにつれ、ゲームの難易度も適切に上昇させる必要があります。つまり、得点を獲得した際には一定の閾値（`circles_per_level`）に達したかどうかを確認する必要が生じます。また、ジャンプで円に乗る以外にも、得点を獲得する手段が存在するかもしれません。これを管理しやすくするため、メインスクリプト内でスコア変数に`setget`メソッドを定義します。
+スコアが上がるにつれ、ゲームの難易度も適切に上昇させましょう。つまり、得点を獲得した際には一定の閾値（`circles_per_level`）に達したかどうかを確認する必要が生じます。また、ジャンプで円に乗る以外にも、得点を獲得する手段が存在するかもしれません。これを管理しやすくするため、メインスクリプト内でスコア変数に`setget`メソッドを定義します。
 
 ```gdscript
 var score = 0 setget set_score
@@ -97,13 +97,13 @@ func set_tween(object=null, key=null):
     move_tween.start()
 ```
 
-最後に、`init()` 関数の末尾に `set_tween()` を追加し、実際に動作を確認してみます。
+最後に、`init()` 関数の末尾に `set_tween()` を追加し、実際に動作を見てみます。
 
 <video controls src="/godot_recipes/img/cj_07_01.webm"></video>
 
 ----------
 
-#### GitHubでプロジェクトをフォローしてください！
+#### GitHubでプロジェクトをフォローしましょう！
 
 [https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)
 

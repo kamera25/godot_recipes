@@ -10,9 +10,9 @@ draft: false
 
 ## 解決策
 
-{{< gd-icon RigidBody2D >}}`RigidBody2D` の操作は少し複雑です。Godot の物理エンジンで制御されるため、直接移動させるのではなく、力を加える必要があります。リジッドボディを扱う前に、[RigidBody2D API ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) を読むことを強くオススメします。
+{{< gd-icon RigidBody2D >}}`RigidBody2D` の操作は少し複雑です。Godot の物理エンジンで制御されるため、直接移動させるのではなく、力を加えましょう。リジッドボディを扱う前に、[RigidBody2D API ドキュメント](https://docs.godotengine.org/ja/stable/classes/class_rigidbody2d.html) を読むことを強くオススメします。
 
-物体を回転させるには、回転力である**トルク**を加える必要があります。一度物体が回転し始めたら、最終回転に近づくにつれてトルクを小さくしていきたいものです。
+物体を回転させるには、回転力である**トルク**を加えましょう。一度物体が回転し始めたら、最終回転に近づくにつれてトルクを小さくしていきたいものです。
 
 これはまさに「内積」が活躍する場面です。その符号からターゲットの位置が左側か右側かを判断でき、絶対値からは我々が向いている方向とターゲット方向との距離を把握できます。
 

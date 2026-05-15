@@ -6,7 +6,7 @@ draft: false
 
 ## 課題
 
-ゲーム要素としてペットやミニオンを追加します。なので、キャラクターに追従させる必要があります。
+ゲーム要素としてペットやミニオンを追加します。なので、キャラクターに追従させましょう。
 
 <video controls src='/godot_recipes/4.x/img/pet_follow.webm'></video>
 

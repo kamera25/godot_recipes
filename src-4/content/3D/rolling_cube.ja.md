@@ -50,7 +50,7 @@ Cube: {{< gd-icon CharacterBody3D >}} CharacterBody3D
 
 ![alt](/godot_recipes/4.x/img/cube_003.png)
 
-これでキューブを転がしたい場合、`Pivot`を「移動させたい方向」に`0.5`ユニット動かす必要があります。メッシュはオブジェクトに取り付けられているため、反対方向に同じ量だけ動かさなければなりません。例えば、右方向へ転がす場合（**+X**軸方向）、最終的に以下のコードになります。
+これでキューブを転がしたい場合、`Pivot`を「移動させたい方向」に`0.5`ユニット動かしましょう。メッシュはオブジェクトに取り付けられているため、反対方向に同じ量だけ動かさなければなりません。例えば、右方向へ転がす場合（**+X**軸方向）、最終的に以下のコードになります。
 
 ![alt](/godot_recipes/4.x/img/cube_004.gif)
 
@@ -123,7 +123,7 @@ func roll(dir):
 
 ステップ1では：
 
-翻訳を修正してください: `mesh.translate(-dir)` を `mesh.global_translate(-dir)` に変更します。
+翻訳を修正しましょう: `mesh.translate(-dir)` を `mesh.global_translate(-dir)` に変更します。
 
 ステップ3では：
 

@@ -38,11 +38,11 @@ Godot では3種類の物理ボディが提供されており、<a href="https:/
 
 物理ボディは、任意の数の {{< gd-icon CollisionShape2D >}}`CollisionShape2D` オブジェクトを子要素として保持できます。これらの形状はオブジェクトの衝突判定範囲を定義し、他のオブジェクトとの接触検出に使います。
 
-> ※注意：衝突検出するには、対象オブジェクトに少なくとも1つの`Shape2D`が割り当てられている必要があります。
+> ※注意：衝突検出するには、対象オブジェクトに少なくとも1つの`Shape2D`が割り当てられています。
 
 最も一般的な方法は、オブジェクトの子要素として {{< gd-icon CollisionShape2D >}}`CollisionShape2D` または {{< gd-icon CollisionPolygon2D >}}`CollisionPolygon2D` を追加することです。これらのノードを使用すると、エディターワークスペース上で直接形状を描画できます。
 
-> **注意:** エディターで衝突形状のスケールを変更する際は注意が必要です。インスペクターの`Scale`プロパティは常に `(1, 1)` に設定しておく必要があります。衝突形状のサイズを変更する場合は、必ずシェイプのハンドルを使いましょう。
+> **注意:** エディターで衝突形状のスケールを変更する際は注意が必要です。インスペクターの`Scale`プロパティは常に `(1, 1)` に設定しておくしましょう。衝突形状のサイズを変更する場合は、必ずシェイプのハンドルを使いましょう。
 
 ### 衝突レイヤーとマスクについて
 
@@ -83,7 +83,7 @@ Godotにおいて最も強力でありながらしばしば誤解されがちな
 
 ### 移動と衝突判定
 
-{{< gd-icon CharacterBody2D >}}`CharacterBody2D` オブジェクトを移動する際、その `position` を直接設定してはいけません。代わりに、`move_and_collide()` または `move_and_slide()` メソッドを使用する必要があります。これらのメソッドは指定されたベクトルに沿ってボディを移動させ、他のボディと衝突した場合に即座に停止させます。{{< gd-icon CharacterBody2D >}}`CharacterBody2D` が衝突した後、どのような _衝突応答処理_ をするかは、手動でコード化する必要があります。
+{{< gd-icon CharacterBody2D >}}`CharacterBody2D` オブジェクトを移動する際、その `position` を直接設定してはいけません。代わりに、`move_and_collide()` または `move_and_slide()` メソッドを使用しましょう。これらのメソッドは指定されたベクトルに沿ってボディを移動させ、他のボディと衝突した場合に即座に停止させます。{{< gd-icon CharacterBody2D >}}`CharacterBody2D` が衝突した後、どのような _衝突応答処理_ をするかは、手動でコード化しましょう。
 
 > **注意:** キャラクターボディの移動は `_physics_process()` コールバック内のみで行ってください。
 
@@ -146,9 +146,9 @@ move_and_slide()
 
 サンプルプロジェクトをダウンロード済みの場合、この例は「BasicMovement.tscn」シーンに含まれています。
 
-このサンプルでは、{{< gd-icon CharacterBody2D >}}`CharacterBody2D`コンポーネントを追加し、これに2つの子オブジェクトを配置します。{{< gd-icon Sprite2D >}}`Sprite`と{{< gd-icon CollisionShape2D >}}`CollisionShape2D`です。多くのデモと同様に、Godotのデフォルトアイコン画像"icon.png"を{{< gd-icon Sprite2D >}}`Sprite`のテクスチャとして使用します（ファイルシステムドックからドラッグして、`Sprite`プロパティの「テクスチャ」欄に設定してください）。{{< gd-icon CollisionShape2D >}}`CollisionShape2D`の「形状」プロパティでは「新規 RectangleShape2D」を選択し、その長方形サイズを調整してスプライト画像を覆うように配置します。
+このサンプルでは、{{< gd-icon CharacterBody2D >}}`CharacterBody2D`コンポーネントを追加し、これに2つの子オブジェクトを配置します。{{< gd-icon Sprite2D >}}`Sprite`と{{< gd-icon CollisionShape2D >}}`CollisionShape2D`です。多くのデモと同様に、Godotのデフォルトアイコン画像"icon.png"を{{< gd-icon Sprite2D >}}`Sprite`のテクスチャとして使用します（ファイルシステムドックからドラッグして、`Sprite`プロパティの「テクスチャ」欄に設定しましょう）。{{< gd-icon CollisionShape2D >}}`CollisionShape2D`の「形状」プロパティでは「新規 RectangleShape2D」を選択し、その長方形サイズを調整してスプライト画像を覆うように配置します。
 
-{{< gd-icon `CharacterBody2D` >}}以下のコードを追加してください：
+{{< gd-icon `CharacterBody2D` >}}以下のコードを追加しましょう：
 
 {{< highlight gdscript >}}
 extends CharacterBody2D

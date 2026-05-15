@@ -20,7 +20,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ### フォント操作について
 
-はじめに、フォントファイルが必要になります。Godotのフォントサポートについては別のレシピで詳しく解説しますが、ここではTTFまたはOTF形式のフォントファイルを前提とします。ビットマップフォントを使用する場合は、関連するレシピを参照します。
+はじめに、フォントファイルが必要になります。Godotのフォント対応については別のレシピで詳しく解説しますが、ここではTTFまたはOTF形式のフォントファイルを前提とします。ビットマップフォントを使用する場合は、関連するレシピを参照します。
 
 {{% notice note %}}
 この例では、人気のある無料フォント「Roboto」を使用します。このフォントは[Google Fonts](https://fonts.google.com/specimen/Roboto)で入手できます。こちらからもダウンロードできます。 [Roboto_font.zip](/godot_recipes/4.x/ja/files/Roboto_font.zip)
@@ -74,7 +74,7 @@ func _on_Timer_timeout():
 ラベルの使用例やUIノードとの連携方法については、[関連レシピ](#関連レシピ)セクションをご覧ください。
 
 <!-- {{% notice note %}}
-プロジェクトファイルをこちらからダウンロードしてください: [screen_shake.zip](/godot_recipes/4.x/ja/files/screen_shake.zip)
+プロジェクトファイルをこちらからダウンロードしましょう: [screen_shake.zip](/godot_recipes/4.x/ja/files/screen_shake.zip)
 {{% /notice %}} -->
 
 ## 関連レシピ

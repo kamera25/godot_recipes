@@ -35,7 +35,7 @@ android.enableJetifier=true
 
 * `res://android/admob-plugin/AndroidManifest.conf`
 
-AdMobアプリケーションIDを`android:value=""/>`行に貼り付けてください。サンプルのアプリIDは置き換える必要があります。
+AdMobアプリケーションIDを`android:value=""/>`行に貼り付けてください。サンプルのアプリIDは置き換えましょう。
 
 ## 設定
 

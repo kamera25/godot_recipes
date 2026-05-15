@@ -51,7 +51,7 @@ func _on_change_camera(t):
 {{< gd-icon Marker3D >}}`Marker3D` をお好みの位置に移動・配置します。位置の **-Z** 軸は車両に向けるようにします。
 
 {{% notice tip %}}
-作業効率を上げるため、一時的に {{< gd-icon Camera3D >}}`Camera` を適切な位置に配置し、「プレビュー」モードを使用して、{{< gd-icon Marker3D >}}`Marker3D` が正確に狙いたい方向を指すように調整する方法が有効です（作業完了後はカメラを削除してください）。
+作業効率を上げるため、一時的に {{< gd-icon Camera3D >}}`Camera` を適切な位置に配置し、「プレビュー」モードを使用して、{{< gd-icon Marker3D >}}`Marker3D` が正確に狙いたい方向を指すように調整する方法が有効です（作業完了後はカメラを削除しましょう）。
 ![alt](/godot_recipes/4.x/img/3d_car_09.png)
 {{% /notice %}}
 

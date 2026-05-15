@@ -58,7 +58,7 @@ if Input.is_action_pressed("shoot"):
     shoot()
 ```
 
-さらに、`GunCooldown` の `timeout` シグナルも接続する必要があります。
+さらに、`GunCooldown` の `timeout` シグナルも接続しましょう。
 
 ```gdscript
 func _on_gun_cooldown_timeout():
@@ -77,7 +77,7 @@ func _on_gun_cooldown_timeout():
 
 ## 次のステップ
 
-シューティングゲームは撃つ対象がなければ面白くありません。敵キャラの作成に取り掛かりますが、その前にプレイヤーや敵、その他のゲーム内オブジェクトを配置するシーンを作成する必要があります。
+シューティングゲームは撃つ対象がなければ面白くありません。敵キャラの作成に取り掛かりますが、その前にプレイヤーや敵、その他のゲーム内オブジェクトを配置するシーンを作成しましょう。
 
 | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_04/" icon="fas fa-arrow-left" %}}戻る{{% /button %}} | {{% button href="/godot_recipes/4.x/ja/games/first_2d/first_2d_06/" icon="fas fa-arrow-right" icon-position="right" %}}次へ{{% /button %}} |
 |------|------:|

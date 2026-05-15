@@ -37,7 +37,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 整理整頓のため、ゲームオブジェクト用のフォルダ（`objects`）とUI専用フォルダ（`gui`）を作成します。画像や音声などのゲームアセットは`assets`フォルダに格納します。開始時点で使用するアセットはこちらからダウンロードできます。
 
 {{% notice note %}}
-プロジェクトファイルをこちらからダウンロードしてください: [circle_jump_assets.zip](/godot_recipes/4.x/ja/files/circle_jump_assets.zip)
+プロジェクトファイルをこちらからダウンロードしましょう: [circle_jump_assets.zip](/godot_recipes/4.x/ja/files/circle_jump_assets.zip)
 {{% /notice %}}
 
 フォルダ構造とアセットの準備が整ったら、いよいよコーディング開始です！
@@ -119,7 +119,7 @@ func _physics_process(delta):
 
 1. `Sprite` にカスタムカラーを適用するため、小さなシェーダーを使用します
 2. まず`Sprite`を選択してから、_Material_ プロパティで新しい`ShaderMaterial`を追加します
-3. 追加した _Shader_ をクリックし、[シェーダー]メニューで「新規シェーダー」を選択、さらにそれをクリックしてください
+3. 追加した _Shader_ をクリックし、[シェーダー]メニューで「新規シェーダー」を選択、さらにそれをクリックしましょう
 4. シェーダーエディタパネルが画面下部に表示されます
 
 ![alt](/godot_recipes/4.x/img/cj_01_02.gif)
@@ -183,7 +183,7 @@ func _process(delta):
     $Pivot.rotation += rotation_speed * delta
 ```
 
-`init()`関数では、与えられた `radius` に基づいて円のサイズを設定します。衝突形状のサイズも、テクスチャのサイズに合わせて調整する必要があります。
+`init()`関数では、与えられた `radius` に基づいて円のサイズを設定します。衝突形状のサイズも、テクスチャのサイズに合わせて調整しましょう。
 
 テスト用に `radius` の値を変えてシーンを実行してみてください。（後で `_ready()` 内で `init()` を呼び出す処理は停止します）
 
@@ -197,7 +197,7 @@ func _process(delta):
 
 ----------
 
-#### GitHubでプロジェクトをフォローしてください！
+#### GitHubでプロジェクトをフォローしましょう！
 
 [https://github.com/kidscancode/circle_jump](https://github.com/kidscancode/circle_jump)
 
