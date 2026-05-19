@@ -85,7 +85,7 @@ var roll_input = 0.0
 var yaw_input = 0.0
 ```
 
-三軸速度は艦船の「操作性」に直接影響を及ぼします。最適なフライトのために、ぜひ試行錯誤してみてください。
+3軸の速度は艦船の「操作性」に直接影響を及ぼします。ぜひ試行錯誤して最適なフライトを作り上げてください。
 
 次に、`get_input()` 関数に以下の行を追加して3軸入力を取得します。
 
@@ -95,7 +95,7 @@ roll_input = Input.get_axis("roll_right", "roll_left")
 yaw_input = Input.get_axis("yaw_right", "yaw_left")
 ```
 
-Finally, we need to rotate the ship's `Basis` according to the inputs. Note how each input affects one axis of rotation:
+最後に、入力に応じて宇宙船の `Basis` を回転させる必要があります。各入力がどの回転軸に影響するかを見てみましょう。
 
 ```gdscript
 transform.basis = transform.basis.rotated(transform.basis.z,

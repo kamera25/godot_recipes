@@ -73,7 +73,7 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 ![alt](/godot_recipes/4.x/img/3d_bars_03a.png)
 
-もし {{< gd-icon SubViewport >}}`SubViewport` が {{< gd-icon Sprite3D >}}`Sprite3D` の子要素でなかった場合、インスペクター上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可能性があります。そのため、以下のように {{< gd-icon Sprite3D >}}`Sprite3D` にアタッチされたスクリプト内で設定します。
+もし {{< gd-icon SubViewport >}}`SubViewport` が {{< gd-icon Sprite3D >}}`Sprite3D` の子要素でなかった場合、インスペクター上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可能性があります。そのため、以下のように {{< gd-icon Sprite3D >}}`Sprite3D` にアタッチされたスクリプトで設定します。
 
 ```gdscript
 extends Sprite3D

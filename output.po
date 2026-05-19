@@ -205,7 +205,7 @@ msgstr ""
 
 #: basics/getting_nodes.md
 msgid "Once you understand how to use node paths, you'll see how easy it is to reference any node you need. And put a stop to seeing those `null instance` error messages."
-msgstr "ノードパスの使い方をマスターすれば、必要なノードを簡単に参照できるようになります。慣れれば`null instance`エラーメッセージに悩まされることもなくなります。"
+msgstr "ノードパスの使い方をマスターすれば、必要なノードを簡単に参照できるようになります。慣れれば`nullインスタンス`エラーメッセージに悩まされることもなくなります。"
 
 #: basics/getting_nodes.md
 msgid "`/root`, which can also be accessed with `get_tree().root` is *not* the root node of your scene. It's the Viewport node that is always present by default in the SceneTree."
@@ -213,7 +213,7 @@ msgstr "`/root` は `get_tree().root` を介してもアクセスできますが
 
 #: basics/getting_nodes.md
 msgid "The argument of the `get_node()` function is a string representing the *path* to the desired node. In this case, it's a child of the node the script is on. If the path you give it is invalid, you'll get the dreaded `null instance` error (as well as \"Node not found\")."
-msgstr "`get_node()` 関数の引数は、対象ノードへのパスを表す文字列です。ここではスクリプト実行中のノードの子要素を指定します。指定したパスが無効な場合、厄介な `null instance` エラーが発生するほか（さらに「ノードが見つかりませんでした」というメッセージも表示されます）。"
+msgstr "`get_node()` 関数の引数は、対象ノードへのパスを表す文字列です。ここではスクリプト実行中のノードの子要素を指定します。指定したパスが無効な場合、厄介な `nullインスタンス` エラーが発生するほか（さらに「ノードが見つかりませんでした」というメッセージも表示されます）。"
 
 #: 2D/2d_align_surface.md 2D/2d_draw_trajectory.md 2D/2d_shooting.md
 #: 2D/8_direction.md 2D/autotile_intro.md 2D/ballistic_bullet.md
@@ -264,7 +264,7 @@ msgstr "もし `Main` スクリプトが `ScoreLabel` にアクセスする必�
 
 #: basics/getting_nodes.md
 msgid "It's that last part, the \"null instance\", that's the source of this problem, and the main source of confusion for Godot beginners."
-msgstr "問題の核心は「nullインスタンス」部分にあり、これがGodot初心者にとって最も混乱を招く要因となっています。"
+msgstr "問題の核心は「null instance（nullインスタンス）」部分にあり、これがGodot初心者にとって最も混乱を招く要因となっています。"
 
 #: basics/getting_nodes.md
 msgid "The scene tree is made of nodes, which are connected together in parent-child relationships. A node path is the path it takes to get from one node to another by moving through this tree."
@@ -430,7 +430,7 @@ msgstr "まず、すべての敵キャラを「enemies」グループに追加�
 
 #: basics/node_communication.md
 msgid "You can also add nodes to the group in your script:"
-msgstr "スクリプト内でグループにノードを追加することもできます。"
+msgstr "スクリプトでグループにノードを追加することもできます。"
 
 #: basics/node_communication.md
 msgid "A common misconception about groups is that they are some kind of object or array that \"contains\" node references. Groups are a *tagging system*. A node is \"in\" a group if it has that tag assigned from it. The SceneTree keeps track of the tags and has functions like `get_nodes_in_group()` to help you find all nodes with a particular tag."
@@ -1264,7 +1264,7 @@ msgstr "ご覧の通り、これらのノードはすべてツリー順に従っ
 
 #: basics/tree_ready_order.md
 msgid "> Called when the node is \"ready\", i.e. when both the node and its children have entered the scene tree. If the node has children, their `_ready` callbacks get triggered first, and the parent node will receive the ready notification afterwards."
-msgstr "> ノードが「準備完了」状態になった際に呼び出されます。すべての子ノードがシーンツリーに組み込まれた時点で自ノードがトリガーされます。子要素がある場合、まず子ノードの `_ready` コールバックが実行され、その後に親ノードへ通知されます。"
+msgstr "> ノードが「準備完了」状態になった際に呼び出されます。すべての子ノードがシーンツリーに組み込まれた時点で自ノードの起動が開始します。子要素がある場合、まず子ノードの `_ready` コールバックが実行され、その後に親ノードへ通知されます。"
 
 #: basics/tree_ready_order.md
 msgid "Here's a quote from the [Node reference](https://docs.godotengine.org/en/3.2/classes/class_node.html#class-node-method-ready):"
@@ -3145,7 +3145,7 @@ msgstr "[Quaternius 制作「Ultimate Spaceships Pack」](https://quaternius.com
 
 #: 3D/spaceship.md
 msgid "Finally, we need to rotate the ship's `Basis` according to the inputs. Note how each input affects one axis of rotation:"
-msgstr "Finally, we need to rotate the ship's `Basis` according to the inputs. Note how each input affects one axis of rotation:"
+msgstr "最後に、入力に応じて宇宙船の `Basis` を回転させる必要があります。各入力がどの回転軸に影響するかを見てみましょう。"
 
 #: 3D/spaceship.md
 msgid "In *Project Settings -> Input Map*, set up the following inputs:"
@@ -3247,7 +3247,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_ship_02.gif)"
 
 #: 3D/spaceship.md
 msgid "The three axis speeds will affect the \"handling\" of the ship. Experiment to find values the work for you and your desired flight style."
-msgstr "三軸速度は艦船の「操作性」に直接影響を及ぼします。最適なフライトのために、ぜひ試行錯誤してみてください。"
+msgstr "3軸の速度は艦船の「操作性」に直接影響を及ぼします。ぜひ試行錯誤して最適なフライトを作り上げてください。"
 
 #: 3D/spaceship.md
 msgid "Change the three axis inputs in `get_input()` to the following:"
@@ -3351,7 +3351,7 @@ msgstr "インスペクターで、 _Flags_ セクションの _Billboard_ を�
 
 #: 3D/healthbars.md
 msgid "If the {{< gd-icon SubViewport >}}`SubViewport` were not a child of the {{< gd-icon Sprite3D >}}`Sprite3D`, we could set it as the sprite's texture directly in the Inspector. Since it's a child, it won't be ready at the right time, so we'll need to set it in a script attached to the {{< gd-icon Sprite3D >}}`Sprite3D`:"
-msgstr "もし {{< gd-icon SubViewport >}}`SubViewport` が {{< gd-icon Sprite3D >}}`Sprite3D` の子要素でなかった場合、インスペクター上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可能性があります。そのため、以下のように {{< gd-icon Sprite3D >}}`Sprite3D` にアタッチされたスクリプト内で設定します。"
+msgstr "もし {{< gd-icon SubViewport >}}`SubViewport` が {{< gd-icon Sprite3D >}}`Sprite3D` の子要素でなかった場合、インスペクター上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可能性があります。そのため、以下のように {{< gd-icon Sprite3D >}}`Sprite3D` にアタッチされたスクリプトで設定します。"
 
 #: 3D/healthbars.md
 msgid "For our example \"mob\", we'll start with a {{< gd-icon CharacterBody3D >}}`CharacterBody3D` node. It's programmed to spawn and travel in a straight line. It also has the following code to handle damage:"
@@ -4815,7 +4815,7 @@ msgstr "![alt](/godot_recipes/4.x/img/anim_tree_jumping.png)"
 
 #: 3D/assets/character_animation.md
 msgid "### Setting up the state machine"
-msgstr "### 状態機械の設定"
+msgstr "### ステートマシンの設定"
 
 #: 3D/assets/character_animation.md
 msgid "### Blendspaces"
@@ -5224,7 +5224,7 @@ msgstr "Godot の 3D 操作に慣れている方なら、キャラクターが�
 
 #: 3D/assets/character_controller.md
 msgid "First, we want to transition to the \"Jump_Start\" animation by setting `jumping = true`. This triggers the transition in the state machine."
-msgstr "まず、「ジャンプ開始」アニメーションに移行するために `jumping = true` を設定します。これにより状態機械での遷移がトリガーされます。"
+msgstr "まず、「ジャンプ開始」アニメーションに移行するために `jumping = true` を設定します。これによりステートマシーンでの遷移が開始されます。"
 
 #: 3D/assets/character_controller.md
 msgid "There are many ways to handle a 3D camera that follows the player. For this example, we'll use a {{< gd-icon SpringArm3D >}}`SpringArm3D` as the camera \"mount\"."
@@ -5279,7 +5279,7 @@ msgstr "このオプションには以下のような欠点があります。"
 
 #: 3D/assets/level_design.md
 msgid "Similar to the door, add the static body to the \"interactable\" group and an `interact()` function in its script:"
-msgstr "ドアと同様に、スタティックを「インタラクション可能」グループに追加し、スクリプト内に `interact()` 関数を実装します。"
+msgstr "ドアと同様に、スタティックを「インタラクション可能」グループに追加し、スクリプトに `interact()` 関数を実装します。"
 
 #: 3D/assets/level_design.md
 msgid "#### External tool"
@@ -5783,7 +5783,7 @@ msgstr "このテクニックはリアルタイムストラテジーゲーム（
 
 #: input/multi_unit_select.md
 msgid "The `else` clause here triggers if we click the mouse when `selected` is greater than `0`. Each item's `target` is set, and we make sure to deselect the units so we can start again."
-msgstr "ここでの `else` 条件は、`selected` が `0` より大きいときにマウスをクリックした場合にトリガーされます。各項目の `target` を設定した後、ユニットを選択解除することで、再度最初から開始できるようにしています。"
+msgstr "ここでの `else` 条件は、`selected` が `0` より大きいときにマウスをクリックした場合に発動します。各項目の `target` を設定した後、ユニットを選択解除することで、再度最初から開始できるようにしています。"
 
 #: input/multi_unit_select.md
 msgid "### World setup"
@@ -5911,9 +5911,7 @@ msgstr "タブをクリックすると、すでにデフォルトアクション
 
 #: input/input_actions.md
 msgid "You can check for the action either by polling the `Input` singleton every frame:"
-msgstr ""
-"以下の方法でアクションをチェックできます。\n"
-"* 各フレームごとに単一インスタンス `Input` をポーリングする方法："
+msgstr "以下で、各フレームごとに単一インスタンス `Input` を定期的に確認します。"
 
 #: input/input_actions.md
 msgid "You define input actions in the \"Project Settings\" under the \"Input Map\" tab. Here, you can create new actions and/or assign inputs to them."
@@ -5925,7 +5923,7 @@ msgstr "Godotの「入力アクション」システムについて理解を深�
 
 #: input/custom_actions.md
 msgid "Typically, you'll add actions to the InputMap via _Project Settings_, as shown in [Recipe: Input Actions](/godot_recipes/4.x/input/input_actions/). However, you may find yourself needing to add one or more actions directly in a script. The [InputMap singleton](https://docs.godotengine.org/en/latest/classes/class_inputmap.html) has methods to help you do this."
-msgstr "通常、入力アクションは[プロジェクト設定]から追加します（詳細は[レシピ : 入力アクション](/godot_recipes/4.x/ja/input/input_actions/)参照）。ただし、スクリプト内で直接アクションを追加する必要がある場合もあります。このような場合には、[InputMapシングルトン](https://docs.godotengine.org/ja/latest/classes/class_inputmap.html)が提供するメソッドが便利です。"
+msgstr "通常、入力アクションは[プロジェクト設定]から追加します（詳細は[レシピ : 入力アクション](/godot_recipes/4.x/ja/input/input_actions/)参照）。ただし、スクリプトで直接アクションを追加する必要がある場合もあります。このような場合には、[InputMapシングルトン](https://docs.godotengine.org/ja/latest/classes/class_inputmap.html)が提供するメソッドが便利です。"
 
 #: input/custom_actions.md
 msgid "### Practical Example"
@@ -5989,7 +5987,7 @@ msgstr "Godotの入力システムの仕組みを学びたいとのこと。"
 
 #: input/mouse_capture.md
 msgid "- **MOUSE_MODE_VISIBLE**: The mouse is visible and can move freely into and out of the window. This is the default state."
-msgstr "- **MOUSE_MODE_VISIBLE**: マウスが視認可能で、ウィンドウ内外を自由に移動できます。これがデフォルト状態です。"
+msgstr "- **MOUSE_MODE_VISIBLE**: マウスカーソルが見えており、ウィンドウ内外を自由に移動できます。これがデフォルトです。"
 
 #: input/mouse_capture.md
 msgid "- **MOUSE_MODE_HIDDEN**: The mouse cursor is invisible, but the mouse can still move outside the window."
@@ -6017,7 +6015,7 @@ msgstr "マウスが捕捉されている状態でも、通常どおりマウス
 
 #: input/mouse_capture.md
 msgid "You want to hide the mouse cursor and keep the mouse from leaving the game window. This is common in many 3D games (and some 2D ones)."
-msgstr "マウスカーソルを隠し、ゲームウィンドウからマウス。これは多くの3Dゲーム（および一部の2Dゲーム）で一般的な機能です。"
+msgstr "ゲームウィンドウからマウスカーソルを隠し、離れないようにしたい。これは多くの3Dゲーム（および一部の2Dゲーム）で一般的な機能です。"
 
 #: input/mouse_capture.md
 msgid "You can set the mouse state using `Input.mouse_mode`. There are four possible mouse modes:"
@@ -6223,7 +6221,7 @@ msgstr "AnimationTreeStateMachine を使用して以下の処理を管理でき�
 
 #: animation/using_animation_sm.md
 msgid "Use an {{< gd-icon AnimationTree >}}`AnimationTree` to create an animation _state machine_. This will allow us to organize our animations and most importantly, control the transitions between them."
-msgstr "アニメーション状態機械を作成するには {{< gd-icon AnimationTree >}}`AnimationTree` を使いましょう。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御できるようになります。"
+msgstr "アニメーション _ステートマシン_ を作成するには {{< gd-icon AnimationTree >}}`AnimationTree` を使いましょう。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御できるようになります。"
 
 #: animation/using_animation_sm.md
 msgid "Note that we're using `return` after traveling to the attack animations. This is so that we won't instead travel to the \"run\" or \"idle\" animations further down in the function."
@@ -6259,7 +6257,7 @@ msgstr "![alt](/godot_recipes/4.x/img/animation_tree_05.gif)"
 
 #: animation/using_animation_sm.md
 msgid "Now we can begin to set up our state machine in the {{< gd-icon AnimationTree >}}`AnimationTree` panel:"
-msgstr "以下は、状態機械を {{< gd-icon AnimationTree >}}`AnimationTree` パネルに設定し始める方法です。"
+msgstr "以下は、ステートマシンを {{< gd-icon AnimationTree >}}`AnimationTree` パネルに設定し始める方法です。"
 
 #: animation/spritesheet_animation.md
 msgid "Spritesheets are a common way for 2D animations to be distributed. In a spritesheet, all of the animation frames are packed into a single image."
@@ -6275,7 +6273,7 @@ msgstr "![alt](/godot_recipes/4.x/img/sprite_animation_04.gif)"
 
 #: animation/spritesheet_animation.md
 msgid "With the scrubber at time `0`, select the {{< gd-icon Sprite2D >}}`Sprite2D` node. Set its _Animation/Frame_ to `0`, then click the key icon next to the value."
-msgstr "スクラバーが`0`時点で、{{< gd-icon Sprite2D >}}`Sprite2D`ノードを選択します。アニメーションのフレーム番号を`0`に設定し、値の隣にあるキーアイコンをクリックします。"
+msgstr "タイムラインのヘッドをドラッグして、`0`時点で、{{< gd-icon Sprite2D >}}`Sprite2D`ノードを選択します。アニメーションのフレーム番号を`0`に設定し、値の隣にあるキーアイコンをクリックします。"
 
 #: animation/spritesheet_animation.md
 msgid "![alt](/godot_recipes/4.x/img/sprite_animation_01.png)"
@@ -6746,7 +6744,7 @@ msgstr "`CapsuleShape`を使用する際の問題点は、底面が丸みを帯�
 
 #: g101/3d/101_3d_07.md
 msgid "The \"Body\" collision shape is going to represent the player's body. We can use a `CapsuleShape` (rotated `90` degrees around **X**). Set its _Radius_ to `0.5` and _Height_ to `1`."
-msgstr "「Body」衝突形状はプレイヤーの身体を表現するものです。ここでは `CapsuleShape` を使用します（**X** 軸を中心に`90`度回転させて設定）。半径を`0.5`、高さを`1`に設定します。"
+msgstr "「Body」衝突形状はプレイヤーの身体を表現します。ここでは `CapsuleShape` を使用します（**X** 軸を中心に`90`度回転させて設定）。半径を`0.5`、高さを`1`に設定します。"
 
 #: g101/3d/101_3d_07.md
 msgid "We now have a basic first-person character controller. This could make a good foundation for a wide variety of game types by adding features and behaviors, as we'll see in later lessons."
@@ -6873,7 +6871,7 @@ msgstr "現在このエリアには特徴がありませんが、見た目をよ
 msgid ""
 "The _Operation_ property is the one that determines how CSG shapes will be\n"
 "combined. The options are:"
-msgstr "操作プロパティは、CSG形状の組み合わせ方法を決定するものです。選択可能なオプションは以下の通りです。"
+msgstr "操作プロパティは、CSG形状の組み合わせ方法を決定します。選択可能なオプションは以下の通りです。"
 
 #: g101/3d/101_3d_06.md
 msgid ""
@@ -7146,7 +7144,7 @@ msgstr "{{% /notice %}}"
 
 #: g101/3d/101_3d_02.md
 msgid "Create a new scene with a {{< gd-icon Node3D >}}`Node3D` root. The first child we'll add is one to give us a \"ground\" to stack some crates on. Add a {{< gd-icon StaticBody3D >}}`StaticBody3D` called \"Ground\", and to that add a {{< gd-icon MeshInstance3D >}}`MeshInstance3D`. In the **Mesh** property, select \"New BoxMesh\" and then click it to open its properties. Set **Size** to `(10, 0.1, 10)` so that we have a nice large surface. However, it would look better if it weren't plain white."
-msgstr "{{< gd-icon Node3D >}}`Node3D`をルートとして新規シーンを作成します。最初に追加する子オブジェクトは、木箱を積み上げるための「地面」機能を提供するものです。\"Ground\"という名前の {{< gd-icon StaticBody3D >}}`StaticBody3D`を作成し、それに {{< gd-icon MeshInstance3D >}}`MeshInstance3D`を追加します。**メッシュ** プロパティから 新規で「BoxMesh」 を選択し、クリックしてそのプロパティを開きます。**サイズ** を `(10, 0.1, 10)` に設定することで、広々とした表面を確保できます。ただし、白色一色では見た目がやや単調になるため、もう少し工夫を加えます。"
+msgstr "{{< gd-icon Node3D >}}`Node3D`をルートとして新規シーンを作成します。最初に追加する子オブジェクトは、木箱を積み上げるための「地面」機能を提供します。\"Ground\"という名前の {{< gd-icon StaticBody3D >}}`StaticBody3D`を作成し、それに {{< gd-icon MeshInstance3D >}}`MeshInstance3D`を追加します。**メッシュ** プロパティから 新規で「BoxMesh」 を選択し、クリックしてそのプロパティを開きます。**サイズ** を `(10, 0.1, 10)` に設定することで、広々とした表面を確保できます。ただし、白色一色では見た目がやや単調になるため、もう少し工夫を加えます。"
 
 #: g101/3d/101_3d_02.md
 msgid "Importing 3D Objects"
@@ -7333,7 +7331,7 @@ msgid ""
 "Move the scrubber to the `0.5` second mark, change the **Y** component of the\n"
 "translation to `0.3`, and click the keyframe button. Then move the scrubber\n"
 "all the way to `1.0` and keyframe the rotation at `180` degrees in **Y**."
-msgstr "スクラバーを`0.5`秒の位置に移動させ、翻訳ベクトルの **Y** 成分を`0.3`に設定し、キーフレームボタンをクリックします。次に、スクラバーを`1.0`まで完全に動かし、回転を **Y** 軸方向で `180`° の時点でキーフレーム化します。"
+msgstr "タイムラインのヘッドをドラッグしてを`0.5`秒の位置に移動させ、翻訳ベクトルの **Y** 成分を`0.3`に設定し、キーフレームボタンをクリックします。次に、スクラバーを`1.0`まで完全に動かし、回転を **Y** 軸方向で `180`° の時点でキーフレーム化します。"
 
 #: g101/3d/101_3d_05.md
 msgid ""
@@ -7411,7 +7409,7 @@ msgstr "最後に、「自動再生」ボタンをクリックして、ゲーム
 msgid ""
 "Let's also ignore mouse motion when it's not captured. In the character script,\n"
 "change this line in `_unhandled_input()`:"
-msgstr "マウス操作がキャプチャされていない場合はその動きを無視するようにします。キャラクタースクリプト内で、`_unhandled_input()` 関数内の該当行を変更します。"
+msgstr "マウス操作がキャプチャされていない場合はその動きを無視するようにします。キャラクタースクリプトで、`_unhandled_input()` 関数内の該当行を変更します。"
 
 #: g101/3d/101_3d_05.md
 msgid "Edge Detection & Mouse Capture"
@@ -9107,7 +9105,7 @@ msgstr "* `text` - このプロパティはラベルの表示内容を決定し�
 
 #: kyn/tween.md
 msgid "The `trans_type` parameter lets you select which *transition type* you'd like to use in your interpolation. This represents the mathematical formula used to calculate the property each frame. Different types result in different movement styles. Below, each icon's `position` is tweened over the same range and timeframe:"
-msgstr "`trans_type` パラメーターを使用することで、補間に使用する遷移タイプを選択できます。これは、各フレームにおけるプロパティ値を計算するための数学的公式を指定するものです。異なるタイプのトランジションは、それぞれ特徴的な移動パターンを生成します。以下に示すように、各アイコンの`position`値は同一の範囲と時間範囲でTween処理されます。"
+msgstr "`trans_type` パラメーターを使用することで、補間に使用する遷移タイプを選択できます。これは、各フレームにおけるプロパティ値を計算するための数学的公式を指定します。異なるタイプのトランジションは、それぞれ特徴的な移動パターンを生成します。以下に示すように、各アイコンの`position`値は同一の範囲と時間範囲でTween処理されます。"
 
 #: kyn/tween.md
 msgid "### Interpolation options"
@@ -9561,7 +9559,7 @@ msgstr "レイキャストには多様な用途があります。可視判定（
 
 #: kyn/raycast2d.md
 msgid "In the mob's script, check for when the ray *stops* colliding. That means you've found the edge and should turn around:"
-msgstr "モブキャラクターのスクリプト内で、レイが衝突を*停止*したときを確認します。その時点までに境界線に到達したことを意味するので、向きを変えましょう。"
+msgstr "モブキャラクターのスクリプトで、レイが衝突を*停止*したときを確認します。その時点までに境界線に到達したことを意味するので、向きを変えましょう。"
 
 #: kyn/raycast2d.md
 msgid "Another useful piece of information, this is the normal of the collided object at the point of collision."
@@ -9892,7 +9890,7 @@ msgstr ""
 
 #: ai/changing_behaviors.md
 msgid "To determine the state transitions, we have two {{< gd-icon Area2D >}}`Area2D` nodes on the enemy: an outer one called \"DetectRadius\" and an inner called \"AttackRadius\". The player entering or exiting these areas will trigger the related behavior."
-msgstr "状態遷移を決定するために、敵キャラには2つの{{< gd-icon Area2D >}}`Area2D`ノードが配置されています。1つは「DetectRadius」と名付けた外側のエリア、もう1つは「AttackRadius」という内側のエリアです。プレイヤーがこれらの領域に入ったり出たりすることで、対応する動作がトリガーされます。"
+msgstr "状態遷移を決定するために、敵キャラには2つの{{< gd-icon Area2D >}}`Area2D`ノードが配置されています。1つは「DetectRadius」と名付けた外側のエリア、もう1つは「AttackRadius」という内側のエリアです。プレイヤーがこれらの領域に入ったり出たりすることで、対応する動作が開始されます。"
 
 #: ai/changing_behaviors.md
 msgid "We've chosen a rectangular shape for `AttackRadius` in this example due to the shape of the enemy's attack. Any shape is fine as long as it's smaller than the `DetectRadius`."
@@ -10012,7 +10010,7 @@ msgstr "これはその加速度を計算する関数です。注：目標が設
 
 #: ai/pet_following.md
 msgid "Here's the script for the pet."
-msgstr "以下はペット用の台本です。"
+msgstr "以下はペット用のスクリプトです。"
 
 #: ai/pet_following.md
 msgid "### Pet script"
@@ -10068,7 +10066,7 @@ msgstr "例えば、使用するレイが32本の場合、`interest`は以下の
 
 #: ai/context_map.md
 msgid "In our agent's script, we'll store an array called `interest`, tracking in which directions the agent wants to go."
-msgstr "エージェントのスクリプト内では、エージェントが移動したい方向を追跡するための配列`interest`を定義します。"
+msgstr "エージェントのスクリプトでは、エージェントが移動したい方向を追跡するための配列`interest`を定義します。"
 
 #: ai/context_map.md
 msgid "This will vary depending on what your agent's goal is. If it's to chase the player, then the `interest` values should be high in the direction of the player. You can even have multiple targets: closer goals have higher interest, but if an obstacle cancels them out, the lower scoring goals will win."
@@ -10112,7 +10110,7 @@ msgstr "次に、好ましくない方向を示す第2の配列`danger`を導入
 
 #: ai/context_map.md
 msgid "In this example, we're going to use a method called \"Context Behavior\", which aims to give the object enough information about the world to make a choice of how to move. For additional reading on this subject, see the following links:"
-msgstr "この例では、「状況に基づく振舞い(Context Behavior)」と呼ばれる手法を採用します。これは、オブジェクトが移動方法を選択するために十分なワールドの情報を得ることを目的とするものです。本テーマについてさらに詳しく知りたい方は、以下の関連リンクを参照します。"
+msgstr "この例では、「状況に基づく振舞い(Context Behavior)」と呼ばれる手法を採用します。これは、オブジェクトが移動方法を選択するために十分なワールドの情報を得ることを目的とします。本テーマについてさらに詳しく知りたい方は、以下の関連リンクを参照します。"
 
 #: ai/context_map.md
 msgid "When populating the `danger` array, don't just use `0` or `1`, but instead calculate a danger \"score\" based on the distance of the object. Then subtract that amount from the `interest` rather than removing it. Far away objects will have a small impact while close ones will have more."
@@ -10867,7 +10865,7 @@ msgid ""
 "variable will capture the size of the screen, which we'll be using later."
 msgstr ""
 "このスクリプトの動作を順を追って説明しましょう。変数 `engine_thrust` と\n"
-"`spin_thrust` は、船の加速速度と旋回性能を決定するものです。インスペクターでそれぞれ\n"
+"`spin_thrust` は、船の加速速度と旋回性能を決定します。インスペクターでそれぞれ\n"
 "`500` と `25000` に設定しましょう（トルク単位のため数値が大きくなります）。`thrust` は船のエンジン状態を表します：惰行時は `(0, 0)`、動力がオンの場合は `engine_thrust` の長さを持つベクトルになります。\n"
 "`rotation_dir` は船が旋回する方向を示します。変数 `screensize` はスクリーンサイズを保持し、後で使用します。"
 
@@ -12621,7 +12619,7 @@ msgstr "![alt](/godot_recipes/4.x/img/2d_shoot_02.gif)"
 
 #: 2D/2d_shooting.md
 msgid "In the character's script we add a variable to hold the bullet scene for instancing:"
-msgstr "キャラクタースクリプト内で、インスタンス化用の弾丸シーンを保持する変数を追加します。"
+msgstr "キャラクタースクリプトで、インスタンス化用の弾丸シーンを保持する変数を追加します。"
 
 #: 2D/2d_shooting.md
 msgid "Set up the nodes and configure the sprite and collision shape. If your texture is oriented pointing up, like the one above, make sure to rotate the {{< gd-icon Sprite2D >}}`Sprite` node by `90°` so that it's pointing to the right, ensuring it matches the parent’s “forward” direction."
@@ -15276,7 +15274,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice style=\"info\" title=\"スクリプトの操作について\" %}}\n"
-"単独で存在するスクリプト自体には、ほとんど意味がありません。スクリプトは**付加的な機能を定義する**ものであり、特定のオブジェクトに紐づいて初めて効果を発揮します。単に「あるスクリプト内の変数」ではなく、そのスクリプトによって**定義されたオブジェクトのプロパティ**を参照することになる点が重要です。これは極めて重要な概念です。\n"
+"単独で存在するスクリプト自体には、ほとんど意味がありません。スクリプトは**付加的な機能を定義する**ものであり、特定のオブジェクトに紐づいて初めて効果を発揮します。単に「あるスクリプトの変数」ではなく、そのスクリプトによって**定義されたオブジェクトのプロパティ**を参照することになる点が重要です。これは極めて重要な概念です。\n"
 "{{% /notice %}}"
 
 #: games/first_2d/first_2d_03.md
@@ -15699,7 +15697,7 @@ msgstr "申し訳ありませんが、進捗バーとして使用できる適切
 
 #: games/first_2d/first_2d_09.md
 msgid "This `set =` syntax tells Godot that we want to call the `set_shield()` function whenever the `shield` variable has its value set."
-msgstr "この `set =` 構文は、Godotに対して、`shield` 変数の値が変更されるたびに `set_shield()` 関数を呼び出すよう指示するものです。"
+msgstr "この `set =` 構文は、Godotに対して、`shield` 変数の値が変更されるたびに `set_shield()` 関数を呼び出すよう指示します。"
 
 #: games/first_2d/first_2d_09.md
 msgid "![alt](/godot_recipes/4.x/img/2d_101_24.png)"
@@ -16358,7 +16356,7 @@ msgstr "`MarginContainer`「マージンコンテナ」を使用すると、UI�
 
 #: games/circle_jump/circle_jump_04.md
 msgid "Instance this scene in Main, then connect its `start_game` signal to the `new_game()` function in main. Don't forget to remove `new_game()` from the `_ready()`. Try running the game and you should be able to start. The last part will be to connect up the game over condition."
-msgstr "このシーンをメインシーンでインスタンス化し、`start_game`シグナルをメインスクリプト内の`new_game()`関数に接続します。また、`new_game()`を`_ready()`から削除するのを忘れないでください。ゲームを実行してみると、正しく開始できるはずです。最後に行うべきことは、ゲームオーバー条件を設定することです。"
+msgstr "このシーンをメインシーンでインスタンス化し、`start_game`シグナルをメインスクリプトの`new_game()`関数に接続します。また、`new_game()`を`_ready()`から削除するのを忘れないでください。ゲームを実行してみると、正しく開始できるはずです。最後に行うべきことは、ゲームオーバー条件を設定することです。"
 
 #: games/circle_jump/circle_jump_04.md
 msgid "In the Jumper, add a signal called `died` and emit that signal in the visibility notifier's method."
@@ -16502,7 +16500,7 @@ msgstr "試しに動かしてみると、今のところ問題なく動作して
 
 #: games/circle_jump/circle_jump_03.md
 msgid "Note that we're now sending a reference to the jumper, so add `var jumper = null` at the top, and in the `Main.gd` script update the call to read `object.capture(player)`."
-msgstr "注意：現在はジャンパーへの参照を渡しているため、スクリプトの先頭に`var jumper = null`を追加し、`Main.gd`スクリプト内の呼び出しを`object.capture(player)`に変更します。"
+msgstr "注意：現在はジャンパーへの参照を渡しているため、スクリプトの先頭に`var jumper = null`を追加し、`Main.gd`スクリプトの呼び出しを`object.capture(player)`に変更します。"
 
 #: games/circle_jump/circle_jump_03.md
 msgid "In the first two parts, we got the basic gameplay working. Now we're going to start adding some different modes to the circles."
@@ -16590,7 +16588,7 @@ msgstr "このゲームを試してみると、5ポイントに達した時点�
 
 #: games/circle_jump/circle_jump_07.md
 msgid "As our score increases, we'll want the game's difficulty to increase as well. This means that when we get points, we'll need to check if we've passed a certain threshold (`circles_per_level`). We may also have other things that give us points besides jumping on a circle. To make this easier to handle, we'll give our score variable a `setget` method in the main script:"
-msgstr "スコアが上がるにつれ、ゲームの難易度も適切に上昇させましょう。つまり、得点を獲得した際には一定の閾値（`circles_per_level`）に達したかどうかを確認する必要が生じます。また、ジャンプで円に乗る以外にも、得点を獲得する手段が存在するかもしれません。これを管理しやすくするため、メインスクリプト内でスコア変数に`setget`メソッドを定義します。"
+msgstr "スコアが上がるにつれ、ゲームの難易度も適切に上昇させましょう。つまり、得点を獲得した際には一定の閾値（`circles_per_level`）に達したかどうかを確認する必要が生じます。また、ジャンプで円に乗る以外にも、得点を獲得する手段が存在するかもしれません。これを管理しやすくするため、メインのスクリプトでスコア変数に`setget`メソッドを定義します。"
 
 #: games/circle_jump/circle_jump_07.md
 msgid "We can fix this by disabling the buttons while the screen transition is happening. Since we put all the buttons in a \"buttons\" group, we can easily do this with `call_group()`."

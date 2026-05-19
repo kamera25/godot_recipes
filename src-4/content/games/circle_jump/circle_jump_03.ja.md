@@ -62,7 +62,7 @@ func capture(target):
     orbit_start = $Pivot.rotation
 ```
 
-注意：現在はジャンパーへの参照を渡しているため、スクリプトの先頭に`var jumper = null`を追加し、`Main.gd`スクリプト内の呼び出しを`object.capture(player)`に変更します。
+注意：現在はジャンパーへの参照を渡しているため、スクリプトの先頭に`var jumper = null`を追加し、`Main.gd`スクリプトの呼び出しを`object.capture(player)`に変更します。
 
 現在位置が一周したか確認し、もしそうであれば`current_orbits`を1減算します。
 

@@ -128,7 +128,7 @@ var shield = max_shield:
     set = set_shield
 ```
 
-この `set =` 構文は、Godotに対して、`shield` 変数の値が変更されるたびに `set_shield()` 関数を呼び出すよう指示するものです。
+この `set =` 構文は、Godotに対して、`shield` 変数の値が変更されるたびに `set_shield()` 関数を呼び出すよう指示します。
 
 ```gdscript
 func set_shield(value):

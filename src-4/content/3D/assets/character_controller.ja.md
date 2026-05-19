@@ -186,7 +186,7 @@ var attacks = [
 
 ![alt](/godot_recipes/4.x/img/anim_tree_jumping.png)
 
-まず、「ジャンプ開始」アニメーションに移行するために `jumping = true` を設定します。これにより状態機械での遷移がトリガーされます。
+まず、「ジャンプ開始」アニメーションに移行するために `jumping = true` を設定します。これによりステートマシーンでの遷移が開始されます。
 
 ```gdscript
     if is_on_floor() and Input.is_action_just_pressed("jump"):

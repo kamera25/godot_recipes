@@ -10,7 +10,7 @@ draft: false
 
 ## 作り方
 
-通常、入力アクションは[プロジェクト設定]から追加します（詳細は[レシピ : 入力アクション](/godot_recipes/4.x/ja/input/input_actions/)参照）。ただし、スクリプト内で直接アクションを追加する必要がある場合もあります。このような場合には、[InputMapシングルトン](https://docs.godotengine.org/ja/latest/classes/class_inputmap.html)が提供するメソッドが便利です。
+通常、入力アクションは[プロジェクト設定]から追加します（詳細は[レシピ : 入力アクション](/godot_recipes/4.x/ja/input/input_actions/)参照）。ただし、スクリプトで直接アクションを追加する必要がある場合もあります。このような場合には、[InputMapシングルトン](https://docs.godotengine.org/ja/latest/classes/class_inputmap.html)が提供するメソッドが便利です。
 
 以下に、スペースキーを使用して「攻撃」という新しいアクションを追加する例を示します。
 

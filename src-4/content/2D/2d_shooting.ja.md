@@ -62,7 +62,7 @@ func _on_Bullet_body_entered(body):
 この手法は「回転・移動」スタイルに限らず、あらゆる文字タイプに適用できます。単に、弾丸を表示させたい位置に {{< gd-icon Marker2D >}}`Marker2D` タグを挿入するだけで済みます。
 {{% /notice %}}
 
-キャラクタースクリプト内で、インスタンス化用の弾丸シーンを保持する変数を追加します。
+キャラクタースクリプトで、インスタンス化用の弾丸シーンを保持する変数を追加します。
 
 ```gdscript
 @export var Bullet : PackedScene

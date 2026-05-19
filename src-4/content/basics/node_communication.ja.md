@@ -157,7 +157,7 @@ func _ready():
 
 ![alt](/godot_recipes/4.x/img/node_access_03.png)
 
-スクリプト内でグループにノードを追加することもできます。
+スクリプトでグループにノードを追加することもできます。
 
 ```gdscript
 func _ready():

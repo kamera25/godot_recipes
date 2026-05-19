@@ -20,7 +20,7 @@ draft: false
 
 ### ペット用スクリプト
 
-以下はペット用の台本です。
+以下はペット用のスクリプトです。
 
 ```gdscript
 extends CharacterBody2D

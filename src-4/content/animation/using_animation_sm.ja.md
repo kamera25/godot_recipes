@@ -10,7 +10,7 @@ draft: false
 
 ## 作り方
 
-アニメーション状態機械を作成するには {{< gd-icon AnimationTree >}}`AnimationTree` を使いましょう。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御できるようになります。
+アニメーション _ステートマシン_ を作成するには {{< gd-icon AnimationTree >}}`AnimationTree` を使いましょう。これにより、アニメーションを整理できるだけでなく、最も重要な点として、それらの間の遷移を制御できるようになります。
 
 ### はじめに
 
@@ -28,7 +28,7 @@ We'll also assume you've already set up the character's animations using {{< gd-
 
 {{< gd-icon `AnimationPlayer` >}}{{< gd-icon AnimationTree >}}`AnimationTree`で作成されたアニメーションを制御するノードです。既存のアニメーションにアクセスさせるには、_Anim Player_ プロパティ内の「割り当て」ボタンをクリックし、使用するアニメーションノードを選択します。
 
-以下は、状態機械を {{< gd-icon AnimationTree >}}`AnimationTree` パネルに設定し始める方法です。
+以下は、ステートマシンを {{< gd-icon AnimationTree >}}`AnimationTree` パネルに設定し始める方法です。
 
 ![alt](/godot_recipes/4.x/img/anim_tree_panel.png)
 
