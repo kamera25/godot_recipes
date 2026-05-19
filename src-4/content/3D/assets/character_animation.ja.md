@@ -30,7 +30,7 @@ draft: false
 
 これらの複雑なアニメーション問題を解決するには、{{< gd-icon AnimationTree >}}`AnimationTree`ノードを使用が必要です。このノードは{{< gd-icon AnimationPlayer >}}`AnimationPlayer`を制御するために設計されており、アニメーションの遷移やブレンド方法を管理する機能を備えています。
 
-シーンに {{< gd-icon AnimationTree >}}`AnimationTree` コンポーネントを追加します。［インスペクター］で［ツリールート］を新規作成された `AnimationNodeStateMachine` に設定し、［Anim Player］ではキャラクターの {{< gd-icon AnimationPlayer >}}`AnimationPlayer` を選択します。最後に［有効化］チェックボックスをオンにします。
+シーンに {{< gd-icon AnimationTree >}}`AnimationTree` コンポーネントを追加します。［インスペクター］で［ツリールート］を新規作成された `AnimationNodeStateMachine` に設定し、［Anim Player］ではキャラクターの {{< gd-icon AnimationPlayer >}}`AnimationPlayer` を選択します。最後に **Active(有効化)** チェックボックスをオンにします。
 
 ![alt](/godot_recipes/4.x/img/animtree_settings.png)
 

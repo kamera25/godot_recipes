@@ -584,7 +584,7 @@ msgstr "`get_node()` は、指定されたパスを使用してシーンツリ�
 
 #: basics/node_communication.md
 msgid "Generally speaking, a node or scene should be able to be instanced anywhere in your game, and it should make no assumptions about what its parent is going to be."
-msgstr "一般的に、ノードやシーンはゲーム内の任意の場所でインスタンス化可能であるべきであり、その親オブジェクトがどのようなものになるかについて一切仮定すべきではありません。"
+msgstr "一般的に、ノードやシーンはゲーム内の任意の場所でインスタンス化可能であるべきであり、その親オブジェクトがどのようなものになるかについて仮定するのは避けましょう。"
 
 #: basics/node_communication.md
 msgid "## 1. Using `get_node()`"
@@ -1100,7 +1100,7 @@ msgstr "* 最も人気のあるノードの1つである `KinematicBody` が、{
 
 #: basics/migrating.md
 msgid "This is an evolving list of the main changes and \"gotchas\" to look out for if you're transitioning to 4.0."
-msgstr "これは、4.0への移行時に注意すべき主要な変更点と「落とし穴」をまとめた随時更新リストです。"
+msgstr "これは、4.0への移行時に注意した方が良い主要な変更点と「落とし穴」をまとめた随時更新リストです。"
 
 #: basics/migrating.md
 msgid "## Raycasting"
@@ -1176,7 +1176,7 @@ msgstr "* 3Dカテゴリにおいて、`Spatial`ノードは名称を{{< gd-icon
 
 #: basics/migrating.md
 msgid "One of the biggest changes in Godot 4 is a whole bunch of renaming - of nodes, functions, and property names. Most of it is done to make things consistent or clear. Here are a few of the biggest ones to watch out for:"
-msgstr "Godot 4での最も大きな変化の一つは、ノード名、関数名、プロパティ名などの大量のリネームです。これらの多くは仕様の一貫性や可読性を向上させるために行われています。特に注意すべき主要な変更点をご紹介します。"
+msgstr "Godot 4での最も大きな変化の一つは、ノード名、関数名、プロパティ名などの大量のリネームです。これらの多くは仕様の一貫性や可読性を向上させるために行われています。特に注意したほうが良い主要な変更点をご紹介します。"
 
 #: basics/migrating.md
 msgid "The biggest change in this node is in using `move_and_slide()`. It no longer takes any parameters - they are all now built-in properties. This includes a native `velocity` property, so you no longer need to declare your own."
@@ -1281,7 +1281,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice tip %}}\n"
-"親ノードは子ノードを管理するべきで、子ノードが親ノードを管理すべきではありません。\n"
+"親ノードは子ノードを管理するべきで、子ノードが親ノードを管理しては**いけません**。\n"
 "{{% /notice %}}"
 
 #: basics/_index.md
@@ -1723,8 +1723,8 @@ msgid ""
 "- [UI: Labels](/godot_recipes/.x/ui/labels/)\n"
 "- [UI: Object Healthbars](/godot_recipes/3.x/ui/unit_healthbar/) -->"
 msgstr ""
-"- [UI: ラベル](/godot_recipes/ja/4.x/ui/labels/)\n"
-"- [UI: ユニットHPバー](/godot_recipes/ja/4.x/ui/unit_healthbar/) -->"
+"- [UI: ラベル](/godot_recipes/4.x/ja/ui/labels/)\n"
+"- [UI: ユニットHPバー](/godot_recipes/4.x/ja/ui/unit_healthbar/) -->"
 
 #: ui/floating_text.md
 msgid ""
@@ -1750,7 +1750,7 @@ msgstr "ラベルにスクリプトを追加します。"
 
 #: ui/floating_text.md
 msgid "If the hit is a critical, we'll also change the color and animate the scale for a bigger effect. Note, I've hardcoded this to be red, but you should probably make this a configurable value."
-msgstr "クリティカルヒットの場合、色も変更してスケールアニメーションを追加し、より印象的な演出にします。注：ここでは便宜的に赤色をハードコードしていますが、本来は設定可能な値とすべきです。"
+msgstr "クリティカルヒットの場合、色も変更してスケールアニメーションを追加し、より印象的な演出にします。注：ここでは便宜的に赤色をハードコードしていますが、本来は設定可能な値とするのがおすすめです。"
 
 #: ui/floating_text.md
 msgid "First, assign the value and randomize the movement based on the given spread (+/-90 degrees, for example). Since we may also be animating the scale, we set the `rect_pivot_offset` to the center of the control so that it will scale from the center."
@@ -1858,9 +1858,9 @@ msgid ""
 "* **empty**: Empty heart containers are displayed.\n"
 "* **partial**: The player can have partially filled containers."
 msgstr ""
-"* **シンプル**：ハートのみを表示。\n"
-"* **空き**：空き容量があるハートを表示。\n"
-"* **部分**：部分的に満たされたハートを表示。"
+"* **シンプル(simple)**：ハートのみを表示。\n"
+"* **空き(empty)**：空き容量があるハートを表示。\n"
+"* **部分(partial)**：部分的に満たされたハートを表示。"
 
 #: ui/heart_containers_3.md
 msgid "This image shows what the bar displays when the player has `3` health."
@@ -2300,7 +2300,7 @@ msgstr "フォントを追加するには。インスペクターで「カスタ
 
 #: ui/labels.md
 msgid "Drag your font file (in this example we're using `Roboto-Medium.ttf`) into the *Font Data* property (or choose \"Load\" and navigate to the file). There are several properties to adjust but for now let's make *Size* a bit bigger."
-msgstr "フォントファイル（この例では`Roboto-Medium.ttf`を使用しています）を*フォントデータ*プロパティにドラッグするか、「読み込み」を選択して直接ファイルを指定します。調整すべきプロパティは複数ありますが、まずは*サイズ*を少し大きくしてみます。"
+msgstr "フォントファイル（この例では`Roboto-Medium.ttf`を使用しています）を*フォントデータ*プロパティにドラッグするか、「読み込み」を選択して直接ファイルを指定します。調整するのが良いプロパティは複数ありますが、まずは*サイズ*を少し大きくしてみます。"
 
 #: 2D/screen_shake.md 2D/tilemap_collision.md 2D/touchscreen_camera.md
 #: 3D/kinematic_car/car_ai.md 3D/kinematic_car/car_base.md
@@ -2561,7 +2561,7 @@ msgstr "多くの開発者にとって、UI開発は最も苦手な作業です�
 
 #: ui/containers.md
 msgid "Try adjusting the \"Size Flags\" properties of the different buttons and see how it affects their positioning in the `HBoxContainer`."
-msgstr "異なるボタンの「サイズフラグ」プロパティを調整してみて、それが `HBoxContainer` 内での配置にどのように影響するか確認します。"
+msgstr "異なるボタンの「Size Flags」プロパティを調整してみて、それが `HBoxContainer` 内での配置にどのように影響するか確認します。"
 
 #: ui/containers.md
 msgid ""
@@ -2591,7 +2591,7 @@ msgstr "より複雑なUI構成の場合は、他のコンテナを保持する�
 
 #: ui/containers.md
 msgid "The way a container handles its children is mainly controlled by their \"Size Flags\" properties."
-msgstr "コンテナが子要素をどのように扱うかは、主に「サイズフラグ」プロパティによって制御されます。"
+msgstr "コンテナが子要素をどのように扱うかは、主に「Size Flags」プロパティによって制御されます。"
 
 #: ui/containers.md
 msgid "This ratio sets the amount that expanding controls take up relative to each other."
@@ -4687,7 +4687,7 @@ msgstr "![alt](/godot_recipes/4.x/img/animtree_settings.png)"
 
 #: 3D/assets/character_animation.md
 msgid "Add an {{< gd-icon AnimationTree >}}`AnimationTree` to the scene. In the **Inspector**, set **Tree Root** to a new `AnimationNodeStateMachine`, in **Anim Player** select the character's {{< gd-icon AnimationPlayer >}}`AnimationPlayer` node, and check the box next to **Active**."
-msgstr "シーンに {{< gd-icon AnimationTree >}}`AnimationTree` コンポーネントを追加します。［インスペクター］で［ツリールート］を新規作成された `AnimationNodeStateMachine` に設定し、［Anim Player］ではキャラクターの {{< gd-icon AnimationPlayer >}}`AnimationPlayer` を選択します。最後に［有効化］チェックボックスをオンにします。"
+msgstr "シーンに {{< gd-icon AnimationTree >}}`AnimationTree` コンポーネントを追加します。［インスペクター］で［ツリールート］を新規作成された `AnimationNodeStateMachine` に設定し、［Anim Player］ではキャラクターの {{< gd-icon AnimationPlayer >}}`AnimationPlayer` を選択します。最後に **Active(有効化)** チェックボックスをオンにします。"
 
 #: 3D/assets/character_animation.md
 msgid "In the {{< gd-icon AnimationPlayer >}}`AnimationPlayer`, find the \"Idle\", \"Running_A\", \"Walking_Backwards\", and \"Running_Strafe_Left\"/\"Running_Strafe_Right\" animations. Make sure they're all set to loop - you can test them by pressing the \"Play\" button: (▶). If any of them are not, reimport the character after setting them (see [Importing Assets](/4.x/3d/assets/importing_assets/))."
@@ -7996,7 +7996,7 @@ msgstr "シーンを何度か実行してみると、スプライトが様々な
 
 #: g101/gdscript/gdscript_02.md
 msgid "It's often more convenient to declare variables at the top where they're easy to find. We'll also find it more convenient later, when we start making multiples of this sprite."
-msgstr "変数は見つけやすい最上位で宣言する方が多くの場合便利です。スプライトの複数インスタンスを作成するようになると、この方が後々さらに便利に感じられるでしょう。"
+msgstr "変数は見つけやすい最上位で宣言する方が多くの場合便利です。スプライトの複数インスタンスを作成するようになると、この方が後々さらに便利になります。"
 
 #: g101/gdscript/gdscript_02.md
 msgid "1. Next, we're using `Vector2`'s `rotated()` method to rotate the vector. In the parentheses of `rotated()` it expects an angle."
@@ -11987,7 +11987,7 @@ msgstr "### ベルトの動きをアニメーション化"
 
 #: physics/conveyor_belt.md
 msgid "However, you can use this technique if you change from \"Bullet\" to the \"GodotPhysics\" engine in your Project Settings:"
-msgstr "ただし、プロジェクト設定で「弾丸」から「GodotPhysics」エンジンに変更すれば、この手法を使用できます。"
+msgstr "ただし、プロジェクト設定で「Bullet」から「GodotPhysics」エンジンに変更すれば、この手法を使用できます。"
 
 #: physics/conveyor_belt.md
 msgid "Conveyor Belt"
@@ -11995,7 +11995,7 @@ msgstr "コンベアベルト"
 
 #: physics/conveyor_belt.md
 msgid "Add a {{< gd-icon Sprite2D >}}`Sprite` to your static body, and in its *Texture* choose \"New AtlasTexture\":"
-msgstr "スタティックボディに {{< gd-icon Sprite2D >}}`Sprite` を追加し、 *テクスチャ* セクションで「新規AtlasTexture」を選択します。"
+msgstr "スタティックボディに {{< gd-icon Sprite2D >}}`Sprite2D` を追加し、 *テクスチャ* セクションで「新規AtlasTexture」を選択します。"
 
 #: physics/conveyor_belt.md
 msgid "There are many ways to present the *appearance* of your conveyor belt, depending on your art assets. For this demo project, I have only a TileMap which is using this single 88x88 tile:"
@@ -13933,7 +13933,7 @@ msgstr "2点間の経路は`get_point_path()`メソッドを使用して取得�
 
 #: 2D/grid_pathfinding.md
 msgid "A big factor that affects the resulting path is what _heuristic_ you choose to use. The term \"heuristic\" refers to a \"best guess\", and in the context of pathfinding just means: what direction should we try first when moving toward the goal?"
-msgstr "経路に大きく影響する要素は「ヒューリスティック手法」です。これは「最適な推測」を意味し、経路探索の文脈においては：目標地点へ向かう際に、まずどの方向を試すべきかを決定する方法を指します。"
+msgstr "経路に大きく影響する要素は「ヒューリスティック手法」で、これは「最適な推測」を意味します。また経路探索の文脈においては「目標地点へ向かう際に、まずどの方向に移動を試みるべきか？」を決定する手法を意味します。"
 
 #: 2D/grid_pathfinding.md
 msgid "Call this function in `_draw()`."
@@ -13993,7 +13993,7 @@ msgstr "以下の 2 つの設定変数も必要です。"
 
 #: 2D/car_steering.md
 msgid "We could stop here and you'd have a satisfactory driving experience. However, the car still feels like it's \"on rails\". Even at top speed, the turns are perfect, as if the tires have perfect \"grip\"."
-msgstr "ここで止めても十分満足のいく運転体験が得られるでしょう。ただ、車がまだ「レールに乗っている」ような感覚です。最高速で走行していても、カーブは完璧にクリアされ、まるでタイヤが完全に路面を掴んでいるみたいです。"
+msgstr "ここで止めても十分満足のいく運転体験となるでしょう。ただ、車がまだ「レールに乗っている」ような感覚です。最高速で走行していても、カーブは完璧にクリアされ、まるでタイヤが完全に路面を掴んでいるみたいです。"
 
 #: 2D/car_steering.md
 msgid "This is fine for coming to a stop, but we also want to be able to put the car in reverse. Currently, that won't work, because the acceleration is always being applied in the \"heading\" direction, which is forward. When we're reversing, we need to accelerate backward."
@@ -14241,7 +14241,7 @@ msgstr "ドロー順序は各オブジェクトの `y` 座標に基づいてい�
 
 #: 2D/using_ysort.md
 msgid "In the above example, we can enable the property on the {{< gd-icon TileMap >}}`TileMap` node. However, there's still a problem:"
-msgstr "上記の例では、{{< gd-icon TileMap >}}`TileMap`ノード上でプロパティを有効にできます。ただし、まだ解決すべき問題が残っています。"
+msgstr "上記の例では、{{< gd-icon TileMap >}}`TileMap`ノード上でプロパティを有効にできます。ただし、まだ解決した方がよい問題が残っています。"
 
 #: 2D/coyote_time.md
 msgid "The `CoyoteTimer` tells us when the coyote state ends:"
@@ -14890,7 +14890,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice style=\"note\" title=\"なぜ2Dから始めるべきか？\"%}}\n"
-"一言で言えば、3Dゲームは2Dゲームと比べて格段に複雑です。しかし、理解すべき基本エンジン機能の多くは同じものです。Godotの開発ワークフローをしっかり習得するまでは、2Dプロジェクトに専念することをオススメします。その段階までくれば、3Dへの移行はずっとスムーズに感じられるはずです。\n"
+"一言で言えば、3Dゲームは2Dゲームと比べて格段に複雑です。しかし、理解していく基本エンジン機能の多くは同じものです。Godotの開発ワークフローをしっかり習得するまでは、2Dプロジェクトに専念することをオススメします。その段階までくれば、3Dへの移行はずっとスムーズに感じられるはずです。\n"
 "{{% /notice %}}"
 
 #: games/first_2d/first_2d_01.md
@@ -15141,7 +15141,7 @@ msgstr "### 船舶情報の表示"
 
 #: games/first_2d/first_2d_02.md
 msgid "So what should our game's ship be? Let's break down the requirements, and look at what nodes might be useful to meet them."
-msgstr "さて、ゲームに登場する船はどんなデザインにすべきでしょうか？要件を整理し、それらを満たすために活用できそうなノードを検討してみます。"
+msgstr "さて、ゲームに登場する船はどんな設計が望ましいでしょうか？要件を整理し、それらを満たすために活用できそうなノードを検討してみます。"
 
 #: games/first_2d/first_2d_02.md
 msgid "The last node we'll need to complete the player setup is a {{< gd-icon Timer >}}`Timer` to control how fast the player can shoot. Add the `Timer` as a child of `Player` and name it `GunCooldown`. Set its **One Shot** property to \"On\". This means that when the timer ends, it won't automatically restart. In the player's code, we'll start the timer when the player shoots, and they won't be able to shoot again until the timer runs out."
@@ -16048,7 +16048,7 @@ msgstr "次に、バナーの表示／非表示を制御する機能について
 
 #: games/circle_jump/circle_jump_11.md
 msgid "Ads can be unpopular and whether to use them is a decision for the individual game developer to make. We're not making a decision on the pros and cons in this tutorial - we're here to show you how to put ads in your game *if you want them*."
-msgstr "広告は必ずしも好まれるものではなく、その導入の有無は個々のゲーム開発者が判断すべき事項です。本チュートリアルではメリット・デメリットの検討には踏み込みません。ここでは「もし広告を実装したい」と考えている方向けに、その方法を丁寧に解説します。"
+msgstr "広告は必ずしも好まれるものではなく、その導入の有無は個々のゲーム開発者が判断しましょう。本チュートリアルではメリット・デメリットの検討には踏み込みません。ここでは「もし広告を実装したい」と考えている方向けに、その方法を丁寧に解説します。"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "Fortunately, we won't need to compile custom export templates, because it's already been done for us. Head over to the [godot-custom-mobile-templates](https://github.com/Shin-NiL/godot-custom-mobile-template) Github repo. Click on \"Releases\" and download the version of the export templates that matches your version of Godot."

@@ -31,7 +31,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ![alt](/godot_recipes/4.x/img/tileGreen_03.png)
 
-スタティックボディに {{< gd-icon Sprite2D >}}`Sprite` を追加し、 *テクスチャ* セクションで「新規AtlasTexture」を選択します。
+スタティックボディに {{< gd-icon Sprite2D >}}`Sprite2D` を追加し、 *テクスチャ* セクションで「新規AtlasTexture」を選択します。
 
 ![alt](/godot_recipes/4.x/img/conveyor_04.png)
 
@@ -73,7 +73,7 @@ func _process(delta):
 
 執筆時点では、`constant_linear_velocity`は{{< gd-icon StaticBody3D >}}`StaticBody`を使用した3D環境で正しく動作しません。
 
-ただし、プロジェクト設定で「弾丸」から「GodotPhysics」エンジンに変更すれば、この手法を使用できます。
+ただし、プロジェクト設定で「Bullet」から「GodotPhysics」エンジンに変更すれば、この手法を使用できます。
 
 ![alt](/godot_recipes/4.x/img/conveyor_03.png)
 

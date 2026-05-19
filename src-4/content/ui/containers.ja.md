@@ -48,7 +48,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ### サイズ指定フラグ
 
-コンテナが子要素をどのように扱うかは、主に「サイズフラグ」プロパティによって制御されます。
+コンテナが子要素をどのように扱うかは、主に「Size Flags」プロパティによって制御されます。
 
 ![alt](/godot_recipes/4.x/img/ui_size_flags.png)
 
@@ -76,7 +76,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ![alt](/godot_recipes/4.x/img/ui_flags_example01.png)
 
-異なるボタンの「サイズフラグ」プロパティを調整してみて、それが `HBoxContainer` 内での配置にどのように影響するか確認します。
+異なるボタンの「Size Flags」プロパティを調整してみて、それが `HBoxContainer` 内での配置にどのように影響するか確認します。
 
 ![alt](/godot_recipes/4.x/img/ui_flags_example02.gif)
 

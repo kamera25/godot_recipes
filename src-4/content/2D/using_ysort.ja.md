@@ -20,7 +20,7 @@ draft: false
 
 Godotにはレンダリング順序を変更する組み込みオプションが用意されています。任意の{{< gd-icon CanvasItem >}}`CanvasItem`ノード（{{< gd-icon Node2D >}}`Node2D`または{{< gd-icon Control >}}`Control`）に対して、**Y軸ソート有効化** プロパティを有効にできます。この機能が有効になると、すべての子ノードがY軸に沿って並べ替えられます。
 
-上記の例では、{{< gd-icon TileMap >}}`TileMap`ノード上でプロパティを有効にできます。ただし、まだ解決すべき問題が残っています。
+上記の例では、{{< gd-icon TileMap >}}`TileMap`ノード上でプロパティを有効にできます。ただし、まだ解決した方がよい問題が残っています。
 
 ![alt](/godot_recipes/4.x/img/ysort_01.png)
 

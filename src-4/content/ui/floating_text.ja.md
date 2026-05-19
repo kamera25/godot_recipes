@@ -68,7 +68,7 @@ func show_value(value, travel, duration, spread, crit=false):
             0.4, Tween.TRANS_BACK, Tween.EASE_IN)
 ```
 
-クリティカルヒットの場合、色も変更してスケールアニメーションを追加し、より印象的な演出にします。注：ここでは便宜的に赤色をハードコードしていますが、本来は設定可能な値とすべきです。
+クリティカルヒットの場合、色も変更してスケールアニメーションを追加し、より印象的な演出にします。注：ここでは便宜的に赤色をハードコードしていますが、本来は設定可能な値とするのがおすすめです。
 
 ```gdscript
     $Tween.start()
@@ -124,5 +124,5 @@ $FCTManager.show_value(dmg, crit)
 
 ## 関連レシピ
 
-- [UI: ラベル](/godot_recipes/ja/4.x/ui/labels/)
-- [UI: ユニットHPバー](/godot_recipes/ja/4.x/ui/unit_healthbar/) -->
+- [UI: ラベル](/godot_recipes/4.x/ja/ui/labels/)
+- [UI: ユニットHPバー](/godot_recipes/4.x/ja/ui/unit_healthbar/) -->
