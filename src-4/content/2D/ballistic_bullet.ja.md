@@ -12,7 +12,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ## 今回のお題
 
-ご希望の2D弾は弧を描くように移動したり、弾道曲線を描いたりする仕様でしょうか？
+弾道曲線を描くような 2Dの砲弾を作りたい。
 
 ## 作り方
 
@@ -46,7 +46,7 @@ func _on_BallisticBullet_body_entered(body):
     queue_free()
 ```
 
-ここで必要なのは[運動方程式](https://www.khanacademy.org/science/physics/one-dimensional-motion/kinematic-formulas/a/what-are-the-kinematic-formulas)を適用するだけです。`velocity` の初期値は単なるテスト用です。ブレットシーンを実行します。
+ここで必要なのは[運動方程式](https://www.khanacademy.org/science/physics/one-dimensional-motion/kinematic-formulas/a/what-are-the-kinematic-formulas)を適用するだけです。`velocity` の初期値は単なるテスト用です。シーンを実行します。
 
 ![alt](/godot_recipes/4.x/img/2d_ballistic_01.gif)
 

@@ -14,7 +14,7 @@ draft: false
 
 ### キャラクターの準備
 
-以下の理由でキャラクターには {{< gd-icon CharacterBody3D >}}`CharacterBody3D` を選択しました。そのため、シーンはこのような外観になるはずです（メッシュリストが非常に長いため、`Rig`ノードは折りたたみ状態にしています）：
+以下の理由でキャラクターには {{< gd-icon CharacterBody3D >}}`CharacterBody3D` を選択しました。そのため、シーンはこのような外観になるはずです（メッシュリストが非常に長いため、`Rig`ノードは折りたたみ状態にしています）。
 
 ![alt](/godot_recipes/4.x/img/3dcharacter_imported_scene.png)
 
@@ -117,7 +117,7 @@ draft: false
 
 3Dキャラクターのアニメーション設定が完了し、使用準備が整いました。{{< gd-icon AnimationTree >}}`AnimationTree` を設定したことで、キャラクターのモーションコード内でアニメーションを選択し、スムーズに遷移させることが格段に容易になりました。
 
-[セクションの説明](/godot_recipes/4.x/ja/3d/assets/) を参照すると、3D作業のさらなる事例や、ダウンロード可能なGodotプロジェクトなどの例を確認できます。
+[セクションの説明](/godot_recipes/4.x/ja/3d/assets/) を参照すると、3D作業のさらなる事例や、サンプルプロジェクトなどを確認できます。
 
 #### 関連動画
 

@@ -86,7 +86,7 @@ func get_input(delta):
 前方/後方移動にはキャラクターの `transform.basis.z` を使用しています。
 これにより、身体の「ローカル」前方方向へ正しく移動します。
 
-「これが動作中の戦車です。テスト用シーンとして、地面には {{< gd-icon `StaticBody3D` >}} `StaticBody3D`、カメラには [補間付きカメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/index.html) レシピを使用した {{< gd-icon Camera3D >}}`Camera3D` を配置しています。
+「これが動作中の戦車です。テスト用シーンとして、地面には {{< gd-icon `StaticBody3D` >}} `StaticBody3D`、カメラには [補間カメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/index.html) レシピを使用した {{< gd-icon Camera3D >}}`Camera3D` を配置しています。
 
 <video controls src="/godot_recipes/4.x/img/3d_kinematic_09.webm"></video>
 

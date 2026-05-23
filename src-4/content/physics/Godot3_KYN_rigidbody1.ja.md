@@ -44,7 +44,7 @@ children:
 
 > ※重要：本サンプルで使用しているテクスチャは、Kenney.nl の[物理アセットパック](https://kenney.nl/assets/physics-assets)を使用しています。このパッケージには、さまざまな形状・材質のブロックが多数収録されています。
 
-※「再生」を押すとブロックがゆっくりと下方に落ちていくのが確認できるでしょう。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクターで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。ここでは値を`3`に設定しています。
+※「再生」を押すとブロックがゆっくりと下方に落ちていきます。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクターで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。ここでは値を`3`に設定しています。
 
 メインシーンを作成します（通常は<a href="https://docs.godotengine.org/ja/latest/classes/class_node.html" target="_blank"><svg width="18" height="18" class="icon-icon_node"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_node"></svg>Node</a>を使用します）。
 地面と壁として機能させるため、長方形の衝突形状を持つ<a href="https://docs.godotengine.org/ja/latest/classes/class_staticbody2d.html" target="_blank"><svg width="18" height="18" class="icon-icon_staticbody2d"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_static_body_2d"></svg>StaticBody2D</a>ノードを追加します。

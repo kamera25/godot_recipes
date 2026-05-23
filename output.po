@@ -79,7 +79,7 @@ msgstr ""
 
 #: _index.md
 msgid "If you're new to game development, start with the [\"Godot 101: Basics\"](/godot_recipes/4.x/basics/) section. There you'll find an introduction to the Godot application, and a step-by-step guide to creating your first project. There is a lot of material to absorb here. Don't feel discouraged if you feel you don't get it at first. Repetition is the key to learning complex topics; the more you work with Godot's features, the more familiar and _easy_ they will start to feel."
-msgstr "ゲーム開発が初めての場合は、まず [はじめてのGodot(基礎編)](/godot_recipes/4.x/ja/basics/) のセクションから始めてください。ここではGodotアプリケーションの概要を学びます。次に、プロジェクトを段階的に作成していきます。学ぶべきことは多岐にわたりますが、最初はすべてを理解する必要はありません。複雑な概念なので、反復学習が不可欠です。Godotの各種機能を実際に操作すればするほど、その使い方に慣れ、次第に「簡単」だと感じられるようになります。"
+msgstr "ゲーム開発が初めての場合は、まず [はじめてのGodot(基礎編)](/godot_recipes/4.x/ja/basics/) のセクションから始めてください。ここではGodotアプリケーションの概要を学びます。次に、プロジェクトを段階的に作成していきます。学ぶべきことは多岐にわたりますが、最初はすべてを理解する必要はありません。最初は複雑に感じられる概念も含まれるため、繰り返し学習することが不可欠です。Godotの各種機能を実際に操作すればするほど、その使い方に慣れ、次第に「簡単」だと感じられるようになります。"
 
 #: _index.md
 msgid "# <i class='fas fa-utensils'></i>&nbsp;Godot Recipes"
@@ -2070,11 +2070,11 @@ msgstr "以下にノードの設定を示します。"
 
 #: ui/level_select.md
 msgid "Your layout should look something like this (we've disabled **Clip Contents** in order to show what's happening):"
-msgstr "レイアウトはこの例と同様に設定しましょう（動作を分かりやすくするため、**コンテンツの切り取り機能**は無効にしています）："
+msgstr "レイアウトはこの例と同様に設定しましょう（動作を分かりやすくするため、**コンテンツの切り取り機能**は無効にしています）。"
 
 #: ui/level_select.md
 msgid "Download the example project to see the whole thing in action, including some tweens for the scrolling action (because tweens make everything better)."
-msgstr "ダウンロード可能なサンプルプロジェクトでは、スクロールアニメーション用のTween機能を含む完全な実装例を確認できます（Tweenを使えば、あらゆる動作がより洗練されたものになります）。"
+msgstr "サンプルプロジェクトでは、スクロールアニメーション用のTween機能を含む完全な実装例を確認できます（Tweenを使えば、あらゆる動作がより洗練されたものになります）。"
 
 #: ui/level_select.md
 msgid "Download the project code here: [https://github.com/godotrecipes/ui_level_select](https://github.com/godotrecipes/ui_level_select)"
@@ -2325,7 +2325,7 @@ msgstr "シーンに静的テキストのみが必要な場合、ここで完了
 
 #: ui/labels.md
 msgid "Add a new {{< gd-icon Label >}}`Label` node to your scene. In the Inspector, you'll see the node's properties, most of which are self-explanatory (hover them with the mouse to see a description):"
-msgstr "シーンに新しい {{< gd-icon Label >}}`Label`ノードを追加します。インスペクターでは、ほとんどのプロパティが自明な内容になっています（マウスカーソルを合わせると説明が表示されます）："
+msgstr "シーンに新しい {{< gd-icon Label >}}`Label`ノードを追加します。インスペクターでは、ほとんどのプロパティが自明な内容になっています（マウスカーソルを合わせると説明が表示されます）。"
 
 #: ui/labels.md
 msgid "For example, if we had a {{< gd-icon Timer >}}`Timer` node in our scene, we could do the following:"
@@ -3941,7 +3941,7 @@ msgstr "入力を取得した直後に以下を追加します。"
 
 #: 3D/3d_sphere_car.md
 msgid "Now add the following right after rotating the car mesh (in the `if` statement):"
-msgstr "次に、車のメッシュを回転させた直後に以下を追加しましょう（`if` 文内です）："
+msgstr "次に、車のメッシュを回転させた直後に以下を追加しましょう（`if` 文内です）。"
 
 #: 3D/3d_sphere_car.md
 msgid "Here's what the node tree looks like when importing the \"suv\" model:"
@@ -4275,7 +4275,7 @@ msgstr "`move_and_slide()`メソッドを使用することで、移動コード
 
 #: 3D/characterbody3d_examples.md
 msgid "Here's the tank in action. We've made a test scene with a {{< gd-icon StaticBody3D >}}`StaticBody3D` plane for the ground and an {{< gd-icon Camera3D >}}`Camera3D` using the [Interpolated Camera](/godot_recipes/4.x/3d/interpolated_camera/index.html) recipe."
-msgstr "「これが動作中の戦車です。テスト用シーンとして、地面には {{< gd-icon `StaticBody3D` >}} `StaticBody3D`、カメラには [補間付きカメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/index.html) レシピを使用した {{< gd-icon Camera3D >}}`Camera3D` を配置しています。"
+msgstr "「これが動作中の戦車です。テスト用シーンとして、地面には {{< gd-icon `StaticBody3D` >}} `StaticBody3D`、カメラには [補間カメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/index.html) レシピを使用した {{< gd-icon Camera3D >}}`Camera3D` を配置しています。"
 
 #: 3D/characterbody3d_examples.md
 msgid "CharacterBody3D: Movement"
@@ -4783,7 +4783,7 @@ msgstr "![alt](/godot_recipes/4.x/img/animtree_empty.png)"
 
 #: 3D/assets/character_animation.md 3D/assets/character_controller.md
 msgid "See the [section description](/godot_recipes/4.x/3d/assets/) for more examples of working in 3D and for example Godot projects you can download."
-msgstr "[セクションの説明](/godot_recipes/4.x/ja/3d/assets/) を参照すると、3D作業のさらなる事例や、ダウンロード可能なGodotプロジェクトなどの例を確認できます。"
+msgstr "[セクションの説明](/godot_recipes/4.x/ja/3d/assets/) を参照すると、3D作業のさらなる事例や、サンプルプロジェクトなどを確認できます。"
 
 #: 3D/assets/character_animation.md
 msgid "Character Animation"
@@ -4795,7 +4795,7 @@ msgstr "3Dキャラクターのアニメーション設定が完了し、使用�
 
 #: 3D/assets/character_animation.md
 msgid "We've chosen {{< gd-icon CharacterBody3D >}}`CharacterBody3D` for our character, so your scene should look like this (I've collapsed the `Rig` node since the mesh list is so long):"
-msgstr "以下の理由でキャラクターには {{< gd-icon CharacterBody3D >}}`CharacterBody3D` を選択しました。そのため、シーンはこのような外観になるはずです（メッシュリストが非常に長いため、`Rig`ノードは折りたたみ状態にしています）："
+msgstr "以下の理由でキャラクターには {{< gd-icon CharacterBody3D >}}`CharacterBody3D` を選択しました。そのため、シーンはこのような外観になるはずです（メッシュリストが非常に長いため、`Rig`ノードは折りたたみ状態にしています）。"
 
 #: 3D/assets/character_animation.md
 msgid "In the image below, I've done that with several other animations. Note the transition properties are set as we did in the example above."
@@ -4996,7 +4996,7 @@ msgstr "**インポート** タブでは、この設定を**インポートス�
 
 #: 3D/assets/importing_assets.md
 msgid "Here, I've taken the `gltf` folder from the \"Dungeon\" pack and the `characters` folder from the \"Adventurers\" pack and dragged them into my project."
-msgstr "ここで、「ダンジョン」パックから`gltf`フォルダと、「冒険者」パックから`characters`フォルダを取り出して、プロジェクトにドラッグしました。"
+msgstr "ここで、「ダンジョンアセットパック」から`gltf`フォルダと、「冒険者アセットパック」から`characters`フォルダを取り出して、プロジェクトにドラッグしました。"
 
 #: 3D/assets/importing_assets.md
 msgid ""
@@ -6786,7 +6786,7 @@ msgstr "プレイヤーキャラクターのインスタンスを追加し、新
 
 #: g101/3d/101_3d_06.md
 msgid "CSG operations are performed on a shape by adding children. Add a child `CSGCylinder` to the `CSGBox`. Drag the top size handle (orange dot) to make it a bit taller. You can also increase the _Sides_ property to make it look more circular (here it's set to `20`):"
-msgstr "CSG操作は子形状を追加することで行われます。`CSGBox`に`CSGCylinder`の子要素を追加します。上部のサイズハンドル（オレンジ色のドット）をドラッグして少し高さを変更できます。さらに、プロパティ_Sides_を増やすことでより円筒形に近い見た目になります（ここでは値を`20`に設定しています）："
+msgstr "CSG操作は子形状を追加することで行われます。`CSGBox`に`CSGCylinder`の子要素を追加します。上部のサイズハンドル（オレンジ色のドット）をドラッグして少し高さを変更できます。さらに、プロパティ_Sides_を増やすことでより円筒形に近い見た目になります（ここでは値を`20`に設定しています）。"
 
 #: g101/3d/101_3d_06.md
 msgid ""
@@ -7638,7 +7638,7 @@ msgid ""
 "simple meshes called _primitives_."
 msgstr ""
 "通常、メッシュはBlenderなどの3Dモデリングソフトウェアを使用して作成します。\n"
-"自分で作成できない場合には、ダウンロード可能な3Dモデルのコレクションも多数利用できます。\n"
+"自分で作成できない場合には、ウェブ上で公開・配布されている無料の3Dモデルのコレクションも多数利用できます。\n"
 "ただし、多くの場合必要なのは単なるキューブや球といった基本的な形状だけです。このような場合、Godotでは _プリミティブ_ と呼ばれるシンプルなメッシュを作成する機能を提供しています。"
 
 #: g101/3d/101_3d_01.md
@@ -7894,7 +7894,7 @@ msgstr "![alt](/godot_recipes/4.x/img/3d_04_04.gif)"
 
 #: g101/3d/_index.md
 msgid "A gentle introduction to the 3D side of Godot development."
-msgstr "Godot での3D開発のをわかりやすく解説する入門ガイド。"
+msgstr "Godot を用いた3D開発を解説していきます。"
 
 #: g101/3d/_index.md
 msgid "Intro to 3D"
@@ -8070,7 +8070,7 @@ msgstr "これはインスペクターを使用する場合と同様と考えて
 
 #: g101/gdscript/gdscript_01.md
 msgid "In the rest of the script, you can define any number of variables (aka \"class properties\") and functions (aka \"class methods\")."
-msgstr "スクリプトの残り部分では、任意数の変数（通称「クラスプロパティ」）と関数（通称「クラスメソッド」）を定義できます。"
+msgstr "スクリプトの残り部分では、変数（通称「クラスプロパティ」）と関数（通称「クラスメソッド」）を定義できます。"
 
 #: g101/gdscript/gdscript_01.md
 msgid "The first line of any GDScript file must be `extends <Class>`, where `<Class>` is some existing built-in or user-defined class. For example, if you're attaching a script to a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` node, then your script would start with `extends CharacterBody2D`. This states that your script is taking all the functionality of the built-in `CharacterBody2D` object and *extending* it with additional functionality created by you."
@@ -8170,7 +8170,7 @@ msgstr "Godotには非常に便利な組み込みヘルプ/リファレンスツ
 
 #: g101/gdscript/_index.md
 msgid "GDScript is Godot's built-in scripting language. Its syntax is based on Python, so if you're familiar with that language, you'll feel right at home. In this chapter, we'll introduce the language and get you up to speed with how it works."
-msgstr "Godot の組み込みスクリプト言語である GDScript は、その構文が Python をベースにしているため、Python に慣れている方ならすぐに使いこなすことができるでしょう。この章では、この言語の基本概念と動作原理について紹介します。"
+msgstr "Godot の組み込みスクリプト言語である GDScript は、Python をベースにした構文です。なので Python に慣れている方ならすぐに使いこなすことができます。この章では、この言語の基本概念と動作原理について紹介します。"
 
 #: g101/gdscript/_index.md g101/start/_index.md
 msgid ""
@@ -8271,7 +8271,7 @@ msgid ""
 "agreement if you plan to release your game (and especially if your game makes\n"
 "money). You need to carefully read and understand what you're agreeing to and\n"
 "what you are and are not allowed to do with the engine."
-msgstr "現在、Unity、Unreal Engine、GameMaker Studioなど、数多くの人気ゲームエンジンが利用できます。これらの多くは商用製品であり、無料ダウンロード可能かどうか、またリリース時にライセンス契約やロイヤリティ支払いが必要になるかどうかを事前に確認することが重要です（特にゲームで収益を上げる予定の場合は注意が必要です）。利用するエンジンの利用規約を慎重に読み、その使用範囲と制約事項をしっかりと理解することが不可欠です。"
+msgstr "現在、Unity、Unreal Engine、GameMaker Studioなど、数多くの人気ゲームエンジンが利用できます。これらの多くは商用製品であり、無料でダウンロードできるか、またリリース時にライセンス契約やロイヤリティ支払いが必要になるかどうかを事前に確認することが重要です（特にゲームで収益を上げる予定の場合は注意が必要です）。利用するエンジンの利用規約を慎重に読み、その使用範囲と制約事項をしっかりと理解することが不可欠です。"
 
 #: g101/start/101_01.md
 msgid "* Rendering (2D/3D)"
@@ -8409,7 +8409,7 @@ msgid ""
 "{{% /notice %}}"
 msgstr ""
 "{{% notice style=\"note\" title=\"プログラミング入門ガイド\" %}}\n"
-"コーディングを完全に初めて学ぶ方には、もう少し詳しい支援が必要になるかもしれません。オススメは[ハーバード大学のCS50公開コースウェア](https://cs50.harvard.edu/x)です。無料で受講できるこの講座は、プログラミング全般における確かな基礎力を養えます。時間的な負担を感じるかもしれませんが、初期段階でしっかりとした知識を身につけておけば、後々の苦労を大幅に軽減できるでしょう。\n"
+"コーディングを完全に初めて学ぶ方には、もう少し詳しい支援が必要になるかもしれません。オススメは[ハーバード大学のCS50公開コースウェア](https://cs50.harvard.edu/x)です。無料で受講できるこの講座は、プログラミング全般における確かな基礎力を養えます。時間的な負担を感じるかもしれませんが、初期段階でしっかりとした知識を身につけておけば、後々の苦労を大幅に軽減できます。\n"
 "{{% /notice %}}"
 
 #: g101/start/101_04.md
@@ -8470,7 +8470,7 @@ msgstr "![alt](/godot_recipes/4.x/img/g4_101_08.png?width=500)"
 
 #: g101/start/101_03.md
 msgid "Nodes are the basic building blocks for creating games in Godot. A node is an object that can represent some kind of specialized game function. A given type of node might display graphics, play an animation, or represent a 3D model of an object. The node also contains a collection of properties, allowing you to customize its behavior. Which nodes you add to your project will depend on what functionality you need. It's a modular system designed to give you flexibility in building your game objects."
-msgstr "ノードはGodotでゲームを作成するための基本構成要素です。ノードとは、特定の種類のゲーム機能を表現するオブジェクトのことです。例えば、グラフィックを表示したり、アニメーションを再生したり、3Dモデルオブジェクトを表現したりできます。各ノードにはカスタマイズ可能なプロパティセットが含まれており、その動作を自由に調整できます。プロジェクトにどのノードを追加するかは、必要な機能性によって異なります。これは、ゲームオブジェクト構築において最大限の柔軟性を提供するよう設計されたモジュールシステムです。"
+msgstr "ノードはGodotでゲームを作成するための基本な構成要素です。ノードとは、特定の種類のゲーム機能を表現するオブジェクトのことです。例えば、グラフィックを表示したり、アニメーションを再生したり、3Dモデルオブジェクトを表現したりできます。各ノードにはカスタマイズ可能なプロパティが含まれており、その動作を自由に調整できます。プロジェクトにどのノードを追加するかは、必要な機能性によって異なります。これは、ゲームオブジェクト構築において最大限の柔軟性を提供するよう設計されたモジュールシステムです。"
 
 #: g101/start/101_03.md
 msgid "![alt](/godot_recipes/4.x/img/g4_101_07.png)"
@@ -10762,7 +10762,7 @@ msgid ""
 "default global gravity. You can find this setting in \"Project Settings\" under\n"
 "_Physics -> 2d_. You can also try changing the Block's `Gravity Scale` property in the\n"
 "Inspector. I'm using a value of `3`."
-msgstr "※「再生」を押すとブロックがゆっくりと下方に落ちていくのが確認できるでしょう。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクターで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。ここでは値を`3`に設定しています。"
+msgstr "※「再生」を押すとブロックがゆっくりと下方に落ちていきます。これはデフォルトで設定されているグローバルな重力によるものです。この設定は「プロジェクト設定」→［物理］→［2D］セクションで確認できます。また、インスペクターで「Block」オブジェクトの`Gravity Scale`プロパティを変更してみるのもよいでしょう。ここでは値を`3`に設定しています。"
 
 #: physics/Godot3_KYN_rigidbody1.md
 msgid ""
@@ -11576,7 +11576,7 @@ msgstr "スタティックボディとは、物理エンジンによって移動
 msgid ""
 "The Player is controlled by W/S for forward/back and aims using the mouse. Here is\n"
 "the code for the Player, using `move_and_slide()`:"
-msgstr "プレイヤーはW/Sキーで前進・後退操作し、マウスを使って狙いを定めます。以下にPlayer用のコードを示します（`move_and_slide()`関数を使用しています）："
+msgstr "プレイヤーはW/Sキーで前進・後退操作し、マウスを使って狙いを定めます。以下にPlayer用のコードを示します（`move_and_slide()`関数を使用しています）。"
 
 #: physics/Godot3_kinematic2d.md
 msgid "This is the maximum angle before a surface is no longer considered a \"floor\"."
@@ -12331,7 +12331,7 @@ msgstr ""
 
 #: 2D/grid_movement.md
 msgid "You need a 2D character that moves in a grid pattern."
-msgstr "グリッド状に移動する2Dキャラクターが必要です。"
+msgstr "グリッド状を移動する2Dキャラクターを実装したいです。"
 
 #: 2D/grid_movement.md
 msgid ""
@@ -12421,11 +12421,11 @@ msgstr "ただし、[2Dシューティングゲームのレシピ](/godot_recipe
 
 #: 2D/ballistic_bullet.md
 msgid "Using the [standard equations of motion](https://www.khanacademy.org/science/physics/one-dimensional-motion/kinematic-formulas/a/what-are-the-kinematic-formulas) is all we need to do here. The initial value for `velocity` is just for testing. Run the bullet scene:"
-msgstr "ここで必要なのは[運動方程式](https://www.khanacademy.org/science/physics/one-dimensional-motion/kinematic-formulas/a/what-are-the-kinematic-formulas)を適用するだけです。`velocity` の初期値は単なるテスト用です。ブレットシーンを実行します。"
+msgstr "ここで必要なのは[運動方程式](https://www.khanacademy.org/science/physics/one-dimensional-motion/kinematic-formulas/a/what-are-the-kinematic-formulas)を適用するだけです。`velocity` の初期値は単なるテスト用です。シーンを実行します。"
 
 #: 2D/ballistic_bullet.md
 msgid "You want a 2D bullet that travels in an arc, or ballistic curve."
-msgstr "ご希望の2D弾は弧を描くように移動したり、弾道曲線を描いたりする仕様でしょうか？"
+msgstr "弾道曲線を描くような 2Dの砲弾を作りたい。"
 
 #: 2D/ballistic_bullet.md
 msgid ""
@@ -12493,7 +12493,7 @@ msgstr "次に、矩形が画面のアスペクト比に対して横長か縦長
 
 #: 2D/multi_target_camera.md
 msgid "Here you can see the rectangle being drawn (press \"Tab\" in the demo project to enable this drawing):"
-msgstr "以下の画面では、長方形が描画されている様子を確認できます（デモプロジェクトで「Tab」キーを押すとこの描画機能を有効にできます）："
+msgstr "以下の画面では、長方形が描画されている様子を確認できます（デモプロジェクトで「Tab」キーを押すとこの描画機能を有効にできます）。"
 
 #: 2D/multi_target_camera.md
 msgid ""
@@ -12569,7 +12569,7 @@ msgstr "![alt](/godot_recipes/4.x/img/2d_shoot_01.gif)"
 
 #: 2D/2d_shooting.md
 msgid "Notice that as the  player rotates, the Muzzle's `transform` remains oriented the same way relative to the gun. This will be very convenient when spawning the bullets, as they can use the transform to get the proper position *and* direction. We just set the new bullet's `transform` equal to the muzzle's."
-msgstr "「プレイヤーが回転するにつれ、Muzzleの`transform`は銃に対して常に同じ向きを保つことに注目します。これは弾丸をスポーンさせる際に非常に便利です。変換行列を使用することで、適切な位置と方向を簡単に取得できるからです。新しい弾丸の`transform`は、単にMuzzleのものと等しく設定するだけで済みます。"
+msgstr "「プレイヤーが回転するにつれ、Muzzleの`transform`は銃に対して常に同じ向きを保つことに注目します。これは弾丸をスポーンさせる際に非常に便利です。この transform を使用することで、適切な位置と方向を簡単に取得できるからです。新しい弾丸の`transform`は、単にMuzzleのものと等しく設定するだけで済みます。"
 
 #: 2D/2d_shooting.md
 msgid "Now in our `shoot()` function we can instance a bullet and add it to the tree. A common mistake is to add the bullet as a child of the player:"
@@ -14530,7 +14530,7 @@ msgid ""
 "It may sound repetitive, but that is how we learn: by doing things repeatedly. If you follow this tip, you'll be amazed at how quickly you level up your gamedev skills.\n"
 "{{% /notice %}}"
 msgstr ""
-"繰り返しのように聞こえるかもしれませんが、これがまさに学ぶ方法です。何度も実践を重ねることで。ぜひこのアドバイスに従ってみてください。ゲーム開発スキルが驚くほど速く上達するのを実感できるでしょう。\n"
+"繰り返しのように聞こえるかもしれませんが、これがまさに学ぶ方法です。何度も実践を重ねることで。ぜひこのアドバイスに従ってみてください。ゲーム開発スキルが驚くほど速く上達するのを実感するはずです。\n"
 "{{% /notice %}}"
 
 #: games/first_2d/_index.md games/first_2d/first_2d_end.md

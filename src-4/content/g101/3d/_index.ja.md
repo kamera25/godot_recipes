@@ -8,7 +8,7 @@ pre = "<i class='fas fa-cube fa-fw'></i>&nbsp"
 
 # <i class='fas fa-cube'></i>&nbsp;3D入門講座
 
-Godot での3D開発のをわかりやすく解説する入門ガイド。
+Godot を用いた3D開発を解説していきます。
 
 #### 目次 ：
 
