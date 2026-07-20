@@ -16,6 +16,9 @@
     {{- end }}
     {{- $title = printf "%s%s" $title .Site.Title }}
     <title>{{ $title }}</title>
+    {{- if .Permalink }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{- end }}
 
     {{- if .IsTranslated -}}
       {{- range $index, $trans := .AllTranslations }}
