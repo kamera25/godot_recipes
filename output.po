@@ -1056,7 +1056,7 @@ msgstr "例を挙げると、キャラクターのステータス情報がすべ
 
 #: basics/rotation.md
 msgid "You want an object to \"orbit\" (move in a circle) around another object."
-msgstr "オブジェクトを別のオブジェクトの周りで「周回」（円軌道を描くように移動）させたい。"
+msgstr "オブジェクトを別のオブジェクトの周りで「周回（円軌道を描くように移動）」させたい。"
 
 #: basics/rotation.md
 msgid "This works just as well in 3D, too:"
@@ -1072,7 +1072,7 @@ msgstr "円運動"
 
 #: basics/rotation.md
 msgid "This is a common beginner question, and often comes after a bunch of messy experimenting with trig functions. The answer is much simpler:"
-msgstr "これは初心者がよく抱く疑問で、三角関数をあれこれ試した後によく出てきます。答えは実はとてもシンプルです。"
+msgstr "これは初心者がよく抱く疑問で、三角関数をあれこれ試したりします。この答えは実はとてもシンプルです。"
 
 #: basics/migrating.md
 msgid "For detailed examples of using these nodes, see [Platform Character](/godot_recipes/4.x/2d/platform_character/) and/or [Basic FPS Character](/godot_recipes/4.x/3d/basic_fps/)."
@@ -1906,7 +1906,7 @@ msgstr "以下のスクリプトは3種類すべてのバー構成に対応で�
 
 #: ui/heart_containers_3.md
 msgid "Add a {{< gd-icon TextureRect >}}`TextureRect` child. Drag your heart texture into the **Texture** property and set the **Stretch Mode** to \"Keep\". Name the node \"1\" and then press \"Ctrl-D\" to duplicate the node for as many hearts as you need (5 in this example). Your node setup should look like this:"
-msgstr "{{< gd-icon TextureRect >}}`TextureRect` 子要素を追加します。ハートテクスチャを **テクスチャ** プロパティにドラッグし、**[伸縮モード]** を「固定」に設定します。ノード名を「1」に指定したら、\"Ctrl+D\"を押して必要な数（この例では5つ）のハート用に同じノードを複製します。最終的なノード構成は以下のようになります。"
+msgstr "{{< gd-icon TextureRect >}}`TextureRect` 子要素を追加します。ハートテクスチャを **テクスチャ** プロパティにドラッグし、**[伸縮モード]** を「固定」に設定します。ノード名を「1」に指定したら、「Ctrl+D」を押して必要な数（この例では5つ）のハート用に同じノードを複製します。最終的なノード構成は以下のようになります。"
 
 #: ui/heart_containers_3.md
 msgid "To begin, we're going to load the textures we need and define our three bar modes:"
@@ -2296,7 +2296,7 @@ msgstr "### フォント操作について"
 
 #: ui/labels.md
 msgid "To add your font in the Inspector, scroll down to and expand the *Custom Fonts* section. In the empty *Font* property, choose \"New DynamicFont\" and then click the new `DynamicFont` to expand it."
-msgstr "フォントを追加するには。インスペクターで「カスタムフォント」セクションまでスクロールダウンし、展開します。空の「フォント」プロパティで『新規ダイナミックフォント』を選択し、新しく表示された`DynamicFont`をクリックしてさらに展開します。"
+msgstr "フォントを追加するには。インスペクターで「カスタムフォント」セクションまでスクロールダウンし、展開します。空の「フォント」プロパティで「新規ダイナミックフォント」を選択し、新しく表示された`DynamicFont`をクリックしてさらに展開します。"
 
 #: ui/labels.md
 msgid "Drag your font file (in this example we're using `Roboto-Medium.ttf`) into the *Font Data* property (or choose \"Load\" and navigate to the file). There are several properties to adjust but for now let's make *Size* a bit bigger."
@@ -2874,7 +2874,7 @@ msgstr "結果は非常に滑らかでより魅力的なものになります。
 
 #: 3D/3d_align_surface.md
 msgid "A *surface normal* is a unit vector (\"normal vector\" and \"unit vector\" mean the same thing) perpendicular to a surface. It shows which way the surface is facing. In the case of a mesh, every surface has a normal pointing outward."
-msgstr "*法線ベクトル*（「ノーマルベクトル」または単に「単位ベクトル」）とは、面に垂直な方向を示す単位ベクトルのことです。これは表面がどの向きを向いているのかを定義します。メッシュの場合、各面には必ず外側を指す法線ベクトルが割り当てられます。"
+msgstr "*法線ベクトル*（「ノーマルベクトル」または単に「単位ベクトル」）とは、面に垂直な方向を示す単位ベクトルのことです。これは表面がどの向きを向いているのかを定義します。メッシュの場合、各面には必ず外側を指す法線ベクトルが存在します。"
 
 #: 3D/3d_align_surface.md
 msgid "This recipe builds on the basic {{< gd-icon CharacterBody3D >}}`CharacterBody3D` controller described in the [CharacterBody3D: Movement](/godot_recipes/4.x/3d/characterbody3d_examples/) recipe, so read that one first."
@@ -2886,7 +2886,7 @@ msgstr "キャラクターの体は地面や地形と平行になるように調
 
 #: 3D/3d_align_surface.md
 msgid "First, we've added some terrain to the scene. You can download the terrain from here: [https://fertile-soil-productions.itch.io/modular-terrain-pack](https://fertile-soil-productions.itch.io/modular-terrain-pack). This is low-poly terrain, but you can use or make any terrain you like for this technique."
-msgstr "まず、シーンに地形を追加しました。こちらのリンクからダウンロードできます。[https://fertile-soil-productions.itch.io/modular-terrain-pack](https://fertile-soil-productions.itch.io/modular-terrain-pack)。ローポリモデルですが、お好みの地形を自由に使用・作成していただいて構いません。"
+msgstr "まず、シーンに地形を追加しました。こちらの[リンクからダウンロード](https://fertile-soil-productions.itch.io/modular-terrain-pack)できます。ローポリモデルですが、お好みの地形を自由に使用・作成していただいて構いません。"
 
 #: 3D/3d_align_surface.md
 msgid "Once we have the surface normal, we need to align the tank's **Y** axis with it. Note that we can't use `Transform3D.looking_at()`, because that will align the **-Z** (forward) axis with the normal."
@@ -3215,7 +3215,7 @@ msgstr "### 改善点"
 
 #: 3D/spaceship.md
 msgid "Currently the rotations are a little to \"sharp\". The ship starts and stops rotating instantly, which feels a bit too unnatural. We can solve this with `lerp()`, and by adding one more configuration variable to set how \"floaty\" we'd like the controls to be:"
-msgstr "現在の回転モーションは少し「ぎこちない」感じがします。船が瞬時に回転を開始したり停止したりするため、やや不自然な動きになっています。これは `lerp()` 関数を使うことで改善できます。さらに、コントロールの「浮遊感」を調整する設定変数を設けることでより自然な挙動を実現できるでしょう。"
+msgstr "現在の回転モーションは少し「ぎこちない」感じがします。船が瞬時に回転を開始したり停止したりするため、やや不自然な動きになっています。これは `lerp()` 関数を使うことで改善できます。さらに、コントロールの「浮遊感」を調整する設定変数を設けることでより自然な挙動を実現できます。"
 
 #: 3D/spaceship.md
 msgid ""
@@ -3432,7 +3432,7 @@ msgstr ""
 
 #: 3D/healthbars.md
 msgid "We also need to set the size of the viewport to match the size of the healthbar texture, which is `(200, 26)`."
-msgstr "さらに、HPバーテクスチャのサイズに合わせてビューポートのサイズを設定する必要があり、そのサイズは`(200, 26)`です。"
+msgstr "さらに、HPバーテクスチャのサイズは`(200, 26)`に合わせて、ビューポートのサイズに合わせてください"
 
 #: 3D/3d_shooting.md
 msgid "For your mesh, you can use one of Godot's built-in primitive shapes, or something like this:"
@@ -10346,7 +10346,7 @@ msgstr "シェーダーとの連携"
 
 #: shaders/greyscale.md
 msgid "Let's start with a `canvas_item` (2D) shader. To convert to greyscale but also preserve pixel contrast, we need to _average_ the pixel's color value. Add the color channels together and divide by 3:"
-msgstr "まずは `canvas_item`（2D）用シェーダーから始めてください。グレースケールに変換しつつピクセルのコントラストを維持するには、画素値を**平均化**が必要です。カラーチャンネルをすべて加算し、3で割ることで実現できます。"
+msgstr "まずは `canvas_item`（2D）シェーダーから始めてください。グレースケールに変換しつつピクセルのコントラストを維持するには、画素値を**平均化**が必要です。カラーチャンネルをすべて加算し、3で割ることで実現できます。"
 
 #: shaders/greyscale.md
 msgid "You can apply this to the whole screen by adding a {{< gd-icon ColorRect >}} `ColorRect` (placed in a {{< gd-icon CanvasLayer >}} `CanvasLayer` to ignore camera movement) and scaling it to cover the screen."
@@ -10501,7 +10501,7 @@ msgstr "各種データ型に対応するヒントが用意されています。
 
 #: shaders/intro.md
 msgid "The output of a shader program is the color of the set of pixels of the object. Shaders can be used in 2d (`canvas_item` shaders) and 3D (`spatial` shaders)."
-msgstr "シェーダープログラムの出力結果は、オブジェクトを構成するピクセル群の色情報です。シェーダーは2D環境（`canvas_item` 用シェーダー）および3D環境（`spatial` シェーダー）で利用できます。"
+msgstr "シェーダープログラムの出力結果は、オブジェクトを構成するピクセル群の色情報です。シェーダーは2D環境（`canvas_item` シェーダー）および3D環境（`spatial` シェーダー）で利用できます。"
 
 #: shaders/intro.md
 msgid "To add a shader to an object, find its _Material_ property and select \"New ShaderMaterial\". Click the new material to open it, and select \"New Shader\". Click that, and you'll see a shader editor open at the bottom of the screen."
