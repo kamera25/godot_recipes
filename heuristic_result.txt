@@ -1,0 +1,506 @@
+--- 英文のヒューリスティック分析による「position」の訳語推定 ---
+
+原文: > Invalid get index 'position' (on base: 'null instance').
+推定: 座標
+----------------------------------------
+原文: For example, if you are applying a gravity, that's an acceleration - each frame it will increase the velocity by some amount. As in the above example, the velocity then changes the node's position.
+推定: 位置
+----------------------------------------
+原文: In the above examples, we've used a `Sprite` to keep things simple, updating the `position` every frame. If you're using a kinematic body (in 2D or 3D), you'll instead be using one of its movement methods. Specifically in the case of `move_and_slide()`, there tends to be some confusion, because it uses the velocity vector, not the position. This means you won't multiply your velocity by `delta` to find distance - the function does that for you. But you will still need to apply it on any *other* calculations, such as the acceleration. For example:
+推定: 座標
+----------------------------------------
+原文: Note that we're multiplying by our timestep each frame to update both `velocity` and `position`. Any quantity that is updated every frame should be multiplied by `delta` to ensure it changes independent or frame rate.
+推定: 位置
+----------------------------------------
+原文: * The `position` and `global_position` properties replace `translation` and `global_translation` in 3D, making them consistent with 2D.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: If our `Grid` size is currently `(150, 150)` (you can check this in its **Size** property), then its center will be `(75, 75)`. Put the `PlayerMarker`'s **Position** there:
+推定: 座標
+----------------------------------------
+原文: Now that we have created the markers and linked each one to an object, we can update their positions in `_process()`. If no `player` is assigned, we'll do nothing:
+推定: 座標
+----------------------------------------
+原文: Next, we'll find each object's position relative to the player and use that to find the marker's position (remembering to offset by `grid.size / 2` because the control's origin is in the top left corner).
+推定: 座標
+----------------------------------------
+原文: As a child of `Grid`, add a {{< gd-icon Sprite2D >}}`Sprite2D` node named \"PlayerMarker\" and give it the `minimapIcon_arrowA.png` texture. Note the sprite's **Transform/Position** property: `(0, 0)`, which places it exactly in the top-left corner of the `Grid`:
+推定: 座標
+----------------------------------------
+原文: To fix this, after calculating `obj_pos`, but before setting the marker's position, clamp it to the grid's rectangle:
+推定: 座標
+----------------------------------------
+原文: Next, we have two properties to interpolate: `rect_position` for the movement and `modulate.a` for the visibility.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: In your game unit, you'd attach an instance of this node, and position it wherever you want the text to appear. Then add something like the following to the unit's `take_damage()` method:
+推定: 座標
+----------------------------------------
+原文: * `object` - This is a reference to the object we're tracking.\n* `property` - This is in the form of a `NodePath`, meaning we can track something like `\"position\"`, but also `\"position:x\"`.\n* `label_ref` - Each property is linked to a {{< gd-icon Label >}}`Label` node, this is a reference to the label so that we can set its `text`.\n* `mode` - This is an optional setting to configure how the value should be displayed (see below).
+推定: 座標
+----------------------------------------
+原文: In this function we calculate the angle we need between each item (`spacing`). We then loop through each button and find its destination (`dest`) based on this angle and the chosen `radius`. For each button, we're tweening two properties, `position` and `scale`, to get our desired effect.
+推定: 座標
+----------------------------------------
+原文: In `_ready()` we start setting things up: hiding the menu buttons by default, and setting their positions to that of the main button.
+推定: 座標
+----------------------------------------
+原文: Try adjusting the \"Size Flags\" properties of the different buttons and see how it affects their positioning in the `HBoxContainer`.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: {{% notice warning %}}\nA {{< gd-icon Container >}}`Container` node *automatically* arranges its children. You *cannot* directly control the position of a child UI node.\n{{% /notice %}}
+推定: 位置
+----------------------------------------
+原文: When a {{< gd-icon Control >}}`Control` node is added to a `Container`, the container takes over all the control's positioning information. You can no longer set the size, position, or other layout properties of the container's children.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: Set the **Transform/Position** of the {{< gd-icon Camera3D >}}`Camera3D` to `(0, 0, 4)`.
+推定: 座標
+----------------------------------------
+原文: Add a {{< gd-icon RayCast3D >}}`RayCast3D` child to the tank and set its **Target Position** to `(0, -1, 0)`.
+推定: 座標
+----------------------------------------
+原文: Then we'll define the `shoot()` method. Whenever it's called, we want to build a `PhysicsRayQueryParameters3D` object, which defines the start (position of the camera) and end (position of the camera projected forward by 100 meters) points of the ray. We'll pass this to the physics engine using the `direct_space_state` of the world. If we get a returned value (a dictionary containing data about the collision), we'll update the label so we can see what kind of object we hit.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: * `lerp_speed` - the camera's movement speed. Lower values result in a \"lazier\" camera.\n* `target` - choose the camera's target node.\n* `offset` - position of the camera relative to the target.
+推定: 位置
+----------------------------------------
+原文: In the `_physics_process()` function we interpolate the camera's position with the `target`'s (plus `offset`).
+推定: 座標
+----------------------------------------
+原文: Add an instance of this scene to the `Mob` scene and position the bar above the mob's body.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: Note that since `interpolate_with()` operates on the `transform`, it can be used to interpolate both rotation *and* position of an object.
+推定: 座標
+----------------------------------------
+原文: This code would make our node (`$Arrow`) always point at the target's position, no matter how it moves.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: We can avoid using 3D Euler angles in Godot by using the object's `transform` property. This property represents the body's position *and* orientation in space. It uses a mathematical construct called a _matrix_ to do this, but you don't really need to understand the underlying math in order to make use of it.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: Note that `look_at()` requires 2 parameters: the target position, and an \"up vector\". Imagine an airplane pointing its nose towards a target - there are an infinite number of ways it could be oriented, because the plane could roll about its axis. This second parameter is how you define what you want the final orientation to be.
+推定: 座標
+----------------------------------------
+原文: By default, everything is centered at `(0, 0, 0)` so the first thing we're going to do is offset everything so that the *bottom center* of the cube is the {{< gd-icon CharacterBody3D >}}`CharacterBody3D`'s position.
+推定: 座標
+----------------------------------------
+原文: Finally, once the animation has finished, we need to reset everything so that it's ready to happen again. In the end, we want to have the cube moved 1 unit in the chosen direction (for a cube of size 1) and have the pivot and mesh back at their original positions.
+推定: 座標
+----------------------------------------
+原文: The default size of a {{< gd-icon BoxMesh3D >}}`BoxMesh3D` is `(1, 1, 1)`, so do this, move the mesh and collision nodes both up to `(0, 0.5, 0)`, leaving the rest where they are. Now when you select the root node, its position will be the *bottom* of the cube:
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: In `_physics_process()` we add a force to the body based on the direction the car is pointing, as well as keeping the car mesh positioned at the ball's position:
+推定: 座標
+----------------------------------------
+原文: Finally, add a {{< gd-icon RayCast3D >}}`RayCast3D` node as a child of the {{< gd-icon MeshInstance3D >}}`CarMesh`. Set its **Target Position** to `(0, -1, 0)`.
+推定: 座標
+----------------------------------------
+原文: A better solution is to stick with the `CanvasItem` draw methods. To do so, we need to project the positions in 3D space onto the 2D viewport. Fortunately, {{< gd-icon Camera3D >}}`Camera` can do this for us using its `unproject_position()` method.
+推定: 座標
+----------------------------------------
+原文: We use `unproject_position()` to find the start and end points of the vector we want to draw. `draw_triangle()` is there to give us a nice pointed arrow appearance.
+推定: 座標
+----------------------------------------
+原文: You'd like visual debug information in your 3D game: a way to see vectors representing velocity, position, etc.
+推定: 座標
+----------------------------------------
+原文: An FPS character typically has a 3D mesh of a weapon positioned in front. Setting this up can be easy with a couple of Godot editor tricks.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: To add a little personality, try using an {{< gd-icon AnimationPlayer >}}`AnimationPlayer` to animate the weapon's position from side-to-side as the player moves.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: Now we need a way to map mouse position into our 3D world. If you imagine the screen as a window into the 3D world, the mouse is trapped on the glass. To select something in 3D, we must project a ray from our eye (the camera), through the mouse's position and into the world.
+推定: 座標
+----------------------------------------
+原文: We set the position of the marker and the Player's target to the clicked position:
+推定: 位置
+----------------------------------------
+原文: You want to move a 3D object to a clicked position.
+推定: 位置
+----------------------------------------
+原文: We've also added a {{< gd-icon MeshInstance3D >}}`MeshInstance3D` called \"Marker\" to the scene. This will be moved to indicate the clicked position.
+推定: 位置
+----------------------------------------
+原文: Now click the crosshair button to set the blend position and click to drag it around the grid. You should see the animations transition smoothly between the extremes.
+推定: 座標
+----------------------------------------
+原文: In the spring arm's properties, set **Spring Length** to `5`, the **Margin** to `0.1`, and the **Position** to `(0, 2.5, 0)`.
+推定: 座標
+----------------------------------------
+原文: Now that we have movement and rotation, we need to choose animations. The idea is to take the character's horizontal velocity (the *x/z* movement) and use it to set the blend position in the `IWR` blendspace we created.
+推定: 座標
+----------------------------------------
+原文: We'll use the `anim_tree` reference to set the blend position for the Idle/Walk/Run blendspace and the trigger conditions for jumping. Select the {{< gd-icon AnimationTree >}}`AnimationTree` and you can see these properties in the Inspector:
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: Size and position the capsule to enclose the character's body. For reference, here are the values I used:
+推定: 座標
+----------------------------------------
+原文: Note that the imported rig is positioned so that its feet are on the \"ground\", ie at the body's position. This will be helpful later, as the player's position will represent its position on the ground, rather than floating in mid-air if it were at the center of its body.
+推定: 座標
+----------------------------------------
+原文: In `get_move_input()`, we're setting the player's velocity. Just after that, we can set the blend position:
+推定: 座標
+----------------------------------------
+原文: The only parameter to set here is the `lerp_speed`, which controls how quickly the camera updates its position. Set it low, and the camera will \"lag\" behind the car. Set it high, and it will remain locked on.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: To communicate to the camera, we'll emit a signal whenever we want it to change position. Add the following code to the car's script:
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: `InputEventMouse` is the base class for mouse events. It contains `position` and `global_position` properties. Inheriting from it are two classes: `InputEventMouseButton` and `InputEventMouseMotion`.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: In its properties, set **Spring Length** to `5`, and set its **Position** to `(0, 1, 0)`, which is at the character's head. Note the yellow line indicating the **Spring Length**. The camera will move along this line - at its end whenever possible, but moving closer if an obstacle is there.
+推定: 座標
+----------------------------------------
+原文: This is where _transforms_ come in. A transform is a mathematical _matrix_ that contains the object's translation, rotation, and scale information all in one. In Godot it's stored in the `Transform` data type. The position information is\ncalled the `transform.origin` and the orientation information is in the\n`transform.basis`.
+推定: 位置
+----------------------------------------
+原文: Let's also add a {{< gd-icon Camera3D >}}`Camera3D` to the scene, so it will follow the player around. Position the camera behind and above the character, angling it down a bit. Click the \"Preview\" button to check the camera's view.
+推定: 座標
+----------------------------------------
+原文: We need to position the model so that it's projecting out \"through\" the camera. Aligning it can be difficult, so click the \"View\" menu and choose \"2 Viewports\". In the bottom one, select the `Camera` and click \"Preview\", and in the top you can move the gun until it looks right.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: We're going to animate two properties of the coin: position (on the **Y** axis,\nup and down) and rotation. Ensure the scrubber is at time `0` and add a keyframe\nfor both _Translation_ and _Rotation Degrees_.
+推定: 座標
+----------------------------------------
+原文: Try running the scene with your cube object. Did you see anything? In 3D, you\nwon't see anything in the game viewport without adding a {{< gd-icon Camera3D >}}`Camera3D`. Add one to the root node and use the camera's gizmo to position it pointing towards the cube:
+推定: 位置
+----------------------------------------
+原文: Now let's add our first 3D node. Just as all 2D nodes inherit from {{< gd-icon Node2D >}}`Node2D`,\nwhich provides properties such as `position` and `rotation`, 3D nodes inherit\nfrom {{< gd-icon Node3D >}}`Node3D`, which provides 3D versions of the same properties. Add one to your scene and you'll see the following object\nappear at the origin:
+推定: 位置
+----------------------------------------
+原文: Look at the Inspector for the {{< gd-icon Node3D >}}`Node3D` node. In the **Transform** section, you'll see properties for **Position**, **Rotation**, and **Scale**. Drag the object around with the gizmo and observe how these values change. Just like in 2D, these properties are *relative* to the node's parent.
+推定: 位置
+----------------------------------------
+原文: Together, these properties make up the node's _transform_. When changing the node's spatial properties in code, you'll access the `transform` property, which is a Godot `Transform3D` object. It has two properties: `origin` and `basis`. The `origin` represents the body's position, while the `basis` contains three vectors that define the body's local coordinate axes - think of the three axis arrows in the gizmo when you're in **Local Space** mode.
+推定: 座標
+----------------------------------------
+原文: ![alt](/godot_recipes/4.x/img/3d_camera_position.png)
+推定: 座標
+----------------------------------------
+原文: What if we want to move the sprite diagonally? That means we need to change the `x` and `y` coordinates at the same time. `position` is a **vector** - it contains both coordinates in one quantity. Vectors can be added, so let's change the code to this:
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: In the previous step, we added a script to a {{< gd-icon Sprite2D >}}`Sprite2D` and used that script to set its position.
+推定: 座標
+----------------------------------------
+原文: Let's say that when the game starts, we want to make sure the sprite goes to a particular location. In the Inspector, we want to set the **Position** property. Notice that it's in the section called \"Node2D\" - that means this is a property that *any* {{< gd-icon Node2D >}}`Node2D` type node will have, not just {{< gd-icon Sprite2D >}}`Sprite2D`s.
+推定: 位置
+----------------------------------------
+原文: Now we have a script that says \"When this sprite starts, set its position to `(100, 150)`\". We can try this out by pressing the \"Play Scene\" button.
+推定: 座標
+----------------------------------------
+原文: Godot has a great built-in help/reference tool. Click on \"Classes\" at the top of the Script window and search for Node2D and you'll see a help page showing you all the properties and methods the class has available. Looking down a bit you can see `position` in the \"Member Variables\" section - that's the one we want. It also tells us the property is of the type \"Vector2\".
+推定: 座標
+----------------------------------------
+原文: This new sprite is a _child_ of the first. This means that it's \"attached\" to its parent. If the parent sprite moves, so will the child. Click on the child sprite and set its **Position** to `(50, 50)`. Now click and drag the parent sprite to move it around the screen.
+推定: 座標
+----------------------------------------
+原文: You can also click and drag the sprite around in the viewport, and you'll see the **Position** values changing as you move.
+推定: 座標
+----------------------------------------
+原文: In the Inspector, click to expand the \"Transform\" section, and type `(50, 50)` in the **Position** property.
+推定: 座標
+----------------------------------------
+原文: Notice that the **Position** of the parent is changing as you move it around. Now check the child: it's still `(50, 50)`. That's because its \"Transform\" properties are _relative_ to its parent.
+推定: 座標
+----------------------------------------
+原文: The following example moves a Sprite node towards the mouse click position. Each frame the node moves 10% of the way to the target. This results in an \"approach\" effect, where the object's speed becomes slower the closer it gets to the target.
+推定: 位置
+----------------------------------------
+原文: In addition to the local axes, the transform also contains a component called the `origin`. The origin represents the _translation_, or change in position.
+推定: 座標
+----------------------------------------
+原文: How do we move the ship forward now? If you remember Trigonometry from school, you might be starting to think about angles, sine and cosine and doing something like `position += Vector2(10 * cos(angle), 10 * sin(angle))`. While this would work, there's a much more convenient way: the _Transform_.
+推定: 座標
+----------------------------------------
+原文: 3D nodes inherit from the base node {{< gd-icon Node3D >}}`Node3D`, which contains the transform information. The 3D transform requires more information than the 2D version. Position is still held in the `origin` property, but rotation is in a property called `basis`, which contains three unit vectors representing the body's local **X**, **Y**, and **Z** axes.
+推定: 座標
+----------------------------------------
+原文: In this picture, the blue vector is the `transform.origin`. It is equal to the object's `position` vector.
+推定: 座標
+----------------------------------------
+原文: The `trans_type` parameter lets you select which *transition type* you'd like to use in your interpolation. This represents the mathematical formula used to calculate the property each frame. Different types result in different movement styles. Below, each icon's `position` is tweened over the same range and timeframe:
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: A *path* is a sequence of points in 2D space, defined by a {{< gd-icon Curve2D >}}`Curve2D` resource. The {{< gd-icon Path2D >}}`Path2D` is a node that allows you to position a path in 2D space, and do create a new path in the editor.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: Distinct from the above, this method returns the position *along* the path that's closest to the given point. Note that this may be in-between two of the path's defined points.
+推定: 座標
+----------------------------------------
+原文: #### The Position Problem
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: Another feature of “Asteroids” is that the screen “wraps around”. If the player goes off one side, it teleports to the other side. But we already talked above about how you can’t change a rigid body’s position without breaking the physics engine. This presents a huge problem when working with rigid bodies.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: If the ray is colliding, this will return the position of the collision (in *global* coordinates).
+推定: 座標
+----------------------------------------
+原文: Here's a player sprite with a raycast attached to the end of the gun. The `target_position` is set to `(250, 0)`.
+推定: 座標
+----------------------------------------
+原文: * **Target Position**
+推定: 位置
+----------------------------------------
+原文: When you move the body, you should not directly set its `position` property (unless you want to teleport it). Instead, you use the provided movement methods, which will detect collisions and allow you to respond to them. See below for examples of using each one.
+推定: 座標
+----------------------------------------
+原文: This creates a \"dumb\" rocket that travels in a straight line when fired. To use this projectile, instance it and call its `start()` method with the desired `Transform2D` to set its position and direction.
+推定: 座標
+----------------------------------------
+原文: The `parent` variable holds a reference to the character the pet should follow. We then get the `FollowPoint` node from that so we can get its position in `_physics_process()`:
+推定: 座標
+----------------------------------------
+原文: In the script for this scene, we have a `get_path_direction()` function. Given a position, this function finds the closest point on the path and puts the `PathFollow2D` there in order to find the forward direction.
+推定: 座標
+----------------------------------------
+原文: There are a few ways to do this, and in order to keep our agents from needing to know the implementation details, we'll have the track *tell* them which way to go based on their position. At any time if you ask the track which way is correct, it will tell you.
+推定: 座標
+----------------------------------------
+原文: Now we're back to the original image. Each pixel's color is being set to the color value of the texture at the same **UV** position.
+推定: 座標
+----------------------------------------
+原文: Varying the vertex positions over time can produce a variety of interesting effects:
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: Another feature of \"Asteroids\" is that the screen \"wraps around\". If the player\ngoes off one side, it teleports to the other side. But we already talked above\nabout how you can't change a rigid body's position without breaking the physics\nengine. This presents a huge problem when working with rigid bodies.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: > Allows you to read and **safely modify** the simulation state for the object. Use this instead of `_physics_process` if you need to directly change the body’s position or other physics properties.
+推定: 位置
+----------------------------------------
+原文: > You should not change a RigidBody2D’s position or linear_velocity every frame or even very often. If you need to directly affect the body’s state, use `_integrate_forces`, which allows you to directly access the physics state.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: ## The Position Problem
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: Reset the linear velocity to `(0, 0)`. Now what if you want to be able to toss\nthe ball? You should never set a rigid body's velocity or position manually -\nremember, these are simulating \"real-world\" style physics. In the real world,\nobjects can't instantly jump from place to place or from a standstill to a high\nspeed. If you try and do so, the physics engine will resist it, and unexpected\nmovement can occur. Instead, we must apply forces which create an acceleration in a certain\ndirection (also known as Newton's Second Law). Godot physics objects work in\nthe same way.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: The body's position is contained in the transform's `origin`. Change `_physics_process()`\nto `_integrate_forces()` and add the following code:
+推定: 座標
+----------------------------------------
+原文: To move a body, we need to apply a push in a given direction - a *force*. Once the body is moving, we want the force to get smaller as we get closer to the final position.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: You want a rigid body to move to a target position.
+推定: 位置
+----------------------------------------
+原文: As you can see, the `_integrate_forces()` function includes a parameter called `state`. This object is the [PhysicsDirectBodyState2D](https://docs.godotengine.org/en/stable/classes/class_physicsdirectbodystate2d.html) of our body. It contains all of the current physics properties such as the forces, velocity, position, etc.
+推定: 座標
+----------------------------------------
+原文: Finally, in `_integrate_forces()`, if there's a `teleport_position` set, we'll use it and then clear it:
+推定: 座標
+----------------------------------------
+原文: Wrapping around the screen is really teleportation: when the ship goes off the right side of the screen, you teleport it to the left side. However, if you just tried to change the `position`, you'd find that it instantly snapped back. This is because the physics engine is trying to control the position as well.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: Then, in `get_input()`, we'll set a random position:
+推定: 座標
+----------------------------------------
+原文: - _Length_: The groove's length. The attached bodies can't move past this maximum distance.\n- _Initial Offset_: Starting \"position\" along the groove.
+推定: 位置
+----------------------------------------
+原文: If the body is being dragged, we update its position to follow the mouse.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: We've also added a `break` if the path contacts the position of the *top* of the ground, so that we don't keep drawing in that case.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: `max_points` sets the maximum number of points you want to add to the line. In the `update_trajectory()` function, we get the bullet's starting position and velocity from the tank (remember, gravity is defined in the tank too, for this example). We then iterate through those points, moving the position each \"step\" by the same amount the bullet will move during one frame.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: When changing a raycast's `target_position` property, the physics engine won't recalculate its collisions until the next physics frame. `force_raycast_update()` lets you update the ray's state immediately. If it's not colliding, then we allow the move.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: Here's the actual movement code. When an input event occurs, we check the four directions to see which one matched, then pass it to `move()` to change the position.
+推定: 座標
+----------------------------------------
+原文: We'll ignore any input while the tween is running and remove the direct `position` change so that the tween can handle it.
+推定: 位置
+----------------------------------------
+原文: Lastly we can interpolate the position between tiles, giving a smooth feel to the movement. We'll use the `Tween` node to animate the `position` property.
+推定: 位置
+----------------------------------------
+原文: Grid- or tile-based movement means the character's position is restricted. They can only stand on a particular tile - never between two tiles.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: `snapped()` allows us to \"round\" the position to the nearest tile increment, and adding a half-tile amount makes sure the player is centered on the tile.
+推定: 座標
+----------------------------------------
+原文: 1. Add/remove any number of targets.\n1. Keep the camera's position centered at the midpoint of the targets.\n1. Adjust the camera's zoom to keep all targets on screen.
+推定: 位置
+----------------------------------------
+原文: Here, we loop through the targets' positions and find the common center. Using `lerp()` we make sure it moves there smoothly.
+推定: 座標
+----------------------------------------
+原文: Notice that as the  player rotates, the Muzzle's `transform` remains oriented the same way relative to the gun. This will be very convenient when spawning the bullets, as they can use the transform to get the proper position *and* direction. We just set the new bullet's `transform` equal to the muzzle's.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: {{% notice info %}}\nYou can also implement this moving platform technique using an {{< gd-icon AnimationPlayer >}}`AnimationPlayer` rather than a tween. Much of the setup will be the same, but rather than tween code, you'll animate the body's `position` property.\n{{% /notice %}}
+推定: 座標
+----------------------------------------
+原文: - {{< gd-icon Node2D >}}`Node2D` (\"MovingPlatform\"): The `Node2D` parent is there to act as the \"anchor\" or start point for the platform. We'll animate the platform's `position` relative to this parent node.\n  - {{< gd-icon AnimatableBody2D >}}`AnimatableBody2D`: This represents the platform itself. This is the node that will move.\n    - {{< gd-icon Sprite2D >}}`Sprite2D`: You can use a sprite sheet here, individual images, or even a {{< gd-icon TileMap >}}`TileMap`.\n    - {{< gd-icon CollisionShape2D >}}`CollisionShape2D`: Don't make the hitbox too big, or the player will appear to be \"hovering\" off the edge of the platform.
+推定: 位置
+----------------------------------------
+原文: If there's only one event active, then this must be a one-finger drag, and we can adjust our camera's position accordingly. Note that we need to scale the movement based on the current `zoom`, or else our drag movement will be disproportionately large when zoomed in and small when zoomed out. Similarly, if the camera is rotated, that rotation should be applied to the relative value as well so that the drag moves the camera in the correct direction.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: Note that this is using the node's `position`, which is usually the center of your sprite and/or body.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: 1. Compare your player's position
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: Note that we stop moving if we get close to the target position. If you don't do this, the character will \"jiggle\" back and forth as it moves a little bit past the target, moves back, goes a little past it, and so on. Optionally, you can use `look_at()` to face in the direction of movement.
+推定: 座標
+----------------------------------------
+原文: Now we can assign a target to each camera and it will follow that node's position.\nWe'll do that in the `Main` script:
+推定: 位置
+----------------------------------------
+原文: We'll need another {{< gd-icon ViewportContainer >}}`ViewportContainer`, this one a child of `Main`. This time, we\n*don't* want to use _Stretch_. Add a {{< gd-icon Viewport >}}`Viewport` and set its _Size_ to `(340, 200)`\nthen add a {{< gd-icon Camera2D >}}`Camera2D`. We'll set the {{< gd-icon Viewport >}}`Camera2D`'s _Position_ to `(512, 300)` to center\nit on the screen. We'll zoom out by setting _Zoom_ to `(9, 9)`. Don't forget to\nclick _Current_ on this camera as well.
+推定: 座標
+----------------------------------------
+原文: Since we want to give the impression that the objects are on the \"ground\", we can solve this by offsetting each object's sprite so that the object's `position` is aligned with the *bottom* of the sprite:
+推定: 座標
+----------------------------------------
+原文: To choose which animation to play, we need to get the mouse direction and map it to this same range of `0-7`. `get_local_mouse_position()` gives us the position of the mouse relative to the character. We can then use `snappedf()` to snap the angle of the mouse vector to the closest multiple of 45° (`PI/4` radians) giving the following result:
+推定: 座標
+----------------------------------------
+原文: | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_09/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_end/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n|------|------:|
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_03/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_05/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n|------|------:|
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: This should look fairly familiar, as it's similar to the player script. We're only changing the `position.y` since the bullet should travel straight up.
+推定: 座標
+----------------------------------------
+原文: Note the `start()` function we defined. That will let us set the bullet's starting `position`, since the player will move around and spawn the bullets at different locations.
+推定: 座標
+----------------------------------------
+原文: If the player is allowed to shoot, then we set the flag to `false`, and start the cooldown timer. Then we create a new bullet and add it to the game, calling its `start()` function to make sure it's placed in the correct position (just above the player's ship).
+推定: 座標
+----------------------------------------
+原文: | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_04/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_06/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n|------|------:|
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: We can call this function when the player is pressing the key. Add this to the end of the `_process()` function, after the `position.clamp()` line:
+推定: 座標
+----------------------------------------
+原文: | {{% button href=\"/godot_recipes/4.x/games/first_2d/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_02/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n|------|------:|
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_05/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_07/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n|------|------:|
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: * _Move in 2D space_. For this, a basic {{< gd-icon Node2D >}}`Node2D` would suffice, as that's the node that has `position`, `rotation`, and other 2D-related properties. However, it has no appearance.
+推定: 位置
+----------------------------------------
+原文: * _Detect getting hit_. The enemies will be shooting and flying around on the screen, so we'll need to know when the ship is hit. We don't have a need for solid objects - they're not going to bounce off each other or transfer momentum - we just need to know when they touch. For this, an {{< gd-icon Area2D >}}`Area2D` would be perfect. It can detect touching other objects, has positional properties, but it has no appearance of its own.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_01/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_03/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n|------|------:|
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_02/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_04/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n|------|------:|
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: One problem we have is that if you keep moving, you'll go off the screen. We need to lock the player's `position` property inside the bounds of the screen rectangle. Add this line at the top of the script:
+推定: 座標
+----------------------------------------
+原文: * The `_process()` function is called once every frame by the engine. Any code we place in this function will be executed every frame.\n* `Input.get_vector()` checks the pressed state of the four given inputs and produces a vector pointing in that direction.\n* Finally, we move the ship's `position` by adding that input vector, scaling it to the desired speed, and multipling by `delta`.
+推定: 座標
+----------------------------------------
+原文: The next step is to *clamp* the position within the bounds of that `screensize` rectangle. `Vector2`, which is what `position` is, has a `clamp()` method we can use. Put this line right after setting the `position`:
+推定: 座標
+----------------------------------------
+原文: Run the scene again and try moving off the edges. You'll notice that half of the ship still goes off screen. This is because the ship's `position` is the center of the `Sprite2D`. Since we know our ship is `16x16`, we can change the `clamp()` to include `8` extra pixels:
+推定: 座標
+----------------------------------------
+原文: | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_06/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_08/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n|------|------:|
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: When we spawn our enemies we'll call this function and pass it a position vector representing where on the screen the enemy should go. Note that we actually spawn it *above* the top of the screen (negative `y` value). This is so that we can animate it coming onto the screen using a tween. We also randomize the two timers so that all enemies won't be moving and shooting at the same time.
+推定: 座標
+----------------------------------------
+原文: The `start_pos` variable is going to keep track of the enemy's starting position so that after it moves, it can return to its original location. We'll set it when the enemy is spawned and we call its `start()` function.
+推定: 座標
+----------------------------------------
+原文: This makes 27 enemies and positions them in a grid in the top half of the screen. We also make sure to connect the `died` signal of each, so we need to create that function:
+推定: 座標
+----------------------------------------
+原文: | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_07/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_09/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n|------|------:|
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_08/\" icon=\"fas fa-arrow-left\" %}}Prev{{% /button %}} | {{% button href=\"/godot_recipes/4.x/games/first_2d/first_2d_10/\" icon=\"fas fa-arrow-right\" icon-position=\"right\" %}}Next{{% /button %}} |\n|------|------:|
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: *Containers* are {{< gd-icon Control >}}`Control` nodes that are designed to control the size and position of their children. Using them makes it easier to position and move Control nodes without having to do it manually. The {{< gd-icon MarginContainer >}}`MarginContainer` makes sure its children don't get too close to the edge.
+推定: 位置
+----------------------------------------
+原文: The \"Pivot\" node is how we'll make the player orbit the circle. The \"OrbitPosition\" will be offset by whatever the size of the circle is, and the player will follow it.
+推定: 座標
+----------------------------------------
+原文: The jumper is setting the rotation position when it's captured. Remove the line from `Jumper.gd` and put it in the circle's `capture()` method:
+推定: 座標
+----------------------------------------
+原文: This will mark the starting position for the game. Place it near the bottom-center of the screen.
+推定: 位置
+----------------------------------------
+原文: And let's change the `init()` function on the circle to also accept a position:
+推定: 座標
+----------------------------------------
+原文: Here's our `spawn_circle()` function. If it's passed a position, it'll use it, otherwise we pick a random one some distance away from the current target. These are temporary numbers - once we've got more of the gameplay up and running, we'll see how much they need to be adjusted.
+推定: 座標
+----------------------------------------
+原文: The `new_game()` function initializes the game - spawning a player and a circle at the start position, and setting the camera.
+推定: 座標
+----------------------------------------
+原文: One jarring thing is that the camera \"teleports\" when it moves to the next circle. We can improve this by enabling _Smoothing_ on the camera. The _Smoothing/Speed_ controls how quickly the camera interpolates to the new position. Try something between `5` and `10`.
+推定: 位置
+----------------------------------------
+原文: Move and orient each {{< gd-icon Marker3D >}}`Marker3D` in a different location of your choosing. The position's **-Z** axis should point at the car.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: We want to be able to have a few different chase camera positions. One close and one far, for example, or perhaps one looking straight down. Add a {{< gd-icon Node3D >}}`Node3D` to the car and name it `CameraPositions`. Add a few {{< gd-icon Marker3D >}}`Marker3D`s to this - as many as you would like.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: {{% notice tip %}}\nYou may find it helpful to temporarily attach a {{< gd-icon Camera3D >}}`Camera` to the position and use its \"Preview\" mode to help aim the {{< gd-icon Marker3D >}}`Marker3D` so that it's pointing directly where you want (you can remove the camera once you're done).\n![alt](/godot_recipes/3.x/img/3d_car_09.png)\n{{% /notice %}}
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: {{% notice warning %}}\nSetting a {{< gd-icon RigidBody2D >}}`RigidBody2D`'s physical properties, such as `position` or `linear_velocity` directly will not work correctly. The physics engine controls these values.\n{{% /notice %}}
+推定: 座標
+----------------------------------------
+原文: > You should not change a RigidBody2D’s `position` or `linear_velocity` every frame or even very often. If you need to directly affect the body’s state, use `_integrate_forces`, which allows you to directly access the physics state.
+推定: 位置 (デフォルト/判別困難)
+----------------------------------------
+原文: When moving a {{< gd-icon CharacterBody2D >}}`CharacterBody2D`, you should not set its `position` directly. Instead, you use the `move_and_collide()` or `move_and_slide()` methods. These methods move the body along a given vector and will instantly stop if a collision is detected with another body. After a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` has collided, any _collision response_ must be coded manually.
+推定: 座標
+----------------------------------------
+原文: By themselves, {{< gd-icon Viewport >}}`Viewport` nodes don't have position information (they don't\ninherit from {{< gd-icon Node3D >}}`Node3D` or {{< gd-icon Node2D >}}`Node2D`). We're going to use {{< gd-icon SubViewportContainer >}}`ViewportContainer`,\na {{< gd-icon Control >}}`Control` node, to hold each viewport. To keep them arranged side-by-side, we'll\nuse an {{< gd-icon HBoxContainer >}}`HBoxContainer`.
+推定: 座標
+----------------------------------------
+原文: * `Area2D` (\"Circle\")\n  * `Sprite`\n  * `CollisionShape2D`\n  * `Node2D` (\"Pivot\")\n      * `Marker2D` (\"OrbitPosition\")
+推定: 座標
+----------------------------------------
+原文: - **Marker2D (\"StartPosition\")**
+推定: 座標
+----------------------------------------
+
+【総括】
+「position」を含む文節数: 166
+「座標」と推定された数: 88
+「位置」と推定された数: 26
+ 判別困難(デフォルト「位置」)の数: 52
