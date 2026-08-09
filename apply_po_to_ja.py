@@ -42,9 +42,10 @@ def load_po(file_path):
 
     return translations_by_file
 
-def translate_content(content, translations):
+def translate_content(content, translations, sorted_keys=None):
     # Sort translations by length descending
-    sorted_keys = sorted(translations.keys(), key=len, reverse=True)
+    if sorted_keys is None:
+        sorted_keys = sorted(translations.keys(), key=len, reverse=True)
     
     # Identify and protect frontmatter and code blocks
     protected_blocks = []
@@ -90,6 +91,13 @@ def main():
     md_files = [f for f in md_files if not f.endswith('.ja.md')]
     
     print(f"Processing {len(md_files)} markdown files...")
+
+    # Pre-sort keys for each file reference in O(1) time
+    pre_sorted_keys = {
+        path: sorted(trans.keys(), key=len, reverse=True)
+        for path, trans in translations_by_file.items()
+    }
+
     files_created = 0
     
     for file_path in md_files:
@@ -100,16 +108,22 @@ def main():
 
             # Look up translations by matching the suffix of the reference
             file_translations = {}
+            matched_refs = []
             for po_ref, trans in translations_by_file.items():
                 if po_ref == rel_path or po_ref.endswith('/' + rel_path):
                     # Merge dictionaries in case there are multiple matching refs
                     file_translations.update(trans)
+                    matched_refs.append(po_ref)
 
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
             
             if file_translations:
-                translated = translate_content(content, file_translations)
+                if len(matched_refs) == 1:
+                    sorted_keys = pre_sorted_keys[matched_refs[0]]
+                else:
+                    sorted_keys = sorted(file_translations.keys(), key=len, reverse=True)
+                translated = translate_content(content, file_translations, sorted_keys=sorted_keys)
             else:
                 translated = content
             
