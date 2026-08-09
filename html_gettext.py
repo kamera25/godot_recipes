@@ -124,6 +124,10 @@ def apply_translations(docs_dir, po_file):
     html_files = glob.glob(os.path.join(docs_dir, '**', '*.html'), recursive=True)
     files_modified = 0
 
+    # 各翻訳について、HTMLソース内の元のインナーHTMLを置換する
+    # 長い文字列から先に置換する（部分一致による誤置換を防ぐため）
+    sorted_keys = sorted(valid_translations.keys(), key=len, reverse=True)
+
     for file_path in html_files:
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
@@ -131,9 +135,6 @@ def apply_translations(docs_dir, po_file):
 
             original_content = content
             
-            # 各翻訳について、HTMLソース内の元のインナーHTMLを置換する
-            # 長い文字列から先に置換する（部分一致による誤置換を防ぐため）
-            sorted_keys = sorted(valid_translations.keys(), key=len, reverse=True)
             for msgid in sorted_keys:
                 msgstr = valid_translations[msgid]
                 if msgid in content:
