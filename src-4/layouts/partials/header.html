@@ -23,9 +23,9 @@
     {{- if .IsTranslated -}}
       {{- range $index, $trans := .AllTranslations }}
         {{- if eq $index 0 }}
-    <link href="{{ partial "relLangPrettyUglyURL.hugo" (dict "to" . "abs" true "basename" $basename) }}" rel="alternate" hreflang="x-default">
+    <link href="{{ $trans.Permalink }}" rel="alternate" hreflang="x-default">
         {{- end }}
-    <link href="{{ partial "relLangPrettyUglyURL.hugo" (dict "to" . "abs" true "basename" $basename) }}" rel="alternate" hreflang="{{ .Language.Lang }}">
+    <link href="{{ $trans.Permalink }}" rel="alternate" hreflang="{{ $trans.Language.Lang }}">
       {{- end }}
     {{- end }}
 

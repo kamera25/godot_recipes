@@ -1,5 +1,6 @@
 +++
 title = "物理"
+description = "Godot 4の物理ノードと衝突判定を使って、キャラクターやオブジェクトの動きを実装する方法を学びます。"
 weight = 6
 chapter = true
 pre = "<i class='fas fa-atom fa-fw'></i>&nbsp"

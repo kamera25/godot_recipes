@@ -1,8 +1,8 @@
 baseURL = 'https://kamera25.github.io/godot_recipes/4.x/'
-languageCode = 'ja-jp'
+languageCode = 'en-us'
 defaultContentLanguage = 'en'
 publishDir = "../docs/4.x"
-title = 'Godot 4 レシピ'
+title = 'Godot Recipes'
 theme = "hugo-theme-relearn-main"
 pygmentsStyle = "nord"
 pygmentsCodeFences = true
@@ -12,8 +12,10 @@ themesDir = "../themes_shared"
 [languages]
   [languages.en]
     languageName = "English"
+    languageCode = "en-us"
     contentDir = "content"
     weight = 1
+    title = "Godot Recipes"
 
     [[languages.en.menu.shortcuts]]
     name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
@@ -33,10 +35,11 @@ themesDir = "../themes_shared"
     weight = 40
 
     [languages.en.params]
-    description = "An unofficial Japanese translation site of Godot Recipes, featuring game development tutorials, tips, and code examples for Godot 4."
+    description = "Godot 4 game development tutorials, recipes, tips, and code examples from KidsCanCode."
 
   [languages.ja]
     languageName = "日本語"
+    languageCode = "ja-jp"
     contentDir = "content"
     weight = 2
     title = 'Godot 4 レシピ'
@@ -74,6 +77,7 @@ themesDir = "../themes_shared"
     description = "Godot Engineを用いたゲーム開発のチュートリアルや実装例を豊富に含んだ非公式日本語訳サイトです。"
 
 [params]
+    disableExplicitIndexURLs = true
     disableNextPrev = true
     themeVariant = ["auto", "relearn-light", "relearn-dark", "neon"]
     disableInlineCopyToClipBoard = true

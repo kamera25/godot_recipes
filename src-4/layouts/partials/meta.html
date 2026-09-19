@@ -12,7 +12,8 @@
     {{- if not (and .Title (or (ne (.Scratch.Get "relearnIsHiddenStem") true) (ne .Site.Params.disableSeoHiddenPages true) ) ) }}
     <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
     {{- end }}
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+    {{- $description := partial "page-description.html" . -}}
+    <meta name="description" content="{{ $description | htmlEscape }}">
     {{- with .Site.Params.author }}
     <meta name="author" content="{{ . }}">
     {{- end }}
@@ -27,7 +28,7 @@
     <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:image" content="{{ "img/godot-chan.png" | absURL }}">
-    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+    <meta property="og:description" content="{{ $description | htmlEscape }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     {{- if eq .Page.Lang "ja" }}
     <meta property="og:locale" content="ja_JP">
@@ -47,7 +48,6 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $title }}">
-    <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+    <meta name="twitter:description" content="{{ $description | htmlEscape }}">
     <meta name="twitter:image" content="{{ "img/godot-chan.png" | absURL }}">
     {{- partial "json-ld.html" . }}
-

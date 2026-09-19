@@ -1,5 +1,6 @@
 +++
 title = "ゲームチュートリアル"
+description = "Godot 4で小さなゲームを作りながら学べる、2Dゲームなどの実践チュートリアルです。"
 weight = 20
 chapter = true
 pre = "<i class='fas fa-chess-pawn fa-fw'></i>&nbsp"

@@ -1,5 +1,6 @@
 +++
 title = "3D"
+description = "Godot 4の3Dゲーム開発に役立つカメラ、キャラクター、物理、車両などのチュートリアルと実装例です。"
 weight = 4
 chapter = true
 pre = "<i class='fas fa-cube fa-fw'></i>&nbsp"

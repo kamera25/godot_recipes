@@ -1,73 +1,75 @@
-{{- $dot := . -}}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "{{ .Site.BaseURL | safeJS }}#website",
-      "url": "{{ .Site.BaseURL | safeJS }}",
-      "name": "{{ .Site.Title | safeJS }}",
-      "description": "{{ .Site.Params.description | safeJS }}",
-      "inLanguage": "{{ .Page.Language | default "ja-JP" | safeJS }}"
-    },
-    {{- if not .IsHome }}
-    {
-      "@type": "BreadcrumbList",
-      "@id": "{{ .Permalink | safeJS }}#breadcrumb",
-      "itemListElement": [
-        {{- $breadcrumb := slice }}
-        {{- $to := . }}
-        {{- $breadcrumb = $breadcrumb | append $to }}
-        {{- $depth := int (partial "get-page-depth.hugo" (dict "page" .)) }}
-        {{- range seq $depth }}
-          {{- $to = $to.Parent }}
-          {{- if $to }}
-            {{- $breadcrumb = $breadcrumb | append $to }}
-          {{- else }}
-            {{- break }}
-          {{- end }}
-        {{- end }}
-        {{- $len := len $breadcrumb }}
-        {{- range $i, $e := $breadcrumb }}
-          {{- if $i }},{{- end }}
-          {
-            "@type": "ListItem",
-            "position": {{ sub $len $i }},
-            "name": "{{ if $e.Title }}{{ $e.Title | safeJS }}{{ else }}{{ $e.Site.Title | safeJS }}{{ end }}",
-            "item": "{{ $e.Permalink | safeJS }}"
-          }
-        {{- end }}
-      ]
-    },
-    {{- end }}
-    {{- if .IsPage }}
-    {
-      "@type": "TechArticle",
-      "@id": "{{ .Permalink | safeJS }}#article",
-      "isPartOf": { "@id": "{{ .Site.BaseURL | safeJS }}#website" },
-      "headline": "{{ .Title | safeJS }}",
-      "description": "{{ with .Description }}{{ . | safeJS }}{{ else }}{{ .Summary | plainify | safeJS }}{{ end }}",
-      "image": "{{ "img/godot-chan.png" | absURL | safeJS }}",
-      "author": {
-        "@type": "Person",
-        "name": "{{ .Site.Params.author | default "kamera25" | safeJS }}"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "{{ .Site.Title | safeJS }}",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "{{ "img/favicon.png" | absURL | safeJS }}"
-        }
-      }
-      {{- if not .PublishDate.IsZero }},"datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" | safeJS }}"{{ end }}
-      {{- if not .Lastmod.IsZero }},"dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | safeJS }}"{{ end }},
-      "inLanguage": "{{ .Page.Language | default "ja-JP" | safeJS }}"
-    }
-
-
-    {{- end }}
-  ]
-}
-</script>
+{{- $description := partial "page-description.html" . -}}
+{{- $language := .Language.Lang | default .Site.Language.Lang | default "en" -}}
+{{- $siteURL := .Site.Home.Permalink -}}
+{{- $website := dict
+  "@type" "WebSite"
+  "@id" (printf "%s#website" $siteURL)
+  "url" $siteURL
+  "name" .Site.Title
+  "description" .Site.Params.description
+  "inLanguage" $language
+-}}
+{{- $graph := slice $website -}}
+{{- if not .IsHome -}}
+  {{- $breadcrumb := slice . -}}
+  {{- $to := . -}}
+  {{- $depth := int (partial "get-page-depth.hugo" (dict "page" .)) -}}
+  {{- range seq $depth -}}
+    {{- $to = $to.Parent -}}
+    {{- if $to -}}
+      {{- $breadcrumb = $breadcrumb | append $to -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $breadcrumbItems := slice -}}
+  {{- $breadcrumbLength := len $breadcrumb -}}
+  {{- range $index, $_ := $breadcrumb -}}
+    {{- $item := index $breadcrumb (sub (sub $breadcrumbLength $index) 1) -}}
+    {{- $name := $item.Title | default $item.Site.Title -}}
+    {{- $breadcrumbItems = $breadcrumbItems | append (dict
+      "@type" "ListItem"
+      "position" (add $index 1)
+      "name" $name
+      "item" $item.Permalink
+    ) -}}
+  {{- end -}}
+  {{- $graph = $graph | append (dict
+    "@type" "BreadcrumbList"
+    "@id" (printf "%s#breadcrumb" .Permalink)
+    "itemListElement" $breadcrumbItems
+  ) -}}
+{{- end -}}
+{{- if .IsPage -}}
+  {{- $article := dict
+    "@type" "TechArticle"
+    "@id" (printf "%s#article" .Permalink)
+    "isPartOf" (dict "@id" (printf "%s#website" $siteURL))
+    "headline" .Title
+    "description" $description
+    "image" ("img/godot-chan.png" | absURL)
+    "author" (dict
+      "@type" "Organization"
+      "name" "KidsCanCode"
+      "url" "https://kidscancode.org/"
+    )
+    "publisher" (dict
+      "@type" "Organization"
+      "name" .Site.Title
+      "logo" (dict
+        "@type" "ImageObject"
+        "url" ("img/godot-chan.png" | absURL)
+      )
+    )
+    "inLanguage" $language
+  -}}
+  {{- if eq $language "ja" -}}
+    {{- $article = merge $article (dict "translator" (dict "@type" "Person" "name" "kamera25")) -}}
+  {{- end -}}
+  {{- if not .PublishDate.IsZero -}}
+    {{- $article = merge $article (dict "datePublished" (.PublishDate.Format "2006-01-02T15:04:05Z07:00")) -}}
+  {{- end -}}
+  {{- if not .Lastmod.IsZero -}}
+    {{- $article = merge $article (dict "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")) -}}
+  {{- end -}}
+  {{- $graph = $graph | append $article -}}
+{{- end -}}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeJS }}</script>

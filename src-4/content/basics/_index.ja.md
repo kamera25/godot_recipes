@@ -1,5 +1,6 @@
 +++
 title = "基本編"
+description = "Godot 4を使い始めるためのノード、シーン、スクリプト、リソースなど基本操作のチュートリアルです。"
 weight = 2
 chapter = true
 pre = "<i class='fas fa-toolbox fa-fw'></i>&nbsp"

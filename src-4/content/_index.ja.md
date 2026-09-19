@@ -1,5 +1,6 @@
 ---
-title: "ホーム"
+title: "Godot 4のゲーム開発チュートリアルと実践レシピ"
+description: "Godot 4でゲームを作りたい人向けに、初心者ガイドから2D・3D、入力、物理、UIまでのチュートリアルと実装例を紹介する非公式日本語訳サイトです。"
 date: 2019-04-09T22:57:31-07:00
 draft: false
 ---
@@ -10,20 +11,23 @@ draft: false
 
 このサイトでは、ゲームシステムを構築するための解決策と実例を提供しています。
 
-{{% notice style="tip" title="Godot 4.0"%}}
-**Godot 4.0が正式リリースされました！**<br>
-Godot 4.0はエンジンの最新安定版バージョンです。<br>
-このサイト(注 : 原文サイトには。この非公式日本語版にはGodot 3の日本語訳はありません。)にはGodot 3向けの学習教材も充実しており、その多くは今でも十分に活用できます。以下のボタンからアクセスできます。<br>
-{{% button href="https://kidscancode.org/godot_recipes/4.x/ja/" style="primary" icon="utensils" %}}Godot 3レシピ集 (原文・英語){{% /button %}}
+本サイトはKidsCanCodeの「Godot Recipes」を原著とする非公式日本語訳です。翻訳・運営はkamera25が行っています。
+
+{{% notice style="tip" title="Godotのバージョンについて"%}}
+このサイトはGodot 4.x向けのチュートリアルと実装例を掲載しています。記事によってはGodot 3からの移行中で、古いバージョンの記述が残っている場合があります。<br>
+Godot 3.x向けの原文（英語）は、原著者KidsCanCodeの[Godot Recipes](https://kidscancode.org/godot_recipes/3.x/)で確認できます。<br>
+{{% button href="https://kidscancode.org/godot_recipes/3.x/" style="primary" icon="utensils" %}}Godot 3レシピ集（原文・英語）{{% /button %}}
 {{% /notice %}}
 
 ゲーム開発を学ぶ準備はできていますか？趣味として、あるいは夢のキャリアへの最初の一歩として、今ほど良いタイミングはありません。現代のプログラミング言語とツールを駆使すれば、高品質なゲームを簡単に作成できます。また世界中に向けて配信できます。その中の一つがGodotゲームエンジンです。初心者でもゲーム開発技術を楽しく、親しみやすい方法で学ぶことができます。一方、経験豊富な開発者にとっては、自らのビジョンを形にするための強力なツールです。カスタマイズも可能で、オープンソースとして利用できます。
 
-![alt](/godot_recipes/4.x/img/godot3_logo.png?width=400px)
+![Godotのロゴ](/godot_recipes/4.x/img/godot3_logo.png?width=400px)
 
 このサイトでは、Godotゲームエンジンの初心者向けガイドをはじめ、さまざまなゲーム開発のヒントやテクニックを幅広く紹介しています。サイドバーのコンテンツを自由に閲覧して、興味のある分野を見てみてください。
 
 Godotを初めて使う方はまずは [Godotとは？](/godot_recipes/4.x/ja/g101/start/101_01/) から始めてください。
+
+目的に合う記事を探す場合は、[はじめてのGodot](/godot_recipes/4.x/ja/g101/)、[2D](/godot_recipes/4.x/ja/2d/)、[3D](/godot_recipes/4.x/ja/3d/)、[入力](/godot_recipes/4.x/ja/input/)、[物理](/godot_recipes/4.x/ja/physics/)、[UI](/godot_recipes/4.x/ja/ui/)の各カテゴリから選べます。
 
 ### このサイトの利用方法
 

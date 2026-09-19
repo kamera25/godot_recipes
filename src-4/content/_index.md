@@ -1,5 +1,6 @@
 ---
-title: "Home"
+title: "Godot 4 Game Development Tutorials and Recipes"
+description: "Godot 4 game development tutorials, recipes, tips, and practical code examples covering beginner guides, 2D, 3D, input, physics, and UI."
 date: 2019-04-09T22:57:31-07:00
 draft: false
 ---
@@ -10,20 +11,21 @@ draft: false
 
 On this site you'll find a collection of solutions and examples to help you make whatever game system you need.
 
-{{% notice style="tip" title="Godot 4.0"%}}
-**Godot 4.0 has been released!**<br>
-Godot 4.0 is the latest stable release version of the engine.<br>
-This site also has lots of learning material for Godot 3 - much of it is still useful! You can click the ribbon in the top-right to toggle the Godot Recipes version, or click the button below:<br>
-{{% button href="/godot_recipes/3.x/" style="primary" icon="utensils" %}}Godot 3 Recipes{{% /button %}}
+{{% notice style="tip" title="Godot versions"%}}
+This site contains tutorials and examples for Godot 4.x. Some articles are still being updated from Godot 3, so older version references may remain.<br>
+For the original English Godot 3.x recipes, visit KidsCanCode's [Godot Recipes](https://kidscancode.org/godot_recipes/3.x/):<br>
+{{% button href="https://kidscancode.org/godot_recipes/3.x/" style="primary" icon="utensils" %}}Godot 3 Recipes (original English){{% /button %}}
 {{% /notice %}}
 
 Are you ready to learn game development? Whether it's as a hobby or working towards your dream career, there's never been a better time to get started. Modern programming languages and tools have made it easier than ever to build high-quality games and distribute them to the world. One of these tools is the Godot game engine. For beginners, it offers a friendly way to learn gamedev techniques. For experienced developers, it's a powerful, customizable and _open_ tool for bringing your visions to life.
 
-![alt](/godot_recipes/4.x/img/godot3_logo.png?width=400px)
+![Godot logo](/godot_recipes/4.x/img/godot3_logo.png?width=400px)
 
 On this site you'll find a gentle introduction to the Godot game engine, as well as a wide variety of gamedev tips and techniques. Feel free to browse the categories in the sidebar and see what catches your interest.
 
 If you're new to Godot, start here: [What is Godot?](/godot_recipes/4.x/g101/start/101_01/).
+
+Browse the [Godot 101](/godot_recipes/4.x/g101/), [2D](/godot_recipes/4.x/2d/), [3D](/godot_recipes/4.x/3d/), [input](/godot_recipes/4.x/input/), [physics](/godot_recipes/4.x/physics/), and [UI](/godot_recipes/4.x/ui/) sections to find the right topic.
 
 ### How to use this site
 
