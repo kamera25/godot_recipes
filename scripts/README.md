@@ -7,6 +7,7 @@
 - `./scripts/i18n.sh update` — Markdown の内容を `output.po` に反映
 - `./scripts/i18n.sh extract` — Markdown から PO を新規生成
 - `./scripts/i18n.sh apply` — `output.po` の翻訳を日本語 Markdown に適用
+- `./scripts/i18n.sh merge-html` — `docs_extracted.po` の新しい項目を `output.po` に追加
 - `./scripts/checks.sh` — PO、Python、GDScript、生成 HTML のチェックをまとめて実行
 - `./scripts/maintenance.sh fix-links` — PO 内の旧リンクを補正
 - `./scripts/maintenance.sh split-translation` — 翻訳文の手順分割を実行

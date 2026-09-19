@@ -5,6 +5,25 @@ import argparse
 import datetime
 import polib
 
+
+COMMENT_PREFIXES = ('#', '//', ';', '--', '/*', '*', '<!--', '-->')
+
+
+def extract_code_comments(content):
+    """Markdown のコードフェンスから、コメントだけの行を抽出する。"""
+    comments = set()
+    code_blocks = re.findall(r'```[^\n]*\r?\n.*?```', content, flags=re.DOTALL)
+    for block in code_blocks:
+        for line in block.splitlines()[1:-1]:
+            match = re.match(r'^[ \t]*(?P<comment>(?:#|//|;|--|/\*|\*|<!--|-->).*)[ \t]*$', line)
+            if not match:
+                continue
+            comment = match.group('comment').rstrip()
+            prefix = next((prefix for prefix in COMMENT_PREFIXES if comment.startswith(prefix)), None)
+            if prefix and comment[len(prefix):].strip(' \t*/'):
+                comments.add(comment)
+    return comments
+
 def extract_md_blocks(content):
     """Markdownからブロック要素を抽出し、翻訳可能なリストを返す。
     md_gettext.pyのロジックを流用。
@@ -75,6 +94,7 @@ def update_po_file(docs_dir, po_file_path, dry_run=False):
                 content = f.read()
             
             blocks = extract_md_blocks(content)
+            blocks.update(extract_code_comments(content))
             rel_path = os.path.relpath(file_path, docs_dir)
             
             for text in blocks:

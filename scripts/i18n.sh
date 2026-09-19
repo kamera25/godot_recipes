@@ -17,6 +17,7 @@ Commands:
   apply        Apply output.po translations to Japanese Markdown
   html-extract Create a PO from generated HTML in docs/
   html-apply   Apply the generated HTML PO translations to docs/
+  merge-html   Merge docs_extracted.po into output.po
 EOF
 }
 
@@ -38,6 +39,9 @@ case "$COMMAND" in
         ;;
     html-apply)
         python3 scripts/i18n/html_gettext.py apply --dir "$ROOT_DIR/docs" --po "$ROOT_DIR/docs_extracted.po" "$@"
+        ;;
+    merge-html)
+        python3 scripts/i18n/merge_po.py "$@"
         ;;
     *)
         usage

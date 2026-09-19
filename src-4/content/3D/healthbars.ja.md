@@ -67,7 +67,7 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 1. {{< gd-icon SubViewport >}}`SubViewport` を {{< gd-icon Sprite3D >}}`Sprite3D` の子要素として追加します。
 2. インスペクタウィンドウで、_Transparent BG_ 設定を **オン** に設定します。
 
-さらに、HPバーテクスチャのサイズに合わせてビューポートのサイズを設定する必要があり、そのサイズは`(200, 26)`です。
+さらに、HPバーテクスチャのサイズは`(200, 26)`に合わせて、ビューポートのサイズに合わせてください
 
 インスタンス化する際に、`HealthBar2D` を {{< gd-icon Viewport >}}`Viewport` の子要素として配置します。シーン構成は以下のようになるはずです。
 

@@ -3,8 +3,53 @@ import re
 import glob
 import subprocess
 
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..', '..'))
+
+
 def unescape_po_string(s):
     return s.replace('\\n', '\n').replace('\\"', '"').replace('\\\\', '\\')
+
+
+# コメントだけで構成されたコード行を翻訳対象にする。
+# インデントはコード側に残すため、PO にはコメント記号以降を含む行全体を登録する。
+COMMENT_PREFIXES = ('#', '//', ';', '--', '/*', '*', '<!--', '-->')
+
+
+def _comment_text(line):
+    """コード行からコメント部分を取り出す。コメント行でなければ None。"""
+    match = re.match(r'^[ \t]*(?P<comment>(?:#|//|;|--|/\*|\*|<!--|-->).*)[ \t]*$', line)
+    if not match:
+        return None
+
+    comment = match.group('comment').rstrip()
+    prefix = next((prefix for prefix in COMMENT_PREFIXES if comment.startswith(prefix)), None)
+    if prefix is None or not comment[len(prefix):].strip(' \t*/'):
+        return None
+    return comment
+
+
+def is_code_comment(msgid):
+    """msgid がコード内のコメント行かどうかを判定する。"""
+    return _comment_text(msgid) == msgid.strip()
+
+
+def translate_code_comments(code, translations):
+    """コードブロック内のコメント行だけを翻訳し、コード本体は変更しない。"""
+    def replace_line(match):
+        comment = _comment_text(match.group('line'))
+        if comment is None or comment not in translations:
+            return match.group(0)
+        return f"{match.group('line')[:len(match.group('line')) - len(match.group('line').lstrip())]}" \
+               f"{translations[comment]}{match.group('eol')}"
+
+    return re.sub(
+        r'^(?P<line>[ \t]*(?:#|//|;|--|/\*|\*|<!--|-->).*)(?P<eol>\r?\n|$)',
+        replace_line,
+        code,
+        flags=re.MULTILINE,
+    )
 
 def load_po(file_path):
     translations_by_file = {}
@@ -49,9 +94,14 @@ def translate_content(content, translations):
     # Identify and protect frontmatter and code blocks
     protected_blocks = []
     
+    code_comment_translations = {
+        msgid: msgstr for msgid, msgstr in translations.items()
+        if is_code_comment(msgid)
+    }
+
     def protect(match):
         placeholder = f"__PROTECTED_BLOCK_{len(protected_blocks)}__"
-        protected_blocks.append(match.group(0))
+        protected_blocks.append(translate_code_comments(match.group(0), code_comment_translations))
         return placeholder
 
     # Protect code blocks (```)
@@ -78,8 +128,9 @@ def translate_content(content, translations):
     return content
 
 def main():
-    po_file = './output.po'
-    content_dir = './src-4/content'
+    # 実行時のカレントディレクトリではなく、リポジトリルートを基準にする。
+    po_file = os.path.join(PROJECT_ROOT, 'output.po')
+    content_dir = os.path.join(PROJECT_ROOT, 'src-4', 'content')
     
     print(f"Loading translations from {po_file}...")
     translations_by_file = load_po(po_file)
