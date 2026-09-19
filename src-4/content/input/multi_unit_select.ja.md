@@ -43,11 +43,11 @@ var select_rect = RectangleShape2D.new()  # Collision shape for drag box.
 func _unhandled_input(event):
     if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
         if event.pressed:
-            # If the mouse was clicked and nothing is selected, start dragging
+            # マウスがクリックされ、何も選択されていない場合はドラッグを開始
             if selected.size() == 0:
                 dragging = true
                 drag_start = event.position
-        # If the mouse is released and is dragging, stop dragging
+        # マウスが離され、ドラッグ中であればドラッグを終了
         elif dragging:
             dragging = false
             queue_redraw()
@@ -109,11 +109,11 @@ elif dragging:
 func _unhandled_input(event):
     if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
         if event.pressed:
-            # If the mouse was clicked and nothing is selected, start dragging
+            # マウスがクリックされ、何も選択されていない場合はドラッグを開始
             if selected.size() == 0:
                 dragging = true
                 drag_start = event.position
-            # Otherwise a click tells the selected units to move
+            # それ以外の場合、クリックで選択中のユニットに移動を指示
             else:
                 for item in selected:
                     item.collider.target = event.position

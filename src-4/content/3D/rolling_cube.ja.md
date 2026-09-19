@@ -94,23 +94,23 @@ func _physics_process(delta):
         roll(-forward.cross(Vector3.UP))
 
 func roll(dir):
-    # Do nothing if we're currently rolling.
+    # 現在回転中の場合は何もしない。
     if rolling:
         return
     rolling = true
 
-    # Step 1: Offset the pivot.
+    # ステップ1: ピボットをオフセット。
     pivot.translate(dir * cube_size / 2)
     mesh.global_translate(-dir * cube_size / 2)
 
-    # Step 2: Animate the rotation.
+    # ステップ2: 回転アニメーションを実行。
     var axis = dir.cross(Vector3.DOWN)
     var tween = create_tween()
     tween.tween_property(pivot, "transform",
             pivot.transform.rotated_local(axis, PI/2), 1 / speed)
     await tween.finished
 
-    # Step 3: Finalize the movement and reset the offset.
+    # ステップ3: 移動を確定し、オフセットをリセット。
     transform.origin += dir * cube_size
     var b = mesh.global_transform.basis
     pivot.transform = Transform3D.IDENTITY
@@ -130,7 +130,7 @@ func roll(dir):
 Mesh の回転を保持するために 2 行追加します。
 
 ```gdscript
-    # Step 3: Finalize the movement and reset the offset.
+    # ステップ3: 移動を確定し、オフセットをリセット。
 	transform.origin += dir * cube_size
 	var b = mesh.global_transform.basis  # Save the mesh rotation.
 	pivot.transform = Transform3D.IDENTITY
@@ -143,7 +143,7 @@ Mesh の回転を保持するために 2 行追加します。
 ゲームに障害物を導入する場合、移動前に衝突判定を行えます（他のグリッドベース移動方式と同様）。移動処理の**ステップ1**の前に、レイキャストによる衝突チェックを追加します。
 
 ```gdscript
-# Cast a ray before moving to check for obstacles
+# 移動前にレイを飛ばして障害物がないか確認
 var space = get_world_3d().direct_space_state
 var ray = PhysicsRayQueryParameters3D.create(mesh.global_position,
         mesh.global_position + dir * cube_size, collision_mask, [self])

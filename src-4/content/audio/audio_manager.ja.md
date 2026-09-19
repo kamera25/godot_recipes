@@ -26,7 +26,7 @@ var queue = []  # The queue of sounds to play.
 
 
 func _ready():
-    # Create the pool of AudioStreamPlayer nodes.
+    # AudioStreamPlayerノードのプールを作成。
     for i in num_players:
         var player = AudioStreamPlayer.new()
         add_child(player)
@@ -36,7 +36,7 @@ func _ready():
 
 
 func _on_stream_finished(stream):
-    # When finished playing a stream, make the player available again.
+    # ストリームの再生が終了したら、プレイヤーを再び利用可能にする。
     available.append(stream)
 
 
@@ -45,7 +45,7 @@ func play(sound_path):
 
 
 func _process(delta):
-	# Play a queued sound if any players are available.
+	# 利用可能なプレイヤーがあればキューに入ったサウンドを再生。
     if not queue.empty() and not available.empty():
         available[0].stream = load(queue.pop_front())
         available[0].play()

@@ -88,10 +88,10 @@ draft: false
 ミニマップ上に表示させたい各アイテムを「minimap_objects」というグループに追加します。各オブジェクトのスクリプトにおいて、`minimap_icon`プロパティを適切に設定します。
 
 ```gdscript
-# In the mob's script:
+# モブのスクリプト内:
 var minimap_icon = "mob"
 
-# In the crate's script:
+# 木箱のスクリプト内:
 var minimap_icon = "alert"
 ```
 

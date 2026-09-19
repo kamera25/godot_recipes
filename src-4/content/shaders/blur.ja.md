@@ -36,9 +36,9 @@ void fragment() {
 ```gdscript
 extends Node
 
-# Add a ColorRect or other Control set to fill the screen
-# Place it lower in the tree and/or place in CanvasLayer
-# so it's on top of the rest of the scene.
+# 画面全体を満たすように設定したColorRectなどのControlを追加
+# ツリーの下位に配置するか、CanvasLayer内に配置してください
+# これによりシーンの他の要素の上に表示されます。
 @onready var blur = $Blur
 var blur_amount = 0
 

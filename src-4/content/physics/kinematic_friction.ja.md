@@ -69,10 +69,10 @@ func get_input():
     if Input.is_action_pressed("ui_left"):
         input_dir -= 1
     if dir != 0:
-        # accelerate when there's input
+        # 入力があるときは加速
         velocity.x = lerp(velocity.x, dir * speed, acceleration)
     else:
-        # slow down when there's no input
+        # 入力がないときは減速
         velocity.x = lerp(velocity.x, 0, friction)
 ```
 

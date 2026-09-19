@@ -89,10 +89,10 @@ func get_input():
     if Input.is_action_just_pressed("attack"):
         state_machine.travel(attacks.pick_random())
         return
-    # flip the character sprite left/right
+    # キャラクタースプライトを左右反転
     if velocity.x != 0:
         $Sprite2D.scale.x = sign(velocity.x)
-    # choose animation
+    # アニメーションを選択
     if velocity.length() > 0:
         state_machine.travel("run")
     else:

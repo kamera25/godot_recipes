@@ -50,12 +50,12 @@ When using `move_and_slide()`, it's a little trickier, as it's possible to have 
 以下に、衝突した対象を示すコードスニペットを2つ紹介します。どちらの場合も、事前に`velocity`変数が適切に設定されているものとします。
 
 ```gdscript
-# Using move_and_collide()
+# move_and_collide() を使用する場合
 var collision = move_and_collide(velocity * delta)
 if collision:
     print("I collided with ", collision.get_collider().name)
 
-# Using move_and_slide()
+# move_and_slide() を使用する場合
 move_and_slide()
 for i in get_slide_collision_count():
     var collision = get_slide_collision(i)

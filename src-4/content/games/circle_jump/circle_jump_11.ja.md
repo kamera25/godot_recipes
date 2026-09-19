@@ -59,7 +59,7 @@ _プロジェクト設定 -> エクスポートメニューでは、ダウンロ
 var admob = null
 var real_ads = false
 var banner_top = false
-# Fill these from your AdMob account:
+# AdMobアカウントから取得した情報をここに入力:
 var ad_banner_id = ""
 var ad_interstitial_id = ""
 var enable_ads = true

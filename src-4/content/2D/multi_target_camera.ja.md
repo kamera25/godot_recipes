@@ -72,7 +72,7 @@ func remove_target(t):
 func _process(delta):
     if !targets:
         return
-    # Keep the camera centered between the targets
+    # ターゲットの中間にカメラを維持
     var p = Vector2.ZERO
     for target in targets:
         p += target.position
@@ -85,7 +85,7 @@ func _process(delta):
 次に、ズーム機能について説明します。
 
 ```gdscript
-# Find the zoom that will contain all targets
+# すべてのターゲットを収めるズーム値を計算
 var r = Rect2(position, Vector2.ONE)
 for target in targets:
     r = r.expand(target.position)
@@ -125,14 +125,14 @@ func _process(delta):
     if !targets:
         return
 
-    # Keep the camera centered among all targets
+    # すべてのターゲットの中心にカメラを維持
     var p = Vector2.ZERO
     for target in targets:
         p += target.position
     p /= targets.size()
     position = lerp(position, p, move_speed * delta)
 
-    # Find the zoom that will contain all targets
+    # すべてのターゲットを収めるズーム値を計算
     var r = Rect2(position, Vector2.ONE)
     for target in targets:
         r = r.expand(target.position)
@@ -144,7 +144,7 @@ func _process(delta):
         z = 1 / clamp(r.size.y / screen_size.y, max_zoom, min_zoom)
     zoom = lerp(zoom, Vector2.ONE * z, zoom_speed * delta)
 
-    # For debug
+    # デバッグ用
     get_parent().draw_cam_rect(r)
 
 func add_target(t):

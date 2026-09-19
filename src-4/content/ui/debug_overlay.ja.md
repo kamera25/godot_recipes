@@ -43,7 +43,7 @@ class Property:
         mode = _mode
 
     func update_label():
-        # Sets the label's text.
+        # ラベルのテキストを設定します。
         var s = object.name + "/" + property + " : "
         var p = object.get_indexed(property)
         match mode:
@@ -75,7 +75,7 @@ func _process(_delta):
 　・ `label_ref` - 各プロパティは対応する {{< gd-icon Label >}}`Label`ノードと紐付けられており、この参照によりラベルの `text`属性を設定できます。
 　・ `mode` - 表示方法を指定するオプション設定です（詳細は後述）。
 
-In the `update_label()` method we build up a string to display in the label's `text` property. We include the object's name and which property we're showing, plus the value modified by the `mode` option.
+`update_label()` メソッドでは、ラベルの `text` プロパティに表示する文字列を構築します。オブジェクトの名前と表示対象のプロパティ名、さらに `mode` オプションによって変更された値を含めます。
 
 本例では、`mode` オプションの設定例として以下の2つのケースを示します。
 

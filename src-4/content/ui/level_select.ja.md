@@ -162,9 +162,9 @@ var grid_width = 710
 @onready var gridbox = $VBoxContainer/HBoxContainer/ClipControl/GridBox
 
 func _ready():
-    # Number all the level boxes and unlock them
-    # Replace with your game's level/unlocks/etc.
-    # You can also connect the "level_selected" signals here
+    # すべてのレベルボックスに番号を振り、アンロックします
+    # あなたのゲームのレベルやアンロック状況などに置き換えてください。
+    # ここで "level_selected" シグナルを接続することもできます
     num_grids = gridbox.get_child_count()
     for grid in gridbox.get_children():
         for box in grid.get_children():

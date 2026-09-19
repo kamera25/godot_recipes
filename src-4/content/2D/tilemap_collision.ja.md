@@ -18,13 +18,13 @@ ghcommentid: 19
 以下の状況を想定します。変数 `collision` に `KinematicCollision2D` オブジェクトが格納されている場合：
 
 ```gdscript
-# Confirm the colliding body is a TileMap
+# 衝突したボディがTileMapであることを確認
 if collision.collider is TileMap:
-    # Find the character's position in tile coordinates
+    # タイル座標におけるキャラクターの位置を取得
     var tile_pos = collision.collider.world_to_map(position)
-    # Find the colliding tile position
+    # 衝突したタイルの位置を取得
     tile_pos -= collision.normal
-    # Get the tile id
+    # タイルIDを取得
     var tile_id = collision.collider.get_cellv(tile_pos)
 ```
 

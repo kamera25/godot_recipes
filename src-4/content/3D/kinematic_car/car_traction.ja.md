@@ -37,7 +37,7 @@ var drifting = false
 次に、`car_base.gd` ファイルの `calculate_steering()` 関数内で、`new_heading` を計算した直後にこのコードを追加します。
 
 ```gdscript
-# traction
+# トラクション
 if not drifting and velocity.length() > slip_speed:
     drifting = true
 if drifting and velocity.length() < slip_speed and steer_angle == 0:

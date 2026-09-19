@@ -56,10 +56,10 @@ extends Node3D
 var rotation_speed = PI/2
 
 func get_input_keyboard(delta):
-    # Rotate outer gimbal around y axis
+    # 外側のジンバルをY軸周りに回転
     var y_rotation = Input.get_axis("cam_left", "cam_right")
     rotate_object_local(Vector3.UP, y_rotation * rotation_speed * delta)
-    # Rotate inner gimbal around local x axis
+    # 内側のジンバルをローカルX軸周りに回転
     var x_rotation = Input.get_axis("cam_up", "cam_down")
     x_rotation = -x_rotation if invert_y else x_rotation
     inner.rotate_object_local(Vector3.RIGHT, x_rotation * rotation_speed * delta)
@@ -88,7 +88,7 @@ func _process(delta):
 マウスとキーボードの制御を簡単に切り替えられるよう、`mouse_control`というフラグを追加します。
 
 ```gdscript
-# mouse properties
+# マウスのプロパティ
 var invert_y = false
 var invert_x = false
 var mouse_control = false
@@ -128,7 +128,7 @@ if event.relative.y != 0:
 カメラのズーム機能は、ジンバルシステムの`スケール`を変化させることで動作します。
 
 ```gdscript
-# zoom settings
+# ズーム設定
 var max_zoom = 3.0
 var min_zoom = 0.5
 var zoom_speed = 0.09
@@ -175,13 +175,13 @@ extends Node3D
 
 @export_range(0.0, 2.0) var rotation_speed = PI/2
 
-# mouse properties
+# マウスのプロパティ
 @export var mouse_control = false
 @export_range(0.001, 0.1) var mouse_sensitivity = 0.005
 @export var invert_y = false
 @export var invert_x = false
 
-# zoom settings
+# ズーム設定
 @export var max_zoom = 3.0
 @export var min_zoom = 0.4
 @export_range(0.05, 1.0) var zoom_speed = 0.09
@@ -208,10 +208,10 @@ func _unhandled_input(event):
             inner.rotate_object_local(Vector3.RIGHT, dir * y_rotation * mouse_sensitivity)
 
 func get_input_keyboard(delta):
-    # Rotate outer gimbal around y axis
+    # 外側のジンバルをY軸周りに回転
     var y_rotation = Input.get_axis("cam_left", "cam_right")
     rotate_object_local(Vector3.UP, y_rotation * rotation_speed * delta)
-    # Rotate inner gimbal around local x axis
+    # 内側のジンバルをローカルX軸周りに回転
     var x_rotation = Input.get_axis("cam_up", "cam_down")
     x_rotation = -x_rotation if invert_y else x_rotation
     inner.rotate_object_local(Vector3.RIGHT, x_rotation * rotation_speed * delta)

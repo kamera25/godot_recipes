@@ -86,7 +86,7 @@ extends CharacterBody2D
 @export var look_ahead = 100
 @export var num_rays = 8
 
-# context array
+# コンテキスト配列
 var ray_directions = []
 var interest = []
 var danger = []
@@ -133,18 +133,18 @@ func _physics_process(delta):
 
 ```gdscript
 func set_interest():
-    # Set interest in each slot based on world direction
+    # ワールド方向に基づいて各スロットの関心度を設定
     if owner and owner.has_method("get_path_direction"):
         var path_direction = owner.get_path_direction(position)
         for i in num_rays:
             var d = ray_directions[i].rotated(rotation).dot(path_direction)
             interest[i] = max(0, d)
-    # If no world path, use default interest
+    # ワールドパスがない場合は、デフォルトの関心度を使用
     else:
         set_default_interest()
 
 func set_default_interest():
-    # Default to moving forward
+    # デフォルトでは前進
     for i in num_rays:
         var d = ray_directions[i].rotated(rotation).dot(transform.x)
         interest[i] = max(0, d)
@@ -154,7 +154,7 @@ func set_default_interest():
 
 ```gdscript
 func set_danger():
-    # Cast rays to find danger directions
+    # レイを照射して危険な方向を検出
     var space_state = get_world_2d().direct_space_state
     for i in num_rays:
         var result = space_state.intersect_ray(position,
@@ -167,11 +167,11 @@ func set_danger():
 
 ```gdscript
 func choose_direction():
-    # Eliminate interest in slots with danger
+    # 危険のあるスロットの関心度を除外
     for i in num_rays:
         if danger[i] > 0.0:
             interest[i] = 0.0
-    # Choose direction based on remaining interest
+    # 残った関心度に基づいて方向を選択
     chosen_dir = Vector2.ZERO
     for i in num_rays:
         chosen_dir += ray_directions[i] * interest[i]

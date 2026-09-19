@@ -61,7 +61,7 @@ if is_on_floor():
 snap = transform.y * 128 if !is_jumping else Vector2.ZERO
 velocity = move_and_slide_with_snap(velocity.rotated(rotation),
         snap, -transform.y, true)
-# Convert velocity back to local space.
+# 速度をローカル空間に変換し直す。
 velocity = velocity.rotated(-rotation)
 ```
 

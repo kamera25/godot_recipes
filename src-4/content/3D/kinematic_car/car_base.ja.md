@@ -75,7 +75,7 @@ Godotでファイルを選択し、「インポート」タブに移動します
 ```gdscript
 extends CharacterBody3D
 
-# Car behavior parameters, adjust as needed
+# 車両の挙動パラメータ(必要に応じて調整)
 @export var gravity = -20.0
 @export var wheel_base = 0.6  # distance between front/rear axles
 @export var steering_limit = 10.0  # front wheel max turning angle (deg)
@@ -85,7 +85,7 @@ extends CharacterBody3D
 @export var drag = -2.0
 @export var max_speed_reverse = 3.0
 
-# Car state properties
+# 車両の状態プロパティ
 var acceleration = Vector3.ZERO  # current acceleration
 var velocity = Vector3.ZERO  # current velocity
 var steer_angle = 0.0  # current wheel angle
@@ -152,7 +152,7 @@ func calculate_steering(delta):
 
 ```gdscript
 func get_input():
-    # Override this in inherited scripts for controls
+    # 操作処理のために継承スクリプトでオーバーライドする
     pass
 ```
 

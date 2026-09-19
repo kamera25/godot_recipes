@@ -144,7 +144,7 @@ func _ready():
     health.reset()
 
 func hurt(amount):
-    # Called when running into obstacles
+    # 障害物に衝突したときに呼び出される
     health.take_damage(amount)
 ```
 

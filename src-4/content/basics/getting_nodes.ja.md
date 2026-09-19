@@ -56,7 +56,7 @@ $AnimatedSprite.play()
 
 ```gdscript
 get_node("HUD/ScoreLabel").text = "0"
-# or using the shortcut:
+# またはショートカットを使用:
 $HUD/ScoreLabel.text = "0"
 ```
 

@@ -44,7 +44,7 @@ func _unhandled_input(event):
 以下に、マウス操作による3Dキャラクターの回転動作を実装した具体例を紹介します。
 
 ```gdscript
-# Converts mouse movement (pixels) to rotation (radians).
+# マウスの移動量(ピクセル)を回転量(ラジアン)に変換します。
 var mouse_sensitivity = 0.002
 
 func _unhandled_input(event):

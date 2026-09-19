@@ -46,7 +46,7 @@ Godotの「入力アクション」システムについて理解を深めたい
 ```gdscript
 func _process(delta):
     if Input.is_action_pressed("shoot"):
-        # This will execute every frame as long as the input is held.
+        # 入力が保持されている間、毎フレーム実行されます。
 ```
 
 これは、継続的な動作――例えば移動など、常時確認が必要な状況に最適です。
@@ -56,7 +56,7 @@ func _process(delta):
 ```gdscript
 func _unhandled_input(event):
     if event.is_action_pressed("shoot"):
-       # This will run once on the frame when the action is first pressed
+       # アクションが最初に押されたフレームで1回だけ実行されます
 ```
 
 入力状態を確認するために使える関数があります。

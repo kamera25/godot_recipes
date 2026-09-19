@@ -30,7 +30,7 @@ Godotがシーンツリー内のノードをどのように処理するかを理
 extends Node
 
 func _init():
-    # Note: a Node doesn't have a "name" yet here.
+    # 注意: この時点ではNodeにはまだ "name" がありません。
     print("TestRoot init")
 
 func _enter_tree():
@@ -39,7 +39,7 @@ func _enter_tree():
 func _ready():
     print(name + " ready")
 
-# This ensures we only print *once* in process().
+# これによりprocess()内で1回だけ出力されるようにします。
 var test = true
 func _process(delta):
     if test:

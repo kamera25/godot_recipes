@@ -32,7 +32,7 @@ extends Camera2D
 
 @export var target: NodePath
 
-# Optional: export these properties for convenient editing.
+# オプション: 編集しやすいようにこれらのプロパティをエクスポートする。
 var target_return_enabled = true
 var target_return_rate = 0.02
 var min_zoom = 0.5

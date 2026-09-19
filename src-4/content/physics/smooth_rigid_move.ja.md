@@ -18,7 +18,7 @@ draft: false
 
 
 ```gdscript
-# Smoothly move to target
+# ターゲットへ滑らかに移動
 extends RigidBody2D
 
 var linear_force = 5

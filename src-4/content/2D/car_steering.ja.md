@@ -88,15 +88,15 @@ func get_input():
 
 ```gdscript
 func calculate_steering(delta):
-    # 1. Find the wheel positions
+    # 1. 車輪の位置を取得
     var rear_wheel = position - transform.x * wheel_base / 2.0
     var front_wheel = position + transform.x * wheel_base / 2.0
-    # 2. Move the wheels forward
+    # 2. 車輪を前進させる
     rear_wheel += velocity * delta
     front_wheel += velocity.rotated(steer_direction) * delta
-    # 3. Find the new direction vector
+    # 3. 新しい方向ベクトルを取得
     var new_heading = rear_wheel.direction_to(front_wheel)
-    # 4. Set the velocity and rotation to the new direction
+    # 4. 速度と回転を新しい方向に設定
     velocity = new_heading * velocity.length()
     rotation = new_heading.angle()
 ```
@@ -243,7 +243,7 @@ func calculate_steering(delta):
     rear_wheel += velocity * delta
     front_wheel += velocity.rotated(steer_angle) * delta
     var new_heading = (front_wheel - rear_wheel).normalized()
-    # choose which traction value to use - at lower speeds, slip should be low
+    # 使用するトラクション値を選択 - 低速時はスリップを抑える
     var traction = traction_slow
     if velocity.length() > slip_speed:
         traction = traction_fast

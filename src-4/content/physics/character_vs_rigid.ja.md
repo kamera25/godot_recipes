@@ -55,11 +55,11 @@ draft: false
 衝突する物体に「押し」を与えるには、インパルスを適用が必要です。インパルスとは「瞬間的な衝撃的の力」のことで、野球でバットがボールを打つようなイメージです。これは、物体に対して連続的に力を加えるのとは異なります。
 
 ```gdscript
-# This represents the player's inertia.
+# これはプレイヤーの慣性を表します。
 var push_force = 80.0
 
 func _physics_process(delta):
-    # after calling move_and_slide()
+    # move_and_slide() を呼び出した後
     for i in get_slide_collision_count():
         var c = get_slide_collision(i)
         if c.get_collider() is RigidBody2D:

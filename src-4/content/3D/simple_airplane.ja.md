@@ -31,26 +31,26 @@ draft: false
 ```gdscript
 extends CharacterBody3D
 
-# Can't fly below this speed
+# この速度以下では飛行不能
 var min_flight_speed = 12
-# Maximum airspeed
+# 最高対気速度
 var max_flight_speed = 40
-# Turn rate
+# 旋回速度
 var turn_speed = 0.75
-# Climb/dive rate
+# 上昇/降下率
 var pitch_speed = 0.5
-# Wings "autolevel" speed
+# 主翼の「自動水平復帰」速度
 var level_speed = 3.0
-# Throttle change speed
+# スロットル変化速度
 var throttle_delta = 50
-# Acceleration/deceleration
+# 加速/減速
 var acceleration = 6.0
 
-# Current speed
+# 現在の速度
 var forward_speed = 0
-# Throttle input speed
+# スロットル入力速度
 var target_speed = 0
-# Lets us change behavior when grounded
+# 着地時に動作を変更できるようにする
 var grounded = false
 
 var turn_input = 0
@@ -67,17 +67,17 @@ var pitch_input = 0
 
 ```gdscript
 func get_input(delta):
-    # Throttle input
+    # スロットル入力
     if Input.is_action_pressed("throttle_up"):
         target_speed = min(forward_speed + throttle_delta * delta, max_flight_speed)
     if Input.is_action_pressed("throttle_down"):
         var limit = 0 if grounded else min_flight_speed
         target_speed = max(forward_speed - throttle_delta * delta, limit)
 
-    # Turn (roll/yaw) input
+    # 旋回(ロール/ヨー)入力
     turn_input = Input.get_axis("roll_right", "roll_left")
 
-    # Pitch (climb/dive) input
+    # ピッチ(上昇/降下)入力
     pitch_input =  Input.get_axis("pitch_down", "pitch_up")
 ```
 
@@ -88,10 +88,10 @@ func get_input(delta):
 ```gdscript
 func _physics_process(delta):
     get_input(delta)
-    # Accelerate/decelerate
+    # 加速/減速
     forward_speed = lerpf(forward_speed, target_speed, acceleration * delta)
 
-    # Movement is always forward
+    # 移動は常に前方向
     velocity = -transform.basis.z * forward_speed
 
     move_and_slide()
@@ -149,19 +149,19 @@ func _physics_process(delta):
     transform.basis = transform.basis.rotated(transform.basis.x, pitch_input * pitch_speed * delta)
     transform.basis = transform.basis.rotated(Vector3.UP, turn_input * turn_speed * delta)
 
-    # Bank when turning
+    # 旋回時のバンク(傾き)
     if grounded:
         mesh.rotation.z = 0
     else:
         mesh.rotation.z = lerpf(mesh.rotation.z, -turn_input, level_speed * delta)
 
-    # Accelerate/decelerate
+    # 加速/減速
     forward_speed = lerpf(forward_speed, target_speed, acceleration * delta)
 
-    # Movement is always forward
+    # 移動は常に前方向
     velocity = -transform.basis.z * forward_speed
 
-    # Landing
+    # 着陸
     if is_on_floor():
         if not grounded:
             rotation.x = 0
@@ -175,19 +175,19 @@ func _physics_process(delta):
 
 ```gdscript
 func get_input(delta):
-    # Throttle input
+    # スロットル入力
     if Input.is_action_pressed("throttle_up"):
         target_speed = min(forward_speed + throttle_delta * delta, max_flight_speed)
     if Input.is_action_pressed("throttle_down"):
         var limit = 0 if grounded else min_flight_speed
         target_speed = max(forward_speed - throttle_delta * delta, limit)
 
-    # Turn (roll/yaw) input
+    # 旋回(ロール/ヨー)入力
     turn_input = Input.get_axis("roll_right", "roll_left")
     if forward_speed <= 0.5:
         turn_input = 0
 
-    # Pitch (climb/dive) input
+    # ピッチ(上昇/降下)入力
     pitch_input = 0
     if not grounded:
         pitch_input -= Input.get_action_strength("pitch_down")
@@ -206,26 +206,26 @@ func get_input(delta):
 ```gdscript
 extends CharacterBody3D
 
-# Can't fly below this speed
+# この速度以下では飛行不能
 var min_flight_speed = 12
-# Maximum airspeed
+# 最高対気速度
 var max_flight_speed = 40
-# Turn rate
+# 旋回速度
 var turn_speed = 0.75
-# Climb/dive rate
+# 上昇/降下率
 var pitch_speed = 0.5
-# Wings "autolevel" speed
+# 主翼の「自動水平復帰」速度
 var level_speed = 3.0
-# Throttle change speed
+# スロットル変化速度
 var throttle_delta = 50
-# Acceleration/deceleration
+# 加速/減速
 var acceleration = 6.0
 
-# Current speed
+# 現在の速度
 var forward_speed = 0
-# Throttle input speed
+# スロットル入力速度
 var target_speed = 0
-# Lets us change behavior when grounded
+# 着地時に動作を変更できるようにする
 var grounded = false
 
 var turn_input = 0
@@ -240,19 +240,19 @@ func _ready():
     $cartoon_plane/AnimationPlayer.play("prop_spin")
 
 func get_input(delta):
-    # Throttle input
+    # スロットル入力
     if Input.is_action_pressed("throttle_up"):
         target_speed = min(forward_speed + throttle_delta * delta, max_flight_speed)
     if Input.is_action_pressed("throttle_down"):
         var limit = 0 if grounded else min_flight_speed
         target_speed = max(forward_speed - throttle_delta * delta, limit)
 
-    # Turn (roll/yaw) input
+    # 旋回(ロール/ヨー)入力
     turn_input = Input.get_axis("roll_right", "roll_left")
     if forward_speed <= 0.5:
         turn_input = 0
 
-    # Pitch (climb/dive) input
+    # ピッチ(上昇/降下)入力
     pitch_input = 0
     if not grounded:
         pitch_input -= Input.get_action_strength("pitch_down")
@@ -265,19 +265,19 @@ func _physics_process(delta):
     transform.basis = transform.basis.rotated(transform.basis.x, pitch_input * pitch_speed * delta)
     transform.basis = transform.basis.rotated(Vector3.UP, turn_input * turn_speed * delta)
 
-    # Bank when turning
+    # 旋回時のバンク(傾き)
     if grounded:
         mesh.rotation.z = 0
     else:
         mesh.rotation.z = lerpf(mesh.rotation.z, -turn_input, level_speed * delta)
 
-    # Accelerate/decelerate
+    # 加速/減速
     forward_speed = lerpf(forward_speed, target_speed, acceleration * delta)
 
-    # Movement is always forward
+    # 移動は常に前方向
     velocity = -transform.basis.z * forward_speed
 
-    # Landing
+    # 着陸
     if is_on_floor():
         if not grounded:
             rotation.x = 0

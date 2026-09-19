@@ -41,9 +41,9 @@ func align_with_y(xform, new_y):
 `_physics_process()` 関数内で `move_and_slide_with_snap()` を呼び出した直後に、車両を整列させる必要があるかどうかをチェックします。
 
 ```gdscript
-# If either wheel is in the air, align to slope.
+# いずれかの車輪が空中にある場合、斜面に合わせる。
 if $FrontRay.is_colliding() or $RearRay.is_colliding():
-    # If one wheel is in air, move it down
+    # 片方の車輪が空中にある場合、それを下げる
     var nf = $FrontRay.get_collision_normal() if $FrontRay.is_colliding() else Vector3.UP
     var nr = $RearRay.get_collision_normal() if $RearRay.is_colliding() else Vector3.UP
     var n = ((nr + nf) / 2.0).normalized()

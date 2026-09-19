@@ -43,11 +43,11 @@ GDScriptファイルの最初の行は`extends <クラス名>`で始めなけれ
 ```gdscript
 extends Sprite2D
 
-# Called when the node enters the scene tree for the first time.
+# ノードが初めてシーンツリーに入ったときに呼び出されます。
 func _ready():
     pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# 毎フレーム呼び出されます。'delta' は前フレームからの経過時間です。
 func _process(delta):
     pass
 ```

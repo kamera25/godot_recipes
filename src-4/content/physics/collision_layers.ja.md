@@ -8,12 +8,12 @@ draft: false
 
 衝突レイヤーとマスクは、Godot 4においてどのオブジェクト同士が相互作用するかを制御する上で不可欠な要素です。
 
-### システム
+### システムの仕組み
 
 -  **Collision Layer(衝突判定レイヤー)**：オブジェクトが **存在する** レイヤを指定します。
 -  **Collision Mask(衝突検知マスク)**：オブジェクトが **衝突を検出する** 対象のレイヤを指定します。
 
-### サンプルプロジェクトでの設定例
+### 設定例
 
 | ノード | レイヤー | マスク | 相互作用 |
 | :--- | :--- | :--- | :--- |
@@ -21,19 +21,19 @@ draft: false
 | **敵キャラ** | 2 | 1 | プレイヤーをスキャン |
 | **コイン** | 3 | (なし) | 特にスキャンする必要がない |
 
-### セットアップ方法
+### 名前の設定
 
 Godot 4では、プロジェクト設定の［レイヤー名］＞［2D物理］でレイヤーに名前を付けられます。これにより、インスペクターでの管理が大幅に効率化されます。
 
-### ノードの選択方法
+### コードからのアクセス
 
 Godot 4では、ビット操作を容易にするため、`get_collision_layer_value(layer_number)`と`set_collision_layer_value(layer_number, value)`を使用することをオススメします。
 
 ```gdscript
-# Enable layer 2
+# レイヤー2を有効化
 set_collision_layer_value(2, true)
 
-# Check if masking layer 3
+# レイヤー3をマスクしているか確認
 if get_collision_mask_value(3):
     print("Scanning layer 3")
 ```

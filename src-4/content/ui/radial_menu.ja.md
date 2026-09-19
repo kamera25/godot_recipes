@@ -85,7 +85,7 @@ func show_menu():
     var tw = create_tween().set_parallel()
     tw.finished.connect(_on_tween_finished)
     for b in $Buttons.get_children():
-        # Subtract PI/2 to align the first button  to the top
+        # 最初のボタンを上部に配置するために PI/2 を引きます
         var a = spacing * b.get_position_in_parent() - PI / 2
         var dest = Vector2(radius, 0).rotated(a)
         tw.tween_property(b, "position", dest, speed).from(Vector2.ZERO).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)

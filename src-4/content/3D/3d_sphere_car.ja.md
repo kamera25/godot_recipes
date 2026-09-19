@@ -103,18 +103,18 @@ extends RigidBody3D
 次に、車両の動作を制御する変数について説明します。各変数の機能についてはコメントを参照します。
 
 ```gdscript
-# Where to place the car mesh relative to the sphere
+# 球体に対する車のメッシュの配置位置
 var sphere_offset = Vector3.DOWN
-# Engine power
+# エンジン出力
 var acceleration = 35.0
-# Turn amount, in degrees
+# 旋回量(度単位)
 var steering = 18.0
-# How quickly the car turns
+# 車が旋回する速さ
 var turn_speed = 4.0
-# Below this speed, the car doesn't turn
+# この速度以下では車は旋回しない
 var turn_stop_limit = 0.75
 
-# Variables for input values
+# 入力値用の変数
 var speed_input = 0
 var turn_input = 0
 ```
@@ -149,7 +149,7 @@ func _process(delta):
 次に、引き続き `_process()` 関数内で、回転入力に基づいて車のメッシュを回転させます。この処理は `slerp()`（球面線形補間）を使用して滑らかに行います。
 
 ```gdscript
-# rotate car mesh
+# 車のメッシュを回転
 if linear_velocity.length() > turn_stop_limit:
     var new_basis = car_mesh.global_transform.basis.rotated(car_mesh.global_transform.basis.y, turn_input)
     car_mesh.global_transform.basis = car_mesh.global_transform.basis.slerp(new_basis, turn_speed * delta)
@@ -201,7 +201,7 @@ func align_with_y(xform, new_y):
 入力を取得した直後に以下を追加します。
 
 ```gdscript
-    # rotate wheels for effect
+    # 演出のために車輪を回転
     right_wheel.rotation.y = rotate_input
     left_wheel.rotation.y = rotate_input
 ```
@@ -221,7 +221,7 @@ var body_tilt = 35
 次に、車のメッシュを回転させた直後に以下を追加しましょう（`if` 文内です）。
 
 ```gdscript
-# tilt body for effect
+# 演出のために車体を傾ける
 var t = -rotate_input * ball.linear_velocity.length() / body_tilt
 body_mesh.rotation.z = lerp(body_mesh.rotation.z, t, 10 * delta)
 ```

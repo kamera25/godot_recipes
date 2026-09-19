@@ -35,15 +35,15 @@ extends CharacterBody2D
 
 
 func _physics_process(delta):
-    # Add gravity every frame
+    # 毎フレーム重力を加算
     velocity.y += gravity * delta
 
-    # Input affects x axis only
+    # 入力はX軸のみに影響
     velocity.x = Input.get_axis("walk_left", "walk_right") * speed
 
     move_and_slide()
 
-    # Only allow jumping when on the ground
+    # 地面にいるときのみジャンプを許可
     if Input.is_action_just_pressed("jump") and is_on_floor():
         velocity.y = jump_speed
 ```

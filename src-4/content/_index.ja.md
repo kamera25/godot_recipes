@@ -1,5 +1,5 @@
 ---
-title: "Godot 4 Game Development Tutorials and Recipes"
+title: "Godot 4 ゲーム開発チュートリアル＆レシピ"
 description: "Godot 4 game development tutorials, recipes, tips, and practical code examples covering beginner guides, 2D, 3D, input, physics, and UI."
 date: 2019-04-09T22:57:31-07:00
 draft: false
@@ -11,10 +11,10 @@ draft: false
 
 このサイトでは、ゲームシステムを構築するための解決策と実例を提供しています。
 
-{{% notice style="tip" title="Godot versions"%}}
-This site contains tutorials and examples for Godot 4.x. Some articles are still being updated from Godot 3, so older version references may remain.<br>
-For the original English Godot 3.x recipes, visit KidsCanCode's [Godot Recipes](https://kidscancode.org/godot_recipes/3.x/):<br>
-{{% button href="https://kidscancode.org/godot_recipes/3.x/" style="primary" icon="utensils" %}}Godot 3 Recipes (original English){{% /button %}}
+{{% notice style="tip" title="Godotのバージョン"%}}
+このサイトにはGodot 4.x向けのチュートリアルとサンプルが含まれています。一部の記事はGodot 3からの更新作業中であるため、旧バージョンの記述が残っている場合があります。<br>
+オリジナルの英語版Godot 3.xレシピについては、KidsCanCodeの[Godot Recipes](https://kidscancode.org/godot_recipes/3.x/)をご覧ください：<br>
+{{% button href="https://kidscancode.org/godot_recipes/3.x/" style="primary" icon="utensils" %}}Godot 3レシピ集（原文・英語）{{% /button %}}
 {{% /notice %}}
 
 ゲーム開発を学ぶ準備はできていますか？趣味として、あるいは夢のキャリアへの最初の一歩として、今ほど良いタイミングはありません。現代のプログラミング言語とツールを駆使すれば、高品質なゲームを簡単に作成できます。また世界中に向けて配信できます。その中の一つがGodotゲームエンジンです。初心者でもゲーム開発技術を楽しく、親しみやすい方法で学ぶことができます。一方、経験豊富な開発者にとっては、自らのビジョンを形にするための強力なツールです。カスタマイズも可能で、オープンソースとして利用できます。
@@ -25,7 +25,7 @@ For the original English Godot 3.x recipes, visit KidsCanCode's [Godot Recipes](
 
 Godotを初めて使う方はまずは [Godotとは？](/godot_recipes/4.x/ja/g101/start/101_01/) から始めてください。
 
-Browse the [はじめてのGodot](/godot_recipes/4.x/g101/), [2D](/godot_recipes/4.x/2d/), [3D](/godot_recipes/4.x/3d/), [input](/godot_recipes/4.x/input/), [physics](/godot_recipes/4.x/physics/), and [UI](/godot_recipes/4.x/ui/) sections to find the right topic.
+[はじめてのGodot](/godot_recipes/4.x/ja/g101/)、[2D](/godot_recipes/4.x/ja/2d/)、[3D](/godot_recipes/4.x/ja/3d/)、[入力](/godot_recipes/4.x/ja/input/)、[物理](/godot_recipes/4.x/ja/physics/)、[UI](/godot_recipes/4.x/ja/ui/) の各セクションを参照して、適切なトピックを見つけてください。
 
 ### このサイトの利用方法
 

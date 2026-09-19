@@ -205,7 +205,7 @@ var last_floor = true
 そして最初の`if`文の後に、このステートメントが続きます。
 
 ```gdscript
-    # We just hit the floor after being in the air
+    # 空中にいた後、地面に着地した瞬間
     if is_on_floor() and not last_floor:
         jumping = false
         anim_tree.set("parameters/conditions/grounded", true)
@@ -215,7 +215,7 @@ var last_floor = true
 最終的に、段差から飛び降りた際に「Jump_Idle」に直接移行する仕組みがあります。
 
 ```gdscript
-    # We're in the air, but we didn't jump
+    # 空中にいるが、ジャンプしたわけではない
     if not is_on_floor() and not jumping:
         anim_state.travel("Jump_Idle")
         anim_tree.set("parameters/conditions/grounded", false)

@@ -141,7 +141,7 @@ func fill_walls():
 ```gdscript
 func _input(event):
     if event is InputEventMouseButton:
-        # Add/remove wall
+        # 壁の追加/削除
         if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
             var pos = Vector2i(event.position) / cell_size
             if astar_grid.is_in_boundsv(pos):

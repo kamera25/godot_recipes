@@ -37,7 +37,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 ```gdscript
 extends Node2D
 
-# Desired movement in pixels/frame
+# 1フレームあたりの目標移動量(ピクセル)
 var movement = Vector2(2, 0)
 
 func _process(delta):
@@ -77,7 +77,7 @@ func _process(delta):
 ```gdscript
 extends Node2D
 
-# Desired movement in pixels/second.
+# 1秒あたりの目標移動量(ピクセル)。
 var movement = Vector2(120, 0)
 
 func _process(delta):
@@ -107,12 +107,12 @@ func _process(delta):
 ```gdscript
 extends Node2D
 
-# Acceleration in pixels/sec/sec.
+# ピクセル/秒/秒 単位の加速度。
 var gravity = Vector2(0, 120)
-# Acceleration in pixels/frame/frame.
+# ピクセル/フレーム/フレーム 単位の加速度。
 var gravity_frame = Vector2(0, .033)
 
-# Velocity in pixels/sec or pixels/frame.
+# ピクセル/秒 または ピクセル/フレーム 単位の速度。
 var velocity = Vector2.ZERO
 
 var use_delta = false
@@ -138,11 +138,11 @@ func _process(delta):
 上記の例では簡略化のため`Sprite`を使用していますが、実際には2D/3D空間における移動ボディを使用する場合、それぞれに適した移動メソッドを使用します。また`move_and_slide()`関数については、速度ベクトルを扱うため若干混乱が生じやすい点に注意が必要で、距離計算のために速度に`delta`を掛ける必要はありません。これは関数側で自動的に処理されます。ただし、加速度などの他の計算には依然として`delta`を掛けましょう。
 
 ```gdscript
-# Sprite movement code:
+# Spriteの移動コード:
 velocity += gravity * delta
 position += velocity * delta
 
-# Kinematic body movement code:
+# Kinematic bodyの移動コード:
 velocity += gravity * delta
 move_and_slide()
 ```
