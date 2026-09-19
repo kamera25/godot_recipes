@@ -1,5 +1,5 @@
 import unittest
-from html_gettext import escape_po_string, unescape_po_string
+from scripts.i18n.html_gettext import escape_po_string, unescape_po_string
 
 class TestHtmlGettext(unittest.TestCase):
     def test_escape_po_string(self):

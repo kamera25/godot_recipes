@@ -2,7 +2,7 @@ import sys
 import re
 
 def main():
-    po_file = 'output.po'
+    po_file = sys.argv[1] if len(sys.argv) > 1 else 'output.po'
 
     try:
         with open(po_file, 'r', encoding='utf-8') as f:

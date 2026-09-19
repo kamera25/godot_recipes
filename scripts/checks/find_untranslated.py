@@ -1,3 +1,4 @@
+import argparse
 import re
 
 def find_untranslated(file_path):
@@ -27,8 +28,13 @@ def find_untranslated(file_path):
     
     return untranslated
 
-untranslated_entries = find_untranslated('/Users/kamera25/godot_recipes/output.po')
-print(f"Found {len(untranslated_entries)} untranslated entries.")
-for i, entry in enumerate(untranslated_entries[:20]):
-    print(f"--- Entry {i+1} ---")
-    print(entry)
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Find untranslated PO entries.')
+    parser.add_argument('po_file', nargs='?', default='output.po')
+    args = parser.parse_args()
+
+    untranslated_entries = find_untranslated(args.po_file)
+    print(f"Found {len(untranslated_entries)} untranslated entries.")
+    for i, entry in enumerate(untranslated_entries[:20]):
+        print(f"--- Entry {i+1} ---")
+        print(entry)

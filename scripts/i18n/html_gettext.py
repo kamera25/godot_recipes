@@ -155,10 +155,11 @@ def apply_translations(docs_dir, po_file):
     print(f"Translated {files_modified} HTML files.")
 
 if __name__ == '__main__':
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
     parser = argparse.ArgumentParser(description="HTML Gettext Tool")
     parser.add_argument('mode', choices=['extract', 'apply'], help="'extract' to create PO, 'apply' to translate HTML")
-    parser.add_argument('--dir', default='/Users/kamera25/godot_recipes/docs', help='HTML directory')
-    parser.add_argument('--po', default='/Users/kamera25/godot_recipes/docs_extracted.po', help='PO file path')
+    parser.add_argument('--dir', default=os.path.join(project_root, 'docs'), help='HTML directory')
+    parser.add_argument('--po', default=os.path.join(project_root, 'docs_extracted.po'), help='PO file path')
     
     args = parser.parse_args()
     

@@ -128,17 +128,11 @@ GitHub Actionsでは、`main`または`master`へのpushと手動実行を契機
 
 | スクリプト | 用途 |
 | --- | --- |
-| `check_gdscript_syntax.py` | Markdown内のGDScriptコードブロックをGodotで構文検査 |
-| `link_checker.py` | 生成済みHTMLの外部・ローカルリンクを検査 |
-| `find_untranslated.py` | POファイルの未翻訳エントリを検出 |
-| `check_backticks.py` | PO内のバッククォート対応を検査 |
-| `find_icon_mismatch.py` | 原文と訳文のアイコン数の差を検査 |
-| `md_gettext.py` | Markdownから翻訳対象ブロックを抽出 |
-| `update_po_from_md.py` | Markdownの内容をPOへ反映 |
-| `apply_po_to_ja.py` | POの翻訳を日本語Markdownへ適用 |
-| `html_gettext.py` / `extract_to_po.py` | HTMLから翻訳対象テキストを抽出 |
-| `fix_links_proper2.py` | PO内の特定リンクを補正する保守用スクリプト |
-| `split_script_safe.py` | 日本語訳の手順文を読みやすく分割する補助スクリプト |
+| `scripts/checks.sh` | PO、Python、GDScript、生成HTMLの検査をまとめて実行 |
+| `scripts/checks/` | GDScript、リンク、POの個別検査スクリプト |
+| `scripts/i18n.sh` | Markdown/HTMLとPOの抽出・更新・適用をまとめて実行 |
+| `scripts/i18n/` | 翻訳対象の抽出・PO更新・日本語適用スクリプト |
+| `scripts/maintenance/` | POリンク補正や手順文分割などの保守用スクリプト |
 
 POファイル（`output.po`、`docs_extracted.po`、`messages.mo`など）を変更する場合は、翻訳処理の中間生成物か、正式な管理対象かを確認してから扱う。単発の翻訳修正で、機械的に全POを再生成しない。
 
