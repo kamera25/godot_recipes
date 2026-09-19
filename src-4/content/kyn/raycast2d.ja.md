@@ -1,13 +1,9 @@
 ---
 title: "RayCast2D"
+description: "Godot 4のRayCast2Dで衝突・射撃・足場の端を検出する方法を、CharacterBody2D向けのGDScript例で解説。"
 draft: false
 ghcommentid: 87
 ---
-
-{{% notice style="tips" title="ℹ️ 留意事項"%}}
-この記事は Godot 3から Godot 4 へ内容の書き換え中です。
-Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
-{{% /notice %}}
 
 ## {{< gd-icon RayCast2D >}}RayCast2D
 
@@ -92,8 +88,8 @@ func _physics_process(delta):
     if not $RayLeft.is_colliding():
         dir = 1
     velocity.x = dir * speed
-    $AnimatedSprite.flip_h = velocity.x > 0
-    velocity = move_and_slide(velocity, Vector2.UP)
+    $AnimatedSprite2D.flip_h = velocity.x > 0
+    move_and_slide()
 ```
 
 動作中の様子をご覧ください。

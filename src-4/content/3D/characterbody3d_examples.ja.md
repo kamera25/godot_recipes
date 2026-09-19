@@ -1,13 +1,9 @@
 ---
 title: "CharacterBody3Dの移動"
+description: "Godot 4のCharacterBody3Dを使い、重力・前後移動・回転を備えた3DキャラクターをGDScriptで実装する方法。"
 weight: 4
 draft: false
 ---
-
-{{% notice style="tips" title="ℹ️ 留意事項"%}}
-この記事は Godot 3から Godot 4 へ内容の書き換え中です。
-Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
-{{% /notice %}}
 
 ## 今回のお題
 
@@ -49,9 +45,10 @@ extends CharacterBody3D
 
 @export var speed = 4.0
 @export var turn_speed = 0.8
+@export var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 ```
 
-`speed` は戦車の移動速度（前進/後退）を、`rot_speed` は旋回速度をそれぞれ定義します。
+`speed` は戦車の移動速度（前進/後退）を、`turn_speed` は旋回速度をそれぞれ定義します。`gravity` はプロジェクト設定の既定値を使うため、プロジェクト全体の重力設定とも同期します。
 
 {{% notice tip %}}
 `@export` でプロパティを宣言しておけば、インスペクタで簡単に調整できるようになります。
@@ -106,4 +103,3 @@ func get_input(delta):
 
 - [3D入門](/godot_recipes/4.x/ja/g101/3d/)
 - [入力アクション](/godot_recipes/4.x/ja/input/input_actions/)
-

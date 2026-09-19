@@ -1,14 +1,10 @@
 ---
 title: "パスを追従する"
+description: "Godot 4でPath2Dの曲線に沿ってCharacterBody2Dを巡回させる方法。PathFollow2Dとの使い分けも解説。"
 weight: 2
 draft: false
 ghcommentid: 72
 ---
-
-{{% notice style="tips" title="ℹ️ 留意事項"%}}
-この記事は Godot 3から Godot 4 へ内容の書き換え中です。
-Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
-{{% /notice %}}
 
 ## 今回のお題
 
@@ -41,7 +37,6 @@ var move_speed = 100
 @export var patrol_path: NodePath
 var patrol_points
 var patrol_index = 0
-var velocity = Vector2.ZERO
 
 func _ready():
     if patrol_path:
@@ -53,7 +48,7 @@ func _ready():
 次のステップとして、現在パス上で選択されている点を移動先として使用できます。十分に近づけると、曲線の次のポイントに移動し、`wrapi()` 関数を使用して終点に到達したら最初のポイントに戻るループ処理を行います。
 
 ```gdscript
-func _physics_process():
+func _physics_process(_delta):
     if !patrol_path:
         return
     var target = patrol_points[patrol_index]
@@ -61,8 +56,7 @@ func _physics_process():
         patrol_index = wrapi(patrol_index + 1, 0, patrol_points.size())
         target = patrol_points[patrol_index]
     velocity = (target - position).normalized() * move_speed
-    velocity = move_and_slide(velocity)
+    move_and_slide()
 ```
 
 ## 関連レシピ
-
