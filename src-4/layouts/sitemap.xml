@@ -1,0 +1,16 @@
+{{- partial "page-meta.hugo" . .RelPermalink }}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {{- if eq .Site.Language.Lang "ja" }}
+    {{- range .Data.Pages }}
+      {{- if and .Title (not .Sitemap.Disable) (or (ne (.Scratch.Get "relearnIsHiddenStem") true) (ne .Site.Params.disableSeoHiddenPages true)) }}
+  <url>
+    <loc>{{ partial "relLangPrettyUglyURL.hugo" (dict "to" . "abs" true) }}</loc>
+    {{- if not .Lastmod.IsZero }}
+    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
+    {{- end }}
+  </url>
+      {{- end }}
+    {{- end }}
+  {{- end }}
+</urlset>

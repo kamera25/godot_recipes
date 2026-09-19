@@ -1,0 +1,21 @@
+# Godot 4 レシピ（日本語版）
+
+> Godot Engine 4 を使ったゲーム開発のチュートリアルと実装例を集めた、KidsCanCode「Godot Recipes」の非公式日本語訳です。
+
+このサイトでは、2D・3D ゲーム制作、GDScript の基礎、UI、物理、アニメーションなどを学べます。翻訳元やライセンスの詳細はリポジトリを参照してください。
+
+## 日本語コンテンツ
+
+- [日本語版トップ](https://kamera25.github.io/godot_recipes/4.x/ja/): 全カテゴリへの入口
+- [Godot 入門](https://kamera25.github.io/godot_recipes/4.x/ja/g101/): Godot の基本操作と最初のゲーム制作
+- [基本](https://kamera25.github.io/godot_recipes/4.x/ja/basics/): ノード、シーン、GDScript など
+- [2D](https://kamera25.github.io/godot_recipes/4.x/ja/2d/): 2D ゲームの実装例
+- [3D](https://kamera25.github.io/godot_recipes/4.x/ja/3d/): 3D ゲームの実装例
+- [UI](https://kamera25.github.io/godot_recipes/4.x/ja/ui/): ユーザーインターフェース
+- [ゲーム](https://kamera25.github.io/godot_recipes/4.x/ja/games/): ゲーム制作のチュートリアル
+
+## 関連情報
+
+- [サイトマップ](https://kamera25.github.io/godot_recipes/4.x/sitemap.xml): 日本語ページの一覧
+- [GitHub リポジトリ](https://github.com/kamera25/godot_recipes): 翻訳プロジェクトとライセンス情報
+- [原著者 KidsCanCode](https://kidscancode.org/godot_recipes/): 原文サイト

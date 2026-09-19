@@ -49,6 +49,9 @@ jobs:
           cd src-4
           hugo --minify
 
+      - name: Keep Japanese sitemap only
+        run: rm -f docs/4.x/en/sitemap.xml
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
