@@ -1,0 +1,16 @@
+{{- with .Params.LastModifierDisplayName }}
+            <i class='fas fa-user'></i> {{ with $.Params.LastModifierEmail }}<a href="mailto:{{ . }}">{{ end }}{{ . }}{{ with $.Params.LastModifierEmail }}</a>{{ end }}
+  {{- with $.Date }}
+            <i class='fas fa-calendar'></i> {{ . | time.Format ":date_medium" }}
+  {{- end }}
+{{- end }}
+{{- if .IsPage }}
+  <span class="seo-attribution">
+    {{- if eq .Language.Lang "ja" -}}
+      原著: <a href="https://kidscancode.org/godot_recipes/">KidsCanCode</a> ／ 日本語訳・Godot 4対応: kamera25
+    {{- else -}}
+      Original tutorial: <a href="https://kidscancode.org/godot_recipes/">KidsCanCode</a>
+    {{- end -}}
+    {{- with .Lastmod }} ／ {{ if eq $.Language.Lang "ja" }}最終更新{{ else }}Last updated{{ end }}: {{ . | time.Format ":date_medium" }}{{ end -}}
+  </span>
+{{- end }}

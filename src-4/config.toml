@@ -3,6 +3,7 @@ languageCode = 'en-us'
 defaultContentLanguage = 'en'
 publishDir = "../docs/4.x"
 title = 'Godot Recipes'
+enableGitInfo = true
 theme = "hugo-theme-relearn-main"
 pygmentsStyle = "nord"
 pygmentsCodeFences = true
@@ -77,6 +78,7 @@ themesDir = "../themes_shared"
     description = "Godot Engineを用いたゲーム開発のチュートリアルや実装例を豊富に含んだ非公式日本語訳サイトです。"
 
 [params]
+    author = "kamera25"
     disableExplicitIndexURLs = true
     disableNextPrev = true
     themeVariant = ["auto", "relearn-light", "relearn-dark", "neon"]

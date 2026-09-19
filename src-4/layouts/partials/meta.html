@@ -19,11 +19,7 @@
     {{- end }}
 
     <!-- OGP -->
-    {{- $title := "" }}
-    {{- if and .Title (not (eq .Title .Site.Title)) }}
-      {{- $title = printf "%s %s " .Title (default "::" .Site.Params.titleSeparator) }}
-    {{- end }}
-    {{- $title = printf "%s%s" $title .Site.Title }}
+    {{- $title := partial "seo-title.html" . }}
     <meta property="og:title" content="{{ $title }}">
     <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
     <meta property="og:url" content="{{ .Permalink }}">

@@ -1,0 +1,9 @@
+{{- $title := .Title | plainify | htmlUnescape | strings.TrimSpace -}}
+{{- $siteTitle := .Site.Title | plainify | htmlUnescape | strings.TrimSpace -}}
+{{- if or (not $title) (eq $title $siteTitle) -}}
+  {{- $siteTitle -}}
+{{- else if eq .Language.Lang "ja" -}}
+  {{- printf "Godot 4で%sを学ぶ | %s" $title $siteTitle -}}
+{{- else -}}
+  {{- printf "Godot 4 %s Tutorial | %s" $title $siteTitle -}}
+{{- end -}}

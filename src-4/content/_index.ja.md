@@ -1,6 +1,6 @@
 ---
 title: "Godot 4 ゲーム開発チュートリアル＆レシピ"
-description: "Godot 4 game development tutorials, recipes, tips, and practical code examples covering beginner guides, 2D, 3D, input, physics, and UI."
+description: "Godot 4のゲーム開発チュートリアル、実装レシピ、GDScriptのサンプルコードを日本語で解説。2D・3D・入力・物理・UIを初心者から学べます。"
 date: 2019-04-09T22:57:31-07:00
 draft: false
 ---
@@ -24,6 +24,10 @@ draft: false
 このサイトでは、Godotゲームエンジンの初心者向けガイドをはじめ、さまざまなゲーム開発のヒントやテクニックを幅広く紹介しています。サイドバーのコンテンツを自由に閲覧して、興味のある分野を見てみてください。
 
 Godotを初めて使う方はまずは [Godotとは？](/godot_recipes/4.x/ja/g101/start/101_01/) から始めてください。
+
+### おすすめの学習順序
+
+初めてゲームを作るなら、[Godotとは？](/godot_recipes/4.x/ja/g101/start/101_01/) → [GDScript入門](/godot_recipes/4.x/ja/g101/gdscript/) → [はじめての2Dゲーム](/godot_recipes/4.x/ja/games/first_2d/) の順に進むと、エディター操作・スクリプト・ゲーム制作をつなげて学べます。その後は、[2D](/godot_recipes/4.x/ja/2d/) のキャラクター操作や衝突判定、[入力](/godot_recipes/4.x/ja/input/) と [カメラ](/godot_recipes/4.x/ja/2d/touchscreen_camera/) を組み合わせて、自分のゲームへ発展させてください。
 
 [はじめてのGodot](/godot_recipes/4.x/ja/g101/)、[2D](/godot_recipes/4.x/ja/2d/)、[3D](/godot_recipes/4.x/ja/3d/)、[入力](/godot_recipes/4.x/ja/input/)、[物理](/godot_recipes/4.x/ja/physics/)、[UI](/godot_recipes/4.x/ja/ui/) の各セクションを参照して、適切なトピックを見つけてください。
 

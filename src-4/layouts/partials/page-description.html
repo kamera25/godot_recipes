@@ -1,12 +1,16 @@
 {{- $description := "" -}}
 {{- with .Description -}}
   {{- $description = . | plainify | htmlUnescape | htmlUnescape | replaceRE "\\s+" " " | strings.TrimSpace | truncate 160 -}}
-{{- else -}}
-  {{- with .Summary -}}
-    {{- $description = . | replaceRE "(?is)<pre\\b[^>]*>.*?</pre>" "" | replaceRE "(?is)<code\\b[^>]*>.*?</code>" "" | replaceRE "(?is)<script\\b[^>]*>.*?</script>" "" | replaceRE "(?is)<style\\b[^>]*>.*?</style>" "" | plainify | htmlUnescape | htmlUnescape | replaceRE "\\s+" " " | strings.TrimSpace | truncate 160 -}}
-  {{- end -}}
 {{- end -}}
 {{- if not $description -}}
-  {{- $description = .Site.Params.description | plainify | htmlUnescape | htmlUnescape | replaceRE "\\s+" " " | strings.TrimSpace | truncate 160 -}}
+  {{- if .Title -}}
+    {{- if eq .Language.Lang "ja" -}}
+      {{- $description = printf "Godot 4で%sを実装する方法を、GDScriptのサンプルコードと実例を交えて解説します。" .Title -}}
+    {{- else -}}
+      {{- $description = printf "Learn how to implement %s in Godot 4 with GDScript examples and practical recipes." .Title -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $description = .Site.Params.description | plainify | htmlUnescape | htmlUnescape | replaceRE "\\s+" " " | strings.TrimSpace | truncate 160 -}}
+  {{- end -}}
 {{- end -}}
 {{- $description -}}

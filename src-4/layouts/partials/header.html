@@ -10,11 +10,7 @@
     {{- partial "meta.html" . }}
     {{- $page := . }}
     {{- $link := "<link href=\"%s\" rel=\"%s\" type=\"%s\" title=\"%s\">" }}
-    {{- $title := "" }}
-    {{- if and .Title (not (eq .Title .Site.Title)) }}
-      {{- $title = printf "%s %s " .Title (default "::" .Site.Params.titleSeparator) }}
-    {{- end }}
-    {{- $title = printf "%s%s" $title .Site.Title }}
+    {{- $title := partial "seo-title.html" . }}
     <title>{{ $title }}</title>
     {{- if .Permalink }}
     <link rel="canonical" href="{{ .Permalink }}">

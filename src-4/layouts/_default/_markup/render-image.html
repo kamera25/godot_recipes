@@ -1,0 +1,10 @@
+{{- $alt := .Text | plainify | htmlUnescape | strings.TrimSpace -}}
+{{- if or (not $alt) (eq (lower $alt) "alt") -}}
+  {{- $filename := replaceRE "[?#].*$" "" .Destination | path.Base | strings.TrimSuffix (path.Ext .Destination) | replaceRE "[_-]+" " " -}}
+  {{- if eq .Page.Language.Lang "ja" -}}
+    {{- $alt = printf "Godot 4：%s（%s）" .Page.Title $filename -}}
+  {{- else -}}
+    {{- $alt = printf "Godot 4: %s (%s)" .Page.Title $filename -}}
+  {{- end -}}
+{{- end -}}
+<img src="{{ .Destination | safeURL }}" alt="{{ $alt | htmlEscape }}"{{ with .Title }} title="{{ . | htmlEscape }}"{{ end }} loading="lazy" decoding="async">
