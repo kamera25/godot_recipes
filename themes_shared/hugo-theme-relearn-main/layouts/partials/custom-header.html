@@ -1,3 +1,14 @@
+{{- if and (ne .Lang "ja") (not hugo.IsServer) }}
+  {{- $redirectURL := replace .Permalink "https://kamera25.github.io" "https://kidscancode.org" }}
+<meta http-equiv="refresh" content="0; url={{ $redirectURL }}">
+<script>
+  window.location.replace(window.location.href.replace(/^https?:\/\/kamera25\.github\.io/, 'https://kidscancode.org'));
+</script>
+<noscript>
+  <meta http-equiv="refresh" content="0; url={{ $redirectURL }}">
+</noscript>
+{{- end }}
+
 <!-- Partial intended to be overwritten to add custom headers, like CSS or any other info
 <style>
    /* Custom css */
