@@ -13,7 +13,6 @@ Usage: scripts/i18n.sh <command>
 
 Commands:
   update       Update output.po from Markdown (use --dry-run to preview)
-  extract      Create a new PO from Markdown
   apply        Apply output.po translations to Japanese Markdown
   html-extract Create a PO from generated HTML in docs/
   html-apply   Apply the generated HTML PO translations to docs/
@@ -27,9 +26,6 @@ shift || true
 case "$COMMAND" in
     update)
         python3 scripts/i18n/update_po_from_md.py --dir "$CONTENT_DIR" --po "$PO_FILE" "$@"
-        ;;
-    extract)
-        python3 scripts/i18n/md_gettext.py extract --dir "$CONTENT_DIR" --po "$PO_FILE" "$@"
         ;;
     apply)
         python3 scripts/i18n/apply_po_to_ja.py "$@"

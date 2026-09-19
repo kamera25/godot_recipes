@@ -7,22 +7,89 @@ import polib
 
 
 COMMENT_PREFIXES = ('#', '//', ';', '--', '/*', '*', '<!--', '-->')
+GDSCRIPT_FENCE = re.compile(r'^```(?:gdscript|gdscript[234])(?:\s|$)', re.IGNORECASE)
+
+
+def _comment_from_line(line):
+    """Return a full-line comment without indentation, or ``None``."""
+    match = re.match(
+        r'^[ \t]*(?P<comment>(?:#|//|;|--|/\*|\*|<!--|-->).*)[ \t]*$',
+        line,
+    )
+    if not match:
+        return None
+
+    comment = match.group('comment').rstrip()
+    prefix = next(
+        (prefix for prefix in COMMENT_PREFIXES if comment.startswith(prefix)),
+        None,
+    )
+    if prefix and comment[len(prefix):].strip(' \t*/'):
+        return comment
+    return None
+
+
+def extract_gdscript_comments(content):
+    """Extract standalone comments from GDScript fenced code blocks.
+
+    Inline comments and ``#`` characters inside strings are intentionally not
+    extracted. Indentation is not part of the msgid; it is restored when the
+    translation is applied to the code block.
+    """
+    comments = set()
+    in_gdscript = False
+
+    for line in content.splitlines():
+        if not in_gdscript:
+            if GDSCRIPT_FENCE.match(line.strip()):
+                in_gdscript = True
+            continue
+
+        if line.strip() == '```':
+            in_gdscript = False
+            continue
+
+        comment = _comment_from_line(line)
+        if comment:
+            comments.add(comment)
+
+    return comments
 
 
 def extract_code_comments(content):
-    """Markdown のコードフェンスから、コメントだけの行を抽出する。"""
-    comments = set()
-    code_blocks = re.findall(r'```[^\n]*\r?\n.*?```', content, flags=re.DOTALL)
-    for block in code_blocks:
-        for line in block.splitlines()[1:-1]:
-            match = re.match(r'^[ \t]*(?P<comment>(?:#|//|;|--|/\*|\*|<!--|-->).*)[ \t]*$', line)
-            if not match:
-                continue
-            comment = match.group('comment').rstrip()
-            prefix = next((prefix for prefix in COMMENT_PREFIXES if comment.startswith(prefix)), None)
-            if prefix and comment[len(prefix):].strip(' \t*/'):
-                comments.add(comment)
+    """Backward-compatible alias for GDScript comment extraction."""
+    return extract_gdscript_comments(content)
+
+
+def collect_gdscript_comments(md_files, docs_dir):
+    """Return ``msgid -> source Markdown paths`` for GDScript comments."""
+    comments = {}
+    for file_path in md_files:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            file_comments = extract_gdscript_comments(file.read())
+        rel_path = os.path.relpath(file_path, docs_dir).replace(os.sep, '/')
+        for comment in file_comments:
+            comments.setdefault(comment, set()).add(rel_path)
     return comments
+
+
+def validate_gdscript_comments(po, comments_by_msgid):
+    """Validate every extracted GDScript comment and its source reference."""
+    missing = []
+    missing_references = []
+
+    for msgid, expected_paths in comments_by_msgid.items():
+        entry = po.find(msgid)
+        if entry is None or entry.obsolete:
+            missing.append(msgid)
+            continue
+
+        actual_paths = {path.replace(os.sep, '/') for path, _ in entry.occurrences}
+        for expected_path in expected_paths:
+            if expected_path not in actual_paths:
+                missing_references.append((msgid, expected_path))
+
+    return missing, missing_references
 
 def extract_md_blocks(content):
     """Markdownからブロック要素を抽出し、翻訳可能なリストを返す。
@@ -86,6 +153,7 @@ def update_po_file(docs_dir, po_file_path, dry_run=False):
 
     # 現在のMDファイルに含まれるすべてのテキストを抽出
     extracted_data = {} # msgid -> set of relative_paths
+    gdscript_comments_by_msgid = {} # comment msgid -> set of relative_paths
     
     print(f"Extracting strings from {len(md_files)} files...")
     for file_path in md_files:
@@ -94,8 +162,12 @@ def update_po_file(docs_dir, po_file_path, dry_run=False):
                 content = f.read()
             
             blocks = extract_md_blocks(content)
-            blocks.update(extract_code_comments(content))
-            rel_path = os.path.relpath(file_path, docs_dir)
+            gdscript_comments = extract_gdscript_comments(content)
+            blocks.update(gdscript_comments)
+            rel_path = os.path.relpath(file_path, docs_dir).replace(os.sep, '/')
+
+            for comment in gdscript_comments:
+                gdscript_comments_by_msgid.setdefault(comment, set()).add(rel_path)
             
             for text in blocks:
                 if text not in extracted_data:
@@ -141,6 +213,21 @@ def update_po_file(docs_dir, po_file_path, dry_run=False):
             entry.obsolete = True
             obsolete_count += 1
             # print(f"Marked as obsolete: {entry.msgid[:50]}...")
+
+    # Comments inside protected code blocks need their own validation. This
+    # confirms both the msgid and every Markdown source reference are present.
+    missing_comments, missing_references = validate_gdscript_comments(
+        po, gdscript_comments_by_msgid
+    )
+    if missing_comments or missing_references:
+        print("GDScript comment validation failed:")
+        for msgid in missing_comments:
+            print(f"  Missing msgid: {msgid}")
+        for msgid, path in missing_references:
+            print(f"  Missing reference: {path}: {msgid}")
+        raise RuntimeError("output.po does not contain all GDScript comments")
+
+    print(f"  GDScript comments validated: {len(gdscript_comments_by_msgid)}")
 
     # 5. 保存
     if not dry_run:
