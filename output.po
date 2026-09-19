@@ -3418,6 +3418,8 @@ msgid ""
 "label's `text` property. We include the object's name and which property "
 "we're showing, plus the value modified by the `mode` option."
 msgstr ""
+"`update_label()` メソッドでは、ラベルの `text` "
+"プロパティに表示する文字列を構築します。オブジェクトの名前と表示対象のプロパティ名、さらに `mode` オプションによって変更された値を含めます。"
 
 #: ui/debug_overlay.md
 msgid ""
@@ -12966,9 +12968,8 @@ msgid ""
 msgstr "完全なリストについてはドキュメントを参照します。以下では、ノードで最も一般的に使用されるプロパティについて説明します。"
 
 #: kyn/label.md
-#, fuzzy
 msgid "### Adding a font"
-msgstr "### スクリプトの追加方法"
+msgstr "### フォントの追加"
 
 #: kyn/label.md
 msgid ""
@@ -13155,9 +13156,8 @@ msgid "* `tesselate()`"
 msgstr "* `tesselate()`"
 
 #: kyn/path2d.md
-#, fuzzy
 msgid "## Drawing paths"
-msgstr "## 経路の描画方法"
+msgstr "## パスの描画"
 
 #: kyn/path2d.md
 msgid ""
@@ -13184,9 +13184,8 @@ msgstr ""
 "icon Path2D >}}`Path2D`が描画されており、エージェントはこれを参照して現在の進行方向を確認します。"
 
 #: kyn/path2d.md
-#, fuzzy
 msgid "## Following a path"
-msgstr "## 経路の追跡"
+msgstr "## パスの追従"
 
 #: kyn/path2d.md
 msgid ""
@@ -13341,9 +13340,8 @@ msgid ""
 msgstr "以下の例を[AI：状況に基づく操縦](/godot_recipes/4.x/ja/ai/context_map/)レシピからご覧ください。"
 
 #: kyn/path2d.md
-#, fuzzy
 msgid "Most useful properties:"
-msgstr "ノードプロパティを調整："
+msgstr "最もよく使われるプロパティ："
 
 #: kyn/rigidbody2d.md
 msgid "## {{< gd-icon RigidBody2D >}}`RigidBody2D`"
@@ -15004,9 +15002,8 @@ msgid "Another example:"
 msgstr "別の例:"
 
 #: shaders/intro.md
-#, fuzzy
 msgid "### Uniforms"
-msgstr "### ユニフォーム"
+msgstr "### Uniform変数"
 
 #: shaders/intro.md
 msgid ""
@@ -15118,7 +15115,6 @@ msgstr ""
 "オブジェクトにシェーダーを追加するには、まず対象のオブジェクトの［マテリアル］プロパティを見つけ、「新規シェーダーマテリアル」を選択します。新しく作成したマテリアルをクリックして開くと、「新規シェーダー」を選択する画面が表示されます。さらにクリックすると、画面下部にシェーダー編集画面が開きます。"
 
 #: shaders/intro.md
-#, fuzzy
 msgid "#### Textures"
 msgstr "#### テクスチャ"
 
@@ -16213,24 +16209,20 @@ msgstr ""
 "- `set_collision_layer_value()`などの新しいヘルパーメソッドにより、複雑なビット演算処理(例: `1 << (layer - 1)`)が不要になりました{{% /notice %}}"
 
 #: physics/collision_layers.md
-#, fuzzy
 msgid "### The System"
-msgstr "### システム"
+msgstr "### システムの仕組み"
 
 #: physics/collision_layers.md
-#, fuzzy
 msgid "### Accessing via Code"
-msgstr "### ノードの選択方法"
+msgstr "### コードからのアクセス"
 
 #: physics/collision_layers.md
-#, fuzzy
 msgid "### Example Configuration"
-msgstr "### サンプルプロジェクトでの設定例"
+msgstr "### 設定例"
 
 #: physics/collision_layers.md
-#, fuzzy
 msgid "### Setting Names"
-msgstr "### セットアップ方法"
+msgstr "### 名前の設定"
 
 #: physics/collision_layers.md
 msgid "Collision Layers and Masks"
@@ -26122,7 +26114,7 @@ msgstr ""
 
 #: _index.md
 msgid "![Godot logo](/godot_recipes/4.x/img/godot3_logo.png?width=400px)"
-msgstr ""
+msgstr "![Godot logo](/godot_recipes/4.x/img/godot3_logo.png?width=400px)"
 
 #: _index.md
 msgid ""
@@ -26131,6 +26123,8 @@ msgid ""
 "[input](/godot_recipes/4.x/input/), [physics](/godot_recipes/4.x/physics/), "
 "and [UI](/godot_recipes/4.x/ui/) sections to find the right topic."
 msgstr ""
+"[はじめてのGodot](/godot_recipes/4.x/ja/g101/)、[2D](/godot_recipes/4.x/ja/2d/)、[3D](/godot_recipes/4.x/ja/3d/)、[入力](/godot_recipes/4.x/ja/input/)、[物理](/godot_recipes/4.x/ja/physics/)、[UI](/godot_recipes/4.x/ja/ui/)"
+" の各セクションを参照して、適切なトピックを見つけてください。"
 
 #: _index.md
 msgid ""
@@ -26140,492 +26134,497 @@ msgid ""
 "{{% button href=\"https://kidscancode.org/godot_recipes/3.x/\" style=\"primary\" icon=\"utensils\" %}}Godot 3 Recipes (original English){{% /button %}}\n"
 "{{% /notice %}}"
 msgstr ""
+"{{% notice style=\"tip\" title=\"Godotのバージョン\"%}}\n"
+"このサイトにはGodot 4.x向けのチュートリアルとサンプルが含まれています。一部の記事はGodot 3からの更新作業中であるため、旧バージョンの記述が残っている場合があります。<br>\n"
+"オリジナルの英語版Godot 3.xレシピについては、KidsCanCodeの[Godot Recipes](https://kidscancode.org/godot_recipes/3.x/)をご覧ください：<br>\n"
+"{{% button href=\"https://kidscancode.org/godot_recipes/3.x/\" style=\"primary\" icon=\"utensils\" %}}Godot 3レシピ集（原文・英語）{{% /button %}}\n"
+"{{% /notice %}}"
 
 #: _index.md
 msgid "Godot 4 Game Development Tutorials and Recipes"
-msgstr ""
+msgstr "Godot 4 ゲーム開発チュートリアル＆レシピ"
 
 #: basics/getting_nodes.md
 msgid "# or using the shortcut:"
-msgstr ""
+msgstr "# またはショートカットを使用:"
 
 #: basics/understanding_delta.md
 msgid "# Desired movement in pixels/second."
-msgstr ""
+msgstr "# 1秒あたりの目標移動量(ピクセル)。"
 
 #: basics/understanding_delta.md
 msgid "# Kinematic body movement code:"
-msgstr ""
+msgstr "# Kinematic bodyの移動コード:"
 
 #: basics/understanding_delta.md
 msgid "# Desired movement in pixels/frame"
-msgstr ""
+msgstr "# 1フレームあたりの目標移動量(ピクセル)"
 
 #: basics/understanding_delta.md
 msgid "# Velocity in pixels/sec or pixels/frame."
-msgstr ""
+msgstr "# ピクセル/秒 または ピクセル/フレーム 単位の速度。"
 
 #: basics/understanding_delta.md
 msgid "# Acceleration in pixels/frame/frame."
-msgstr ""
+msgstr "# ピクセル/フレーム/フレーム 単位の加速度。"
 
 #: basics/understanding_delta.md
 msgid "# Acceleration in pixels/sec/sec."
-msgstr ""
+msgstr "# ピクセル/秒/秒 単位の加速度。"
 
 #: basics/understanding_delta.md
 msgid "# Sprite movement code:"
-msgstr ""
+msgstr "# Spriteの移動コード:"
 
 #: basics/custom_resources.md
 msgid "# Called when running into obstacles"
-msgstr ""
+msgstr "# 障害物に衝突したときに呼び出される"
 
 #: basics/tree_ready_order.md
 msgid "# Note: a Node doesn't have a \"name\" yet here."
-msgstr ""
+msgstr "# 注意: この時点ではNodeにはまだ \"name\" がありません。"
 
 #: basics/tree_ready_order.md
 msgid "# This ensures we only print *once* in process()."
-msgstr ""
+msgstr "# これによりprocess()内で1回だけ出力されるようにします。"
 
 #: ui/minimap.md
 msgid "# In the mob's script:"
-msgstr ""
+msgstr "# モブのスクリプト内:"
 
 #: ui/minimap.md
 msgid "# In the crate's script:"
-msgstr ""
+msgstr "# 木箱のスクリプト内:"
 
 #: ui/level_select.md
 msgid "# You can also connect the \"level_selected\" signals here"
-msgstr ""
+msgstr "# ここで \"level_selected\" シグナルを接続することもできます"
 
 #: ui/level_select.md
 msgid "# Number all the level boxes and unlock them"
-msgstr ""
+msgstr "# すべてのレベルボックスに番号を振り、アンロックします"
 
 #: ui/level_select.md
 msgid "# Replace with your game's level/unlocks/etc."
-msgstr ""
+msgstr "# あなたのゲームのレベルやアンロック状況などに置き換えてください。"
 
 #: ui/debug_overlay.md
 msgid "# Sets the label's text."
-msgstr ""
+msgstr "# ラベルのテキストを設定します。"
 
 #: ui/radial_menu.md
 msgid "# Subtract PI/2 to align the first button  to the top"
-msgstr ""
+msgstr "# 最初のボタンを上部に配置するために PI/2 を引きます"
 
 #: 3D/camera_gimbal.md
 msgid "# mouse properties"
-msgstr ""
+msgstr "# マウスのプロパティ"
 
 #: 3D/camera_gimbal.md
 msgid "# zoom settings"
-msgstr ""
+msgstr "# ズーム設定"
 
 #: 3D/camera_gimbal.md
 msgid "# Rotate outer gimbal around y axis"
-msgstr ""
+msgstr "# 外側のジンバルをY軸周りに回転"
 
 #: 3D/camera_gimbal.md
 msgid "# Rotate inner gimbal around local x axis"
-msgstr ""
+msgstr "# 内側のジンバルをローカルX軸周りに回転"
 
 #: 3D/spaceship.md
 msgid "# yaw_input = lerp(yaw_input, Input.get_axis(\"yaw_right\", \"yaw_left\"),"
-msgstr ""
+msgstr "# yaw_input = lerp(yaw_input, Input.get_axis(\"yaw_right\", \"yaw_left\"),"
 
 #: 3D/rolling_cube.md
 msgid "# Do nothing if we're currently rolling."
-msgstr ""
+msgstr "# 現在回転中の場合は何もしない。"
 
 #: 3D/rolling_cube.md
 msgid "# Step 2: Animate the rotation."
-msgstr ""
+msgstr "# ステップ2: 回転アニメーションを実行。"
 
 #: 3D/rolling_cube.md
 msgid "# Step 3: Finalize the movement and reset the offset."
-msgstr ""
+msgstr "# ステップ3: 移動を確定し、オフセットをリセット。"
 
 #: 3D/rolling_cube.md
 msgid "# Step 1: Offset the pivot."
-msgstr ""
+msgstr "# ステップ1: ピボットをオフセット。"
 
 #: 3D/rolling_cube.md
 msgid "# Cast a ray before moving to check for obstacles"
-msgstr ""
+msgstr "# 移動前にレイを飛ばして障害物がないか確認"
 
 #: 3D/3d_sphere_car.md
 msgid "# rotate car mesh"
-msgstr ""
+msgstr "# 車のメッシュを回転"
 
 #: 3D/3d_sphere_car.md
 msgid "# rotate wheels for effect"
-msgstr ""
+msgstr "# 演出のために車輪を回転"
 
 #: 3D/3d_sphere_car.md
 msgid "# Below this speed, the car doesn't turn"
-msgstr ""
+msgstr "# この速度以下では車は旋回しない"
 
 #: 3D/3d_sphere_car.md
 msgid "# Variables for input values"
-msgstr ""
+msgstr "# 入力値用の変数"
 
 #: 3D/3d_sphere_car.md
 msgid "# Engine power"
-msgstr ""
+msgstr "# エンジン出力"
 
 #: 3D/3d_sphere_car.md
 msgid "# Where to place the car mesh relative to the sphere"
-msgstr ""
+msgstr "# 球体に対する車のメッシュの配置位置"
 
 #: 3D/3d_sphere_car.md
 msgid "# tilt body for effect"
-msgstr ""
+msgstr "# 演出のために車体を傾ける"
 
 #: 3D/3d_sphere_car.md
 msgid "# Turn amount, in degrees"
-msgstr ""
+msgstr "# 旋回量(度単位)"
 
 #: 3D/3d_sphere_car.md
 msgid "# How quickly the car turns"
-msgstr ""
+msgstr "# 車が旋回する速さ"
 
 #: 3D/simple_airplane.md
 msgid "# Landing"
-msgstr ""
+msgstr "# 着陸"
 
 #: 3D/simple_airplane.md
 msgid "# Bank when turning"
-msgstr ""
+msgstr "# 旋回時のバンク(傾き)"
 
 #: 3D/simple_airplane.md
 msgid "# Turn (roll/yaw) input"
-msgstr ""
+msgstr "# 旋回(ロール/ヨー)入力"
 
 #: 3D/simple_airplane.md
 msgid "# Climb/dive rate"
-msgstr ""
+msgstr "# 上昇/降下率"
 
 #: 3D/simple_airplane.md
 msgid "# Acceleration/deceleration"
-msgstr ""
+msgstr "# 加速/減速"
 
 #: 3D/simple_airplane.md
 msgid "# Lets us change behavior when grounded"
-msgstr ""
+msgstr "# 着地時に動作を変更できるようにする"
 
 #: 3D/simple_airplane.md
 msgid "# Maximum airspeed"
-msgstr ""
+msgstr "# 最高対気速度"
 
 #: 3D/simple_airplane.md
 msgid "# Can't fly below this speed"
-msgstr ""
+msgstr "# この速度以下では飛行不能"
 
 #: 3D/simple_airplane.md
 msgid "# Turn rate"
-msgstr ""
+msgstr "# 旋回速度"
 
 #: 3D/simple_airplane.md
 msgid "# Throttle input speed"
-msgstr ""
+msgstr "# スロットル入力速度"
 
 #: 3D/simple_airplane.md
 msgid "# Current speed"
-msgstr ""
+msgstr "# 現在の速度"
 
 #: 3D/simple_airplane.md
 msgid "# Throttle input"
-msgstr ""
+msgstr "# スロットル入力"
 
 #: 3D/simple_airplane.md
 msgid "# Movement is always forward"
-msgstr ""
+msgstr "# 移動は常に前方向"
 
 #: 3D/simple_airplane.md
 msgid "#\tpitch_input =  Input.get_axis(\"pitch_down\", \"pitch_up\")"
-msgstr ""
+msgstr "#\tpitch_input =  Input.get_axis(\"pitch_down\", \"pitch_up\")"
 
 #: 3D/simple_airplane.md
 msgid "# Throttle change speed"
-msgstr ""
+msgstr "# スロットル変化速度"
 
 #: 3D/simple_airplane.md
 msgid "# Wings \"autolevel\" speed"
-msgstr ""
+msgstr "# 主翼の「自動水平復帰」速度"
 
 #: 3D/simple_airplane.md
 msgid "# Accelerate/decelerate"
-msgstr ""
+msgstr "# 加速/減速"
 
 #: 3D/simple_airplane.md
 msgid "# Pitch (climb/dive) input"
-msgstr ""
+msgstr "# ピッチ(上昇/降下)入力"
 
 #: 3D/assets/character_controller.md
 msgid "# We just hit the floor after being in the air"
-msgstr ""
+msgstr "# 空中にいた後、地面に着地した瞬間"
 
 #: 3D/assets/character_controller.md
 msgid "# We're in the air, but we didn't jump"
-msgstr ""
+msgstr "# 空中にいるが、ジャンプしたわけではない"
 
 #: 3D/kinematic_car/car_base.md
 msgid "# Car state properties"
-msgstr ""
+msgstr "# 車両の状態プロパティ"
 
 #: 3D/kinematic_car/car_base.md
 msgid "# Car behavior parameters, adjust as needed"
-msgstr ""
+msgstr "# 車両の挙動パラメータ(必要に応じて調整)"
 
 #: 3D/kinematic_car/car_base.md
 msgid "# Override this in inherited scripts for controls"
-msgstr ""
+msgstr "# 操作処理のために継承スクリプトでオーバーライドする"
 
 #: 3D/kinematic_car/car_slopes.md
 msgid "# If either wheel is in the air, align to slope."
-msgstr ""
+msgstr "# いずれかの車輪が空中にある場合、斜面に合わせる。"
 
 #: 3D/kinematic_car/car_slopes.md
 msgid "# If one wheel is in air, move it down"
-msgstr ""
+msgstr "# 片方の車輪が空中にある場合、それを下げる"
 
 #: 3D/kinematic_car/car_traction.md
 msgid "# traction"
-msgstr ""
+msgstr "# トラクション"
 
 #: input/multi_unit_select.md
 msgid "# Otherwise a click tells the selected units to move"
-msgstr ""
+msgstr "# それ以外の場合、クリックで選択中のユニットに移動を指示"
 
 #: input/multi_unit_select.md
 msgid "# If the mouse was clicked and nothing is selected, start dragging"
-msgstr ""
+msgstr "# マウスがクリックされ、何も選択されていない場合はドラッグを開始"
 
 #: input/multi_unit_select.md
 msgid "# If the mouse is released and is dragging, stop dragging"
-msgstr ""
+msgstr "# マウスが離され、ドラッグ中であればドラッグを終了"
 
 #: input/input_actions.md
 msgid "# This will execute every frame as long as the input is held."
-msgstr ""
+msgstr "# 入力が保持されている間、毎フレーム実行されます。"
 
 #: input/input_actions.md
 msgid "# This will run once on the frame when the action is first pressed"
-msgstr ""
+msgstr "# アクションが最初に押されたフレームで1回だけ実行されます"
 
 #: input/mouse_input.md
 msgid "# Converts mouse movement (pixels) to rotation (radians)."
-msgstr ""
+msgstr "# マウスの移動量(ピクセル)を回転量(ラジアン)に変換します。"
 
 #: animation/using_animation_sm.md
 msgid "# flip the character sprite left/right"
-msgstr ""
+msgstr "# キャラクタースプライトを左右反転"
 
 #: animation/using_animation_sm.md
 msgid "# choose animation"
-msgstr ""
+msgstr "# アニメーションを選択"
 
 #: g101/3d/101_3d_07.md
 msgid "# desired move in camera direction"
-msgstr ""
+msgstr "# カメラ方向への目標移動ベクトル"
 
 #: g101/gdscript/gdscript_01.md
 msgid "# Called when the node enters the scene tree for the first time."
-msgstr ""
+msgstr "# ノードが初めてシーンツリーに入ったときに呼び出されます。"
 
 #: g101/gdscript/gdscript_01.md
 msgid ""
 "# Called every frame. 'delta' is the elapsed time since the previous frame."
-msgstr ""
+msgstr "# 毎フレーム呼び出されます。'delta' は前フレームからの経過時間です。"
 
 #: audio/audio_manager.md
 msgid "# Create the pool of AudioStreamPlayer nodes."
-msgstr ""
+msgstr "# AudioStreamPlayerノードのプールを作成。"
 
 #: audio/audio_manager.md
 msgid "# Play a queued sound if any players are available."
-msgstr ""
+msgstr "# 利用可能なプレイヤーがあればキューに入ったサウンドを再生。"
 
 #: audio/audio_manager.md
 msgid "# When finished playing a stream, make the player available again."
-msgstr ""
+msgstr "# ストリームの再生が終了したら、プレイヤーを再び利用可能にする。"
 
 #: kyn/characterbody2d.md
 msgid "# Using move_and_slide()"
-msgstr ""
+msgstr "# move_and_slide() を使用する場合"
 
 #: kyn/characterbody2d.md
 msgid "# Using move_and_collide()"
-msgstr ""
+msgstr "# move_and_collide() を使用する場合"
 
 #: ai/context_map.md
 msgid "# If no world path, use default interest"
-msgstr ""
+msgstr "# ワールドパスがない場合は、デフォルトの関心度を使用"
 
 #: ai/context_map.md
 msgid "# Choose direction based on remaining interest"
-msgstr ""
+msgstr "# 残った関心度に基づいて方向を選択"
 
 #: ai/context_map.md
 msgid "# Eliminate interest in slots with danger"
-msgstr ""
+msgstr "# 危険のあるスロットの関心度を除外"
 
 #: ai/context_map.md
 msgid "# Default to moving forward"
-msgstr ""
+msgstr "# デフォルトでは前進"
 
 #: ai/context_map.md
 msgid "# Cast rays to find danger directions"
-msgstr ""
+msgstr "# レイを照射して危険な方向を検出"
 
 #: ai/context_map.md
 msgid "# context array"
-msgstr ""
+msgstr "# コンテキスト配列"
 
 #: ai/context_map.md
 msgid "# Set interest in each slot based on world direction"
-msgstr ""
+msgstr "# ワールド方向に基づいて各スロットの関心度を設定"
 
 #: shaders/blur.md
 msgid "# Place it lower in the tree and/or place in CanvasLayer"
-msgstr ""
+msgstr "# ツリーの下位に配置するか、CanvasLayer内に配置してください"
 
 #: shaders/blur.md
 msgid "# so it's on top of the rest of the scene."
-msgstr ""
+msgstr "# これによりシーンの他の要素の上に表示されます。"
 
 #: shaders/blur.md
 msgid "# Add a ColorRect or other Control set to fill the screen"
-msgstr ""
+msgstr "# 画面全体を満たすように設定したColorRectなどのControlを追加"
 
 #: physics/character_vs_rigid.md
 msgid "# after calling move_and_slide()"
-msgstr ""
+msgstr "# move_and_slide() を呼び出した後"
 
 #: physics/character_vs_rigid.md
 msgid "# This represents the player's inertia."
-msgstr ""
+msgstr "# これはプレイヤーの慣性を表します。"
 
 #: physics/smooth_rigid_move.md
 msgid "# Smoothly move to target"
-msgstr ""
+msgstr "# ターゲットへ滑らかに移動"
 
 #: physics/collision_layers.md
 msgid "# Check if masking layer 3"
-msgstr ""
+msgstr "# レイヤー3をマスクしているか確認"
 
 #: physics/collision_layers.md
 msgid "# Enable layer 2"
-msgstr ""
+msgstr "# レイヤー2を有効化"
 
 #: physics/kinematic_friction.md
 msgid "# accelerate when there's input"
-msgstr ""
+msgstr "# 入力があるときは加速"
 
 #: physics/kinematic_friction.md
 msgid "# slow down when there's no input"
-msgstr ""
+msgstr "# 入力がないときは減速"
 
 #: 2D/2d_align_surface.md
 msgid "# Convert velocity back to local space."
-msgstr ""
+msgstr "# 速度をローカル空間に変換し直す。"
 
 #: 2D/grid_movement.md
 msgid "#position += inputs[dir] * tile_size"
-msgstr ""
+msgstr "#position += inputs[dir] * tile_size"
 
 #: 2D/multi_target_camera.md
 msgid "# Find the zoom that will contain all targets"
-msgstr ""
+msgstr "# すべてのターゲットを収めるズーム値を計算"
 
 #: 2D/multi_target_camera.md
 msgid "# Keep the camera centered among all targets"
-msgstr ""
+msgstr "# すべてのターゲットの中心にカメラを維持"
 
 #: 2D/multi_target_camera.md
 msgid "# For debug"
-msgstr ""
+msgstr "# デバッグ用"
 
 #: 2D/multi_target_camera.md
 msgid "# Keep the camera centered between the targets"
-msgstr ""
+msgstr "# ターゲットの中間にカメラを維持"
 
 #: 2D/tilemap_collision.md
 msgid "# Find the character's position in tile coordinates"
-msgstr ""
+msgstr "# タイル座標におけるキャラクターの位置を取得"
 
 #: 2D/tilemap_collision.md
 msgid "# Confirm the colliding body is a TileMap"
-msgstr ""
+msgstr "# 衝突したボディがTileMapであることを確認"
 
 #: 2D/tilemap_collision.md
 msgid "# Find the colliding tile position"
-msgstr ""
+msgstr "# 衝突したタイルの位置を取得"
 
 #: 2D/tilemap_collision.md
 msgid "# Get the tile id"
-msgstr ""
+msgstr "# タイルIDを取得"
 
 #: 2D/touchscreen_camera.md
 msgid "# Optional: export these properties for convenient editing."
-msgstr ""
+msgstr "# オプション: 編集しやすいようにこれらのプロパティをエクスポートする。"
 
 #: 2D/platform_character.md
 msgid "# Add gravity every frame"
-msgstr ""
+msgstr "# 毎フレーム重力を加算"
 
 #: 2D/platform_character.md
 msgid "# Only allow jumping when on the ground"
-msgstr ""
+msgstr "# 地面にいるときのみジャンプを許可"
 
 #: 2D/platform_character.md
 msgid "# Input affects x axis only"
-msgstr ""
+msgstr "# 入力はX軸のみに影響"
 
 #: 2D/topdown_movement.md
 msgid "# look_at(target)"
-msgstr ""
+msgstr "# look_at(target)"
 
 #: 2D/grid_pathfinding.md
 msgid "# Add/remove wall"
-msgstr ""
+msgstr "# 壁の追加/削除"
 
 #: 2D/car_steering.md
 msgid "# 4. Set the velocity and rotation to the new direction"
-msgstr ""
+msgstr "# 4. 速度と回転を新しい方向に設定"
 
 #: 2D/car_steering.md
 msgid ""
 "# choose which traction value to use - at lower speeds, slip should be low"
-msgstr ""
+msgstr "# 使用するトラクション値を選択 - 低速時はスリップを抑える"
 
 #: 2D/car_steering.md
 msgid "# 1. Find the wheel positions"
-msgstr ""
+msgstr "# 1. 車輪の位置を取得"
 
 #: 2D/car_steering.md
 msgid "# 3. Find the new direction vector"
-msgstr ""
+msgstr "# 3. 新しい方向ベクトルを取得"
 
 #: 2D/car_steering.md
 msgid "# 2. Move the wheels forward"
-msgstr ""
+msgstr "# 2. 車輪を前進させる"
 
 #: games/first_2d/first_2d_10.md
 msgid "#\tspawn_enemies()"
-msgstr ""
+msgstr "#\tspawn_enemies()"
 
 #: games/circle_jump/circle_jump_11.md
 msgid "# Fill these from your AdMob account:"
-msgstr ""
+msgstr "# AdMobアカウントから取得した情報をここに入力:"
 
 #: games/circle_jump/circle_jump_03.md
 msgid "# Check if the jumper completed a full circle"
-msgstr ""
+msgstr "# ジャンパーが円を一周したか確認"
 
 #~ msgid ""
 #~ "{{% notice style=\"tip\" title=\"Godot 4.0\"%}}\n"
