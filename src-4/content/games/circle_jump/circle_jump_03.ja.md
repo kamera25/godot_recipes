@@ -73,17 +73,7 @@ func _process(delta):
         check_orbits()
 
 func check_orbits():
-    # ジャンパーが円を一周したか確認{{% notice style="tip" title="Godot 4.0"%}}
-**Godot 4.0 has been released!**<br>
-Godot 4.0 is the latest stable release version of the engine.<br>
-This site also has lots of learning material for Godot 3 - much of it is still useful! You can click the ribbon in the top-right to toggle the Godot Recipes version, or click the button below:<br>
-{{% button href="/godot_recipes/3.x/" style="primary" icon="utensils" %}}Godot 3 Recipes{{% /button %}}
-{{% /notice %}}{{% notice style="tip" title="Godot 4.0"%}}
-**Godot 4.0が正式リリースされました！**<br>
-Godot 4.0はエンジンの最新安定版バージョンです。<br>
-このサイト(注 : 原文サイトには。この非公式日本語版にはGodot 3の日本語訳はありません。)にはGodot 3向けの学習教材も充実しており、その多くは今でも十分に活用できます。以下のボタンからアクセスできます。<br>
-{{% button href="https://kidscancode.org/godot_recipes/4.x/ja/" style="primary" icon="utensils" %}}Godot 3レシピ集 (原文・英語){{% /button %}}
-{{% /notice %}}Homeホーム![Godot 4: 限定サークル (godot3 logo)](/godot_recipes/4.x/img/godot3_logo.png?width=400px)![Godot 4: 限定サークル (godot3 logo)](/godot_recipes/4.x/img/godot3_logo.png?width=400px)
+    # ジャンパーが円を一周したか確認
     if abs($Pivot.rotation - orbit_start) > 2 * PI:
         current_orbits -= 1
         $Label.text = str(current_orbits)
