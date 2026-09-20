@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kamera25.github.io/godot_recipes/4.x/sitemap.xml
+Sitemap: https://kamera25.github.io/godot_recipes/4.x/ja/sitemap.xml
