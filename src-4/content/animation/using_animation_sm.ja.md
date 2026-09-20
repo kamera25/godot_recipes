@@ -18,7 +18,7 @@ draft: false
 
 ![Godot 4: アニメーションツリーを使う (adventurer sprite sheet v1.1)](/godot_recipes/4.x/img/adventurer_sprite_sheet_v1.1.png)
 
-We'll also assume you've already set up the character's animations using {{< gd-icon AnimationPlayer >}}`AnimationPlayer`. Using the above spritesheet, we have the following animations: "idle", "run", "attack1", "attack2", "hurt", and "die".
+キャラクターのアニメーションは {{< gd-icon AnimationPlayer >}}`AnimationPlayer` ですでに設定済みとします。上記のスプライトシートでは、`idle`、`run`、`attack1`、`attack2`、`hurt`、`die` のアニメーションを用意しています。
 
 ### アニメーションツリー
 
@@ -114,4 +114,3 @@ AnimationTreeStateMachine を使用して以下の処理を管理できます。
 
 - [スプライトシートアニメーション](/godot_recipes/4.x/ja/animation/spritesheet_animation/)
 - [見下ろし型キャラクター操作](/godot_recipes/4.x/ja/2d/topdown_movement/#option-1-8-way-movement)
-

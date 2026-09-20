@@ -5,11 +5,6 @@ draft: false
 ghcommentid: 27
 ---
 
-{{% notice style="tips" title="ℹ️ 留意事項"%}}
-この記事は Godot 3から Godot 4 へ内容の書き換え中です。
-Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
-{{% /notice %}}
-
 ## 今回のお題
 
 タイルマップでアニメーションタイルを使用したい。
@@ -39,9 +34,9 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 「保存」ボタンをクリックしてリソースを保存します。`water_anim.tres`のような名前を付けてください。
 
-### TileMapでのAnimatedTextureの使用について
+### TileMapLayerでのAnimatedTextureの使用について
 
-`AnimatedTexture` が保存されたので、これで`TileSet`で使用できるようになります。新規または既存の{{< gd-icon TileMap >}}`TileMap`を開き、その _Tile Set_ プロパティを選択します。新しいテクスチャを`TileSet`に追加するには、ボタンをクリックします。
+`AnimatedTexture` が保存されたので、これで`TileSet`で使用できるようになります。新規または既存の{{< gd-icon TileMapLayer >}}`TileMapLayer`を開き、その _Tile Set_ プロパティを選択します。Godot 4.3以降はレイヤーごとに`TileMapLayer`を使用します。新しいテクスチャを`TileSet`に追加するには、ボタンをクリックします。
 
 ![Godot 4: アニメーションタイル(タイルマップ) (anim tile add)](/godot_recipes/4.x/img/anim_tile_add.png)
 
@@ -49,7 +44,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ![Godot 4: アニメーションタイル(タイルマップ) (anim tile select)](/godot_recipes/4.x/img/anim_tile_select.png)
 
-これで`TileMap`内のタイルを選択して、他の通常のタイルと同じように描画できるようになります。
+これで`TileMapLayer`内のタイルを選択して、他の通常のタイルと同じように描画できるようになります。
 
 ![Godot 4: アニメーションタイル(タイルマップ) (anim tile draw)](/godot_recipes/4.x/img/anim_tile_draw.gif)
 
