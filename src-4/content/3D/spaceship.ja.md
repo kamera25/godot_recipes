@@ -32,7 +32,7 @@ tags: []
 
 ### 設定手順
 
-操作対象の宇宙船に対応する `gltf` ファイルを選択し、*インポート*タブをクリックします。*ルートタイプ*を {{< gd-icon CharacterBody3D >}} `CharacterBody3D` に変更します。次に『再インポート』をクリックします。その後、`gltf`ファイルをダブルクリックすると、新しいシーンが生成され、その中に {{< gd-icon KinematicBody3D >}} `CharacterBody3D` をルートとする子オブジェクトとして {{< gd-icon MeshInstance3D >}} `MeshInstance` が表示されます。ボディに {{< gd-icon CollisionShape3D >}} `CollisionShape3D`を追加します。
+操作対象の宇宙船に対応する `gltf` ファイルを選択し、*インポート*タブをクリックします。*ルートタイプ*を {{< gd-icon CharacterBody3D >}} `CharacterBody3D` に変更します。次に『再インポート』をクリックします。その後、`gltf`ファイルをダブルクリックすると、新しいシーンが生成され、その中に {{< gd-icon CharacterBody3D >}} `CharacterBody3D` をルートとする子オブジェクトとして {{< gd-icon MeshInstance3D >}} `MeshInstance` が表示されます。ボディに {{< gd-icon CollisionShape3D >}} `CollisionShape3D`を追加します。
 
 *プロジェクト設定 > インプットマップ* にて、以下の入力を設定します。
 
@@ -48,7 +48,7 @@ tags: []
 スクリプトを起動するには、前進動作を処理します。スロットルボタンを滑らかに押すと、速度が段階的に増減します。
 
 ```gdscript
-extends CharacterBody
+extends CharacterBody3D
 
 @export var max_speed = 50.0
 @export var acceleration = 0.6

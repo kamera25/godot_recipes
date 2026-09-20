@@ -5,11 +5,6 @@ draft: false
 ghcommentid: 11
 ---
 
-{{% notice style="tips" title="ℹ️ 留意事項"%}}
-この記事は Godot 3から Godot 4 へ内容の書き換え中です。
-Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
-{{% /notice %}}
-
 ## 今回のお題
 
 「無効なノード参照」、これはGodotヘルプチャンネルで最も頻繁に報告される問題の一つです。ほとんどの場合、以下のようなエラーメッセージとして表示されます。
@@ -30,10 +25,10 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ![Godot 4: ノードパスを理解しよう (node paths 01)](/godot_recipes/4.x/img/node_paths_01.png)
 
-このシーンのスクリプトは `Player` ノードに実装されています。もしスクリプトが `AnimatedSprite` ノードに対して `play()` メソッドを呼び出す必要がある場合、そのノードへの参照が必要となります。
+このシーンのスクリプトは `Player` ノードに実装されています。もしスクリプトが `AnimatedSprite2D` ノードに対して `play()` メソッドを呼び出す必要がある場合、そのノードへの参照が必要となります。
 
 ```gdscript
-get_node("AnimatedSprite").play()
+get_node("AnimatedSprite2D").play()
 ```
 
 `get_node()` 関数の引数は、対象ノードへのパスを表す文字列です。ここではスクリプト実行中のノードの子要素を指定します。指定したパスが無効な場合、厄介な `nullインスタンス` エラーが発生するほか（さらに「ノードが見つかりませんでした」というメッセージも表示されます）。
@@ -41,7 +36,7 @@ get_node("AnimatedSprite").play()
 ノード参照を `get_node()` で取得する状況は非常に頻繁にあるため、GDScript にはそのためのショートカットが用意されています。
 
 ```gdscript
-$AnimatedSprite.play()
+$AnimatedSprite2D.play()
 ```
 
 {{% notice info %}}

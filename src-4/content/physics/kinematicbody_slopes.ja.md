@@ -6,18 +6,13 @@ ghcommentid: 103
 tags: []
 ---
 
-{{% notice style="tips" title="ℹ️ 留意事項"%}}
-この記事は Godot 3から Godot 4 へ内容の書き換え中です。
-Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
-{{% /notice %}}
-
 ## 今回のお題
 
-{{< gd-icon KinematicBody3D >}}`CharacterBody3D` が坂道を滑り落ちてしまいます。
+{{< gd-icon CharacterBody3D >}}`CharacterBody3D` が坂道を滑り落ちてしまいます。
 
 ## 作り方
 
-まず、最小限の機能で構成された {{< gd-icon KinematicBody3D >}}`CharacterBody3D` から始め、以下のスクリプトで `move_and_slide()` メソッドを使用しています。
+まず、最小限の機能で構成された {{< gd-icon CharacterBody3D >}}`CharacterBody3D` から始め、以下のスクリプトで `move_and_slide()` メソッドを使用しています。
 
 ```gdscript
 extends CharacterBody3D
@@ -27,7 +22,6 @@ extends CharacterBody3D
 @export var rot_speed = 4.0
 @export var jump_speed = 5.0
 
-var velocity = Vector3.ZERO
 var jumping = false
 
 func get_input(delta):
@@ -44,6 +38,8 @@ func get_input(delta):
     velocity.z = input.z
 
 func _physics_process(delta):
+    floor_stop_on_slope = true
+    floor_snap_length = 0.2 if not jumping else 0.0
     get_input(delta)
     velocity.y += gravity * delta
 
@@ -66,14 +62,14 @@ func _physics_process(delta):
 
 重力によって生じる落下速度が、表面に沿って滑動しています。
 
-[`move_and_slide()` ドキュメント](https://docs.godotengine.org/ja/4.x/tutorials/physics/using_character_body_2d.html) を確認すると、`stop_on_slope` というパラメーターがあり、デフォルト値は `false` です。
+[`CharacterBody3D` ドキュメント](https://docs.godotengine.org/ja/4.x/classes/class_characterbody3d.html) を確認すると、`floor_stop_on_slope` プロパティがあり、デフォルト値は `true` です。
 
 > 設定値が `true` の場合、重力を考慮した線形速度を適用した状態でオブジェクトが静止している場合、傾斜面でも滑りません。
 
-このように、移動方法を次のように変更できます。
+Godot 4では移動関数の引数ではなく、このプロパティを使用します。
 
 ```gdscript
-move_and_slide()
+floor_stop_on_slope = true
 ```
 
 これで斜面を滑り落ちるのを止められます！
@@ -85,12 +81,12 @@ move_and_slide()
 
 ![Godot 4: CharacterBody3D : 坂道で停止する (kbd slopes 03)](/godot_recipes/4.x/img/kbd_slopes_03.gif)
 
-停止時にわずかに上向きの運動量が生じるため、小さな「ホップ」が発生します。この問題は、`move_and_slide_with_snap()` メソッドに切り替えることで解決できます。
+停止時にわずかに上向きの運動量が生じるため、小さな「ホップ」が発生します。この問題は、`floor_snap_length`プロパティで接地スナップの距離を設定することで解決できます。
 
 Jump 機能を確実に動作させるため、ジャンプ中のスナップ機能も無効にします。そうしないと、プレイヤーは地面にしっかりと「固定」されたままになってしまいます。
 
 ```gdscript
-    var snap = Vector3.DOWN if not jumping else Vector3.ZERO
+    floor_snap_length = 0.2 if not jumping else 0.0
     move_and_slide()
 ```
 

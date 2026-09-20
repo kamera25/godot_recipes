@@ -52,7 +52,7 @@ func align_with_y(xform, new_y):
 
 ```gdscript
 func _physics_process(delta):
-    velocity += gravity * delta
+    velocity.y -= gravity * delta
     get_input(delta)
     move_and_slide()
     for i in get_slide_count():
@@ -72,11 +72,12 @@ func _physics_process(delta):
 
 ```gdscript
 func _physics_process(delta):
-    velocity += gravity * delta
+    velocity.y -= gravity * delta
     get_input(delta)
-    move_and_slide(v)
-    var n = $RayCast3D.get_collision_normal()
-    global_transform = align_with_y(global_transform, n)
+    move_and_slide()
+    if $RayCast3D.is_colliding():
+        var n = $RayCast3D.get_collision_normal()
+        global_transform = align_with_y(global_transform, n)
 ```
 
 これはかなり改善されましたが、タンクがエッジを越えるたびに瞬時に整列するため、まだ少し不自然に見えます。
@@ -87,12 +88,14 @@ func _physics_process(delta):
 
 ```gdscript
 func _physics_process(delta):
-    velocity += gravity * delta
+    velocity.y -= gravity * delta
     get_input(delta)
-    velocity = move_and_slide_with_snap(velocity, Vector3.DOWN*2, Vector3.UP, true)
-    var n = $RayCast.get_collision_normal()
-    var xform = align_with_y(global_transform, n)
-    global_transform = global_transform.interpolate_with(xform, 12 * delta)
+    floor_snap_length = 2.0
+    move_and_slide()
+    if $RayCast3D.is_colliding():
+        var n = $RayCast3D.get_collision_normal()
+        var xform = align_with_y(global_transform, n)
+        global_transform = global_transform.interpolate_with(xform, 12 * delta)
 ```
 
 結果は非常に滑らかでより魅力的なものになります。
@@ -116,4 +119,3 @@ var n = ($FrontRay.get_collision_normal() + $RearRay.get_collision_normal()) / 2
 - [CharacterBody3Dの移動](/godot_recipes/4.x/ja/3d/characterbody3d_examples/)
 - [ゲーム数学 補間](/godot_recipes/4.x/ja/math/interpolation/)
 - [ゲーム数学 トランスフォーム](/godot_recipes/4.x/ja/math/transforms/)
-

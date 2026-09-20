@@ -5,11 +5,6 @@ draft: false
 ghcommentid: 44
 ---
 
-{{% notice style="tips" title="ℹ️ 留意事項"%}}
-この記事は Godot 3から Godot 4 へ内容の書き換え中です。
-Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
-{{% /notice %}}
-
 ## 今回のお題
 
 [キネマティックカー](/godot_recipes/4.x/ja/3d/kinematic_car/car_base/) は斜面を登れるようになりましたが、見た目が少し不自然です。
@@ -20,7 +15,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 運動体は衝突時に自動で回転しません。画像のように車輪が地面に接触していない場合、手動で車を整列させましょう。
 
-まず、車輪が地面に接触していない状況を検出しましょう。車に2つの {{< gd-icon RayCast3D >}}`RayCast` ノードを追加し、以下のように前輪と後輪にそれぞれ配置します。
+まず、車輪が地面に接触していない状況を検出しましょう。車に2つの {{< gd-icon RayCast3D >}}`RayCast3D` ノードを追加し、以下のように前輪と後輪にそれぞれ配置します。
 
 ![Godot 4: 3Dで自動車を作ろう：傾斜面＆スロープ (3d car 11)](/godot_recipes/4.x/img/3d_car_11.png)
 
@@ -38,7 +33,7 @@ func align_with_y(xform, new_y):
     return xform
 ```
 
-`_physics_process()` 関数内で `move_and_slide_with_snap()` を呼び出した直後に、車両を整列させる必要があるかどうかをチェックします。
+`_physics_process()` 関数内で `move_and_slide()` を呼び出した直後に、車両を整列させる必要があるかどうかをチェックします。接地スナップはベーススクリプトの `floor_snap_length` で設定します。
 
 ```gdscript
 # いずれかの車輪が空中にある場合、斜面に合わせる。
@@ -69,4 +64,3 @@ if $FrontRay.is_colliding() or $RearRay.is_colliding():
 - [CharacterBody3D：地面に沿う](/godot_recipes/4.x/ja/3d/3d_align_surface/)
 
 #### この動画が気に入ったら？
-

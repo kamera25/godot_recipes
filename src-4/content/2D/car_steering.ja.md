@@ -169,7 +169,7 @@ func _physics_process(delta):
     apply_friction(delta)
     calculate_steering(delta)
     velocity += acceleration * delta
-    velocity = move_and_slide(velocity)
+    move_and_slide()
 
 func apply_friction(delta):
     if acceleration == Vector2.ZERO and velocity.length() < 50:

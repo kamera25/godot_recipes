@@ -4,18 +4,13 @@ weight: 3
 draft: false
 ---
 
-{{% notice style="tips" title="ℹ️ 留意事項"%}}
-この記事は Godot 3から Godot 4 へ内容の書き換え中です。
-Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
-{{% /notice %}}
-
 ## 今回のお題
 
 運動キャラクターに摩擦と加速度を加え、より自然な動きを実現したい。
 
 ## 作り方
 
-多くのゲームにおいて、必ずしも完全な物理シミュレーションを求めているわけではありません。重要なのはアクション性、反応の良さ、そしてアーケードならではの爽快感です。だからこそ、RigidBodyではなくKinematicBodyを選択するのです。これによって物体の動きを直接制御できるようになります。ただし、ある程度の物理的な挙動は必要です。これはつまり、オブジェクトが突然方向を変えたり停止したりしないようにするためです。
+多くのゲームにおいて、必ずしも完全な物理シミュレーションを求めているわけではありません。重要なのはアクション性、反応の良さ、そしてアーケードならではの爽快感です。だからこそ、RigidBody2DではなくCharacterBody2Dを選択するのです。これによって物体の動きを直接制御できるようになります。ただし、ある程度の物理的な挙動は必要です。これはつまり、オブジェクトが突然方向を変えたり停止したりしないようにするためです。
 
 以下に、シンプルな運動力学に基づくプラットフォーマーキャラクター用のコードを示します。
 
@@ -25,8 +20,6 @@ extends CharacterBody2D
 var speed = 1200
 var jump_speed = -1800
 var gravity = 4000
-
-var velocity = Vector2.ZERO
 
 func get_input():
     velocity.x = 0
@@ -68,9 +61,9 @@ func get_input():
         input_dir += 1
     if Input.is_action_pressed("ui_left"):
         input_dir -= 1
-    if dir != 0:
+    if input_dir != 0:
         # 入力があるときは加速
-        velocity.x = lerp(velocity.x, dir * speed, acceleration)
+        velocity.x = lerp(velocity.x, input_dir * speed, acceleration)
     else:
         # 入力がないときは減速
         velocity.x = lerp(velocity.x, 0, friction)

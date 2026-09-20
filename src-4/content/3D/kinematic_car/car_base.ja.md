@@ -5,11 +5,6 @@ draft: false
 ghcommentid: 41
 ---
 
-{{% notice style="tips" title="ℹ️ 留意事項"%}}
-この記事は Godot 3から Godot 4 へ内容の書き換え中です。
-Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
-{{% /notice %}}
-
 ## 今回のお題
 
 3Dドライビング/レーシングゲームを作りたいが、どこから手をつければいいかわからない。
@@ -45,7 +40,7 @@ Kenny氏の『カーキット』でこの車種やその他のモデルを見つ
 
 Godotでファイルを選択し、「インポート」タブに移動します。_ルートタイプ_を「CharacterBody3D」に変更し、「再インポート」をクリックします。これでこの車を使用する準備が整いました。
 
-#### {{< gd-icon KinematicBody3D >}} キャラクター用 Body3D の設定
+#### {{< gd-icon CharacterBody3D >}} CharacterBody3D の設定
 
 `sedanSports.glb`ファイルをダブルクリックし、「新規継承」を選択します。以下のように新しいシーンが作成されます。
 
@@ -53,7 +48,7 @@ Godotでファイルを選択し、「インポート」タブに移動します
 
 ※各パーツごとの個別メッシュに注意。なお、余分な「tmpParent」{{< gd-icon Node3D >}}`Node3D`ノードがありますが、こちらは無視して構いません。
 
-{{< gd-icon KinematicBody3D >}}`CharacterBody3D` には衝突形状の欠落に関する警告メッセージが表示されています。まずはこの問題を修正しましょう。
+{{< gd-icon CharacterBody3D >}}`CharacterBody3D` には衝突形状の欠落に関する警告メッセージが表示されています。まずはこの問題を修正しましょう。
 * {{< gd-icon CollisionShape3D >}}`CollisionShape` を追加します。
 * 車両本体用に {{< gd-icon BoxShape3D >}}`BoxShape` を設定します。
 * 前輪用と後輪用にそれぞれ1つずつ {{< gd-icon CylinderShape3D >}}`CylinderShape` をおきます。
@@ -76,7 +71,7 @@ Godotでファイルを選択し、「インポート」タブに移動します
 extends CharacterBody3D
 
 # 車両の挙動パラメータ(必要に応じて調整)
-@export var gravity = -20.0
+@export var gravity = 20.0
 @export var wheel_base = 0.6  # distance between front/rear axles
 @export var steering_limit = 10.0  # front wheel max turning angle (deg)
 @export var engine_power = 6.0
@@ -87,7 +82,6 @@ extends CharacterBody3D
 
 # 車両の状態プロパティ
 var acceleration = Vector3.ZERO  # current acceleration
-var velocity = Vector3.ZERO  # current velocity
 var steer_angle = 0.0  # current wheel angle
 ```
 
@@ -103,7 +97,7 @@ var steer_angle = 0.0  # current wheel angle
 
 ここでは、コントロールを適用する前に車が地面に接地しているかを確認します。空中では操舵は不可能ですからね！その後、標準的な移動方程式を適用します。
 
-車が斜面から滑り落ちるのを防ぐ `move_and_slide_with_snap()` を使用している点に注意しましょう（トラックに坂道がある場合）。スナップ基準には車のローカル下方向ベクトルを使用しています。これも正しく坂道を処理するためです。
+Godot 4では `CharacterBody3D` の `floor_snap_length` を使って坂道に接地させます。スナップ距離を短く保つことで、トラック上の自然な接地を維持できます。
 
 ```gdscript
 func _physics_process(delta):
@@ -111,9 +105,10 @@ func _physics_process(delta):
         get_input()
         apply_friction(delta)
         calculate_steering(delta)
-    acceleration.y = gravity
+    velocity.y -= gravity * delta
     velocity += acceleration * delta
-    velocity = move_and_slide_with_snap(velocity, -transform.basis.y, Vector3.UP, true)
+    floor_snap_length = 0.5
+    move_and_slide()
 ```
 
 この機能は摩擦力（車の`速度`に比例）と空気抵抗（`速度`の二乗に比例）を適用します。これによりパワーを加えていない時の減速効果が得られるだけでなく、車両の最高速度も決定されます。
@@ -134,8 +129,8 @@ func apply_friction(delta):
 
 ```gdscript
 func calculate_steering(delta):
-    var rear_wheel = transform.origin + transform.basis.z * wheel_base / 2.0
-    var front_wheel = transform.origin - transform.basis.z * wheel_base / 2.0
+    var rear_wheel = global_position + transform.basis.z * wheel_base / 2.0
+    var front_wheel = global_position - transform.basis.z * wheel_base / 2.0
     rear_wheel += velocity * delta
     front_wheel += velocity.rotated(transform.basis.y, steer_angle) * delta
     var new_heading = rear_wheel.direction_to(front_wheel)
@@ -145,7 +140,7 @@ func calculate_steering(delta):
         velocity = new_heading * velocity.length()
     if d < 0:
         velocity = -new_heading * min(velocity.length(), max_speed_reverse)
-    look_at(transform.origin + new_heading, transform.basis.y)
+    look_at(global_position + new_heading, transform.basis.y)
 ```
 
 最後に、車両の制御方法を決定する関数を作成します。これは個別の車両ごとにオーバーライドします。プレイヤーが操作する車両ではキーボード／ゲームパッド入力を、コンピュータが制御する車両ではAIによる判断を実装します。
@@ -164,7 +159,7 @@ func get_input():
 
 アナログスティック付きゲームパッドをお持ちの場合は、ぜひそれをご使用になることを強くオススメします。キーボード操作ではオン/オフしか制御できないため、「ハンドル」を最大限に回転させるしかありません。アナログスティックを使えば、はるかに快適な操作体験が得られます。いずれの操作方法でもコードが正しく動作するよう、しっかり対応いたします。
 
-以下が車両にアタッチするスクリプトです：{{< gd-icon KinematicBody3D >}} `CharacterBody3D`：
+以下が車両にアタッチするスクリプトです：{{< gd-icon CharacterBody3D >}} `CharacterBody3D`：
 
 ```gdscript
 extends "res://cars/car_base.gd"
@@ -172,7 +167,7 @@ extends "res://cars/car_base.gd"
 func get_input():
     var turn = Input.get_action_strength("steer_left")
     turn -= Input.get_action_strength("steer_right")
-    steer_angle = turn * deg2rad(steering_limit)
+    steer_angle = turn * deg_to_rad(steering_limit)
     $tmpParent/sedanSports/wheel_frontRight.rotation.y = steer_angle*2
     $tmpParent/sedanSports/wheel_frontLeft.rotation.y = steer_angle*2
     acceleration = Vector3.ZERO
@@ -212,4 +207,3 @@ func get_input():
 #### この動画が気に入ったら？
 
 {{< youtube WhwSKyGjQq0 >}}
-
