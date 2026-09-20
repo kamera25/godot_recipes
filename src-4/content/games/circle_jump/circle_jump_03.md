@@ -99,7 +99,7 @@ We've also connected the jumper's `VisibilityNotifier2D` signal so that we can r
 
 If we try it out, everything looks good so far:
 
-![alt](/godot_recipes/3.x/img/cj_03_01.gif)
+![Godot 4: Limited circles (cj 03 01)](/godot_recipes/3.x/img/cj_03_01.gif)
 
 ### Circle effect
 
@@ -131,7 +131,7 @@ func _draw():
 
 Lastly, add `update()` to the `_physics_process` so that it will be called after every call to `check_orbits()`.
 
-![alt](/godot_recipes/3.x/img/cj_03_02.gif)
+![Godot 4: Limited circles (cj 03 02)](/godot_recipes/3.x/img/cj_03_02.gif)
 
 In the next part we'll start adding some UI.
 

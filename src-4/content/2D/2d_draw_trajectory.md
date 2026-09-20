@@ -23,7 +23,7 @@ For this example, we're using the "Ballistic Bullet" from this recipe:
 
 and a tank set up like so, with a {{< gd-icon Marker2D >}}`Marker2D` designating the "muzzle" where the bullet will be spawned:
 
-![alt](/godot_recipes/3.x/img/tank_01.png)
+![Godot 4: Draw trajectory (tank 01)](/godot_recipes/3.x/img/tank_01.png)
 
 In the tank's script, we instance the bullet like so:
 
@@ -42,7 +42,7 @@ This instances the bullet, adds it as a child to the "world" node (the tank's `o
 
 Here's our starting setup in action:
 
-![alt](/godot_recipes/3.x/img/tank_02.gif)
+![Godot 4: Draw trajectory (tank 02)](/godot_recipes/3.x/img/tank_02.gif)
 
 ### Line setup
 
@@ -50,7 +50,7 @@ In the main scene, which contains the tank and the ground, we've added a {{< gd-
 
 To improve the line's appearance, we've set the **Width** to `15` and all of the **Capping** options to "Round". We've also added a `Gradient` in the **Fill** section:
 
-![alt](/godot_recipes/3.x/img/2d_tank_03.png)
+![Godot 4: Draw trajectory (2d tank 03)](/godot_recipes/3.x/img/2d_tank_03.png)
 
 ### Drawing the line
 
@@ -89,7 +89,7 @@ We've also added a `break` if the path contacts the position of the *top* of the
 
 Finally, we show/hide the line when shooting or not.
 
-![alt](/godot_recipes/3.x/img/tank_04.gif)
+![Godot 4: Draw trajectory (tank 04)](/godot_recipes/3.x/img/tank_04.gif)
 
 ## Related recipes
 

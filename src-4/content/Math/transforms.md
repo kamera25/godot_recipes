@@ -13,11 +13,11 @@ Before reading this, make sure you have an understanding of vectors and how they
 
 In 2D space, we use the familiar X-Y coordinate plane. Remember that in Godot, as in most computer graphics applications, the **Y** axis points downward:
 
-![alt](/godot_recipes/4.x/img/0_2d_coordinate_plane.png?width=250px)
+![Godot 4: Transforms (0 2d coordinate plane)](/godot_recipes/4.x/img/0_2d_coordinate_plane.png?width=250px)
 
 To begin, let's consider this spaceship floating in space:
 
-![alt](/godot_recipes/4.x/img/0_2d_rocket1.png?width=250px)
+![Godot 4: Transforms (0 2d rocket1)](/godot_recipes/4.x/img/0_2d_rocket1.png?width=250px)
 
 The ship is pointing in the same direction as the **X** axis. If we wanted it to move forward, we could add to its **X** coordinate and it would move to the right:
 
@@ -27,13 +27,13 @@ position += Vector2(10, 0)
 
 But what happens when the ship rotates?
 
-![alt](/godot_recipes/4.x/img/0_2d_rocket2.png?width=250px)
+![Godot 4: Transforms (0 2d rocket2)](/godot_recipes/4.x/img/0_2d_rocket2.png?width=250px)
 
 How do we move the ship forward now? If you remember Trigonometry from school, you might be starting to think about angles, sine and cosine and doing something like `position += Vector2(10 * cos(angle), 10 * sin(angle))`. While this would work, there's a much more convenient way: the _Transform_.
 
 Let's look at the rotated ship again, but this time, let's also imagine that the ship has its own **X** and **Y** axes that it carries with it, independent of the global axes:
 
-![alt](/godot_recipes/4.x/img/0_2d_rocket3.png?width=250px)
+![Godot 4: Transforms (0 2d rocket3)](/godot_recipes/4.x/img/0_2d_rocket3.png?width=250px)
 
 These "local" axes are contained in the object's `transform`.
 
@@ -53,7 +53,7 @@ In addition to the local axes, the transform also contains a component called th
 
 In this picture, the blue vector is the `transform.origin`. It is equal to the object's `position` vector.
 
-![alt](/godot_recipes/4.x/img/0_2d_rocket4.png?width=250px)
+![Godot 4: Transforms (0 2d rocket4)](/godot_recipes/4.x/img/0_2d_rocket4.png?width=250px)
 
 ### Converting Between Local and Global Space
 
@@ -84,11 +84,11 @@ In 3D space, the concept of transforms applies in the same way as in 2D. In fact
 
 When you select a 3D node in the editor, the gizmo that appears allows you to manipulate the transform.
 
-![alt](/godot_recipes/4.x/img/3d_intro_gizmo.png)
+![Godot 4: Transforms (3d intro gizmo)](/godot_recipes/4.x/img/3d_intro_gizmo.png)
 
 {{% notice style="note" title="Local Space Mode" %}}
 In the editor, you can see and manipulate the body's local orientation by clicking the "Local Space Mode" button.
-![alt](/godot_recipes/4.x/img/3d_intro_local_space.png)
+![Godot 4: Transforms (3d intro local space)](/godot_recipes/4.x/img/3d_intro_local_space.png)
 When in this mode, the 3 colored axis lines represent the body's local basis axes.
 {{% /notice %}}
 

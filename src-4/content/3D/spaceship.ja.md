@@ -26,7 +26,7 @@ tags: []
 
 「処刑人」級の艦船モデルを選択しました。
 
-![alt](/godot_recipes/4.x/img/3d_ship_01.png)
+![Godot 4: アーケード風宇宙船 (3d ship 01)](/godot_recipes/4.x/img/3d_ship_01.png)
 
 ご自由にお好みのデザインをお選びください。
 
@@ -69,7 +69,7 @@ func _physics_process(delta):
 
 テスト用シーンを作成し、{{< gd-icon Camera3D >}}`Camera3D` コンポーネントを試してみます。固定カメラを使用するか、[追従カメラ](/godot_recipes/4.x/ja/3d/interpolated_camera/) を採用することもできます。宇宙船が加速と減速を適切に行うことを確認した上で、次のステップに進んでください。
 
-![alt](/godot_recipes/4.x/img/3d_ship_02.gif)
+![Godot 4: アーケード風宇宙船 (3d ship 02)](/godot_recipes/4.x/img/3d_ship_02.gif)
 
 ### 回転角度設定
 
@@ -107,7 +107,7 @@ transform.basis = transform.basis.rotated(transform.basis.y,
 transform.basis = transform.basis.orthonormalized()
 ```
 
-![alt](/godot_recipes/4.x/img/3d_ship_04.gif)
+![Godot 4: アーケード風宇宙船 (3d ship 04)](/godot_recipes/4.x/img/3d_ship_04.gif)
 
 ### 改善点
 
@@ -130,7 +130,7 @@ yaw_input = lerp(yaw_input, Input.get_axis("yaw_right", "yaw_left"),
 
 今は停止や方向転換時に、わずかな慣性が働くようになっています。
 
-![alt](/godot_recipes/4.x/img/3d_ship_03.gif)
+![Godot 4: アーケード風宇宙船 (3d ship 03)](/godot_recipes/4.x/img/3d_ship_03.gif)
 
 ### ロール/ヨー軸の連動設定
 

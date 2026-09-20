@@ -19,7 +19,7 @@ Setting the mouse cursor is done with `Input.set_custom_mouse_cursor()`. All you
 
 For example, to use the following image:
 
-![alt](/godot_recipes/3.x/img/crosshair137.png)
+![Godot 4: Customizing the Mouse Cursor (crosshair137)](/godot_recipes/3.x/img/crosshair137.png)
 
 And set its hotspot to the center:
 

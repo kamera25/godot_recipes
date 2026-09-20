@@ -53,7 +53,7 @@ if is_on_floor():
 
 This hasn't changed anything about the movement yet, but it does help us visualize what we need to do. When we're on the slope, our local transform looks like this:
 
-![alt](/godot_recipes/4.x/img/2d_align_04.png)
+![Godot 4: CharacterBody2D: align with surface (2d align 04)](/godot_recipes/4.x/img/2d_align_04.png)
 
 Now when we move, we want our `x` velocity to align with our local `x` axis (the red arrow), and gravity/jump to align with local `y` (the green arrow). We can keep our input code the same, and just assume that `velocity` is always calculated in the local coordinate system. The only problem will be that `move_and_slide()` expects the velocity vector to be in *global* coordinates. Let's adjust `move_and_slide_with_snap()` to account for this:
 

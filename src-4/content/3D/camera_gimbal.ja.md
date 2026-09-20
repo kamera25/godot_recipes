@@ -148,7 +148,7 @@ func _process(delta):
 
 `lerp()` を使用してズームレベルを変更すると、より滑らかなズームが実現できます。
 
-![alt](/godot_recipes/4.x/img/gimbal_02.gif)
+![Godot 4: カメラジンバル (gimbal 02)](/godot_recipes/4.x/img/gimbal_02.gif)
 
 ### ターゲットの追跡
 

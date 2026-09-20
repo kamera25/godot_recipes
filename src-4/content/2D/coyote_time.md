@@ -19,7 +19,7 @@ If the player walks off the edge of a platform, for a few frames afterward, we s
 {{% notice style="info" title="Origins" %}}
 The name "coyote time" comes from the famous cartoon coyote, who wouldn't fall until he looked down:
 
-![alt](/godot_recipes/4.x/img/coyote.png)
+![Godot 4: Coyote Time (coyote)](/godot_recipes/4.x/img/coyote.png)
 {{% /notice %}}
 
 

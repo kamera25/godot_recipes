@@ -8,7 +8,7 @@ pre = "<i class='fas fa-graduation-cap fa-fw'></i>&nbsp"
 
 # <i class='fas fa-graduation-cap'></i>&nbsp;はじめてのGodot
 
-![alt](/godot_recipes/4.x/img/godot3_logo.png?width=250)
+![Godot 4: はじめてのGodot (godot3 logo)](/godot_recipes/4.x/img/godot3_logo.png?width=250)
 
 Godotゲームエンジンの入門ガイドです。これまでゲームエンジンを使ったことがない方、あるいはGodotを初めて使う方にとって、最適なスタート地点となるでしょう。
 

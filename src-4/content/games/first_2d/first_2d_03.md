@@ -13,7 +13,7 @@ Writing scripts and attaching them to nodes and other objects is how you build b
 
 Select the `Player` node and click the  **Attach script** button:
 
-![alt](/godot_recipes/4.x/img/2d_101_13.png)
+![Godot 4: Coding the Player (2d 101 13)](/godot_recipes/4.x/img/2d_101_13.png)
 
 You don't need to change any of the options on the **Attach Node Script** window, so just click **Create** and you'll be taken to the script editor.
 
@@ -50,7 +50,7 @@ Let's break this down line-by-line:
 
 * Adding `@export` in front of a variable allows you to adjust its value in the **Inspector**.
 
-![alt](/godot_recipes/4.x/img/2d_101_14.png)
+![Godot 4: Coding the Player (2d 101 14)](/godot_recipes/4.x/img/2d_101_14.png)
 
 * The `_process()` function is called once every frame by the engine. Any code we place in this function will be executed every frame.
 * `Input.get_vector()` checks the pressed state of the four given inputs and produces a vector pointing in that direction.
@@ -63,7 +63,7 @@ Let's break this down line-by-line:
 
 Run the scene by clicking the **Run Current Scene** button, and try moving around.
 
-![alt](/godot_recipes/4.x/img/2d_101_15.png)
+![Godot 4: Coding the Player (2d 101 15)](/godot_recipes/4.x/img/2d_101_15.png)
 
 ### Staying on screen
 

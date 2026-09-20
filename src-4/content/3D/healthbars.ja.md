@@ -13,15 +13,15 @@ ghcommentid: 35
 
 この解決策として、既存の {{< gd-icon TextureProgressBar >}}`TextureProgressBar` ノードをベースにした 2D HPバーを再利用します。すでにテクスチャが設定されており、値と色を更新するためのコードも実装済みです。既に同様のシステムをお持ちの場合は、それをそのまま使用していただいて構いません。サンプルではこのシーンを「Healthbar2D」と名付けます。
 
-![alt](/godot_recipes/4.x/img/healthbar_example.gif)
+![Godot 4: 3D空間に浮かぶHPバー (healthbar example)](/godot_recipes/4.x/img/healthbar_example.gif)
 
 必要なアセットがある場合、バーで使用している以下の3つの画像を紹介します。
 
-![alt](/godot_recipes/4.x/img/barHorizontal_green_mid%20200.png)
+![Godot 4: 3D空間に浮かぶHPバー (barHorizontal green mid%20200)](/godot_recipes/4.x/img/barHorizontal_green_mid%20200.png)
 
-![alt](/godot_recipes/4.x/img/barHorizontal_yellow_mid%20200.png)
+![Godot 4: 3D空間に浮かぶHPバー (barHorizontal yellow mid%20200)](/godot_recipes/4.x/img/barHorizontal_yellow_mid%20200.png)
 
-![alt](/godot_recipes/4.x/img/barHorizontal_red_mid%20200.png)
+![Godot 4: 3D空間に浮かぶHPバー (barHorizontal red mid%20200)](/godot_recipes/4.x/img/barHorizontal_red_mid%20200.png)
 
 {{% notice note %}}
 既存のオブジェクトを再利用すれば、大幅に作業時間を節約できます。HPバーやカメラ、その他一般的なコンポーネントが必要なたびにゼロから作り直す必要はありません。
@@ -39,7 +39,7 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
             queue_free()
 ```
 
-![alt](/godot_recipes/4.x/img/3d_bars01a.gif)
+![Godot 4: 3D空間に浮かぶHPバー (3d bars01a)](/godot_recipes/4.x/img/3d_bars01a.gif)
 
 単位をクリックするたびに1ダメージが与えられます。合計10ダメージを与えると、そのユニットは破壊されます。この状態を2Dバーを使って視覚的に表現しましょう。
 
@@ -53,11 +53,11 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 続いてカメラを動かして、テクスチャが常にプレイヤー側を向いているか確認します。
 
-![alt](/godot_recipes/4.x/img/3d_bars02.gif)
+![Godot 4: 3D空間に浮かぶHPバー (3d bars02)](/godot_recipes/4.x/img/3d_bars02.gif)
 
 このシーンのインスタンスを`Mob`シーンに追加し、バーをモブの体の上に配置します。
 
-![alt](/godot_recipes/4.x/img/3d_bars04.png)
+![Godot 4: 3D空間に浮かぶHPバー (3d bars04)](/godot_recipes/4.x/img/3d_bars04.png)
 
 ### ビューポートテクスチャ
 
@@ -71,7 +71,7 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
 
 インスタンス化する際に、`HealthBar2D` を {{< gd-icon Viewport >}}`Viewport` の子要素として配置します。シーン構成は以下のようになるはずです。
 
-![alt](/godot_recipes/4.x/img/3d_bars_03a.png)
+![Godot 4: 3D空間に浮かぶHPバー (3d bars 03a)](/godot_recipes/4.x/img/3d_bars_03a.png)
 
 もし {{< gd-icon SubViewport >}}`SubViewport` が {{< gd-icon Sprite3D >}}`Sprite3D` の子要素でなかった場合、インスペクター上で直接スプライトのテクスチャとして設定できます。しかしこれは子要素であるため、適切なタイミングで準備が整っていない可能性があります。そのため、以下のように {{< gd-icon Sprite3D >}}`Sprite3D` にアタッチされたスクリプトで設定します。
 
@@ -113,7 +113,7 @@ func update_health(_value, _max_value):
 
 クリックしてモブのHPゲージが変化する様子を確認します。
 
-![alt](/godot_recipes/4.x/img/3d_bars_05a.gif)
+![Godot 4: 3D空間に浮かぶHPバー (3d bars 05a)](/godot_recipes/4.x/img/3d_bars_05a.gif)
 
 
 ### まとめ

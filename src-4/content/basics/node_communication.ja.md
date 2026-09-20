@@ -63,7 +63,7 @@ get_tree().get_root().get_node("SomeNode/SomeOtherNode")
 
 以下の一般的な設定例について考えてみます。
 
-![alt](/godot_recipes/4.x/img/node_access_01.png)
+![Godot 4: ノード間のやりとり（良い方法） (node access 01)](/godot_recipes/4.x/img/node_access_01.png)
 
 `Player` ノード内のスクリプトでは、プレイヤーの移動状況に応じて、`AnimatedSprite2D`にどのアニメーションを再生すべきか通知しましょう。このようなケースでは `get_node()` が適しています。
 
@@ -117,7 +117,7 @@ func _process(delta):
 
 以下に例となる設定を示します。
 
-![alt](/godot_recipes/4.x/img/node_access_05.png)
+![Godot 4: ノード間のやりとり（良い方法） (node access 05)](/godot_recipes/4.x/img/node_access_05.png)
 
 注：UIはインスタンス化されたシーンであり、実際には含まれるノードを表示しているに過ぎません。ここでよく見かけるのが`get_node("../UI/VBoxContainer/HBoxContainer/Label).text = str(health)`のようなコードで、これは避けるべき実装方法です。
 
@@ -155,7 +155,7 @@ func _ready():
 
 まず、すべての敵キャラを「enemies」グループに追加します。これはエディターで「Node」タブを使用して行えます
 
-![alt](/godot_recipes/4.x/img/node_access_03.png)
+![Godot 4: ノード間のやりとり（良い方法） (node access 03)](/godot_recipes/4.x/img/node_access_03.png)
 
 スクリプトでグループにノードを追加することもできます。
 
@@ -181,7 +181,7 @@ func activate_smart_bomb():
 
 例としての設定例をご紹介します。
 
-![alt](/godot_recipes/4.x/img/node_access_02.png)
+![Godot 4: ノード間のやりとり（良い方法） (node access 02)](/godot_recipes/4.x/img/node_access_02.png)
 
 Root要素の`CenterContainer`スクリプトには以下の関数が含まれており、任意のボタンが押されたときに呼び出したいです。
 

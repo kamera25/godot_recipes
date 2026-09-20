@@ -13,7 +13,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ゲームには「レベル選択」メニューが必要となります。ユーザーがグリッド形式のオプションから選べるようにします。
 
-![alt](/godot_recipes/4.x/img/level_select_03.gif)
+![Godot 4: レベル選択メニュー (level select 03)](/godot_recipes/4.x/img/level_select_03.gif)
 
 
 ## 作り方
@@ -35,7 +35,7 @@ LevelBox: {{< gd-icon PanelContainer >}} PanelContainer
 
 ご自由にスタイルを設定できます。例としては。
 
-![alt](/godot_recipes/4.x/img/level_select_01.gif)
+![Godot 4: レベル選択メニュー (level select 01)](/godot_recipes/4.x/img/level_select_01.gif)
 
 インスペクターで `LevelBox` の**カスタム最小サイズ**を必ず設定します。ここでは例として `(110, 110)` を使用していますが、実際のレイアウト要件に応じて調整が必要となります。
 
@@ -85,7 +85,7 @@ func _on_gui_input(event):
 
 ボックスシーンが完成したら、次に {{< gd-icon GridContainer >}}`GridContainer` を使用して新規シーンを追加します。その上に任意の数の `LevelBox` インスタンスを配置し、**列数** 値を必ず設定します。以下は6列に設定した例です。
 
-![alt](/godot_recipes/4.x/img/level_select_02.png)
+![Godot 4: レベル選択メニュー (level select 02)](/godot_recipes/4.x/img/level_select_02.png)
 
 この例では、**テーマオーバーライド / 定数 / H分離幅**と**V分離幅** がどちらも`10`に設定されています。
 
@@ -97,7 +97,7 @@ func _on_gui_input(event):
 
 以下が基本レイアウトの概要です。
 
-![alt](/godot_recipes/4.x/img/level_select_04.png)
+![Godot 4: レベル選択メニュー (level select 04)](/godot_recipes/4.x/img/level_select_04.png)
 
 以下のノードを使用して作成します。
 
@@ -133,7 +133,7 @@ LevelMenu:{{< gd-icon MarginContainer >}} MarginContainer
 
 レイアウトはこの例と同様に設定しましょう（動作を分かりやすくするため、**コンテンツの切り取り機能**は無効にしています）。
 
-![alt](/godot_recipes/4.x/img/level_select_05.png)
+![Godot 4: レベル選択メニュー (level select 05)](/godot_recipes/4.x/img/level_select_05.png)
 
 「クリップコンテンツ」を有効にすると、3つのグリッドはすべて表示されますが、`ClipControl`では1つずつしか表示されないようになっています。
 

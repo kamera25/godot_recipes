@@ -101,7 +101,7 @@ From the state, we grab the current transform, modify it to wrap around the scre
 
 Here's how it looks:
 
-![alt](/godot_recipes/4.x/img/asteroids_wrap.gif)
+![Godot 4: Asteroids-style Physics (using RigidBody2D) (asteroids wrap)](/godot_recipes/4.x/img/asteroids_wrap.gif)
 
 ### Warping
 
@@ -128,7 +128,7 @@ Finally, in `_integrate_forces()`, if there's a `teleport_position` set, we'll u
         teleport_pos = null
 ```
 
-![alt](/godot_recipes/4.x/img/asteroids_warp.gif)
+![Godot 4: Asteroids-style Physics (using RigidBody2D) (asteroids warp)](/godot_recipes/4.x/img/asteroids_warp.gif)
 
 ## <i class="fas fa-code-branch"></i> Download This Project
 

@@ -39,7 +39,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 {{< gd-icon Path2D >}}`Path2D` ノードを選択すると、アイコンバーに以下の新しいアイコンが表示されます。
 
-![alt](/godot_recipes/4.x/img/kyn_path2d_01.png)
+![Godot 4: Path2D と PathFollow2D (kyn path2d 01)](/godot_recipes/4.x/img/kyn_path2d_01.png)
 
 アイコンのいずれかを選択すると、マウスカーソルの動作が変更されます。ホバーするとそれぞれの名前を確認できます。
 
@@ -51,11 +51,11 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 「ポイントを追加」を選択し、エディターウィンドウ内でクリックしてポイントを作成します。
 
-![alt](/godot_recipes/4.x/img/kyn_path2d_02.png)
+![Godot 4: Path2D と PathFollow2D (kyn path2d 02)](/godot_recipes/4.x/img/kyn_path2d_02.png)
 
 より滑らかで丸みを帯びた曲線を作成するには、「制御点を選択」を選択し、カーブ上の任意の点をドラッグして「内向き」「外向き」ハンドルを調整します。
 
-![alt](/godot_recipes/4.x/img/kyn_path2d_03.png)
+![Godot 4: Path2D と PathFollow2D (kyn path2d 03)](/godot_recipes/4.x/img/kyn_path2d_03.png)
 
 ## パスの追従
 
@@ -71,7 +71,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 例えば、この平面が経路に沿って移動する様子を考えてみます（経路を可視化するにはメニューから、*デバッグ > ナビゲーションを表示* を選択します。
 
-![alt](/godot_recipes/4.x/img/kyn_path2d_04.gif)
+![Godot 4: Path2D と PathFollow2D (kyn path2d 04)](/godot_recipes/4.x/img/kyn_path2d_04.gif)
 
 これは、平面ノードを {{< gd-icon Sprite2D >}}`Sprite`として {{< gd-icon PathFollow2D >}} `PathFollow2D`の子要素にし、以下の内容を `_process()` 関数に追加することで実現しています。
 
@@ -90,7 +90,7 @@ func _process(delta):
 
 以下の例を[AI：状況に基づく操縦](/godot_recipes/4.x/ja/ai/context_map/)レシピからご覧ください。
 
-![alt](/godot_recipes/4.x/img/ai_context_10.gif)
+![Godot 4: Path2D と PathFollow2D (ai context 10)](/godot_recipes/4.x/img/ai_context_10.gif)
 
 この例では、AIエージェントは壁や他のエージェントを回避するだけでなく、正しい進行方向に沿って移動を続けようとします。軌道上には以下の{{< gd-icon Path2D >}}`Path2D`が描画されており、エージェントはこれを参照して現在の進行方向を確認します。
 

@@ -49,7 +49,7 @@ Let's look at some of the most commonly used containers:
 
 The way a container handles its children is mainly controlled by their "Size Flags" properties.
 
-![alt](/godot_recipes/3.x/img/ui_size_flags.png)
+![Godot 4: Containers (ui size flags)](/godot_recipes/3.x/img/ui_size_flags.png)
 
 * Fill
 
@@ -73,11 +73,11 @@ The way a container handles its children is mainly controlled by their "Size Fla
 
 A good way to experiment with these settings is to set up a test scene like the following:
 
-![alt](/godot_recipes/3.x/img/ui_flags_example01.png)
+![Godot 4: Containers (ui flags example01)](/godot_recipes/3.x/img/ui_flags_example01.png)
 
 Try adjusting the "Size Flags" properties of the different buttons and see how it affects their positioning in the `HBoxContainer`.
 
-![alt](/godot_recipes/3.x/img/ui_flags_example02.gif)
+![Godot 4: Containers (ui flags example02)](/godot_recipes/3.x/img/ui_flags_example02.gif)
 
 ### Nesting Containers
 

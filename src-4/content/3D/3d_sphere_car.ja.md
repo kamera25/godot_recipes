@@ -50,7 +50,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 以下が使用する車種の詳細です。
 
-![alt](/godot_recipes/4.x/img/3d_sphere_car_02.png)
+![Godot 4: アーケードスタイルのカーゲーム (3d sphere car 02)](/godot_recipes/4.x/img/3d_sphere_car_02.png)
 
 {{% notice note %}}
 Kenny氏の『カーキット』でこの車種や他のモデルを入手できます。以下のURLからダウンロードできます。
@@ -60,7 +60,7 @@ GLTFモデルを使用する場合、インポート設定で調整する必要�
 
 以下は「suv」モデルをインポートした際のノードツリーの表示例です。
 
-![alt](/godot_recipes/4.x/img/3d_sphere_car_04a.png)
+![Godot 4: アーケードスタイルのカーゲーム (3d sphere car 04a)](/godot_recipes/4.x/img/3d_sphere_car_04a.png)
 
 注：ホイールと車体はそれぞれ別のメッシュです。これにより、ステアリング時に車輪が回転するなど、視覚的な演出を簡単に追加できます。
 
@@ -80,7 +80,7 @@ GLTFモデルを使用する場合、インポート設定で調整する必要�
 
 最後に、{{< gd-icon RayCast3D >}}`RayCast3D`ノードを{{< gd-icon MeshInstance3D >}}`CarMesh`の子要素として追加します。**ターゲット位置**は`(0, -1, 0)`に設定します。
 
-![alt](/godot_recipes/4.x/img/3d_sphere_car_03.png)
+![Godot 4: アーケードスタイルのカーゲーム (3d sphere car 03)](/godot_recipes/4.x/img/3d_sphere_car_03.png)
 
 これを地面検知に使用します。車両が空中にある間はステアリングと加速制御が使えなくなります。また、ゲームのコースが平坦でない場合に、この機能を使って車メッシュを斜面に合わせることもできます。
 
@@ -206,7 +206,7 @@ func align_with_y(xform, new_y):
     left_wheel.rotation.y = rotate_input
 ```
 
-![alt](/godot_recipes/4.x/img/3d_sphere_car_05.gif)
+![Godot 4: アーケードスタイルのカーゲーム (3d sphere car 05)](/godot_recipes/4.x/img/3d_sphere_car_05.gif)
 
 ### 3. 車体を傾ける
 
@@ -228,7 +228,7 @@ body_mesh.rotation.z = lerp(body_mesh.rotation.z, t, 10 * delta)
 
 違いを観察します。
 
-![alt](/godot_recipes/4.x/img/3d_sphere_car_06.gif)
+![Godot 4: アーケードスタイルのカーゲーム (3d sphere car 06)](/godot_recipes/4.x/img/3d_sphere_car_06.gif)
 
 ### クレジット表記
 >

@@ -86,7 +86,7 @@ func _physics_process(delta):
 
 Try changing the values for `friction` and `acceleration` to see how they affect the game's feel. An ice level, for example, could use very low values, making it harder to maneuver.
 
-![alt](/godot_recipes/4.x/img/platformer1.gif)
+![Godot 4: Platform character (platformer1)](/godot_recipes/4.x/img/platformer1.gif)
 
 ## Conclusion
 

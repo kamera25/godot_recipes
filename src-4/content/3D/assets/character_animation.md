@@ -16,11 +16,11 @@ In this recipe, we'll assume you've already imported your character model and an
 
 We've chosen {{< gd-icon CharacterBody3D >}}`CharacterBody3D` for our character, so your scene should look like this (I've collapsed the `Rig` node since the mesh list is so long):
 
-![alt](/godot_recipes/4.x/img/3dcharacter_imported_scene.png)
+![Godot 4: Character Animation (3dcharacter imported scene)](/godot_recipes/4.x/img/3dcharacter_imported_scene.png)
 
 The first thing you probably noticed is that the character's hands are full! The artist has helpfully provided all the weapons & shields attached and oriented at the correct points. You can go down the list and hide the ones you don't want to see.
 
-![alt](/godot_recipes/4.x/img/3dcharacter_default_pose.png)
+![Godot 4: Character Animation (3dcharacter default pose)](/godot_recipes/4.x/img/3dcharacter_default_pose.png)
 
 ### About the AnimationTree
 
@@ -32,7 +32,7 @@ The solution to these complex animation issues is to use the {{< gd-icon Animati
 
 Add an {{< gd-icon AnimationTree >}}`AnimationTree` to the scene. In the **Inspector**, set **Tree Root** to a new `AnimationNodeStateMachine`, in **Anim Player** select the character's {{< gd-icon AnimationPlayer >}}`AnimationPlayer` node, and check the box next to **Active**.
 
-![alt](/godot_recipes/4.x/img/animtree_settings.png)
+![Godot 4: Character Animation (animtree settings)](/godot_recipes/4.x/img/animtree_settings.png)
 
 {{% notice style="note" title="" %}}
 You may notice that when the {{< gd-icon AnimationTree >}}`AnimationTree` is active, you can't choose animations in the {{< gd-icon AnimationPlayer >}}`AnimationPlayer`. If you need to make any changes or test the animations, uncheck the tree's **Active** property while doing so.
@@ -46,7 +46,7 @@ In the {{< gd-icon AnimationPlayer >}}`AnimationPlayer`, find the "Idle", "Runni
 
 Select the `AnimationTree` node and you'll see the panel open at the bottom of the window:
 
-![alt](/godot_recipes/4.x/img/animtree_empty.png)
+![Godot 4: Character Animation (animtree empty)](/godot_recipes/4.x/img/animtree_empty.png)
 
 As an example, right-click in the empty space and choose **Add Animation → Idle**, then add the "1H_Melee_Attack_Chop" animation as well.
 
@@ -68,13 +68,13 @@ Right-click in the empty space to create a new `BlendSpace2D`. Click on its name
 
 Click the pencil icon to edit the blend space.
 
-![alt](/godot_recipes/4.x/img/blendspace_empty.png)
+![Godot 4: Character Animation (blendspace empty)](/godot_recipes/4.x/img/blendspace_empty.png)
 
 This 2D space represents the character's horizontal movement vector. When standing still that's `(0, 0)`, so click the **Create Points** button and click in the center of the grid to **Add Animation → Idle**.
 
 At the center-top, add the "Running_A" animation, and center-bottom, "Walking_Backwards". At the two horizontal ends, add the strafe animations.
 
-![alt](/godot_recipes/4.x/img/blendspace_complete.png)
+![Godot 4: Character Animation (blendspace complete)](/godot_recipes/4.x/img/blendspace_complete.png)
 
 Now click the crosshair button to set the blend position and click to drag it around the grid. You should see the animations transition smoothly between the extremes.
 
@@ -88,7 +88,7 @@ The `IWR` looping animations can be thought of as the "heart" of the animation t
 
 In the image below, I've done that with several other animations. Note the transition properties are set as we did in the example above.
 
-![alt](/godot_recipes/4.x/img/anim_tree_tree.png)
+![Godot 4: Character Animation (anim tree tree)](/godot_recipes/4.x/img/anim_tree_tree.png)
 
 You can also click to change the names the animations, as some of them are quite long.
 
@@ -96,13 +96,13 @@ The one animation that's different is jumping. The jump animation is split into 
 
 Add the three jumping animations and link them like this:
 
-![alt](/godot_recipes/4.x/img/anim_tree_jumping.png)
+![Godot 4: Character Animation (anim tree jumping)](/godot_recipes/4.x/img/anim_tree_jumping.png)
 
 We need to be able to go straight from `IWR` to `Jump_Idle` in the event of falling off a ledge, but if pressing "jump", we'll go through `Jump_Start` first.
 
 In addition, we've left the transition from `IWR` to `Jump_Start` as "Auto". Instead of changing it to "Enabled", we've added a **Condition** of `jumping` to the transition:
 
-![alt](/godot_recipes/4.x/img/animtree_condition.png)
+![Godot 4: Character Animation (animtree condition)](/godot_recipes/4.x/img/animtree_condition.png)
 
 Similarly, the transition between `Jump_Idle` and `Jump_Land` has a condition of `grounded`.
 

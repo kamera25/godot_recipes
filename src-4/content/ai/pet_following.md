@@ -14,7 +14,7 @@ You need to have a game entity such as a pet or minion, follow a character.
 
 We start by adding a {{< gd-icon Marker2D >}}`Marker2D` to the character. This will represent the place where the pet wants to "hang out" near the character.
 
-![alt](/godot_recipes/4.x/img/pet_follow_01.png)
+![Godot 4: Pet Following (pet follow 01)](/godot_recipes/4.x/img/pet_follow_01.png)
 
 In this example, we've made it a child of the {{< gd-icon Sprite2D >}}`Sprite2D`, because the character's code uses `$Sprite2D.scale.x = -1` to flip the horizontal direction when the character moves left. Since the marker is a child of the sprite, it will flip too.
 

@@ -18,7 +18,7 @@ We've chosen {{< gd-icon CharacterBody3D >}}`CharacterBody3D` as the root node o
 
 Size and position the capsule to enclose the character's body. For reference, here are the values I used:
 
-![alt](/godot_recipes/4.x/img/3dchar_capsule.png)
+![Godot 4: Character Controller (3dchar capsule)](/godot_recipes/4.x/img/3dchar_capsule.png)
 
 Note that the imported rig is positioned so that its feet are on the "ground", ie at the body's position. This will be helpful later, as the player's position will represent its position on the ground, rather than floating in mid-air if it were at the center of its body.
 
@@ -71,7 +71,7 @@ And then, some references to the nodes we'll need to access:
 
 We'll use the `anim_tree` reference to set the blend position for the Idle/Walk/Run blendspace and the trigger conditions for jumping. Select the {{< gd-icon AnimationTree >}}`AnimationTree` and you can see these properties in the Inspector:
 
-![alt](/godot_recipes/4.x/img/3dchar_animtree_properties.png)
+![Godot 4: Character Controller (3dchar animtree properties)](/godot_recipes/4.x/img/3dchar_animtree_properties.png)
 
 `anim_state` is a reference to the animation state machine, which we can use to call transitions between animations. See the [Character Animation](/4.x/3d/assets/character_animation/) recipe for how we set these up.
 
@@ -181,7 +181,7 @@ Then, in `_unhandled_input()`, pick a random animation from the list when the ac
 
 Jumping is a little bit more involved, because it involves three separate animations. As a reminder, this is how we set up the state machine:
 
-![alt](/godot_recipes/4.x/img/anim_tree_jumping.png)
+![Godot 4: Character Controller (anim tree jumping)](/godot_recipes/4.x/img/anim_tree_jumping.png)
 
 First, we want to transition to the "Jump_Start" animation by setting `jumping = true`. This triggers the transition in the state machine.
 

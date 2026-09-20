@@ -17,7 +17,7 @@ ghcommentid: 67
 
 内積は二つのベクトルに対して行われる演算で、スカラー値を返します。これは通常、ベクトルAがベクトルBに投影される様子として視覚化されます。
 
-![alt](/godot_recipes/4.x/img/dot_cross_04.png)
+![Godot 4: ベクトル：内積と外積の活用 (dot cross 04)](/godot_recipes/4.x/img/dot_cross_04.png)
 
 以下が内積を計算するための公式です。
 
@@ -51,7 +51,7 @@ ghcommentid: 67
 
 この結果から、内積が二つのベクトル間の角度と直接関係していることがわかります。`cos(0) == 1` かつ `cos(180) == -1` であることから、内積の値は二つのベクトルがどれだけ平行しているかを示します。
 
-![alt](/godot_recipes/4.x/img/dot_cross_05.png)
+![Godot 4: ベクトル：内積と外積の活用 (dot cross 05)](/godot_recipes/4.x/img/dot_cross_05.png)
 
 以下に、この事実を実際の事例でどのように活用できるかご説明します。
 
@@ -59,7 +59,7 @@ ghcommentid: 67
 
 二つのベクトルの外積は、それらに垂直な第三のベクトルであり、その大きさは各ベクトルの大きさとそれらの間の角度によって決まります。
 
-![alt](/godot_recipes/4.x/img/dot_cross_06.gif)
+![Godot 4: ベクトル：内積と外積の活用 (dot cross 06)](/godot_recipes/4.x/img/dot_cross_06.gif)
 
 もう一度確認しますが、正規化ベクトルを使用している場合、結果は以下のように簡略化されます。これは角度と完全に関連しており、その値は-1から1の範囲で変化します。
 
@@ -71,7 +71,7 @@ ghcommentid: 67
 
 以下のアニメーションをご覧ください。これは `Vector2.dot()` と `Vector2.cross()` の結果が、角度の変化に伴ってどのように変わるかを視覚的に示しています。
 
-![alt](/godot_recipes/4.x/img/dot_cross_01.gif)
+![Godot 4: ベクトル：内積と外積の活用 (dot cross 01)](/godot_recipes/4.x/img/dot_cross_01.gif)
 
 この例は、これらの手法の2つのよくある応用事例を示しています。赤色ベクトルが対象物の前方方向を表し、緑色ベクトルが他の物体に向かう方向を示す場合。
 

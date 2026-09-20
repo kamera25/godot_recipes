@@ -25,7 +25,7 @@ draft: false
 
 テクスチャについては、お好きな画像を自由に使用できます。一例をご紹介します。
 
-![alt](/godot_recipes/4.x/img/missile.png)
+![Godot 4: 追跡ミサイル (missile)](/godot_recipes/4.x/img/missile.png)
 
 ノードの設定を行い、スプライトのテクスチャと衝突形状を構成します。{{< gd-icon Sprite2D >}}`Sprite2D`ノードは必ず `90°` 回転させ、右向きになるように調整します。これにより、親オブジェクトの「前方」方向と一致するようになります。
 
@@ -76,7 +76,7 @@ func start(_transform, _target):
 
 ミサイルを目標に向かって移動させるには、方向転換して加速が必要です（加速度とは速度の変化のことです）。ミサイルは本来、まっすぐ目標方向へ進みたいところですが、現在の速度ベクトルは別の方向に向いた状態です。簡単なベクトル計算によって、このずれ量を求めることができます。
 
-![alt](/godot_recipes/4.x/img/steering_diagram.png)
+![Godot 4: 追跡ミサイル (steering diagram)](/godot_recipes/4.x/img/steering_diagram.png)
 
 緑の矢印は必要な速度変化（すなわち`加速度`）を示しています。ただし、瞬時に方向転換すると不自然に見えるため、この「操舵」ベクトルの長さには制限を設けましょう。これを実現するための変数が`steer_force`です。
 

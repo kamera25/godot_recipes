@@ -14,7 +14,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 このデモでは、見下ろし型の迷路ゲームを例に、ローカルマルチプレイヤーゲームを考えます。このゲームでは2人のプレイヤーが参加し、一方は矢印キー、もう一方はWASDキーで操作します。これは問題ありませんが、もしゲーム世界全体が1画面に収められる程度の大きさであれば、特に問題はありません。しかし、マップが非常に広い場合、両プレイヤーを個別に表示する「分割画面」ビューが必要になるでしょう。
 
-![alt](/godot_recipes/4.x/img/splitscreen2.gif)
+![Godot 4: 分割画面マルチプレイヤー (splitscreen2)](/godot_recipes/4.x/img/splitscreen2.gif)
 
 また、ミニマップ表示をすばやく設定する方法についても解説します。
 
@@ -43,7 +43,7 @@ func get_input():
 
 以下の手順に従って、2つのプレイヤーを {{< gd-icon TileMap >}}`TileMap` を含む「World」シーンに追加します。
 
-![alt](/godot_recipes/4.x/img/splitscreen_map.png)
+![Godot 4: 分割画面マルチプレイヤー (splitscreen map)](/godot_recipes/4.x/img/splitscreen_map.png)
 
 ご希望であれば、ワールドが既に設定済みの開始プロジェクトをこちらからダウンロードできます。
 
@@ -175,11 +175,11 @@ $Minimap/Viewport.world_2d = viewport1.world_2d
 
 「レイアウト」メニューを使用してMinimapコンテナを「中央下部」に配置します。実際に見てみてください。
 
-![alt](/godot_recipes/4.x/img/splitscreen_minimap1.png?width=400)
+![Godot 4: 分割画面マルチプレイヤー (splitscreen minimap1)](/godot_recipes/4.x/img/splitscreen_minimap1.png?width=400)
 
 エッジ周りのグレーゾーンを解消が必要です。正確なズームレベルを特定して希望のミニマップサイズに合わせることもできますが、代わりに{{< gd-icon Viewport >}}`Viewport`設定の_Transparent Bg(透過背景)_をチェックします。これで非地図領域が見えなくなり、ミニマップがメインビューポートの上に直接浮かんで表示されるようになります。
 
-![alt](/godot_recipes/4.x/img/splitscreen_minimap2.png?width=400)
+![Godot 4: 分割画面マルチプレイヤー (splitscreen minimap2)](/godot_recipes/4.x/img/splitscreen_minimap2.png?width=400)
 
 ### まとめ
 

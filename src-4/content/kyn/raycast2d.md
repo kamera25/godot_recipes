@@ -16,7 +16,7 @@ This article is being updated from Godot 3 to Godot 4.
 
 Add a {{< gd-icon RayCast2D >}}`RayCast2D` node and take a look at the Inspector:
 
-![alt](/godot_recipes/4.x/img/kyn_raycast2d_01_4.png)
+![Godot 4: RayCast2D (kyn raycast2d 01 4)](/godot_recipes/4.x/img/kyn_raycast2d_01_4.png)
 
 Here are the main properties you'll need to understand:
 
@@ -64,7 +64,7 @@ Fast-moving projectiles often have the problem of "tunneling" through obstacles 
 
 Here's a player sprite with a raycast attached to the end of the gun. The `target_position` is set to `(250, 0)`.
 
-![alt](/godot_recipes/4.x/img/kyn_raycast2d_02.png)
+![Godot 4: RayCast2D (kyn raycast2d 02)](/godot_recipes/4.x/img/kyn_raycast2d_02.png)
 
 When the player shoots, you check to see if the ray is colliding with something:
 
@@ -79,7 +79,7 @@ func _input(event):
 
 Consider a platformer enemy that walks on platforms, but you don't want it to fall off the edges. Add two downward-pointing raycasts to the mob like so:
 
-![alt](/godot_recipes/4.x/img/kyn_raycast2d_03.png)
+![Godot 4: RayCast2D (kyn raycast2d 03)](/godot_recipes/4.x/img/kyn_raycast2d_03.png)
 
 In the mob's script, check for when the ray *stops* colliding. That means you've found the edge and should turn around:
 
@@ -97,7 +97,7 @@ func _physics_process(delta):
 
 Here's what it looks like in action:
 
-![alt](/godot_recipes/4.x/img/kyn_raycast2d_04.gif)
+![Godot 4: RayCast2D (kyn raycast2d 04)](/godot_recipes/4.x/img/kyn_raycast2d_04.gif)
 
 <!-- ## Related recipes
 

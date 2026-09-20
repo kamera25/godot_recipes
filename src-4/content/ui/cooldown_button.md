@@ -12,7 +12,7 @@ This article is being updated from Godot 3 to Godot 4.
 
 You want to make RPG-style ability buttons, including a cooldown effect.
 
-![alt](/godot_recipes/4.x/img/cooldown_01.gif)
+![Godot 4: Cooldown Button (cooldown 01)](/godot_recipes/4.x/img/cooldown_01.gif)
 
 ## Solution
 
@@ -36,7 +36,7 @@ On the `Sweep` node, choose "Full Rect" from the **Presets** menu. Set the **Fil
 
 We also want our cooldown "radial wipe" to darken the button, so set the **Modulate** property to a dark gray with some transparency:
 
-![alt](/godot_recipes/4.x/img/cooldown_02.png)
+![Godot 4: Cooldown Button (cooldown 02)](/godot_recipes/4.x/img/cooldown_02.png)
 
 The {{< gd-icon Timer >}}`Timer` node should be set to "One Shot".
 
@@ -100,7 +100,7 @@ func _on_Timer_timeout():
 
 And everything is reset when the timer runs out. Put several buttons in an {{< gd-icon HBoxContainer >}}`HBoxContainer` and you've got an action bar:
 
-![alt](/godot_recipes/4.x/img/cooldown_03.gif)
+![Godot 4: Cooldown Button (cooldown 03)](/godot_recipes/4.x/img/cooldown_03.gif)
 
 ## <i class="fas fa-code-branch"></i> Download This Project
 

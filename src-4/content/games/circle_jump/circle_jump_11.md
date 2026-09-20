@@ -23,7 +23,7 @@ In the AdMob manager, create a new app - ours is titled "Circle Jump" - and spec
 
 In the "Circle Jump" app, you'll need to create three "Ad Units". These are the types of ads that you can show in your game. For this tutorial, we'll need a "Banner" and an "Interstitial". Each ad unit will have an "Ad Unit ID", a long string of characters - we'll need that later in the game.
 
-![alt](/godot_recipes/3.x/img/cj_11_01.png)
+![Godot 4: Mobile ads (cj 11 01)](/godot_recipes/3.x/img/cj_11_01.png)
 
 ## Using Godot modules
 
@@ -48,7 +48,7 @@ Back in the Godot editor, we need to make some changes to the export configurati
 
 In the _Project -> Export_menu, we need to tell Godot to use the custom templates we downloaded. These are set in the "Custom Package" section. Click the folder icon and navigate to where you unzipped the templates. Make sure to add both the "Debug" and "Release" templates.
 
-![alt](/godot_recipes/3.x/img/cj_11_02.png)
+![Godot 4: Mobile ads (cj 11 02)](/godot_recipes/3.x/img/cj_11_02.png)
 
 ## Code
 
@@ -116,7 +116,7 @@ Now we need to call these functions from the game. Open `Main.gd` and add the fo
 
 Run the game on your device, and you should see the test ad appear:
 
-![alt](/godot_recipes/3.x/img/cj_11_03.jpg)
+![Godot 4: Mobile ads (cj 11 03)](/godot_recipes/3.x/img/cj_11_03.jpg)
 
 ## Disabling ads
 
@@ -156,7 +156,7 @@ match button.name:
             button.text = "Enable Ads"
 ```
 
-![alt](/godot_recipes/3.x/img/cj_11_04.png)
+![Godot 4: Mobile ads (cj 11 04)](/godot_recipes/3.x/img/cj_11_04.png)
 
 Run the game on your device and verify that you can enable/disable ads.
 

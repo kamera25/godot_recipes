@@ -33,7 +33,7 @@ Before we start coding, we need to find a 3D model of a car and import it to God
 
 Here's the car model we'll use for this demonstration:
 
-![alt](/godot_recipes/3.x/img/3d_car_01.png)
+![Godot 4: 3D Kinematic Car: Base (3d car 01)](/godot_recipes/3.x/img/3d_car_01.png)
 
 {{% notice note %}}
 You can find this and other car models in Kenney's "Car Kit", available here:
@@ -48,7 +48,7 @@ Select the file in Godot and go to the "Import" tab. Change the _Root Type_ to "
 
 Double-click on the `sedanSports.glb` file and choose "New Inherited". You'll have a new scene that looks like this:
 
-![alt](/godot_recipes/3.x/img/3d_car_02.png)
+![Godot 4: 3D Kinematic Car: Base (3d car 02)](/godot_recipes/3.x/img/3d_car_02.png)
 
 Note the individual meshes for each of the car's parts. There's also a stray "tmpParent" {{< gd-icon Node3D >}}`Node3D` node, but we can ignore that.
 
@@ -56,7 +56,7 @@ The {{< gd-icon KinematicBody3D >}}`CharacterBody3D` has a warning about missing
 
 Once the shapes are set up they should look something like this:
 
-![alt](/godot_recipes/3.x/img/3d_car_03.png)
+![Godot 4: 3D Kinematic Car: Base (3d car 03)](/godot_recipes/3.x/img/3d_car_03.png)
 
 {{% notice tip %}}
 To ensure the front and rear shapes match, just create and size one of them, then duplicate it. It is also a good idea to name the {{< gd-icon CollisionShape3D >}}`CollisionShape` nodes to help keep track of them - `CollisionBody`, `CollisionWheelsFront`, and `CollisionWheelsRear` would be a good example.
@@ -156,7 +156,7 @@ func get_input():
 
 Now we're ready to add some player controls. Here's the InputMap setup:
 
-![alt](/godot_recipes/3.x/img/3d_car_04.png)
+![Godot 4: 3D Kinematic Car: Base (3d car 04)](/godot_recipes/3.x/img/3d_car_04.png)
 
 If you have a gamepad with an analog stick, it's highly recommended you use it. With keyboard controls, which can only be pressed or not, you can only turn the "steering wheel" to the maximum value. An analog stick allows for a much better experience. We'll make sure the code works with both.
 
@@ -184,7 +184,7 @@ The next step rotates the wheel meshes to give some visual feedback of the steer
 
 After steering, we check the accelerate/brake inputs to set the car's `acceleration`.
 
-![alt](/godot_recipes/3.x/img/3d_car_05.gif)
+![Godot 4: 3D Kinematic Car: Base (3d car 05)](/godot_recipes/3.x/img/3d_car_05.gif)
 
 ### Wrapping up
 

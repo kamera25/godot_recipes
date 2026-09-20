@@ -16,7 +16,7 @@ The specific look-and-feel of your menu should match with your game's esthetic. 
 
 Here's the node setup:
 
-![alt](/godot_recipes/4.x/img/ui_radial_menu_01_4.png)
+![Godot 4: Radial Popup Menu (ui radial menu 01 4)](/godot_recipes/4.x/img/ui_radial_menu_01_4.png)
 
 
 
@@ -108,7 +108,7 @@ func hide_menu():
 
 Here's the end result:
 
-![alt](/godot_recipes/4.x/img/ui_radial_menu_02.gif)
+![Godot 4: Radial Popup Menu (ui radial menu 02)](/godot_recipes/4.x/img/ui_radial_menu_02.gif)
 
 ## <i class="fas fa-code-branch"></i> Download This Project
 

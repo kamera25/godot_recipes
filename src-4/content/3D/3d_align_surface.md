@@ -24,9 +24,9 @@ Instead, we need to rotate the tank so that its treads are aligned with the grou
 
 A *surface normal* is a unit vector ("normal vector" and "unit vector" mean the same thing) perpendicular to a surface. It shows which way the surface is facing. In the case of a mesh, every surface has a normal pointing outward.
 
-![alt](/godot_recipes/4.x/img/3d_kinematic_05.png)
+![Godot 4: CharacterBody3D: Align with Surface (3d kinematic 05)](/godot_recipes/4.x/img/3d_kinematic_05.png)
 
-![alt](/godot_recipes/4.x/img/3d_kinematic_06.gif)
+![Godot 4: CharacterBody3D: Align with Surface (3d kinematic 06)](/godot_recipes/4.x/img/3d_kinematic_06.gif)
 
 In Godot, when a body collides, you can get the normal of the collision. This will be the colliding body's normal *at the point of contact*.
 

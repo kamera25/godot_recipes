@@ -18,7 +18,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 これは初心者がよく抱く疑問で、三角関数をあれこれ試したりします。この答えは実はとてもシンプルです。
 
-![alt](/godot_recipes/4.x/img/circle_motion_01.png)
+![Godot 4: 円運動 (circle motion 01)](/godot_recipes/4.x/img/circle_motion_01.png)
 
 軌道周回させるスプライトをメインスプライトの子ノードに配置します（ここでは「ピボット」と呼びます）。オフセット値を適用し、`Pivot`で回転させます。
 
@@ -32,7 +32,7 @@ func _process(delta):
     $Sprite/Pivot.rotation += rotation_speed * delta
 ```
 
-![alt](/godot_recipes/4.x/img/circle_motion_02.gif)
+![Godot 4: 円運動 (circle motion 02)](/godot_recipes/4.x/img/circle_motion_02.gif)
 
 この手法は3D空間でも同じように機能します。
 
@@ -47,4 +47,4 @@ func _process(delta):
 
 ```
 
-![alt](/godot_recipes/4.x/img/circle_motion_03.gif)
+![Godot 4: 円運動 (circle motion 03)](/godot_recipes/4.x/img/circle_motion_03.gif)

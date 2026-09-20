@@ -15,11 +15,11 @@ You want to make a rolling cube in 3D.
 
 Rolling a cube is trickier than it seems. You can't just rotate the cube around its center:
 
-![alt](/godot_recipes/4.x/img/cube_001.gif)
+![Godot 4: Rolling Cube (cube 001)](/godot_recipes/4.x/img/cube_001.gif)
 
 Instead, the cube needs to be rotated around its bottom edge.
 
-![alt](/godot_recipes/4.x/img/cube_002.gif)
+![Godot 4: Rolling Cube (cube 002)](/godot_recipes/4.x/img/cube_002.gif)
 
 Here's the tricky part: which bottom edge? It depends on which direction the cube is rolling.
 
@@ -48,11 +48,11 @@ By default, everything is centered at `(0, 0, 0)` so the first thing we're going
 
 The default size of a {{< gd-icon BoxMesh3D >}}`BoxMesh3D` is `(1, 1, 1)`, so do this, move the mesh and collision nodes both up to `(0, 0.5, 0)`, leaving the rest where they are. Now when you select the root node, its position will be the *bottom* of the cube:
 
-![alt](/godot_recipes/4.x/img/cube_003.png)
+![Godot 4: Rolling Cube (cube 003)](/godot_recipes/4.x/img/cube_003.png)
 
 Now when you want to roll the cube, you'll need to move the `Pivot` `0.5` in the direction you want to move. Since the mesh is attached, you need to move it the opposite amount. For example, to roll to the right (**+X**), you'll end up with this:
 
-![alt](/godot_recipes/4.x/img/cube_004.gif)
+![Godot 4: Rolling Cube (cube 004)](/godot_recipes/4.x/img/cube_004.gif)
 
 Now the pivot node is at the correct edge and rotating it will also rotate the mesh.
 

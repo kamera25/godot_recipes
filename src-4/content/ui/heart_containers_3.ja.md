@@ -19,7 +19,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 本レシピでは、以下の3つの方法でこの情報を表示する方法をご紹介します。「シンプル」「空き」、そして「部分」です。
 
-![alt](/godot_recipes/4.x/img/heart_bar_02.png)
+![Godot 4: ハートの器 と 3つの方法 (heart bar 02)](/godot_recipes/4.x/img/heart_bar_02.png)
 
 この画像はプレイヤーが`3`のHPを持っている時、バーに表示される内容を表しています。
 
@@ -37,7 +37,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 {{< gd-icon TextureRect >}}`TextureRect` 子要素を追加します。ハートテクスチャを **テクスチャ** プロパティにドラッグし、**[伸縮モード]** を「固定」に設定します。ノード名を「1」に指定したら、「Ctrl+D」を押して必要な数（この例では5つ）のハート用に同じノードを複製します。最終的なノード構成は以下のようになります。
 
-![alt](/godot_recipes/4.x/img/heart_bar_03.png)
+![Godot 4: ハートの器 と 3つの方法 (heart bar 03)](/godot_recipes/4.x/img/heart_bar_03.png)
 
 ### スクリプトの追加方法
 
@@ -106,7 +106,7 @@ func update_partial(value):
 
 以下に各バーモードの使用例を示します。
 
-![alt](/godot_recipes/4.x/img/heart_bar_04.gif)
+![Godot 4: ハートの器 と 3つの方法 (heart bar 04)](/godot_recipes/4.x/img/heart_bar_04.gif)
 
 ## まとめ
 

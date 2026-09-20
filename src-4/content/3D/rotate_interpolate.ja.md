@@ -31,7 +31,7 @@ func _process(delta):
 
 このコードでは、ノード（`$Arrow`）がターゲットの位置を常に向くようになります。ターゲットがどのように移動しても関係ありません。
 
-![alt](/godot_recipes/4.x/img/3d_rotate_01.gif)
+![Godot 4: 滑らかな回転 (3d rotate 01)](/godot_recipes/4.x/img/3d_rotate_01.gif)
 
 注：`look_at()` 関数は2つのパラメーターを必要とします。ターゲット位置と「上方向ベクトル」です。飛行機が目標地点に向かって機首を向ける様子を想像してみてください。機体の向きには無数の方法が考えられます。これは、航空機がその軸を中心に回転できるためです。この第2パラメーターによって、最終的な機体の向きをどのように定義するかを指定します。
 
@@ -50,7 +50,7 @@ func _process(delta):
     $Arrow.transform  = $Arrow.transform.interpolate_with(new_transform, speed * delta)
 ```
 
-![alt](/godot_recipes/4.x/img/3d_rotate_02.gif)
+![Godot 4: 滑らかな回転 (3d rotate 02)](/godot_recipes/4.x/img/3d_rotate_02.gif)
 
 注：`interpolate_with()` は `transform` を操作するため、回転と位置の両方に対して補間を行えます。
 

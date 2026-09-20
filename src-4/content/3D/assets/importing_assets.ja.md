@@ -24,11 +24,11 @@ draft: false
 
 ファイルシステムタブで`knight.glb`ファイルを選択し、左上の**インポート**タブをクリックします。
 
-![alt](/godot_recipes/4.x/img/3d_import_tab.png)
+![Godot 4: アセットのインポート (3d import tab)](/godot_recipes/4.x/img/3d_import_tab.png)
 
 こちらには基本的なインポート設定が表示されますが、より詳細なオプションも利用できます。**詳細設定**ボタンをクリックすると、新しいウィンドウが開きます。
 
-![alt](/godot_recipes/4.x/img/3d_import_adv.png)
+![Godot 4: アセットのインポート (3d import adv)](/godot_recipes/4.x/img/3d_import_adv.png)
 
 左側に表示されるのは、GLTFシーンに含まれる全てのデータです。テクスチャやアニメーションも含まれます。キャラクターに付属する各種武器オプションや、豊富なアニメーションリストに注目します。
 
@@ -40,7 +40,7 @@ draft: false
 
 アニメーション一覧までスクロールします。様々な種類がありますが、攻撃モーションのように一度再生すれば足りるものと、「待機中」や「走行中」などループさせたいものがあります。このようなアニメーションについては、名称を選択し、**ループモード**を「リニア」に設定します。これはすべての「歩行」「走行」「待機」バリエーションについて行います。作業が完了したら、画面下部の**再インポート**ボタンをクリックします。
 
-![alt](/godot_recipes/4.x/img/3d_import_loop.png)
+![Godot 4: アセットのインポート (3d import loop)](/godot_recipes/4.x/img/3d_import_loop.png)
 
 {{% notice style="info" title="アニメーションループの自動設定について" %}}
 自作キャラクターを作成する場合、このステップは省略できます。ただし、アニメーション名がすべて`"-loop"`で終わるように命名します。その他のインポート関連のヒントについては、[Godotドキュメント](https://docs.godotengine.org/ja/stable/tutorials/assets_pipeline/importing_scenes.html#import-hints)の「インポートヒント」セクションを参照します。
@@ -54,13 +54,13 @@ draft: false
 
 環境用オブジェクトのインポートも同様の手順で行います。具体例として、ダンジョンの壁ファイルを使いましょう。ダンジョンパックには多数のファイルが含まれているため、ファイル名フィルターに「wall」と入力して目的のファイルを簡単に見つけられるようにします。
 
-![alt](/godot_recipes/4.x/img/3d_import_wall.png)
+![Godot 4: アセットのインポート (3d import wall)](/godot_recipes/4.x/img/3d_import_wall.png)
 
 {{< gd-icon `StaticBody3D` >}}幸いなことに、Godotではインポート時に自動的にこれらの処理を行ってくれます。
 
 インポートウィンドウで、メッシュオブジェクトを選択します。右側の設定で「**物理演算**」ボックスをチェックし、「**形状タイプ**」を「単純な凸形」に設定しましょう（他のオプションも自由に触ってみてください）。
 
-![alt](/godot_recipes/4.x/img/3d_import_physics.png)
+![Godot 4: アセットのインポート (3d import physics)](/godot_recipes/4.x/img/3d_import_physics.png)
 
 をクリックします。ゲームでこのアセットを使用する際、Godotは自動的に対応する衝突形状を持った{{< gd-icon StaticBody3D >}}`StaticBody3D`を作成します。
 

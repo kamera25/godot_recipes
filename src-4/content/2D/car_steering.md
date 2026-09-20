@@ -155,7 +155,7 @@ var drag = -0.06
 
 As you can see in this graph, these values mean that at a speed of `600` the drag force overcomes the friction force.
 
-![alt](/godot_recipes/4.x/img/car_graph_friction.png)
+![Godot 4: Car steering (car graph friction)](/godot_recipes/4.x/img/car_graph_friction.png)
 
 You can play with the values here to see how they change:
 [https://www.desmos.com/calculator/e4ayu3xkip](https://www.desmos.com/calculator/e4ayu3xkip)
@@ -263,7 +263,7 @@ Here, we select which traction value to use and apply `lerp()` to the `velocity`
 
 At this point, we have a large number of settings that control the car's behavior. Adjusting them can drastically change how the car drives. To make experimenting with different values easier, download the project for this recipe below. When you run the game, you'll see a set of sliders you can use to change the car's behavior as you drive (press `<Tab>` to show/hide the slider panel).
 
-![alt](/godot_recipes/4.x/img/car_sliders.png)
+![Godot 4: Car steering (car sliders)](/godot_recipes/4.x/img/car_sliders.png)
 
 <!-- {{% notice note %}}
 Download the project file here: [car_steering.zip](/godot_recipes/4.x/files/car_steering.zip)

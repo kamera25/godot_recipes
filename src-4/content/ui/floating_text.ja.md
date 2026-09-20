@@ -13,7 +13,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 ダメージを受けたとき、数字を浮かせながら表示(Floating Combat Text)させたい。
 
-![alt](/godot_recipes/4.x/img/fct_demo.gif)
+![Godot 4: ダメージのポップアップ表示 (fct demo)](/godot_recipes/4.x/img/fct_demo.gif)
 
 ## 作り方
 
@@ -120,7 +120,7 @@ $FCTManager.show_value(dmg, crit)
 
 以下からプロジェクトのサンプルコードをダウンロードできます。[https://github.com/godotrecipes/floating_combat_text](https://github.com/godotrecipes/floating_combat_text)
 
-![alt](/godot_recipes/4.x/img/fct_demo.png)
+![Godot 4: ダメージのポップアップ表示 (fct demo)](/godot_recipes/4.x/img/fct_demo.png)
 
 ## 関連レシピ
 

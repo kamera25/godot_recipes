@@ -18,7 +18,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 本デモでは、以下のタイルセットを使用します。
 
-![alt](/godot_recipes/4.x/img/autotile_tileset.png)
+![Godot 4: タイルマップ：自動タイルを使用 (autotile tileset)](/godot_recipes/4.x/img/autotile_tileset.png)
 
 {{% notice note %}}
 これらのタイルはKenney氏の『Topdown Shooter』アートパックに含まれており、こちらから入手できます。[https://kenney.nl/assets/top-down-shooter](https://kenney.nl/assets/top-down-shooter)
@@ -30,17 +30,17 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 以下に具体例を示します。
 
-![alt](/godot_recipes/4.x/img/autotile_demo.gif)
+![Godot 4: タイルマップ：自動タイルを使用 (autotile demo)](/godot_recipes/4.x/img/autotile_demo.gif)
 
 ### 自動タイリングの仕組みについて
 
 使用しているタイルは `3×3（最小）` のタイリング用に設計されています。単一のタイルを3×3グリッドに分割した場合を考えてみます。
 
-![alt](/godot_recipes/4.x/img/autotile_bitmask_tile.png)
+![Godot 4: タイルマップ：自動タイルを使用 (autotile bitmask tile)](/godot_recipes/4.x/img/autotile_bitmask_tile.png)
 
 タイルの「アクティブ」部分（つまり壁ではない箇所）に目印を付けることができます。
 
-![alt](/godot_recipes/4.x/img/autotile_bitmask_tile2.png)
+![Godot 4: タイルマップ：自動タイルを使用 (autotile bitmask tile2)](/godot_recipes/4.x/img/autotile_bitmask_tile2.png)
 
 これを各タイルごとに実行すれば、コンピュータはどのタイルを隣接させても確実に互換性が確保されるようにできます。
 
@@ -50,15 +50,15 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 {{< gd-icon TileMap >}}`TileMap`のプロパティにある「タイルセット」設定で「新規タイルセット」を選択し、クリックするとエディターパネルが開きます。
 
-![alt](/godot_recipes/4.x/img/autotile_frame.png)
+![Godot 4: タイルマップ：自動タイルを使用 (autotile frame)](/godot_recipes/4.x/img/autotile_frame.png)
 
 テクスチャを追加するには ⊞ ボタンをクリックし、上記で選択したタイルセットを選択します。次に「新規オートタイル」を選択し、画像全体をドラッグして選択します。スナップ機能を有効にし、設定を調整する必要があるかもしれません。このタイルセットのタイルは 64x64 ピクセルで、各タイル間は 10 ピクセル間隔になっています。独自のアートワークを使用する場合は、必要な値を手動で入力します。
 
-![alt](/godot_recipes/4.x/img/autotile_create.png)
+![Godot 4: タイルマップ：自動タイルを使用 (autotile create)](/godot_recipes/4.x/img/autotile_create.png)
 
 オートタイルグループを構成するタイルセットを選択したので、次はビットマスクを設定する段階です。画面上部の「ビットマスク」ボタンをクリックし、各タイル上でクリックを開始します。マスキングされた部分は赤く表示されます。作業が完了すると、以下のような状態になるはずです。
 
-![alt](/godot_recipes/4.x/img/autotile_bitmask.png)
+![Godot 4: タイルマップ：自動タイルを使用 (autotile bitmask)](/godot_recipes/4.x/img/autotile_bitmask.png)
 
 ※右下のタイルは使用していないことに注意します。
 

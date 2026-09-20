@@ -15,11 +15,11 @@ ghcommentid: 101
 
 キューブを転がすのは見た目より難しいです。単に中心軸を中心に回すだけではうまくいきません：
 
-![alt](/godot_recipes/4.x/img/cube_001.gif)
+![Godot 4: 転がるキューブ (cube 001)](/godot_recipes/4.x/img/cube_001.gif)
 
 代わりに、キューブを底面のエッジを中心に回転させます。
 
-![alt](/godot_recipes/4.x/img/cube_002.gif)
+![Godot 4: 転がるキューブ (cube 002)](/godot_recipes/4.x/img/cube_002.gif)
 
 ここが重要なポイントです。どの底面の縁でしょうか？ それは、キューブがどの方向に転がっているかによって異なります。
 
@@ -48,11 +48,11 @@ Cube: {{< gd-icon CharacterBody3D >}} CharacterBody3D
 
 {{< gd-icon `BoxMesh3D` >}}デフォルトのサイズが `(1, 1, 1)` の場合、以下のように設定します。メッシュノードと衝突判定ノードを両方とも `(0, 0.5, 0)` に移動し、その他は元のままにします。これでルートノードを選択すると、その位置がキューブの *底面* に対応します。
 
-![alt](/godot_recipes/4.x/img/cube_003.png)
+![Godot 4: 転がるキューブ (cube 003)](/godot_recipes/4.x/img/cube_003.png)
 
 これでキューブを転がしたい場合、`Pivot`を「移動させたい方向」に`0.5`ユニット動かしましょう。メッシュはオブジェクトに取り付けられているため、反対方向に同じ量だけ動かさなければなりません。例えば、右方向へ転がす場合（**+X**軸方向）、最終的に以下のコードになります。
 
-![alt](/godot_recipes/4.x/img/cube_004.gif)
+![Godot 4: 転がるキューブ (cube 004)](/godot_recipes/4.x/img/cube_004.gif)
 
 現在、ピボットノードは正しいエッジ上に配置されており、これを回転させるとメッシュ全体が一緒に回転します。
 

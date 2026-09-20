@@ -47,7 +47,7 @@ func _on_BallisticBullet_body_entered(body):
 
 Using the [standard equations of motion](https://www.khanacademy.org/science/physics/one-dimensional-motion/kinematic-formulas/a/what-are-the-kinematic-formulas) is all we need to do here. The initial value for `velocity` is just for testing. Run the bullet scene:
 
-![alt](/godot_recipes/3.x/img/2d_ballistic_01.gif)
+![Godot 4: Ballistic bullet (2d ballistic 01)](/godot_recipes/3.x/img/2d_ballistic_01.gif)
 
 Now in your object that's doing the shooting, you can instance the bullet and set its initial properties. Put this in whatever function/input handles shooting:
 
@@ -65,7 +65,7 @@ func shoot():
 
 Here's an example in action:
 
-![alt](/godot_recipes/3.x/img/2d_ballistic_02.gif)
+![Godot 4: Ballistic bullet (2d ballistic 02)](/godot_recipes/3.x/img/2d_ballistic_02.gif)
 
 ## Related recipes
 

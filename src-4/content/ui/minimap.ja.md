@@ -23,7 +23,7 @@ draft: false
 
 メインシーン設定は以下のように構成されています。
 
-![alt](/godot_recipes/4.x/img/minimap_01.png)
+![Godot 4: ミニマップ／レーダー (minimap 01)](/godot_recipes/4.x/img/minimap_01.png)
 
 `CanvasLayer` ノードは、ミニマップ／レーダーなどのUIコンポーネントを保持するために使います。このレシピで作成するこれらの要素を収容するためのものです。
 
@@ -35,17 +35,17 @@ draft: false
 
 次に、このプロジェクトに {{< gd-icon NinePatchRect >}}`NinePatchRect`ノードを追加します。このノードは `TextureRect`と似ていますが、角や端を引き伸ばさずにリサイズする点が異なります。アセットフォルダから **[テクスチャ]** プロパティに `panel_woodDetail_blank.png` 画像をドラッグ＆ドロップします。この画像は `128x128`ピクセルのもので、ルート {{< gd-icon MarginContainer >}}`MarginContainer`ノードを拡大すると、画像が伸びすぎて見栄えが悪くなります。
 
-![alt](/godot_recipes/4.x/img/minimap_02.gif)
+![Godot 4: ミニマップ／レーダー (minimap 02)](/godot_recipes/4.x/img/minimap_02.gif)
 
 {{< gd-icon NinePatchRect >}}`NinePatchRects`のプロパティを使用することで、引き伸ばした場合もフレームサイズが一定に保たれます。これらのプロパティは「テクスチャ領域」パネルでグラフィカルに定義できますが、直接数値を入力する方が簡単な場合もあります。**パッチ余白** セクションにある4つのプロパティをすべて `64` に設定し、ノード名を "Frame" に変更します。
 
 サイズを変更するとどうなるか、次に見てみてください。
 
-![alt](/godot_recipes/4.x/img/minimap_03.gif)
+![Godot 4: ミニマップ／レーダー (minimap 03)](/godot_recipes/4.x/img/minimap_03.gif)
 
 次に、フレームの内側部分をグリッドパターン `pattern_blueprintPaper.png` で埋めたいと思います。
 
-![alt](/godot_recipes/4.x/img/pattern_blueprintPaper.png)
+![Godot 4: ミニマップ／レーダー (pattern blueprintPaper)](/godot_recipes/4.x/img/pattern_blueprintPaper.png)
 
 ただし、フレームのサイズがどうあれ自動でタイル表示されるようにしましょう。また、グリッドエリアはミニマップマーカーが表示される場所なので、枠線を超えて拡張しないようにしなければなりません。
 
@@ -53,29 +53,29 @@ draft: false
 
 ルートノードのサイズを変更して効果を確認します。
 
-![alt](/godot_recipes/4.x/img/minimap_04.gif)
+![Godot 4: ミニマップ／レーダー (minimap 04)](/godot_recipes/4.x/img/minimap_04.gif)
 
 まずはミニマップのサイズを `(200, 200)` のままにしておきます。ルートノードの **[Size]** プロパティは [レイアウト] セクションで確認できます。
 
 この時点までに、シーンツリーは以下のようになっているはずです。
 
-![alt](/godot_recipes/4.x/img/minimap_06.png)
+![Godot 4: ミニマップ／レーダー (minimap 06)](/godot_recipes/4.x/img/minimap_06.png)
 
 ### マップマーカー
 
 `Grid`の子要素として、名前を「PlayerMarker」とする{{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加します。また、 `minimapIcon_arrowA.png` テクスチャを適用します。スプライトの **Transform/Position** プロパティに注意します。 `(0, 0)` となっており、これにより`Grid`の左上隅に正確に配置されます。
 
-![alt](/godot_recipes/4.x/img/minimap_05.png)
+![Godot 4: ミニマップ／レーダー (minimap 05)](/godot_recipes/4.x/img/minimap_05.png)
 
 もし現在の`Grid(グリッド)`サイズが `(150, 150)` であれば（これは［サイズ］プロパティで確認できます）、中心座標は `(75, 75)` になります。ここに`PlayerMarker`の**座標**を設定しましょう。
 
-![alt](/godot_recipes/4.x/img/minimap_07.png)
+![Godot 4: ミニマップ／レーダー (minimap 07)](/godot_recipes/4.x/img/minimap_07.png)
 
 心配しないでください。後で自動化します。
 
 以下の 2 つの {{< gd-icon Sprite2D >}}`Sprite2D`ノードを追加しましょう: "MobMarker" と "AlertMarker"。テクスチャには `minimapIcon_jewelRed.png` および `minimapIcon_exclamationYellow.png` を使いましょう。
 
-![alt](/godot_recipes/4.x/img/minimap_08.png)
+![Godot 4: ミニマップ／レーダー (minimap 08)](/godot_recipes/4.x/img/minimap_08.png)
 
 これらのオブジェクトはゲーム内世界の異なる2種類のアイテムを表します。デフォルトでは表示されないよう、各アイテムの横にある「表示/非表示切り替え」ボタンをクリックします。
 
@@ -174,7 +174,7 @@ for item in markers:
 
 この問題は、マーカーがグリッドの外側にも配置できてしまう点にあります。
 
-![alt](/godot_recipes/4.x/img/minimap_09.png)
+![Godot 4: ミニマップ／レーダー (minimap 09)](/godot_recipes/4.x/img/minimap_09.png)
 
 この問題を解決するには、`obj_pos` を計算した後、マーカーの位置を設定する前に、その値をグリッドの矩形範囲にクリップします。
 
@@ -182,7 +182,7 @@ for item in markers:
 obj_pos = obj_pos.clamp(Vector2.ZERO, grid.size)
 ```
 
-![alt](/godot_recipes/4.x/img/minimap_11.png)
+![Godot 4: ミニマップ／レーダー (minimap 11)](/godot_recipes/4.x/img/minimap_11.png)
 
 以下のオプションから1つ選択できます（`clamp()`を使用する前に設定しましょう）。最初の選択肢はマーカーを非表示にする方法です。
 
@@ -202,7 +202,7 @@ else:
     markers[item].scale = Vector2(0.75, 0.75)
 ```
 
-![alt](/godot_recipes/4.x/img/minimap_12.png)
+![Godot 4: ミニマップ／レーダー (minimap 12)](/godot_recipes/4.x/img/minimap_12.png)
 
 ### オブジェクトの削除方法
 
@@ -259,7 +259,7 @@ func _on_gui_input(event):
 
 これで完了です。スクロールインとアウトの効果を見てみます。
 
-![alt](/godot_recipes/4.x/img/minimap_10.gif)
+![Godot 4: ミニマップ／レーダー (minimap 10)](/godot_recipes/4.x/img/minimap_10.gif)
 
 ## まとめ
 

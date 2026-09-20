@@ -14,7 +14,7 @@ pre: "<i class='fa fa-rocket fa-fw'></i>&nbsp"
 
 以下は完成したゲームのスクリーンショットです。
 
-![alt](/godot_recipes/4.x/img/2d_101_screenshot.png)
+![Godot 4: 初めての2Dゲームを作ろう (2d 101 screenshot)](/godot_recipes/4.x/img/2d_101_screenshot.png)
 
 このシリーズでは、各エピソードごとにゲームの一部を構築しながら、機能を追加し、その過程を詳しく解説していきます。
 

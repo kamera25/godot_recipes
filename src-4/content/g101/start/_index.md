@@ -7,7 +7,7 @@ pre = "<i class='fas fa-feather-alt fa-fw'></i>&nbsp"
 
 ### Getting Started
 
-![alt](/godot_recipes/4.x/img/godot3_logo.png?width=250)
+![Godot 4: Getting Started (godot3 logo)](/godot_recipes/4.x/img/godot3_logo.png?width=250)
 
 Have you downloaded Godot yet? You can get it here:
 

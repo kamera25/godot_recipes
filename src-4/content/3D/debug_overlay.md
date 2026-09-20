@@ -23,7 +23,7 @@ A better solution is to stick with the `CanvasItem` draw methods. To do so, we n
 
 For the display layer, add a {{< gd-icon CanvasLayer >}}`CanvasLayer` containing a {{< gd-icon Control >}}`Control` to your 3D scene and add a script to the `Control`.
 
-![alt](/godot_recipes/3.x/img/3d_debug_03.png)
+![Godot 4: Drawing Vectors in 3D (3d debug 03)](/godot_recipes/3.x/img/3d_debug_03.png)
 
 As an example, let's assume this drawing control has a reference to the player node, and we want to draw the node's `velocity` vector. We also have a reference to the {{< gd-icon Camera3D >}}`Camera` node. More about how we'll add those references later.
 
@@ -48,9 +48,9 @@ func draw_triangle(pos, dir, size, color):
 
 We use `unproject_position()` to find the start and end points of the vector we want to draw. `draw_triangle()` is there to give us a nice pointed arrow appearance.
 
-![alt](/godot_recipes/3.x/img/3d_debug_01.png)
+![Godot 4: Drawing Vectors in 3D (3d debug 01)](/godot_recipes/3.x/img/3d_debug_01.png)
 
-![alt](/godot_recipes/3.x/img/3d_debug_02.png)
+![Godot 4: Drawing Vectors in 3D (3d debug 02)](/godot_recipes/3.x/img/3d_debug_02.png)
 
 ### Easy access from game objects
 
@@ -139,7 +139,7 @@ DebugOverlay.draw.add_vector(self, "velocity", 1, 4, Color(0,1,0, 0.5))
 
 Here's an example of an AI car displaying its raycasts and steering direction:
 
-![alt](/godot_recipes/3.x/img/3d_debug_04.gif)
+![Godot 4: Drawing Vectors in 3D (3d debug 04)](/godot_recipes/3.x/img/3d_debug_04.gif)
 
 ## Related recipes
 

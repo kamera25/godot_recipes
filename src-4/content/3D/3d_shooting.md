@@ -29,7 +29,7 @@ First, we'll set up a "bullet" object that we can instance. Here are the nodes w
 
 For your mesh, you can use one of Godot's built-in primitive shapes, or something like this:
 
-![alt](/godot_recipes/3.x/img/3d_shoot_01.png)
+![Godot 4: Shooting projectiles (3d shoot 01)](/godot_recipes/3.x/img/3d_shoot_01.png)
 
 {{% notice note %}}
 If you'd like to use the bullet model pictured here, you can grab it from [Kenney's "Weapon Pack"](https://kenney.nl/assets/weapon-pack).
@@ -75,7 +75,7 @@ We'll also emit an `exploded` signal, which you can connect up to implement expl
 
 Now in the tank (or whatever object you have doing the shooting), add a {{< gd-icon Marker3D >}}`Marker3D` child at the point where you want the bullets to appear. In the case of our tank, we're placing it at the end of the cannon barrel:
 
-![alt](/godot_recipes/3.x/img/3d_shoot_02.png)
+![Godot 4: Shooting projectiles (3d shoot 02)](/godot_recipes/3.x/img/3d_shoot_02.png)
 
 Now we can add the code to the tank's script. First a way to add the bullet scene we're going to instance:
 

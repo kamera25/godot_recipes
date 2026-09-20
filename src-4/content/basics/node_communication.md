@@ -63,7 +63,7 @@ See [Understanding node paths](/godot_recipes/4.x/basics/getting_nodes/) for a m
 
 Let's consider the following common configuration:
 
-![alt](/godot_recipes/4.x/img/node_access_01.png)
+![Godot 4: Node communication (the right way) (node access 01)](/godot_recipes/4.x/img/node_access_01.png)
 
 The script in the `Player` node needs to notify the `AnimatedSprite2D` which animation to play, based on the player's movement. In this situation, `get_node()` works well:
 
@@ -117,7 +117,7 @@ A very common use case for signals is updating your UI. Whenever the player's `h
 
 Here's our example setup:
 
-![alt](/godot_recipes/4.x/img/node_access_05.png)
+![Godot 4: Node communication (the right way) (node access 05)](/godot_recipes/4.x/img/node_access_05.png)
 
 Note that the UI is an instanced scene, we're just showing the contained nodes. This is where you often see things like `get_node("../UI/VBoxContainer/HBoxContainer/Label).text = str(health)`, which is what we want to avoid.
 
@@ -155,7 +155,7 @@ Let's consider a Galaga-style space shooter where you have a lots of enemies fly
 
 First, add all enemies to an "enemies" group. You can do this in the editor using the "Node" tab:
 
-![alt](/godot_recipes/4.x/img/node_access_03.png)
+![Godot 4: Node communication (the right way) (node access 03)](/godot_recipes/4.x/img/node_access_03.png)
 
 You can also add nodes to the group in your script:
 
@@ -181,7 +181,7 @@ In a complex UI, you often find yourself with a very deep, nested hierarchy of c
 
 Here's an example setup:
 
-![alt](/godot_recipes/4.x/img/node_access_02.png)
+![Godot 4: Node communication (the right way) (node access 02)](/godot_recipes/4.x/img/node_access_02.png)
 
 The script on the root `CenterContainer` has the following function, which we want to call whenever any button is pressed:
 

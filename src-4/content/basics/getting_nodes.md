@@ -27,7 +27,7 @@ The scene tree is made of nodes, which are connected together in parent-child re
 
 As an example, let's take a simple "Player" scene:
 
-![alt](/godot_recipes/4.x/img/node_paths_01.png)
+![Godot 4: Understanding node paths (node paths 01)](/godot_recipes/4.x/img/node_paths_01.png)
 
 The script for this scene is on the `Player` node. If the script needs to call `play()` on the `AnimatedSprite` node, it needs a reference to that node:
 
@@ -49,7 +49,7 @@ $AnimatedSprite.play()
 
 Let's look at a more complex scene tree:
 
-![alt](/godot_recipes/4.x/img/node_paths_02.png)
+![Godot 4: Understanding node paths (node paths 02)](/godot_recipes/4.x/img/node_paths_02.png)
 
 If the script on `Main` needs to access `ScoreLabel` it can do so with this path:
 

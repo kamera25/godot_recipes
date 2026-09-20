@@ -19,7 +19,7 @@ We'll create an overlay that any node can register a property with, and that pro
 
 Here's an example of what we're going for:
 
-![alt](/godot_recipes/4.x/img/debug_stats_01.png)
+![Godot 4: Displaying debug data (debug stats 01)](/godot_recipes/4.x/img/debug_stats_01.png)
 
 Start by adding a {{< gd-icon MarginContainer >}}`MarginContainer` named `DebugStats` with a {{< gd-icon VBoxContainer >}}`VBoxContainer` child. Set the margins to a comfortable value (I usually use `20`).
 

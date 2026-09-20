@@ -10,11 +10,11 @@ Many 2D games use a "3/4 view" perspective, giving the impression that the camer
 
 Here's an example of the problem:
 
-![alt](/godot_recipes/4.x/img/ysort_01.png)
+![Godot 4: Using Y-Sort (ysort 01)](/godot_recipes/4.x/img/ysort_01.png)
 
 These objects are being drawn in the default render order: tree order. They are arranged like this in the scene tree:
 
-![alt](/godot_recipes/4.x/img/ysort_06.png)
+![Godot 4: Using Y-Sort (ysort 06)](/godot_recipes/4.x/img/ysort_06.png)
 
 ## Solution
 
@@ -22,19 +22,19 @@ Godot has a built-in option to change the render order: on any {{< gd-icon Canva
 
 In the above example, we can enable the property on the {{< gd-icon TileMap >}}`TileMap` node. However, there's still a problem:
 
-![alt](/godot_recipes/4.x/img/ysort_01.png)
+![Godot 4: Using Y-Sort (ysort 01)](/godot_recipes/4.x/img/ysort_01.png)
 
 The draw order is based on each object's `y` coordinate. By default, that is the object's center:
 
-![alt](/godot_recipes/4.x/img/ysort_04.png)
+![Godot 4: Using Y-Sort (ysort 04)](/godot_recipes/4.x/img/ysort_04.png)
 
 Since we want to give the impression that the objects are on the "ground", we can solve this by offsetting each object's sprite so that the object's `position` is aligned with the *bottom* of the sprite:
 
-![alt](/godot_recipes/4.x/img/ysort_05.png)
+![Godot 4: Using Y-Sort (ysort 05)](/godot_recipes/4.x/img/ysort_05.png)
 
 Now things look a lot better:
 
-![alt](/godot_recipes/4.x/img/ysort_02.gif)
+![Godot 4: Using Y-Sort (ysort 02)](/godot_recipes/4.x/img/ysort_02.gif)
 
 ## <i class="fas fa-code-branch"></i> Download This Project
 

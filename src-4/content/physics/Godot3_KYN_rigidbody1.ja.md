@@ -23,7 +23,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 RigidBody2Dの動作は「質量」「摩擦」「反発」などのプロパティを通じて変更できます。
 これらの設定はインスペクタから行えます。
 
-![alt](/godot_recipes/4.x/img/rigidbody_properties.png)
+![Godot 4: リジッドボディを使用 (rigidbody properties)](/godot_recipes/4.x/img/rigidbody_properties.png)
 
 The body's behavior is also affected by the world, via the _Project Settings -> Physics_
 properties, or by entering an <a href="https://docs.godotengine.org/ja/latest/classes/class_area2d.html"><svg width="18" height="18" class="icon-icon_area_2d" target="_blank"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_area_2d"></svg> `Area2D`</a> that is overriding the global physics properties.
@@ -38,7 +38,7 @@ Start by creating a RigidBody2D for the block and adding <a href="https://docs.g
 <a href="https://docs.godotengine.org/ja/latest/classes/class_collisionshape2D.html" target="_blank"><svg width="18" height="18" class="icon-icon_collision_shape_2d"><use xlink:href="/blog/img/symbol-defs.svg#icon-icon_collision_shape_2d"></svg>`CollisionShape2D`</a>
 children:
 
-![alt](/godot_recipes/4.x/img/rigidbody_block_scene.png)
+![Godot 4: リジッドボディを使用 (rigidbody block scene)](/godot_recipes/4.x/img/rigidbody_block_scene.png)
 
 スプライトにテクスチャを追加し、矩形の衝突形状を設定します。**重要** ： 衝突形状のスケールは__変更しないでください__。一般的にこれは推奨されない方法であり、予期しない衝突挙動を引き起こす原因となります。常に形状内のサイズハンドルを使用し、外側の`Node2D`由来のスケーリングハンドルは使わないようにします。
 
@@ -51,7 +51,7 @@ children:
 
 インスタンス化したブロックを複製します（Windows では`Ctrl+D`、macOS では`Command+D`）。これで綺麗なスタックを作成できます。例えば：
 
-![alt](/godot_recipes/4.x/img/rigidbody_scene1.png)
+![Godot 4: リジッドボディを使用 (rigidbody scene1)](/godot_recipes/4.x/img/rigidbody_scene1.png)
 
 ### 投射物
 
@@ -62,7 +62,7 @@ children:
 
 リジッドボディを動かすには、何らかの初速度が必要です。以下の方法で物体に初期速度を設定できます。`Linear -> Velocity`。試しにこれを `(500, 0)` に設定してみてください。
 
-![alt](/godot_recipes/4.x/img/rigidbody_vel.gif)
+![Godot 4: リジッドボディを使用 (rigidbody vel)](/godot_recipes/4.x/img/rigidbody_vel.gif)
 
 また、ボールの `Friction（摩擦力）`と `Bounce（反発係数）`プロパティも調整できます。これらはどちらもゼロから1の範囲内で設定できます。個人的には`0.5`前後の反発係数が好みです。
 
@@ -109,7 +109,7 @@ func _input(event):
 
 このスクリプトでは、マウスボタンが押されたときに `dragging` を有効にし、クリック位置を記録します。ボタンを離すと、クリックポイントからリリースポイントまでのベクトルを求め、それを用いてインパルスを適用します（スケールを調整するために `5` で乗算）。 `apply_impulse()` は第1引数として `offset` も取ります。これにより、必要に応じてボディを中心以外の地点で「ヒット」させることができます。例えば、これを `Vector2(25, 0)` に設定すると、ボールを発射する際にスピンを加えることができます。
 
-![alt](/godot_recipes/4.x/img/rigidbody_impulse.gif)
+![Godot 4: リジッドボディを使用 (rigidbody impulse)](/godot_recipes/4.x/img/rigidbody_impulse.gif)
 
 ## リジッドボディの制御について
 
@@ -118,7 +118,7 @@ func _input(event):
 
 以下が船で使用している画像です。
 
-![alt](/godot_recipes/4.x/img/ship_red.png)
+![Godot 4: リジッドボディを使用 (ship red)](/godot_recipes/4.x/img/ship_red.png)
 
 また、[OpenGameArt](https://opengameart.org/) もチェックして、「素敵な宇宙背景画像」（ただしこれは完全に任意です）を検索することをオススメします。
 
@@ -184,7 +184,7 @@ next,
 
 シーンを再生しましょう - 自由に空を飛べるはずです。
 
-![alt](/godot_recipes/4.x/img/rigidbody_ship1.gif)
+![Godot 4: リジッドボディを使用 (rigidbody ship1)](/godot_recipes/4.x/img/rigidbody_ship1.gif)
 
 ## 位置問題
 
@@ -242,7 +242,7 @@ func _integrate_forces(state):
 
 物理エンジンはそのまま正常に動作し続け、すべてが期待通りの挙動を示します。
 
-![alt](/godot_recipes/4.x/img/rigidbody_ship2.gif)
+![Godot 4: リジッドボディを使用 (rigidbody ship2)](/godot_recipes/4.x/img/rigidbody_ship2.gif)
 
 ## 結論
 

@@ -14,7 +14,7 @@ In this series, we'll start with the basics and build a classic, old-school spac
 
 Here's a screenshot of the finished game:
 
-![alt](/godot_recipes/4.x/img/2d_101_screenshot.png)
+![Godot 4: Your First 2D Game (2d 101 screenshot)](/godot_recipes/4.x/img/2d_101_screenshot.png)
 
 In each part of the series, we'll build a piece of the game, adding features and explaining the process along the way.
 

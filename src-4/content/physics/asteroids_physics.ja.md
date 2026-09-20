@@ -101,7 +101,7 @@ func _integrate_forces(state):
 
 以下が実際の表示例です。
 
-![alt](/godot_recipes/4.x/img/asteroids_wrap.gif)
+![Godot 4: アステロイド風物理演算（RigidBody2Dを使用） (asteroids wrap)](/godot_recipes/4.x/img/asteroids_wrap.gif)
 
 ### 歪み補正機能
 
@@ -128,7 +128,7 @@ var teleport_pos = null
         teleport_pos = null
 ```
 
-![alt](/godot_recipes/4.x/img/asteroids_warp.gif)
+![Godot 4: アステロイド風物理演算（RigidBody2Dを使用） (asteroids warp)](/godot_recipes/4.x/img/asteroids_warp.gif)
 
 ## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 

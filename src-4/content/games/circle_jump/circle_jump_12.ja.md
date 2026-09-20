@@ -73,7 +73,7 @@ for button in buttons:
 
 これに到達するために、「タイトル」画面に新規ボタンを追加しました。
 
-![alt](/godot_recipes/4.x/img/cj_12_01.png)
+![Godot 4: 設定を保存しよう (cj 12 01)](/godot_recipes/4.x/img/cj_12_01.png)
 
 ボタンは他のボタンと同様に設定されています。「ボタン」グループに追加して登録されるようにします。`Screens.gd`ファイルで、このボタンの名前を対象とするもう一つの`match`を追加します。
 
@@ -84,7 +84,7 @@ for button in buttons:
 
 以下に「バージョン情報」画面の表示内容を示します。
 
-![alt](/godot_recipes/4.x/img/cj_12_02.png)
+![Godot 4: 設定を保存しよう (cj 12 02)](/godot_recipes/4.x/img/cj_12_02.png)
 
 「BaseScreen.tscn」を継承し、ここに`TextEdit`とホームボタン用のコンテナを追加しました。
 

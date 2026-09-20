@@ -50,7 +50,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 コンテナが子要素をどのように扱うかは、主に「Size Flags」プロパティによって制御されます。
 
-![alt](/godot_recipes/4.x/img/ui_size_flags.png)
+![Godot 4: コンテナ (ui size flags)](/godot_recipes/4.x/img/ui_size_flags.png)
 
 * Fill
 
@@ -74,11 +74,11 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 これらの設定を試すには、以下のようなテストシーンを設定する方法が有効です。
 
-![alt](/godot_recipes/4.x/img/ui_flags_example01.png)
+![Godot 4: コンテナ (ui flags example01)](/godot_recipes/4.x/img/ui_flags_example01.png)
 
 異なるボタンの「Size Flags」プロパティを調整してみて、それが `HBoxContainer` 内での配置にどのように影響するか確認します。
 
-![alt](/godot_recipes/4.x/img/ui_flags_example02.gif)
+![Godot 4: コンテナ (ui flags example02)](/godot_recipes/4.x/img/ui_flags_example02.gif)
 
 ### ネストされたコンテナ
 

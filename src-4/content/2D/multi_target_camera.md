@@ -10,7 +10,7 @@ You need a dynamic camera that moves and zooms to keep multiple objects on scree
 
 An example might be in a 2 player game, keeping both players on-screen as they move farther and closer together, like so:
 
-![alt](/godot_recipes/4.x/img/multi_cam_01.gif)
+![Godot 4: Multitarget Camera (multi cam 01)](/godot_recipes/4.x/img/multi_cam_01.gif)
 
 ## Solution
 
@@ -102,7 +102,7 @@ The key functionality here comes from `Rect2`. We want to find a rectangle that 
 
 Here you can see the rectangle being drawn (press "Tab" in the demo project to enable this drawing):
 
-![alt](/godot_recipes/4.x/img/multi_cam_02.gif)
+![Godot 4: Multitarget Camera (multi cam 02)](/godot_recipes/4.x/img/multi_cam_02.gif)
 
 Then, depending whether the rectangle is wider or taller (relative to the screen's aspect ratio), we find the scale and clamp it in the max/min range we've defined.
 

@@ -28,7 +28,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 {{< gd-icon Sprite2D >}}`Sprite2D`のテクスチャは、好きな画像を使用できます。以下は例です。
 
-![alt](/godot_recipes/4.x/img/laserRed01.png)
+![Godot 4: 投射物の発射 (laserRed01)](/godot_recipes/4.x/img/laserRed01.png)
 
 ノードの設定とスプライトおよび衝突判定形状を構成します。テクスチャが上向きに配置されている場合（上記例のように）は、{{< gd-icon Sprite2D >}}`Sprite` ノードを `90°` 回転させて右方向に向け、親オブジェクトの「前方」方向に一致するように調整します。
 
@@ -54,7 +54,7 @@ func _on_Bullet_body_entered(body):
 
 弾丸の出現位置を設定が必要です。{{< gd-icon Marker2D >}}`Marker2D`コンポーネントを追加し、弾丸を出現させたい場所に配置します。以下は具体例で、銃身の先端に設置しています。「Muzzle」という名前を付けています。
 
-![alt](/godot_recipes/4.x/img/2d_shoot_01.gif)
+![Godot 4: 投射物の発射 (2d shoot 01)](/godot_recipes/4.x/img/2d_shoot_01.gif)
 
 「プレイヤーが回転するにつれ、Muzzleの`transform`は銃に対して常に同じ向きを保つことに注目します。これは弾丸をスポーンさせる際に非常に便利です。この transform を使用することで、適切な位置と方向を簡単に取得できるからです。新しい弾丸の`transform`は、単にMuzzleのものと等しく設定するだけで済みます。
 
@@ -86,7 +86,7 @@ func shoot():
 
 問題は、弾丸がプレイヤーの子オブジェクトであるため、プレイヤーが移動または回転した際に影響を受ける点です。
 
-![alt](/godot_recipes/4.x/img/2d_shoot_02.gif)
+![Godot 4: 投射物の発射 (2d shoot 02)](/godot_recipes/4.x/img/2d_shoot_02.gif)
 
 この問題を解決するには、弾丸をワールドに追加が必要です。ここではプレイヤーのシーンルートノードを参照する `owner` 変数を使います。ただし、銃口の **グローバル** 変換行列も適用する必要がある点に注意します。これを行わないと、弾丸が想定した位置に表示されない可能性があります。
 
@@ -97,7 +97,7 @@ func shoot():
     b.transform = $Muzzle.global_transform
 ```
 
-![alt](/godot_recipes/4.x/img/2d_shoot_03.gif)
+![Godot 4: 投射物の発射 (2d shoot 03)](/godot_recipes/4.x/img/2d_shoot_03.gif)
 
 ## 関連レシピ
 

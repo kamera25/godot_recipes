@@ -54,7 +54,7 @@ func _process(delta):
 
 このスクリプトをプロジェクト設定で 自動読み込み に設定します。「AudioManager」のように、わかりやすく認識しやすい名前を付けてください。
 
-![alt](/godot_recipes/4.x/img/audio_mgr_01.png)
+![Godot 4: オーディオマネージャー (audio mgr 01)](/godot_recipes/4.x/img/audio_mgr_01.png)
 
 プロジェクト内で音を再生したい任意の場所で、以下を使いましょう。
 
@@ -72,7 +72,7 @@ AudioManager.play("res://path/to/sound")
 
 以下に、オーディオマネージャーノードの使用例を示すサンプルプロジェクトをダウンロードできます。このプロジェクトでは、音声ファイルを格納したフォルダを読み込み、ボタングリッドを生成します。ボタンをクリックすると、対応するサウンドが再生されます。
 
-![alt](/godot_recipes/4.x/img/audio_mgr_02.png)
+![Godot 4: オーディオマネージャー (audio mgr 02)](/godot_recipes/4.x/img/audio_mgr_02.png)
 
 上部に、音声マネージャーのリアルタイム統計が表示されます。
 

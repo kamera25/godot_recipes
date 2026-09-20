@@ -24,7 +24,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 そして、以下のように設定されたタンクの配置です。ここでは弾丸が生成される箇所を示すために  の {{< gd-icon Marker2D >}}`Marker2D` 要素を使用しています。
 
-![alt](/godot_recipes/4.x/img/tank_01.png)
+![Godot 4: 軌跡を描画 (tank 01)](/godot_recipes/4.x/img/tank_01.png)
 
 タンクのスクリプトでは、弾丸を以下のようにインスタンス化しています。
 
@@ -43,7 +43,7 @@ func _unhandled_input(event):
 
 以下に、初期設定の動作例をご紹介します。
 
-![alt](/godot_recipes/4.x/img/tank_02.gif)
+![Godot 4: 軌跡を描画 (tank 02)](/godot_recipes/4.x/img/tank_02.gif)
 
 ### ライン設定
 
@@ -51,7 +51,7 @@ func _unhandled_input(event):
 
 ラインの見た目を改善するため、**幅**を`15`に設定し、すべての**角処理**オプションを「丸み」に変更しました。さらに、 **Fill(塗りつぶし)** セクションに`Gradient(グラデーション)`を追加しました。
 
-![alt](/godot_recipes/4.x/img/2d_tank_03.png)
+![Godot 4: 軌跡を描画 (2d tank 03)](/godot_recipes/4.x/img/2d_tank_03.png)
 
 ### 線を引くこと
 
@@ -90,7 +90,7 @@ func _on_Bullet_exploded(pos):
 
 最後に、射撃の有無に応じてラインの表示／非表示を切り替えます。
 
-![alt](/godot_recipes/4.x/img/tank_04.gif)
+![Godot 4: 軌跡を描画 (tank 04)](/godot_recipes/4.x/img/tank_04.gif)
 
 ## 関連レシピ
 

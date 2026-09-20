@@ -72,7 +72,7 @@ func draw_grid():
 
 これによりグリッドが視覚的に明確に表示されます。
 
-![alt](/godot_recipes/4.x/img/astar_grid_01.png)
+![Godot 4: 2Dグリッド上での経路探索 (astar grid 01)](/godot_recipes/4.x/img/astar_grid_01.png)
 
 ### 経路の描画方法
 
@@ -101,7 +101,7 @@ func update_path():
 
 以下が結果です。
 
-![alt](/godot_recipes/4.x/img/astar_grid_02.png)
+![Godot 4: 2Dグリッド上での経路探索 (astar grid 02)](/godot_recipes/4.x/img/astar_grid_02.png)
 
 注：2点間に斜線が引かれています。これはデフォルト設定では経路に斜め移動が含まれるためです。この設定は`diagonal_mode`を変更することで変更可能です。
 
@@ -118,7 +118,7 @@ astar_grid.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER
 
 現在可能な動きは直交移動のみです。
 
-![alt](/godot_recipes/4.x/img/astar_grid_03.png)
+![Godot 4: 2Dグリッド上での経路探索 (astar grid 03)](/godot_recipes/4.x/img/astar_grid_03.png)
 
 ### 障害物の追加
 
@@ -154,7 +154,7 @@ func _input(event):
 
 現在では、障害物が経路に及ぼす影響を確認できます。
 
-![alt](/godot_recipes/4.x/img/astar_grid_04.png)
+![Godot 4: 2Dグリッド上での経路探索 (astar grid 04)](/godot_recipes/4.x/img/astar_grid_04.png)
 
 ### ヒューリスティック選択について
 
@@ -162,15 +162,15 @@ func _input(event):
 
 例えば、ユークリッド距離はピタゴラスの定理を用いて経路を推定します。
 
-![alt](/godot_recipes/4.x/img/astar_grid_03.png)
+![Godot 4: 2Dグリッド上での経路探索 (astar grid 03)](/godot_recipes/4.x/img/astar_grid_03.png)
 
 マンハッタン距離は南北または東西方向の距離のみを考慮しますが、以下の点に注意が必要です。
 
-![alt](/godot_recipes/4.x/img/astar_grid_manhattan.png)
+![Godot 4: 2Dグリッド上での経路探索 (astar grid manhattan)](/godot_recipes/4.x/img/astar_grid_manhattan.png)
 
 オクトイルヒューリスティックを適用すると、以下のような経路が得られます。
 
-![alt](/godot_recipes/4.x/img/astar_grid_octile.png)
+![Godot 4: 2Dグリッド上での経路探索 (astar grid octile)](/godot_recipes/4.x/img/astar_grid_octile.png)
 
 このプロパティを使用してヒューリスティックを選択できます。
 

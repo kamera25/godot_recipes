@@ -16,17 +16,17 @@ You need a player-controlled 3D character body.
 
 For this recipe, we'll be using this adorable tank model:
 
-![alt](/godot_recipes/4.x/img/3d_kinematic_01.png)
+![Godot 4: CharacterBody3D: Movement (3d kinematic 01)](/godot_recipes/4.x/img/3d_kinematic_01.png)
 
 You can grab this model on Itch.io: [https://gtibo.itch.io/mini-tank](https://gtibo.itch.io/mini-tank) or use any other model you'd like. We won't be doing anything that's tank-specific here.
 
 In the case of this asset, the download includes an OBJ file, and we'll find it more convenient if we import it as a scene:
 
-![alt](/godot_recipes/4.x/img/obj_as_scene.png)
+![Godot 4: CharacterBody3D: Movement (obj as scene)](/godot_recipes/4.x/img/obj_as_scene.png)
 
 We can add the model to the scene, but we'll need a couple of additional nodes:
 
-![alt](/godot_recipes/4.x/img/mini_tank_nodes.png)
+![Godot 4: CharacterBody3D: Movement (mini tank nodes)](/godot_recipes/4.x/img/mini_tank_nodes.png)
 
 For the collision shape, we're just going to use a `BoxShape` aligned and sized with the tank's treads. `CamPos` is a {{< gd-icon Marker3D >}}`Marker3D` we'll use to place our following camera. It's placed behind and above the tank, angled down.
 

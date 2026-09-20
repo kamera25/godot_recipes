@@ -27,8 +27,8 @@ void fragment() {
 
 For example, to gradually blur the entire screen, such as for a scene transition effect:
 
-![alt](/godot_recipes/3.x/img/blur_shader1.png)
-![alt](/godot_recipes/3.x/img/blur_shader2.png)
+![Godot 4: Blur shader (blur shader1)](/godot_recipes/3.x/img/blur_shader1.png)
+![Godot 4: Blur shader (blur shader2)](/godot_recipes/3.x/img/blur_shader2.png)
 
 You can also animate the blurring:
 

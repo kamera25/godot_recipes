@@ -16,7 +16,7 @@ draft: false
 
 本デモでは、Elthen氏作の素晴らしいスプライト「Adventurer」を使用しています。この素材を含め、他にも数多くの高品質なアート作品は[https://elthen.itch.io/](https://elthen.itch.io/)で入手できます。
 
-![alt](/godot_recipes/4.x/img/adventurer_sprite_sheet_v1.1.png)
+![Godot 4: アニメーションツリーを使う (adventurer sprite sheet v1.1)](/godot_recipes/4.x/img/adventurer_sprite_sheet_v1.1.png)
 
 We'll also assume you've already set up the character's animations using {{< gd-icon AnimationPlayer >}}`AnimationPlayer`. Using the above spritesheet, we have the following animations: "idle", "run", "attack1", "attack2", "hurt", and "die".
 
@@ -24,13 +24,13 @@ We'll also assume you've already set up the character's animations using {{< gd-
 
 シーンに {{< gd-icon AnimationTree >}}`AnimationTree` ノードを追加します。［ツリールート］プロパティで「新規アニメーションノードステートマシン」を選択します。
 
-![alt](/godot_recipes/4.x/img/animation_tree_01.png)
+![Godot 4: アニメーションツリーを使う (animation tree 01)](/godot_recipes/4.x/img/animation_tree_01.png)
 
 {{< gd-icon `AnimationPlayer` >}}{{< gd-icon AnimationTree >}}`AnimationTree`で作成されたアニメーションを制御するノードです。既存のアニメーションにアクセスさせるには、_Anim Player_ プロパティ内の「割り当て」ボタンをクリックし、使用するアニメーションノードを選択します。
 
 以下は、ステートマシンを {{< gd-icon AnimationTree >}}`AnimationTree` パネルに設定し始める方法です。
 
-![alt](/godot_recipes/4.x/img/anim_tree_panel.png)
+![Godot 4: アニメーションツリーを使う (anim tree panel)](/godot_recipes/4.x/img/anim_tree_panel.png)
 
 警告に注意します。インスペクターで 「_アクティブ」プロパティを「オン」に設定します。
 
@@ -38,7 +38,7 @@ We'll also assume you've already set up the character's animations using {{< gd-
 
 接続を追加できるようになりました。「ノードを接続」ボタンをクリックして、ノード間でドラッグして接続します。例として、この2つの攻撃アニメーションを使います。
 
-![alt](/godot_recipes/4.x/img/animation_tree_03.png)
+![Godot 4: アニメーションツリーを使う (animation tree 03)](/godot_recipes/4.x/img/animation_tree_03.png)
 
 アニメーションを選択すると、ツリーは現在のノードから目的地まで接続経路に沿って追従します。ただし、上記の設定では「attack2」を再生しても途中で「attack1」は表示されません。これは、接続におけるデフォルトの「スイッチモード」が「即時」に設定されているためです。まず「移動/選択」ボタンをクリックし、次に「attack1」と「attack2」間の接続ポイントをクリックします。インスペクターで「**スイッチモード**」を「終点時」に変更します。同様の操作を「attack2」から「idle」に対しても行います。接続アイコンが <i class="fas fa-play"></i> から <i class="fas fa-step-forward"></i> へと変化します。
 
@@ -46,7 +46,7 @@ We'll also assume you've already set up the character's animations using {{< gd-
 
 しかし、現在「attack2」アニメーションが停止しています。接続時には、**進行状況/モード**プロパティを「自動」に設定します。これにより、両方のアニメーション再生後にツリーが「待機」状態に戻ります。なお、接続アイコンが緑色に変化することでこの状態が表示されます。
 
-![alt](/godot_recipes/4.x/img/animation_tree_05.gif)
+![Godot 4: アニメーションツリーを使う (animation tree 05)](/godot_recipes/4.x/img/animation_tree_05.gif)
 
 アニメーションはトリガーされるたびに連続して再生されます。
 
@@ -54,7 +54,7 @@ We'll also assume you've already set up the character's animations using {{< gd-
 
 以下に、全てのアニメーションに関する完全なツリー構造を示します。
 
-![alt](/godot_recipes/4.x/img/anim_sm_final.png)
+![Godot 4: アニメーションツリーを使う (anim sm final)](/godot_recipes/4.x/img/anim_sm_final.png)
 
 それでは、これらのアニメーションをスクリプトで使用するキャラクターを設定していきます。
 
@@ -102,7 +102,7 @@ func get_input():
 
 注意：攻撃アニメーションに移動した後に`return`文を使用しています。これは、関数の後半で「走り」アニメーションや「待機」アニメーションに誤って移動しないようするためです。
 
-![alt](/godot_recipes/4.x/img/animation_tree_07.gif)
+![Godot 4: アニメーションツリーを使う (animation tree 07)](/godot_recipes/4.x/img/animation_tree_07.gif)
 
 AnimationTreeStateMachine を使用して以下の処理を管理できます。
 

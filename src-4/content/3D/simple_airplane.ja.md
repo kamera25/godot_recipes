@@ -22,7 +22,7 @@ draft: false
 
 以下にモデルのセットアップをご説明します。
 
-![alt](/godot_recipes/4.x/img/kb_plane_01.png)
+![Godot 4: アーケードスタイルの飛行機 (kb plane 01)](/godot_recipes/4.x/img/kb_plane_01.png)
 
 衝突判定用に円筒を使用し、機体のサイズに合わせて調整しています。これにより、デモで必要となる地面との接触検出ができるようになります。
 
@@ -61,7 +61,7 @@ var pitch_input = 0
 
 このデモではゲームコントローラーを使用していますが、お好みでキーボード入力を追加することもできます。
 
-![alt](/godot_recipes/4.x/img/kb_plane_02.png)
+![Godot 4: アーケードスタイルの飛行機 (kb plane 02)](/godot_recipes/4.x/img/kb_plane_02.png)
 
 この機能は入力値を取得し、設定された値を反映します。なお、スロットルの増減操作は「actual_speed」ではなく`target_speed`を変更することに注意します。これにより、現在の速度から目標速度までスムーズに加速・減速できます。
 
@@ -103,7 +103,7 @@ func _physics_process(delta):
 [補間カメラ機能](/godot_recipes/4.x/ja/3d/interpolated_camera/) をこのデモで実装しています。
 {{% /notice %}}
 
-![alt](/godot_recipes/4.x/img/kb_plane_03.gif)
+![Godot 4: アーケードスタイルの飛行機 (kb plane 03)](/godot_recipes/4.x/img/kb_plane_03.gif)
 
 次に、飛行機のピッチ角度を変更する処理を追加します。`_physics_process()` 内の `get_input()` 呼び出し直後に以下を追加します。
 
@@ -113,7 +113,7 @@ transform.basis = transform.basis.rotated(transform.basis.x, pitch_input * pitch
 
 シーンを再度実行し、上下にパンしてみてください。
 
-![alt](/godot_recipes/4.x/img/kb_plane_04.gif)
+![Godot 4: アーケードスタイルの飛行機 (kb plane 04)](/godot_recipes/4.x/img/kb_plane_04.gif)
 
 その後、ターン入力用に以下を追加します。
 
@@ -121,7 +121,7 @@ transform.basis = transform.basis.rotated(transform.basis.x, pitch_input * pitch
 transform.basis = transform.basis.rotated(Vector3.UP, turn_input * turn_speed * delta)
 ```
 
-![alt](/godot_recipes/4.x/img/kb_plane_05.gif)
+![Godot 4: アーケードスタイルの飛行機 (kb plane 05)](/godot_recipes/4.x/img/kb_plane_05.gif)
 
 注意 : 機体が旋回する際に、その動きがやや不自然に見えます。航空機はターン時に「バンク」（傾き）しますので、メッシュの回転角度を変更することでこれをアニメーション化します。
 
@@ -129,7 +129,7 @@ transform.basis = transform.basis.rotated(Vector3.UP, turn_input * turn_speed * 
 mesh.rotation.z = lerpf(mesh.rotation.z, -turn_input, level_speed * delta)
 ```
 
-![alt](/godot_recipes/4.x/img/kb_plane_06.gif)
+![Godot 4: アーケードスタイルの飛行機 (kb plane 06)](/godot_recipes/4.x/img/kb_plane_06.gif)
 
 `mesh` は、平面シーン内の {{< gd-icon MeshInstance3D >}}`MeshInstance3D` オブジェクトへの参照です（例では `$cartoon_plane`）。
 
@@ -195,7 +195,7 @@ func get_input(delta):
         pitch_input += Input.get_action_strength("pitch_up")
 ```
 
-![alt](/godot_recipes/4.x/img/kb_plane_07.gif)
+![Godot 4: アーケードスタイルの飛行機 (kb plane 07)](/godot_recipes/4.x/img/kb_plane_07.gif)
 
 ### 全スクリプト
 

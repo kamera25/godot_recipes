@@ -26,7 +26,7 @@ velocity = position.direction_to(player.position) * speed
 
 However, this would allow the enemy to chase the player from any distance, even if it's far away. To fix this, we can add an {{< gd-icon Area2D >}}`Area2D` to the enemy, and only chase the player when it's inside this "detect radius".
 
-![alt](/godot_recipes/4.x/img/chase_01.png)
+![Godot 4: Chasing the player (chase 01)](/godot_recipes/4.x/img/chase_01.png)
 
 Here's some example code:
 

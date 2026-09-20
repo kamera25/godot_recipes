@@ -10,7 +10,7 @@ draft: false
 
 2人用ゲームで両プレイヤーを画面内に表示したまま、互いに近づき離れていく様子を表現する場合などです。
 
-![alt](/godot_recipes/4.x/img/multi_cam_01.gif)
+![Godot 4: マルチターゲットカメラ (multi cam 01)](/godot_recipes/4.x/img/multi_cam_01.gif)
 
 ## 作り方
 
@@ -102,7 +102,7 @@ zoom = lerp(zoom, Vector2.ONE * z, zoom_speed)
 
 以下の画面では、長方形が描画されている様子を確認できます（デモプロジェクトで「Tab」キーを押すとこの描画機能を有効にできます）。
 
-![alt](/godot_recipes/4.x/img/multi_cam_02.gif)
+![Godot 4: マルチターゲットカメラ (multi cam 02)](/godot_recipes/4.x/img/multi_cam_02.gif)
 
 次に、矩形が画面のアスペクト比に対して横長か縦長かに応じて適切なスケーリング係数を求め、事前に定義した最大値/最小値の範囲内で正規化します。
 

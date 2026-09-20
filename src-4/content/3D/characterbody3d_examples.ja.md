@@ -13,17 +13,17 @@ draft: false
 
 このレシピでは、こちらの可愛らしいタンクモデルを使用します。
 
-![alt](/godot_recipes/4.x/img/3d_kinematic_01.png)
+![Godot 4: CharacterBody3Dの移動 (3d kinematic 01)](/godot_recipes/4.x/img/3d_kinematic_01.png)
 
 このモデルは[Itch.io](https://gtibo.itch.io/mini-tank)で入手できます。他のお好きなモデルを使用しても構いません。ここでは戦車固有の機能は特に実装しません。
 
 このアセットの場合、ダウンロードには OBJファイルが含まれており、シーンとしてインポートした方が作業が効率的になります。
 
-![alt](/godot_recipes/4.x/img/obj_as_scene.png)
+![Godot 4: CharacterBody3Dの移動 (obj as scene)](/godot_recipes/4.x/img/obj_as_scene.png)
 
 モデルをシーンに追加することはできますが、以下の追加ノードが必要となります。
 
-![alt](/godot_recipes/4.x/img/mini_tank_nodes.png)
+![Godot 4: CharacterBody3Dの移動 (mini tank nodes)](/godot_recipes/4.x/img/mini_tank_nodes.png)
 
 衝突判定形状については、戦車の履帯と位置・サイズを合わせた `BoxShape` を使用します。`CamPos` は、後続カメラを配置するための {{< gd-icon Marker3D >}}`Marker3D` です。戦車の後方かつ上部、やや下向きに配置されます。
 

@@ -20,7 +20,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 以下に目指すべき例を示します。
 
-![alt](/godot_recipes/4.x/img/debug_stats_01.png)
+![Godot 4: デバッグデータを表示しています (debug stats 01)](/godot_recipes/4.x/img/debug_stats_01.png)
 
 まず最初に、名前を `DebugStats` とする {{< gd-icon MarginContainer >}}`MarginContainer` を追加し、その中に {{< gd-icon VBoxContainer >}}`VBoxContainer` の子要素を配置します。マージンは適切な値に設定しましょう（ここでは `20` を使用しています）。
 

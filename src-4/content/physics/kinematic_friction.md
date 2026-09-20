@@ -83,7 +83,7 @@ We're using `friction` and `acceleration` as the amount to blend. For accelerati
 Using values of `1.0` would recreate the "instant" movement we started with.
 {{% /notice %}}
 
-![alt](/godot_recipes/3.x/img/friction_platformer.gif)
+![Godot 4: Kinematic Friction (friction platformer)](/godot_recipes/3.x/img/friction_platformer.gif)
 
 ## Related Recipes
 

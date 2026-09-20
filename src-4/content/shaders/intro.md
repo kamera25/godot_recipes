@@ -49,7 +49,7 @@ void fragment() {
 }
 ```
 
-![alt](/godot_recipes/3.x/img/shader_intro_01.png)
+![Godot 4: Shaders: intro (shader intro 01)](/godot_recipes/3.x/img/shader_intro_01.png)
 
 Every pixel is red. `COLOR` is the output of the fragment shader and is applied to every pixel simultaneously. But what if we want some variation?
 
@@ -67,7 +67,7 @@ void fragment() {
 }
 ```
 
-![alt](/godot_recipes/3.x/img/shader_intro_02.png)
+![Godot 4: Shaders: intro (shader intro 02)](/godot_recipes/3.x/img/shader_intro_02.png)
 
 Now the red channel ranges from `0` on the left to `1.0` on the right, varying along with the **UV**.
 
@@ -78,7 +78,7 @@ void fragment() {
     COLOR = vec4(UV.x, 1.0 - UV.y, 0.5, 1.0);
 ```
 
-![alt](/godot_recipes/3.x/img/shader_intro_02a.png)
+![Godot 4: Shaders: intro (shader intro 02a)](/godot_recipes/3.x/img/shader_intro_02a.png)
 
 #### Textures
 
@@ -101,7 +101,7 @@ void fragment() {
 }
 ```
 
-![alt](/godot_recipes/3.x/img/shader_intro_03.png)
+![Godot 4: Shaders: intro (shader intro 03)](/godot_recipes/3.x/img/shader_intro_03.png)
 
 This ramps the alpha channel down, resulting in a fade-out effect.
 
@@ -116,7 +116,7 @@ void fragment() {
 }
 ```
 
-![alt](/godot_recipes/3.x/img/shader_intro_04.gif)
+![Godot 4: Shaders: intro (shader intro 04)](/godot_recipes/3.x/img/shader_intro_04.gif)
 
 Or this one:
 
@@ -126,7 +126,7 @@ void fragment() {
     COLOR.a = max(0.0, UV.x - abs(sin(TIME)));
 }
 ```
-![alt](/godot_recipes/3.x/img/shader_intro_05.gif)
+![Godot 4: Shaders: intro (shader intro 05)](/godot_recipes/3.x/img/shader_intro_05.gif)
 
 ### Vertex shader
 
@@ -140,7 +140,7 @@ void vertex() {
 }
 ```
 
-![alt](/godot_recipes/3.x/img/shader_intro_06.png)
+![Godot 4: Shaders: intro (shader intro 06)](/godot_recipes/3.x/img/shader_intro_06.png)
 
 In this shader, the two left vertices `(0, 0)` and `(0, 1)` are unchanged, but the right vertices become `(10, 0)` and `(10, 1)`.
 
@@ -152,7 +152,7 @@ void vertex() {
 }
 ```
 
-![alt](/godot_recipes/3.x/img/shader_intro_07.gif)
+![Godot 4: Shaders: intro (shader intro 07)](/godot_recipes/3.x/img/shader_intro_07.gif)
 
 ### Uniforms
 

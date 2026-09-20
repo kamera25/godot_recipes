@@ -21,7 +21,7 @@ Scene tree order is something that can cause a great deal of confusion for Godot
 
 Here's our sample node setup:
 
-![alt](/godot_recipes/4.x/img/tree_order_01.png)
+![Godot 4: Understanding tree order (tree order 01)](/godot_recipes/4.x/img/tree_order_01.png)
 
 On each node, we have the following script attached:
 

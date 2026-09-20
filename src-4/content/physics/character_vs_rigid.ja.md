@@ -15,7 +15,7 @@ draft: false
 
 デフォルトでは、 `move_and_slide()` または `move_and_collide()` で移動させた {{< gd-icon CharacterBody2D >}}`CharacterBody2D` は、衝突する任意の {{< gd-icon RigidBody2D >}}`RigidBody2D` を押しません。リジッドボディは全く反応せず、単なる {{< gd-icon StaticBody2D >}}`StaticBody2D` と同じように振る舞います。
 
-![alt](/godot_recipes/4.x/img/char_push_default.gif)
+![Godot 4: CharacterとRigidBodyの相互作用 (char push default)](/godot_recipes/4.x/img/char_push_default.gif)
 
 場合によってはこれで十分なこともあります。ただし、ボディーを押し出したい場合は、何点か変更が必要です。
 
@@ -32,19 +32,19 @@ draft: false
 
 この設定には長所と短所があります。最大の利点は、追加コードが不要であることです。必要なのはオブジェクトの衝突レイヤー/マスクを正しく設定することだけです。本事例では、以下の3つの物理レイヤを定義しています。
 
-![alt](/godot_recipes/4.x/img/2d_physics_layers_01.png)
+![Godot 4: CharacterとRigidBodyの相互作用 (2d physics layers 01)](/godot_recipes/4.x/img/2d_physics_layers_01.png)
 
 硬体オブジェクトについては、「アイテム」レイヤー（レイヤー3）に配置し、マスクはデフォルト設定のまま全レイヤーを覆う状態にしています。
 
-![alt](/godot_recipes/4.x/img/physics_layers_box.png)
+![Godot 4: CharacterとRigidBodyの相互作用 (physics layers box)](/godot_recipes/4.x/img/physics_layers_box.png)
 
 次に、プレイヤーを「プレイヤー」レイヤー（レイヤー2）に配置し、マスクを設定して「アイテム」を無視するように構成しました。
 
-![alt](/godot_recipes/4.x/img/physics_layers_player.png)
+![Godot 4: CharacterとRigidBodyの相互作用 (physics layers player)](/godot_recipes/4.x/img/physics_layers_player.png)
 
 ゲームを実行してみると、ボックスを自由に移動できることがわかります。なお、箱の質量は関係ありません。すべて同じように押されます。
 
-![alt](/godot_recipes/4.x/img/char_push_inf.gif)
+![Godot 4: CharacterとRigidBodyの相互作用 (char push inf)](/godot_recipes/4.x/img/char_push_inf.gif)
 
 このオプションの欠点もここに現れています。箱の物理演算が無視されているため、壁を貫通したり、上に乗ることすらできません。
 
@@ -68,7 +68,7 @@ func _physics_process(delta):
 
 衝突時の法線ベクトルはリジッドボディの外側を指しているため、これを反転させてキャラクターから離れる方向に調整し、`push_force` 係数を適用します。これで再び押す動作ができるようになります。なお、壁越しにリジッドボディを移動させることはできません。
 
-![alt](/godot_recipes/4.x/img/char_push_impulse.gif)
+![Godot 4: CharacterとRigidBodyの相互作用 (char push impulse)](/godot_recipes/4.x/img/char_push_impulse.gif)
 
 リジッドボディの質量と関連させて `push_force` を調整が必要です。力が大きすぎると衝突が発生してしまいますし、小さすぎると全く押し込めなくなります。
 

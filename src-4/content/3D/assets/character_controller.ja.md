@@ -21,7 +21,7 @@ Godot環境でリグ設定済みのアニメーション3Dキャラクターを�
 
 カプセルのサイズと位置を調整し、キャラクターの全身を覆うようにします。参考までに、使用した数値は以下の通りです。
 
-![alt](/godot_recipes/4.x/img/3dchar_capsule.png)
+![Godot 4: キャラクタコントローラー (3dchar capsule)](/godot_recipes/4.x/img/3dchar_capsule.png)
 
 インポートしたリグは、足部分が「地面」に位置するように配置されています（つまり身体の中心座標に合わせた設定です）。この方法は後で便利になります。プレイヤーが中央に立つ場合、空中に浮いた状態ではなく、実際に地面に立っている状態で表示されるようになるからです。
 
@@ -74,7 +74,7 @@ var jumping = false
 
 ここでは`anim_tree`リファレンスを使用して、アイドル/歩行/ランニングブレンドスペースのブレンド位置と、ジャンプトリガー条件を設定します。まず{{< gd-icon AnimationTree >}}`AnimationTree`を選択し、これらのプロパティがインスペクターに表示されることを確認します。
 
-![alt](/godot_recipes/4.x/img/3dchar_animtree_properties.png)
+![Godot 4: キャラクタコントローラー (3dchar animtree properties)](/godot_recipes/4.x/img/3dchar_animtree_properties.png)
 
 `anim_state` はアニメーション状態マシンへの参照で、これを使用して異なるアニメーション間の遷移を呼び出すことができます。設定方法については、[キャラクターアニメーション](/godot_recipes/4.x/ja/3d/assets/character_animation/) レシピを参照します。
 
@@ -184,7 +184,7 @@ var attacks = [
 
 ジャンプモーションは複数のアニメーションが連動するため、やや複雑です。参考までに、状態マシンの設定手順を以下に示します。
 
-![alt](/godot_recipes/4.x/img/anim_tree_jumping.png)
+![Godot 4: キャラクタコントローラー (anim tree jumping)](/godot_recipes/4.x/img/anim_tree_jumping.png)
 
 まず、「ジャンプ開始」アニメーションに移行するために `jumping = true` を設定します。これによりステートマシーンでの遷移が開始されます。
 

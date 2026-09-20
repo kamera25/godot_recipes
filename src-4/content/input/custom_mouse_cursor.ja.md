@@ -20,7 +20,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 例えば、以下の画像を使用するには。
 
-![alt](/godot_recipes/4.x/img/crosshair137.png)
+![Godot 4: カーソルのカスタマイズ (crosshair137)](/godot_recipes/4.x/img/crosshair137.png)
 
 以下で照準をマウスカーソルの中央位置に設定します。
 

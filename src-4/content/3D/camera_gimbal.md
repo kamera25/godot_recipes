@@ -146,7 +146,7 @@ func _process(delta):
 
 Using `lerp()` to change the zoom level results in smoother zooming.
 
-![alt](/godot_recipes/4.x/img/gimbal_02.gif)
+![Godot 4: Camera Gimbal (gimbal 02)](/godot_recipes/4.x/img/gimbal_02.gif)
 
 ### Following a target
 

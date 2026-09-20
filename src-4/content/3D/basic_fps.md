@@ -85,7 +85,7 @@ func _input(event):
 
 ## Holding a weapon
 
-![alt](/godot_recipes/4.x/img/fps_01.png)
+![Godot 4: Basic FPS Character (fps 01)](/godot_recipes/4.x/img/fps_01.png)
 
 An FPS character typically has a 3D mesh of a weapon positioned in front. Setting this up can be easy with a couple of Godot editor tricks.
 

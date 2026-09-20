@@ -60,7 +60,7 @@ func _physics_process(delta):
 
 傾斜地で動きを止めると、問題が明らかになります。
 
-![alt](/godot_recipes/4.x/img/kbd_slopes_01.gif)
+![Godot 4: CharacterBody3D : 坂道で停止する (kbd slopes 01)](/godot_recipes/4.x/img/kbd_slopes_01.gif)
 
 **これが`move_and_slide()`の本来の動作です。**
 
@@ -78,12 +78,12 @@ move_and_slide()
 
 これで斜面を滑り落ちるのを止められます！
 
-![alt](/godot_recipes/4.x/img/kbd_slopes_02.gif)
+![Godot 4: CharacterBody3D : 坂道で停止する (kbd slopes 02)](/godot_recipes/4.x/img/kbd_slopes_02.gif)
 
 
 しかし依然として問題が残っています。これは`gravity`に低い値を設定した場合により顕著になります。
 
-![alt](/godot_recipes/4.x/img/kbd_slopes_03.gif)
+![Godot 4: CharacterBody3D : 坂道で停止する (kbd slopes 03)](/godot_recipes/4.x/img/kbd_slopes_03.gif)
 
 停止時にわずかに上向きの運動量が生じるため、小さな「ホップ」が発生します。この問題は、`move_and_slide_with_snap()` メソッドに切り替えることで解決できます。
 
@@ -98,7 +98,7 @@ Jump 機能を確実に動作させるため、ジャンプ中のスナップ機
 
 最終的に、非常に急勾配な斜面では、依然として問題が残ることに気づかれるかもしれません：
 
-![alt](/godot_recipes/4.x/img/kbd_slopes_04.gif)
+![Godot 4: CharacterBody3D : 坂道で停止する (kbd slopes 04)](/godot_recipes/4.x/img/kbd_slopes_04.gif)
 
 これは、デフォルトの `floor_max_angle` パラメーター値が45度に設定されており、表示される傾斜角がこの値を超えているためです。この値を超える角度は床として認識されません。値を大きくすると、この傾斜も他の傾斜と同様に扱われるようになります。
 

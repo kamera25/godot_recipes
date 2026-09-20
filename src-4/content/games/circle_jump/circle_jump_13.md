@@ -17,7 +17,7 @@ As before we're using the [Shin-NiL Android AdMob Plugin](https://github.com/Shi
 
 The first step is to install the Android custom build template in your project:
 
-![alt](/godot_recipes/3.x/img/admob_3.2_03.png)
+![Godot 4: Updating AdMob Plugin (3.2.1) (admob 3.2 03)](/godot_recipes/3.x/img/admob_3.2_03.png)
 
 Unzip the plugin and place the `admob-plugin` folder into `res://android/` and the `admob-lib` folder in `res://`.
 
@@ -40,11 +40,11 @@ Paste your AdMob application ID into the `android:value=""/>` line, replacing th
 
 Now we can add the `AdMob` node to the `Main` scene:
 
-![alt](/godot_recipes/3.x/img/admob_3.2_01.png)
+![Godot 4: Updating AdMob Plugin (3.2.1) (admob 3.2 01)](/godot_recipes/3.x/img/admob_3.2_01.png)
 
 Clicking on it, we can see a set of exported properties for configuring the node. This is where we'll paste our ad unit ids and configure real/test ads, etc.
 
-![alt](/godot_recipes/3.x/img/admob_3.2_02.png)
+![Godot 4: Updating AdMob Plugin (3.2.1) (admob 3.2 02)](/godot_recipes/3.x/img/admob_3.2_02.png)
 
 Note that the `AdMob` node provides signals you can connect, notifying you when ads load, close, or fail to load. We're not using "rewarded" ads in this game, but the signals for those enable you to issue the rewards at the appropriate time.
 

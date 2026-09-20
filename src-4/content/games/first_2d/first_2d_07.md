@@ -34,7 +34,7 @@ Select the sprite node and press the key icons next to **Texture** and **Hframes
 
 Now we'll key the individual **Frames** values we want. Start with keying **Frames** each `.1` seconds to values in this order`2`, `1`, `0`, `3`. Finally, key `0` again and put it immediately after. This will make a "pulsing" animation where the sprite grows and then bounces a little at the end. The animation setup should look like this:
 
-![alt](/godot_recipes/4.x/img/2d_101_20.png)
+![Godot 4: Enemies (2d 101 20)](/godot_recipes/4.x/img/2d_101_20.png)
 
 Press the play button to see it in action. Feel free to adjust it if you'd like.
 

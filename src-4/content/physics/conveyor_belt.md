@@ -22,25 +22,25 @@ See [below](#3d) for how to address this in 3D.
 
 Here's an example, using a {{< gd-icon StaticBody2D >}}`StaticBody2D` and a {{< gd-icon RigidBody2D >}}`RigidBody2D`. No code was added. The static body's *Constant Linear Velocity* is set to `(200, 0)`.
 
-![alt](/godot_recipes/3.x/img/conveyor_02.gif)
+![Godot 4: Conveyor Belt (conveyor 02)](/godot_recipes/3.x/img/conveyor_02.gif)
 
 ### Animating the belt
 
 There are many ways to present the *appearance* of your conveyor belt, depending on your art assets. For this demo project, I have only a TileMap which is using this single 88x88 tile:
 
-![alt](/godot_recipes/3.x/img/tileGreen_03.png)
+![Godot 4: Conveyor Belt (tileGreen 03)](/godot_recipes/3.x/img/tileGreen_03.png)
 
 Add a {{< gd-icon Sprite2D >}}`Sprite` to your static body, and in its *Texture* choose "New AtlasTexture":
 
-![alt](/godot_recipes/3.x/img/conveyor_04.png)
+![Godot 4: Conveyor Belt (conveyor 04)](/godot_recipes/3.x/img/conveyor_04.png)
 
 Drop the tile texture in its *Texture* property and set the *Region* to `(0, 0, 880, 88)`:
 
-![alt](/godot_recipes/3.x/img/conveyor_05.png)
+![Godot 4: Conveyor Belt (conveyor 05)](/godot_recipes/3.x/img/conveyor_05.png)
 
 Choosing `880` gives us a conveyor belt that's exactly 10 tiles wide. You can use any width you need.
 
-![alt](/godot_recipes/3.x/img/conveyor_06.png)
+![Godot 4: Conveyor Belt (conveyor 06)](/godot_recipes/3.x/img/conveyor_06.png)
 
 {{% notice tip %}}
 If your image doesn't repeat or looks wrong, reimport it with the *Repeat* flag set to "Enabled".
@@ -62,11 +62,11 @@ func _process(delta):
 
 This code ensures that our belt moves at the desired speed, and that the animation matches the physics effect. Note that the directions are opposite: increasing the `x` of the region shifts the image to the *left*.
 
-![alt](/godot_recipes/3.x/img/conveyor_01.gif)
+![Godot 4: Conveyor Belt (conveyor 01)](/godot_recipes/3.x/img/conveyor_01.gif)
 
 This works perfectly well with kinematic bodies, too. Here's the same conveyor belt object added to our [Platform character](http://kidscancode.org/godot_recipes/2d/platform_character) recipe:
 
-![alt](/godot_recipes/3.x/img/conveyor_07.gif)
+![Godot 4: Conveyor Belt (conveyor 07)](/godot_recipes/3.x/img/conveyor_07.gif)
 
 ### 3D
 
@@ -74,9 +74,9 @@ At the time of this writing, `constant_linear_velocity` does not work in 3D usin
 
 However, you can use this technique if you change from "Bullet" to the "GodotPhysics" engine in your Project Settings:
 
-![alt](/godot_recipes/3.x/img/conveyor_03.png)
+![Godot 4: Conveyor Belt (conveyor 03)](/godot_recipes/3.x/img/conveyor_03.png)
 
-![alt](/godot_recipes/3.x/img/conveyor_3d.gif)
+![Godot 4: Conveyor Belt (conveyor 3d)](/godot_recipes/3.x/img/conveyor_3d.gif)
 
 ## Related recipes
 

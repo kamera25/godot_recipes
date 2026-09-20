@@ -10,11 +10,11 @@ draft: false
 
 以下のような問題が発生します。
 
-![alt](/godot_recipes/4.x/img/ysort_01.png)
+![Godot 4: Yソートを使う (ysort 01)](/godot_recipes/4.x/img/ysort_01.png)
 
 以下のオブジェクトはデフォルトのレンダリング順序（ツリー順）で描画されています。シーンツリー上での配置は以下の通りです。
 
-![alt](/godot_recipes/4.x/img/ysort_06.png)
+![Godot 4: Yソートを使う (ysort 06)](/godot_recipes/4.x/img/ysort_06.png)
 
 ## 作り方
 
@@ -22,19 +22,19 @@ Godotにはレンダリング順序を変更する組み込みオプションが
 
 上記の例では、{{< gd-icon TileMap >}}`TileMap`ノード上でプロパティを有効にできます。ただし、まだ解決した方がよい問題が残っています。
 
-![alt](/godot_recipes/4.x/img/ysort_01.png)
+![Godot 4: Yソートを使う (ysort 01)](/godot_recipes/4.x/img/ysort_01.png)
 
 ドロー順序は各オブジェクトの `y` 座標に基づいています。デフォルトではこれはオブジェクトの中心座標となります。
 
-![alt](/godot_recipes/4.x/img/ysort_04.png)
+![Godot 4: Yソートを使う (ysort 04)](/godot_recipes/4.x/img/ysort_04.png)
 
 オブジェクトが「地面」の上に配置されているように見せたい場合、オブジェクトの `position` プロパティがスプライトの最下部位置と一致するようにオフセットすることで解決できます。
 
-![alt](/godot_recipes/4.x/img/ysort_05.png)
+![Godot 4: Yソートを使う (ysort 05)](/godot_recipes/4.x/img/ysort_05.png)
 
 だいぶ良くなりました。
 
-![alt](/godot_recipes/4.x/img/ysort_02.gif)
+![Godot 4: Yソートを使う (ysort 02)](/godot_recipes/4.x/img/ysort_02.gif)
 
 ## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 

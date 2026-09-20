@@ -54,7 +54,7 @@ func _process(delta):
 
 Set this script as an autoload in Project Settings. Give it an easily recognizable name, such as "AudioManager".
 
-![alt](/godot_recipes/4.x/img/audio_mgr_01.png)
+![Godot 4: Audio Manager (audio mgr 01)](/godot_recipes/4.x/img/audio_mgr_01.png)
 
 Anywhere in your project that you want to play a sound, use:
 
@@ -73,7 +73,7 @@ This audio manager is adapted with thanks from [SFXPlayer by TheDuriel]
 
 Below you can download an example project showing the use of the audio manager node. This project reads a folder full of audio files and generates a grid of buttons. Click the button to play the sound.
 
-![alt](/godot_recipes/4.x/img/audio_mgr_02.png)
+![Godot 4: Audio Manager (audio mgr 02)](/godot_recipes/4.x/img/audio_mgr_02.png)
 
 At the top, you can see the audio manager's live statistics.
 

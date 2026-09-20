@@ -13,7 +13,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 RPG風のスキルボタンを作成したい。クールタイム効果も組み込みたい。
 
-![alt](/godot_recipes/4.x/img/cooldown_01.gif)
+![Godot 4: クールタイムボタン (cooldown 01)](/godot_recipes/4.x/img/cooldown_01.gif)
 
 ## 作り方
 
@@ -37,7 +37,7 @@ AbilityButton: {{< gd-icon TextureButton >}} TextureButton
 
 また、クールタイム時の「時計ワイプ」でボタンを暗く表示させたいため、**[変調]** プロパティに透明度のある濃いグレーを設定します。
 
-![alt](/godot_recipes/4.x/img/cooldown_02.png)
+![Godot 4: クールタイムボタン (cooldown 02)](/godot_recipes/4.x/img/cooldown_02.png)
 
 {{< gd-icon Timer >}}`Timer`ノードの設定は「One Shot」に設定します。
 
@@ -102,7 +102,7 @@ func _on_Timer_timeout():
 
 タイマーが切れるとすべての設定は初期化されます。複数のボタンを {{< gd-icon HBoxContainer >}}`HBoxContainer` に配置するだけで、アクションバーが完成します。
 
-![alt](/godot_recipes/4.x/img/cooldown_03.gif)
+![Godot 4: クールタイムボタン (cooldown 03)](/godot_recipes/4.x/img/cooldown_03.gif)
 
 ## <i class="fas fa-code-branch"></i> プロジェクトのダウンロード
 

@@ -16,7 +16,7 @@ Use an {{< gd-icon AnimationTree >}}`AnimationTree` to create an animation _stat
 
 For this demo, we'll be using the excellent "Adventurer" sprite by Elthen. You can get this and lots of other great art at [https://elthen.itch.io/](https://elthen.itch.io/).
 
-![alt](/godot_recipes/4.x/img/adventurer_sprite_sheet_v1.1.png)
+![Godot 4: Using the AnimationTree StateMachine (adventurer sprite sheet v1.1)](/godot_recipes/4.x/img/adventurer_sprite_sheet_v1.1.png)
 
 We'll also assume you've already set up the character's animations using {{< gd-icon AnimationPlayer >}}`AnimationPlayer`. Using the above spritesheet, we have the following animations: "idle", "run", "attack1", "attack2", "hurt", and "die".
 
@@ -24,13 +24,13 @@ We'll also assume you've already set up the character's animations using {{< gd-
 
 Add an {{< gd-icon AnimationTree >}}`AnimationTree` node to the scene. In its _Tree Root_ property, choose "New AnimationNodeStateMachine".
 
-![alt](/godot_recipes/4.x/img/animation_tree_01.png)
+![Godot 4: Using the AnimationTree StateMachine (animation tree 01)](/godot_recipes/4.x/img/animation_tree_01.png)
 
 An {{< gd-icon AnimationTree >}}`AnimationTree` is a node that controls animations created in {{< gd-icon AnimationPlayer >}}`AnimationPlayer`. To let it access the existing animations, click "Assign" in the _Anim Player_ property and select your animation node.
 
 Now we can begin to set up our state machine in the {{< gd-icon AnimationTree >}}`AnimationTree` panel:
 
-![alt](/godot_recipes/4.x/img/anim_tree_panel.png)
+![Godot 4: Using the AnimationTree StateMachine (anim tree panel)](/godot_recipes/4.x/img/anim_tree_panel.png)
 
 Note the warning. Set the _Active_ property to "On" in the Inspector.
 
@@ -38,7 +38,7 @@ Right-click and choose "Add Animation". Choose "idle", and you'll see a small bo
 
 Now we can add connections. Click the "Connect nodes" button and drag between nodes to connect them. As an example, let's use the two attack animations:
 
-![alt](/godot_recipes/4.x/img/animation_tree_03.png)
+![Godot 4: Using the AnimationTree StateMachine (animation tree 03)](/godot_recipes/4.x/img/animation_tree_03.png)
 
 When you select an animation, the tree will follow the connected path from the current node to the destination. However, in the configuration above, if you play "attack2" you won't see "attack1" along the way. That's because the default "switch mode" for a connection is "Immediate". Click the "Move/select" button and then click on the connection between "attack1" and "attack2". In the Inspector, change **Switch Mode** to "At End". Do the same with "attack2" to "idle". The connection icon changes from <i class="fas fa-play"></i> to <i class="fas fa-step-forward"></i>.
 
@@ -46,7 +46,7 @@ Now, with "idle" playing, if you click "attack2", you'll see the two attacks pla
 
 But now the animation stops on "attack2". On its connection, set the **Advance/Mode** property to "Auto". This will make the tree go back to "idle" after playing both animations. Note that the connection icon turns green to show this.
 
-![alt](/godot_recipes/4.x/img/animation_tree_05.gif)
+![Godot 4: Using the AnimationTree StateMachine (animation tree 05)](/godot_recipes/4.x/img/animation_tree_05.gif)
 
 Now the animations are played in sequence whenever they're triggered.
 
@@ -54,7 +54,7 @@ Now the animations are played in sequence whenever they're triggered.
 
 Here is the full tree for all of the animations:
 
-![alt](/godot_recipes/4.x/img/anim_sm_final.png)
+![Godot 4: Using the AnimationTree StateMachine (anim sm final)](/godot_recipes/4.x/img/anim_sm_final.png)
 
 Now let's set up the character to use these animations in a script.
 
@@ -101,7 +101,7 @@ func get_input():
 
 Note that we're using `return` after traveling to the attack animations. This is so that we won't instead travel to the "run" or "idle" animations further down in the function.
 
-![alt](/godot_recipes/4.x/img/animation_tree_07.gif)
+![Godot 4: Using the AnimationTree StateMachine (animation tree 07)](/godot_recipes/4.x/img/animation_tree_07.gif)
 
 You can use the AnimationTreeStateMachine to handle
 

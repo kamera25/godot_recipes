@@ -49,7 +49,7 @@ Here's how these nodes will interact: pressing "accelerate" will apply a force o
 
 Here's the car model we'll use:
 
-![alt](/godot_recipes/4.x/img/3d_sphere_car_02.png)
+![Godot 4: Arcade-style Car (3d sphere car 02)](/godot_recipes/4.x/img/3d_sphere_car_02.png)
 
 {{% notice note %}}
 You can find this and other car models in Kenney's "Car Kit", available here:
@@ -60,7 +60,7 @@ If you use the GLTF models, you shouldn't have adjust anything in the import set
 
 Here's what the node tree looks like when importing the "suv" model:
 
-![alt](/godot_recipes/4.x/img/3d_sphere_car_04a.png)
+![Godot 4: Arcade-style Car (3d sphere car 04a)](/godot_recipes/4.x/img/3d_sphere_car_04a.png)
 
 Note that the wheels & body are separate meshes. This will make it easy to add some visual appeal - like turning the wheels when steering.
 
@@ -80,7 +80,7 @@ For the demo, we've also added a spherical mesh to the collision shape for debug
 
 Finally, add a {{< gd-icon RayCast3D >}}`RayCast3D` node as a child of the {{< gd-icon MeshInstance3D >}}`CarMesh`. Set its **Target Position** to `(0, -1, 0)`.
 
-![alt](/godot_recipes/4.x/img/3d_sphere_car_03.png)
+![Godot 4: Arcade-style Car (3d sphere car 03)](/godot_recipes/4.x/img/3d_sphere_car_03.png)
 
 We're going to use this for ground detection. When the car's in the air, steering and acceleration won't work. We can also use it to align the car mesh to a slope (if your game's track isn't flat).
 
@@ -206,7 +206,7 @@ And right after getting input, add the following:
     left_wheel.rotation.y = rotate_input
 ```
 
-![alt](/godot_recipes/4.x/img/3d_sphere_car_05.gif)
+![Godot 4: Arcade-style Car (3d sphere car 05)](/godot_recipes/4.x/img/3d_sphere_car_05.gif)
 
 #### 3. Tilt the body
 
@@ -228,7 +228,7 @@ body_mesh.rotation.z = lerp(body_mesh.rotation.z, t, 10 * delta)
 
 Observe the difference:
 
-![alt](/godot_recipes/4.x/img/3d_sphere_car_06.gif)
+![Godot 4: Arcade-style Car (3d sphere car 06)](/godot_recipes/4.x/img/3d_sphere_car_06.gif)
 
 ### Credits
 >

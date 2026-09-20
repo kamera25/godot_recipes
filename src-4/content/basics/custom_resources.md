@@ -113,15 +113,15 @@ func heal(amount):
 
 Once the `PlayerHealth` class is defined, we can make a new instance of it. Click the "New Resource" button at the top of the Inspector:
 
-![alt](/godot_recipes/3.x/img/custom_resource_01.png)
+![Godot 4: Using Custom Resources (custom resource 01)](/godot_recipes/3.x/img/custom_resource_01.png)
 
 In the "Create New Resource" dialog you'll see the long list of resource types. Searching will locate our `PlayerHealth` type.
 
-![alt](/godot_recipes/3.x/img/custom_resource_02.png)
+![Godot 4: Using Custom Resources (custom resource 02)](/godot_recipes/3.x/img/custom_resource_02.png)
 
 Now you can set the desired `max_value` and save the new resource as a `.tres` file.
 
-![alt](/godot_recipes/3.x/img/custom_resource_03.png)
+![Godot 4: Using Custom Resources (custom resource 03)](/godot_recipes/3.x/img/custom_resource_03.png)
 
 #### Using the resource
 
@@ -171,7 +171,7 @@ func _on_player_health_changed(value):
 
 Here's an example of it in action:
 
-![alt](/godot_recipes/3.x/img/custom_resource_04.gif)
+![Godot 4: Using Custom Resources (custom resource 04)](/godot_recipes/3.x/img/custom_resource_04.gif)
 
 {{% notice note %}}
 Download the project file here: [custom_resources.zip](/godot_recipes/3.x/files/custom_resources.zip)

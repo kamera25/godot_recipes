@@ -24,9 +24,9 @@ draft: false
 
 *法線ベクトル*（「ノーマルベクトル」または単に「単位ベクトル」）とは、面に垂直な方向を示す単位ベクトルのことです。これは表面がどの向きを向いているのかを定義します。メッシュの場合、各面には必ず外側を指す法線ベクトルが存在します。
 
-![alt](/godot_recipes/4.x/img/3d_kinematic_05.png)
+![Godot 4: CharacterBody3D: 表面に位置合わせ (3d kinematic 05)](/godot_recipes/4.x/img/3d_kinematic_05.png)
 
-![alt](/godot_recipes/4.x/img/3d_kinematic_06.gif)
+![Godot 4: CharacterBody3D: 表面に位置合わせ (3d kinematic 06)](/godot_recipes/4.x/img/3d_kinematic_06.gif)
 
 Godot では、衝突が発生した際、接触時の法線ベクトルを取得できます。これは衝突する物体の **接触点における** 法線方向になります。
 

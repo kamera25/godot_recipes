@@ -29,7 +29,7 @@ AI制御のエンティティに対して、異なる動作モードを切り替
 
 状態遷移を決定するために、敵キャラには2つの{{< gd-icon Area2D >}}`Area2D`ノードが配置されています。1つは「DetectRadius」と名付けた外側のエリア、もう1つは「AttackRadius」という内側のエリアです。プレイヤーがこれらの領域に入ったり出たりすることで、対応する動作が開始されます。
 
-![alt](/godot_recipes/4.x/img/behaviors_01.png)
+![Godot 4: 動作の変更 (behaviors 01)](/godot_recipes/4.x/img/behaviors_01.png)
 
 本例では`AttackRadius(攻撃半径` の形状として矩形を選択していますが、これは敵の攻撃範囲が長方形であるためです。ただし、`DetectRadius(検出半径)`よりも小さい任意の形状で問題ありません。
 

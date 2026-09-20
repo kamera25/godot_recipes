@@ -60,7 +60,7 @@ Note the `start()` function we defined. That will let us set the bullet's starti
 
 Now select the `Bullet` node and then click the **Node** tab next to the **Inspector**.
 
-![alt](/godot_recipes/4.x/img/2d_101_16.png?width=350)
+![Godot 4: Bullet Scene (2d 101 16)](/godot_recipes/4.x/img/2d_101_16.png?width=350)
 
 This is a list of all the *signals* this node can *emit*. Signals are how Godot lets you know that something has happened. In this case, we can use the `area_entered` signal to tell us whenever this bullet touches another {{< gd-icon Area2D >}}`Area2D` node.
 

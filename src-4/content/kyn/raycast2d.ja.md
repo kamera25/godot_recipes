@@ -13,7 +13,7 @@ ghcommentid: 87
 
 {{< gd-icon RayCast2D >}}`RayCast2D` ノードを追加して、インスペクターを確認します。
 
-![alt](/godot_recipes/4.x/img/kyn_raycast2d_01_4.png)
+![Godot 4: RayCast2D (kyn raycast2d 01 4)](/godot_recipes/4.x/img/kyn_raycast2d_01_4.png)
 
 以下に主要な特性をご説明します。
 
@@ -61,7 +61,7 @@ ghcommentid: 87
 
 ここに、銃の先端にレイキャストが取り付けられたプレイヤースプライトがあります。`target_position`は`(250, 0)`に設定されています。
 
-![alt](/godot_recipes/4.x/img/kyn_raycast2d_02.png)
+![Godot 4: RayCast2D (kyn raycast2d 02)](/godot_recipes/4.x/img/kyn_raycast2d_02.png)
 
 プレイヤーが射撃した際、レイが何かに衝突しているかどうかを判定します。
 
@@ -76,7 +76,7 @@ func _input(event):
 
 以下の方法でmobに下向きレイキャストを2つ追加します。
 
-![alt](/godot_recipes/4.x/img/kyn_raycast2d_03.png)
+![Godot 4: RayCast2D (kyn raycast2d 03)](/godot_recipes/4.x/img/kyn_raycast2d_03.png)
 
 モブキャラクターのスクリプトで、レイが衝突を*停止*したときを確認します。その時点までに境界線に到達したことを意味するので、向きを変えましょう。
 
@@ -94,7 +94,7 @@ func _physics_process(delta):
 
 動作中の様子をご覧ください。
 
-![alt](/godot_recipes/4.x/img/kyn_raycast2d_04.gif)
+![Godot 4: RayCast2D (kyn raycast2d 04)](/godot_recipes/4.x/img/kyn_raycast2d_04.gif)
 
 ## 関連レシピ
 

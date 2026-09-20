@@ -38,7 +38,7 @@ This method returns a list of points along the curve. These points will be more 
 
 When you select a {{< gd-icon Path2D >}}`Path2D` node, some new icons appear on the icon bar:
 
-![alt](/godot_recipes/3.x/img/kyn_path2d_01.png)
+![Godot 4: Path2D & PathFollow2D (kyn path2d 01)](/godot_recipes/3.x/img/kyn_path2d_01.png)
 
 Selecting one of these icons changes the behavior of the mouse cursor. You can hover over them to see their names.
 
@@ -50,11 +50,11 @@ Selecting one of these icons changes the behavior of the mouse cursor. You can h
 
 Select "Add Point" and click in the editor window to create points.
 
-![alt](/godot_recipes/3.x/img/kyn_path2d_02.png)
+![Godot 4: Path2D & PathFollow2D (kyn path2d 02)](/godot_recipes/3.x/img/kyn_path2d_02.png)
 
 To create a smoother, rounded curve, select "Select Control Points" and drag any of the points in the curve to adjust their "in" and "out" handles:
 
-![alt](/godot_recipes/3.x/img/kyn_path2d_03.png)
+![Godot 4: Path2D & PathFollow2D (kyn path2d 03)](/godot_recipes/3.x/img/kyn_path2d_03.png)
 
 ## Following a path
 
@@ -70,7 +70,7 @@ Most useful properties:
 
 For example, consider this plane moving along a path (you can make the path visible by setting *Debug>Visible Navigation*):
 
-![alt](/godot_recipes/3.x/img/kyn_path2d_04.gif)
+![Godot 4: Path2D & PathFollow2D (kyn path2d 04)](/godot_recipes/3.x/img/kyn_path2d_04.gif)
 
 This is done by making the plane {{< gd-icon Sprite2D >}}`Sprite` a child of the {{< gd-icon PathFollow2D >}}`PathFollow2D` and adding the following to `_process()`:
 
@@ -89,7 +89,7 @@ Note the *Rotate* property of {{< gd-icon PathFollow2D >}}`PathFollow2D` which k
 
 Consider this example, from the [AI: Context-based Steering](/godot_recipes/3.x/ai/context_map/) recipe:
 
-![alt](/godot_recipes/3.x/img/ai_context_10.gif)
+![Godot 4: Path2D & PathFollow2D (ai context 10)](/godot_recipes/3.x/img/ai_context_10.gif)
 
 In this example, the AI agents avoid walls and each other, but also "want" to continue along the track in the correct direction. There is a {{< gd-icon Path2D >}}`Path2D` drawn along the track, and the agents query it to find out what direction it's pointing:
 

@@ -16,7 +16,7 @@ This recipe applies equally well in both 2D and 3D nodes.
 
 By default, a {{< gd-icon CharacterBody2D >}}`CharacterBody2D` moved with `move_and_slide()` or `move_and_collide()` will not push any {{< gd-icon RigidBody2D >}}`RigidBody2D` it collides with. The rigid body doesn't react at all, and behaves just like a {{< gd-icon StaticBody2D >}}`StaticBody2D`.
 
-![alt](/godot_recipes/4.x/img/char_push_default.gif)
+![Godot 4: Character to Rigid Body Interaction (char push default)](/godot_recipes/4.x/img/char_push_default.gif)
 
 In some cases, this might be all you need. However, if you want to be able to push the bodies, you'll need to make some changes.
 
@@ -33,19 +33,19 @@ We'll try out both options below.
 
 This option has its pros and cons. The biggest pro is, you don't need any extra code. You just need to correctly set the collision layers/masks of the objects. For this example, we've defined three physics layers:
 
-![alt](/godot_recipes/4.x/img/2d_physics_layers_01.png)
+![Godot 4: Character to Rigid Body Interaction (2d physics layers 01)](/godot_recipes/4.x/img/2d_physics_layers_01.png)
 
 For the rigid body, we've placed it on the "items" layer (layer 3), and left the mask at the default (masking all layers):
 
-![alt](/godot_recipes/4.x/img/physics_layers_box.png)
+![Godot 4: Character to Rigid Body Interaction (physics layers box)](/godot_recipes/4.x/img/physics_layers_box.png)
 
 Then, we've placed the player on the "player" layer (layer 2), and configured the mask to ignore the "items":
 
-![alt](/godot_recipes/4.x/img/physics_layers_player.png)
+![Godot 4: Character to Rigid Body Interaction (physics layers player)](/godot_recipes/4.x/img/physics_layers_player.png)
 
 Running the game, we now see we can push the boxes around. Note that the mass of the box doesn't matter - they'll all be pushed the same.
 
-![alt](/godot_recipes/4.x/img/char_push_inf.gif)
+![Godot 4: Character to Rigid Body Interaction (char push inf)](/godot_recipes/4.x/img/char_push_inf.gif)
 
 Here, you can also see the downside of this option. Because the physics of the boxes is being ignored, they can clip through walls and you can't jump on top of them.
 
@@ -69,7 +69,7 @@ func _physics_process(delta):
 
 The collision normal points *out* of the rigid body, so we reverse it to point away from the character and apply the `push_force` factor. Now pushing works again, but it won't force the rigid bodies through walls:
 
-![alt](/godot_recipes/4.x/img/char_push_impulse.gif)
+![Godot 4: Character to Rigid Body Interaction (char push impulse)](/godot_recipes/4.x/img/char_push_impulse.gif)
 
 You'll need to adjust the `push_force` in relation to the mass of your rigid bodies. Too high a force will still cause clipping, while too low will prevent pushing at all.
 

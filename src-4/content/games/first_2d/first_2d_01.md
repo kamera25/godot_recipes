@@ -20,7 +20,7 @@ You can download the art we'll be using for the game from itch.io:
 
 Unzip the art pack and copy it into your project by dropping the folder in the **FileSystem** tab.
 
-![alt](/godot_recipes/4.x/img/2d_101_01.png)
+![Godot 4: Project Setup (2d 101 01)](/godot_recipes/4.x/img/2d_101_01.png)
 
 ## Project settings
 
@@ -36,11 +36,11 @@ These settings will ensure the game is the right size. Because we're using pixel
 
 * In the **Rendering/Textures** section under **Canvas Textures**, set **Default Texture Filter** to `Nearest`. This will ensure that our beautiful pixel art stays nice and crisp, looking like the image on the right, not the one on the left:
 
-![alt](/godot_recipes/4.x/img/2d_101_02.png)
+![Godot 4: Project Setup (2d 101 02)](/godot_recipes/4.x/img/2d_101_02.png)
 
 * Click the **Input Map** tab at the top of the **Project Settings** window. This is where we can set up the inputs we want to use in the game. In the "Add New Action" box, type the following, hitting `<enter>` after each to add it to the list of actions: `right`, `left`, `up`, `down`, `shoot`. To assign key(s) to each named input, click the **+** button to its right and press the key on your keyboard. When you're done, you should have something like this:
 
-![alt](/godot_recipes/4.x/img/2d_101_03.png?width=500)
+![Godot 4: Project Setup (2d 101 03)](/godot_recipes/4.x/img/2d_101_03.png?width=500)
 
 Feel free to use other keys if you'd rather use a different setup.
 

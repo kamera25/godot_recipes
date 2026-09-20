@@ -155,7 +155,7 @@ var drag = -0.06
 
 このグラフから分かるように、これらの値は、速度が`600`に達した時点で、抗力が摩擦力を上回ることを示しています。
 
-![alt](/godot_recipes/4.x/img/car_graph_friction.png)
+![Godot 4: 車のステアリング操作 (car graph friction)](/godot_recipes/4.x/img/car_graph_friction.png)
 
 こちらのツールで値を変更してその影響を確認できます。
 [https://www.desmos.com/calculator/e4ayu3xkip](https://www.desmos.com/calculator/e4ayu3xkip)
@@ -263,7 +263,7 @@ func calculate_steering(delta):
 
 この時点で、車両の挙動を制御する多数の設定項目があります。これらを調整することで、車の運転特性を大きく変更できます。さまざまな値を試す作業をより簡単にするため、以下にレシピ用プロジェクトをダウンロードします。ゲームを起動すると、走行中に車の挙動を変更可能なスライダーパネルが表示されます（`<Tab>`キーでスライダーパネルの表示/非表示を切り替え可能）。
 
-![alt](/godot_recipes/4.x/img/car_sliders.png)
+![Godot 4: 車のステアリング操作 (car sliders)](/godot_recipes/4.x/img/car_sliders.png)
 
 <!-- {{% notice note %}}
 プロジェクトファイル: [car_steering.zip](/godot_recipes/4.x/files/car_steering.zip)

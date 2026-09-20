@@ -7,7 +7,7 @@ pre = "<i class='fas fa-feather-alt fa-fw'></i>&nbsp"
 
 ### 基本的な使い方
 
-![alt](/godot_recipes/4.x/img/godot3_logo.png?width=250)
+![Godot 4: はじめに (godot3 logo)](/godot_recipes/4.x/img/godot3_logo.png?width=250)
 
 Godotはもうダウンロードしましたか？以下のサイトから入手できます。
 

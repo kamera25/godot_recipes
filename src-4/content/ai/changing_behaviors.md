@@ -29,7 +29,7 @@ These behaviors are states - the enemy can only be in one of these states at a t
 
 To determine the state transitions, we have two {{< gd-icon Area2D >}}`Area2D` nodes on the enemy: an outer one called "DetectRadius" and an inner called "AttackRadius". The player entering or exiting these areas will trigger the related behavior.
 
-![alt](/godot_recipes/4.x/img/behaviors_01.png)
+![Godot 4: Changing Behaviors (behaviors 01)](/godot_recipes/4.x/img/behaviors_01.png)
 
 We've chosen a rectangular shape for `AttackRadius` in this example due to the shape of the enemy's attack. Any shape is fine as long as it's smaller than the `DetectRadius`.
 

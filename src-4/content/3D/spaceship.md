@@ -26,7 +26,7 @@ Spaceship models are from this asset pack:
 
 I've chosen the "Executioner" ship model:
 
-![alt](/godot_recipes/4.x/img/3d_ship_01.png)
+![Godot 4: Arcade-style Spaceship (3d ship 01)](/godot_recipes/4.x/img/3d_ship_01.png)
 
 Feel free to choose your favorite design.
 
@@ -69,7 +69,7 @@ func _physics_process(delta):
 
 Make a test scene with a {{< gd-icon Camera3D >}} `Camera3D` to try it out. You can use a stationary camera or a [chase camera](/godot_recipes/4.x/3d/interpolated_camera/). Check that the ship accelerates and slows before moving on to the next step.
 
-![alt](/godot_recipes/4.x/img/3d_ship_02.gif)
+![Godot 4: Arcade-style Spaceship (3d ship 02)](/godot_recipes/4.x/img/3d_ship_02.gif)
 
 ### Rotation
 
@@ -107,7 +107,7 @@ transform.basis = transform.basis.rotated(transform.basis.y,
 transform.basis = transform.basis.orthonormalized()
 ```
 
-![alt](/godot_recipes/4.x/img/3d_ship_04.gif)
+![Godot 4: Arcade-style Spaceship (3d ship 04)](/godot_recipes/4.x/img/3d_ship_04.gif)
 
 ### Improvements
 
@@ -130,7 +130,7 @@ yaw_input = lerp(yaw_input, Input.get_axis("yaw_right", "yaw_left"),
 
 Now when stopping or changing direction, there's a little bit of inertia.
 
-![alt](/godot_recipes/4.x/img/3d_ship_03.gif)
+![Godot 4: Arcade-style Spaceship (3d ship 03)](/godot_recipes/4.x/img/3d_ship_03.gif)
 
 #### Linking roll/yaw
 

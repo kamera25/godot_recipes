@@ -29,7 +29,7 @@ For this example, we'll use "Roboto" - a popular free font, which you can find o
 
 Add a new {{< gd-icon Label >}}`Label` node to your scene. In the Inspector, you'll see the node's properties, most of which are self-explanatory (hover them with the mouse to see a description):
 
-![alt](/godot_recipes/3.x/img/ui_label_properties.png)
+![Godot 4: Labels (ui label properties)](/godot_recipes/3.x/img/ui_label_properties.png)
 
 Go ahead and add something in the *Text* field and experiment with how it looks. You'll notice there is a default font, but it's very plain (and small).
 
@@ -37,19 +37,19 @@ Go ahead and add something in the *Text* field and experiment with how it looks.
 
 To add your font in the Inspector, scroll down to and expand the *Custom Fonts* section. In the empty *Font* property, choose "New DynamicFont" and then click the new `DynamicFont` to expand it.
 
-![alt](/godot_recipes/3.x/img/ui_label_font_properties.png)
+![Godot 4: Labels (ui label font properties)](/godot_recipes/3.x/img/ui_label_font_properties.png)
 
 Drag your font file (in this example we're using `Roboto-Medium.ttf`) into the *Font Data* property (or choose "Load" and navigate to the file). There are several properties to adjust but for now let's make *Size* a bit bigger.
 
 Feel free to tinker with how the others affect the text appearance. For example, in the picture below, the second label has the *Filter* property enabled:
 
-![alt](/godot_recipes/3.x/img/ui_label_font_filter.png)
+![Godot 4: Labels (ui label font filter)](/godot_recipes/3.x/img/ui_label_font_filter.png)
 
 #### Adjusting color
 
 You can adjust the label's font color in the *Custom Colors* section. Here you can change *Font Color* as well as add a shadow color. Shadow properties are set in the *Custom Constants* section.
 
-![alt](/godot_recipes/3.x/img/ui_label_font_colors.png)
+![Godot 4: Labels (ui label font colors)](/godot_recipes/3.x/img/ui_label_font_colors.png)
 
 ### Dynamically changing text
 

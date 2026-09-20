@@ -14,7 +14,7 @@ draft: false
 
 まず、キャラクターに {{< gd-icon Marker2D >}}`Marker2D` を追加します。このマーカーは、ペットがプレイヤーの近くに「滞在したい」場所を示すものです。
 
-![alt](/godot_recipes/4.x/img/pet_follow_01.png)
+![Godot 4: 追いかけるペット (pet follow 01)](/godot_recipes/4.x/img/pet_follow_01.png)
 
 この例では、{{< gd-icon Sprite2D >}}`Sprite2D`の子要素として設定しています。これはキャラクターのコード内で `$Sprite2D.scale.x = -1` を使用して左移動時に水平方向を反転させているためです。マーカーはスプライトの子要素であるため、同様に反転表示されます。
 

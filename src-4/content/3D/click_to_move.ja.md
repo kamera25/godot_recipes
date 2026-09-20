@@ -18,11 +18,11 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 まず、世界として平面から始めてください。オブジェクトはこの平面上を移動します。
 
-![alt](/godot_recipes/4.x/img/3d_click_01.png)
+![Godot 4: クリックして移動 (3d click 01)](/godot_recipes/4.x/img/3d_click_01.png)
 
 このデモで使用するアクターは三角柱メッシュです。
 
-![alt](/godot_recipes/4.x/img/3d_click_02.png)
+![Godot 4: クリックして移動 (3d click 02)](/godot_recipes/4.x/img/3d_click_02.png)
 
 以下に移動動作のコードを示します。目標地点を指定すると、オブジェクトは向きを変えてその方向へ移動します。
 
@@ -48,7 +48,7 @@ func _physics_process(delta):
 
 また、シーンに「マーカー」という名前の {{< icon MeshInstance3D >}}{{< gd-icon MeshInstance3D >}}`MeshInstance3D` を追加しました。このオブジェクトは、クリックされた位置を示すために移動します。
 
-![alt](/godot_recipes/4.x/img/3d_click_03.png)
+![Godot 4: クリックして移動 (3d click 03)](/godot_recipes/4.x/img/3d_click_03.png)
 
 ### マウス→3D
 
@@ -65,7 +65,7 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 
 マーカーとプレイヤーのターゲットの位置をクリックされた位置に設定します。
 
-![alt](/godot_recipes/4.x/img/3d_click_04.gif)
+![Godot 4: クリックして移動 (3d click 04)](/godot_recipes/4.x/img/3d_click_04.gif)
 
 ## まとめ
 

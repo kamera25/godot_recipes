@@ -28,8 +28,8 @@ void fragment() {
 
 例えば、シーン切り替え効果のために画面全体を徐々にぼかすには。
 
-![alt](/godot_recipes/4.x/img/blur_shader1.png)
-![alt](/godot_recipes/4.x/img/blur_shader2.png)
+![Godot 4: ブラーシェーダー (blur shader1)](/godot_recipes/4.x/img/blur_shader1.png)
+![Godot 4: ブラーシェーダー (blur shader2)](/godot_recipes/4.x/img/blur_shader2.png)
 
 ぼかし効果もアニメーション化できます。
 

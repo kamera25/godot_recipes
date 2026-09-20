@@ -85,7 +85,7 @@ func _input(event):
 
 ## 武器の所持について
 
-![alt](/godot_recipes/4.x/img/fps_01.png)
+![Godot 4: FPSキャラクター (fps 01)](/godot_recipes/4.x/img/fps_01.png)
 
 FPSキャラクターには通常、前面に位置した武器の3Dメッシュが用意されています。これをセットアップするのは、Godotエディターの便利な機能を使えば簡単に行えます。
 

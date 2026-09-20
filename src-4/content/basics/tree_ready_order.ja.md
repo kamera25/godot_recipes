@@ -22,7 +22,7 @@ Godotがシーンツリー内のノードをどのように処理するかを理
 
 以下にサンプルノード設定例をご紹介します。
 
-![alt](/godot_recipes/4.x/img/tree_order_01.png)
+![Godot 4: ツリー順序を理解しよう (tree order 01)](/godot_recipes/4.x/img/tree_order_01.png)
 
 各ノードには以下のスクリプトがアタッチされています。
 

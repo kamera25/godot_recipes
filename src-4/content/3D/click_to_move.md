@@ -17,11 +17,11 @@ You want to move a 3D object to a clicked position.
 
 We'll start with a flat plane for our world. Our actor will move on this plane.
 
-![alt](/godot_recipes/4.x/img/3d_click_01.png)
+![Godot 4: Click to move (3d click 01)](/godot_recipes/4.x/img/3d_click_01.png)
 
 The actor for this demo is a triangular prism mesh:
 
-![alt](/godot_recipes/4.x/img/3d_click_02.png)
+![Godot 4: Click to move (3d click 02)](/godot_recipes/4.x/img/3d_click_02.png)
 
 Here is the code for the movement. If given a target, the object will turn and move toward it.
 
@@ -47,7 +47,7 @@ func _physics_process(delta):
 
 We've also added a {{< gd-icon MeshInstance3D >}}`MeshInstance3D` called "Marker" to the scene. This will be moved to indicate the clicked position.
 
-![alt](/godot_recipes/4.x/img/3d_click_03.png)
+![Godot 4: Click to move (3d click 03)](/godot_recipes/4.x/img/3d_click_03.png)
 
 ### Mouse -> 3D
 
@@ -64,7 +64,7 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 
 We set the position of the marker and the Player's target to the clicked position:
 
-![alt](/godot_recipes/4.x/img/3d_click_04.gif)
+![Godot 4: Click to move (3d click 04)](/godot_recipes/4.x/img/3d_click_04.gif)
 
 ## Wrapping up
 

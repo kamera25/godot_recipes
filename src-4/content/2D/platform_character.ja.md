@@ -83,7 +83,7 @@ func _physics_process(delta):
 
 `friction` と `acceleration` の値を変更して、ゲームの操作性にどのような影響があるか試してみます。例えば氷ステージの場合、これらの値を非常に低く設定することで、キャラクターの動きがより鈍くなるように調整できます。
 
-![alt](/godot_recipes/4.x/img/platformer1.gif)
+![Godot 4: プラットフォームキャラクター (platformer1)](/godot_recipes/4.x/img/platformer1.gif)
 
 ## 結論
 

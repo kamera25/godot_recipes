@@ -28,7 +28,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 例として、シンプルな「プレイヤー」シーンを考えてみます。
 
-![alt](/godot_recipes/4.x/img/node_paths_01.png)
+![Godot 4: ノードパスを理解しよう (node paths 01)](/godot_recipes/4.x/img/node_paths_01.png)
 
 このシーンのスクリプトは `Player` ノードに実装されています。もしスクリプトが `AnimatedSprite` ノードに対して `play()` メソッドを呼び出す必要がある場合、そのノードへの参照が必要となります。
 
@@ -50,7 +50,7 @@ $AnimatedSprite.play()
 
 ではここで、より複雑なシーンツリーを見てみてください。
 
-![alt](/godot_recipes/4.x/img/node_paths_02.png)
+![Godot 4: ノードパスを理解しよう (node paths 02)](/godot_recipes/4.x/img/node_paths_02.png)
 
 もし `Main` スクリプトが `ScoreLabel` にアクセスする必要がある場合、以下のパスを使用してアクセスできます。
 

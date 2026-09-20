@@ -68,7 +68,7 @@ func move(dir):
 
 Here's the actual movement code. When an input event occurs, we check the four directions to see which one matched, then pass it to `move()` to change the position.
 
-![alt](/godot_recipes/4.x/img/grid_example1.gif)
+![Godot 4: Grid-based movement (grid example1)](/godot_recipes/4.x/img/grid_example1.gif)
 
 ### Collision
 
@@ -88,7 +88,7 @@ func move(dir):
 
 When changing a raycast's `target_position` property, the physics engine won't recalculate its collisions until the next physics frame. `force_raycast_update()` lets you update the ray's state immediately. If it's not colliding, then we allow the move.
 
-![alt](/godot_recipes/4.x/img/grid_example2.gif)
+![Godot 4: Grid-based movement (grid example2)](/godot_recipes/4.x/img/grid_example2.gif)
 
 {{% notice note %}}
 Another common method is to use 4 separate raycasts, one for each direction.
@@ -134,7 +134,7 @@ func move(dir):
 
 
 
-![alt](/godot_recipes/4.x/img/grid_example3.gif)
+![Godot 4: Grid-based movement (grid example3)](/godot_recipes/4.x/img/grid_example3.gif)
 
 Experiment with different tween transitions for different movement effects.
 

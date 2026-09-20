@@ -31,7 +31,7 @@ func _process(delta):
 
 This code would make our node (`$Arrow`) always point at the target's position, no matter how it moves.
 
-![alt](/godot_recipes/4.x/img/3d_rotate_01.gif)
+![Godot 4: Smooth rotation (3d rotate 01)](/godot_recipes/4.x/img/3d_rotate_01.gif)
 
 Note that `look_at()` requires 2 parameters: the target position, and an "up vector". Imagine an airplane pointing its nose towards a target - there are an infinite number of ways it could be oriented, because the plane could roll about its axis. This second parameter is how you define what you want the final orientation to be.
 
@@ -50,7 +50,7 @@ func _process(delta):
     $Arrow.transform  = $Arrow.transform.interpolate_with(new_transform, speed * delta)
 ```
 
-![alt](/godot_recipes/4.x/img/3d_rotate_02.gif)
+![Godot 4: Smooth rotation (3d rotate 02)](/godot_recipes/4.x/img/3d_rotate_02.gif)
 
 Note that since `interpolate_with()` operates on the `transform`, it can be used to interpolate both rotation *and* position of an object.
 

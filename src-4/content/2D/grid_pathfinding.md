@@ -72,7 +72,7 @@ func draw_grid():
 
 This gives us a nice visual of the grid:
 
-![alt](/godot_recipes/4.x/img/astar_grid_01.png)
+![Godot 4: Pathfinding on a 2D Grid (astar grid 01)](/godot_recipes/4.x/img/astar_grid_01.png)
 
 ### Drawing the Path
 
@@ -101,7 +101,7 @@ func update_path():
 
 Here's the result:
 
-![alt](/godot_recipes/4.x/img/astar_grid_02.png)
+![Godot 4: Pathfinding on a 2D Grid (astar grid 02)](/godot_recipes/4.x/img/astar_grid_02.png)
 
 Note that we have a diagonal line between the two points. This is because, by default, the path will use diagonals. This can be modified by changing the `diagonal_mode`:
 
@@ -118,7 +118,7 @@ astar_grid.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER
 
 Now we only have orthogonal moves:
 
-![alt](/godot_recipes/4.x/img/astar_grid_03.png)
+![Godot 4: Pathfinding on a 2D Grid (astar grid 03)](/godot_recipes/4.x/img/astar_grid_03.png)
 
 ### Adding Obstacles
 
@@ -154,7 +154,7 @@ Note that we're checking `is_in_boundsv()` first - this will prevent errors from
 
 Now we can see the effect of obstacles on the path:
 
-![alt](/godot_recipes/4.x/img/astar_grid_04.png)
+![Godot 4: Pathfinding on a 2D Grid (astar grid 04)](/godot_recipes/4.x/img/astar_grid_04.png)
 
 ### Choosing a Heuristic
 
@@ -162,15 +162,15 @@ A big factor that affects the resulting path is what _heuristic_ you choose to u
 
 For example, the Euclidean distance uses the Pythagorean theorem to estimate the path to try:
 
-![alt](/godot_recipes/4.x/img/astar_grid_03.png)
+![Godot 4: Pathfinding on a 2D Grid (astar grid 03)](/godot_recipes/4.x/img/astar_grid_03.png)
 
 While Manhattan distance only considers distance in N/S or E/W directions:
 
-![alt](/godot_recipes/4.x/img/astar_grid_manhattan.png)
+![Godot 4: Pathfinding on a 2D Grid (astar grid manhattan)](/godot_recipes/4.x/img/astar_grid_manhattan.png)
 
 And the Octile heuristic results in a path like this:
 
-![alt](/godot_recipes/4.x/img/astar_grid_octile.png)
+![Godot 4: Pathfinding on a 2D Grid (astar grid octile)](/godot_recipes/4.x/img/astar_grid_octile.png)
 
 You can choose the heuristic using this property:
 

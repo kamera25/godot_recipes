@@ -20,7 +20,7 @@ There are as many solutions to this problem as there are game projects. A lot wi
 
 Often, beginners will organize their projects like this:
 
-![alt](/godot_recipes/3.x/img/organize_01.png)
+![Godot 4: Organize your project (organize 01)](/godot_recipes/3.x/img/organize_01.png)
 <!-- ```markdown
 - res://
     - scenes
@@ -35,7 +35,7 @@ Often, beginners will organize their projects like this:
 
 One common solution is to divide your project files into a hierarchy folders based on their game function. Your folders might look something like this:
 
-![alt](/godot_recipes/3.x/img/organize_02.png)
+![Godot 4: Organize your project (organize 02)](/godot_recipes/3.x/img/organize_02.png)
 
 <!--
 ```markdown

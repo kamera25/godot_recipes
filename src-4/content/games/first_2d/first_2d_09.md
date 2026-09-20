@@ -15,20 +15,20 @@ Start the scene with a {{< gd-icon MarginContainer >}}`MarginContainer` and name
 
 In the **Inspector** under **Theme Overrides/Constants** set all four **Margin** values to `10`. Then, in the menu bar at the top of the viewport, set the anchors to the **Top Wide** preset.
 
-![alt](/godot_recipes/4.x/img/2d_101_21.png)
+![Godot 4: UI and Score (2d 101 21)](/godot_recipes/4.x/img/2d_101_21.png)
 
 Next, we'll add an {{< gd-icon HBoxContainer >}}`HBoxContainer`. This type of container organizes its children horizontally. Under that, add a {{< gd-icon TextureProgressBar >}}`TextureProgressBar`, which will represent our ship's shield level. Name it `ShieldBar`.
 
 Unfortunately, there's not a good image in the art pack to use for a progress bar (there is one, but it isn't formatted in an easy way to work with). Instead, we'll use the two images below. One is a green bar and the other is a white outline. Save them in your project folder.
 
-![alt](/godot_recipes/4.x/img/bar_foreground.png?width=100)
-![alt](/godot_recipes/4.x/img/bar_background.png?width=100)
+![Godot 4: UI and Score (bar foreground)](/godot_recipes/4.x/img/bar_foreground.png?width=100)
+![Godot 4: UI and Score (bar background)](/godot_recipes/4.x/img/bar_background.png?width=100)
 
 In the **Texture** section, drag the foreground image to the **Progress** and the background image to the **Under** texture. The first thing you'll notice is that it's very small. Let's first under **Layout** set **Custom Minimum Size** to `(80, 16)`. You'll notice that the orange selection rectangle got bigger, but the image didn't. Well, we don't want the image to just stretch, or it would look bad. Instead we'll check the **Nine Patch Stretch** box, and then set the four **Stretch Margin** values to `3`.
 
 You should now see a long, unfilled bar. To see what it looks like when filled, change the **Value** property in the **Range** section to anything between `0` and `100`.
 
-![alt](/godot_recipes/4.x/img/2d_101_22.png)
+![Godot 4: UI and Score (2d 101 22)](/godot_recipes/4.x/img/2d_101_22.png)
 
 On the right side, we'd like to show the score. Now, we could just use a {{< gd-icon Label >}}`Label` node and add a font, but that's not very fun. The art pack includes a lovely pixel set of digits that we could use instead. We'll just need to do a little coding to chop it up and show the corect digit(s).
 
@@ -42,7 +42,7 @@ Name the {{< gd-icon TextureRect >}}`TextureRect` `Digit0`. Under **Texture**, s
 
 Select the `Digit0` node and press `Ctrl-D` 7 times to create duplicates of the node. The picture below shows what you should see after this step:
 
-![alt](/godot_recipes/4.x/img/2d_101_23.png)
+![Godot 4: UI and Score (2d 101 23)](/godot_recipes/4.x/img/2d_101_23.png)
 
 We now have an issue, though. Even though we've duplicated the {{< gd-icon TextureRect >}}`TextureRect` to create 8 unique copies, they are all using the same `AtlasTexture` in the **Texture** property. This means that when we change the **Region** to show a different digit, it will change on *all* the digits.
 
@@ -50,7 +50,7 @@ This is because `Resource` objects (such as `Texture`) are loaded into memory an
 
 On each of the nodes, click the down arrow next to the `AtlasTexture` and select "Make Unique".
 
-![alt](/godot_recipes/4.x/img/make_unique.png)
+![Godot 4: UI and Score (make unique)](/godot_recipes/4.x/img/make_unique.png)
 
 Now we'll add a script to `ScoreCounter` that will choose the correct **Region** values for whichever digit it needs to display.
 
@@ -159,7 +159,7 @@ func _on_area_entered(area):
 
 Finally, we need to connect the player's `shield_changed` signal to the function in the UI that updates the shield bar. You can do this in the Inspector by selecting the `Player` node in the Main scene. Under the Node tab, double-click the `shield_changed` signal to open the "Connect a Signal" window. In this window, select the `UI` node and type `update_shield` in the **Receiver Method** box.
 
-![alt](/godot_recipes/4.x/img/2d_101_24.png)
+![Godot 4: UI and Score (2d 101 24)](/godot_recipes/4.x/img/2d_101_24.png)
 
 Run the game again and check that your shield depletes when you get hit by a bullet or an enemy.
 

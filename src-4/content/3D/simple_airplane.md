@@ -22,7 +22,7 @@ We're going to use a {{< gd-icon CharacterBody3D >}}`CharacterBody3D` for this. 
 
 Here's our model setup:
 
-![alt](/godot_recipes/4.x/img/kb_plane_01.png)
+![Godot 4: Arcade-style Airplane (kb plane 01)](/godot_recipes/4.x/img/kb_plane_01.png)
 
 We're using a cylinder for the collision shape, sized to match the plane's fuselage. This will allow for detecting the ground, which is all we're concerned with for this demo.
 
@@ -61,7 +61,7 @@ var pitch_input = 0
 
 We'll need the following input actions for our controls. We're using a game controller in this demo, but you can add keyboard inputs as well if you like.
 
-![alt](/godot_recipes/4.x/img/kb_plane_02.png)
+![Godot 4: Arcade-style Airplane (kb plane 02)](/godot_recipes/4.x/img/kb_plane_02.png)
 
 This function captures the inputs and sets the input values. Note that increasing/decreasing throttle changes the `target_speed`, not the actual speed. This will allow us to acclerate/decelerate from the current speed to the target speed.
 
@@ -103,7 +103,7 @@ To test, add the plane to a test scene (don't forget a {{< gd-icon Camera3D >}} 
 We're using the [Interpolated Camera](/godot_recipes/4.x/3d/interpolated_camera/) recipe in this demo.
 {{% /notice %}}
 
-![alt](/godot_recipes/4.x/img/kb_plane_03.gif)
+![Godot 4: Arcade-style Airplane (kb plane 03)](/godot_recipes/4.x/img/kb_plane_03.gif)
 
 Next, let's handle changing the pitch of the plane. Add this right after calling `get_input()` in `_physics_process()`:
 
@@ -113,7 +113,7 @@ transform.basis = transform.basis.rotated(transform.basis.x, pitch_input * pitch
 
 Run the scene again and try pitching up and down:
 
-![alt](/godot_recipes/4.x/img/kb_plane_04.gif)
+![Godot 4: Arcade-style Airplane (kb plane 04)](/godot_recipes/4.x/img/kb_plane_04.gif)
 
 After that, add the following for the turn input:
 
@@ -121,7 +121,7 @@ After that, add the following for the turn input:
 transform.basis = transform.basis.rotated(Vector3.UP, turn_input * turn_speed * delta)
 ```
 
-![alt](/godot_recipes/4.x/img/kb_plane_05.gif)
+![Godot 4: Arcade-style Airplane (kb plane 05)](/godot_recipes/4.x/img/kb_plane_05.gif)
 
 Notice that while the plane turns, it doesn't really look natural. Airplanes *bank* when they turn, so let's animate that by changing the rotation of the mesh:
 
@@ -129,7 +129,7 @@ Notice that while the plane turns, it doesn't really look natural. Airplanes *ba
 mesh.rotation.z = lerpf(mesh.rotation.z, -turn_input, level_speed * delta)
 ```
 
-![alt](/godot_recipes/4.x/img/kb_plane_06.gif)
+![Godot 4: Arcade-style Airplane (kb plane 06)](/godot_recipes/4.x/img/kb_plane_06.gif)
 
 Where `mesh` is a reference to the {{< gd-icon MeshInstance3D >}}`MeshInstance3D` in the plane scene (in the example, this is `$cartoon_plane`).
 
@@ -195,7 +195,7 @@ func get_input(delta):
         pitch_input += Input.get_action_strength("pitch_up")
 ```
 
-![alt](/godot_recipes/4.x/img/kb_plane_07.gif)
+![Godot 4: Arcade-style Airplane (kb plane 07)](/godot_recipes/4.x/img/kb_plane_07.gif)
 
 ### Full script
 

@@ -23,25 +23,25 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 以下に具体例を示します。{{< gd-icon StaticBody2D >}}`StaticBody2D`と{{< gd-icon RigidBody2D >}}`RigidBody2D`を使用しています。追加コードは一切ありません。スタティックボディの*線速度一定*は `(200, 0)` に設定されています。
 
-![alt](/godot_recipes/4.x/img/conveyor_02.gif)
+![Godot 4: コンベアベルト (conveyor 02)](/godot_recipes/4.x/img/conveyor_02.gif)
 
 ### ベルトの動きをアニメーション化
 
 コンベアベルトの「外観」を表現する方法は、使用するアートアセットによって異なります。今回のデモプロジェクトでは、以下の単一サイズ88×88ピクセルのタイルマップのみを使用しています。
 
-![alt](/godot_recipes/4.x/img/tileGreen_03.png)
+![Godot 4: コンベアベルト (tileGreen 03)](/godot_recipes/4.x/img/tileGreen_03.png)
 
 スタティックボディに {{< gd-icon Sprite2D >}}`Sprite2D` を追加し、 *テクスチャ* セクションで「新規AtlasTexture」を選択します。
 
-![alt](/godot_recipes/4.x/img/conveyor_04.png)
+![Godot 4: コンベアベルト (conveyor 04)](/godot_recipes/4.x/img/conveyor_04.png)
 
 タイルテクスチャをプロパティの*Texture*項目に配置し、*Region*を`(0, 0, 880, 88)`に設定します。
 
-![alt](/godot_recipes/4.x/img/conveyor_05.png)
+![Godot 4: コンベアベルト (conveyor 05)](/godot_recipes/4.x/img/conveyor_05.png)
 
 `880`を選択すれば、幅が正確に10タイルのコンベアベルトを作成できます。必要な幅を自由に設定できます。
 
-![alt](/godot_recipes/4.x/img/conveyor_06.png)
+![Godot 4: コンベアベルト (conveyor 06)](/godot_recipes/4.x/img/conveyor_06.png)
 
 {{% notice tip %}}
 画像が繰り返されていない、または表示がおかしい場合、*リピート* フラグを「有効」に設定して再インポートします。
@@ -63,11 +63,11 @@ func _process(delta):
 
 このコードは、ベルトが目標速度で動作することと、アニメーションが物理効果と同期することを保証します。注意点として、方向は反対になっています。領域の `x` 値を増やすと画像は左方向に移動します。
 
-![alt](/godot_recipes/4.x/img/conveyor_01.gif)
+![Godot 4: コンベアベルト (conveyor 01)](/godot_recipes/4.x/img/conveyor_01.gif)
 
 これはキャラクターボディに対しても完璧に動作します。同じコンベアベルトオブジェクトの追加する場合は、[プラットフォームキャラクター](/godot_recipes/4.x/ja/2d/platform_character)を参照します。
 
-![alt](/godot_recipes/4.x/img/conveyor_07.gif)
+![Godot 4: コンベアベルト (conveyor 07)](/godot_recipes/4.x/img/conveyor_07.gif)
 
 ### 3D
 
@@ -75,9 +75,9 @@ func _process(delta):
 
 ただし、プロジェクト設定で「Bullet」から「GodotPhysics」エンジンに変更すれば、この手法を使用できます。
 
-![alt](/godot_recipes/4.x/img/conveyor_03.png)
+![Godot 4: コンベアベルト (conveyor 03)](/godot_recipes/4.x/img/conveyor_03.png)
 
-![alt](/godot_recipes/4.x/img/conveyor_3d.gif)
+![Godot 4: コンベアベルト (conveyor 3d)](/godot_recipes/4.x/img/conveyor_3d.gif)
 
 ## 関連レシピ
 

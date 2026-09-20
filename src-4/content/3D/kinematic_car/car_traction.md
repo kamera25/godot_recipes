@@ -58,7 +58,7 @@ to this:
 velocity = lerp(velocity, new_heading * velocity.length(), traction)
 ```
 
-![alt](/godot_recipes/3.x/img/3d_car_06.gif)
+![Godot 4: 3D Kinematic Car: Traction/Drifting (3d car 06)](/godot_recipes/3.x/img/3d_car_06.gif)
 
 ### Wrapping up
 

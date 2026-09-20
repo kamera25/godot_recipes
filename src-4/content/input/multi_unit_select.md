@@ -14,7 +14,7 @@ Realtime strategy (RTS) games often require giving orders to many units at once.
 
 Here's an example of what we're going for:
 
-![alt](/godot_recipes/4.x/img/multi_unit_01.gif)
+![Godot 4: Mouse: Drag-select multiple units (multi unit 01)](/godot_recipes/4.x/img/multi_unit_01.gif)
 
 ### Unit setup
 
@@ -99,7 +99,7 @@ Each of those `collider` items is a reference to a unit, so we can use this to n
         item.collider.selected = true
 ```
 
-![alt](/godot_recipes/4.x/img/multi_unit_03.gif)
+![Godot 4: Mouse: Drag-select multiple units (multi unit 03)](/godot_recipes/4.x/img/multi_unit_03.gif)
 
 ### Commanding the units
 

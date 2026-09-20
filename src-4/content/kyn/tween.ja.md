@@ -25,7 +25,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 `trans_type` パラメーターを使用することで、補間に使用する遷移タイプを選択できます。これは、各フレームにおけるプロパティ値を計算するための数学的公式を指定します。異なるタイプのトランジションは、それぞれ特徴的な移動パターンを生成します。以下に示すように、各アイコンの`position`値は同一の範囲と時間範囲でTween処理されます。
 
-![alt](/godot_recipes/4.x/img/tween_01.gif)
+![Godot 4: Tween (tween 01)](/godot_recipes/4.x/img/tween_01.gif)
 
 {{% notice note %}}
 {{% /notice %}}

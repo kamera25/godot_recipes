@@ -16,11 +16,11 @@ draft: false
 
 以下の理由でキャラクターには {{< gd-icon CharacterBody3D >}}`CharacterBody3D` を選択しました。そのため、シーンはこのような外観になるはずです（メッシュリストが非常に長いため、`Rig`ノードは折りたたみ状態にしています）。
 
-![alt](/godot_recipes/4.x/img/3dcharacter_imported_scene.png)
+![Godot 4: キャラクターアニメーション (3dcharacter imported scene)](/godot_recipes/4.x/img/3dcharacter_imported_scene.png)
 
 最初に目につくのは、キャラクターが武器と盾でいっぱいになっていることです！ 作者は親切にも、すべての装備品が正しく取り付けられ、適切な向きになるようにしてくれています。リストをスクロールして、表示したくないアイテムを隠すことができます。
 
-![alt](/godot_recipes/4.x/img/3dcharacter_default_pose.png)
+![Godot 4: キャラクターアニメーション (3dcharacter default pose)](/godot_recipes/4.x/img/3dcharacter_default_pose.png)
 
 ### アニメーションツリー(AnimationTree)について
 
@@ -32,7 +32,7 @@ draft: false
 
 シーンに {{< gd-icon AnimationTree >}}`AnimationTree` コンポーネントを追加します。［インスペクター］で［ツリールート］を新規作成された `AnimationNodeStateMachine` に設定し、［Anim Player］ではキャラクターの {{< gd-icon AnimationPlayer >}}`AnimationPlayer` を選択します。最後に **Active(有効化)** チェックボックスをオンにします。
 
-![alt](/godot_recipes/4.x/img/animtree_settings.png)
+![Godot 4: キャラクターアニメーション (animtree settings)](/godot_recipes/4.x/img/animtree_settings.png)
 
 {{% notice style="note" title="" %}}
 {{< gd-icon AnimationTree >}}`AnimationTree`　が有効になっていると、 {{< gd-icon AnimationPlayer >}} {{< gd-icon AnimationTree >}}`AnimationTree` でアニメーションを選択できなくなることにご注意ください。変更を加えたりアニメーションをテストする必要がある場合は、作業する際にツリーの **有効** プロパティを必ずオフにします。
@@ -46,7 +46,7 @@ draft: false
 
 `AnimationTree`ノードを選択すると、ウィンドウ下部にパネルが開きます。
 
-![alt](/godot_recipes/4.x/img/animtree_empty.png)
+![Godot 4: キャラクターアニメーション (animtree empty)](/godot_recipes/4.x/img/animtree_empty.png)
 
 例として、空きスペースを右クリックし、「アニメーション追加 → 待機」を選択してから、同様に「1H_Melee_Attack_Chop」アニメーションも追加します。
 
@@ -71,13 +71,13 @@ draft: false
 
 鉛筆アイコンをクリックするとブレンドスペースを編集できます。
 
-![alt](/godot_recipes/4.x/img/blendspace_empty.png)
+![Godot 4: キャラクターアニメーション (blendspace empty)](/godot_recipes/4.x/img/blendspace_empty.png)
 
 この2D空間はキャラクターの水平方向移動ベクトルを表します。静止状態の場合は座標が`(0, 0)`となるため、まず**ポイントを作成**ボタンをクリックしてから、グリッド中央をクリックして**アニメーション追加 → 待機姿勢**を設定します。
 
 上部中央に「ランニングA」アニメーションを追加し、下部中央に「ウォーキング・バックワーズ」アニメを、左右両端にストレーフィングアニメーションを配置します。
 
-![alt](/godot_recipes/4.x/img/blendspace_complete.png)
+![Godot 4: キャラクターアニメーション (blendspace complete)](/godot_recipes/4.x/img/blendspace_complete.png)
 
 次に、十字ボタンをクリックしてブレンド位置を設定し、グリッド上でドラッグして移動させてください。アニメーションが極値間でスムーズに遷移するのが確認できるはずです。
 
@@ -91,7 +91,7 @@ draft: false
 
 以下の画像では、他の複数のアニメーションで同じ手法を採用しています。遷移プロパティは、前述の例と同様に設定されている点にご注目ください。
 
-![alt](/godot_recipes/4.x/img/anim_tree_tree.png)
+![Godot 4: キャラクターアニメーション (anim tree tree)](/godot_recipes/4.x/img/anim_tree_tree.png)
 
 また、アニメーションの名前をクリックすることで変更することもできます。中には非常に長い名前のものもありますので。
 
@@ -99,13 +99,13 @@ draft: false
 
 以下の手順で3つのジャンプアニメーションを追加し、適切にリンクします。
 
-![alt](/godot_recipes/4.x/img/anim_tree_jumping.png)
+![Godot 4: キャラクターアニメーション (anim tree jumping)](/godot_recipes/4.x/img/anim_tree_jumping.png)
 
 段差から転落した場合、即座に`IWR`から`Jump_Idle`に直接遷移できるようにしましょうが、「ジャンプ」ボタンを押した場合はまず`Jump_Start`を経由しましょう。
 
 さらに、`IWR`から`Jump_Start`への遷移設定は「自動」のまま変更していません。「有効化」に差し替えるのではなく、この遷移に**条件**として`jumping`を追加しました。
 
-![alt](/godot_recipes/4.x/img/animtree_condition.png)
+![Godot 4: キャラクターアニメーション (animtree condition)](/godot_recipes/4.x/img/animtree_condition.png)
 
 同様に、「`Jump_Idle`」から「`Jump_Land`」への状態遷移には「`grounded`」（着地状態）という条件があります。
 

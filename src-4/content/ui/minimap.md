@@ -23,7 +23,7 @@ The art in this project comes from [kenney.nl](https://kenney.nl), which you can
 
 Our main scene setup looks like this:
 
-![alt](/godot_recipes/4.x/img/minimap_01.png)
+![Godot 4: Minimap/radar (minimap 01)](/godot_recipes/4.x/img/minimap_01.png)
 
 The `CanvasLayer` node is there to hold our UI, including the minimap/radar we're making in this recipe.
 
@@ -35,17 +35,17 @@ Add a {{< gd-icon MarginContainer >}}`MarginContainer` first. Set its **Theme Ov
 
 Next, add a {{< gd-icon NinePatchRect >}}`NinePatchRect` node. This node is similar to a `TextureRect` but handles resizing differently by not stretching the corners/edges. Drop the `panel_woodDetail_blank.png` image from the asset folder into the **Texture** property. This is a `128x128` image and if we scale the root {{< gd-icon MarginContainer >}}`MarginContainer`, the image becomes stretched and ugly:
 
-![alt](/godot_recipes/4.x/img/minimap_02.gif)
+![Godot 4: Minimap/radar (minimap 02)](/godot_recipes/4.x/img/minimap_02.gif)
 
 Using the {{< gd-icon NinePatchRect >}}`NinePatchRects`'s properties, we can ensure that the frame remains the same size when stretched. You can define these properties graphically in the "TextureRegion" panel, but it's sometimes easier to enter the values directly. Set all four properties in the **Patch Margin** section to `64` and change the node's name to "Frame".
 
 Now observe what happens when we change the size:
 
-![alt](/godot_recipes/4.x/img/minimap_03.gif)
+![Godot 4: Minimap/radar (minimap 03)](/godot_recipes/4.x/img/minimap_03.gif)
 
 Next, we'd like to fill in the inner part of the frame with the grid pattern `pattern_blueprintPaper.png`:
 
-![alt](/godot_recipes/4.x/img/pattern_blueprintPaper.png)
+![Godot 4: Minimap/radar (pattern blueprintPaper)](/godot_recipes/4.x/img/pattern_blueprintPaper.png)
 
 However, we need it to tile automatically no matter what size we make the frame. Also, since this grid area is where our minimap markers will appear, we don't want the grid extending past the edges of the frame.
 
@@ -53,29 +53,29 @@ As a child of the `MiniMap` (and a sibling of the `Frame`), add another {{< gd-i
 
 Try changing the size of your root node to see the effect:
 
-![alt](/godot_recipes/4.x/img/minimap_04.gif)
+![Godot 4: Minimap/radar (minimap 04)](/godot_recipes/4.x/img/minimap_04.gif)
 
 For now, let's leave the minimap's size at `(200, 200)` - you can check the root node's **Size** property in the **Layout** section to confirm.
 
 At this point, your scene tree should look like the following:
 
-![alt](/godot_recipes/4.x/img/minimap_06.png)
+![Godot 4: Minimap/radar (minimap 06)](/godot_recipes/4.x/img/minimap_06.png)
 
 ### Map Markers
 
 As a child of `Grid`, add a {{< gd-icon Sprite2D >}}`Sprite2D` node named "PlayerMarker" and give it the `minimapIcon_arrowA.png` texture. Note the sprite's **Transform/Position** property: `(0, 0)`, which places it exactly in the top-left corner of the `Grid`:
 
-![alt](/godot_recipes/4.x/img/minimap_05.png)
+![Godot 4: Minimap/radar (minimap 05)](/godot_recipes/4.x/img/minimap_05.png)
 
 If our `Grid` size is currently `(150, 150)` (you can check this in its **Size** property), then its center will be `(75, 75)`. Put the `PlayerMarker`'s **Position** there:
 
-![alt](/godot_recipes/4.x/img/minimap_07.png)
+![Godot 4: Minimap/radar (minimap 07)](/godot_recipes/4.x/img/minimap_07.png)
 
 Don't worry, we'll automate this later.
 
 Add two more {{< gd-icon Sprite2D >}}`Sprite2D` nodes: "MobMarker" and "AlertMarker", using the `minimapIcon_jewelRed.png` and `minimapIcon_exclamationYellow.png` textures.
 
-![alt](/godot_recipes/4.x/img/minimap_08.png)
+![Godot 4: Minimap/radar (minimap 08)](/godot_recipes/4.x/img/minimap_08.png)
 
 These will represent two different types of objects in the game world. Click the "Toggle Visibility" button next to each so that they won't appear by default.
 
@@ -174,7 +174,7 @@ for item in markers:
 
 The problem with this is that markers can be placed outside the grid:
 
-![alt](/godot_recipes/4.x/img/minimap_09.png)
+![Godot 4: Minimap/radar (minimap 09)](/godot_recipes/4.x/img/minimap_09.png)
 
 To fix this, after calculating `obj_pos`, but before setting the marker's position, clamp it to the grid's rectangle:
 
@@ -182,7 +182,7 @@ To fix this, after calculating `obj_pos`, but before setting the marker's positi
 obj_pos = obj_pos.clamp(Vector2.ZERO, grid.size)
 ```
 
-![alt](/godot_recipes/4.x/img/minimap_11.png)
+![Godot 4: Minimap/radar (minimap 11)](/godot_recipes/4.x/img/minimap_11.png)
 
 We can also decide what to do about markers that are "off-screen" - when they would be outside the grid's rectangle. Choose one of the following options (do this also before using `clamp()`). The first option is to hide them:
 
@@ -202,7 +202,7 @@ else:
     markers[item].scale = Vector2(0.75, 0.75)
 ```
 
-![alt](/godot_recipes/4.x/img/minimap_12.png)
+![Godot 4: Minimap/radar (minimap 12)](/godot_recipes/4.x/img/minimap_12.png)
 
 ### Removing objects
 
@@ -259,7 +259,7 @@ func _on_gui_input(event):
 
 That's it - observe the effect of scrolling in and out:
 
-![alt](/godot_recipes/4.x/img/minimap_10.gif)
+![Godot 4: Minimap/radar (minimap 10)](/godot_recipes/4.x/img/minimap_10.gif)
 
 ## Wrapping up
 

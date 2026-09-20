@@ -26,7 +26,7 @@ velocity = position.direction_to(player.position) * speed
 
 しかし、これでは敵がプレイヤーから遠距離にいても追跡できてしまいます。これを修正するには、敵に {{< gd-icon Area2D >}}`Area2D` を追加し、この「検出範囲」内にプレイヤーが入った場合にのみ追跡するようにします。
 
-![alt](/godot_recipes/4.x/img/chase_01.png)
+![Godot 4: プレイヤーを追いかける (chase 01)](/godot_recipes/4.x/img/chase_01.png)
 
 以下にサンプルコードを示します。
 

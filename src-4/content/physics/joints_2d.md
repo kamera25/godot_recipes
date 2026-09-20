@@ -31,17 +31,17 @@ There are three types of {{< gd-icon Joint2D >}}`Joint2D`. In all of the followi
 
 The "pin" joint attaches the two bodies at a single point, allowing them to freely rotate.
 
-![alt](/godot_recipes/3.x/img/pinjoint_example.gif)
+![Godot 4: Using 2D Joints (pinjoint example)](/godot_recipes/3.x/img/pinjoint_example.gif)
 
 The pin joint's _Softness_ property gives some "springiness" to the connection. The value can range from `0` (the default) which allows no movement, to `16`.
 
-![alt](/godot_recipes/3.x/img/pinjoint_example2.gif)
+![Godot 4: Using 2D Joints (pinjoint example2)](/godot_recipes/3.x/img/pinjoint_example2.gif)
 
 ### {{< gd-icon DampedSpringJoint2D >}} DampedSpringJoint2D
 
 This joint connects the two bodies with a spring-like force.
 
-![alt](/godot_recipes/3.x/img/springjoint_example.gif)
+![Godot 4: Using 2D Joints (springjoint example)](/godot_recipes/3.x/img/springjoint_example.gif)
 
 The spring's behavior can be adjusted with these properties:
 
@@ -54,7 +54,7 @@ The spring's behavior can be adjusted with these properties:
 
 This joint constrains the attached bodies to move linearly.
 
-![alt](/godot_recipes/3.x/img/groovejoint_example.gif)
+![Godot 4: Using 2D Joints (groovejoint example)](/godot_recipes/3.x/img/groovejoint_example.gif)
 
 By default, the groove runs vertically, but you can change this by rotating the groove node.
 
@@ -65,6 +65,6 @@ These properties control the groove's behavior:
 
 <!-- You can download an example project to play with these joints here: [physics_joints.zip](/godot_recipes/3.x/files/physics_joints.zip) -->
 
-![alt](/godot_recipes/3.x/img/joints_demo.png)
+![Godot 4: Using 2D Joints (joints demo)](/godot_recipes/3.x/img/joints_demo.png)
 
 ## Related Recipes

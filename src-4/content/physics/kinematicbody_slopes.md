@@ -59,7 +59,7 @@ func _physics_process(delta):
 
 We see the problem if we stop moving on a slope:
 
-![alt](/godot_recipes/3.x/img/kbd_slopes_01.gif)
+![Godot 4: CharacterBody3D: Stopping on Slopes (kbd slopes 01)](/godot_recipes/3.x/img/kbd_slopes_01.gif)
 
 **This is `move_and_slide()` doing what it's supposed to do.**
 
@@ -77,12 +77,12 @@ move_and_slide()
 
 Now we stop sliding down slopes!
 
-![alt](/godot_recipes/3.x/img/kbd_slopes_02.gif)
+![Godot 4: CharacterBody3D: Stopping on Slopes (kbd slopes 02)](/godot_recipes/3.x/img/kbd_slopes_02.gif)
 
 
 But there is still a problem, which is easier to see if you use a low value for `gravity`:
 
-![alt](/godot_recipes/3.x/img/kbd_slopes_03.gif)
+![Godot 4: CharacterBody3D: Stopping on Slopes (kbd slopes 03)](/godot_recipes/3.x/img/kbd_slopes_03.gif)
 
 When we come to a stop, we have a little bit of upward momentum, which causes the small "hop". We can solve this by switching to the `move_and_slide_with_snap()` method.
 
@@ -97,7 +97,7 @@ Now the "hop" is gone, and everything works as expected.
 
 Finally, you may notice that on very steep slopes, you still have a problem:
 
-![alt](/godot_recipes/3.x/img/kbd_slopes_04.gif)
+![Godot 4: CharacterBody3D: Stopping on Slopes (kbd slopes 04)](/godot_recipes/3.x/img/kbd_slopes_04.gif)
 
 This is because the default value of the `floor_max_angle` parameter is 45°, and the slope shown is greater. Any angle above this value does not count as a floor. Increasing the value makes this slope behave like the others:
 

@@ -21,7 +21,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 初心者の方がよくこのような形でプロジェクトを整理します。
 
-![alt](/godot_recipes/3.x/img/organize_01.png)
+![Godot 4: プロジェクトを整理する (organize 01)](/godot_recipes/3.x/img/organize_01.png)
 <!-- ```markdown
 - res://
     - scenes
@@ -36,7 +36,7 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 
 一般的な解決策として、プロジェクトファイルをゲーム機能ごとに階層化したフォルダ構造に分割する方法があります。例えば、以下のような構成が考えられます。
 
-![alt](/godot_recipes/4.x/img/organize_02.png)
+![Godot 4: プロジェクトを整理する (organize 02)](/godot_recipes/4.x/img/organize_02.png)
 
 <!--
 ```markdown

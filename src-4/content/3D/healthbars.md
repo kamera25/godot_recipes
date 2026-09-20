@@ -13,15 +13,15 @@ You want a floating "healthbar" for your 3D game objects (mobs, characters, etc.
 
 For this solution, we're going to re-use a 2D healthbar based on a {{< gd-icon TextureProgressBar >}}`TextureProgressBar` node. It's already set up with textures and code for updating the value and color. If you already have something similar, feel free to use it here. In the example, we'll name this scene "Healthbar2D".
 
-![alt](/godot_recipes/4.x/img/healthbar_example.gif)
+![Godot 4: 3D Unit Healthbars (healthbar example)](/godot_recipes/4.x/img/healthbar_example.gif)
 
 If you need some assets, here are the three images used in the bar:
 
-![alt](/godot_recipes/4.x/img/barHorizontal_green_mid%20200.png)
+![Godot 4: 3D Unit Healthbars (barHorizontal green mid%20200)](/godot_recipes/4.x/img/barHorizontal_green_mid%20200.png)
 
-![alt](/godot_recipes/4.x/img/barHorizontal_yellow_mid%20200.png)
+![Godot 4: 3D Unit Healthbars (barHorizontal yellow mid%20200)](/godot_recipes/4.x/img/barHorizontal_yellow_mid%20200.png)
 
-![alt](/godot_recipes/4.x/img/barHorizontal_red_mid%20200.png)
+![Godot 4: 3D Unit Healthbars (barHorizontal red mid%20200)](/godot_recipes/4.x/img/barHorizontal_red_mid%20200.png)
 
 {{% notice note %}}
 Re-using existing objects can save you a lot of time. Don't re-invent the wheel everytime you need a healthbar, camera, or other common object.
@@ -39,7 +39,7 @@ func _on_input_event(_camera, event, _position, _normal, _shape_idx):
             queue_free()
 ```
 
-![alt](/godot_recipes/4.x/img/3d_bars01a.gif)
+![Godot 4: 3D Unit Healthbars (3d bars01a)](/godot_recipes/4.x/img/3d_bars01a.gif)
 
 Clicking on a unit deals one damage. Do ten damage, and the unit is destroyed. Now we need a visual representation of that using our 2D bar.
 
@@ -53,11 +53,11 @@ In the Inspector, under _Flags_, set _Billboard_ to "Enabled".
 
 Now try moving the camera to confirm that the texture is always facing you.
 
-![alt](/godot_recipes/4.x/img/3d_bars02.gif)
+![Godot 4: 3D Unit Healthbars (3d bars02)](/godot_recipes/4.x/img/3d_bars02.gif)
 
 Add an instance of this scene to the `Mob` scene and position the bar above the mob's body.
 
-![alt](/godot_recipes/4.x/img/3d_bars04.png)
+![Godot 4: 3D Unit Healthbars (3d bars04)](/godot_recipes/4.x/img/3d_bars04.png)
 
 ### Viewport texture
 
@@ -69,7 +69,7 @@ We also need to set the size of the viewport to match the size of the healthbar 
 
 Instance the `HealthBar2D` as a child of the {{< gd-icon Viewport >}}`Viewport`. Your scene should look like this:
 
-![alt](/godot_recipes/4.x/img/3d_bars_03a.png)
+![Godot 4: 3D Unit Healthbars (3d bars 03a)](/godot_recipes/4.x/img/3d_bars_03a.png)
 
 If the {{< gd-icon SubViewport >}}`SubViewport` were not a child of the {{< gd-icon Sprite3D >}}`Sprite3D`, we could set it as the sprite's texture directly in the Inspector. Since it's a child, it won't be ready at the right time, so we'll need to set it in a script attached to the {{< gd-icon Sprite3D >}}`Sprite3D`:
 
@@ -111,7 +111,7 @@ func update_health(_value, _max_value):
 
 Click on the mobs to see the health bars change.
 
-![alt](/godot_recipes/4.x/img/3d_bars_05a.gif)
+![Godot 4: 3D Unit Healthbars (3d bars 05a)](/godot_recipes/4.x/img/3d_bars_05a.gif)
 
 
 ### Wrapping up

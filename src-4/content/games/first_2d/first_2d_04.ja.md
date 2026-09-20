@@ -64,7 +64,7 @@ func _process(delta):
 
 次に、`bullet`ノードを選択してから、**インスペクター**の横にある**ノード**タブをクリックします。
 
-![alt](/godot_recipes/4.x/img/2d_101_16.png?width=350)
+![Godot 4: シーンの箇条書き表示 (2d 101 16)](/godot_recipes/4.x/img/2d_101_16.png?width=350)
 
 これはこのノードが送信可能なすべてのシグナル一覧です。シグナルはGodotで何かが発生したことを通知する仕組みです。この場合、`area_entered` シグナルを使用することで、この弾丸が他の {{< gd-icon Area2D >}}`Area2D` ノードに接触するたびに検知できます。
 

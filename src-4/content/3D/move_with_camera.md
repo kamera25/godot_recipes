@@ -43,7 +43,7 @@ var forward = -camera.transform.basis.z.normalized()
 
 For some setups this might be fine. However, it really doesn't work for the cube:
 
-![alt](/godot_recipes/3.x/img/3d_move_camera_01.gif)
+![Godot 4: Align Movement with Camera (3d move camera 01)](/godot_recipes/3.x/img/3d_move_camera_01.gif)
 
 The cube needs to only move in the 4 cardinal directions. This means we need to take the camera's forward vector and find which of the axes (**+X**, **-X**, **+Z**, or **-Z**) it's closest to.
 
@@ -72,7 +72,7 @@ func _physics_process(_delta):
 
 In this clip, I'm only pressing "w" to move:
 
-![alt](/godot_recipes/3.x/img/3d_move_camera_02.gif)
+![Godot 4: Align Movement with Camera (3d move camera 02)](/godot_recipes/3.x/img/3d_move_camera_02.gif)
 
 ## Related recipes
 

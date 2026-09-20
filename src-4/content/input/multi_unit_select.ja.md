@@ -14,7 +14,7 @@ RTS(リアルタイムストラテジー)のように、複数ユニットを選
 
 以下に目指すべき例を示します。
 
-![alt](/godot_recipes/4.x/img/multi_unit_01.gif)
+![Godot 4: マウスドラッグでユニットを選択 (multi unit 01)](/godot_recipes/4.x/img/multi_unit_01.gif)
 
 ### ユニット設定
 
@@ -99,7 +99,7 @@ elif dragging:
         item.collider.selected = true
 ```
 
-![alt](/godot_recipes/4.x/img/multi_unit_03.gif)
+![Godot 4: マウスドラッグでユニットを選択 (multi unit 03)](/godot_recipes/4.x/img/multi_unit_03.gif)
 
 ### ユニットへの指揮
 

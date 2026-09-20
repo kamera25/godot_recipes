@@ -24,11 +24,11 @@ There are a lot of files in the Dungeon pack - Godot may take a little time to r
 
 Select the `knight.glb` file in the FileSystem tab, then click the **Import** tab at the top left.
 
-![alt](/godot_recipes/4.x/img/3d_import_tab.png)
+![Godot 4: Importing Assets (3d import tab)](/godot_recipes/4.x/img/3d_import_tab.png)
 
 Here you'll find some basic import settings, but we can go into more detail. Click **Advanced** button and you'll see a new window appear:
 
-![alt](/godot_recipes/4.x/img/3d_import_adv.png)
+![Godot 4: Importing Assets (3d import adv)](/godot_recipes/4.x/img/3d_import_adv.png)
 
 One the left you'll see all the data that is contained in the GLTF scene, including textures and animations. Note all the weapon options attached to the character and the extensive list of animations.
 
@@ -40,7 +40,7 @@ Since we will code our player as a {{< gd-icon CharacterBody3D >}}`CharacterBody
 
 Scroll down to the list of animations. You'll see that there are many, but while some we'll only want to play once, such as attacks, others like "Idle" and "Running", we'd like to be looping. For any animation like this, select the animation name and set the **Loop Mode** to "Linear". Do this for all of the "Walking", "Running", and "Idle" variations. When you're done, click the **Reimport** button at the bottom.
 
-![alt](/godot_recipes/4.x/img/3d_import_loop.png)
+![Godot 4: Importing Assets (3d import loop)](/godot_recipes/4.x/img/3d_import_loop.png)
 
 {{% notice style="info" title="Setting Loop Automatically" %}}
 If you are making your own characters, you can skip this step by ensuring that your animations' names end with `"-loop"`. For details on this and other *import hints*, see [Import Hints](https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_scenes.html#import-hints) in the Godot documentation.
@@ -54,13 +54,13 @@ In this scene you'll see all the models and the {{< gd-icon AnimationPlayer >}}`
 
 Importing objects for the environment will be a similar process. As an example, let's use one of the dungeon walls. There are a lot of files in the dungeon pack, so type "wall" in the file filter to help find it:
 
-![alt](/godot_recipes/4.x/img/3d_import_wall.png)
+![Godot 4: Importing Assets (3d import wall)](/godot_recipes/4.x/img/3d_import_wall.png)
 
 We'll want our dungeon walls to be solid, and it would be painful to manually create a {{< gd-icon StaticBody3D >}}`StaticBody3D` and collision shape for each one. Fortunately, when importing, Godot can do this for us.
 
 In the import window, select the mesh object. On the right side, check the **Physics** box, and set the **Shape Type** to "Simple Convex" (feel free to check out the other options too).
 
-![alt](/godot_recipes/4.x/img/3d_import_physics.png)
+![Godot 4: Importing Assets (3d import physics)](/godot_recipes/4.x/img/3d_import_physics.png)
 
 Click **Reimport**. Now when using this in the game, Godot will automatically create a {{< gd-icon StaticBody3D >}}`StaticBody3D` with a collision shape to match.
 

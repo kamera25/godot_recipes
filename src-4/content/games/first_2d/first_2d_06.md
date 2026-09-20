@@ -23,7 +23,7 @@ This image has two frames, each `64x64` pixels in size. We'd like the image to t
 
 Now add the player to the scene by selecting the `Main` node and clicking the **Instantiate Child Scene** button.
 
-![alt](/godot_recipes/4.x/img/2d_101_18.png)
+![Godot 4: Main Scene (2d 101 18)](/godot_recipes/4.x/img/2d_101_18.png)
 
 ### Animating the background
 
@@ -31,7 +31,7 @@ We can make the scene more dynamic by animating the background. While we could d
 
 At the bottom of the editor window, you'll see the **Animation** panel. There's a lot of information there, so let's look at how it's laid out:
 
-![alt](/godot_recipes/4.x/img/2d_101_19.png)
+![Godot 4: Main Scene (2d 101 19)](/godot_recipes/4.x/img/2d_101_19.png)
 
 Click the **Animation** button and choose **New Animation**. You can name the new animation `scroll`. Set its **Length** to `2` and toggle the **Looping** and **Autoplay** buttons.
 

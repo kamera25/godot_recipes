@@ -13,11 +13,11 @@ ghcommentid: 65
 
 2D空間では、おなじみのX軸・Y軸座標平面を使用します。Godotでは（ほとんどのコンピュータグラフィックスアプリケーションと同様に）、**Y**軸は下向きに定義されていることに注意します。
 
-![alt](/godot_recipes/4.x/img/0_2d_coordinate_plane.png?width=250px)
+![Godot 4: トランスフォーム (0 2d coordinate plane)](/godot_recipes/4.x/img/0_2d_coordinate_plane.png?width=250px)
 
 まず、宇宙空間を漂流しているこの宇宙船について考えてみます。
 
-![alt](/godot_recipes/4.x/img/0_2d_rocket1.png?width=250px)
+![Godot 4: トランスフォーム (0 2d rocket1)](/godot_recipes/4.x/img/0_2d_rocket1.png?width=250px)
 
 船の進行方向は座標軸の**X軸**と同じ方向を向いています。これを前進させたい場合は、**X座標**に値を加えることで右方向へ移動させられます。
 
@@ -27,13 +27,13 @@ position += Vector2(10, 0)
 
 しかし、船が回転した場合はどうなるのでしょうか？
 
-![alt](/godot_recipes/4.x/img/0_2d_rocket2.png?width=250px)
+![Godot 4: トランスフォーム (0 2d rocket2)](/godot_recipes/4.x/img/0_2d_rocket2.png?width=250px)
 
 船を前方に移動させるにはどうすれば良いでしょうか？学校で三角関数を学んでいた方なら、角度やサイン・コサインの概念を思い出し、`position += Vector2(10 * cos(angle), 10 * sin(angle))`のような計算式を考えつくかもしれません。この方法でも実現できますが、より便利な方法があります。それは _トランスフォーム(Transform)_ です。
 
 もう一度回転した船を見てみてください。今回は、その船が独自の **X** 軸と **Y** 軸を持っており、それらは世界的な座標系とは独立して移動していることを想定します。
 
-![alt](/godot_recipes/4.x/img/0_2d_rocket3.png?width=250px)
+![Godot 4: トランスフォーム (0 2d rocket3)](/godot_recipes/4.x/img/0_2d_rocket3.png?width=250px)
 
 これらの「ローカル」座標軸は、オブジェクトの `transform` プロパティに含まれています。
 
@@ -53,7 +53,7 @@ position += Vector2(10, 0)
 
 この画像では、青色のベクトルが `transform.origin` です。これはオブジェクトの `position` ベクトルと等しくなります。
 
-![alt](/godot_recipes/4.x/img/0_2d_rocket4.png?width=250px)
+![Godot 4: トランスフォーム (0 2d rocket4)](/godot_recipes/4.x/img/0_2d_rocket4.png?width=250px)
 
 ### ローカル空間とグローバル空間での座標変換
 
@@ -84,11 +84,11 @@ func _unhandled_input(event):
 
 エディターで3Dノードを選択すると表示されるギズモを使用すると、変換操作を行えます。
 
-![alt](/godot_recipes/4.x/img/3d_intro_gizmo.png)
+![Godot 4: トランスフォーム (3d intro gizmo)](/godot_recipes/4.x/img/3d_intro_gizmo.png)
 
 {{% notice style="note" title="ローカル空間モード" %}}
 エディタ内で「ローカル空間を使用」ボタンをクリックすると、オブジェクトの局所的な向きを表示・操作できます。
-![alt](/godot_recipes/4.x/img/3d_intro_local_space.png)
+![Godot 4: トランスフォーム (3d intro local space)](/godot_recipes/4.x/img/3d_intro_local_space.png)
 このモードでは、「ローカル空間モード」が有効になっている間、3本の色分けされた軸線がオブジェクトの局所座標系の基底軸として表示されます。
 {{% /notice %}}
 

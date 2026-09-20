@@ -13,23 +13,23 @@ ghcommentid: 100
 
 この例では、[Isometric: Mini-Crusader](https://remos.itch.io/mini-crusader)を使用します。これには待機、歩行、攻撃など8方向に対応したアニメーションが含まれています。
 
-![alt](/godot_recipes/4.x/img/8_direction_01.gif)
+![Godot 4: 8方向移動・アニメーション (8 direction 01)](/godot_recipes/4.x/img/8_direction_01.gif)
 
 アニメーションはフォルダ単位で整理されており、各フレームごとに個別の画像が用意されています。ここでは{{< gd-icon AnimatedSprite2D >}}`AnimatedSprite2D`を使用し、各アニメーションにはその動作方向に基づいて名前を付けます。例えば、右向きで時計回りに移動する`idle0`から、同じく時計回りに動く`idle7`までといった具合です。
 
 キャラクターが移動する際には、動きの方向に基づいて適切なアニメーションを選択します。
 
-![alt](/godot_recipes/4.x/img/8_direction_03w.png)
+![Godot 4: 8方向移動・アニメーション (8 direction 03w)](/godot_recipes/4.x/img/8_direction_03w.png)
 
 マウスを使って移動します。キャラクターは常にマウスの方向を向き、マウスボタンをクリックするとその方向に走り出します。
 
 どのアニメーションを再生するか選択するためには、マウスの方向を取得し、それを同じ範囲（`0-7`）にマッピングしましょう。`get_local_mouse_position()`を使用することで、キャラクターに対するマウスカーソルの位置を取得できます。次に`snappedf()`関数を使用して、マウスベクトルの角度を最も近い45度間隔（`PI/4`ラジアン）にスナップさせると、以下の結果が得られます。
 
-![alt](/godot_recipes/4.x/img/8_direction_04w.png)
+![Godot 4: 8方向移動・アニメーション (8 direction 04w)](/godot_recipes/4.x/img/8_direction_04w.png)
 
 各値を 45°（`PI/4` ラジアン）で除算すると、以下のようになります。
 
-![alt](/godot_recipes/4.x/img/8_direction_02w.png)
+![Godot 4: 8方向移動・アニメーション (8 direction 02w)](/godot_recipes/4.x/img/8_direction_02w.png)
 
 最終的には、`wrapi()`関数を使用して結果の範囲を`0-7`にマッピングしましょう。これにより、正しい値が得られます。この値をアニメーション名の末尾に追加します（"idle"、"run"など）。こうすることで、正しく動作するアニメーションが完成します。
 
@@ -50,7 +50,7 @@ func _physics_process(delta):
 
 動作テストを行ったところ、以下の現象が確認されました：
 
-![alt](/godot_recipes/4.x/img/8_direction_05.gif)
+![Godot 4: 8方向移動・アニメーション (8 direction 05)](/godot_recipes/4.x/img/8_direction_05.gif)
 
 ### キーボード入力
 

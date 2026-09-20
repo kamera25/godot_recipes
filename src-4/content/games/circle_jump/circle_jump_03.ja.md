@@ -83,7 +83,7 @@ This site also has lots of learning material for Godot 3 - much of it is still u
 Godot 4.0はエンジンの最新安定版バージョンです。<br>
 このサイト(注 : 原文サイトには。この非公式日本語版にはGodot 3の日本語訳はありません。)にはGodot 3向けの学習教材も充実しており、その多くは今でも十分に活用できます。以下のボタンからアクセスできます。<br>
 {{% button href="https://kidscancode.org/godot_recipes/4.x/ja/" style="primary" icon="utensils" %}}Godot 3レシピ集 (原文・英語){{% /button %}}
-{{% /notice %}}Homeホーム![alt](/godot_recipes/4.x/img/godot3_logo.png?width=400px)![alt](/godot_recipes/4.x/img/godot3_logo.png?width=400px)
+{{% /notice %}}Homeホーム![Godot 4: 限定サークル (godot3 logo)](/godot_recipes/4.x/img/godot3_logo.png?width=400px)![Godot 4: 限定サークル (godot3 logo)](/godot_recipes/4.x/img/godot3_logo.png?width=400px)
     if abs($Pivot.rotation - orbit_start) > 2 * PI:
         current_orbits -= 1
         $Label.text = str(current_orbits)
@@ -110,7 +110,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 試しに動かしてみると、今のところ問題なく動作しています。
 
-![alt](/godot_recipes/4.x/img/cj_03_01.gif)
+![Godot 4: 限定サークル (cj 03 01)](/godot_recipes/4.x/img/cj_03_01.gif)
 
 ### サークル効果
 
@@ -142,7 +142,7 @@ func _draw():
 
 最後に、`_physics_process` に `update()` を追加し、`check_orbits()` が呼び出されるたびに実行されるようにします。
 
-![alt](/godot_recipes/4.x/img/cj_03_02.gif)
+![Godot 4: 限定サークル (cj 03 02)](/godot_recipes/4.x/img/cj_03_02.gif)
 
 次のパートでは、UI要素を追加していきます。
 

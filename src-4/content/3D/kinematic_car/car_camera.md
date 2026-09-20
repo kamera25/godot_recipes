@@ -51,7 +51,7 @@ Move and orient each {{< gd-icon Marker3D >}}`Marker3D` in a different location 
 
 {{% notice tip %}}
 You may find it helpful to temporarily attach a {{< gd-icon Camera3D >}}`Camera` to the position and use its "Preview" mode to help aim the {{< gd-icon Marker3D >}}`Marker3D` so that it's pointing directly where you want (you can remove the camera once you're done).
-![alt](/godot_recipes/3.x/img/3d_car_09.png)
+![Godot 4: 3D Kinematic Car: Chase Camera (3d car 09)](/godot_recipes/3.x/img/3d_car_09.png)
 {{% /notice %}}
 
 To communicate to the camera, we'll emit a signal whenever we want it to change position. Add the following code to the car's script:
@@ -75,7 +75,7 @@ func _input(event):
 
 Add an action in the InputMap for changing the camera. Here, we're using Tab and the right shoulder button:
 
-![alt](/godot_recipes/3.x/img/3d_car_07.png)
+![Godot 4: 3D Kinematic Car: Chase Camera (3d car 07)](/godot_recipes/3.x/img/3d_car_07.png)
 
 ### Connecting it together
 
@@ -85,7 +85,7 @@ Add a `ChaseCamera` instance to your main scene and set it `Current`. Then conne
 
 Run the game and press the camera change button to try it out:
 
-![alt](/godot_recipes/3.x/img/3d_car_08.gif)
+![Godot 4: 3D Kinematic Car: Chase Camera (3d car 08)](/godot_recipes/3.x/img/3d_car_08.gif)
 
 ## Related recipes
 

@@ -12,7 +12,7 @@ This article is being updated from Godot 3 to Godot 4.
 
 You want units to display damage as floating numbers when hit.
 
-![alt](/godot_recipes/4.x/img/fct_demo.gif)
+![Godot 4: Floating combat text (fct demo)](/godot_recipes/4.x/img/fct_demo.gif)
 
 ## Solution
 
@@ -119,7 +119,7 @@ Art in this demo by [Luis Zuno](https://www.patreon.com/ansimuz)
 
 Download the project's example code here: [https://github.com/godotrecipes/floating_combat_text](https://github.com/godotrecipes/floating_combat_text)
 
-![alt](/godot_recipes/4.x/img/fct_demo.png)
+![Godot 4: Floating combat text (fct demo)](/godot_recipes/4.x/img/fct_demo.png)
 
 <!-- ## Related recipes
 

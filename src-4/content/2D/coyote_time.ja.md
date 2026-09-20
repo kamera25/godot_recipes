@@ -19,7 +19,7 @@ draft: false
 {{% notice style="info" title="そもそもなぜコヨーテ？" %}}
 「コヨーテタイム」という名称は、地面を見下ろすまで落下しないカートゥーンキャラクターのコヨーテに由来しています。
 
-![alt](/godot_recipes/4.x/img/coyote.png)
+![Godot 4: コヨーテタイム (coyote)](/godot_recipes/4.x/img/coyote.png)
  {{% /notice %}}
 
 

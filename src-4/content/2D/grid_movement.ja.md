@@ -68,7 +68,7 @@ func move(dir):
 
 以下が実際の移動処理コードです。入力イベントが発生すると、4方向をチェックし、該当する方向を特定した後に`move()`関数に渡して位置を変更します。
 
-![alt](/godot_recipes/4.x/img/grid_example1.gif)
+![Godot 4: グリッドベースの移動 (grid example1)](/godot_recipes/4.x/img/grid_example1.gif)
 
 ### 衝突事故
 
@@ -88,7 +88,7 @@ func move(dir):
 
 レイキャストの `target_position` プロパティを変更する場合、物理エンジンは次の物理フレームまで衝突を再計算しません。`force_raycast_update()` を使用すると、即座にレイの状態を更新できます。もし衝突が発生していなければ、移動できます。
 
-![alt](/godot_recipes/4.x/img/grid_example2.gif)
+![Godot 4: グリッドベースの移動 (grid example2)](/godot_recipes/4.x/img/grid_example2.gif)
 
 {{% notice note %}}
 もう一つの一般的な方法として、各方向に一つずつ計4つのレイキャストを使用する手法があります。
@@ -134,7 +134,7 @@ func move(dir):
 
 
 
-![alt](/godot_recipes/4.x/img/grid_example3.gif)
+![Godot 4: グリッドベースの移動 (grid example3)](/godot_recipes/4.x/img/grid_example3.gif)
 
 異なるトランジション効果を試してみます。
 

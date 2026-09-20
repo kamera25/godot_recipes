@@ -27,7 +27,7 @@ First, we'll set up a "bullet" object that we can instance. Here are the nodes w
 
 For the {{< gd-icon Sprite2D >}}`Sprite2D`'s texture, you can use any image you like. Here's an example one:
 
-![alt](/godot_recipes/4.x/img/laserRed01.png)
+![Godot 4: Shooting projectiles (laserRed01)](/godot_recipes/4.x/img/laserRed01.png)
 
 Set up the nodes and configure the sprite and collision shape. If your texture is oriented pointing up, like the one above, make sure to rotate the {{< gd-icon Sprite2D >}}`Sprite` node by `90°` so that it's pointing to the right, ensuring it matches the parent’s “forward” direction.
 
@@ -53,7 +53,7 @@ For this example, we'll remove the bullet if it hits anything at all. We'll also
 
 We need to set up a spawn location for the bullets. Add a {{< gd-icon Marker2D >}}`Marker2D` and place it where you want the bullets to spawn. Here's an example, placed at the barrel of the gun. I've named it "Muzzle".
 
-![alt](/godot_recipes/4.x/img/2d_shoot_01.gif)
+![Godot 4: Shooting projectiles (2d shoot 01)](/godot_recipes/4.x/img/2d_shoot_01.gif)
 
 Notice that as the  player rotates, the Muzzle's `transform` remains oriented the same way relative to the gun. This will be very convenient when spawning the bullets, as they can use the transform to get the proper position *and* direction. We just set the new bullet's `transform` equal to the muzzle's.
 
@@ -85,7 +85,7 @@ func shoot():
 
 The problem here is that since the bullets are children of the player, they are affected when the player moves or rotates.
 
-![alt](/godot_recipes/4.x/img/2d_shoot_02.gif)
+![Godot 4: Shooting projectiles (2d shoot 02)](/godot_recipes/4.x/img/2d_shoot_02.gif)
 
 To fix this, we should make sure the bullets are added to the world instead. In this case, we'll use `owner`, which refers to the root node of the scene the player is in. Note that we also need to use the muzzle's *global* transform, or else the bullet would not be where we expected.
 
@@ -96,7 +96,7 @@ func shoot():
     b.transform = $Muzzle.global_transform
 ```
 
-![alt](/godot_recipes/4.x/img/2d_shoot_03.gif)
+![Godot 4: Shooting projectiles (2d shoot 03)](/godot_recipes/4.x/img/2d_shoot_03.gif)
 
 ## Related recipes
 
