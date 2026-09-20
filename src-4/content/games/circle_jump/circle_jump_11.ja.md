@@ -5,11 +5,6 @@ draft: false
 pre: "11. "
 ---
 
-{{% notice style="tips" title="ℹ️ 留意事項"%}}
-この記事は Godot 3から Godot 4 へ内容の書き換え中です。
-Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
-{{% /notice %}}
-
 ## 広告について
 
 無料プレイ型モバイルゲームを開発する際、収益化手段としてアプリ内課金と広告の2つの選択肢があります。本記事では、モバイル広告プラットフォーム（AdMob）をゲームに統合する方法について解説します。
@@ -126,7 +121,9 @@ func _on_interstitial_close():
 まず、`enable_ads`の値を変更できるように、セッター関数を追加します。
 
 ```gdscript
-var enable_ads = true setget set_enable_ads
+var enable_ads = true:
+    set(value):
+        set_enable_ads(value)
 ```
 また、セッター関数を追加します。
 

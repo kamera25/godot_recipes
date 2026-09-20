@@ -5,11 +5,6 @@ draft: false
 ghcommentid: 37
 ---
 
-{{% notice style="tips" title="ℹ️ 留意事項"%}}
-この記事は Godot 3から Godot 4 へ内容の書き換え中です。
-Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
-{{% /notice %}}
-
 ## 今回のお題
 
 3Dゲームで視覚的なデバッグ情報が欲しい。例えば、速度や位置などを表すベクトルを可視化する方法があれば嬉しい。
@@ -34,8 +29,8 @@ var camera
 
 func _draw():
     var color = Color(0, 1, 0)
-    var start = camera.unproject_position(player.global_transform.origin)
-    var end = camera.unproject_position(player.global_transform.origin + player.velocity)
+    var start = camera.unproject_position(player.global_position)
+    var end = camera.unproject_position(player.global_position + player.velocity)
     node.draw_line(start, end, color, width)
     node.draw_triangle(end, start.direction_to(end), width*2, color)
 
@@ -43,8 +38,8 @@ func draw_triangle(pos, dir, size, color):
     var a = pos + dir * size
     var b = pos + dir.rotated(2*PI/3) * size
     var c = pos + dir.rotated(4*PI/3) * size
-    var points = PoolVector2Array([a, b, c])
-    draw_polygon(points, PoolColorArray([color]))
+    var points = PackedVector2Array([a, b, c])
+    draw_polygon(points, PackedColorArray([color]))
 ```
 
 ベクトルの始点と終点を求めるために`unproject_position()`を使用します。`draw_triangle()`は、見栄えの良い尖った矢印形状を表示するために用意されています。
@@ -68,7 +63,7 @@ func _ready():
     if not InputMap.has_action("toggle_debug"):
         InputMap.add_action("toggle_debug")
         var ev = InputEventKey.new()
-        ev.scancode = KEY_BACKSLASH
+        ev.keycode = KEY_BACKSLASH
         InputMap.action_add_event("toggle_debug", ev)
 
 func _input(event):
@@ -103,8 +98,8 @@ class Vector:
         color = _color
 
     func draw(node, camera):
-        var start = camera.unproject_position(object.global_transform.origin)
-        var end = camera.unproject_position(object.global_transform.origin + object.get(property) * scale)
+        var start = camera.unproject_position(object.global_position)
+        var end = camera.unproject_position(object.global_position + object.get(property) * scale)
         node.draw_line(start, end, color, width)
         node.draw_triangle(end, start.direction_to(end), width*2, color)
 
@@ -117,7 +112,7 @@ var vectors = []  # Array to hold all registered values.
 func _process(delta):
     if not visible:
         return
-    update()
+    queue_redraw()
 
 func _draw():
     var camera = get_viewport().get_camera()

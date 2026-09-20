@@ -5,11 +5,6 @@ draft: false
 ghcommentid: 43
 ---
 
-{{% notice style="tips" title="ℹ️ 留意事項"%}}
-この記事は Godot 3から Godot 4 へ内容の書き換え中です。
-Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
-{{% /notice %}}
-
 ## 今回のお題
 
 車（またはその他の物体）を追跡できる「追従カメラ」を実装したい。
@@ -27,7 +22,7 @@ Godot には組み込みの `InterpolatedCamera` ノードが用意されてお�
 `ChaseCamera`には追跡対象の`target`が設定されます。また、必要に応じてこのターゲットを変更する機能も実装します。
 
 ```gdscript
-extends Camera
+extends Camera3D
 
 @export var lerp_speed = 10.0
 
@@ -96,4 +91,3 @@ func _input(event):
 - [3D: CharacterBody3Dの移動機能](/godot_recipes/4.x/ja/3d/kinematic_body/)
 
 #### この動画が気に入ったら？
-

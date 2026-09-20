@@ -5,11 +5,6 @@ draft: false
 ghcommentid: 38
 ---
 
-{{% notice style="tips" title="ℹ️ 留意事項"%}}
-この記事は Godot 3から Godot 4 へ内容の書き換え中です。
-Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
-{{% /notice %}}
-
 ## 今回のお題
 
 クリックして指定した位置に3Dオブジェクトを移動させたい。
@@ -30,17 +25,17 @@ Godot4では存在しない変数、関数が含まれている場合があり�
 extends CharacterBody3D
 
 @export var speed = 5
-@export var gravity = -5
+@export var gravity = 5
 
 var target = Vector3.ZERO
 
 func _physics_process(delta):
-    velocity.y += gravity * delta
+    velocity.y -= gravity * delta
     if target:
         look_at(target, Vector3.UP)
         rotation.x = 0
         velocity = -transform.basis.z * speed
-        if transform.origin.distance_to(target) < .5:
+        if global_position.distance_to(target) < .5:
             target = Vector3.ZERO
             velocity = Vector3.ZERO
     move_and_slide()
@@ -59,7 +54,7 @@ func _physics_process(delta):
 ```gdscript
 func _on_StaticBody_input_event(camera, event, click_position, click_normal, shape_idx):
     if event is InputEventMouseButton and event.pressed:
-        $Marker.transform.origin = click_position
+        $Marker.global_position = click_position
         $Player.target = click_position
 ```
 
@@ -77,4 +72,3 @@ func _on_StaticBody_input_event(camera, event, click_position, click_normal, sha
 - [UI: ユニットHPバー](/godot_recipes/4.x/ja/ui/unit_healthbar/) -->
 
 <!-- #### この動画が気に入ったら？ -->
-

@@ -4,11 +4,6 @@ weight: 12
 draft: false
 ---
 
-{{% notice style="tips" title="ℹ️ 留意事項"%}}
-この記事は Godot 3から Godot 4 へ内容の書き換え中です。
-Godot4では存在しない変数、関数が含まれている場合があります。もしその場合はリポジトリの[Issues](https://github.com/kamera25/godot_recipes/issues)までご報告ください。
-{{% /notice %}}
-
 ## 今回のお題
 
 ダメージを受けたとき、数字を浮かせながら表示(Floating Combat Text)させたい。
@@ -43,19 +38,16 @@ func show_value(value, travel, duration, spread, crit=false):
 
 ```gdscript
     text = value
-    var movement = travel.rotated(rand_range(-spread/2, spread/2))
-    rect_pivot_offset = rect_size / 2
+    var movement = travel.rotated(randf_range(-spread / 2, spread / 2))
+    pivot_offset = size / 2
 ```
 
 まず、指定された値を設定し、与えられたスプレッド範囲（例：±90度）に基づいて移動をランダム化します。スケーリングもアニメーション化する可能性があるため、制御点の中心からスケールが開始されるよう `rect_pivot_offset` を中央に設定します。
 
 ```gdscript
-    $Tween.interpolate_property(self, "rect_position",
-            rect_position, rect_position + movement,
-            duration, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-    $Tween.interpolate_property(self, "modulate:a",
-            1.0, 0.0, duration,
-            Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+    var tween = create_tween().set_parallel()
+    tween.tween_property(self, "position", position + movement, duration)
+    tween.tween_property(self, "modulate:a", 0.0, duration)
 ```
 
 次に、補間する2つのプロパティを設定します。移動用の`position`と、表示制御用の`modulate.a`です。
@@ -63,16 +55,14 @@ func show_value(value, travel, duration, spread, crit=false):
 ```gdscript
     if crit:
         modulate = Color(1, 0, 0)
-        $Tween.interpolate_property(self, "rect_scale",
-            rect_scale*2, rect_scale,
-            0.4, Tween.TRANS_BACK, Tween.EASE_IN)
+        scale *= 2.0
+        tween.tween_property(self, "scale", Vector2.ONE, 0.4).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 ```
 
 クリティカルヒットの場合、色も変更してスケールアニメーションを追加し、より印象的な演出にします。注：ここでは便宜的に赤色をハードコードしていますが、本来は設定可能な値とするのがおすすめです。
 
 ```gdscript
-    $Tween.start()
-    yield($Tween, "tween_all_completed")
+    await tween.finished
     queue_free()
 ```
 
